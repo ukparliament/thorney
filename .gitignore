@@ -27,3 +27,9 @@
 
 # Ignore IntelliJ idea
 /.idea
+
+# Ignore coverage files
+/coverage
+
+# Ignore spec examples
+/spec/examples.txt
