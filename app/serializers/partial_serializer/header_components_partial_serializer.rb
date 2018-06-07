@@ -50,7 +50,7 @@ module PartialSerializer
 
     def status_banner_components
       [
-        ComponentSerializer::HintComponentSerializer.new('status-banner.beta').to_h,
+        ComponentSerializer::HintComponentSerializer.new(content: 'status-banner.beta').to_h,
         ComponentSerializer::ListComponentSerializer.new(display: 'generic', contents: ['status-banner.pages-tested', 'status-banner.current-website'], display_data: [display_data(component: 'list', variant: 'inline')], type: ComponentSerializer::ListComponentSerializer::Type::UNORDERED).to_h
       ]
     end

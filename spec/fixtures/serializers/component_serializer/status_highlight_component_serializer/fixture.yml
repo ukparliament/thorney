@@ -6,12 +6,18 @@ data:
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> [WEBDEV-584] Update components serialisation for the search results
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> [WEBDEV-590] Add assets to JSON
+<<<<<<< HEAD
 >>>>>>> [WEBDEV-590] Add assets to JSON
+=======
+>>>>>>> [WEBDEV-584] Update components serialisation for the search results
 name: status__highlight
 data:
   components:
@@ -19,18 +25,29 @@ data:
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> [WEBDEV-590] Add assets to JSON
 >>>>>>> [WEBDEV-590] Add assets to JSON
 >>>>>>> [WEBDEV-590] Add assets to JSON
+=======
+=======
+>>>>>>> [WEBDEV-590] Add assets to JSON
+>>>>>>> [WEBDEV-590] Add assets to JSON
+=======
+>>>>>>> [WEBDEV-584] Update components serialisation for the search page with results
+>>>>>>> [WEBDEV-584] Update components serialisation for the search results
 :name: status__highlight
 :data:
   :components:
 >>>>>>> [WEBDEV-575] Implement the BE for the search results page
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> [WEBDEV-582] Update components serialisation for the search page with no results
 =======
+=======
+>>>>>>> [WEBDEV-584] Update components serialisation for the search results
 <<<<<<< HEAD
 >>>>>>> [WEBDEV-582] Update components serialisation for the search page with no results
 =======
@@ -39,6 +56,11 @@ data:
 =======
 >>>>>>> [WEBDEV-590] Add assets to JSON
 >>>>>>> [WEBDEV-590] Add assets to JSON
+<<<<<<< HEAD
 >>>>>>> [WEBDEV-590] Add assets to JSON
+=======
+=======
+>>>>>>> [WEBDEV-584] Update components serialisation for the search page with results
+>>>>>>> [WEBDEV-584] Update components serialisation for the search results
   - 1
   - 2

@@ -2,6 +2,6 @@
 name: form__search
 data:
   value: query
-  key-word: search.key-word
+  label: search.key-word
   components:
   - 1

@@ -42,7 +42,7 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       Date:
-      - Thu, 05 Jul 2018 10:58:21 GMT
+      - Thu, 05 Jul 2018 11:26:52 GMT
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\"?>\r\n<OpenSearchDescription xmlns=\"http://a9.com/-/spec/opensearch/1.1/\">\r\n
@@ -55,7 +55,7 @@ http_interactions:
         type=\"text/xml\" />\r\n  <Url template=\"https://api-parliament-uk.azure-api.net/Staging/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
         type=\"application/xml\" />\r\n</OpenSearchDescription>"
     http_version: 
-  recorded_at: Thu, 05 Jul 2018 10:58:19 GMT
+  recorded_at: Thu, 05 Jul 2018 11:26:50 GMT
 - request:
     method: get
     uri: https://api-parliament-uk.azure-api.net/Staging/search?count=10&q=diane%20abbott&start=11
@@ -82,7 +82,7 @@ http_interactions:
       Pragma:
       - no-cache
       Content-Length:
-      - '2089'
+      - '2096'
       Content-Type:
       - application/atom+xml
       Expires:
@@ -100,11 +100,65 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       Date:
-      - Thu, 05 Jul 2018 10:58:21 GMT
+      - Thu, 05 Jul 2018 11:26:53 GMT
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48ZmVlZCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9BdG9tIj48dGl0bGUgdHlwZT0idGV4dCI+UGFybGlhbWVudC51ayBTZWFyY2g6IGRpYW5lIGFiYm90dDwvdGl0bGU+PGlkPnV1aWQ6YTQ2ZGViMGYtYTY5ZC00ZTFkLWIxODMtZjZiOTRmYjc0ZDc2O2lkPTkzMDwvaWQ+PHVwZGF0ZWQ+MjAxOC0wNy0wNVQxMDo1ODoyMlo8L3VwZGF0ZWQ+PGF1dGhvcj48bmFtZT5QYXJsaWFtZW50LnVrPC9uYW1lPjwvYXV0aG9yPjxRdWVyeSByb2xlPSJyZXF1ZXN0IiBzZWFyY2hUZXJtcz0iZGlhbmUgYWJib3R0IiB0b3RhbFJlc3VsdHM9Ijc0NzAiIGNvdW50PSIxMCIgc3RhcnRJbmRleD0iMTEiIHhtbG5zPSJodHRwOi8vYTkuY29tLy0vc3BlYy9vcGVuc2VhcmNoLzEuMS8iIC8+PHRvdGFsUmVzdWx0cyB4bWxucz0iaHR0cDovL2E5LmNvbS8tL3NwZWMvb3BlbnNlYXJjaC8xLjEvIj43NDcwPC90b3RhbFJlc3VsdHM+PHN0YXJ0SW5kZXggeG1sbnM9Imh0dHA6Ly9hOS5jb20vLS9zcGVjL29wZW5zZWFyY2gvMS4xLyI+MTE8L3N0YXJ0SW5kZXg+PGl0ZW1zUGVyUGFnZSB4bWxucz0iaHR0cDovL2E5LmNvbS8tL3NwZWMvb3BlbnNlYXJjaC8xLjEvIj4xMDwvaXRlbXNQZXJQYWdlPjxlbnRyeT48aWQ+dXVpZDphNDZkZWIwZi1hNjlkLTRlMWQtYjE4My1mNmI5NGZiNzRkNzY7aWQ9OTMxPC9pZD48dGl0bGUgdHlwZT0idGV4dCI+T2N0b2JlciBBcnR3b3JrIG9mIHRoZSBNb250aDogJ0RpYW5lIEFiYm90dCBNUCcgYnkgU3R1YXJ0IC4uLjwvdGl0bGU+PHVwZGF0ZWQ+MjAxOC0wNy0wNVQxMDo1ODoyMlo8L3VwZGF0ZWQ+PGxpbmsgdGl0bGU9Imh0dHBzOi8vd3d3LnBhcmxpYW1lbnQudWsvYWJvdXQvYXJ0LWluLXBhcmxpYW1lbnQvbmV3cy8yMDE2Ly4uLiIgaHJlZj0iaHR0cHM6Ly93d3cucGFybGlhbWVudC51ay9hYm91dC9hcnQtaW4tcGFybGlhbWVudC9uZXdzLzIwMTYvb2N0b2Jlci9vY3RvYmVyLTIwMTYtYXJ0d29yay8iIC8+PGNvbnRlbnQgdHlwZT0idGV4dCI+VG8gY2VsZWJyYXRlIEJsYWNrIEhpc3RvcnkgTW9udGggMjAxNiwgT2N0b2JlcuKAmXMgQXJ0d29yayBvZiB0aGUgTW9udGggaXMgU3R1YXJ0IFBlYXJzb24gV3JpZ2h04oCZcyBwb3J0cmFpdCBvZiBEaWFuZSBBYmJvdHQgTVAsIHRoZSBmaXJzdCBibGFjayB3b21hbiB0byAuLi48L2NvbnRlbnQ+PGhpbnRzIHhtbG5zPSIiIC8+PC9lbnRyeT48ZW50cnk+PGlkPnV1aWQ6YTQ2ZGViMGYtYTY5ZC00ZTFkLWIxODMtZjZiOTRmYjc0ZDc2O2lkPTkzMjwvaWQ+PHRpdGxlIHR5cGU9InRleHQiPlNhY2sgRGlhbmUgQWJib3R0IE1QIC0gUGV0aXRpb25zPC90aXRsZT48dXBkYXRlZD4yMDE4LTA3LTA1VDEwOjU4OjIyWjwvdXBkYXRlZD48bGluayB0aXRsZT0iaHR0cHM6Ly9wZXRpdGlvbi5wYXJsaWFtZW50LnVrL3BldGl0aW9ucy8xODI3NjAiIGhyZWY9Imh0dHBzOi8vcGV0aXRpb24ucGFybGlhbWVudC51ay9wZXRpdGlvbnMvMTgyNzYwIiAvPjxjb250ZW50IHR5cGU9InRleHQiPkRpYW5lIEFiYm90dCBpcyBhIGRpc2dyYWNlIHRvIHRoZSBwb3NpdGlvbiBvZiBNUCwgcmVmdXNhbCB0byBhY2NlcHQgdGhlIHdpbGwgb2YgdGhlIGVsZWN0b3JhdGUgYW5kIHB1dHRpbmcgaGVyIG93biB2aWV3cyBhYm92ZSB0aG9zZSBvZiB0aGUgQnJpdGlzaCBwZW9wbGUgcmVnYXJkaW5nIC4uLjwvY29udGVudD48aGludHMgeG1sbnM9IiIgLz48L2VudHJ5PjxlbnRyeT48aWQ+dXVpZDphNDZkZWIwZi1hNjlkLTRlMWQtYjE4My1mNmI5NGZiNzRkNzY7aWQ9OTMzPC9pZD48dGl0bGUgdHlwZT0idGV4dCI+RGlhbmUgQWJib3R0IHNob3VsZCBiZSBhcnJlc3RlZCBhbmQgc2Fja2VkIGZvciBoZXIgcmFjaXN0IC4uLjwvdGl0bGU+PHVwZGF0ZWQ+MjAxOC0wNy0wNVQxMDo1ODoyMlo8L3VwZGF0ZWQ+PGxpbmsgdGl0bGU9Imh0dHBzOi8vcGV0aXRpb24ucGFybGlhbWVudC51ay9hcmNoaXZlZC9wZXRpdGlvbnMvMjY4OTEiIGhyZWY9Imh0dHBzOi8vcGV0aXRpb24ucGFybGlhbWVudC51ay9hcmNoaXZlZC9wZXRpdGlvbnMvMjY4OTEiIC8+PGNvbnRlbnQgdHlwZT0idGV4dCI+VGhlIEJyaXRpc2ggdGF4IHBheWVyIGlzIHBheWluZyB0aGUgc2FsYXJ5IG9mIERpYW5lIEFiYm90dC4gRGlhbmUgaGFzIG1hZGUgcmFjaXN0L2JpZ290ZWQgY29tbWVudHMgbnVtZXJvdXMgdGltZXMgYW5kIGl0J3MgdGltZSBzaGUgd2FzIG1hZGUgYWNjb3VudGFibGUuPC9jb250ZW50PjxoaW50cyB4bWxucz0iIiAvPjwvZW50cnk+PGVudHJ5PjxpZD51dWlkOmE0NmRlYjBmLWE2OWQtNGUxZC1iMTgzLWY2Yjk0ZmI3NGQ3NjtpZD05MzQ8L2lkPjx0aXRsZSB0eXBlPSJ0ZXh0Ij5EaWFuZSBBYmJvdHQgTVA6IEhhbnNhcmQgY29udHJpYnV0aW9ucyBmb3IgY3VycmVudCBzZXNzaW9uIC4uLjwvdGl0bGU+PHVwZGF0ZWQ+MjAxOC0wNy0wNVQxMDo1ODoyMlo8L3VwZGF0ZWQ+PGxpbmsgdGl0bGU9Imh0dHBzOi8vcHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvY20yMDE1MTYvY21oYW5zcmQvY21hbGxmaWxlcy8uLi4iIGhyZWY9Imh0dHBzOi8vcHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvY20yMDE1MTYvY21oYW5zcmQvY21hbGxmaWxlcy9tcHMvY29tbW9uc19oYW5zYXJkXzM1NzJfaG9tZS5odG1sIiAvPjxjb250ZW50IHR5cGU9InRleHQiPkRpYW5lIEFiYm90dC4gUGFydHk6IExhYm91ci4gQ29uc3RpdHVlbmN5OiBIYWNrbmV5IE5vcnRoIGFuZCBTdG9rZSBOZXdpbmd0b24uIFlvdSBjYW4gdmlldyBhbGwgSGFuc2FyZCBjb250cmlidXRpb25zIGJ5IHRoaXMgTVAgZHVyaW5nIHRoZSBjdXJyZW50IHNlc3Npb24gLi4uPC9jb250ZW50PjxoaW50cyB4bWxucz0iIiAvPjwvZW50cnk+PGVudHJ5PjxpZD51dWlkOmE0NmRlYjBmLWE2OWQtNGUxZC1iMTgzLWY2Yjk0ZmI3NGQ3NjtpZD05MzU8L2lkPjx0aXRsZSB0eXBlPSJ0ZXh0Ij5VcmdlbnQgUXVlc3Rpb24gb24gdGhlIFdpbmRydXNoIHNjYW5kYWwgLSBOZXdzIGZyb20gLi4uPC90aXRsZT48dXBkYXRlZD4yMDE4LTA3LTA1VDEwOjU4OjIyWjwvdXBkYXRlZD48bGluayB0aXRsZT0iaHR0cHM6Ly93d3cucGFybGlhbWVudC51ay9idXNpbmVzcy9uZXdzLzIwMTgvYXByaWwvdXJnZW50LXF1ZXN0aW9uLi4uIiBocmVmPSJodHRwczovL3d3dy5wYXJsaWFtZW50LnVrL2J1c2luZXNzL25ld3MvMjAxOC9hcHJpbC91cmdlbnQtcXVlc3Rpb24td2luZHJ1c2gtc2NhbmRhbC8iIC8+PGNvbnRlbnQgdHlwZT0idGV4dCI+U2hhZG93IEhvbWUgU2VjcmV0YXJ5LCBEaWFuZSBBYmJvdHQsIGFza2VkIGFuIFVyZ2VudCBRdWVzdGlvbiBpbiB0aGUgSG91c2Ugb2YgQ29tbW9ucyBvbiB0aGUgV2luZHJ1c2ggc2NhbmRhbC4gVGhlIFF1ZXN0aW9uIHdhcyByZXNwb25kZWQgdG8gYnkgU2FqaWQgSmF2aWQgLi4uPC9jb250ZW50PjxoaW50cyB4bWxucz0iIiAvPjwvZW50cnk+PGVudHJ5PjxpZD51dWlkOmE0NmRlYjBmLWE2OWQtNGUxZC1iMTgzLWY2Yjk0ZmI3NGQ3NjtpZD05MzY8L2lkPjx0aXRsZSB0eXBlPSJ0ZXh0Ij5SdCBIb24gRGlhbmUgQWJib3R0IE1QIC0gVUsgUGFybGlhbWVudDwvdGl0bGU+PHVwZGF0ZWQ+MjAxOC0wNy0wNVQxMDo1ODoyMlo8L3VwZGF0ZWQ+PGxpbmsgdGl0bGU9Imh0dHBzOi8vd3d3LnBhcmxpYW1lbnQudWsvYmlvZ3JhcGhpZXMvY29tbW9ucy9tcy1kaWFuZS1hYmJvdHQvMTcyLy4uLiIgaHJlZj0iaHR0cHM6Ly93d3cucGFybGlhbWVudC51ay9iaW9ncmFwaGllcy9jb21tb25zL21zLWRpYW5lLWFiYm90dC8xNzIvZWxlY3Rpb24tcmVzdWx0cyIgLz48Y29udGVudCB0eXBlPSJ0ZXh0Ij4yMDE4IG1hcmtzIDEwMCB5ZWFycyBzaW5jZSBzb21lIHdvbWVuLCBhbmQgYWxsIG1lbiwgY291bGQgdm90ZS4gRmluZCBvdXQgaG93IHlvdSBjYW4gam9pbiBpbjwvY29udGVudD48aGludHMgeG1sbnM9IiIgLz48L2VudHJ5PjxlbnRyeT48aWQ+dXVpZDphNDZkZWIwZi1hNjlkLTRlMWQtYjE4My1mNmI5NGZiNzRkNzY7aWQ9OTM3PC9pZD48dGl0bGUgdHlwZT0idGV4dCI+UG9ydHJhaXQgb2YgRGlhbmUgQWJib3R0IE1QIG9uIGRpc3BsYXkgaW4gTWFuY2hlc3RlciAuLi48L3RpdGxlPjx1cGRhdGVkPjIwMTgtMDctMDVUMTA6NTg6MjJaPC91cGRhdGVkPjxsaW5rIHRpdGxlPSJodHRwczovL3d3dy5wYXJsaWFtZW50LnVrLy4uLi9wb3J0cmFpdC1vZi1kaWFuZS1hYmJvdHQtbXAiIGhyZWY9Imh0dHBzOi8vd3d3LnBhcmxpYW1lbnQudWsvYnVzaW5lc3MvY29tbWl0dGVlcy9jb21taXR0ZWVzLWEtei9vdGhlci1jb21taXR0ZWVzL3dvcmtzLW9mLWFydC9uZXdzLXBhcmxpYW1lbnQtMjAxNy9wb3J0cmFpdC1vZi1kaWFuZS1hYmJvdHQtbXAvIiAvPjxjb250ZW50IHR5cGU9InRleHQiPlRoZSBVSyBQYXJsaWFtZW50IGxvYW5zIGEgcG9ydHJhaXQgb2YgRGlhbmUgQWJib3R0IE1QIHRvIHRoZSBQZW9wbGUncyBIaXN0b3J5IE11c2V1bSwgTWFuY2hlc3Rlci48L2NvbnRlbnQ+PGhpbnRzIHhtbG5zPSIiIC8+PC9lbnRyeT48ZW50cnk+PGlkPnV1aWQ6YTQ2ZGViMGYtYTY5ZC00ZTFkLWIxODMtZjZiOTRmYjc0ZDc2O2lkPTkzODwvaWQ+PHRpdGxlIHR5cGU9InRleHQiPk1pc3MgRGlhbmUgQWJib3R0IChIYW5zYXJkKSAtIGFwaS5wYXJsaWFtZW50LnVrPC90aXRsZT48dXBkYXRlZD4yMDE4LTA3LTA1VDEwOjU4OjIyWjwvdXBkYXRlZD48bGluayB0aXRsZT0iaHR0cHM6Ly9hcGkucGFybGlhbWVudC51ay9oaXN0b3JpYy1oYW5zYXJkL3Blb3BsZS9taXNzLWRpYW5lLWFiYm90dCIgaHJlZj0iaHR0cHM6Ly9hcGkucGFybGlhbWVudC51ay9oaXN0b3JpYy1oYW5zYXJkL3Blb3BsZS9taXNzLWRpYW5lLWFiYm90dC9pbmRleC5odG1sIiAvPjxjb250ZW50IHR5cGU9InRleHQiPk1pc3MgRGlhbmUgQWJib3R0LiBTZXB0ZW1iZXIgMjcsIDE5NTMgLSAuIC4uLiBDb25zdGl0dWVuY2llcy4gSGFja25leSBOb3J0aCBhbmQgU3Rva2UgTmV3aW5ndG9uIEp1bmUgMTEsIDE5ODcgLSA/IENvbnRyaWJ1dGlvbnM8L2NvbnRlbnQ+PGhpbnRzIHhtbG5zPSIiPjxoaW50PjxOYW1lPkhpc3RvcmljIEhhbnNhcmQ8L05hbWU+PEZpbHRlcj5hcGkucGFybGlhbWVudC51ay9oaXN0b3JpYy1oYW5zYXJkPC9GaWx0ZXI+PC9oaW50PjwvaGludHM+PC9lbnRyeT48ZW50cnk+PGlkPnV1aWQ6YTQ2ZGViMGYtYTY5ZC00ZTFkLWIxODMtZjZiOTRmYjc0ZDc2O2lkPTkzOTwvaWQ+PHRpdGxlIHR5cGU9InRleHQiPk9jdG9iZXIgMjAxNjogJ0RpYW5lIEFiYm90dCBNUCcgYnkgU3R1YXJ0IFBlYXJzb24gV3JpZ2h0IC4uLjwvdGl0bGU+PHVwZGF0ZWQ+MjAxOC0wNy0wNVQxMDo1ODoyMlo8L3VwZGF0ZWQ+PGxpbmsgdGl0bGU9Imh0dHBzOi8vd3d3LnBhcmxpYW1lbnQudWsvYWJvdXQvYXJ0LWluLXBhcmxpYW1lbnQvYXJ0LXdhdGNoLWFuZC4uLiIgaHJlZj0iaHR0cHM6Ly93d3cucGFybGlhbWVudC51ay9hYm91dC9hcnQtaW4tcGFybGlhbWVudC9hcnQtd2F0Y2gtYW5kLWxpc3Rlbi9zaG9ydC1maWxtcy9hcnR3b3JrLW9mLXRoZS1tb250aC9vY3RvYmVyLTIwMTYtZGlhbmUtYWJib3R0LW1wLWJ5LXN0dWFydC1wZWFyc29uLXdyaWdodC8iIC8+PGNvbnRlbnQgdHlwZT0idGV4dCI+RGlhbmUgQWJib3R0IHRhbGtzIGFib3V0IHRoZSBwb3J0cmFpdCBvZiBoZXIgcGFpbnRlZCBieSBTdHVhcnQgUGVhcnNvbiBXcmlnaHQ8L2NvbnRlbnQ+PGhpbnRzIHhtbG5zPSIiIC8+PC9lbnRyeT48ZW50cnk+PGlkPnV1aWQ6YTQ2ZGViMGYtYTY5ZC00ZTFkLWIxODMtZjZiOTRmYjc0ZDc2O2lkPTk0MDwvaWQ+PHRpdGxlIHR5cGU9InRleHQiPkRpYW5lIEFiYm90dCBNUDogc3Bva2VuIEhhbnNhcmQgbWF0ZXJpYWwgYnkgc3ViamVjdDwvdGl0bGU+PHVwZGF0ZWQ+MjAxOC0wNy0wNVQxMDo1ODoyMlo8L3VwZGF0ZWQ+PGxpbmsgdGl0bGU9Imh0dHBzOi8vcHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvY20yMDE1MTYvY21oYW5zcmQvY21hbGxmaWxlcy8uLi4iIGhyZWY9Imh0dHBzOi8vcHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvY20yMDE1MTYvY21oYW5zcmQvY21hbGxmaWxlcy9tcHMvY29tbW9uc19oYW5zYXJkXzM1NzJfb3MuaHRtbCIgLz48Y29udGVudCB0eXBlPSJ0ZXh0Ij5EaWFuZSBBYmJvdHQgU3Bva2VuIG1hdGVyaWFsIGJ5IHN1YmplY3QuIEluY2x1ZGVzIGFsbCBvcmFsIHF1ZXN0aW9ucywgZGViYXRlIGFuZCBXZXN0bWluc3RlciBIYWxsIGNvbnRyaWJ1dGlvbnMgZnJvbSB0aGlzIE1QIGR1cmluZyB0aGUgY3VycmVudCBzZXNzaW9uLjwvY29udGVudD48aGludHMgeG1sbnM9IiIgLz48L2VudHJ5PjwvZmVlZD4=
+      string: '<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title
+        type="text">Parliament.uk Search: diane abbott</title><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=1011</id><updated>2018-07-05T11:26:53Z</updated><author><name>Parliament.uk</name></author><Query
+        role="request" searchTerms="diane abbott" totalResults="7460" count="10" startIndex="11"
+        xmlns="http://a9.com/-/spec/opensearch/1.1/" /><totalResults xmlns="http://a9.com/-/spec/opensearch/1.1/">7460</totalResults><startIndex
+        xmlns="http://a9.com/-/spec/opensearch/1.1/">11</startIndex><itemsPerPage
+        xmlns="http://a9.com/-/spec/opensearch/1.1/">10</itemsPerPage><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=1012</id><title
+        type="text">Ms Diane Abbott - UK Parliament</title><updated>2018-07-05T11:26:53Z</updated><link
+        title="https://beta.parliament.uk/people/43RHonMf" href="https://beta.parliament.uk/people/43RHonMf"
+        /><content type="text">Email: diane.abbott.office@parliament.uk Phone: 020
+        7219 4426 Address: House of Commons, London, SW1A 0AA. You may be able to
+        discuss issues with your MP in person or ...</content><hints xmlns=""><hint><Name>Beta</Name><Filter>beta.parliament.uk</Filter></hint></hints></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=1013</id><title
+        type="text">Diane Abbott should be arrested and sacked for her racist ...</title><updated>2018-07-05T11:26:53Z</updated><link
+        title="https://petition.parliament.uk/archived/petitions/26891" href="https://petition.parliament.uk/archived/petitions/26891"
+        /><content type="text">The British tax payer is paying the salary of Diane
+        Abbott. Diane has made racist/bigoted comments numerous times and it''s time
+        she was made accountable.</content><hints xmlns="" /></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=1014</id><title
+        type="text">Diane Abbott to be sacked - Petitions</title><updated>2018-07-05T11:26:53Z</updated><link
+        title="https://petition.parliament.uk/archived/petitions/26805" href="https://petition.parliament.uk/archived/petitions/26805"
+        /><content type="text">Diane Abbott is a member of parliament who is mean''t
+        represent the public. Therefore she is paid a salary, at our expense, to represent
+        her constituents ...</content><hints xmlns="" /></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=1015</id><title
+        type="text">Portrait of Diane Abbott MP on display in Manchester ...</title><updated>2018-07-05T11:26:53Z</updated><link
+        title="https://www.parliament.uk/.../portrait-of-diane-abbott-mp" href="https://www.parliament.uk/business/committees/committees-a-z/other-committees/works-of-art/news-parliament-2017/portrait-of-diane-abbott-mp/"
+        /><content type="text">The UK Parliament loans a portrait of Diane Abbott
+        MP to the People''s History Museum, Manchester.</content><hints xmlns="" /></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=1016</id><title
+        type="text">Indonesia: Droughts:Written question - 41141 - UK Parliament</title><updated>2018-07-05T11:26:53Z</updated><link
+        title="https://www.parliament.uk/business/publications/written-questions..."
+        href="https://www.parliament.uk/business/publications/written-questions-answers-statements/written-question/Commons/2016-06-24/41141/"
+        /><content type="text">Indonesia: Droughts:Written question - 41141 Q. Asked
+        by Ms Diane Abbott (Hackney North and Stoke Newington) Asked on: 24 June 2016.</content><hints
+        xmlns="" /></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=1017</id><title
+        type="text">Ms Diane Abbott - Contributions - Hansard Online</title><updated>2018-07-05T11:26:53Z</updated><link
+        title="https://hansard.parliament.uk/search/MemberContributions?memberId=..."
+        href="https://hansard.parliament.uk/search/MemberContributions?memberId=172&amp;type=Divisions"
+        /><content type="text">Review the contributions made by Ms Diane Abbott that
+        have been recorded in Hansard (the Official Report) of Parliamentary proceedings.</content><hints
+        xmlns="" /></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=1018</id><title
+        type="text">October 2016: ''Diane Abbott MP'' by Stuart Pearson Wright ...</title><updated>2018-07-05T11:26:53Z</updated><link
+        title="https://www.parliament.uk/about/art-in-parliament/art-watch-and..."
+        href="https://www.parliament.uk/about/art-in-parliament/art-watch-and-listen/short-films/artwork-of-the-month/october-2016-diane-abbott-mp-by-stuart-pearson-wright/"
+        /><content type="text">Diane Abbott talks about the portrait of her painted
+        by Stuart Pearson Wright</content><hints xmlns="" /></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=1019</id><title
+        type="text">Early day motions by Member for 2016-17 - Abbott, Diane ...</title><updated>2018-07-05T11:26:53Z</updated><link
+        title="https://www.parliament.uk/edm/2016-17/3572/diane-abbott" href="https://www.parliament.uk/edm/2016-17/3572/diane-abbott"
+        /><content type="text">Find early day motions (EDMs) supported by Abbott,
+        Diane, the Labour Party MP for Hackney North and Stoke Newington during 2016-17</content><hints
+        xmlns="" /></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=1020</id><title
+        type="text">Miss Diane Abbott (Hansard) - api.parliament.uk</title><updated>2018-07-05T11:26:53Z</updated><link
+        title="https://api.parliament.uk/historic-hansard/people/miss-diane-abbott"
+        href="https://api.parliament.uk/historic-hansard/people/miss-diane-abbott/index.html"
+        /><content type="text">Miss Diane Abbott. September 27, 1953 - . ... Constituencies.
+        Hackney North and Stoke Newington June 11, 1987 - ? Contributions</content><hints
+        xmlns=""><hint><Name>Historic Hansard</Name><Filter>api.parliament.uk/historic-hansard</Filter></hint></hints></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=1021</id><title
+        type="text">mpsallowances.parliament.uk</title><updated>2018-07-05T11:26:53Z</updated><link
+        title="https://mpsallowances.parliament.uk/.../Diane_Abbott_0708_CA.pdf" href="https://mpsallowances.parliament.uk/mpslordsandoffices/hocallowances/allowances-by-mp/diane-abbott/Diane_Abbott_0708_CA.pdf"
+        /><content type="text">Created Date: 20090527164417Z</content><hints xmlns=""><hint><Name>pdf</Name><Filter></Filter></hint></hints></entry></feed>'
     http_version: 
-  recorded_at: Thu, 05 Jul 2018 10:58:19 GMT
+  recorded_at: Thu, 05 Jul 2018 11:26:51 GMT
 recorded_with: VCR 4.0.0

@@ -19,7 +19,7 @@ module PartialSerializer
     end
 
     def footer_components_display_data
-      display_data(component: 'list')
+      [display_data(component: 'list')]
     end
   end
 end

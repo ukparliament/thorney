@@ -42,7 +42,7 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       Date:
-      - Thu, 05 Jul 2018 10:58:20 GMT
+      - Thu, 05 Jul 2018 11:26:52 GMT
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\"?>\r\n<OpenSearchDescription xmlns=\"http://a9.com/-/spec/opensearch/1.1/\">\r\n
@@ -55,5 +55,5 @@ http_interactions:
         type=\"text/xml\" />\r\n  <Url template=\"https://api-parliament-uk.azure-api.net/Staging/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
         type=\"application/xml\" />\r\n</OpenSearchDescription>"
     http_version: 
-  recorded_at: Thu, 05 Jul 2018 10:58:18 GMT
+  recorded_at: Thu, 05 Jul 2018 11:26:50 GMT
 recorded_with: VCR 4.0.0

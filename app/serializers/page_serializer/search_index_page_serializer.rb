@@ -44,7 +44,7 @@ module PageSerializer
 
     def section_primary_components(results_heading)
       [
-        ComponentSerializer::HeadingComponentSerializer.new(heading: [results_heading], size: 1).to_h,
+        ComponentSerializer::HeadingComponentSerializer.new(content: [results_heading], size: 1).to_h,
         ComponentSerializer::SearchFormComponentSerializer.new(@query, [ComponentSerializer::SearchIconComponentSerializer.new.to_h]).to_h
       ]
     end

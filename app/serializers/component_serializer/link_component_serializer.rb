@@ -21,7 +21,6 @@ module ComponentSerializer
       'link'
     end
 
-    # rubocop:disable Metrics/CyclomaticComplexity
     def data
       {}.tap do |hash|
         hash[:link] = @link if @link
@@ -32,6 +31,5 @@ module ComponentSerializer
         hash[:components] = @components if @components
       end
     end
-    # rubocop:enable Metrics/CyclomaticComplexity
   end
 end

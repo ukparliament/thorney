@@ -36,11 +36,10 @@ header-components:
       - component: status
         variant: banner
     components:
-    - name: span
+    - name: hint
       data:
         display:
-          data:
-          - component: hint
+          data: []
         content: status-banner.beta
     - name: list__generic
       data:
@@ -71,13 +70,13 @@ main-components:
     components:
     - name: heading
       data:
-        heading:
+        content:
         - search.results-heading
         size: 1
     - name: form__search
       data:
         value: hello
-        key-word: search.key-word
+        label: search.key-word
         components:
         - name: icon__search
           data: search.search-icon
@@ -106,106 +105,116 @@ main-components:
           - component: list
             variant: block
         components:
-        - name: card__search-result
+        - name: card__search__search-result
           data:
             heading-text: OF THE LORDS OF APPEAL FOR JUDGMENT IN THE CAUSE
             url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070502/obg.pdf
-            list-hint:
-              type: hint theme--grey-4
-              text: pdf
-              url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070502/...
-            paragraph-text: OF THE LORDS OF APPEAL FOR JUDGMENT IN THE CAUSE OBG Limited
-              and others (Appellants) v. ... Hello! published photographs which it
-              knewto have been
-        - name: card__search-result
+            hints:
+              name: hint
+              data:
+                component: hint
+                variant: theme
+                modifier: grey-4
+                content: pdf
+            short-url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070502/...
+            paragraph-content: OF THE LORDS OF APPEAL FOR JUDGMENT IN THE CAUSE OBG
+              Limited and others (Appellants) v. ... Hello! published photographs
+              which it knewto have been
+        - name: card__search__search-result
           data:
             heading-text: House of Lords - OBG Limited and others (Appellants) v ...
             url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070502/obg-8.htm
-            list-hint:
-              url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070502/...
-            paragraph-text: Judgments - OBG Limited and others (Appellants) v. Allan
-              and others (Respondents)Douglas and another and others (Appellants)
+            short-url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070502/...
+            paragraph-content: Judgments - OBG Limited and others (Appellants) v.
+              Allan and others (Respondents)Douglas and another and others (Appellants)
               v. Hello! Limited and others (Respondents ...
-        - name: card__search-result
+        - name: card__search__search-result
           data:
             heading-text: House of Lords - Helow (Ap) V Secretary of State For The
               ...
             url: https://publications.parliament.uk/pa/ld200708/ldjudgmt/jd081022/helow-1.htm
-            list-hint:
-              url: https://publications.parliament.uk/pa/ld200708/ldjudgmt/jd081022/...
-            paragraph-text: Judgments - Helow (Ap) V Secretary of State For The Home
-              Department and Another (Scotland) Appellate
-        - name: card__search-result
+            short-url: https://publications.parliament.uk/pa/ld200708/ldjudgmt/jd081022/...
+            paragraph-content: Judgments - Helow (Ap) V Secretary of State For The
+              Home Department and Another (Scotland) Appellate
+        - name: card__search__search-result
           data:
             heading-text: OBG Limited and others (Appellants) v. Allan and others
               ...
             url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070502/obg-1.htm
-            list-hint:
-              url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070502/...
-            paragraph-text: Judgments - OBG Limited and others (Appellants) v. Allan
-              and others (Respondents)Douglas and another and others (Appellants)
+            short-url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070502/...
+            paragraph-content: Judgments - OBG Limited and others (Appellants) v.
+              Allan and others (Respondents)Douglas and another and others (Appellants)
               v. Hello! Limited and others ...
-        - name: card__search-result
+        - name: card__search__search-result
           data:
             heading-text: Head%Office% 39$42!East!Street! Brighton.!BN1!1HL! hello
               ...
             url: https://www.parliament.uk/documents/speaker/digital-democracy/Digi058CharlotteMulcare.pdf
-            list-hint:
-              type: hint theme--grey-4
-              text: pdf
-              url: https://www.parliament.uk/documents/speaker/digital-democracy/Digi...
-            paragraph-text: 'Figure 1: From open policy-making to open law-making
+            hints:
+              name: hint
+              data:
+                component: hint
+                variant: theme
+                modifier: grey-4
+                content: pdf
+            short-url: https://www.parliament.uk/documents/speaker/digital-democracy/Digi...
+            paragraph-content: 'Figure 1: From open policy-making to open law-making
               !!! Always start at the beginning, that’s where the start is ! We!believe!that!engagement!should!be!possible!at
               ...'
-        - name: card__search-result
+        - name: card__search__search-result
           data:
             heading-text: House of Lords - Campbell (Apellant) v. MGN Limited ...
             url: https://publications.parliament.uk/pa/ld200304/ldjudgmt/jd040506/campbe-2.htm
-            list-hint:
-              url: https://publications.parliament.uk/pa/ld200304/ldjudgmt/jd040506/...
-            paragraph-text: Judgments - Campbell (Appellant) v. MGN Limited (Respondents)
+            short-url: https://publications.parliament.uk/pa/ld200304/ldjudgmt/jd040506/...
+            paragraph-content: Judgments - Campbell (Appellant) v. MGN Limited (Respondents)
               ... see Sedley LJ in Douglas v Hello! Ltd [2001] QB 967, 1005, para
               137. 56.
-        - name: card__search-result
+        - name: card__search__search-result
           data:
             heading-text: stop Theresa May trying to revoke the Scotland act - Petitions
             url: https://petition.parliament.uk/petitions/223370
-            list-hint:
-              url: https://petition.parliament.uk/petitions/223370
-            paragraph-text: Hello This petition is to send a clear message to Westminster
+            short-url: https://petition.parliament.uk/petitions/223370
+            paragraph-content: Hello This petition is to send a clear message to Westminster
               that Scotland will not lie down and let them control us they want to
               revoke the Scotland act ...
-        - name: card__search-result
+        - name: card__search__search-result
           data:
             heading-text: Campbell v MGN Ltd - publications.parliament.uk
             url: https://publications.parliament.uk/pa/ld200506/ldjudgmt/jd051020/camp.pdf
-            list-hint:
-              type: hint theme--grey-4
-              text: pdf
-              url: https://publications.parliament.uk/pa/ld200506/ldjudgmt/jd051020/...
-            paragraph-text: "-2- 3. Pursuant to the order of this House, Ms Campbell’s
+            hints:
+              name: hint
+              data:
+                component: hint
+                variant: theme
+                modifier: grey-4
+                content: pdf
+            short-url: https://publications.parliament.uk/pa/ld200506/ldjudgmt/jd051020/...
+            paragraph-content: "-2- 3. Pursuant to the order of this House, Ms Campbell’s
               solicitors served three bills of costs: £377,070.07 for the trial, £114,755.40
               for the"
-        - name: card__search-result
+        - name: card__search__search-result
           data:
             heading-text: Fur Trade - Hansard Online
             url: https://hansard.parliament.uk/Commons/2018-06-04/debates/8F9B6212-E631-4151-ABA7-AED8560CBBEB/FurTrade
-            list-hint:
-              url: https://hansard.parliament.uk/Commons/2018-06-04/debates/8F9B6212...
-            paragraph-text: Hansard (the Official Report) is the edited verbatim report
-              of proceedings of both the House of Commons and the House of Lords.
-              Daily Debates from Hansard are ...
-        - name: card__search-result
+            short-url: https://hansard.parliament.uk/Commons/2018-06-04/debates/8F9B6212...
+            paragraph-content: Hansard (the Official Report) is the edited verbatim
+              report of proceedings of both the House of Commons and the House of
+              Lords. Daily Debates from Hansard are ...
+        - name: card__search__search-result
           data:
             heading-text: Tony Blair and Colonel Gaddafi call transcript - UK Parliament
             url: https://www.parliament.uk/documents/commons-committees/foreign-affairs/09TBandGaddafiCallTranscript-1115-1145.pdf
-            list-hint:
-              type: hint theme--grey-4
-              text: pdf
-              url: https://www.parliament.uk/documents/commons-committees/foreign...
-            paragraph-text: 'Tony Blair and Gaddafi call February 25. 1h . 1115 -1145
-              {the line was bad so there are some gaps} TB: Hello. I have been trying
-              to reach you for the last few days.'
+            hints:
+              name: hint
+              data:
+                component: hint
+                variant: theme
+                modifier: grey-4
+                content: pdf
+            short-url: https://www.parliament.uk/documents/commons-committees/foreign...
+            paragraph-content: 'Tony Blair and Gaddafi call February 25. 1h . 1115
+              -1145 {the line was bad so there are some gaps} TB: Hello. I have been
+              trying to reach you for the last few days.'
 - name: section__section
   data:
     components:
@@ -217,53 +226,53 @@ main-components:
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=1
-            data-number: 1
+            number: 1
             total-count: of 86
             active: true
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=11
-            data-number: 2
+            number: 2
             total-count: of 86
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=21
-            data-number: 3
+            number: 3
             total-count: of 86
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=31
-            data-number: 4
+            number: 4
             total-count: of 86
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=41
-            data-number: 5
+            number: 5
             total-count: of 86
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=51
-            data-number: 6
+            number: 6
             total-count: of 86
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=61
-            data-number: 7
+            number: 7
             total-count: of 86
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=71
-            data-number: 8
+            number: 8
             total-count: of 86
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=81
-            data-number: 9
+            number: 9
             total-count: of 86
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=91
-            data-number: 10
+            number: 10
             total-count: of 86
 footer-components:
 - name: footer
@@ -275,7 +284,7 @@ footer-components:
         type: ul
         display:
           data:
-            component: list
+          - component: list
         contents:
         - content: footer.current-website
         - content: footer.cookie-policy
