@@ -1,6 +1,6 @@
 class SearchService < ApplicationController
   # This class handles all the parameters required for the SearchController and the SearchIndexPageSerializer
-  attr_reader :app_insights_request_id, :search_url, :query_parameter, :sanitised_query, :escaped_query, :start_index, :count
+  attr_reader :app_insights_request_id, :search_url, :sanitised_query, :escaped_query, :start_index, :count
 
   def initialize(app_insights_request_id, search_url, params)
     @app_insights_request_id = app_insights_request_id
@@ -46,6 +46,8 @@ class SearchService < ApplicationController
   end
 
   private
+
+  attr_reader :query_parameter
 
   def build_request
     headers = {}.tap do |hash|

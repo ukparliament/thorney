@@ -3,7 +3,7 @@ layout:
   template: layout
 title: No Results - Search - UK Parliament
 pugin-version: 1.10.1
-open-search: http://www.example.com/search/opensearch
+open-search: 
 header-components:
 - name: link
   data:
@@ -94,7 +94,7 @@ main-components:
         components:
         - name: paragraph
           data:
-          - content: Please enter a search term.
+          - content: some flash message
 footer-components:
 - name: footer
   data:

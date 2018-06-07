@@ -9,7 +9,7 @@ RSpec.describe SearchService, vcr: true do
       allow(Parliament::Request::OpenSearchRequest).to receive(:configure_description_url)
     end
 
-    it '#query_parameter' do
+    it '#sanitised_query' do
       expect(subject.sanitised_query).to eq 'banana'
     end
 
@@ -27,7 +27,7 @@ RSpec.describe SearchService, vcr: true do
       end
     end
 
-    it '#escaped_query_parameter' do
+    it '#escaped_query' do
       params[:q] = 'hello there'
 
       expect(subject.escaped_query).to eq 'hello+there'

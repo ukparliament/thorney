@@ -42,7 +42,7 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       Date:
-      - Thu, 05 Jul 2018 14:43:50 GMT
+      - Thu, 05 Jul 2018 15:26:45 GMT
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\"?>\r\n<OpenSearchDescription xmlns=\"http://a9.com/-/spec/opensearch/1.1/\">\r\n
@@ -55,7 +55,7 @@ http_interactions:
         type=\"text/xml\" />\r\n  <Url template=\"https://api-parliament-uk.azure-api.net/Staging/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
         type=\"application/xml\" />\r\n</OpenSearchDescription>"
     http_version: 
-  recorded_at: Thu, 05 Jul 2018 14:43:48 GMT
+  recorded_at: Thu, 05 Jul 2018 15:26:42 GMT
 - request:
     method: get
     uri: https://api-parliament-uk.azure-api.net/Staging/search?count=10&q=fdsfsd&start=1
@@ -100,14 +100,14 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       Date:
-      - Thu, 05 Jul 2018 14:43:51 GMT
+      - Thu, 05 Jul 2018 15:26:45 GMT
     body:
       encoding: ASCII-8BIT
       string: '<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title
-        type="text">Parliament.uk Search: fdsfsd</title><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=1169</id><updated>2018-07-05T14:43:51Z</updated><author><name>Parliament.uk</name></author><Query
+        type="text">Parliament.uk Search: fdsfsd</title><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=1272</id><updated>2018-07-05T15:26:46Z</updated><author><name>Parliament.uk</name></author><Query
         role="request" searchTerms="fdsfsd" totalResults="0" count="10" startIndex="1"
         xmlns="http://a9.com/-/spec/opensearch/1.1/" /><totalResults xmlns="http://a9.com/-/spec/opensearch/1.1/">0</totalResults><startIndex
         xmlns="http://a9.com/-/spec/opensearch/1.1/">1</startIndex><itemsPerPage xmlns="http://a9.com/-/spec/opensearch/1.1/">0</itemsPerPage></feed>'
     http_version: 
-  recorded_at: Thu, 05 Jul 2018 14:43:49 GMT
+  recorded_at: Thu, 05 Jul 2018 15:26:43 GMT
 recorded_with: VCR 4.0.0

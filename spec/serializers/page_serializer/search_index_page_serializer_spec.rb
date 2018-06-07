@@ -46,6 +46,16 @@ describe PageSerializer::SearchIndexPageSerializer, vcr: true do
       end
     end
 
+    context 'with a flash message' do
+      it 'produces the correct hash' do
+        serializer = described_class.new(flash_message: 'some flash message')
+
+        expected = get_fixture('with_flash_message')
+
+        expect(serializer.to_yaml).to eq(expected)
+      end
+    end
+
     context 'with a query' do
       pagination_hash = { start_index: 11, count: 100, results_total: 345, query: 'hello' }
       let(:serializer) { described_class.new(query: 'hello', results: results, pagination_hash: pagination_hash) }
@@ -76,7 +86,7 @@ describe PageSerializer::SearchIndexPageSerializer, vcr: true do
 
         search_index_page_serializer.to_h
 
-        expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(content: ['search.heading'], size: 1)
+        expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(content: ['search.search-heading'], size: 1)
         expect(ComponentSerializer::SearchFormComponentSerializer).to have_received(:new)
       end
     end
@@ -129,7 +139,7 @@ describe PageSerializer::SearchIndexPageSerializer, vcr: true do
           page_with_query.send(:results_section_components)
 
           expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(translation_key: 'search.count', translation_data: { count: 123 } , size: 2)
-          expect(ComponentSerializer::StatusComponentSerializer).to have_received(:new).with(type: 'highlight', components: [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'search.new-search' }]).to_h])
+          expect(ComponentSerializer::StatusComponentSerializer).to have_received(:new).with(type: 'highlight', display_data: [{ component: 'status', variant: 'highlight' }], components: [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'search.new-search' }]).to_h])
           expect(ComponentSerializer::ListComponentSerializer).to have_received(:new).with(display: 'generic', display_data: [{ component: 'list', variant: 'block' }], components: 'search results' )
         end
       end

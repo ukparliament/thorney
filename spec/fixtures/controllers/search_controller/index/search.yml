@@ -72,7 +72,7 @@ main-components:
     - name: heading
       data:
         content:
-        - search.heading
+        - search.search-heading
         size: 1
     - name: form__search
       data:
