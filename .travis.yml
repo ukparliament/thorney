@@ -5,6 +5,8 @@ language: ruby
 env:
   global:
     CC_TEST_REPORTER_ID=d2898e8c91291f29949e75d60041605fec019f091d5a98a5cfa763b627bd8235
+    BANDIERA_URL=http://localhost:3030
+    OPENSEARCH_DESCRIPTION_URL=http://api.parliament.uk/search/opensearch
 
 before_install:
   - "curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter"

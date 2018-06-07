@@ -3,8 +3,10 @@ module ComponentSerializer
     # Initialise a search form component.
     #
     # @param [String] query string to passed in as the value attribute of the input element.
-    def initialize(query = nil)
+    # @param [Array<Object>] components components that are intended to be part of the search form.
+    def initialize(query, components)
       @query = query
+      @components = components
     end
 
     private
@@ -14,8 +16,11 @@ module ComponentSerializer
     end
 
     def data
-      return { value: @query } if @query
-      'form__search'
+      {}.tap do |hash|
+        hash[:value] = @query if @query
+        hash[:key_word] = 'search.key-word'
+        hash[:components] = @components
+      end
     end
   end
 end

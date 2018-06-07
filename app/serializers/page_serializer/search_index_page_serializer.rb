@@ -42,7 +42,7 @@ module PageSerializer
     def section_primary_components(results_heading)
       [
         ComponentSerializer::HeadingComponentSerializer.new(heading: [results_heading], size: 1).to_h,
-        ComponentSerializer::SearchFormComponentSerializer.new(@query).to_h
+        ComponentSerializer::SearchFormComponentSerializer.new(@query, [ComponentSerializer::SearchIconComponentSerializer.new.to_h]).to_h
       ]
     end
 
@@ -51,8 +51,8 @@ module PageSerializer
 
       [
         ComponentSerializer::HeadingComponentSerializer.new(translation_key: 'search.about-count', translation_data: translation_data, size: 2).to_h,
-        ComponentSerializer::StatusHighlightComponentSerializer.new([ComponentSerializer::ParagraphComponentSerializer.new(['search.status.highlight']).to_h]).to_h,
-        ComponentSerializer::ListComponentSerializer.new(SearchResultHelper.create_search_results(@results)).to_h
+        ComponentSerializer::StatusComponentSerializer.new(type: 'highlight', components: [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'search.status.highlight' }]).to_h]).to_h,
+        ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: SearchResultHelper.create_search_results(@results)).to_h
       ]
     end
   end

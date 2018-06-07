@@ -1,5 +1,7 @@
 ---
 name: paragraph
 data:
-- text1
-- text2
+- content: one
+- content: two
+  data:
+    link: link

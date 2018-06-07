@@ -191,6 +191,5 @@ RSpec.configure do |config|
 
   config.before(:each) do
     allow(BANDIERA_CLIENT).to receive(:enabled?).and_return(false)
-    # allow(Pugin::PuginBandieraClient::BANDIERA_CLIENT).to receive(:get_features_for_group).and_return({})
   end
 end

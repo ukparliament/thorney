@@ -10,6 +10,14 @@ class BaseSerializer
     to_h.to_yaml
   end
 
+  # Creates a hash that is used for css classes in the front-end
+  def display_data(component: nil, variant: nil)
+    {}.tap do |hash|
+      hash[:component] = component if component
+      hash[:variant] = variant if variant
+    end
+  end
+
   # Evaluates a translation block
   def t(*args)
     I18n.t(*args)

@@ -34,7 +34,7 @@ http_interactions:
       Request-Context:
       - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
       Set-Cookie:
-      - ARRAffinity=7b3a533f561e7e09c1c0a936ab27adabbffe4ec239df09d0c46775c50b146a87;Path=/;HttpOnly;Domain=search201710091000.azurewebsites.net
+      - ARRAffinity=e971ab7be1e7da7ed53156043087973b40c2615e69bda7765747c464af02c933;Path=/;HttpOnly;Domain=search201710091000.azurewebsites.net
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
@@ -42,7 +42,7 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       Date:
-      - Thu, 14 Jun 2018 16:16:29 GMT
+      - Mon, 02 Jul 2018 14:19:52 GMT
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\"?>\r\n<OpenSearchDescription xmlns=\"http://a9.com/-/spec/opensearch/1.1/\">\r\n
@@ -55,7 +55,7 @@ http_interactions:
         type=\"text/xml\" />\r\n  <Url template=\"https://api-parliament-uk.azure-api.net/Staging/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
         type=\"application/xml\" />\r\n</OpenSearchDescription>"
     http_version: 
-  recorded_at: Thu, 14 Jun 2018 16:16:26 GMT
+  recorded_at: Mon, 02 Jul 2018 14:19:44 GMT
 - request:
     method: get
     uri: https://api-parliament-uk.azure-api.net/Staging/search?count=10&q=diane%20abbott&start=7541
@@ -82,7 +82,7 @@ http_interactions:
       Pragma:
       - no-cache
       Content-Length:
-      - '2215'
+      - '1872'
       Content-Type:
       - application/atom+xml
       Expires:
@@ -92,7 +92,7 @@ http_interactions:
       Request-Context:
       - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
       Set-Cookie:
-      - ARRAffinity=7b3a533f561e7e09c1c0a936ab27adabbffe4ec239df09d0c46775c50b146a87;Path=/;HttpOnly;Domain=search201710091000.azurewebsites.net
+      - ARRAffinity=e971ab7be1e7da7ed53156043087973b40c2615e69bda7765747c464af02c933;Path=/;HttpOnly;Domain=search201710091000.azurewebsites.net
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
@@ -100,180 +100,72 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       Date:
-      - Thu, 14 Jun 2018 16:16:29 GMT
+      - Mon, 02 Jul 2018 14:19:52 GMT
     body:
       encoding: ASCII-8BIT
       string: '<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title
-        type="text">Parliament.uk Search: diane abbott</title><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2032</id><updated>2018-06-14T16:16:29Z</updated><author><name>Parliament.uk</name></author><Query
-        role="request" searchTerms="diane abbott" totalResults="8370" count="10" startIndex="7541"
-        xmlns="http://a9.com/-/spec/opensearch/1.1/" /><totalResults xmlns="http://a9.com/-/spec/opensearch/1.1/">8370</totalResults><startIndex
+        type="text">Parliament.uk Search: diane abbott</title><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=293</id><updated>2018-07-02T14:19:53Z</updated><author><name>Parliament.uk</name></author><Query
+        role="request" searchTerms="diane abbott" totalResults="7640" count="10" startIndex="7541"
+        xmlns="http://a9.com/-/spec/opensearch/1.1/" /><totalResults xmlns="http://a9.com/-/spec/opensearch/1.1/">7640</totalResults><startIndex
         xmlns="http://a9.com/-/spec/opensearch/1.1/">7541</startIndex><itemsPerPage
-        xmlns="http://a9.com/-/spec/opensearch/1.1/">10</itemsPerPage><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2033</id><title
-        type="text">Armed Forces: Animals:Written question - 20460 - UK Parliament</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://www.parliament.uk/business/publications/written-questions..."
-        href="https://www.parliament.uk/business/publications/written-questions-answers-statements/written-question/Commons/2015-12-16/20460/"
-        /><content type="text">To ask the Secretary of State for Defence, how many
-        official animal mascots there are in the armed forces; and what the (a) rank,
-        (b) rations, (c) species ...</content><hints xmlns="" /></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2034</id><title
-        type="text">Division 268, Immigration Bill - Hansard Online</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://hansard.parliament.uk/.../ImmigrationBill?outputType=Names"
-        href="https://hansard.parliament.uk/Commons/2016-05-09/division/5D437598-3EAE-4081-9BD3-4381F5590727/ImmigrationBill?outputType=Names"
-        /><content type="text">Hansard (the Official Report) is the edited verbatim
-        report of proceedings of both the House of Commons and the House of Lords.
-        Daily Debates from Hansard are ...</content><hints xmlns="" /></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2035</id><title
-        type="text">Early day motion 192 - WILD ANIMALS IN CIRCUSES - UK ...</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://www.parliament.uk/edm/2015-16/192" href="https://www.parliament.uk/edm/2015-16/192"
-        /><content type="text">Name Party Constituency Date Signed; Abbott, Diane:
-        Labour Party: Hackney North and Stoke Newington: 02.07.2015: Amess, David:
-        Conservative Party: Southend West</content><hints xmlns="" /></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2036</id><title
-        type="text">The Register of Members'' Financial Interests: Part 1 As at ...</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://publications.parliament.uk/pa/cm/cmregmem/150330/part1..."
-        href="https://publications.parliament.uk/pa/cm/cmregmem/150330/part1contents.htm"
-        /><content type="text">The Register of Members'' Financial Interests: Part
-        1 As at 30th ... The Register of Members'' Financial Interests is published
-        soon after the ... ABBOTT, Diane ...</content><hints xmlns="" /></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2037</id><title
-        type="text">House of Commons Hansard Debates for 24 Jan 2006 (pt 23)</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://publications.parliament.uk/pa/cm200506/cmhansrd/vo060124/..."
-        href="https://publications.parliament.uk/pa/cm200506/cmhansrd/vo060124/debtext/60124-23.htm"
-        /><content type="text">Abbott, Ms Diane Ainger, Nick Ainsworth, rh Mr. Bob
-        Alexander, rh Mr. Douglas Allen, Mr. Graham Anderson, Janet Armstrong, rh
-        Hilary Austin, Mr. Ian Bailey ...</content><hints xmlns="" /></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2038</id><title
-        type="text">Rt Hon John McDonnell MP - UK Parliament</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://www.parliament.uk/biographies/commons/john-mcdonnell/178/..."
-        href="https://www.parliament.uk/biographies/commons/john-mcdonnell/178/election-results"
-        /><content type="text">2018 marks 100 years since some women, and all men,
-        could vote. Find out how you can join in</content><hints xmlns="" /></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2039</id><title
-        type="text">www.parliament.uk</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://www.parliament.uk/documents/foi/Allowances/Members..." href="https://www.parliament.uk/documents/foi/Allowances/Members-allowance-expenditure-table-09-10.xls"
-        /><content type="text">Diane Abbott MP Gerry Adams MP Adam Afriyie MP Nick
-        Ainger MP Robert Ainsworth MP Peter Ainsworth MP Danny Alexander MP Douglas
-        Alexander MP Graham Allen MP David ...</content><hints xmlns=""><hint><Name>Excel</Name><Filter></Filter></hint></hints></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2040</id><title
-        type="text">House of Commons Hansard Debates for 11 May 1992</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://publications.parliament.uk/pa/cm199293/cmhansrd/1992-05-11/..."
-        href="https://publications.parliament.uk/pa/cm199293/cmhansrd/1992-05-11/Debate-1.html"
-        /><content type="text">Ms. Diane Abbott (Hackney North and Stoke Newington)
-        : Will the Minister give way? Mr. Waldegrave : No ; I have given way enough.</content><hints
-        xmlns="" /></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2041</id><title
-        type="text">Early day motion 2137 - CASEMENT PARK ACCUSED - UK Parliament</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://www.parliament.uk/edm/1992-93/2137" href="https://www.parliament.uk/edm/1992-93/2137"
-        /><content type="text">Abbott, Diane: Labour Party: Hackney North and Stoke
-        Newington: 09.06.1993: Ainger, Nick: Labour Party: Carmarthen West and Pembrokeshire
-        South: 13.07.1993: Anderson ...</content><hints xmlns="" /></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2042</id><title
-        type="text">Early day motion 542 - SALE OF STUDENT LOANS - UK Parliament</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://www.parliament.uk/edm/2013-14/542" href="https://www.parliament.uk/edm/2013-14/542"
-        /><content type="text">Name Party Constituency Date Signed; Abbott, Diane:
-        Labour Party: Hackney North and Stoke Newington: 16.01.2014: Ainsworth, Bob:
-        Labour Party: Coventry North East</content><hints xmlns="" /></entry></feed>'
+        xmlns="http://a9.com/-/spec/opensearch/1.1/">10</itemsPerPage><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=294</id><title
+        type="text">Jeremy Quin MP - UK Parliament</title><updated>2018-07-02T14:19:53Z</updated><link
+        title="https://www.parliament.uk/biographies/commons/jeremy-quin/4507" href="https://www.parliament.uk/biographies/commons/jeremy-quin/4507"
+        /><content type="text">Jeremy Quin Party. Conservative Contact Details Parliamentary.
+        House of Commons, London, SW1A 0AA Tel: 020 7219 6341 Email ...</content><hints
+        xmlns="" /></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=295</id><title
+        type="text">Written questions and answers - UK Parliament</title><updated>2018-07-02T14:19:53Z</updated><link
+        title="https://www.parliament.uk/writtenanswers?page=2&amp;max=100" href="https://www.parliament.uk/writtenanswers?page=2&amp;max=100"
+        /><content type="text">Written questions allow Members of Parliament to ask
+        government ministers for information on the work, policy and activities of
+        government departments ...</content><hints xmlns="" /></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=296</id><title
+        type="text">House of Commons Hansard Debates for 17 July 2013 (pt 0003)</title><updated>2018-07-02T14:19:53Z</updated><link
+        title="https://publications.parliament.uk/pa/cm201314/cmhansrd/cm130717/..."
+        href="https://publications.parliament.uk/pa/cm201314/cmhansrd/cm130717/debtext/130717-0003.htm"
+        /><content type="text">Read the House of commons debates for 17 July 2013
+        on Managing Risk in the NHS, ...</content><hints xmlns="" /></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=297</id><title
+        type="text">House of Commons Hansard Debates for 27 Jun 2011 (pt 0001)</title><updated>2018-07-02T14:19:53Z</updated><link
+        title="https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110627/..."
+        href="https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110627/debtext/110627-0001.htm"
+        /><content type="text">House of Commons Monday 27 June 2011 ... Anne Marie
+        Morris (Newton Abbot) (Con): ... Diana Johnson (Kingston upon Hull North)
+        ...</content><hints xmlns="" /></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=298</id><title
+        type="text">House of Commons Hansard Debates for 13 Jan 2015 (pt 0003)</title><updated>2018-07-02T14:19:53Z</updated><link
+        title="https://publications.parliament.uk/pa/cm201415/cmhansrd/cm150113/..."
+        href="https://publications.parliament.uk/pa/cm201415/cmhansrd/cm150113/debtext/150113-0003.htm"
+        /><content type="text">Read the House of commons debates for 13 January 2015
+        on National Policy Statement ... Abbott, Ms Diane. Alexander, rh Mr Douglas.
+        Alexander, Heidi. Ali, Rushanara.</content><hints xmlns="" /></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=299</id><title
+        type="text">House of Commons Hansard Debates for 18 Jan 2011 (pt 0003)</title><updated>2018-07-02T14:19:53Z</updated><link
+        title="https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110118/..."
+        href="https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110118/debtext/110118-0003.htm"
+        /><content type="text">Abbott, Ms Diane Abrahams, Debbie Ainsworth, rh Mr
+        Bob Alexander, Heidi Ali, Rushanara Anderson, Mr David Austin, Ian Bailey,
+        Mr Adrian Bain, Mr William Balls, rh Ed</content><hints xmlns="" /></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=300</id><title
+        type="text">House of Commons Hansard Debates for 27 Feb 2013 (pt 0004)</title><updated>2018-07-02T14:19:53Z</updated><link
+        title="https://publications.parliament.uk/pa/cm201213/cmhansrd/cm130227/..."
+        href="https://publications.parliament.uk/pa/cm201213/cmhansrd/cm130227/debtext/130227-0004.htm"
+        /><content type="text">Abbott, Ms Diane. Abrahams, Debbie. Alexander, rh Mr
+        Douglas. Alexander, Heidi. Ali, Rushanara. Allen, Mr Graham. Anderson, Mr
+        David. Bailey, Mr Adrian. Bain, Mr William.</content><hints xmlns="" /></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=301</id><title
+        type="text">House of Commons Hansard Written Answers for 12 Dec 2012 ...</title><updated>2018-07-02T14:19:53Z</updated><link
+        title="https://publications.parliament.uk/pa/cm201213/cmhansrd/cm121212/..."
+        href="https://publications.parliament.uk/pa/cm201213/cmhansrd/cm121212/text/121212w0002.htm"
+        /><content type="text">The African Union has appointed Boubacar Gaoussou Diana
+        as their Special Representative for the Great Lakes Region. 12 Dec 2012 :
+        Column 340W. ... Ms Abbott: To ask ...</content><hints xmlns="" /></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=302</id><title
+        type="text">House of Commons Hansard Debates for 25 Apr 2013 (pt 0002)</title><updated>2018-07-02T14:19:53Z</updated><link
+        title="https://publications.parliament.uk/pa/cm201213/cmhansrd/cm130425/..."
+        href="https://publications.parliament.uk/pa/cm201213/cmhansrd/cm130425/debtext/130425-0002.htm"
+        /><content type="text">Abbott, Ms Diane. Ainsworth, rh Mr Bob. Alexander,
+        rh Mr Douglas. Alexander, Heidi. Ali, Rushanara. Allen, Mr Graham. Anderson,
+        Mr David. Ashworth, Jonathan. Austin, Ian.</content><hints xmlns="" /></entry><entry><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=303</id><title
+        type="text">House of Commons Hansard Debates for 30 Oct 2013 (pt 0001)</title><updated>2018-07-02T14:19:53Z</updated><link
+        title="https://publications.parliament.uk/pa/cm201314/cmhansrd/cm131030/..."
+        href="https://publications.parliament.uk/pa/cm201314/cmhansrd/cm131030/debtext/131030-0001.htm"
+        /><content type="text">Some people need to get used to the fact that that
+        is what the public would like to see from the House of Commons. 30 Oct 2013
+        : Column 911. ... Ms Diane Abbott ...</content><hints xmlns="" /></entry></feed>'
     http_version: 
-  recorded_at: Thu, 14 Jun 2018 16:16:26 GMT
-- request:
-    method: get
-    uri: https://api-parliament-uk.azure-api.net/Staging/search?count=10&q=diane%20abbott&start=7541
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      - application/atom+xml
-      User-Agent:
-      - Ruby
-      Ocp-Apim-Subscription-Key:
-      - "<AUTH_TOKEN>"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache
-      Pragma:
-      - no-cache
-      Content-Length:
-      - '2217'
-      Content-Type:
-      - application/atom+xml
-      Expires:
-      - "-1"
-      Vary:
-      - Accept-Encoding
-      Request-Context:
-      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
-      Set-Cookie:
-      - ARRAffinity=7b3a533f561e7e09c1c0a936ab27adabbffe4ec239df09d0c46775c50b146a87;Path=/;HttpOnly;Domain=search201710091000.azurewebsites.net
-      X-Aspnet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Strict-Transport-Security:
-      - max-age=31536000
-      Date:
-      - Thu, 14 Jun 2018 16:16:29 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: '<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title
-        type="text">Parliament.uk Search: diane abbott</title><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2043</id><updated>2018-06-14T16:16:29Z</updated><author><name>Parliament.uk</name></author><Query
-        role="request" searchTerms="diane abbott" totalResults="8370" count="10" startIndex="7541"
-        xmlns="http://a9.com/-/spec/opensearch/1.1/" /><totalResults xmlns="http://a9.com/-/spec/opensearch/1.1/">8370</totalResults><startIndex
-        xmlns="http://a9.com/-/spec/opensearch/1.1/">7541</startIndex><itemsPerPage
-        xmlns="http://a9.com/-/spec/opensearch/1.1/">10</itemsPerPage><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2044</id><title
-        type="text">Armed Forces: Animals:Written question - 20460 - UK Parliament</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://www.parliament.uk/business/publications/written-questions..."
-        href="https://www.parliament.uk/business/publications/written-questions-answers-statements/written-question/Commons/2015-12-16/20460/"
-        /><content type="text">To ask the Secretary of State for Defence, how many
-        official animal mascots there are in the armed forces; and what the (a) rank,
-        (b) rations, (c) species ...</content><hints xmlns="" /></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2045</id><title
-        type="text">Division 268, Immigration Bill - Hansard Online</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://hansard.parliament.uk/.../ImmigrationBill?outputType=Names"
-        href="https://hansard.parliament.uk/Commons/2016-05-09/division/5D437598-3EAE-4081-9BD3-4381F5590727/ImmigrationBill?outputType=Names"
-        /><content type="text">Hansard (the Official Report) is the edited verbatim
-        report of proceedings of both the House of Commons and the House of Lords.
-        Daily Debates from Hansard are ...</content><hints xmlns="" /></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2046</id><title
-        type="text">Early day motion 192 - WILD ANIMALS IN CIRCUSES - UK ...</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://www.parliament.uk/edm/2015-16/192" href="https://www.parliament.uk/edm/2015-16/192"
-        /><content type="text">Name Party Constituency Date Signed; Abbott, Diane:
-        Labour Party: Hackney North and Stoke Newington: 02.07.2015: Amess, David:
-        Conservative Party: Southend West</content><hints xmlns="" /></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2047</id><title
-        type="text">The Register of Members'' Financial Interests: Part 1 As at ...</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://publications.parliament.uk/pa/cm/cmregmem/150330/part1..."
-        href="https://publications.parliament.uk/pa/cm/cmregmem/150330/part1contents.htm"
-        /><content type="text">The Register of Members'' Financial Interests: Part
-        1 As at 30th ... The Register of Members'' Financial Interests is published
-        soon after the ... ABBOTT, Diane ...</content><hints xmlns="" /></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2048</id><title
-        type="text">House of Commons Hansard Debates for 24 Jan 2006 (pt 23)</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://publications.parliament.uk/pa/cm200506/cmhansrd/vo060124/..."
-        href="https://publications.parliament.uk/pa/cm200506/cmhansrd/vo060124/debtext/60124-23.htm"
-        /><content type="text">Abbott, Ms Diane Ainger, Nick Ainsworth, rh Mr. Bob
-        Alexander, rh Mr. Douglas Allen, Mr. Graham Anderson, Janet Armstrong, rh
-        Hilary Austin, Mr. Ian Bailey ...</content><hints xmlns="" /></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2049</id><title
-        type="text">Rt Hon John McDonnell MP - UK Parliament</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://www.parliament.uk/biographies/commons/john-mcdonnell/178/..."
-        href="https://www.parliament.uk/biographies/commons/john-mcdonnell/178/election-results"
-        /><content type="text">2018 marks 100 years since some women, and all men,
-        could vote. Find out how you can join in</content><hints xmlns="" /></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2050</id><title
-        type="text">www.parliament.uk</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://www.parliament.uk/documents/foi/Allowances/Members..." href="https://www.parliament.uk/documents/foi/Allowances/Members-allowance-expenditure-table-09-10.xls"
-        /><content type="text">Diane Abbott MP Gerry Adams MP Adam Afriyie MP Nick
-        Ainger MP Robert Ainsworth MP Peter Ainsworth MP Danny Alexander MP Douglas
-        Alexander MP Graham Allen MP David ...</content><hints xmlns=""><hint><Name>Excel</Name><Filter></Filter></hint></hints></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2051</id><title
-        type="text">House of Commons Hansard Debates for 11 May 1992</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://publications.parliament.uk/pa/cm199293/cmhansrd/1992-05-11/..."
-        href="https://publications.parliament.uk/pa/cm199293/cmhansrd/1992-05-11/Debate-1.html"
-        /><content type="text">Ms. Diane Abbott (Hackney North and Stoke Newington)
-        : Will the Minister give way? Mr. Waldegrave : No ; I have given way enough.</content><hints
-        xmlns="" /></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2052</id><title
-        type="text">Early day motion 2137 - CASEMENT PARK ACCUSED - UK Parliament</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://www.parliament.uk/edm/1992-93/2137" href="https://www.parliament.uk/edm/1992-93/2137"
-        /><content type="text">Abbott, Diane: Labour Party: Hackney North and Stoke
-        Newington: 09.06.1993: Ainger, Nick: Labour Party: Carmarthen West and Pembrokeshire
-        South: 13.07.1993: Anderson ...</content><hints xmlns="" /></entry><entry><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=2053</id><title
-        type="text">Early day motion 542 - SALE OF STUDENT LOANS - UK Parliament</title><updated>2018-06-14T16:16:29Z</updated><link
-        title="https://www.parliament.uk/edm/2013-14/542" href="https://www.parliament.uk/edm/2013-14/542"
-        /><content type="text">Name Party Constituency Date Signed; Abbott, Diane:
-        Labour Party: Hackney North and Stoke Newington: 16.01.2014: Ainsworth, Bob:
-        Labour Party: Coventry North East</content><hints xmlns="" /></entry></feed>'
-    http_version: 
-  recorded_at: Thu, 14 Jun 2018 16:16:27 GMT
+  recorded_at: Mon, 02 Jul 2018 14:19:45 GMT
 recorded_with: VCR 4.0.0

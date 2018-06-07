@@ -9,17 +9,20 @@ module ComponentSerializer
 
     # Initialise a list component with an array of objects.
     #
+    # @param [String] display the overarching type of list.
+    # @param [Array<Hash>] display_data all the css classes for the list.
+    # @param [String] type indicating if the list is an ordered or unordered list, with a default of ordered.
+    # @param [Array<String, Hash>] contents an array of translation blocks, either strings or hashes with a link, each is evaluated in the front-end.
     # @param [Array<Hash>] components an array of objects, each object is a component or atom.
     #
     # @example Creating an unordered pipe list component
-    #   ComponentSerializer::ListComponentSerializer.new(components, display: 'pipe', list_type: ComponentSerializer::ListComponentSerializer::Type::UNORDERED)
-    #
-    # @param [String] display containing the type of css class for the list.
-    # @param [String] list_type indicating if the list is a ordered or unordered list, with a default of unordered.
-    def initialize(components, display: 'block', list_type: Type::ORDERED)
-      @components = components
+    #   ComponentSerializer::ListComponentSerializer.new(display: 'pipe', display_data: [{ component: 'component', variant: 'variant' }], type: ComponentSerializer::ListComponentSerializer::Type::UNORDERED, contents: ['search.results', { content: 'cookie-policy', link: '/meta/cookie-policy' }], components: components)
+    def initialize(display: nil, display_data: nil, type: Type::ORDERED, contents: nil, components: nil)
       @display = display
-      @list_type = list_type
+      @display_data = display_data
+      @type = type
+      @contents = contents
+      @components = components
     end
 
     private
@@ -29,11 +32,20 @@ module ComponentSerializer
     end
 
     def data
-      {
-        type:       @list_type,
-        css_class:  "--#{@display}",
-        components: @components
-      }
+      {}.tap do |hash|
+        hash[:type] = @type
+        hash[:display] = display_hash(@display_data) if @display_data
+        hash[:contents] = contents if @contents
+        hash[:components] = @components if @components
+      end
+    end
+
+    def contents
+      @contents.map do |content|
+        element = { content: content }
+        element = { content: content[:content], data: { link: content[:link] } } if content.is_a?(Hash) && content[:link]
+        element
+      end
     end
   end
 end

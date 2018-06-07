@@ -1,0 +1,7 @@
+---
+name: status__banner
+data:
+  display:
+    data: display_data
+  selector: selector
+  components: components

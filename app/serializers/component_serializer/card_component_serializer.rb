@@ -1,20 +1,16 @@
 module ComponentSerializer
   class CardComponentSerializer < ComponentSerializer::BaseComponentSerializer
-    attr_reader :data
-
     # Initialise a card component.
     #
-    # @param [String] card_type name of the card.
+    # @param [String] name name of the card.
     # @param [String] data data of the card.
-    def initialize(card_type, data)
-      @card_type = card_type
+    def initialize(name, data)
+      @name = name
       @data = data
     end
 
     private
 
-    def name
-      @card_type
-    end
+    attr_reader :name, :data
   end
 end

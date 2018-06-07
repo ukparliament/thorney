@@ -1,26 +1,32 @@
 require_relative '../../rails_helper'
 
 describe ComponentSerializer::ListComponentSerializer do
-  let(:list_items) { [1, 2, 3] }
-
-  let(:list_component_serializer) { described_class.new(list_items) }
-
   context '#to_h' do
-    context 'block' do
-      it 'returns a hash containing the name and data' do
-        expected = get_fixture('fixture')
+    context 'generic' do
+      context 'returns a hash containing the name and data' do
+        it 'when contents is specified' do
+          serializer = described_class.new(display: 'generic', contents: [1, { content: 2, link: 'link' }, 3])
 
-        expect(list_component_serializer.to_yaml).to eq expected
-      end
-    end
+          expected = get_fixture('generic')
 
-    context 'pipe' do
-      it 'returns a hash containing the name and data' do
-        serializer = described_class.new(list_items, display: 'pipe')
+          expect(serializer.to_yaml).to eq expected
+        end
 
-        expected = get_fixture('list--pipe')
+        it 'when type and components are specified' do
+          serializer = described_class.new(display: 'generic', components: [1, 2, 3], type: ComponentSerializer::ListComponentSerializer::Type::UNORDERED)
 
-        expect(serializer.to_yaml).to eq expected
+          expected = get_fixture('type_components')
+
+          expect(serializer.to_yaml).to eq expected
+        end
+
+        it 'when display_data is specified' do
+          serializer = described_class.new(display_data: 123)
+
+          expected = get_fixture('display_data')
+
+          expect(serializer.to_yaml).to eq expected
+        end
       end
     end
   end

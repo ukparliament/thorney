@@ -1,0 +1,8 @@
+---
+name: span
+data:
+  display:
+    data:
+    - component: hint
+  content:
+    content: content

@@ -1,0 +1,10 @@
+---
+name: list__generic
+data:
+  type: ol
+  contents:
+  - content: 1
+  - content: 2
+    data:
+      link: link
+  - content: 3
