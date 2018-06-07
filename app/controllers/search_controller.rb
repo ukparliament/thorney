@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
   def index
     # Show the index page if there is no query or an empty string is passed
-    return render_page(PageSerializer::SearchIndexPageSerializer.new(opensearch_description_url: opensearch_description_url)) unless search_service.sanitised_query.present?
+    return render_page(PageSerializer::SearchIndexPageSerializer.new(opensearch_description_url: opensearch_description_url, flash_message: search_service.flash_message)) unless search_service.sanitised_query.present?
 
     search_service.fetch_description
 

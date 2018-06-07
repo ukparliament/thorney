@@ -3,7 +3,7 @@ module ComponentSerializer
     # Initialise a link component.
     #
     # @param [String] link a string to be placed in an href.
-    # @param [Array<Hash>] display_data a hash containing display data.
+    # @param [Array<Hash>] display_data used for the element's css.
     # @param [String] label a string to be used as the label attribute for the html element.
     # @param [String] selector a string to be the id attribute of the link.
     # @param [String] content a translation block that is evaluated into a string in the front-end.

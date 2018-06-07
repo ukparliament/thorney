@@ -89,7 +89,7 @@ main-components:
         translation:
           key: search.count
           data:
-            count: '7470'
+            count: '7450'
         size: 2
     - name: status__highlight
       data:
@@ -169,15 +169,6 @@ main-components:
               by Stuart Pearson Wright
         - name: card__search__search-result
           data:
-            heading-text: Early day motions by Member for 2016-17 - Abbott, Diane
-              ...
-            url: https://www.parliament.uk/edm/2016-17/3572/diane-abbott
-            short-url: https://www.parliament.uk/edm/2016-17/3572/diane-abbott
-            paragraph-content: Find early day motions (EDMs) supported by Abbott,
-              Diane, the Labour Party MP for Hackney North and Stoke Newington during
-              2016-17
-        - name: card__search__search-result
-          data:
             heading-text: Miss Diane Abbott (Hansard) - api.parliament.uk
             url: https://api.parliament.uk/historic-hansard/people/miss-diane-abbott/index.html
             hints:
@@ -190,6 +181,14 @@ main-components:
             short-url: https://api.parliament.uk/historic-hansard/people/miss-diane-abbott
             paragraph-content: Miss Diane Abbott. September 27, 1953 - . ... Constituencies.
               Hackney North and Stoke Newington June 11, 1987 - ? Contributions
+        - name: card__search__search-result
+          data:
+            heading-text: Urgent Question on the Windrush scandal - News from ...
+            url: https://www.parliament.uk/business/news/2018/april/urgent-question-windrush-scandal/
+            short-url: https://www.parliament.uk/business/news/2018/april/urgent-question...
+            paragraph-content: Shadow Home Secretary, Diane Abbott, asked an Urgent
+              Question in the House of Commons on the Windrush scandal. The Question
+              was responded to by Sajid Javid ...
         - name: card__search__search-result
           data:
             heading-text: mpsallowances.parliament.uk
@@ -216,53 +215,53 @@ main-components:
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=1
             number: 1
-            total-count: of 747
+            total-count: of 745
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=11
             number: 2
-            total-count: of 747
+            total-count: of 745
             active: true
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=21
             number: 3
-            total-count: of 747
+            total-count: of 745
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=31
             number: 4
-            total-count: of 747
+            total-count: of 745
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=41
             number: 5
-            total-count: of 747
+            total-count: of 745
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=51
             number: 6
-            total-count: of 747
+            total-count: of 745
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=61
             number: 7
-            total-count: of 747
+            total-count: of 745
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=71
             number: 8
-            total-count: of 747
+            total-count: of 745
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=81
             number: 9
-            total-count: of 747
+            total-count: of 745
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=91
             number: 10
-            total-count: of 747
+            total-count: of 745
 footer-components:
 - name: footer
   data:

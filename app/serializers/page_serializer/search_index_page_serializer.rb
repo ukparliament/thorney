@@ -2,14 +2,17 @@ module PageSerializer
   class SearchIndexPageSerializer < PageSerializer::BasePageSerializer
     # Initialise a Search index page serializer.
     #
+    # @param [String] opensearch_description_url the search description in the head section of the page.
     # @param [String] query a query string used for the search.
     # @param [Array<Object>] results an array of objects used for displaying results.
     # @param [Hash] pagination_hash a hash containing data used for pagination.
-    def initialize(opensearch_description_url: nil, query: nil, results: nil, pagination_hash: nil)
+    # @param [string] flash_message a translation block that is evaluated into a flash message.
+    def initialize(opensearch_description_url: nil, query: nil, results: nil, pagination_hash: nil, flash_message: nil)
       @opensearch_description_url = opensearch_description_url
       @query = query
       @results = results
       @pagination_helper = PaginationHelper.new(pagination_hash) if pagination_hash
+      @flash_message = flash_message
     end
 
     private
@@ -23,9 +26,11 @@ module PageSerializer
     end
 
     def content
-      return content_without_query unless @query
+      return content_with_query if @query
 
-      content_with_query
+      return content_with_flash_message if @flash_message
+
+      content_without_query
     end
 
     def content_without_query
@@ -40,6 +45,21 @@ module PageSerializer
         content << ComponentSerializer::SectionComponentSerializer.new(results_section_components, content_flag: true).to_h
         content << ComponentSerializer::SectionComponentSerializer.new(@pagination_helper.navigation_section_components).to_h if @results.totalResults.to_i >= 1
       end
+    end
+
+    def content_with_flash_message
+      [
+        ComponentSerializer::SectionComponentSerializer.new(section_primary_components('search.heading'), type: 'primary').to_h,
+        ComponentSerializer::SectionComponentSerializer.new([ComponentSerializer::StatusComponentSerializer.new(type: 'highlight', display_data: flash_message_display_data, components: [flash_message_paragraph]).to_h], content_flag: true).to_h
+      ]
+    end
+
+    def flash_message_paragraph
+      ComponentSerializer::ParagraphComponentSerializer.new([{ content: @flash_message }]).to_h
+    end
+
+    def flash_message_display_data
+      [display_data(component: 'status', variant: 'highlight'), display_data(component: 'theme', variant: 'caution')]
     end
 
     def section_primary_components(results_heading)
