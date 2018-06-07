@@ -1,6 +1,6 @@
 ---
 name: form__search
 data:
-  label: search.key-word
+  label: search.label
   components:
   - 1
