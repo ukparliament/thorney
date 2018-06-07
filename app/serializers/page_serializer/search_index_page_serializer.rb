@@ -5,13 +5,16 @@ module PageSerializer
     # @param [String] query a query string used for the search.
     # @param [Array<Object>] results an array of objects used for displaying results.
     # @param [Hash] pagination_hash a hash containing data used for pagination.
-    def initialize(query: nil, results: nil, pagination_hash: nil)
+    def initialize(opensearch_description_url: nil, query: nil, results: nil, pagination_hash: nil)
+      @opensearch_description_url = opensearch_description_url
       @query = query
       @results = results
       @pagination_helper = PaginationHelper.new(pagination_hash) if pagination_hash
     end
 
     private
+
+    attr_reader :opensearch_description_url
 
     def title
       translation_key = @query ? 'search.title.with_query' : 'search.title.without_query'

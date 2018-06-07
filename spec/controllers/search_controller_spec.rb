@@ -55,7 +55,7 @@ RSpec.describe SearchController, vcr: true do
         end
 
         it 'calls the serializer with the correct arguments' do
-          expect(PageSerializer::SearchIndexPageSerializer).to have_received(:new).with(query: 'banana', results: [1, 2, 3], pagination_hash: 'pagination_hash')
+          expect(PageSerializer::SearchIndexPageSerializer).to have_received(:new).with(opensearch_description_url: 'http://:/search/opensearch', query: 'banana', results: [1, 2, 3], pagination_hash: 'pagination_hash')
         end
       end
 
@@ -79,7 +79,7 @@ RSpec.describe SearchController, vcr: true do
               query: 'fdsfsd'
           }
 
-          expect(PageSerializer::SearchIndexPageSerializer).to have_received(:new).with(query: 'fdsfsd', results: an_instance_of(Feedjira::Parser::Atom), pagination_hash: pagination_hash)
+          expect(PageSerializer::SearchIndexPageSerializer).to have_received(:new).with(opensearch_description_url: 'http://test.host/search/opensearch', query: 'fdsfsd', results: an_instance_of(Feedjira::Parser::Atom), pagination_hash: pagination_hash)
         end
       end
 
@@ -156,7 +156,7 @@ RSpec.describe SearchController, vcr: true do
 
           get :index, params: { q: 'Allan Wazacz' }
 
-          expect(PageSerializer::SearchIndexPageSerializer).to have_received(:new).with(query: 'Allan Wazacz')
+          expect(PageSerializer::SearchIndexPageSerializer).to have_received(:new).with(opensearch_description_url: 'http://test.host/search/opensearch', query: 'Allan Wazacz')
         end
       end
     end

@@ -1,17 +1,17 @@
 class SearchController < ApplicationController
   def index
     # Show the index page if there is no query or an empty string is passed
-    return render_page(PageSerializer::SearchIndexPageSerializer.new) unless search_service.sanitised_query.present?
+    return render_page(PageSerializer::SearchIndexPageSerializer.new(opensearch_description_url: opensearch_description_url)) unless search_service.sanitised_query.present?
 
     search_service.fetch_description
 
     begin
-      serialiser = PageSerializer::SearchIndexPageSerializer.new(query: search_service.sanitised_query, results: search_service.results, pagination_hash: search_service.pagination_hash)
+      serialiser = PageSerializer::SearchIndexPageSerializer.new(opensearch_description_url: opensearch_description_url, query: search_service.sanitised_query, results: search_service.results, pagination_hash: search_service.pagination_hash)
 
       return render_page(serialiser)
     rescue Parliament::ServerError => e
       logger.warn "Server error caught from search request: #{e.message}"
-      serialiser = PageSerializer::SearchIndexPageSerializer.new(query: search_service.sanitised_query)
+      serialiser = PageSerializer::SearchIndexPageSerializer.new(opensearch_description_url: opensearch_description_url, query: search_service.sanitised_query)
 
       return render_page(serialiser)
     end
