@@ -8,18 +8,27 @@ gem 'rails', '~> 5.2.0'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'rack-timeout'
 
-# Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+# Gem to remove trailing slashes
+gem 'rack-rewrite'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# Use Parliament-Ruby for web requests
+gem 'parliament-ruby', '~> 0.8'
+
+# Use Parliament-Opensearch to handle our Opensearch requests
+gem 'parliament-opensearch', '~> 0.4', require: false
+
+# Parliament Grom Decorators decorates Grom nodes
+gem 'parliament-grom-decorators', '~> 0.2'
+
+# Parliament routing
+gem 'parliament-routes', '~> 0.6'
+
+# Use bandiera-client for feature flagging
+gem 'bandiera-client'
+
+gem 'sanitize'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -31,9 +40,15 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.7'
-
   gem 'simplecov'
   gem 'coveralls'
+  # gem 'rake'
+  gem 'capybara'
+  gem 'vcr'
+  gem 'webmock'
+  gem 'rubocop'
+  gem 'rails-controller-testing'
+  gem 'timecop'
 end
 
 group :development do

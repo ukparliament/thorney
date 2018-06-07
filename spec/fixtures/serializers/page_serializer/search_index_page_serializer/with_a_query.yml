@@ -1,0 +1,115 @@
+---
+layout:
+  template: layout
+title: hello - Search - UK Parliament
+header-components:
+- name: skip-to-content
+  data: skip-to-content.skip-to-content
+- name: cookie-banner
+  data:
+    parliament-uses-cookies: cookie-banner.parliament-uses-cookies
+    find-out-more: cookie-banner.find-out-more
+- name: status-banner
+  data:
+    beta: status-banner.beta
+    pages-tested: status-banner.pages-tested
+    give-feedback: status-banner.give-feedback
+    improve-them: status-banner.improve-them
+    go-to: status-banner.go-to
+    current-website: status-banner.current-website
+- name: header
+  data:
+    components:
+      name: header-component
+      data: header-component.uk-parliament
+main-components:
+- name: section__primary
+  data:
+    components:
+    - name: heading
+      data:
+        heading:
+        - search.results-heading
+        size: 1
+    - name: form__search
+      data:
+        value: hello
+- name: section__section
+  data:
+    content-flag: true
+    components:
+    - name: heading
+      data:
+        translation:
+          key: search.about-count
+          data:
+            count: 658
+        size: 2
+    - name: status__highlight
+      data:
+        components:
+        - name: paragraph
+          data:
+          - search.status.highlight
+    - name: list__block
+      data:
+        type: ol
+        css-class: "--block"
+        components:
+        - name: card__search-result
+          data:
+            heading-text: Result one
+            url: link
+            list-hint:
+              type: hint theme--grey-4
+              text: pdf
+              url: link...
+            paragraph-text: Content one
+        - name: card__search-result
+          data:
+            heading-text: Result two
+            url: link
+            list-hint:
+              url: link...
+            paragraph-text: Content two
+        - name: card__search-result
+          data:
+            heading-text: Result three
+            url: link
+            list-hint:
+              type: hint
+              text: Beta
+              url: link...
+            paragraph-text: Content three
+- name: section__section
+  data:
+    components:
+    - name: navigation__number__number
+      data:
+        active-tile: 1
+        next-url: "?count=100&q=hello&start_index=101"
+        components:
+        - name: navigation__number__card
+          data:
+            url: "?count=100&q=hello&start_index=1"
+            data-number: 1
+            total-count: of 4
+            active: true
+        - name: navigation__number__card
+          data:
+            url: "?count=100&q=hello&start_index=101"
+            data-number: 2
+            total-count: of 4
+        - name: navigation__number__card
+          data:
+            url: "?count=100&q=hello&start_index=201"
+            data-number: 3
+            total-count: of 4
+        - name: navigation__number__card
+          data:
+            url: "?count=100&q=hello&start_index=301"
+            data-number: 4
+            total-count: of 4
+footer-components:
+- name: footer
+  data: footer

@@ -1,0 +1,213 @@
+---
+layout:
+  template: layout
+title: diane abbott - Search - UK Parliament
+header-components:
+- name: skip-to-content
+  data: skip-to-content.skip-to-content
+- name: cookie-banner
+  data:
+    parliament-uses-cookies: cookie-banner.parliament-uses-cookies
+    find-out-more: cookie-banner.find-out-more
+- name: status-banner
+  data:
+    beta: status-banner.beta
+    pages-tested: status-banner.pages-tested
+    give-feedback: status-banner.give-feedback
+    improve-them: status-banner.improve-them
+    go-to: status-banner.go-to
+    current-website: status-banner.current-website
+- name: header
+  data:
+    components:
+      name: header-component
+      data: header-component.uk-parliament
+main-components:
+- name: section__primary
+  data:
+    components:
+    - name: heading
+      data:
+        heading:
+        - search.results-heading
+        size: 1
+    - name: form__search
+      data:
+        value: diane abbott
+- name: section__section
+  data:
+    content-flag: true
+    components:
+    - name: heading
+      data:
+        translation:
+          key: search.about-count
+          data:
+            count: '8370'
+        size: 2
+    - name: status__highlight
+      data:
+        components:
+        - name: paragraph
+          data:
+          - search.status.highlight
+    - name: list__block
+      data:
+        type: ol
+        css-class: "--block"
+        components:
+        - name: card__search-result
+          data:
+            heading-text: 'Armed Forces: Animals:Written question - 20460 - UK Parliament'
+            url: https://www.parliament.uk/business/publications/written-questions-answers-statements/written-question/Commons/2015-12-16/20460/
+            list-hint:
+              url: https://www.parliament.uk/business/publications/written-questions...
+            paragraph-text: To ask the Secretary of State for Defence, how many official
+              animal mascots there are in the armed forces; and what the (a) rank,
+              (b) rations, (c) species ...
+        - name: card__search-result
+          data:
+            heading-text: Division 268, Immigration Bill - Hansard Online
+            url: https://hansard.parliament.uk/Commons/2016-05-09/division/5D437598-3EAE-4081-9BD3-4381F5590727/ImmigrationBill?outputType=Names
+            list-hint:
+              url: https://hansard.parliament.uk/.../ImmigrationBill?outputType=Names
+            paragraph-text: Hansard (the Official Report) is the edited verbatim report
+              of proceedings of both the House of Commons and the House of Lords.
+              Daily Debates from Hansard are ...
+        - name: card__search-result
+          data:
+            heading-text: Early day motion 192 - WILD ANIMALS IN CIRCUSES - UK ...
+            url: https://www.parliament.uk/edm/2015-16/192
+            list-hint:
+              url: https://www.parliament.uk/edm/2015-16/192
+            paragraph-text: 'Name Party Constituency Date Signed; Abbott, Diane: Labour
+              Party: Hackney North and Stoke Newington: 02.07.2015: Amess, David:
+              Conservative Party: Southend West'
+        - name: card__search-result
+          data:
+            heading-text: 'The Register of Members'' Financial Interests: Part 1 As
+              at ...'
+            url: https://publications.parliament.uk/pa/cm/cmregmem/150330/part1contents.htm
+            list-hint:
+              url: https://publications.parliament.uk/pa/cm/cmregmem/150330/part1...
+            paragraph-text: 'The Register of Members'' Financial Interests: Part 1
+              As at 30th ... The Register of Members'' Financial Interests is published
+              soon after the ... ABBOTT, Diane ...'
+        - name: card__search-result
+          data:
+            heading-text: House of Commons Hansard Debates for 24 Jan 2006 (pt 23)
+            url: https://publications.parliament.uk/pa/cm200506/cmhansrd/vo060124/debtext/60124-23.htm
+            list-hint:
+              url: https://publications.parliament.uk/pa/cm200506/cmhansrd/vo060124/...
+            paragraph-text: Abbott, Ms Diane Ainger, Nick Ainsworth, rh Mr. Bob Alexander,
+              rh Mr. Douglas Allen, Mr. Graham Anderson, Janet Armstrong, rh Hilary
+              Austin, Mr. Ian Bailey ...
+        - name: card__search-result
+          data:
+            heading-text: Rt Hon John McDonnell MP - UK Parliament
+            url: https://www.parliament.uk/biographies/commons/john-mcdonnell/178/election-results
+            list-hint:
+              url: https://www.parliament.uk/biographies/commons/john-mcdonnell/178/...
+            paragraph-text: 2018 marks 100 years since some women, and all men, could
+              vote. Find out how you can join in
+        - name: card__search-result
+          data:
+            heading-text: www.parliament.uk
+            url: https://www.parliament.uk/documents/foi/Allowances/Members-allowance-expenditure-table-09-10.xls
+            list-hint:
+              type: hint theme--grey-4
+              text: Excel
+              url: https://www.parliament.uk/documents/foi/Allowances/Members...
+            paragraph-text: Diane Abbott MP Gerry Adams MP Adam Afriyie MP Nick Ainger
+              MP Robert Ainsworth MP Peter Ainsworth MP Danny Alexander MP Douglas
+              Alexander MP Graham Allen MP David ...
+        - name: card__search-result
+          data:
+            heading-text: House of Commons Hansard Debates for 11 May 1992
+            url: https://publications.parliament.uk/pa/cm199293/cmhansrd/1992-05-11/Debate-1.html
+            list-hint:
+              url: https://publications.parliament.uk/pa/cm199293/cmhansrd/1992-05-11/...
+            paragraph-text: 'Ms. Diane Abbott (Hackney North and Stoke Newington)
+              : Will the Minister give way? Mr. Waldegrave : No ; I have given way
+              enough.'
+        - name: card__search-result
+          data:
+            heading-text: Early day motion 2137 - CASEMENT PARK ACCUSED - UK Parliament
+            url: https://www.parliament.uk/edm/1992-93/2137
+            list-hint:
+              url: https://www.parliament.uk/edm/1992-93/2137
+            paragraph-text: 'Abbott, Diane: Labour Party: Hackney North and Stoke
+              Newington: 09.06.1993: Ainger, Nick: Labour Party: Carmarthen West and
+              Pembrokeshire South: 13.07.1993: Anderson ...'
+        - name: card__search-result
+          data:
+            heading-text: Early day motion 542 - SALE OF STUDENT LOANS - UK Parliament
+            url: https://www.parliament.uk/edm/2013-14/542
+            list-hint:
+              url: https://www.parliament.uk/edm/2013-14/542
+            paragraph-text: 'Name Party Constituency Date Signed; Abbott, Diane: Labour
+              Party: Hackney North and Stoke Newington: 16.01.2014: Ainsworth, Bob:
+              Labour Party: Coventry North East'
+- name: section__section
+  data:
+    components:
+    - name: navigation__number__number
+      data:
+        active-tile: 6
+        previous-url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7531
+        next-url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7551
+        components:
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7491
+            data-number: 750
+            total-count: of 837
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7501
+            data-number: 751
+            total-count: of 837
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7511
+            data-number: 752
+            total-count: of 837
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7521
+            data-number: 753
+            total-count: of 837
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7531
+            data-number: 754
+            total-count: of 837
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7541
+            data-number: 755
+            total-count: of 837
+            active: true
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7551
+            data-number: 756
+            total-count: of 837
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7561
+            data-number: 757
+            total-count: of 837
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7571
+            data-number: 758
+            total-count: of 837
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7581
+            data-number: 759
+            total-count: of 837
+footer-components:
+- name: footer
+  data: footer
