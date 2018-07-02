@@ -1,0 +1,214 @@
+---
+layout:
+  template: layout
+title: diane abbott - Search - UK Parliament
+header-components:
+- name: skip-to-content
+  data: skip-to-content.skip-to-content
+- name: cookie-banner
+  data:
+    parliament-uses-cookies: cookie-banner.parliament-uses-cookies
+    find-out-more: cookie-banner.find-out-more
+- name: status-banner
+  data:
+    beta: status-banner.beta
+    pages-tested: status-banner.pages-tested
+    give-feedback: status-banner.give-feedback
+    improve-them: status-banner.improve-them
+    go-to: status-banner.go-to
+    current-website: status-banner.current-website
+- name: header
+  data:
+    components:
+      name: header-component
+      data: header-component.uk-parliament
+main-components:
+- name: section__primary
+  data:
+    components:
+    - name: heading
+      data:
+        heading:
+        - search.results-heading
+        size: 1
+    - name: form__search
+      data:
+        value: diane abbott
+- name: section__section
+  data:
+    content-flag: true
+    components:
+    - name: heading
+      data:
+        translation:
+          key: search.about-count
+          data:
+            count: '8370'
+        size: 2
+    - name: status__highlight
+      data:
+        components:
+        - name: paragraph
+          data:
+          - search.status.highlight
+    - name: list__block
+      data:
+        type: ol
+        css-class: "--block"
+        components:
+        - name: card__search-result
+          data:
+            heading-text: Rt Hon Diane Abbott MP - UK Parliament
+            url: https://www.parliament.uk/biographies/commons/ms-diane-abbott/172/election-results
+            list-hint:
+              url: https://www.parliament.uk/biographies/commons/ms-diane-abbott/172/...
+            paragraph-text: 2018 marks 100 years since some women, and all men, could
+              vote. Find out how you can join in
+        - name: card__search-result
+          data:
+            heading-text: 'October Artwork of the Month: ''Diane Abbott MP'' by Stuart
+              ...'
+            url: https://www.parliament.uk/about/art-in-parliament/news/2016/october/october-2016-artwork/
+            list-hint:
+              url: https://www.parliament.uk/about/art-in-parliament/news/2016/...
+            paragraph-text: To celebrate Black History Month 2016, October’s Artwork
+              of the Month is Stuart Pearson Wright’s portrait of Diane Abbott MP,
+              the first black woman to ...
+        - name: card__search-result
+          data:
+            heading-text: Diane Abbott should be arrested and sacked for her racist
+              ...
+            url: https://petition.parliament.uk/archived/petitions/26891
+            list-hint:
+              url: https://petition.parliament.uk/archived/petitions/26891
+            paragraph-text: The British tax payer is paying the salary of Diane Abbott.
+              Diane has made racist/bigoted comments numerous times and it's time
+              she was made accountable.
+        - name: card__search-result
+          data:
+            heading-text: Artwork - Diane Abbott MP - UK Parliament
+            url: https://www.parliament.uk/worksofart/artwork/stuart-pearson-wright/diane-abbott-mp-for-hackney-north-and-stoke-newington-1987-/6270
+            list-hint:
+              url: https://www.parliament.uk/worksofart/artwork/stuart-pearson-wright/...
+            paragraph-text: Stuart Pearson Wright a British painter working in a figurative
+              tradition studied at Slade School of Fine Art where his work was met
+              with mixed feelings where the ...
+        - name: card__search-result
+          data:
+            heading-text: Rejected petition Diane Abbott - Petitions - UK Government
+              ...
+            url: https://petition.parliament.uk/archived/petitions/26797
+            list-hint:
+              url: https://petition.parliament.uk/archived/petitions/26797
+            paragraph-text: Please remove Diane Abbott from office. While in a position
+              of authority and representative of British people it is a disgrace making
+              any racist comments this should ...
+        - name: card__search-result
+          data:
+            heading-text: House of Commons Hansard Debates for 30 Jan 2014 (pt 0004)
+            url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm140130/debtext/140130-0004.htm
+            list-hint:
+              url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm140130/...
+            paragraph-text: Abbott, Ms Diane. Edwards, Jonathan. Lazarowicz, Mark.
+              Leech, Mr John. Llwyd, rh Mr Elfyn. Lucas, Caroline. MacNeil, Mr Angus
+              Brendan. Mactaggart, Fiona. McDonnell, John.
+        - name: card__search-result
+          data:
+            heading-text: Ms Diane Abbott - Contributions - Hansard Online
+            url: https://hansard.parliament.uk/search/MemberContributions?memberId=172&type=Divisions
+            list-hint:
+              url: https://hansard.parliament.uk/search/MemberContributions?memberId=...
+            paragraph-text: Review the contributions made by Ms Diane Abbott that
+              have been recorded in Hansard (the Official Report) of Parliamentary
+              proceedings.
+        - name: card__search-result
+          data:
+            heading-text: 'Diane Abbott MP: Hansard contributions for current session
+              ...'
+            url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cmallfiles/mps/commons_hansard_3572_home.html
+            list-hint:
+              url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cmallfiles/...
+            paragraph-text: 'Diane Abbott. Party: Labour. Constituency: Hackney North
+              and Stoke Newington. You can view all Hansard contributions by this
+              MP during the current session ...'
+        - name: card__search-result
+          data:
+            heading-text: 'Indonesia: Droughts:Written question - 41141 - UK Parliament'
+            url: https://www.parliament.uk/business/publications/written-questions-answers-statements/written-question/Commons/2016-06-24/41141/
+            list-hint:
+              url: https://www.parliament.uk/business/publications/written-questions...
+            paragraph-text: 'Indonesia: Droughts:Written question - 41141 Q. Asked
+              by Ms Diane Abbott (Hackney North and Stoke Newington) Asked on: 24
+              June 2016.'
+        - name: card__search-result
+          data:
+            heading-text: www.parliament.uk
+            url: https://www.parliament.uk/documents/outreach/Women-in-Parliament-Key-Speeches-PROOF-v7.pdf
+            list-hint:
+              type: hint theme--grey-4
+              text: pdf
+              url: https://www.parliament.uk/documents/outreach/Women-in-Parliament...
+            paragraph-text: www.parliament.uk
+- name: section__section
+  data:
+    components:
+    - name: navigation__number__number
+      data:
+        active-tile: 2
+        previous-url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=1
+        next-url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=21
+        components:
+        - name: navigation__number__card
+          data:
+            url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=1
+            data-number: 1
+            total-count: of 837
+        - name: navigation__number__card
+          data:
+            url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=11
+            data-number: 2
+            total-count: of 837
+            active: true
+        - name: navigation__number__card
+          data:
+            url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=21
+            data-number: 3
+            total-count: of 837
+        - name: navigation__number__card
+          data:
+            url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=31
+            data-number: 4
+            total-count: of 837
+        - name: navigation__number__card
+          data:
+            url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=41
+            data-number: 5
+            total-count: of 837
+        - name: navigation__number__card
+          data:
+            url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=51
+            data-number: 6
+            total-count: of 837
+        - name: navigation__number__card
+          data:
+            url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=61
+            data-number: 7
+            total-count: of 837
+        - name: navigation__number__card
+          data:
+            url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=71
+            data-number: 8
+            total-count: of 837
+        - name: navigation__number__card
+          data:
+            url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=81
+            data-number: 9
+            total-count: of 837
+        - name: navigation__number__card
+          data:
+            url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=91
+            data-number: 10
+            total-count: of 837
+footer-components:
+- name: footer
+  data: footer

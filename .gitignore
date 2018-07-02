@@ -33,3 +33,8 @@
 
 # Ignore spec examples
 /spec/examples.txt
+
+# Ignore docs
+/doc
+/.yardoc
+

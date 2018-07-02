@@ -1,0 +1,26 @@
+---
+- :name: card__search-result
+  :data:
+    :heading-text: Result one
+    :url: link
+    :list-hint:
+      :type: hint theme--grey-4
+      :text: pdf
+      :url: link...
+    :paragraph-text: Content one
+- :name: card__search-result
+  :data:
+    :heading-text: Result two
+    :url: link
+    :list-hint:
+      :url: link...
+    :paragraph-text: Content two
+- :name: card__search-result
+  :data:
+    :heading-text: Result three
+    :url: link
+    :list-hint:
+      :type: hint
+      :text: Beta
+      :url: link...
+    :paragraph-text: Content three

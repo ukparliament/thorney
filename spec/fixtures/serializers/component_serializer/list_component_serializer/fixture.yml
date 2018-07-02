@@ -1,0 +1,9 @@
+---
+name: list__block
+data:
+  type: ol
+  css-class: "--block"
+  components:
+  - 1
+  - 2
+  - 3

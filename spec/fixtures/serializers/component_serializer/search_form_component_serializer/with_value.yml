@@ -1,0 +1,4 @@
+---
+name: form__search
+data:
+  value: query

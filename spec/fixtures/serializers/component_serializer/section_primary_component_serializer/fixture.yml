@@ -1,0 +1,7 @@
+---
+:name: section__primary
+:data:
+  :content-flag: true
+  :components:
+  - 1
+  - 2

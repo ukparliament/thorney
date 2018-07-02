@@ -1,0 +1,9 @@
+---
+name: list__pipe
+data:
+  type: ol
+  css-class: "--pipe"
+  components:
+  - 1
+  - 2
+  - 3

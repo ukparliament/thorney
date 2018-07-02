@@ -29,6 +29,11 @@ bundle exec rails s
 
 The application should now be available at [http://localhost:3000][local].
 
+By default, there is a service timeout of 5 seconds. This can be disabled by setting the `DISABLE_TIMEOUT` environment variable to `true`, like so:
+
+```bash
+DISABLE_TIMEOUT=true bundle exec rails s
+```
 ## Contributing
 If you wish to submit a bug fix or feature, you can create a pull request and it will be merged pending a code review.
 
