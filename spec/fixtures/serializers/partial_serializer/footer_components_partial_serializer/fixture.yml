@@ -1,7 +1,7 @@
 ---
 - :name: footer
   :data:
-    :uk-parliament: footer.uk-parliament
+    :uk-parliament: common.footer.uk-parliament
     :components:
     - name: list__generic
       data:
@@ -10,8 +10,8 @@
           data:
           - component: list
         contents:
-        - content: footer.current-website
-        - content: footer.cookie-policy
+        - content: common.footer.current-website
+        - content: common.footer.cookie-policy
           data:
             link: "/meta/cookie-policy"
-        - content: footer.data-protection-privacy
+        - content: common.footer.data-protection-privacy

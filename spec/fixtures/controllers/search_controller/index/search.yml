@@ -12,7 +12,7 @@ header-components:
       data:
       - component: skip-to-content
     selector: skiplink
-    content: skip-to-content.skip-to-content
+    content: common.header.skip-to-content
 - name: status__banner
   data:
     display:
@@ -26,7 +26,7 @@ header-components:
     components:
     - name: paragraph
       data:
-      - content: cookie-banner.text
+      - content: common.header.cookie-banner-text
         data:
           link: "/meta/cookie-policy"
 - name: status__banner
@@ -40,7 +40,7 @@ header-components:
       data:
         display:
           data: []
-        content: status-banner.beta
+        content: common.header.beta
     - name: list__generic
       data:
         type: ul
@@ -49,8 +49,8 @@ header-components:
           - component: list
             variant: inline
         contents:
-        - content: status-banner.pages-tested
-        - content: status-banner.current-website
+        - content: common.header.pages-being-tested
+        - content: common.header.current-website
 - name: header
   data:
     components:
@@ -60,10 +60,10 @@ header-components:
         display:
           data:
           - component: uk_parliament
-        label: header-component.label
+        label: common.header.label
         components:
         - name: icon__uk-parliament
-          data: header-component.uk-parliament
+          data: common.header.label
 main-components:
 - name: section__primary
   data:
@@ -76,14 +76,14 @@ main-components:
         size: 1
     - name: form__search
       data:
-        label: search.key-word
+        label: search.label
         components:
         - name: icon__search
           data: search.search-icon
 footer-components:
 - name: footer
   data:
-    uk-parliament: footer.uk-parliament
+    uk-parliament: common.footer.uk-parliament
     components:
     - name: list__generic
       data:
@@ -92,8 +92,8 @@ footer-components:
           data:
           - component: list
         contents:
-        - content: footer.current-website
-        - content: footer.cookie-policy
+        - content: common.footer.current-website
+        - content: common.footer.cookie-policy
           data:
             link: "/meta/cookie-policy"
-        - content: footer.data-protection-privacy
+        - content: common.footer.data-protection-privacy

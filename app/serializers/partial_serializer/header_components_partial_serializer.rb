@@ -15,7 +15,7 @@ module PartialSerializer
     private
 
     def skip_to_content
-      ComponentSerializer::LinkComponentSerializer.new(link: '#content', display_data: skip_to_content_display_data, selector: 'skiplink', content: 'skip-to-content.skip-to-content').to_h
+      ComponentSerializer::LinkComponentSerializer.new(link: '#content', display_data: skip_to_content_display_data, selector: 'skiplink', content: 'common.header.skip-to-content').to_h
     end
 
     def skip_to_content_display_data
@@ -35,7 +35,7 @@ module PartialSerializer
     end
 
     def cookie_banner_components
-      [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'cookie-banner.text', link: '/meta/cookie-policy' }]).to_h]
+      [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'common.header.cookie-banner-text', link: '/meta/cookie-policy' }]).to_h]
     end
 
     def status_banner
@@ -50,8 +50,8 @@ module PartialSerializer
 
     def status_banner_components
       [
-        ComponentSerializer::HintComponentSerializer.new(content: 'status-banner.beta').to_h,
-        ComponentSerializer::ListComponentSerializer.new(display: 'generic', contents: ['status-banner.pages-tested', 'status-banner.current-website'], display_data: [display_data(component: 'list', variant: 'inline')], type: ComponentSerializer::ListComponentSerializer::Type::UNORDERED).to_h
+        ComponentSerializer::HintComponentSerializer.new(content: 'common.header.beta').to_h,
+        ComponentSerializer::ListComponentSerializer.new(display: 'generic', contents: ['common.header.pages-being-tested', 'common.header.current-website'], display_data: [display_data(component: 'list', variant: 'inline')], type: ComponentSerializer::ListComponentSerializer::Type::UNORDERED).to_h
       ]
     end
 
@@ -60,7 +60,7 @@ module PartialSerializer
     end
 
     def header_link
-      ComponentSerializer::LinkComponentSerializer.new(link: '/', display_data: header_display_data, label: 'header-component.label', components: header_link_components).to_h
+      ComponentSerializer::LinkComponentSerializer.new(link: '/', display_data: header_display_data, label: 'common.header.label', components: header_link_components).to_h
     end
 
     def header_display_data
@@ -68,7 +68,7 @@ module PartialSerializer
     end
 
     def header_link_components
-      [name_and_data_hash('icon__uk-parliament', 'header-component.uk-parliament')]
+      [name_and_data_hash('icon__uk-parliament', 'common.header.label')]
     end
 
     def name_and_data_hash(name, data)

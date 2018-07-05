@@ -2,12 +2,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> [WEBDEV-582] Update components serialisation for the search page with no results
 =======
 =======
 >>>>>>> [WEBDEV-584] Update components serialisation for the search results
+=======
+>>>>>>> [WEBDEV-592] Update translation blocks
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -20,12 +23,19 @@
 =======
 >>>>>>> [WEBDEV-590] Add assets to JSON
 >>>>>>> [WEBDEV-590] Add assets to JSON
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> [WEBDEV-590] Add assets to JSON
 =======
 =======
 >>>>>>> [WEBDEV-584] Update components serialisation for the search page with results
 >>>>>>> [WEBDEV-584] Update components serialisation for the search results
+=======
+=======
+>>>>>>> [WEBDEV-584] Update components serialisation for the search page with results
+=======
+>>>>>>> [WEBDEV-592] Update translation blocks
+>>>>>>> [WEBDEV-592] Update translation blocks
 name: list__block
 data:
   type: ol
@@ -34,10 +44,13 @@ data:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> [WEBDEV-584] Update components serialisation for the search results
+=======
+>>>>>>> [WEBDEV-592] Update translation blocks
 <<<<<<< HEAD
 =======
 =======
@@ -46,12 +59,19 @@ data:
 =======
 >>>>>>> [WEBDEV-590] Add assets to JSON
 >>>>>>> [WEBDEV-590] Add assets to JSON
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> [WEBDEV-590] Add assets to JSON
 =======
 =======
 >>>>>>> [WEBDEV-584] Update components serialisation for the search page with results
 >>>>>>> [WEBDEV-584] Update components serialisation for the search results
+=======
+=======
+>>>>>>> [WEBDEV-584] Update components serialisation for the search page with results
+=======
+>>>>>>> [WEBDEV-592] Update translation blocks
+>>>>>>> [WEBDEV-592] Update translation blocks
 =======
 :name: list__block
 :data:
@@ -61,10 +81,13 @@ data:
 >>>>>>> [WEBDEV-575] Implement the BE for the search results page
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> [WEBDEV-582] Update components serialisation for the search page with no results
 =======
 =======
 >>>>>>> [WEBDEV-584] Update components serialisation for the search results
+=======
+>>>>>>> [WEBDEV-592] Update translation blocks
 <<<<<<< HEAD
 >>>>>>> [WEBDEV-582] Update components serialisation for the search page with no results
 =======
@@ -73,12 +96,19 @@ data:
 =======
 >>>>>>> [WEBDEV-590] Add assets to JSON
 >>>>>>> [WEBDEV-590] Add assets to JSON
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> [WEBDEV-590] Add assets to JSON
 =======
 =======
 >>>>>>> [WEBDEV-584] Update components serialisation for the search page with results
 >>>>>>> [WEBDEV-584] Update components serialisation for the search results
+=======
+=======
+>>>>>>> [WEBDEV-584] Update components serialisation for the search page with results
+=======
+>>>>>>> [WEBDEV-592] Update translation blocks
+>>>>>>> [WEBDEV-592] Update translation blocks
   - 1
   - 2
   - 3

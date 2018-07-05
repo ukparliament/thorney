@@ -128,8 +128,8 @@ describe PageSerializer::SearchIndexPageSerializer, vcr: true do
         it 'calls the correct serializers' do
           page_with_query.send(:results_section_components)
 
-          expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(translation_key: 'search.about-count', translation_data: { count: 123 } , size: 2)
-          expect(ComponentSerializer::StatusComponentSerializer).to have_received(:new).with(type: 'highlight', components: [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'search.status.highlight' }]).to_h])
+          expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(translation_key: 'search.count', translation_data: { count: 123 } , size: 2)
+          expect(ComponentSerializer::StatusComponentSerializer).to have_received(:new).with(type: 'highlight', components: [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'search.new-search' }]).to_h])
           expect(ComponentSerializer::ListComponentSerializer).to have_received(:new).with(display: 'generic', display_data: [{ component: 'list', variant: 'block' }], components: 'search results' )
         end
       end

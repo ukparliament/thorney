@@ -12,7 +12,7 @@ header-components:
       data:
       - component: skip-to-content
     selector: skiplink
-    content: skip-to-content.skip-to-content
+    content: common.header.skip-to-content
 - name: status__banner
   data:
     display:
@@ -26,7 +26,7 @@ header-components:
     components:
     - name: paragraph
       data:
-      - content: cookie-banner.text
+      - content: common.header.cookie-banner-text
         data:
           link: "/meta/cookie-policy"
 - name: status__banner
@@ -40,7 +40,7 @@ header-components:
       data:
         display:
           data: []
-        content: status-banner.beta
+        content: common.header.beta
     - name: list__generic
       data:
         type: ul
@@ -49,8 +49,8 @@ header-components:
           - component: list
             variant: inline
         contents:
-        - content: status-banner.pages-tested
-        - content: status-banner.current-website
+        - content: common.header.pages-being-tested
+        - content: common.header.current-website
 - name: header
   data:
     components:
@@ -60,10 +60,10 @@ header-components:
         display:
           data:
           - component: uk_parliament
-        label: header-component.label
+        label: common.header.label
         components:
         - name: icon__uk-parliament
-          data: header-component.uk-parliament
+          data: common.header.label
 main-components:
 - name: section__primary
   data:
@@ -76,7 +76,7 @@ main-components:
     - name: form__search
       data:
         value: diane abbott
-        label: search.key-word
+        label: search.label
         components:
         - name: icon__search
           data: search.search-icon
@@ -87,16 +87,16 @@ main-components:
     - name: heading
       data:
         translation:
-          key: search.about-count
+          key: search.count
           data:
-            count: '7450'
+            count: '7470'
         size: 2
     - name: status__highlight
       data:
         components:
         - name: paragraph
           data:
-          - content: search.status.highlight
+          - content: search.new-search
     - name: list__generic
       data:
         type: ol
@@ -107,193 +107,182 @@ main-components:
         components:
         - name: card__search__search-result
           data:
-            heading-text: House of Commons Hansard Debates for 15 Feb 2011 (pt 0002)
-            url: https://publications.parliament.uk/pa/cm201012/cmhansrd/cm110215/debtext/110215-0002.htm
-            short-url: https://publications.parliament.uk/pa/cm201012/cmhansrd/cm110215/...
-            paragraph-content: Abbott, Ms Diane. Abrahams, Debbie. Alexander, rh Mr
-              Douglas. Alexander, Heidi. Ali, Rushanara. Allen, Mr Graham. Anderson,
-              Mr David. Austin, Ian. Bain, Mr William ...
-        - name: card__search__search-result
-          data:
-            heading-text: Westminster Hall - United Kingdom Parliament home page
-            url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm131009/halltext/131009h0001.htm
-            short-url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm131009/...
-            paragraph-content: Westminster Hall Wednesday 9 October 2013 [Martin Caton
-              in the Chair] International Criminal Court (Kenya) ... Ms Diane Abbott
-              (Hackney North and Stoke Newington) ...
-        - name: card__search__search-result
-          data:
-            heading-text: House of Commons Hansard Written Answers for 24 Feb 2014
-              ...
-            url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm140224/text/140224w0002.htm
-            short-url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm140224/...
-            paragraph-content: 'Diana Johnson: To ask the Secretary of State for the
-              Home Department pursuant to the answer of 10 February 2014, Official
-              Report, column 395W, ... Ms Abbott: To ask ...'
-        - name: card__search__search-result
-          data:
-            heading-text: House of Commons Hansard Debates for 22 Nov 2011 (pt 0003)
-            url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm111122/debtext/111122-0003.htm
-            short-url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm111122/...
+            heading-text: House of Commons Hansard Debates for 26 Jan 2015 (pt 0002)
+            url: https://publications.parliament.uk/pa/cm201415/cmhansrd/cm150126/debtext/150126-0002.htm
+            short-url: https://publications.parliament.uk/pa/cm201415/cmhansrd/cm150126/...
             paragraph-content: Abbott, Ms Diane. Ainsworth, rh Mr Bob. Alexander,
-              rh Mr Douglas. Alexander, Heidi. Ali, Rushanara. Anderson, Mr David.
-              Ashworth, Jonathan. Austin, Ian. Bailey, Mr ...
+              rh Mr Douglas. Alexander, Heidi. Ali, Rushanara. Allen, Mr Graham. Anderson,
+              Mr David. Ashworth, Jonathan. Austin, Ian.
         - name: card__search__search-result
           data:
-            heading-text: Written questions and answers - UK Parliament
-            url: https://www.parliament.uk/writtenanswers?page=2&max=100
-            short-url: https://www.parliament.uk/writtenanswers?page=2&max=100
-            paragraph-content: Written questions allow Members of Parliament to ask
-              government ministers for information on the work, policy and activities
-              of government departments ...
+            heading-text: House of Commons Hansard Debates for 10 Oct 2013 (pt 0001)
+            url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm131010/debtext/131010-0001.htm
+            short-url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm131010/...
+            paragraph-content: Read the House of commons debates for 10 October 2013
+              on Food Aid, Bovine Tuberculosis, England Coastal Path, Bovine Tuberculosis,
+              Dog Ownership, Water Bills...
         - name: card__search__search-result
           data:
-            heading-text: House of Commons Hansard Debates for 27 Jun 2011 (pt 0001)
-            url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110627/debtext/110627-0001.htm
-            short-url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110627/...
-            paragraph-content: 'House of Commons Monday 27 June 2011 ... Anne Marie
-              Morris (Newton Abbot) (Con): ... Diana Johnson (Kingston upon Hull North)
-              ...'
+            heading-text: Lords Hansard text for 04 Feb 2016 (pt 0001)
+            url: https://publications.parliament.uk/pa/ld201516/ldhansrd/text/160204-gc0001.htm
+            short-url: https://publications.parliament.uk/pa/ld201516/ldhansrd/text/...
+            paragraph-content: This has been acknowledged across the board, including
+              by Diane Abbott and in studies by Edinburgh University. The Government
+              had to act and, in 2010, ...
         - name: card__search__search-result
           data:
-            heading-text: House of Commons Hansard Debates for 10 July 2014 (pt 0001)
-            url: https://publications.parliament.uk/pa/cm201415/cmhansrd/cm140710/debtext/140710-0001.htm
-            short-url: https://publications.parliament.uk/pa/cm201415/cmhansrd/cm140710/...
-            paragraph-content: 'Read the House of commons debates for 10 July 2014
-              on Congestion ... Diana Johnson: Perhaps the Minister ... (Newton Abbot)
-              ...'
+            heading-text: House of Commons Hansard Debates for 09 Dec 2015 (pt 0004)
+            url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cm151209/debtext/151209-0004.htm
+            short-url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cm151209/...
+            paragraph-content: Abbott, Ms Diane. Abrahams, Debbie. Ahmed-Sheikh, Ms
+              Tasmina. Alexander, Heidi. Ali, Rushanara. Allen, Mr Graham. Arkless,
+              Richard. Ashworth, Jonathan. Bailey, Mr Adrian.
         - name: card__search__search-result
           data:
-            heading-text: House of Commons Hansard Debates for 30 Oct 2013 (pt 0001)
-            url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm131030/debtext/131030-0001.htm
-            short-url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm131030/...
-            paragraph-content: 'Some people need to get used to the fact that that
-              is what the public would like to see from the House of Commons. 30 Oct
-              2013 : Column 911. ... Ms Diane Abbott ...'
+            heading-text: House of Commons Hansard Debates for 11 Jun 2013 (pt 0004)
+            url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm130611/debtext/130611-0004.htm
+            short-url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm130611/...
+            paragraph-content: Abbott, Ms Diane. Abrahams, Debbie. Ainsworth, rh Mr
+              Bob. Alexander, rh Mr Douglas. Alexander, Heidi. Ali, Rushanara. Allen,
+              Mr Graham. Ashworth, Jonathan. Austin, Ian.
         - name: card__search__search-result
           data:
-            heading-text: House of Commons Hansard Debates for 25 Jan 2011 (pt 0001)
-            url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110125/halltext/110125h0001.htm
-            short-url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110125/...
-            paragraph-content: 'Let me first turn to good choice. When I was preparing
-              for my Westminster Hall debate, ... Ms Diane Abbott (Hackney North and
-              Stoke Newington) (Lab): ...'
+            heading-text: House of Commons Hansard Debates for 13 Oct 2010 (pt 0001)
+            url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm101013/debtext/101013-0001.htm
+            short-url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm101013/...
+            paragraph-content: Abbott, Ms Diane Alexander, Heidi Andrew, Stuart Bailey,
+              Mr Adrian Barclay, Stephen Barron, rh Mr Kevin Bayley, Hugh Begg, Miss
+              Anne Beith, rh Sir Alan Beresford, Sir ...
         - name: card__search__search-result
           data:
-            heading-text: House of Commons Hansard Debates for 07 Sep 2015 (pt 0003)
-            url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cm150907/debtext/150907-0003.htm
-            short-url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cm150907/...
-            paragraph-content: Abbott, Ms Diane. Abrahams, Debbie. Afriyie, Adam.
-              Ahmed-Sheikh, Ms Tasmina. Alexander, Heidi. Ali, Rushanara. Allen, Mr
-              Graham. Anderson, Mr David. Arkless, Richard ...
+            heading-text: Westminster Hall - publications.parliament.uk
+            url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110503/halltext/110503h0001.htm
+            short-url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110503/...
+            paragraph-content: 'Westminster Hall Tuesday 3 May 2011 ... Ms Diane Abbott
+              (Hackney North and Stoke Newington) (Lab): Drinking half a pint of coffee
+              would be one thing.'
+        - name: card__search__search-result
+          data:
+            heading-text: House of Commons Hansard Debates for 20 Jan 2016 (pt 0003)
+            url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cm160120/debtext/160120-0003.htm
+            short-url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cm160120/...
+            paragraph-content: Abbott, Ms Diane. Abrahams, Debbie. Ahmed-Sheikh, Ms
+              Tasmina. Alexander, Heidi. Ali, Rushanara. Anderson, Mr David. Bardell,
+              Hannah. Barron, rh Kevin. Beckett, rh ...
+        - name: card__search__search-result
+          data:
+            heading-text: House of Commons Hansard Debates for 25 Jan 2016 (pt 0002)
+            url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cm160125/debtext/160125-0002.htm
+            short-url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cm160125/...
+            paragraph-content: Abbott, Ms Diane. Abrahams, Debbie. Alexander, Heidi.
+              Ali, Rushanara. Ashworth, Jonathan. Austin, Ian. Bailey, Mr Adrian.
+              Barron, rh Kevin. Beckett, rh Margaret. Benn ...
+        - name: card__search__search-result
+          data:
+            heading-text: Rt Hon Jeremy Hunt MP - UK Parliament
+            url: https://www.parliament.uk/biographies/commons/mr-jeremy-hunt/1572
+            short-url: https://www.parliament.uk/biographies/commons/mr-jeremy-hunt/1572
+            paragraph-content: Rt Hon Jeremy Hunt MP Constituency. South West Surrey
+              Address as. Mr Hunt Party. Conservative Contact Details Parliamentary.
+              House of ...
 - name: section__section
   data:
     components:
     - name: navigation__number__number
       data:
-        active-tile: 20
+        active-tile: 18
         previous-url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7531
         next-url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7551
         components:
         - name: navigation__number__card
           data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7351
-            number: 736
-            total-count: of 745
-        - name: navigation__number__card
-          data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7361
-            number: 737
-            total-count: of 745
-        - name: navigation__number__card
-          data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7371
             number: 738
-            total-count: of 745
+            total-count: of 747
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7381
             number: 739
-            total-count: of 745
+            total-count: of 747
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7391
             number: 740
-            total-count: of 745
+            total-count: of 747
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7401
             number: 741
-            total-count: of 745
+            total-count: of 747
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7411
             number: 742
-            total-count: of 745
+            total-count: of 747
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7421
             number: 743
-            total-count: of 745
+            total-count: of 747
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7431
             number: 744
-            total-count: of 745
+            total-count: of 747
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7441
             number: 745
-            total-count: of 745
+            total-count: of 747
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7451
             number: 746
-            total-count: of 745
+            total-count: of 747
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7461
             number: 747
-            total-count: of 745
+            total-count: of 747
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7471
             number: 748
-            total-count: of 745
+            total-count: of 747
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7481
             number: 749
-            total-count: of 745
+            total-count: of 747
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7491
             number: 750
-            total-count: of 745
+            total-count: of 747
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7501
             number: 751
-            total-count: of 745
+            total-count: of 747
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7511
             number: 752
-            total-count: of 745
+            total-count: of 747
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7521
             number: 753
-            total-count: of 745
+            total-count: of 747
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7531
             number: 754
-            total-count: of 745
+            total-count: of 747
 footer-components:
 - name: footer
   data:
-    uk-parliament: footer.uk-parliament
+    uk-parliament: common.footer.uk-parliament
     components:
     - name: list__generic
       data:
@@ -302,8 +291,8 @@ footer-components:
           data:
           - component: list
         contents:
-        - content: footer.current-website
-        - content: footer.cookie-policy
+        - content: common.footer.current-website
+        - content: common.footer.cookie-policy
           data:
             link: "/meta/cookie-policy"
-        - content: footer.data-protection-privacy
+        - content: common.footer.data-protection-privacy
