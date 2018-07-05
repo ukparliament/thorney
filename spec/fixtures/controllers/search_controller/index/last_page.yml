@@ -3,25 +3,66 @@ layout:
   template: layout
 title: diane abbott - Search - UK Parliament
 header-components:
-- name: skip-to-content
-  data: skip-to-content.skip-to-content
-- name: cookie-banner
+- name: link
   data:
-    parliament-uses-cookies: cookie-banner.parliament-uses-cookies
-    find-out-more: cookie-banner.find-out-more
-- name: status-banner
+    link: "#content"
+    display:
+      data:
+      - component: skip-to-content
+    selector: skiplink
+    content: skip-to-content.skip-to-content
+- name: status__banner
   data:
-    beta: status-banner.beta
-    pages-tested: status-banner.pages-tested
-    give-feedback: status-banner.give-feedback
-    improve-them: status-banner.improve-them
-    go-to: status-banner.go-to
-    current-website: status-banner.current-website
+    display:
+      data:
+      - component: status
+        variant: banner
+      - component: theme
+        variant: caution
+      - component: cookie
+    selector: cookie
+    components:
+    - name: paragraph
+      data:
+      - content: cookie-banner.text
+        data:
+          link: "/meta/cookie-policy"
+- name: status__banner
+  data:
+    display:
+      data:
+      - component: status
+        variant: banner
+    components:
+    - name: span
+      data:
+        display:
+          data:
+          - component: hint
+        content: status-banner.beta
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          data:
+          - component: list
+            variant: inline
+        contents:
+        - content: status-banner.pages-tested
+        - content: status-banner.current-website
 - name: header
   data:
     components:
-      name: header-component
-      data: header-component.uk-parliament
+    - name: link
+      data:
+        link: "/"
+        display:
+          data:
+          - component: uk_parliament
+        label: header-component.label
+        components:
+        - name: icon__uk-parliament
+          data: header-component.uk-parliament
 main-components:
 - name: section__primary
   data:
@@ -34,6 +75,10 @@ main-components:
     - name: form__search
       data:
         value: diane abbott
+        key-word: search.key-word
+        components:
+        - name: icon__search
+          data: search.search-icon
 - name: section__section
   data:
     content-flag: true
@@ -43,111 +88,110 @@ main-components:
         translation:
           key: search.about-count
           data:
-            count: '8370'
+            count: '7640'
         size: 2
     - name: status__highlight
       data:
         components:
         - name: paragraph
           data:
-          - search.status.highlight
-    - name: list__block
+          - content: search.status.highlight
+    - name: list__generic
       data:
         type: ol
-        css-class: "--block"
+        display:
+          data:
+          - component: list
+            variant: block
         components:
         - name: card__search-result
           data:
-            heading-text: 'Armed Forces: Animals:Written question - 20460 - UK Parliament'
-            url: https://www.parliament.uk/business/publications/written-questions-answers-statements/written-question/Commons/2015-12-16/20460/
+            heading-text: Jeremy Quin MP - UK Parliament
+            url: https://www.parliament.uk/biographies/commons/jeremy-quin/4507
             list-hint:
-              url: https://www.parliament.uk/business/publications/written-questions...
-            paragraph-text: To ask the Secretary of State for Defence, how many official
-              animal mascots there are in the armed forces; and what the (a) rank,
-              (b) rations, (c) species ...
+              url: https://www.parliament.uk/biographies/commons/jeremy-quin/4507
+            paragraph-text: 'Jeremy Quin Party. Conservative Contact Details Parliamentary.
+              House of Commons, London, SW1A 0AA Tel: 020 7219 6341 Email ...'
         - name: card__search-result
           data:
-            heading-text: Division 268, Immigration Bill - Hansard Online
-            url: https://hansard.parliament.uk/Commons/2016-05-09/division/5D437598-3EAE-4081-9BD3-4381F5590727/ImmigrationBill?outputType=Names
+            heading-text: Written questions and answers - UK Parliament
+            url: https://www.parliament.uk/writtenanswers?page=2&max=100
             list-hint:
-              url: https://hansard.parliament.uk/.../ImmigrationBill?outputType=Names
-            paragraph-text: Hansard (the Official Report) is the edited verbatim report
-              of proceedings of both the House of Commons and the House of Lords.
-              Daily Debates from Hansard are ...
+              url: https://www.parliament.uk/writtenanswers?page=2&max=100
+            paragraph-text: Written questions allow Members of Parliament to ask government
+              ministers for information on the work, policy and activities of government
+              departments ...
         - name: card__search-result
           data:
-            heading-text: Early day motion 192 - WILD ANIMALS IN CIRCUSES - UK ...
-            url: https://www.parliament.uk/edm/2015-16/192
+            heading-text: House of Commons Hansard Debates for 17 July 2013 (pt 0003)
+            url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm130717/debtext/130717-0003.htm
             list-hint:
-              url: https://www.parliament.uk/edm/2015-16/192
-            paragraph-text: 'Name Party Constituency Date Signed; Abbott, Diane: Labour
-              Party: Hackney North and Stoke Newington: 02.07.2015: Amess, David:
-              Conservative Party: Southend West'
+              url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm130717/...
+            paragraph-text: Read the House of commons debates for 17 July 2013 on
+              Managing Risk in the NHS, ...
         - name: card__search-result
           data:
-            heading-text: 'The Register of Members'' Financial Interests: Part 1 As
-              at ...'
-            url: https://publications.parliament.uk/pa/cm/cmregmem/150330/part1contents.htm
+            heading-text: House of Commons Hansard Debates for 27 Jun 2011 (pt 0001)
+            url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110627/debtext/110627-0001.htm
             list-hint:
-              url: https://publications.parliament.uk/pa/cm/cmregmem/150330/part1...
-            paragraph-text: 'The Register of Members'' Financial Interests: Part 1
-              As at 30th ... The Register of Members'' Financial Interests is published
-              soon after the ... ABBOTT, Diane ...'
+              url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110627/...
+            paragraph-text: 'House of Commons Monday 27 June 2011 ... Anne Marie Morris
+              (Newton Abbot) (Con): ... Diana Johnson (Kingston upon Hull North) ...'
         - name: card__search-result
           data:
-            heading-text: House of Commons Hansard Debates for 24 Jan 2006 (pt 23)
-            url: https://publications.parliament.uk/pa/cm200506/cmhansrd/vo060124/debtext/60124-23.htm
+            heading-text: House of Commons Hansard Debates for 13 Jan 2015 (pt 0003)
+            url: https://publications.parliament.uk/pa/cm201415/cmhansrd/cm150113/debtext/150113-0003.htm
             list-hint:
-              url: https://publications.parliament.uk/pa/cm200506/cmhansrd/vo060124/...
-            paragraph-text: Abbott, Ms Diane Ainger, Nick Ainsworth, rh Mr. Bob Alexander,
-              rh Mr. Douglas Allen, Mr. Graham Anderson, Janet Armstrong, rh Hilary
-              Austin, Mr. Ian Bailey ...
+              url: https://publications.parliament.uk/pa/cm201415/cmhansrd/cm150113/...
+            paragraph-text: Read the House of commons debates for 13 January 2015
+              on National Policy Statement ... Abbott, Ms Diane. Alexander, rh Mr
+              Douglas. Alexander, Heidi. Ali, Rushanara.
         - name: card__search-result
           data:
-            heading-text: Rt Hon John McDonnell MP - UK Parliament
-            url: https://www.parliament.uk/biographies/commons/john-mcdonnell/178/election-results
+            heading-text: House of Commons Hansard Debates for 18 Jan 2011 (pt 0003)
+            url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110118/debtext/110118-0003.htm
             list-hint:
-              url: https://www.parliament.uk/biographies/commons/john-mcdonnell/178/...
-            paragraph-text: 2018 marks 100 years since some women, and all men, could
-              vote. Find out how you can join in
+              url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110118/...
+            paragraph-text: Abbott, Ms Diane Abrahams, Debbie Ainsworth, rh Mr Bob
+              Alexander, Heidi Ali, Rushanara Anderson, Mr David Austin, Ian Bailey,
+              Mr Adrian Bain, Mr William Balls, rh Ed
         - name: card__search-result
           data:
-            heading-text: www.parliament.uk
-            url: https://www.parliament.uk/documents/foi/Allowances/Members-allowance-expenditure-table-09-10.xls
+            heading-text: House of Commons Hansard Debates for 27 Feb 2013 (pt 0004)
+            url: https://publications.parliament.uk/pa/cm201213/cmhansrd/cm130227/debtext/130227-0004.htm
             list-hint:
-              type: hint theme--grey-4
-              text: Excel
-              url: https://www.parliament.uk/documents/foi/Allowances/Members...
-            paragraph-text: Diane Abbott MP Gerry Adams MP Adam Afriyie MP Nick Ainger
-              MP Robert Ainsworth MP Peter Ainsworth MP Danny Alexander MP Douglas
-              Alexander MP Graham Allen MP David ...
+              url: https://publications.parliament.uk/pa/cm201213/cmhansrd/cm130227/...
+            paragraph-text: Abbott, Ms Diane. Abrahams, Debbie. Alexander, rh Mr Douglas.
+              Alexander, Heidi. Ali, Rushanara. Allen, Mr Graham. Anderson, Mr David.
+              Bailey, Mr Adrian. Bain, Mr William.
         - name: card__search-result
           data:
-            heading-text: House of Commons Hansard Debates for 11 May 1992
-            url: https://publications.parliament.uk/pa/cm199293/cmhansrd/1992-05-11/Debate-1.html
+            heading-text: House of Commons Hansard Written Answers for 12 Dec 2012
+              ...
+            url: https://publications.parliament.uk/pa/cm201213/cmhansrd/cm121212/text/121212w0002.htm
             list-hint:
-              url: https://publications.parliament.uk/pa/cm199293/cmhansrd/1992-05-11/...
-            paragraph-text: 'Ms. Diane Abbott (Hackney North and Stoke Newington)
-              : Will the Minister give way? Mr. Waldegrave : No ; I have given way
-              enough.'
+              url: https://publications.parliament.uk/pa/cm201213/cmhansrd/cm121212/...
+            paragraph-text: 'The African Union has appointed Boubacar Gaoussou Diana
+              as their Special Representative for the Great Lakes Region. 12 Dec 2012
+              : Column 340W. ... Ms Abbott: To ask ...'
         - name: card__search-result
           data:
-            heading-text: Early day motion 2137 - CASEMENT PARK ACCUSED - UK Parliament
-            url: https://www.parliament.uk/edm/1992-93/2137
+            heading-text: House of Commons Hansard Debates for 25 Apr 2013 (pt 0002)
+            url: https://publications.parliament.uk/pa/cm201213/cmhansrd/cm130425/debtext/130425-0002.htm
             list-hint:
-              url: https://www.parliament.uk/edm/1992-93/2137
-            paragraph-text: 'Abbott, Diane: Labour Party: Hackney North and Stoke
-              Newington: 09.06.1993: Ainger, Nick: Labour Party: Carmarthen West and
-              Pembrokeshire South: 13.07.1993: Anderson ...'
+              url: https://publications.parliament.uk/pa/cm201213/cmhansrd/cm130425/...
+            paragraph-text: Abbott, Ms Diane. Ainsworth, rh Mr Bob. Alexander, rh
+              Mr Douglas. Alexander, Heidi. Ali, Rushanara. Allen, Mr Graham. Anderson,
+              Mr David. Ashworth, Jonathan. Austin, Ian.
         - name: card__search-result
           data:
-            heading-text: Early day motion 542 - SALE OF STUDENT LOANS - UK Parliament
-            url: https://www.parliament.uk/edm/2013-14/542
+            heading-text: House of Commons Hansard Debates for 30 Oct 2013 (pt 0001)
+            url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm131030/debtext/131030-0001.htm
             list-hint:
-              url: https://www.parliament.uk/edm/2013-14/542
-            paragraph-text: 'Name Party Constituency Date Signed; Abbott, Diane: Labour
-              Party: Hackney North and Stoke Newington: 16.01.2014: Ainsworth, Bob:
-              Labour Party: Coventry North East'
+              url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm131030/...
+            paragraph-text: 'Some people need to get used to the fact that that is
+              what the public would like to see from the House of Commons. 30 Oct
+              2013 : Column 911. ... Ms Diane Abbott ...'
 - name: section__section
   data:
     components:
@@ -161,53 +205,67 @@ main-components:
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7491
             data-number: 750
-            total-count: of 837
+            total-count: of 764
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7501
             data-number: 751
-            total-count: of 837
+            total-count: of 764
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7511
             data-number: 752
-            total-count: of 837
+            total-count: of 764
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7521
             data-number: 753
-            total-count: of 837
+            total-count: of 764
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7531
             data-number: 754
-            total-count: of 837
+            total-count: of 764
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7541
             data-number: 755
-            total-count: of 837
+            total-count: of 764
             active: true
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7551
             data-number: 756
-            total-count: of 837
+            total-count: of 764
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7561
             data-number: 757
-            total-count: of 837
+            total-count: of 764
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7571
             data-number: 758
-            total-count: of 837
+            total-count: of 764
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7581
             data-number: 759
-            total-count: of 837
+            total-count: of 764
 footer-components:
 - name: footer
-  data: footer
+  data:
+    uk-parliament: footer.uk-parliament
+    components:
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          data:
+            component: list
+        contents:
+        - content: footer.current-website
+        - content: footer.cookie-policy
+          data:
+            link: "/meta/cookie-policy"
+        - content: footer.data-protection-privacy

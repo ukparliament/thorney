@@ -3,25 +3,66 @@ layout:
   template: layout
 title: hello - Search - UK Parliament
 header-components:
-- name: skip-to-content
-  data: skip-to-content.skip-to-content
-- name: cookie-banner
+- name: link
   data:
-    parliament-uses-cookies: cookie-banner.parliament-uses-cookies
-    find-out-more: cookie-banner.find-out-more
-- name: status-banner
+    link: "#content"
+    display:
+      data:
+      - component: skip-to-content
+    selector: skiplink
+    content: skip-to-content.skip-to-content
+- name: status__banner
   data:
-    beta: status-banner.beta
-    pages-tested: status-banner.pages-tested
-    give-feedback: status-banner.give-feedback
-    improve-them: status-banner.improve-them
-    go-to: status-banner.go-to
-    current-website: status-banner.current-website
+    display:
+      data:
+      - component: status
+        variant: banner
+      - component: theme
+        variant: caution
+      - component: cookie
+    selector: cookie
+    components:
+    - name: paragraph
+      data:
+      - content: cookie-banner.text
+        data:
+          link: "/meta/cookie-policy"
+- name: status__banner
+  data:
+    display:
+      data:
+      - component: status
+        variant: banner
+    components:
+    - name: span
+      data:
+        display:
+          data:
+          - component: hint
+        content: status-banner.beta
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          data:
+          - component: list
+            variant: inline
+        contents:
+        - content: status-banner.pages-tested
+        - content: status-banner.current-website
 - name: header
   data:
     components:
-      name: header-component
-      data: header-component.uk-parliament
+    - name: link
+      data:
+        link: "/"
+        display:
+          data:
+          - component: uk_parliament
+        label: header-component.label
+        components:
+        - name: icon__uk-parliament
+          data: header-component.uk-parliament
 main-components:
 - name: section__primary
   data:
@@ -34,6 +75,10 @@ main-components:
     - name: form__search
       data:
         value: hello
+        key-word: search.key-word
+        components:
+        - name: icon__search
+          data: search.search-icon
 - name: section__section
   data:
     content-flag: true
@@ -50,11 +95,14 @@ main-components:
         components:
         - name: paragraph
           data:
-          - search.status.highlight
-    - name: list__block
+          - content: search.status.highlight
+    - name: list__generic
       data:
         type: ol
-        css-class: "--block"
+        display:
+          data:
+          - component: list
+            variant: block
         components:
         - name: card__search-result
           data:
@@ -112,4 +160,18 @@ main-components:
             total-count: of 4
 footer-components:
 - name: footer
-  data: footer
+  data:
+    uk-parliament: footer.uk-parliament
+    components:
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          data:
+            component: list
+        contents:
+        - content: footer.current-website
+        - content: footer.cookie-policy
+          data:
+            link: "/meta/cookie-policy"
+        - content: footer.data-protection-privacy

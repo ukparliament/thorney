@@ -1,6 +1,18 @@
 ---
+<<<<<<< HEAD
 name: status__highlight
 data:
   components:
+=======
+<<<<<<< HEAD
+name: status__highlight
+data:
+  components:
+=======
+:name: status__highlight
+:data:
+  :components:
+>>>>>>> [WEBDEV-575] Implement the BE for the search results page
+>>>>>>> [WEBDEV-582] Update components serialisation for the search page with no results
   - 1
   - 2

@@ -1,0 +1,61 @@
+---
+- name: link
+  data:
+    link: "#content"
+    display:
+      data:
+      - component: skip-to-content
+    selector: skiplink
+    content: skip-to-content.skip-to-content
+- name: status__banner
+  data:
+    display:
+      data:
+      - component: status
+        variant: banner
+      - component: theme
+        variant: caution
+      - component: cookie
+    selector: cookie
+    components:
+    - name: paragraph
+      data:
+      - content: cookie-banner.text
+        data:
+          link: "/meta/cookie-policy"
+- name: status__banner
+  data:
+    display:
+      data:
+      - component: status
+        variant: banner
+    components:
+    - name: span
+      data:
+        display:
+          data:
+          - component: hint
+        content: status-banner.beta
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          data:
+          - component: list
+            variant: inline
+        contents:
+        - content: status-banner.pages-tested
+        - content: status-banner.current-website
+- name: header
+  data:
+    components:
+    - name: link
+      data:
+        link: "/"
+        display:
+          data:
+          - component: uk_parliament
+        label: header-component.label
+        components:
+        - name: icon__uk-parliament
+          data: header-component.uk-parliament

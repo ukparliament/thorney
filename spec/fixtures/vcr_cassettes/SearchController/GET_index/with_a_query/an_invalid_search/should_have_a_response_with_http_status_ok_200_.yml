@@ -34,7 +34,7 @@ http_interactions:
       Request-Context:
       - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
       Set-Cookie:
-      - ARRAffinity=7b3a533f561e7e09c1c0a936ab27adabbffe4ec239df09d0c46775c50b146a87;Path=/;HttpOnly;Domain=search201710091000.azurewebsites.net
+      - ARRAffinity=e971ab7be1e7da7ed53156043087973b40c2615e69bda7765747c464af02c933;Path=/;HttpOnly;Domain=search201710091000.azurewebsites.net
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
@@ -42,7 +42,7 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       Date:
-      - Thu, 14 Jun 2018 15:50:49 GMT
+      - Mon, 02 Jul 2018 14:25:30 GMT
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\"?>\r\n<OpenSearchDescription xmlns=\"http://a9.com/-/spec/opensearch/1.1/\">\r\n
@@ -55,7 +55,7 @@ http_interactions:
         type=\"text/xml\" />\r\n  <Url template=\"https://api-parliament-uk.azure-api.net/Staging/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
         type=\"application/xml\" />\r\n</OpenSearchDescription>"
     http_version: 
-  recorded_at: Thu, 14 Jun 2018 15:50:48 GMT
+  recorded_at: Mon, 02 Jul 2018 14:25:22 GMT
 - request:
     method: get
     uri: https://api-parliament-uk.azure-api.net/Staging/search?count=10&q=fdsfsd&start=1
@@ -82,7 +82,7 @@ http_interactions:
       Pragma:
       - no-cache
       Content-Length:
-      - '487'
+      - '486'
       Content-Type:
       - application/atom+xml
       Expires:
@@ -92,7 +92,7 @@ http_interactions:
       Request-Context:
       - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
       Set-Cookie:
-      - ARRAffinity=7b3a533f561e7e09c1c0a936ab27adabbffe4ec239df09d0c46775c50b146a87;Path=/;HttpOnly;Domain=search201710091000.azurewebsites.net
+      - ARRAffinity=e971ab7be1e7da7ed53156043087973b40c2615e69bda7765747c464af02c933;Path=/;HttpOnly;Domain=search201710091000.azurewebsites.net
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
@@ -100,68 +100,14 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       Date:
-      - Thu, 14 Jun 2018 15:50:51 GMT
+      - Mon, 02 Jul 2018 14:25:30 GMT
     body:
       encoding: ASCII-8BIT
       string: '<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title
-        type="text">Parliament.uk Search: fdsfsd</title><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=1870</id><updated>2018-06-14T15:50:51Z</updated><author><name>Parliament.uk</name></author><Query
+        type="text">Parliament.uk Search: fdsfsd</title><id>uuid:a46deb0f-a69d-4e1d-b183-f6b94fb74d76;id=304</id><updated>2018-07-02T14:25:30Z</updated><author><name>Parliament.uk</name></author><Query
         role="request" searchTerms="fdsfsd" totalResults="0" count="10" startIndex="1"
         xmlns="http://a9.com/-/spec/opensearch/1.1/" /><totalResults xmlns="http://a9.com/-/spec/opensearch/1.1/">0</totalResults><startIndex
         xmlns="http://a9.com/-/spec/opensearch/1.1/">1</startIndex><itemsPerPage xmlns="http://a9.com/-/spec/opensearch/1.1/">0</itemsPerPage></feed>'
     http_version: 
-  recorded_at: Thu, 14 Jun 2018 15:50:48 GMT
-- request:
-    method: get
-    uri: https://api-parliament-uk.azure-api.net/Staging/search?count=10&q=fdsfsd&start=1
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      - application/atom+xml
-      User-Agent:
-      - Ruby
-      Ocp-Apim-Subscription-Key:
-      - "<AUTH_TOKEN>"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache
-      Pragma:
-      - no-cache
-      Content-Length:
-      - '487'
-      Content-Type:
-      - application/atom+xml
-      Expires:
-      - "-1"
-      Vary:
-      - Accept-Encoding
-      Request-Context:
-      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
-      Set-Cookie:
-      - ARRAffinity=7b3a533f561e7e09c1c0a936ab27adabbffe4ec239df09d0c46775c50b146a87;Path=/;HttpOnly;Domain=search201710091000.azurewebsites.net
-      X-Aspnet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Strict-Transport-Security:
-      - max-age=31536000
-      Date:
-      - Thu, 14 Jun 2018 15:50:51 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: '<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title
-        type="text">Parliament.uk Search: fdsfsd</title><id>uuid:d6654c98-def2-493a-b527-b92e78f626dd;id=1871</id><updated>2018-06-14T15:50:51Z</updated><author><name>Parliament.uk</name></author><Query
-        role="request" searchTerms="fdsfsd" totalResults="0" count="10" startIndex="1"
-        xmlns="http://a9.com/-/spec/opensearch/1.1/" /><totalResults xmlns="http://a9.com/-/spec/opensearch/1.1/">0</totalResults><startIndex
-        xmlns="http://a9.com/-/spec/opensearch/1.1/">1</startIndex><itemsPerPage xmlns="http://a9.com/-/spec/opensearch/1.1/">0</itemsPerPage></feed>'
-    http_version: 
-  recorded_at: Thu, 14 Jun 2018 15:50:48 GMT
+  recorded_at: Mon, 02 Jul 2018 14:25:22 GMT
 recorded_with: VCR 4.0.0

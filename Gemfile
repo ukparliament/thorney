@@ -42,7 +42,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.7'
   gem 'simplecov'
   gem 'coveralls'
-  # gem 'rake'
   gem 'capybara'
   gem 'vcr'
   gem 'webmock'

@@ -34,7 +34,7 @@ http_interactions:
       Request-Context:
       - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
       Set-Cookie:
-      - ARRAffinity=7b3a533f561e7e09c1c0a936ab27adabbffe4ec239df09d0c46775c50b146a87;Path=/;HttpOnly;Domain=search201710091000.azurewebsites.net
+      - ARRAffinity=e971ab7be1e7da7ed53156043087973b40c2615e69bda7765747c464af02c933;Path=/;HttpOnly;Domain=search201710091000.azurewebsites.net
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
@@ -42,7 +42,7 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       Date:
-      - Thu, 14 Jun 2018 15:50:56 GMT
+      - Mon, 02 Jul 2018 14:25:35 GMT
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\"?>\r\n<OpenSearchDescription xmlns=\"http://a9.com/-/spec/opensearch/1.1/\">\r\n
@@ -55,5 +55,5 @@ http_interactions:
         type=\"text/xml\" />\r\n  <Url template=\"https://api-parliament-uk.azure-api.net/Staging/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
         type=\"application/xml\" />\r\n</OpenSearchDescription>"
     http_version: 
-  recorded_at: Thu, 14 Jun 2018 15:50:54 GMT
+  recorded_at: Mon, 02 Jul 2018 14:25:27 GMT
 recorded_with: VCR 4.0.0

@@ -1,0 +1,8 @@
+---
+name: link
+data:
+  link: link
+  display:
+    data: display_data
+  selector: selector
+  content: content

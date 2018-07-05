@@ -1,9 +1,23 @@
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> [WEBDEV-582] Update components serialisation for the search page with no results
 name: list__block
 data:
   type: ol
   css-class: "--block"
   components:
+<<<<<<< HEAD
+=======
+=======
+:name: list__block
+:data:
+  :type: ol
+  :css-class: "--block"
+  :components:
+>>>>>>> [WEBDEV-575] Implement the BE for the search results page
+>>>>>>> [WEBDEV-582] Update components serialisation for the search page with no results
   - 1
   - 2
   - 3

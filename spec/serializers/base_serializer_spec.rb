@@ -37,4 +37,24 @@ describe BaseSerializer do
       expect(subject.dasherize_keys(original_hash)).to eq expected_hash
     end
   end
+
+  context '#display_data' do
+    it 'with component and variant' do
+      expected = get_fixture('with_content_and_variant')
+
+      expect(subject.display_data(component: 'component', variant: 'variant').to_yaml).to eq expected
+    end
+
+    it 'with only component' do
+      expected = get_fixture('with_only_component')
+
+      expect(subject.display_data(component: 'component').to_yaml).to eq expected
+    end
+
+    it 'with only variant' do
+      expected = get_fixture('with_only_variant')
+
+      expect(subject.display_data(variant: 'variant').to_yaml).to eq expected
+    end
+  end
 end

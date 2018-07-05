@@ -3,25 +3,66 @@ layout:
   template: layout
 title: diane abbott - Search - UK Parliament
 header-components:
-- name: skip-to-content
-  data: skip-to-content.skip-to-content
-- name: cookie-banner
+- name: link
   data:
-    parliament-uses-cookies: cookie-banner.parliament-uses-cookies
-    find-out-more: cookie-banner.find-out-more
-- name: status-banner
+    link: "#content"
+    display:
+      data:
+      - component: skip-to-content
+    selector: skiplink
+    content: skip-to-content.skip-to-content
+- name: status__banner
   data:
-    beta: status-banner.beta
-    pages-tested: status-banner.pages-tested
-    give-feedback: status-banner.give-feedback
-    improve-them: status-banner.improve-them
-    go-to: status-banner.go-to
-    current-website: status-banner.current-website
+    display:
+      data:
+      - component: status
+        variant: banner
+      - component: theme
+        variant: caution
+      - component: cookie
+    selector: cookie
+    components:
+    - name: paragraph
+      data:
+      - content: cookie-banner.text
+        data:
+          link: "/meta/cookie-policy"
+- name: status__banner
+  data:
+    display:
+      data:
+      - component: status
+        variant: banner
+    components:
+    - name: span
+      data:
+        display:
+          data:
+          - component: hint
+        content: status-banner.beta
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          data:
+          - component: list
+            variant: inline
+        contents:
+        - content: status-banner.pages-tested
+        - content: status-banner.current-website
 - name: header
   data:
     components:
-      name: header-component
-      data: header-component.uk-parliament
+    - name: link
+      data:
+        link: "/"
+        display:
+          data:
+          - component: uk_parliament
+        label: header-component.label
+        components:
+        - name: icon__uk-parliament
+          data: header-component.uk-parliament
 main-components:
 - name: section__primary
   data:
@@ -34,6 +75,10 @@ main-components:
     - name: form__search
       data:
         value: diane abbott
+        key-word: search.key-word
+        components:
+        - name: icon__search
+          data: search.search-icon
 - name: section__section
   data:
     content-flag: true
@@ -43,37 +88,31 @@ main-components:
         translation:
           key: search.about-count
           data:
-            count: '8370'
+            count: '7660'
         size: 2
     - name: status__highlight
       data:
         components:
         - name: paragraph
           data:
-          - search.status.highlight
-    - name: list__block
+          - content: search.status.highlight
+    - name: list__generic
       data:
         type: ol
-        css-class: "--block"
+        display:
+          data:
+          - component: list
+            variant: block
         components:
         - name: card__search-result
           data:
-            heading-text: Rt Hon Diane Abbott MP - UK Parliament
-            url: https://www.parliament.uk/biographies/commons/ms-diane-abbott/172/election-results
+            heading-text: Artwork - Diane Abbott MP - UK Parliament
+            url: https://www.parliament.uk/worksofart/artwork/stuart-pearson-wright/diane-abbott-mp-for-hackney-north-and-stoke-newington-1987-/6270
             list-hint:
-              url: https://www.parliament.uk/biographies/commons/ms-diane-abbott/172/...
-            paragraph-text: 2018 marks 100 years since some women, and all men, could
-              vote. Find out how you can join in
-        - name: card__search-result
-          data:
-            heading-text: 'October Artwork of the Month: ''Diane Abbott MP'' by Stuart
-              ...'
-            url: https://www.parliament.uk/about/art-in-parliament/news/2016/october/october-2016-artwork/
-            list-hint:
-              url: https://www.parliament.uk/about/art-in-parliament/news/2016/...
-            paragraph-text: To celebrate Black History Month 2016, October’s Artwork
-              of the Month is Stuart Pearson Wright’s portrait of Diane Abbott MP,
-              the first black woman to ...
+              url: https://www.parliament.uk/worksofart/artwork/stuart-pearson-wright/...
+            paragraph-text: Stuart Pearson Wright a British painter working in a figurative
+              tradition studied at Slade School of Fine Art where his work was met
+              with mixed feelings where the ...
         - name: card__search-result
           data:
             heading-text: Diane Abbott should be arrested and sacked for her racist
@@ -86,32 +125,21 @@ main-components:
               she was made accountable.
         - name: card__search-result
           data:
-            heading-text: Artwork - Diane Abbott MP - UK Parliament
-            url: https://www.parliament.uk/worksofart/artwork/stuart-pearson-wright/diane-abbott-mp-for-hackney-north-and-stoke-newington-1987-/6270
+            heading-text: Diane Abbott to be sacked - Petitions
+            url: https://petition.parliament.uk/archived/petitions/26805
             list-hint:
-              url: https://www.parliament.uk/worksofart/artwork/stuart-pearson-wright/...
-            paragraph-text: Stuart Pearson Wright a British painter working in a figurative
-              tradition studied at Slade School of Fine Art where his work was met
-              with mixed feelings where the ...
+              url: https://petition.parliament.uk/archived/petitions/26805
+            paragraph-text: Diane Abbott is a member of parliament who is mean't represent
+              the public. Therefore she is paid a salary, at our expense, to represent
+              her constituents ...
         - name: card__search-result
           data:
-            heading-text: Rejected petition Diane Abbott - Petitions - UK Government
-              ...
-            url: https://petition.parliament.uk/archived/petitions/26797
+            heading-text: Portrait of Diane Abbott MP on display in Manchester ...
+            url: https://www.parliament.uk/business/committees/committees-a-z/other-committees/works-of-art/news-parliament-2017/portrait-of-diane-abbott-mp/
             list-hint:
-              url: https://petition.parliament.uk/archived/petitions/26797
-            paragraph-text: Please remove Diane Abbott from office. While in a position
-              of authority and representative of British people it is a disgrace making
-              any racist comments this should ...
-        - name: card__search-result
-          data:
-            heading-text: House of Commons Hansard Debates for 30 Jan 2014 (pt 0004)
-            url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm140130/debtext/140130-0004.htm
-            list-hint:
-              url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm140130/...
-            paragraph-text: Abbott, Ms Diane. Edwards, Jonathan. Lazarowicz, Mark.
-              Leech, Mr John. Llwyd, rh Mr Elfyn. Lucas, Caroline. MacNeil, Mr Angus
-              Brendan. Mactaggart, Fiona. McDonnell, John.
+              url: https://www.parliament.uk/.../portrait-of-diane-abbott-mp
+            paragraph-text: The UK Parliament loans a portrait of Diane Abbott MP
+              to the People's History Museum, Manchester.
         - name: card__search-result
           data:
             heading-text: Ms Diane Abbott - Contributions - Hansard Online
@@ -142,13 +170,32 @@ main-components:
               June 2016.'
         - name: card__search-result
           data:
-            heading-text: www.parliament.uk
-            url: https://www.parliament.uk/documents/outreach/Women-in-Parliament-Key-Speeches-PROOF-v7.pdf
+            heading-text: Miss Diane Abbott (Hansard) - api.parliament.uk
+            url: https://api.parliament.uk/historic-hansard/people/miss-diane-abbott/index.html
+            list-hint:
+              type: hint theme--grey-4
+              text: Historic Hansard
+              url: https://api.parliament.uk/historic-hansard/people/miss-diane-abbott
+            paragraph-text: Miss Diane Abbott. September 27, 1953 - . ... Constituencies.
+              Hackney North and Stoke Newington June 11, 1987 - ? Contributions
+        - name: card__search-result
+          data:
+            heading-text: Sack Dianne Abbott for making racist statements - Petitions
+            url: https://petition.parliament.uk/archived/petitions/26772
+            list-hint:
+              url: https://petition.parliament.uk/archived/petitions/26772
+            paragraph-text: '"White people love playing ''divide & rule''. We should
+              not play their game #tacticasoldascolonialism" - Dianne Abbott This
+              is a quote from a leading newspaper on 5th ...'
+        - name: card__search-result
+          data:
+            heading-text: mpsallowances.parliament.uk
+            url: https://mpsallowances.parliament.uk/mpslordsandoffices/hocallowances/allowances-by-mp/diane-abbott/Diane_Abbott_0708_CA.pdf
             list-hint:
               type: hint theme--grey-4
               text: pdf
-              url: https://www.parliament.uk/documents/outreach/Women-in-Parliament...
-            paragraph-text: www.parliament.uk
+              url: https://mpsallowances.parliament.uk/.../Diane_Abbott_0708_CA.pdf
+            paragraph-text: 'Created Date: 20090527164417Z'
 - name: section__section
   data:
     components:
@@ -162,53 +209,67 @@ main-components:
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=1
             data-number: 1
-            total-count: of 837
+            total-count: of 766
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=11
             data-number: 2
-            total-count: of 837
+            total-count: of 766
             active: true
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=21
             data-number: 3
-            total-count: of 837
+            total-count: of 766
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=31
             data-number: 4
-            total-count: of 837
+            total-count: of 766
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=41
             data-number: 5
-            total-count: of 837
+            total-count: of 766
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=51
             data-number: 6
-            total-count: of 837
+            total-count: of 766
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=61
             data-number: 7
-            total-count: of 837
+            total-count: of 766
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=71
             data-number: 8
-            total-count: of 837
+            total-count: of 766
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=81
             data-number: 9
-            total-count: of 837
+            total-count: of 766
         - name: navigation__number__card
           data:
             url: https://beta.parliament.uk/search?count=10&q=diane+abbott&start_index=91
             data-number: 10
-            total-count: of 837
+            total-count: of 766
 footer-components:
 - name: footer
-  data: footer
+  data:
+    uk-parliament: footer.uk-parliament
+    components:
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          data:
+            component: list
+        contents:
+        - content: footer.current-website
+        - content: footer.cookie-policy
+          data:
+            link: "/meta/cookie-policy"
+        - content: footer.data-protection-privacy

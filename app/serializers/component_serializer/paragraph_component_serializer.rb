@@ -1,15 +1,13 @@
 module ComponentSerializer
-  # Creates a hash where the data content is an array of strings which Dust will render into lines of text.
   class ParagraphComponentSerializer < ComponentSerializer::BaseComponentSerializer
     # Initialise a paragraph component with one or more pieces of content.
     #
-    # @example
-    #   strings = ['Line one content', 'Line two content']
-    #   ComponentSerializer::ParagraphComponentSerializer.new(strings)
+    # @param [Array<Hash>] content one or more pieces of content to be wrapped in <p> tags. The hashes have a content key and and optional link key.
     #
-    # @param [Array<String>] strings an array of one or more pieces of content to be wrapped in <p> tags.
-    def initialize(strings)
-      @strings = strings
+    # @example Initialising a paragraph component
+    #   ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'some content', link: 'a link' }]).to_h
+    def initialize(content)
+      @content = content
     end
 
     private
@@ -19,7 +17,12 @@ module ComponentSerializer
     end
 
     def data
-      @strings
+      @content.map do |content|
+        {}.tap do |hash|
+          hash[:content] = content[:content]
+          hash[:data] = { link: content[:link] } if content[:link]
+        end
+      end
     end
   end
 end
