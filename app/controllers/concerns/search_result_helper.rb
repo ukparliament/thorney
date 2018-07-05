@@ -25,15 +25,16 @@ module SearchResultHelper
     end
 
     def hint_data(entry)
-      { name: 'hint', data: hint_display_data(entry) }
+      entry&.hint_types&.map do |hint_type|
+        ComponentSerializer::HintComponentSerializer.new(display_data: [hint_display_data(hint_type)]).to_h
+      end
     end
 
-    def hint_display_data(entry)
+    def hint_display_data(hint_type)
       {}.tap do |hash|
-        hash[:component] = 'hint'
-        hash[:variant] = 'theme'
-        hash[:modifier] = 'grey-4' unless entry.hint_types.include?('Beta')
-        hash[:content] = entry.hint_types.first
+        hash[:component] = 'theme'
+        hash[:variant] = 'grey-4' unless hint_type == 'Beta'
+        hash[:content] = hint_type
       end
     end
 

@@ -33,6 +33,7 @@ en:
   search:
     title:
       without_query: "Search - UK Parliament"
+      with_flash_message: "No Results - Search - UK Parliament"
       with_query: "%{query} - Search - UK Parliament"
   search_controller:
     index:

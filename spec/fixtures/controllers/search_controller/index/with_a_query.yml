@@ -93,6 +93,10 @@ main-components:
         size: 2
     - name: status__highlight
       data:
+        display:
+          data:
+          - component: status
+            variant: highlight
         components:
         - name: paragraph
           data:
@@ -110,12 +114,13 @@ main-components:
             heading-text: OF THE LORDS OF APPEAL FOR JUDGMENT IN THE CAUSE
             url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070502/obg.pdf
             hints:
-              name: hint
+            - name: hint
               data:
-                component: hint
-                variant: theme
-                modifier: grey-4
-                content: pdf
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
             short-url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070502/...
             paragraph-content: OF THE LORDS OF APPEAL FOR JUDGMENT IN THE CAUSE OBG
               Limited and others (Appellants) v. ... Hello! published photographs
@@ -151,12 +156,13 @@ main-components:
               ...
             url: https://www.parliament.uk/documents/speaker/digital-democracy/Digi058CharlotteMulcare.pdf
             hints:
-              name: hint
+            - name: hint
               data:
-                component: hint
-                variant: theme
-                modifier: grey-4
-                content: pdf
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
             short-url: https://www.parliament.uk/documents/speaker/digital-democracy/Digi...
             paragraph-content: 'Figure 1: From open policy-making to open law-making
               !!! Always start at the beginning, that’s where the start is ! We!believe!that!engagement!should!be!possible!at
@@ -182,12 +188,13 @@ main-components:
             heading-text: Campbell v MGN Ltd - publications.parliament.uk
             url: https://publications.parliament.uk/pa/ld200506/ldjudgmt/jd051020/camp.pdf
             hints:
-              name: hint
+            - name: hint
               data:
-                component: hint
-                variant: theme
-                modifier: grey-4
-                content: pdf
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
             short-url: https://publications.parliament.uk/pa/ld200506/ldjudgmt/jd051020/...
             paragraph-content: "-2- 3. Pursuant to the order of this House, Ms Campbell’s
               solicitors served three bills of costs: £377,070.07 for the trial, £114,755.40
@@ -205,12 +212,13 @@ main-components:
             heading-text: Tony Blair and Colonel Gaddafi call transcript - UK Parliament
             url: https://www.parliament.uk/documents/commons-committees/foreign-affairs/09TBandGaddafiCallTranscript-1115-1145.pdf
             hints:
-              name: hint
+            - name: hint
               data:
-                component: hint
-                variant: theme
-                modifier: grey-4
-                content: pdf
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
             short-url: https://www.parliament.uk/documents/commons-committees/foreign...
             paragraph-content: 'Tony Blair and Gaddafi call February 25. 1h . 1115
               -1145 {the line was bad so there are some gaps} TB: Hello. I have been

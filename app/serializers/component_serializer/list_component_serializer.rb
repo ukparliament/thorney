@@ -9,7 +9,7 @@ module ComponentSerializer
 
     # Initialise a list component with an array of objects.
     #
-    # @param [String] display the overarching type of list.
+    # @param [String] display the style of the list.
     # @param [Array<Hash>] display_data all the css classes for the list.
     # @param [String] type indicating if the list is an ordered or unordered list, with a default of ordered.
     # @param [Array<String, Hash>] contents an array of translation blocks, either strings or hashes with a link, each is evaluated in the front-end.

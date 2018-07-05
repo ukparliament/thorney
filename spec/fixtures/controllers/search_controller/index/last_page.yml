@@ -93,6 +93,10 @@ main-components:
         size: 2
     - name: status__highlight
       data:
+        display:
+          data:
+          - component: status
+            variant: highlight
         components:
         - name: paragraph
           data:

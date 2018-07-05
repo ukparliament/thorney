@@ -4,12 +4,13 @@
     heading-text: Result one
     url: link
     hints:
-      name: hint
+    - name: hint
       data:
-        component: hint
-        variant: theme
-        modifier: grey-4
-        content: pdf
+        display:
+          data:
+          - component: theme
+            variant: grey-4
+            content: pdf
     short-url: link...
     paragraph-content: Content one
 - name: card__search__search-result
@@ -23,10 +24,11 @@
     heading-text: Result three
     url: link
     hints:
-      name: hint
+    - name: hint
       data:
-        component: hint
-        variant: theme
-        content: Beta
+        display:
+          data:
+          - component: theme
+            content: Beta
     short-url: link...
     paragraph-content: Content three

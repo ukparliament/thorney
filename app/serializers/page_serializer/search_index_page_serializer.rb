@@ -21,6 +21,7 @@ module PageSerializer
 
     def title
       translation_key = @query ? 'search.title.with_query' : 'search.title.without_query'
+      translation_key = 'search.title.with_flash_message' if @flash_message
 
       t(translation_key, query: @query)
     end
@@ -35,7 +36,7 @@ module PageSerializer
 
     def content_without_query
       [
-        ComponentSerializer::SectionComponentSerializer.new(section_primary_components('search.heading'), type: 'primary', content_flag: true).to_h
+        ComponentSerializer::SectionComponentSerializer.new(section_primary_components('search.search-heading'), type: 'primary', content_flag: true).to_h
       ]
     end
 
@@ -49,7 +50,7 @@ module PageSerializer
 
     def content_with_flash_message
       [
-        ComponentSerializer::SectionComponentSerializer.new(section_primary_components('search.heading'), type: 'primary').to_h,
+        ComponentSerializer::SectionComponentSerializer.new(section_primary_components('search.search-heading'), type: 'primary').to_h,
         ComponentSerializer::SectionComponentSerializer.new([ComponentSerializer::StatusComponentSerializer.new(type: 'highlight', display_data: flash_message_display_data, components: [flash_message_paragraph]).to_h], content_flag: true).to_h
       ]
     end
@@ -74,7 +75,7 @@ module PageSerializer
 
       [
         ComponentSerializer::HeadingComponentSerializer.new(translation_key: 'search.count', translation_data: translation_data, size: 2).to_h,
-        ComponentSerializer::StatusComponentSerializer.new(type: 'highlight', components: [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'search.new-search' }]).to_h]).to_h,
+        ComponentSerializer::StatusComponentSerializer.new(type: 'highlight', display_data: [display_data(component: 'status', variant: 'highlight')], components: [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'search.new-search' }]).to_h]).to_h,
         ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: SearchResultHelper.create_search_results(@results)).to_h
       ]
     end
