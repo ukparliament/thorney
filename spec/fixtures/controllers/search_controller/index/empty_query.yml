@@ -36,11 +36,6 @@ header-components:
       - component: status
         variant: banner
     components:
-    - name: hint
-      data:
-        display:
-          data: []
-        content: common.header.beta
     - name: list__generic
       data:
         type: ul
