@@ -13,6 +13,20 @@ RSpec.describe SearchService, vcr: true do
       expect(subject.sanitised_query).to eq 'banana'
     end
 
+    context '#flash_message' do
+      it 'if query is nil' do
+        params[:q] = nil
+
+        expect(subject.flash_message).to eq nil
+      end
+
+      it 'if query is empty' do
+        params[:q] = ''
+
+        expect(subject.flash_message).to eq I18n.t('search_controller.index.flash')
+      end
+    end
+
     it '#escaped_query_parameter' do
       params[:q] = 'hello there'
 

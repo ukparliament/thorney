@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> [WEBDEV-582] Update components serialisation for the search page with no results
@@ -11,6 +12,8 @@
 >>>>>>> [WEBDEV-584] Update components serialisation for the search results
 =======
 >>>>>>> [WEBDEV-592] Update translation blocks
+=======
+>>>>>>> [WEBDEV-581] Implement flash messages
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -23,6 +26,7 @@
 =======
 >>>>>>> [WEBDEV-590] Add assets to JSON
 >>>>>>> [WEBDEV-590] Add assets to JSON
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> [WEBDEV-590] Add assets to JSON
@@ -32,10 +36,17 @@
 >>>>>>> [WEBDEV-584] Update components serialisation for the search results
 =======
 =======
+>>>>>>> [WEBDEV-581] Implement flash messages
+=======
 >>>>>>> [WEBDEV-584] Update components serialisation for the search page with results
 =======
 >>>>>>> [WEBDEV-592] Update translation blocks
+<<<<<<< HEAD
 >>>>>>> [WEBDEV-592] Update translation blocks
+=======
+=======
+>>>>>>> [WEBDEV-581] Implement flash messages
+>>>>>>> [WEBDEV-581] Implement flash messages
 name: list__block
 data:
   type: ol
@@ -45,12 +56,15 @@ data:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> [WEBDEV-584] Update components serialisation for the search results
 =======
 >>>>>>> [WEBDEV-592] Update translation blocks
+=======
+>>>>>>> [WEBDEV-581] Implement flash messages
 <<<<<<< HEAD
 =======
 =======
@@ -59,6 +73,7 @@ data:
 =======
 >>>>>>> [WEBDEV-590] Add assets to JSON
 >>>>>>> [WEBDEV-590] Add assets to JSON
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> [WEBDEV-590] Add assets to JSON
@@ -73,6 +88,15 @@ data:
 >>>>>>> [WEBDEV-592] Update translation blocks
 >>>>>>> [WEBDEV-592] Update translation blocks
 =======
+=======
+=======
+>>>>>>> [WEBDEV-584] Update components serialisation for the search page with results
+=======
+>>>>>>> [WEBDEV-592] Update translation blocks
+=======
+>>>>>>> [WEBDEV-581] Implement flash messages
+=======
+>>>>>>> [WEBDEV-581] Implement flash messages
 :name: list__block
 :data:
   :type: ol
@@ -82,12 +106,15 @@ data:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> [WEBDEV-582] Update components serialisation for the search page with no results
 =======
 =======
 >>>>>>> [WEBDEV-584] Update components serialisation for the search results
 =======
 >>>>>>> [WEBDEV-592] Update translation blocks
+=======
+>>>>>>> [WEBDEV-581] Implement flash messages
 <<<<<<< HEAD
 >>>>>>> [WEBDEV-582] Update components serialisation for the search page with no results
 =======
@@ -96,6 +123,7 @@ data:
 =======
 >>>>>>> [WEBDEV-590] Add assets to JSON
 >>>>>>> [WEBDEV-590] Add assets to JSON
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> [WEBDEV-590] Add assets to JSON
@@ -109,6 +137,14 @@ data:
 =======
 >>>>>>> [WEBDEV-592] Update translation blocks
 >>>>>>> [WEBDEV-592] Update translation blocks
+=======
+=======
+>>>>>>> [WEBDEV-584] Update components serialisation for the search page with results
+=======
+>>>>>>> [WEBDEV-592] Update translation blocks
+=======
+>>>>>>> [WEBDEV-581] Implement flash messages
+>>>>>>> [WEBDEV-581] Implement flash messages
   - 1
   - 2
   - 3

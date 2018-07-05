@@ -35,5 +35,7 @@ en:
       without_query: "Search - UK Parliament"
       with_query: "%{query} - Search - UK Parliament"
   search_controller:
+    index:
+      flash: "Please enter a search term."
     opensearch:
       short_name: "UK Parliament"

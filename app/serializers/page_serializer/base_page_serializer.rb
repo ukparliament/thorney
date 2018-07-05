@@ -1,5 +1,4 @@
 module PageSerializer
-  # The serializer which all page serializers inherit from.
   class BasePageSerializer < BaseSerializer
     # Creates a hash of the serializer's content
     def to_h

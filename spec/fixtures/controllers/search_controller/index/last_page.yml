@@ -107,84 +107,85 @@ main-components:
         components:
         - name: card__search__search-result
           data:
-            heading-text: House of Commons Hansard Debates for 26 Jan 2015 (pt 0002)
-            url: https://publications.parliament.uk/pa/cm201415/cmhansrd/cm150126/debtext/150126-0002.htm
-            short-url: https://publications.parliament.uk/pa/cm201415/cmhansrd/cm150126/...
+            heading-text: House of Commons Hansard Debates for 11 July 2012 (pt 0001)
+            url: https://publications.parliament.uk/pa/cm201213/cmhansrd/cm120711/debtext/120711-0001.htm
+            short-url: https://publications.parliament.uk/pa/cm201213/cmhansrd/cm120711/...
+            paragraph-content: 'He came to the House of Commons yesterday determined
+              to vote ... Anne Marie Morris (Newton Abbot) (Con): This Government
+              have a ... Diana Johnson (Kingston ...'
+        - name: card__search__search-result
+          data:
+            heading-text: Monday, 21 July 2014. - publications.parliament.uk
+            url: https://publications.parliament.uk/pa/ld201415/ldhansrd/text/140721-0001.htm
+            short-url: https://publications.parliament.uk/pa/ld201415/ldhansrd/text/...
+            paragraph-content: Monday, 21 July 2014. 2.30 pm. ... Her Majesty’s Inspectorate
+              of Constabulary has looked at this, and the Home Secretary had the support
+              of Diane Abbott, ...
+        - name: card__search__search-result
+          data:
+            heading-text: House of Commons Hansard Debates for 08 Dec 2015 (pt 0002)
+            url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cm151208/debtext/151208-0002.htm
+            short-url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cm151208/...
+            paragraph-content: Abbott, Ms Diane. Abrahams, Debbie. Ahmed-Sheikh, Ms
+              Tasmina. Ali, Rushanara. Anderson, Mr David. Austin, Ian. Bailey, Mr
+              Adrian. Bardell, Hannah. Barron, rh Kevin ...
+        - name: card__search__search-result
+          data:
+            heading-text: House of Commons Hansard Debates for 15 Feb 2011 (pt 0002)
+            url: https://publications.parliament.uk/pa/cm201012/cmhansrd/cm110215/debtext/110215-0002.htm
+            short-url: https://publications.parliament.uk/pa/cm201012/cmhansrd/cm110215/...
+            paragraph-content: Abbott, Ms Diane. Abrahams, Debbie. Alexander, rh Mr
+              Douglas. Alexander, Heidi. Ali, Rushanara. Allen, Mr Graham. Anderson,
+              Mr David. Austin, Ian. Bain, Mr William ...
+        - name: card__search__search-result
+          data:
+            heading-text: Westminster Hall - United Kingdom Parliament home page
+            url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm131009/halltext/131009h0001.htm
+            short-url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm131009/...
+            paragraph-content: Westminster Hall Wednesday 9 October 2013 [Martin Caton
+              in the Chair] International Criminal Court (Kenya) ... Ms Diane Abbott
+              (Hackney North and Stoke Newington) ...
+        - name: card__search__search-result
+          data:
+            heading-text: House of Commons Hansard Written Answers for 24 Feb 2014
+              ...
+            url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm140224/text/140224w0002.htm
+            short-url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm140224/...
+            paragraph-content: 'Diana Johnson: To ask the Secretary of State for the
+              Home Department pursuant to the answer of 10 February 2014, Official
+              Report, column 395W, ... Ms Abbott: To ask ...'
+        - name: card__search__search-result
+          data:
+            heading-text: House of Commons Hansard Debates for 22 Nov 2011 (pt 0003)
+            url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm111122/debtext/111122-0003.htm
+            short-url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm111122/...
             paragraph-content: Abbott, Ms Diane. Ainsworth, rh Mr Bob. Alexander,
-              rh Mr Douglas. Alexander, Heidi. Ali, Rushanara. Allen, Mr Graham. Anderson,
-              Mr David. Ashworth, Jonathan. Austin, Ian.
+              rh Mr Douglas. Alexander, Heidi. Ali, Rushanara. Anderson, Mr David.
+              Ashworth, Jonathan. Austin, Ian. Bailey, Mr ...
         - name: card__search__search-result
           data:
-            heading-text: House of Commons Hansard Debates for 10 Oct 2013 (pt 0001)
-            url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm131010/debtext/131010-0001.htm
-            short-url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm131010/...
-            paragraph-content: Read the House of commons debates for 10 October 2013
-              on Food Aid, Bovine Tuberculosis, England Coastal Path, Bovine Tuberculosis,
-              Dog Ownership, Water Bills...
+            heading-text: Written questions and answers - UK Parliament
+            url: https://www.parliament.uk/writtenanswers?page=2&max=100
+            short-url: https://www.parliament.uk/writtenanswers?page=2&max=100
+            paragraph-content: Written questions allow Members of Parliament to ask
+              government ministers for information on the work, policy and activities
+              of government departments ...
         - name: card__search__search-result
           data:
-            heading-text: Lords Hansard text for 04 Feb 2016 (pt 0001)
-            url: https://publications.parliament.uk/pa/ld201516/ldhansrd/text/160204-gc0001.htm
-            short-url: https://publications.parliament.uk/pa/ld201516/ldhansrd/text/...
-            paragraph-content: This has been acknowledged across the board, including
-              by Diane Abbott and in studies by Edinburgh University. The Government
-              had to act and, in 2010, ...
+            heading-text: House of Commons Hansard Debates for 27 Jun 2011 (pt 0001)
+            url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110627/debtext/110627-0001.htm
+            short-url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110627/...
+            paragraph-content: 'House of Commons Monday 27 June 2011 ... Anne Marie
+              Morris (Newton Abbot) (Con): ... Diana Johnson (Kingston upon Hull North)
+              ...'
         - name: card__search__search-result
           data:
-            heading-text: House of Commons Hansard Debates for 09 Dec 2015 (pt 0004)
-            url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cm151209/debtext/151209-0004.htm
-            short-url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cm151209/...
-            paragraph-content: Abbott, Ms Diane. Abrahams, Debbie. Ahmed-Sheikh, Ms
-              Tasmina. Alexander, Heidi. Ali, Rushanara. Allen, Mr Graham. Arkless,
-              Richard. Ashworth, Jonathan. Bailey, Mr Adrian.
-        - name: card__search__search-result
-          data:
-            heading-text: House of Commons Hansard Debates for 11 Jun 2013 (pt 0004)
-            url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm130611/debtext/130611-0004.htm
-            short-url: https://publications.parliament.uk/pa/cm201314/cmhansrd/cm130611/...
-            paragraph-content: Abbott, Ms Diane. Abrahams, Debbie. Ainsworth, rh Mr
-              Bob. Alexander, rh Mr Douglas. Alexander, Heidi. Ali, Rushanara. Allen,
-              Mr Graham. Ashworth, Jonathan. Austin, Ian.
-        - name: card__search__search-result
-          data:
-            heading-text: House of Commons Hansard Debates for 13 Oct 2010 (pt 0001)
-            url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm101013/debtext/101013-0001.htm
-            short-url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm101013/...
-            paragraph-content: Abbott, Ms Diane Alexander, Heidi Andrew, Stuart Bailey,
-              Mr Adrian Barclay, Stephen Barron, rh Mr Kevin Bayley, Hugh Begg, Miss
-              Anne Beith, rh Sir Alan Beresford, Sir ...
-        - name: card__search__search-result
-          data:
-            heading-text: Westminster Hall - publications.parliament.uk
-            url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110503/halltext/110503h0001.htm
-            short-url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110503/...
-            paragraph-content: 'Westminster Hall Tuesday 3 May 2011 ... Ms Diane Abbott
-              (Hackney North and Stoke Newington) (Lab): Drinking half a pint of coffee
-              would be one thing.'
-        - name: card__search__search-result
-          data:
-            heading-text: House of Commons Hansard Debates for 20 Jan 2016 (pt 0003)
-            url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cm160120/debtext/160120-0003.htm
-            short-url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cm160120/...
-            paragraph-content: Abbott, Ms Diane. Abrahams, Debbie. Ahmed-Sheikh, Ms
-              Tasmina. Alexander, Heidi. Ali, Rushanara. Anderson, Mr David. Bardell,
-              Hannah. Barron, rh Kevin. Beckett, rh ...
-        - name: card__search__search-result
-          data:
-            heading-text: House of Commons Hansard Debates for 25 Jan 2016 (pt 0002)
-            url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cm160125/debtext/160125-0002.htm
-            short-url: https://publications.parliament.uk/pa/cm201516/cmhansrd/cm160125/...
-            paragraph-content: Abbott, Ms Diane. Abrahams, Debbie. Alexander, Heidi.
-              Ali, Rushanara. Ashworth, Jonathan. Austin, Ian. Bailey, Mr Adrian.
-              Barron, rh Kevin. Beckett, rh Margaret. Benn ...
-        - name: card__search__search-result
-          data:
-            heading-text: Rt Hon Jeremy Hunt MP - UK Parliament
-            url: https://www.parliament.uk/biographies/commons/mr-jeremy-hunt/1572
-            short-url: https://www.parliament.uk/biographies/commons/mr-jeremy-hunt/1572
-            paragraph-content: Rt Hon Jeremy Hunt MP Constituency. South West Surrey
-              Address as. Mr Hunt Party. Conservative Contact Details Parliamentary.
-              House of ...
+            heading-text: House of Commons Hansard Debates for 10 July 2014 (pt 0001)
+            url: https://publications.parliament.uk/pa/cm201415/cmhansrd/cm140710/debtext/140710-0001.htm
+            short-url: https://publications.parliament.uk/pa/cm201415/cmhansrd/cm140710/...
+            paragraph-content: 'Read the House of commons debates for 10 July 2014
+              on Congestion ... Diana Johnson: Perhaps the Minister ... (Newton Abbot)
+              ...'
 - name: section__section
   data:
     components:

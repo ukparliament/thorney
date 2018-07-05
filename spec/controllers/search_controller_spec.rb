@@ -95,7 +95,7 @@ RSpec.describe SearchController, vcr: true do
         end
 
         it 'calls the serializer with the correct arguments' do
-          expect(PageSerializer::SearchIndexPageSerializer).to have_received(:new)
+          expect(PageSerializer::SearchIndexPageSerializer).to have_received(:new).with(opensearch_description_url: 'http://test.host/search/opensearch', flash_message: I18n.t('search_controller.index.flash'))
         end
       end
 

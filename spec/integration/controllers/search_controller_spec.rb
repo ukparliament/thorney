@@ -36,6 +36,14 @@ RSpec.describe SearchController, vcr: true do
 
         expect(JSON.parse(response.body).to_yaml).to eq(expected_json)
       end
+
+      it 'with an empty query' do
+        get '/search?q='
+
+        expected_json = get_fixture('index', 'empty_query')
+
+        expect(JSON.parse(response.body).to_yaml).to eq(expected_json)
+      end
     end
   end
 end

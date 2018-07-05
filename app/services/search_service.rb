@@ -1,16 +1,21 @@
 class SearchService < ApplicationController
   # This class handles all the parameters required for the SearchController and the SearchIndexPageSerializer
-  attr_reader :app_insights_request_id, :search_url, :sanitised_query, :escaped_query, :start_index, :count
+  attr_reader :app_insights_request_id, :search_url, :query_parameter, :sanitised_query, :escaped_query, :start_index, :count
 
   def initialize(app_insights_request_id, search_url, params)
     @app_insights_request_id = app_insights_request_id
     @search_url = search_url
 
-    @sanitised_query = SearchHelper.sanitize_query(params[:q])
+    @query_parameter = params[:q]
+    @sanitised_query = SearchHelper.sanitize_query(query_parameter)
     @escaped_query = CGI.escape(sanitised_query)[0, 2048]
 
     @start_index = open_search_param(:start_index, params)
     @count = open_search_param(:count, params)
+  end
+
+  def flash_message
+    I18n.t('search_controller.index.flash') if query_parameter&.empty?
   end
 
   def fetch_description
