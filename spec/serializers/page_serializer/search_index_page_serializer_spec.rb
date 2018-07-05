@@ -76,7 +76,7 @@ describe PageSerializer::SearchIndexPageSerializer, vcr: true do
 
         search_index_page_serializer.to_h
 
-        expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(heading: ['search.heading'], size: 1)
+        expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(content: ['search.heading'], size: 1)
         expect(ComponentSerializer::SearchFormComponentSerializer).to have_received(:new)
       end
     end

@@ -109,7 +109,7 @@ class PaginationHelper
     page_range.map do |page|
       data = {}.tap do |hash|
         hash[:url] = number_card_url(page)
-        hash[:data_number] = page
+        hash[:number] = page
         hash[:total_count] = "of #{total_pages}"
         hash[:active] = true if page == current_page
       end

@@ -1,0 +1,10 @@
+---
+name: heading
+data:
+  content:
+  - Dianne Abbott
+  translation:
+    key: search.about-count
+    data:
+      count: 123
+  size: 1

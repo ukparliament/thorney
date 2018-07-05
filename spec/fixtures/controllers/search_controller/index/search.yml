@@ -36,11 +36,10 @@ header-components:
       - component: status
         variant: banner
     components:
-    - name: span
+    - name: hint
       data:
         display:
-          data:
-          - component: hint
+          data: []
         content: status-banner.beta
     - name: list__generic
       data:
@@ -72,12 +71,12 @@ main-components:
     components:
     - name: heading
       data:
-        heading:
+        content:
         - search.heading
         size: 1
     - name: form__search
       data:
-        key-word: search.key-word
+        label: search.key-word
         components:
         - name: icon__search
           data: search.search-icon
@@ -91,7 +90,7 @@ footer-components:
         type: ul
         display:
           data:
-            component: list
+          - component: list
         contents:
         - content: footer.current-website
         - content: footer.cookie-policy

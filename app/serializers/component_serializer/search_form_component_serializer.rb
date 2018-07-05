@@ -18,7 +18,7 @@ module ComponentSerializer
     def data
       {}.tap do |hash|
         hash[:value] = @query if @query
-        hash[:key_word] = 'search.key-word'
+        hash[:label] = 'search.key-word'
         hash[:components] = @components
       end
     end

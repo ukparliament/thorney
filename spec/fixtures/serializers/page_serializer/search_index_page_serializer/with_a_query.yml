@@ -36,11 +36,10 @@ header-components:
       - component: status
         variant: banner
     components:
-    - name: span
+    - name: hint
       data:
         display:
-          data:
-          - component: hint
+          data: []
         content: status-banner.beta
     - name: list__generic
       data:
@@ -71,13 +70,13 @@ main-components:
     components:
     - name: heading
       data:
-        heading:
+        content:
         - search.results-heading
         size: 1
     - name: form__search
       data:
         value: hello
-        key-word: search.key-word
+        label: search.key-word
         components:
         - name: icon__search
           data: search.search-icon
@@ -106,31 +105,37 @@ main-components:
           - component: list
             variant: block
         components:
-        - name: card__search-result
+        - name: card__search__search-result
           data:
             heading-text: Result one
             url: link
-            list-hint:
-              type: hint theme--grey-4
-              text: pdf
-              url: link...
-            paragraph-text: Content one
-        - name: card__search-result
+            hints:
+              name: hint
+              data:
+                component: hint
+                variant: theme
+                modifier: grey-4
+                content: pdf
+            short-url: link...
+            paragraph-content: Content one
+        - name: card__search__search-result
           data:
             heading-text: Result two
             url: link
-            list-hint:
-              url: link...
-            paragraph-text: Content two
-        - name: card__search-result
+            short-url: link...
+            paragraph-content: Content two
+        - name: card__search__search-result
           data:
             heading-text: Result three
             url: link
-            list-hint:
-              type: hint
-              text: Beta
-              url: link...
-            paragraph-text: Content three
+            hints:
+              name: hint
+              data:
+                component: hint
+                variant: theme
+                content: Beta
+            short-url: link...
+            paragraph-content: Content three
 - name: section__section
   data:
     components:
@@ -142,23 +147,23 @@ main-components:
         - name: navigation__number__card
           data:
             url: "?count=100&q=hello&start_index=1"
-            data-number: 1
+            number: 1
             total-count: of 4
             active: true
         - name: navigation__number__card
           data:
             url: "?count=100&q=hello&start_index=101"
-            data-number: 2
+            number: 2
             total-count: of 4
         - name: navigation__number__card
           data:
             url: "?count=100&q=hello&start_index=201"
-            data-number: 3
+            number: 3
             total-count: of 4
         - name: navigation__number__card
           data:
             url: "?count=100&q=hello&start_index=301"
-            data-number: 4
+            number: 4
             total-count: of 4
 footer-components:
 - name: footer
@@ -170,7 +175,7 @@ footer-components:
         type: ul
         display:
           data:
-            component: list
+          - component: list
         contents:
         - content: footer.current-website
         - content: footer.cookie-policy

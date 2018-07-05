@@ -8,7 +8,7 @@
         type: ul
         display:
           data:
-            component: list
+          - component: list
         contents:
         - content: footer.current-website
         - content: footer.cookie-policy
