@@ -2,6 +2,8 @@
 layout:
   template: layout
 title: Search - UK Parliament
+pugin-version: 1.10.1
+open-search: http://www.example.com/search/opensearch
 header-components:
 - name: link
   data:

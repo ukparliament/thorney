@@ -1,6 +1,6 @@
 require_relative '../../rails_helper'
 
-describe PageSerializer::SearchIndexPageSerializer do
+describe PageSerializer::SearchIndexPageSerializer, vcr: true do
   let(:result_one) {
     double(
         'result_one',

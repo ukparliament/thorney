@@ -1,15 +1,41 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> [WEBDEV-582] Update components serialisation for the search page with no results
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> [WEBDEV-582] Update components serialisation for the search page with no results
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> [WEBDEV-582] Update components serialisation for the search page with no results
+=======
+>>>>>>> [WEBDEV-590] Add assets to JSON
+>>>>>>> [WEBDEV-590] Add assets to JSON
+>>>>>>> [WEBDEV-590] Add assets to JSON
 name: list__pipe
 data:
   type: ol
   css-class: "--pipe"
   components:
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> [WEBDEV-590] Add assets to JSON
+>>>>>>> [WEBDEV-590] Add assets to JSON
+>>>>>>> [WEBDEV-590] Add assets to JSON
 =======
 :name: list__pipe
 :data:
@@ -17,7 +43,18 @@ data:
   :css-class: "--pipe"
   :components:
 >>>>>>> [WEBDEV-575] Implement the BE for the search results page
+<<<<<<< HEAD
 >>>>>>> [WEBDEV-582] Update components serialisation for the search page with no results
+=======
+<<<<<<< HEAD
+>>>>>>> [WEBDEV-582] Update components serialisation for the search page with no results
+=======
+<<<<<<< HEAD
+>>>>>>> [WEBDEV-582] Update components serialisation for the search page with no results
+=======
+>>>>>>> [WEBDEV-590] Add assets to JSON
+>>>>>>> [WEBDEV-590] Add assets to JSON
+>>>>>>> [WEBDEV-590] Add assets to JSON
   - 1
   - 2
   - 3
