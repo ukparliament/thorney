@@ -84,7 +84,7 @@ main-components:
         translation:
           key: search.count
           data:
-            count: '844'
+            count: 844
         size: 2
     - name: status__highlight
       data:

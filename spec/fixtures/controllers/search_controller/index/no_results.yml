@@ -1,0 +1,113 @@
+---
+layout:
+  template: layout
+title: dfgdfh89rhosiubreoweh - Search - UK Parliament
+pugin-version: 1.10.1
+open-search: http://www.example.com/search/opensearch
+header-components:
+- name: link
+  data:
+    link: "#content"
+    display:
+      data:
+      - component: skip-to-content
+    selector: skiplink
+    content: common.header.skip-to-content
+- name: status__banner
+  data:
+    display:
+      data:
+      - component: status
+        variant: banner
+      - component: theme
+        variant: caution
+      - component: cookie
+    selector: cookie
+    components:
+    - name: paragraph
+      data:
+      - content: common.header.cookie-banner-text
+        data:
+          link: "/meta/cookie-policy"
+- name: status__banner
+  data:
+    display:
+      data:
+      - component: status
+        variant: banner
+    components:
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          data:
+          - component: list
+            variant: inline
+        contents:
+        - content: common.header.pages-being-tested
+        - content: common.header.current-website
+- name: header
+  data:
+    components:
+    - name: link
+      data:
+        link: "/"
+        display:
+          data:
+          - component: uk_parliament
+        label: common.header.label
+        components:
+        - name: icon__uk-parliament
+          data: common.header.label
+main-components:
+- name: section__primary
+  data:
+    components:
+    - name: heading
+      data:
+        content:
+        - search.results-heading
+        size: 1
+    - name: form__search
+      data:
+        value: dfgdfh89rhosiubreoweh
+        label: search.label
+        components:
+        - name: icon__search
+          data: search.search-icon
+- name: section__section
+  data:
+    content-flag: true
+    components:
+    - name: heading
+      data:
+        content:
+        - search.no-results
+        size: 2
+    - name: status__highlight
+      data:
+        display:
+          data:
+          - component: status
+            variant: highlight
+        components:
+        - name: paragraph
+          data:
+          - content: search.new-search
+footer-components:
+- name: footer
+  data:
+    uk-parliament: common.footer.uk-parliament
+    components:
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          data:
+          - component: list
+        contents:
+        - content: common.footer.current-website
+        - content: common.footer.cookie-policy
+          data:
+            link: "/meta/cookie-policy"
+        - content: common.footer.data-protection-privacy
