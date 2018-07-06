@@ -13,7 +13,9 @@ module SerializerFixtureHelper
 
   def infer_fixture_directory(path)
     path = path.chomp('_spec.rb').split('/')
-    path = path.insert(path.length - 3, 'fixtures').join('/')
-    path
+
+    spec_index = path.rindex('spec')
+
+    path.insert(spec_index + 1, 'fixtures').join('/')
   end
 end
