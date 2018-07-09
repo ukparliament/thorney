@@ -35,24 +35,22 @@ module PageSerializer
     end
 
     def content_without_query
-      [
-        ComponentSerializer::SectionComponentSerializer.new(section_primary_components('search.search-heading'), type: 'primary', content_flag: true).to_h
-      ]
+      [ComponentSerializer::SectionComponentSerializer.new(section_primary_components('search.search-heading'), type: 'primary', content_flag: true).to_h]
     end
 
     def content_with_query
       [].tap do |content|
         content << ComponentSerializer::SectionComponentSerializer.new(section_primary_components('search.results-heading'), type: 'primary').to_h
         content << ComponentSerializer::SectionComponentSerializer.new(results_section_components, content_flag: true).to_h
-        content << ComponentSerializer::SectionComponentSerializer.new(@pagination_helper.navigation_section_components).to_h if @results.totalResults.to_i >= 1
+        content << ComponentSerializer::SectionComponentSerializer.new(@pagination_helper.navigation_section_components).to_h if total_results >= 1
       end
     end
 
     def content_with_flash_message
-      [
-        ComponentSerializer::SectionComponentSerializer.new(section_primary_components('search.search-heading'), type: 'primary').to_h,
-        ComponentSerializer::SectionComponentSerializer.new([ComponentSerializer::StatusComponentSerializer.new(type: 'highlight', display_data: flash_message_display_data, components: [flash_message_paragraph]).to_h], content_flag: true).to_h
-      ]
+      [].tap do |content|
+        content << ComponentSerializer::SectionComponentSerializer.new(section_primary_components('search.search-heading'), type: 'primary').to_h
+        content << ComponentSerializer::SectionComponentSerializer.new([ComponentSerializer::StatusComponentSerializer.new(type: 'highlight', display_data: flash_message_display_data, components: [flash_message_paragraph]).to_h], content_flag: true).to_h
+      end
     end
 
     def flash_message_paragraph
@@ -64,20 +62,25 @@ module PageSerializer
     end
 
     def section_primary_components(results_heading)
-      [
-        ComponentSerializer::HeadingComponentSerializer.new(content: [results_heading], size: 1).to_h,
-        ComponentSerializer::SearchFormComponentSerializer.new(@query, [ComponentSerializer::SearchIconComponentSerializer.new.to_h]).to_h
-      ]
+      [].tap do |content|
+        content << ComponentSerializer::HeadingComponentSerializer.new(content: [results_heading], size: 1).to_h
+        content << ComponentSerializer::SearchFormComponentSerializer.new(@query, [ComponentSerializer::SearchIconComponentSerializer.new.to_h]).to_h
+      end
     end
 
     def results_section_components
-      translation_data = { count: @results.totalResults }
+      translation_data = { count: total_results }
 
-      [
-        ComponentSerializer::HeadingComponentSerializer.new(translation_key: 'search.count', translation_data: translation_data, size: 2).to_h,
-        ComponentSerializer::StatusComponentSerializer.new(type: 'highlight', display_data: [display_data(component: 'status', variant: 'highlight')], components: [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'search.new-search' }]).to_h]).to_h,
-        ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: SearchResultHelper.create_search_results(@results)).to_h
-      ]
+      [].tap do |content|
+        content << ComponentSerializer::HeadingComponentSerializer.new(translation_key: 'search.count', translation_data: translation_data, size: 2).to_h if total_results >= 1
+        content << ComponentSerializer::HeadingComponentSerializer.new(content: ['search.no-results'], size: 2).to_h if total_results < 1
+        content << ComponentSerializer::StatusComponentSerializer.new(type: 'highlight', display_data: [display_data(component: 'status', variant: 'highlight')], components: [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'search.new-search' }]).to_h]).to_h
+        content << ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: SearchResultHelper.create_search_results(@results)).to_h if total_results.positive?
+      end
+    end
+
+    def total_results
+      @results.totalResults.to_i
     end
   end
 end

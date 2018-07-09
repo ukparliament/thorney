@@ -66,6 +66,19 @@ describe PageSerializer::SearchIndexPageSerializer, vcr: true do
         expect(serializer.to_yaml).to eq(expected)
       end
     end
+
+    context 'when there are no results' do
+      pagination_hash = { start_index: 1, count: 10, results_total: 0, query: 'hello' }
+
+      it 'produces the correct hash' do
+        allow(results).to receive(:totalResults) { 0 }
+        serializer = described_class.new(query: 'hello', results: results, pagination_hash: pagination_hash)
+
+        expected = get_fixture('no_results')
+
+        expect(serializer.to_yaml).to eq(expected)
+      end
+    end
   end
 
   context 'the serializers are correctly called' do
@@ -141,6 +154,14 @@ describe PageSerializer::SearchIndexPageSerializer, vcr: true do
           expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(translation_key: 'search.count', translation_data: { count: 123 } , size: 2)
           expect(ComponentSerializer::StatusComponentSerializer).to have_received(:new).with(type: 'highlight', display_data: [{ component: 'status', variant: 'highlight' }], components: [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'search.new-search' }]).to_h])
           expect(ComponentSerializer::ListComponentSerializer).to have_received(:new).with(display: 'generic', display_data: [{ component: 'list', variant: 'block' }], components: 'search results' )
+        end
+
+        it 'if there are no results' do
+          allow(results).to receive(:totalResults) { 0 }
+
+          page_with_query.send(:results_section_components)
+
+          expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(content: ['search.no-results'], size: 2)
         end
       end
     end

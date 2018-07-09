@@ -44,6 +44,14 @@ RSpec.describe SearchController, vcr: true do
 
         expect(JSON.parse(response.body).to_yaml).to eq(expected_json)
       end
+
+      it 'when there are no results' do
+        get '/search?q=dfgdfh89rhosiubreoweh'
+
+        expected_json = get_fixture('index', 'no_results')
+
+        expect(JSON.parse(response.body).to_yaml).to eq(expected_json)
+      end
     end
   end
 end
