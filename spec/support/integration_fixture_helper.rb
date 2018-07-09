@@ -13,7 +13,11 @@ module IntegrationFixtureHelper
 
   def infer_fixture_directory(path)
     path = path.chomp('_spec.rb').split('/')
-    path[path.length - 3] = 'fixtures'
+
+    spec_index = path.rindex('spec')
+
+    path[spec_index + 1] = 'fixtures'
+
     path.join('/')
   end
 
