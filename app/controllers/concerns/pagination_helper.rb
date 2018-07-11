@@ -83,7 +83,9 @@ class PaginationHelper
   def active_tile_position
     return current_page - 1 if current_page <= 5 || total_pages <= 10
 
-    return 9 - (total_pages - current_page) if current_page >= total_pages - 4
+    return 9 if current_page > total_pages
+
+    return 9 - (total_pages - current_page) if current_page >= (total_pages - 4)
 
     5
   end

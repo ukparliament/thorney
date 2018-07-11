@@ -46,6 +46,14 @@ RSpec.describe PaginationHelper, type: :helper do
 
           expect(pagination_helper.send(:page_range)).to eq [91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
         end
+
+        context 'when the current page is greater than the total number of pages' do
+          it 'current page is 150' do
+            allow(pagination_helper).to receive(:current_page) { 150 }
+
+            expect(pagination_helper.send(:page_range)).to eq [141, 142, 143, 144, 145, 146, 147, 148, 149, 150]
+          end
+        end
       end
 
       context 'when there are 8 pages in total' do

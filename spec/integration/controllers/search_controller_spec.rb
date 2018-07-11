@@ -71,5 +71,15 @@ RSpec.describe SearchController, vcr: true do
         expect(JSON.parse(response.body).to_yaml).to eq(expected_json)
       end
     end
+
+    context 'when the start index is greater than the total number of pages' do
+      it 'shows proper pagination' do
+        get '/search?count=100&q=test&start_index=70100'
+
+        expected_json = get_fixture('index', 'edgecase')
+
+        expect(JSON.parse(response.body).to_yaml).to eq(expected_json)
+      end
+    end
   end
 end
