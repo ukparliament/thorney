@@ -1,0 +1,313 @@
+---
+layout:
+  template: layout
+title: poop - Search - UK Parliament
+pugin-version: 1.10.1
+open-search: http://www.example.com/search/opensearch
+header-components:
+- name: link
+  data:
+    link: "#content"
+    display:
+      data:
+      - component: skip-to-content
+    selector: skiplink
+    content: common.header.skip-to-content
+- name: status__banner
+  data:
+    display:
+      data:
+      - component: status
+        variant: banner
+      - component: theme
+        variant: caution
+      - component: cookie
+    selector: cookie
+    components:
+    - name: paragraph
+      data:
+      - content: common.header.cookie-banner-text
+        data:
+          link: "/meta/cookie-policy"
+- name: status__banner
+  data:
+    display:
+      data:
+      - component: status
+        variant: banner
+    components:
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          data:
+          - component: list
+            variant: inline
+        contents:
+        - content: common.header.pages-being-tested
+        - content: common.header.current-website
+- name: header
+  data:
+    components:
+    - name: link
+      data:
+        link: "/"
+        display:
+          data:
+          - component: uk_parliament
+        label: common.header.label
+        components:
+        - name: icon__uk-parliament
+          data: common.header.label
+main-components:
+- name: section__primary
+  data:
+    components:
+    - name: heading
+      data:
+        content:
+        - search.results-heading
+        size: 1
+    - name: form__search
+      data:
+        value: poop
+        label: search.label
+        components:
+        - name: icon__search
+          data: search.search-icon
+- name: section__section
+  data:
+    content-flag: true
+    components:
+    - name: heading
+      data:
+        translation:
+          key: search.count
+          data:
+            count: 79
+        size: 2
+    - name: status__highlight
+      data:
+        display:
+          data:
+          - component: status
+            variant: highlight
+        components:
+        - name: paragraph
+          data:
+          - content: search.new-search
+    - name: list__generic
+      data:
+        type: ol
+        display:
+          data:
+          - component: list
+            variant: block
+        components:
+        - name: card__search__search-result
+          data:
+            heading-text: IMPORTATION OF CATTLE REGULATIONS. (Hansard, 8 December
+              1926)
+            url: https://api.parliament.uk/historic-hansard/lords/1926/dec/08/importation-of-cattle-regulations
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: Historic Hansard
+            short-url: https://api.parliament.uk/historic-hansard/lords/1926/dec/08/...
+            paragraph-content: "§LORD BLEDISLOE. My Lords, I am sorry that my noble
+              friend Lord Lambourne, who raised this question in your Lordships' House
+              in April last, is unable to be here to ..."
+        - name: card__search__search-result
+          data:
+            heading-text: QUESTION. (Hansard, 8 May 1857) - api.parliament.uk
+            url: https://api.parliament.uk/historic-hansard/commons/1857/may/08/question-1
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: Historic Hansard
+            short-url: https://api.parliament.uk/historic-hansard/commons/1857/may/08/...
+            paragraph-content: "§The Transit was one of three vessels, namely, the
+              Perseverance, the Urgent, and the Transit, which were bought by the
+              Government from the Messrs. Mare at a time ..."
+        - name: card__search__search-result
+          data:
+            heading-text: MERCHANT SHIPPING ACTS—UNSEA-WORTHY SHIPS.—QUESTIONS ...
+            url: https://api.parliament.uk/historic-hansard/commons/1875/mar/18/merchant-shipping-acts-unsea-worthy
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: Historic Hansard
+            short-url: https://api.parliament.uk/historic-hansard/commons/1875/mar/18/...
+            paragraph-content: "§SIR CHARLES ADDERLEY. Sir, the freeboard of the Marquis
+              of Lorne was as stated in the Question; but the length of the poop and
+              forecastle added so materially to the ..."
+        - name: card__search__search-result
+          data:
+            heading-text: P. AND O. STEAMERS—CREW ACCOMMODATION. (Hansard, 22 ...
+            url: https://api.parliament.uk/historic-hansard/commons/1900/feb/22/p-and-o-steamers-crew-accommodation
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: Historic Hansard
+            short-url: https://api.parliament.uk/historic-hansard/commons/1900/feb/22/p...
+            paragraph-content: P. AND O. STEAMERS—CREW ACCOMMODATION. (Hansard, 22
+              February 1900)
+        - name: card__search__search-result
+          data:
+            heading-text: LASCARS ON P. AND O. BOATS. (Hansard, 27 February 1899)
+            url: https://api.parliament.uk/historic-hansard/commons/1899/feb/27/lascars-on-p-and-o-boats
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: Historic Hansard
+            short-url: https://api.parliament.uk/historic-hansard/commons/1899/feb/27/...
+            paragraph-content: The Lascars are berthed in the poop aft. On the starboard
+              side the space available per man is 66 cubic feet, and on the port side
+              64 cubic feet.
+        - name: card__search__search-result
+          data:
+            heading-text: 'Mr David Porter: speeches in 1992 (Hansard)'
+            url: https://api.parliament.uk/historic-hansard/people/mr-david-porter/1992
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: Historic Hansard
+            short-url: https://api.parliament.uk/historic-hansard/people/mr-david-porter/1992
+            paragraph-content: Mr David Porter. April 16, 1948 - . Contributions in
+              Parliament in the year 1992.
+        - name: card__search__search-result
+          data:
+            heading-text: CONSOLIDATED FUND (No. 2) BILL. (Hansard, 26 March 1935)
+            url: https://api.parliament.uk/historic-hansard/commons/1935/mar/26/consolidated-fund-no-2-bill
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: Historic Hansard
+            short-url: https://api.parliament.uk/historic-hansard/commons/1935/mar/26/...
+            paragraph-content: HC Deb 26 March 1935 vol 299 cc1751-819 1751 § Considered
+              in Committee, and reported, without Amendment. § Motion made, and Question
+              proposed, "That the Bill be now ...
+        - name: card__search__search-result
+          data:
+            heading-text: MERSEY DOCKS AND HARBOUR BOARD BILL [Loans] (By ORDER ...
+            url: https://api.parliament.uk/historic-hansard/commons/1904/jul/14/mersey-docks-and-harbour-board-bill
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: Historic Hansard
+            short-url: https://api.parliament.uk/historic-hansard/commons/1904/jul/14/...
+            paragraph-content: "§MR. ROBSON (South Shields), in moving that this Bill
+              be considered this day three months, said nobody could feel more strongly
+              than himself the inadvisability of ..."
+        - name: card__search__search-result
+          data:
+            heading-text: SUPPLY—NAVY ESTIMATES. (Hansard, 4 March 1842)
+            url: https://api.parliament.uk/historic-hansard/commons/1842/mar/04/supply-navy-estimates
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: Historic Hansard
+            short-url: https://api.parliament.uk/historic-hansard/commons/1842/mar/04/...
+            paragraph-content: SUPPLY—NAVY ESTIMATES. (Hansard, 4 March 1842)
+- name: section__section
+  data:
+    components:
+    - name: navigation__number__number
+      data:
+        active-tile: 8
+        previous-url: http://www.example.com/search?count=10&q=poop&start_index=61
+        components:
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=poop&start_index=1
+            number: 1
+            total-count: of 8
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=poop&start_index=11
+            number: 2
+            total-count: of 8
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=poop&start_index=21
+            number: 3
+            total-count: of 8
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=poop&start_index=31
+            number: 4
+            total-count: of 8
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=poop&start_index=41
+            number: 5
+            total-count: of 8
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=poop&start_index=51
+            number: 6
+            total-count: of 8
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=poop&start_index=61
+            number: 7
+            total-count: of 8
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=poop&start_index=71
+            number: 8
+            total-count: of 8
+            active: true
+footer-components:
+- name: footer
+  data:
+    uk-parliament: common.footer.uk-parliament
+    components:
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          data:
+          - component: list
+        contents:
+        - content: common.footer.current-website
+        - content: common.footer.cookie-policy
+          data:
+            link: "/meta/cookie-policy"
+        - content: common.footer.data-protection-privacy
