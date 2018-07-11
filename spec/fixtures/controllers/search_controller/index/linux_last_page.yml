@@ -1,0 +1,246 @@
+---
+layout:
+  template: layout
+title: linux - Search - UK Parliament
+pugin-version: 1.10.1
+open-search: http://www.example.com/search/opensearch
+header-components:
+- name: link
+  data:
+    link: "#content"
+    display:
+      data:
+      - component: skip-to-content
+    selector: skiplink
+    content: common.header.skip-to-content
+- name: status__banner
+  data:
+    display:
+      data:
+      - component: status
+        variant: banner
+      - component: theme
+        variant: caution
+      - component: cookie
+    selector: cookie
+    components:
+    - name: paragraph
+      data:
+      - content: common.header.cookie-banner-text
+        data:
+          link: "/meta/cookie-policy"
+- name: status__banner
+  data:
+    display:
+      data:
+      - component: status
+        variant: banner
+    components:
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          data:
+          - component: list
+            variant: inline
+        contents:
+        - content: common.header.pages-being-tested
+        - content: common.header.current-website
+- name: header
+  data:
+    components:
+    - name: link
+      data:
+        link: "/"
+        display:
+          data:
+          - component: uk_parliament
+        label: common.header.label
+        components:
+        - name: icon__uk-parliament
+          data: common.header.label
+main-components:
+- name: section__primary
+  data:
+    components:
+    - name: heading
+      data:
+        content:
+        - search.results-heading
+        size: 1
+    - name: form__search
+      data:
+        value: linux
+        label: search.label
+        components:
+        - name: icon__search
+          data: search.search-icon
+- name: section__section
+  data:
+    content-flag: true
+    components:
+    - name: heading
+      data:
+        translation:
+          key: search.count
+          data:
+            count: 37
+        size: 2
+    - name: status__highlight
+      data:
+        display:
+          data:
+          - component: status
+            variant: highlight
+        components:
+        - name: paragraph
+          data:
+          - content: search.new-search
+    - name: list__generic
+      data:
+        type: ol
+        display:
+          data:
+          - component: list
+            variant: block
+        components:
+        - name: card__search__search-result
+          data:
+            heading-text: E-services (Hansard, 16 January 2003) - api.parliament.uk
+            url: https://api.parliament.uk/historic-hansard/westminster-hall/2003/jan/16/e-services
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: Historic Hansard
+            short-url: https://api.parliament.uk/historic-hansard/westminster-hall/2003/...
+            paragraph-content: It is important to consider it in terms not only of
+              classic open source software—Linux, Apache or the programmes—but of
+              methodology.
+        - name: card__search__search-result
+          data:
+            heading-text: Lords Hansard text for 22 May 201322 May 2013 (pt 0002)
+            url: https://publications.parliament.uk/pa/ld201314/ldhansrd/text/130522-0002.htm
+            short-url: https://publications.parliament.uk/pa/ld201314/ldhansrd/text/...
+            paragraph-content: Read the House of lords debates for 22 May 2013 on
+              Local Audit and Accountability Bill [HL], ...
+        - name: card__search__search-result
+          data:
+            heading-text: 'Mr Charles Clarke: speeches in 1999 (Hansard)'
+            url: https://api.parliament.uk/historic-hansard/people/mr-charles-clarke/1999
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: Historic Hansard
+            short-url: https://api.parliament.uk/historic-hansard/people/mr-charles...
+            paragraph-content: Linux Computer Operating System Written Answers February
+              16, 1999. School Performance Written Answers February 16, 1999. Schools
+              (Surplus Places) ...
+        - name: card__search__search-result
+          data:
+            heading-text: Co-operatives and Community Benefit Societies Bill ...
+            url: https://api.parliament.uk/historic-hansard/commons/2003/jan/31/co-operatives-and-community-benefit
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: Historic Hansard
+            short-url: https://api.parliament.uk/historic-hansard/commons/2003/jan/31/co...
+            paragraph-content: If Bill Gates lies awake at night worrying about competition,
+              he worries not about traditional companies, but about Linux, which is
+              a true mutual.
+        - name: card__search__search-result
+          data:
+            heading-text: Industrial and Provident Societies Bill (Hansard, 25 ...
+            url: https://api.parliament.uk/historic-hansard/commons/2002/jan/25/industrial-and-provident-societies-bill
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: Historic Hansard
+            short-url: https://api.parliament.uk/historic-hansard/commons/2002/jan/25/...
+            paragraph-content: 'Mutuality can be found even in high-tech business:
+              the Linux computer software outfit is a mutual. We are talking not just
+              about additional structures, ...'
+        - name: card__search__search-result
+          data:
+            heading-text: Sitting of 16 February 1999 (Hansard) - api.parliament.uk
+            url: https://api.parliament.uk/historic-hansard/sittings/1999/feb/16
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: Historic Hansard
+            short-url: https://api.parliament.uk/historic-hansard/sittings/1999/feb/16
+            paragraph-content: Next sitting day February 17, 1999 Previous sitting
+              day February 15, 1999. Sitting of 16 February 1999
+        - name: card__search__search-result
+          data:
+            heading-text: Uncorrected Evidence 422 - publications.parliament.uk
+            url: https://publications.parliament.uk/pa/cm200607/cmselect/cmhealth/c422-i/c42202.htm
+            short-url: https://publications.parliament.uk/pa/cm200607/cmselect/cmhealth/c...
+            paragraph-content: 'In part of the evidence it says, ... Mr Granger: None
+              of the operating systems, because they are either industry standard
+              proprietary systems or LINUX.'
+- name: section__section
+  data:
+    components:
+    - name: navigation__number__number
+      data:
+        active-tile: 4
+        previous-url: http://www.example.com/search?count=10&q=linux&start_index=21
+        components:
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=linux&start_index=1
+            number: 1
+            total-count: of 4
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=linux&start_index=11
+            number: 2
+            total-count: of 4
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=linux&start_index=21
+            number: 3
+            total-count: of 4
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=linux&start_index=31
+            number: 4
+            total-count: of 4
+            active: true
+footer-components:
+- name: footer
+  data:
+    uk-parliament: common.footer.uk-parliament
+    components:
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          data:
+          - component: list
+        contents:
+        - content: common.footer.current-website
+        - content: common.footer.cookie-policy
+          data:
+            link: "/meta/cookie-policy"
+        - content: common.footer.data-protection-privacy
