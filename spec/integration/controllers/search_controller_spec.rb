@@ -53,5 +53,23 @@ RSpec.describe SearchController, vcr: true do
         expect(JSON.parse(response.body).to_yaml).to eq(expected_json)
       end
     end
+
+    context 'for a query with 8 pages of results' do
+      it 'for the first page' do
+        get '/search?q=poop'
+
+        expected_json = get_fixture('index', 'poop_first_page')
+
+        expect(JSON.parse(response.body).to_yaml).to eq(expected_json)
+      end
+
+      it 'for the last page' do
+        get '/search?count=10&q=poop&start_index=71'
+
+        expected_json = get_fixture('index', 'poop_last_page')
+
+        expect(JSON.parse(response.body).to_yaml).to eq(expected_json)
+      end
+    end
   end
 end

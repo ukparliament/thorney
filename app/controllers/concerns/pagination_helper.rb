@@ -10,31 +10,43 @@ class PaginationHelper
     @query = pagination_hash[:query]
   end
 
+  def navigation_section_components
+    data = {}.tap do |hash|
+      hash[:active_tile] = current_page
+      hash[:previous_url] = previous_url unless current_page == 1
+      hash[:next_url] = next_url unless current_page == last_page
+      hash[:components] = create_number_cards
+    end
+
+    [ComponentSerializer::CardComponentSerializer.new('navigation__number__number', data).to_h]
+  end
+
+  private
+
   def current_page
     @start_index / @count + 1
   end
 
   def first_page
-    # Set first_page value to 1 when current_page is less-than or equal-to 6.
-    return 1 if current_page <= 6
+    # 1 when the current page is at most 6 pages from the first page OR there are at most 10 pages in total
+    return 1 if (current_page <= 6) || (total_pages <= 10)
 
-    # Stop page_range from scrolling when current_page is greater-than the last 4.
-    if current_page > last_page - (10 - 6) && last_page > 10
-      return last_page - (10 - 1)
-    end
+    # 9 less than the total number of pages if the current page has at most 4 pages until the last page
+    return total_pages - 9 if current_page >= total_pages - 4
 
-    # Set first_page to current_page minus 5.
-    current_page - (6 - 1)
+    # Otherwise the first page is 5 less than the current page
+    current_page - 5
   end
 
   def last_page
-    if @results_total.to_i < 10 * @count
-      (@results_total.to_f / @count).ceil
-    elsif current_page < 7
-      10
-    else
-      current_page + 4 < (@results_total.to_f / @count).ceil ? current_page + 4 : (@results_total.to_f / @count).ceil
-    end
+    # The total number of pages if the current page has at most 4 pages until the last page OR there are at most 10 pages in total
+    return total_pages if (current_page >= total_pages - 4) || (total_pages <= 10)
+
+    # 10 if the current page is at most 6 pages from the first page
+    return 10 if current_page <= 6
+
+    # Otherwise the last page is 4 more than the current page
+    current_page + 4
   end
 
   def total_pages
@@ -42,7 +54,7 @@ class PaginationHelper
   end
 
   def page_range
-    (first_page...current_page).to_a.concat((current_page..last_page).to_a)
+    (first_page..last_page)
   end
 
   def next_page
@@ -58,16 +70,6 @@ class PaginationHelper
     (page - 1) * @count + 1
   end
 
-  def active_tile
-    if current_page > (@count / 2) && current_page < @count - (@count / 2 - 1)
-      6
-    elsif current_page > @count - (@count / 2 - 1)
-      @count - (last_page - current_page)
-    else
-      current_page
-    end
-  end
-
   def number_card_url(page)
     create_page_url(@count, start_index(page))
   end
@@ -78,31 +80,6 @@ class PaginationHelper
 
   def next_url
     create_page_url(@count, start_index(next_page))
-  end
-
-  def navigation_section_components
-    data = {}.tap do |hash|
-      hash[:active_tile] = active_tile
-      handle_previous_url(hash)
-      handle_next_url(hash)
-      hash[:components] = create_number_cards
-    end
-
-    [ComponentSerializer::CardComponentSerializer.new('navigation__number__number', data).to_h]
-  end
-
-  private
-
-  def handle_previous_url(hash)
-    hash.tap do |h|
-      h[:previous_url] = previous_url unless current_page == 1
-    end
-  end
-
-  def handle_next_url(hash)
-    hash.tap do |h|
-      h[:next_url] = next_url unless current_page == last_page
-    end
   end
 
   def create_number_cards

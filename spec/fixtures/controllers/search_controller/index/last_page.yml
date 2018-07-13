@@ -190,7 +190,7 @@ main-components:
     components:
     - name: navigation__number__number
       data:
-        active-tile: 18
+        active-tile: 755
         previous-url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7531
         next-url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7551
         components:
@@ -243,41 +243,6 @@ main-components:
           data:
             url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7461
             number: 747
-            total-count: of 747
-        - name: navigation__number__card
-          data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7471
-            number: 748
-            total-count: of 747
-        - name: navigation__number__card
-          data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7481
-            number: 749
-            total-count: of 747
-        - name: navigation__number__card
-          data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7491
-            number: 750
-            total-count: of 747
-        - name: navigation__number__card
-          data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7501
-            number: 751
-            total-count: of 747
-        - name: navigation__number__card
-          data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7511
-            number: 752
-            total-count: of 747
-        - name: navigation__number__card
-          data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7521
-            number: 753
-            total-count: of 747
-        - name: navigation__number__card
-          data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7531
-            number: 754
             total-count: of 747
 footer-components:
 - name: footer
