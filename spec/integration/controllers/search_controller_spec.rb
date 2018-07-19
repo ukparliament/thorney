@@ -30,7 +30,7 @@ RSpec.describe SearchController, vcr: true do
       end
 
       it 'for the last page' do
-        get '/search?count=10&q=diane+abbott&start_index=7541'
+        get '/search?count=10&q=diane+abbott&start_index=7471'
 
         expected_json = get_fixture('index', 'last_page')
 
@@ -49,6 +49,24 @@ RSpec.describe SearchController, vcr: true do
         get '/search?q=dfgdfh89rhosiubreoweh'
 
         expected_json = get_fixture('index', 'no_results')
+
+        expect(JSON.parse(response.body).to_yaml).to eq(expected_json)
+      end
+    end
+
+    context 'for a query with 8 pages of results' do
+      it 'for the first page' do
+        get '/search?q=linux'
+
+        expected_json = get_fixture('index', 'linux_first_page')
+
+        expect(JSON.parse(response.body).to_yaml).to eq(expected_json)
+      end
+
+      it 'for the last page' do
+        get '/search?count=10&q=linux&start_index=31'
+
+        expected_json = get_fixture('index', 'linux_last_page')
 
         expect(JSON.parse(response.body).to_yaml).to eq(expected_json)
       end

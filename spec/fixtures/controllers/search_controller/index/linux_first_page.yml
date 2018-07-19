@@ -1,0 +1,281 @@
+---
+layout:
+  template: layout
+title: linux - Search - UK Parliament
+pugin-version: 1.10.1
+open-search: http://www.example.com/search/opensearch
+header-components:
+- name: link
+  data:
+    link: "#content"
+    display:
+      data:
+      - component: skip-to-content
+    selector: skiplink
+    content: common.header.skip-to-content
+- name: status__banner
+  data:
+    display:
+      data:
+      - component: status
+        variant: banner
+      - component: theme
+        variant: caution
+      - component: cookie
+    selector: cookie
+    components:
+    - name: paragraph
+      data:
+      - content: common.header.cookie-banner-text
+        data:
+          link: "/meta/cookie-policy"
+- name: status__banner
+  data:
+    display:
+      data:
+      - component: status
+        variant: banner
+    components:
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          data:
+          - component: list
+            variant: inline
+        contents:
+        - content: common.header.pages-being-tested
+        - content: common.header.current-website
+- name: header
+  data:
+    components:
+    - name: link
+      data:
+        link: "/"
+        display:
+          data:
+          - component: uk_parliament
+        label: common.header.label
+        components:
+        - name: icon__uk-parliament
+          data: common.header.label
+main-components:
+- name: section__primary
+  data:
+    components:
+    - name: heading
+      data:
+        content:
+        - search.results-heading
+        size: 1
+    - name: form__search
+      data:
+        value: linux
+        label: search.label
+        components:
+        - name: icon__search
+          data: search.search-icon
+- name: section__section
+  data:
+    content-flag: true
+    components:
+    - name: heading
+      data:
+        translation:
+          key: search.count
+          data:
+            count: 37
+        size: 2
+    - name: status__highlight
+      data:
+        display:
+          data:
+          - component: status
+            variant: highlight
+        components:
+        - name: paragraph
+          data:
+          - content: search.new-search
+    - name: list__generic
+      data:
+        type: ol
+        display:
+          data:
+          - component: list
+            variant: block
+        components:
+        - name: card__search__search-result
+          data:
+            heading-text: OPEN SOURCE SOFTWARE - parliament.uk
+            url: https://www.parliament.uk/documents/post/postpn242.pdf
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
+            short-url: https://www.parliament.uk/documents/post/postpn242.pdf
+            paragraph-content: 'of infrastructural computers run GNU/Linux, an open
+              source operating system. However, use of OSS on the desktop is more
+              limited: over 96% of desktop computers'
+        - name: card__search__search-result
+          data:
+            heading-text: Job Description and Person Specification - parliament.uk
+            url: https://www.parliament.uk/documents/jobs/pds-vacancies/A1-Head-of-Productivity-and-Collaboration-JD-May-18.pdf
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
+            short-url: https://www.parliament.uk/documents/jobs/pds-vacancies/A1-Head-of...
+            paragraph-content: o Server Operating Systems, such as Windows Server
+              and Linux o Mobile Operating Systems, such as Windows, Android and IOS
+              o Powershell scripting
+        - name: card__search__search-result
+          data:
+            heading-text: Job Description and Person Specification - parliament.uk
+            url: https://www.parliament.uk/documents/jobs/pds-vacancies/A2-Lead-Web-Operations-Engineer-JD-Jul-17.pdf
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
+            short-url: https://www.parliament.uk/documents/jobs/pds-vacancies/A2-Lead-Web...
+            paragraph-content: running Linux and will have practiced 'infrastructure
+              as code'. You will be keen to learn new tools, evolve best practice
+              and lead through example.
+        - name: card__search__search-result
+          data:
+            heading-text: Number 414 July 2012 Open Source and Open Standards
+            url: http://researchbriefings.files.parliament.uk/documents/POST-PN-414/POST-PN-414.pdf
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
+            short-url: researchbriefings.files.parliament.uk/documents/POST-PN-414/POST...
+            paragraph-content: It originally planned to install Linux ... POSTnote
+              414 July 2012 Open Source and Open Standards Page 3 involve, for example,
+              hardware, software and formats for
+        - name: card__search__search-result
+          data:
+            heading-text: Job Description and Person Specification - UK Parliament
+            url: https://www.parliament.uk/documents/jobs/pds-vacancies/Head_Of_Development_JD.pdf
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
+            short-url: https://www.parliament.uk/documents/jobs/pds-vacancies/Head_Of...
+            paragraph-content: Job Description and Person Specification ... Strong
+              experience with Internet technologies, especially Linux, Apache, MySQL
+              & PHP and
+        - name: card__search__search-result
+          data:
+            heading-text: Browser, operating system and screen resolution data for
+              ...
+            url: https://pds.blog.parliament.uk/2014/04/09/browser-operating-system-and-screen-resolution-data-for-www-parliament-uk/
+            short-url: https://pds.blog.parliament.uk/2014/04/09/browser-operating-system...
+            paragraph-content: Following on from my post yesterday about user data,
+              and thanks to a timely suggestion from Roo Reynolds at GDS, here's some
+              more data to try and better understand ...
+        - name: card__search__search-result
+          data:
+            heading-text: Job Description and Person Specification - parliament.uk
+            url: https://www.parliament.uk/documents/jobs/PICT-Vacancies/Q10276_A1_Network_Architect_JD.pdf
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
+            short-url: https://www.parliament.uk/documents/jobs/PICT-Vacancies/Q10276_A1...
+            paragraph-content: Understanding of Server Operating Systems (e.g. Windows
+              Server and Linux) Understanding of Desktop Operating Systems (e.g. Windows
+              7\8, MAC OS) ...
+        - name: card__search__search-result
+          data:
+            heading-text: Bills before Parliament 2017-19 — UK Parliament
+            url: https://services.parliament.uk/bills/
+            short-url: https://services.parliament.uk/bills
+            paragraph-content: Bills before Parliament 2017-19. Listed below are all
+              Bills currently before Parliament. Any Bills which start in the Lords
+              have [HL] in their title.
+        - name: card__search__search-result
+          data:
+            heading-text: Petitions – UK Government and Parliament
+            url: https://petition.parliament.uk/
+            short-url: https://petition.parliament.uk/
+            paragraph-content: If a petition gets 100,000 signatures, it will be considered
+              for debate in Parliament. Reclassify the theft of a pet to a specific
+              crime in its own right.
+        - name: card__search__search-result
+          data:
+            heading-text: Web Operations Engineer - UK Parliament
+            url: https://www.parliament.uk/about/working/jobs/pds-job-homepage/web-operations-engineer/
+            short-url: https://www.parliament.uk/.../pds-job-homepage/web-operations-engineer
+            paragraph-content: As a Web Operations Engineer you ... All Web Operations
+              engineers within the Parliamentary Digital Service will have strong
+              skills in cloud services running Linux and ...
+- name: section__section
+  data:
+    components:
+    - name: navigation__number__number
+      data:
+        active-tile: 1
+        next-url: http://www.example.com/search?count=10&q=linux&start_index=11
+        components:
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=linux&start_index=1
+            number: 1
+            total-count: of 4
+            active: true
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=linux&start_index=11
+            number: 2
+            total-count: of 4
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=linux&start_index=21
+            number: 3
+            total-count: of 4
+        - name: navigation__number__card
+          data:
+            url: http://www.example.com/search?count=10&q=linux&start_index=31
+            number: 4
+            total-count: of 4
+footer-components:
+- name: footer
+  data:
+    uk-parliament: common.footer.uk-parliament
+    components:
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          data:
+          - component: list
+        contents:
+        - content: common.footer.current-website
+        - content: common.footer.cookie-policy
+          data:
+            link: "/meta/cookie-policy"
+        - content: common.footer.data-protection-privacy

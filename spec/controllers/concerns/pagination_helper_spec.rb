@@ -8,36 +8,68 @@ RSpec.describe PaginationHelper, type: :helper do
 
   describe 'pagination helpers' do
     it '#current_page' do
-      expect(pagination_helper.current_page).to eq 1
+      expect(pagination_helper.send(:current_page)).to eq 1
     end
 
-    context '#first_page' do
-      it 'if current_page is less than or equal to 6' do
-        allow(pagination_helper).to receive(:current_page) { 5 }
+    context '#page_range' do
+      context 'when there are 100 pages in total' do
+        before(:each) do
+          allow(pagination_helper).to receive(:total_pages) { 100 }
+        end
 
-        expect(pagination_helper.first_page).to eq 1
+        it 'current page is 51' do
+          allow(pagination_helper).to receive(:current_page) { 51 }
+
+          expect(pagination_helper.send(:page_range)).to eq [46, 47, 48, 49, 50, 51, 52, 53, 54, 55]
+        end
+
+        it 'current page is 2' do
+          allow(pagination_helper).to receive(:current_page) { 2 }
+
+          expect(pagination_helper.send(:page_range)).to eq [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        end
+
+        it 'current page is 4' do
+          allow(pagination_helper).to receive(:current_page) { 4 }
+
+          expect(pagination_helper.send(:page_range)).to eq [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        end
+
+        it 'current page is 97' do
+          allow(pagination_helper).to receive(:current_page) { 97 }
+
+          expect(pagination_helper.send(:page_range)).to eq [91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+        end
+
+        it 'current page is 99' do
+          allow(pagination_helper).to receive(:current_page) { 99 }
+
+          expect(pagination_helper.send(:page_range)).to eq [91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+        end
       end
 
-      it '(current_page > last_page - (10 - 6) && last_page > 10)' do
-        allow(pagination_helper).to receive(:current_page) { 15 }
-        allow(pagination_helper).to receive(:last_page) { 11 }
+      context 'when there are 8 pages in total' do
+        before(:each) do
+          allow(pagination_helper).to receive(:total_pages) { 8 }
+        end
 
-        expect(pagination_helper.first_page).to eq 2
-      end
+        it 'current page is 6' do
+          allow(pagination_helper).to receive(:current_page) { 6 }
 
-      it 'current_page minus 5' do
-        allow(pagination_helper).to receive(:current_page) { 15 }
-        allow(pagination_helper).to receive(:last_page) { 9 }
+          expect(pagination_helper.send(:page_range)).to eq [1, 2, 3, 4, 5, 6, 7, 8]
+        end
 
-        expect(pagination_helper.first_page).to eq 10
-      end
-    end
+        it 'current page is 1' do
+          allow(pagination_helper).to receive(:current_page) { 1 }
 
-    context '#active_tile' do
-      it '(current_page > (@count / 2) && current_page < @count - (@count / 2 - 1)' do
-        allow(pagination_helper).to receive(:current_page) { 62 }
+          expect(pagination_helper.send(:page_range)).to eq [1, 2, 3, 4, 5, 6, 7, 8]
+        end
 
-        expect(pagination_helper.active_tile).to eq 6
+        it 'current page is 8' do
+          allow(pagination_helper).to receive(:current_page) { 8 }
+
+          expect(pagination_helper.send(:page_range)).to eq [1, 2, 3, 4, 5, 6, 7, 8]
+        end
       end
     end
   end

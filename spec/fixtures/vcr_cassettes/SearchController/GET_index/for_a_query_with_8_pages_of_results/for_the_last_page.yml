@@ -1,0 +1,110 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.parliament.uk/search/description
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/opensearchdescription+xml
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<AUTH_TOKEN>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/opensearchdescription+xml
+      Expires:
+      - "-1"
+      Request-Context:
+      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
+      Set-Cookie:
+      - ARRAffinity=86446098da8de5f00b83089ea395bfc10c8d53c3a1350acab6a5cba5ddab4ec2;Path=/;HttpOnly;Domain=search201806151230.azurewebsites.net
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Strict-Transport-Security:
+      - max-age=31536000
+      Date:
+      - Tue, 17 Jul 2018 10:07:10 GMT
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\"?>\r\n<OpenSearchDescription xmlns=\"http://a9.com/-/spec/opensearch/1.1/\">\r\n
+        \ <ShortName>parliament.uk</ShortName>\r\n  <Description>UK Parliament</Description>\r\n
+        \ <Url template=\"https://api.parliament.uk/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"application/atom+xml\" />\r\n  <Url template=\"https://api.parliament.uk/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"application/rss+xml\" />\r\n  <Url template=\"https://api.parliament.uk/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"application/json\" />\r\n  <Url template=\"https://api.parliament.uk/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"text/json\" />\r\n  <Url template=\"https://api.parliament.uk/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"text/xml\" />\r\n  <Url template=\"https://api.parliament.uk/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"application/xml\" />\r\n</OpenSearchDescription>"
+    http_version: 
+  recorded_at: Tue, 17 Jul 2018 10:07:09 GMT
+- request:
+    method: get
+    uri: https://api.parliament.uk/search?count=10&q=linux&start=31
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/atom+xml
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<AUTH_TOKEN>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '1702'
+      Content-Type:
+      - application/atom+xml
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Request-Context:
+      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
+      Set-Cookie:
+      - ARRAffinity=0e5a036851de64e8b461905eeb538e1756630de611c59b3d2e24b7d57adc1e0d;Path=/;HttpOnly;Domain=search201710131103.azurewebsites.net
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Strict-Transport-Security:
+      - max-age=31536000
+      Date:
+      - Tue, 17 Jul 2018 10:07:11 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48ZmVlZCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9BdG9tIj48dGl0bGUgdHlwZT0idGV4dCI+UGFybGlhbWVudC51ayBTZWFyY2g6IGxpbnV4PC90aXRsZT48aWQ+dXVpZDo5NWUyZTc2Yi1lOGMzLTRiMjItYTc5Ny1hZDFlMjdjMzFkZmU7aWQ9MjAzMDAxPC9pZD48dXBkYXRlZD4yMDE4LTA3LTE3VDEwOjA3OjExWjwvdXBkYXRlZD48YXV0aG9yPjxuYW1lPlBhcmxpYW1lbnQudWs8L25hbWU+PC9hdXRob3I+PFF1ZXJ5IHJvbGU9InJlcXVlc3QiIHNlYXJjaFRlcm1zPSJsaW51eCIgdG90YWxSZXN1bHRzPSIzNyIgY291bnQ9IjEwIiBzdGFydEluZGV4PSIzMSIgeG1sbnM9Imh0dHA6Ly9hOS5jb20vLS9zcGVjL29wZW5zZWFyY2gvMS4xLyIgLz48dG90YWxSZXN1bHRzIHhtbG5zPSJodHRwOi8vYTkuY29tLy0vc3BlYy9vcGVuc2VhcmNoLzEuMS8iPjM3PC90b3RhbFJlc3VsdHM+PHN0YXJ0SW5kZXggeG1sbnM9Imh0dHA6Ly9hOS5jb20vLS9zcGVjL29wZW5zZWFyY2gvMS4xLyI+MzE8L3N0YXJ0SW5kZXg+PGl0ZW1zUGVyUGFnZSB4bWxucz0iaHR0cDovL2E5LmNvbS8tL3NwZWMvb3BlbnNlYXJjaC8xLjEvIj43PC9pdGVtc1BlclBhZ2U+PGVudHJ5PjxpZD51dWlkOjk1ZTJlNzZiLWU4YzMtNGIyMi1hNzk3LWFkMWUyN2MzMWRmZTtpZD0yMDMwMDI8L2lkPjx0aXRsZSB0eXBlPSJ0ZXh0Ij5FLXNlcnZpY2VzIChIYW5zYXJkLCAxNiBKYW51YXJ5IDIwMDMpIC0gYXBpLnBhcmxpYW1lbnQudWs8L3RpdGxlPjx1cGRhdGVkPjIwMTgtMDctMTdUMTA6MDc6MTFaPC91cGRhdGVkPjxsaW5rIHRpdGxlPSJodHRwczovL2FwaS5wYXJsaWFtZW50LnVrL2hpc3RvcmljLWhhbnNhcmQvd2VzdG1pbnN0ZXItaGFsbC8yMDAzLy4uLiIgaHJlZj0iaHR0cHM6Ly9hcGkucGFybGlhbWVudC51ay9oaXN0b3JpYy1oYW5zYXJkL3dlc3RtaW5zdGVyLWhhbGwvMjAwMy9qYW4vMTYvZS1zZXJ2aWNlcyIgLz48Y29udGVudCB0eXBlPSJ0ZXh0Ij5JdCBpcyBpbXBvcnRhbnQgdG8gY29uc2lkZXIgaXQgaW4gdGVybXMgbm90IG9ubHkgb2YgY2xhc3NpYyBvcGVuIHNvdXJjZSBzb2Z0d2FyZeKAlExpbnV4LCBBcGFjaGUgb3IgdGhlIHByb2dyYW1tZXPigJRidXQgb2YgbWV0aG9kb2xvZ3kuPC9jb250ZW50PjxoaW50cyB4bWxucz0iIj48aGludD48TmFtZT5IaXN0b3JpYyBIYW5zYXJkPC9OYW1lPjxGaWx0ZXI+YXBpLnBhcmxpYW1lbnQudWsvaGlzdG9yaWMtaGFuc2FyZDwvRmlsdGVyPjwvaGludD48L2hpbnRzPjwvZW50cnk+PGVudHJ5PjxpZD51dWlkOjk1ZTJlNzZiLWU4YzMtNGIyMi1hNzk3LWFkMWUyN2MzMWRmZTtpZD0yMDMwMDM8L2lkPjx0aXRsZSB0eXBlPSJ0ZXh0Ij5Mb3JkcyBIYW5zYXJkIHRleHQgZm9yIDIyIE1heSAyMDEzMjIgTWF5IDIwMTMgKHB0IDAwMDIpPC90aXRsZT48dXBkYXRlZD4yMDE4LTA3LTE3VDEwOjA3OjExWjwvdXBkYXRlZD48bGluayB0aXRsZT0iaHR0cHM6Ly9wdWJsaWNhdGlvbnMucGFybGlhbWVudC51ay9wYS9sZDIwMTMxNC9sZGhhbnNyZC90ZXh0Ly4uLiIgaHJlZj0iaHR0cHM6Ly9wdWJsaWNhdGlvbnMucGFybGlhbWVudC51ay9wYS9sZDIwMTMxNC9sZGhhbnNyZC90ZXh0LzEzMDUyMi0wMDAyLmh0bSIgLz48Y29udGVudCB0eXBlPSJ0ZXh0Ij5SZWFkIHRoZSBIb3VzZSBvZiBsb3JkcyBkZWJhdGVzIGZvciAyMiBNYXkgMjAxMyBvbiBMb2NhbCBBdWRpdCBhbmQgQWNjb3VudGFiaWxpdHkgQmlsbCBbSExdLCAuLi48L2NvbnRlbnQ+PGhpbnRzIHhtbG5zPSIiIC8+PC9lbnRyeT48ZW50cnk+PGlkPnV1aWQ6OTVlMmU3NmItZThjMy00YjIyLWE3OTctYWQxZTI3YzMxZGZlO2lkPTIwMzAwNDwvaWQ+PHRpdGxlIHR5cGU9InRleHQiPk1yIENoYXJsZXMgQ2xhcmtlOiBzcGVlY2hlcyBpbiAxOTk5IChIYW5zYXJkKTwvdGl0bGU+PHVwZGF0ZWQ+MjAxOC0wNy0xN1QxMDowNzoxMVo8L3VwZGF0ZWQ+PGxpbmsgdGl0bGU9Imh0dHBzOi8vYXBpLnBhcmxpYW1lbnQudWsvaGlzdG9yaWMtaGFuc2FyZC9wZW9wbGUvbXItY2hhcmxlcy4uLiIgaHJlZj0iaHR0cHM6Ly9hcGkucGFybGlhbWVudC51ay9oaXN0b3JpYy1oYW5zYXJkL3Blb3BsZS9tci1jaGFybGVzLWNsYXJrZS8xOTk5IiAvPjxjb250ZW50IHR5cGU9InRleHQiPkxpbnV4IENvbXB1dGVyIE9wZXJhdGluZyBTeXN0ZW0gV3JpdHRlbiBBbnN3ZXJzIEZlYnJ1YXJ5IDE2LCAxOTk5LiBTY2hvb2wgUGVyZm9ybWFuY2UgV3JpdHRlbiBBbnN3ZXJzIEZlYnJ1YXJ5IDE2LCAxOTk5LiBTY2hvb2xzIChTdXJwbHVzIFBsYWNlcykgLi4uPC9jb250ZW50PjxoaW50cyB4bWxucz0iIj48aGludD48TmFtZT5IaXN0b3JpYyBIYW5zYXJkPC9OYW1lPjxGaWx0ZXI+YXBpLnBhcmxpYW1lbnQudWsvaGlzdG9yaWMtaGFuc2FyZDwvRmlsdGVyPjwvaGludD48L2hpbnRzPjwvZW50cnk+PGVudHJ5PjxpZD51dWlkOjk1ZTJlNzZiLWU4YzMtNGIyMi1hNzk3LWFkMWUyN2MzMWRmZTtpZD0yMDMwMDU8L2lkPjx0aXRsZSB0eXBlPSJ0ZXh0Ij5Dby1vcGVyYXRpdmVzIGFuZCBDb21tdW5pdHkgQmVuZWZpdCBTb2NpZXRpZXMgQmlsbCAuLi48L3RpdGxlPjx1cGRhdGVkPjIwMTgtMDctMTdUMTA6MDc6MTFaPC91cGRhdGVkPjxsaW5rIHRpdGxlPSJodHRwczovL2FwaS5wYXJsaWFtZW50LnVrL2hpc3RvcmljLWhhbnNhcmQvY29tbW9ucy8yMDAzL2phbi8zMS9jby4uLiIgaHJlZj0iaHR0cHM6Ly9hcGkucGFybGlhbWVudC51ay9oaXN0b3JpYy1oYW5zYXJkL2NvbW1vbnMvMjAwMy9qYW4vMzEvY28tb3BlcmF0aXZlcy1hbmQtY29tbXVuaXR5LWJlbmVmaXQiIC8+PGNvbnRlbnQgdHlwZT0idGV4dCI+SWYgQmlsbCBHYXRlcyBsaWVzIGF3YWtlIGF0IG5pZ2h0IHdvcnJ5aW5nIGFib3V0IGNvbXBldGl0aW9uLCBoZSB3b3JyaWVzIG5vdCBhYm91dCB0cmFkaXRpb25hbCBjb21wYW5pZXMsIGJ1dCBhYm91dCBMaW51eCwgd2hpY2ggaXMgYSB0cnVlIG11dHVhbC48L2NvbnRlbnQ+PGhpbnRzIHhtbG5zPSIiPjxoaW50PjxOYW1lPkhpc3RvcmljIEhhbnNhcmQ8L05hbWU+PEZpbHRlcj5hcGkucGFybGlhbWVudC51ay9oaXN0b3JpYy1oYW5zYXJkPC9GaWx0ZXI+PC9oaW50PjwvaGludHM+PC9lbnRyeT48ZW50cnk+PGlkPnV1aWQ6OTVlMmU3NmItZThjMy00YjIyLWE3OTctYWQxZTI3YzMxZGZlO2lkPTIwMzAwNjwvaWQ+PHRpdGxlIHR5cGU9InRleHQiPkluZHVzdHJpYWwgYW5kIFByb3ZpZGVudCBTb2NpZXRpZXMgQmlsbCAoSGFuc2FyZCwgMjUgLi4uPC90aXRsZT48dXBkYXRlZD4yMDE4LTA3LTE3VDEwOjA3OjExWjwvdXBkYXRlZD48bGluayB0aXRsZT0iaHR0cHM6Ly9hcGkucGFybGlhbWVudC51ay9oaXN0b3JpYy1oYW5zYXJkL2NvbW1vbnMvMjAwMi9qYW4vMjUvLi4uIiBocmVmPSJodHRwczovL2FwaS5wYXJsaWFtZW50LnVrL2hpc3RvcmljLWhhbnNhcmQvY29tbW9ucy8yMDAyL2phbi8yNS9pbmR1c3RyaWFsLWFuZC1wcm92aWRlbnQtc29jaWV0aWVzLWJpbGwiIC8+PGNvbnRlbnQgdHlwZT0idGV4dCI+TXV0dWFsaXR5IGNhbiBiZSBmb3VuZCBldmVuIGluIGhpZ2gtdGVjaCBidXNpbmVzczogdGhlIExpbnV4IGNvbXB1dGVyIHNvZnR3YXJlIG91dGZpdCBpcyBhIG11dHVhbC4gV2UgYXJlIHRhbGtpbmcgbm90IGp1c3QgYWJvdXQgYWRkaXRpb25hbCBzdHJ1Y3R1cmVzLCAuLi48L2NvbnRlbnQ+PGhpbnRzIHhtbG5zPSIiPjxoaW50PjxOYW1lPkhpc3RvcmljIEhhbnNhcmQ8L05hbWU+PEZpbHRlcj5hcGkucGFybGlhbWVudC51ay9oaXN0b3JpYy1oYW5zYXJkPC9GaWx0ZXI+PC9oaW50PjwvaGludHM+PC9lbnRyeT48ZW50cnk+PGlkPnV1aWQ6OTVlMmU3NmItZThjMy00YjIyLWE3OTctYWQxZTI3YzMxZGZlO2lkPTIwMzAwNzwvaWQ+PHRpdGxlIHR5cGU9InRleHQiPlNpdHRpbmcgb2YgMTYgRmVicnVhcnkgMTk5OSAoSGFuc2FyZCkgLSBhcGkucGFybGlhbWVudC51azwvdGl0bGU+PHVwZGF0ZWQ+MjAxOC0wNy0xN1QxMDowNzoxMVo8L3VwZGF0ZWQ+PGxpbmsgdGl0bGU9Imh0dHBzOi8vYXBpLnBhcmxpYW1lbnQudWsvaGlzdG9yaWMtaGFuc2FyZC9zaXR0aW5ncy8xOTk5L2ZlYi8xNiIgaHJlZj0iaHR0cHM6Ly9hcGkucGFybGlhbWVudC51ay9oaXN0b3JpYy1oYW5zYXJkL3NpdHRpbmdzLzE5OTkvZmViLzE2IiAvPjxjb250ZW50IHR5cGU9InRleHQiPk5leHQgc2l0dGluZyBkYXkgRmVicnVhcnkgMTcsIDE5OTkgUHJldmlvdXMgc2l0dGluZyBkYXkgRmVicnVhcnkgMTUsIDE5OTkuIFNpdHRpbmcgb2YgMTYgRmVicnVhcnkgMTk5OTwvY29udGVudD48aGludHMgeG1sbnM9IiI+PGhpbnQ+PE5hbWU+SGlzdG9yaWMgSGFuc2FyZDwvTmFtZT48RmlsdGVyPmFwaS5wYXJsaWFtZW50LnVrL2hpc3RvcmljLWhhbnNhcmQ8L0ZpbHRlcj48L2hpbnQ+PC9oaW50cz48L2VudHJ5PjxlbnRyeT48aWQ+dXVpZDo5NWUyZTc2Yi1lOGMzLTRiMjItYTc5Ny1hZDFlMjdjMzFkZmU7aWQ9MjAzMDA4PC9pZD48dGl0bGUgdHlwZT0idGV4dCI+VW5jb3JyZWN0ZWQgRXZpZGVuY2UgNDIyIC0gcHVibGljYXRpb25zLnBhcmxpYW1lbnQudWs8L3RpdGxlPjx1cGRhdGVkPjIwMTgtMDctMTdUMTA6MDc6MTFaPC91cGRhdGVkPjxsaW5rIHRpdGxlPSJodHRwczovL3B1YmxpY2F0aW9ucy5wYXJsaWFtZW50LnVrL3BhL2NtMjAwNjA3L2Ntc2VsZWN0L2NtaGVhbHRoL2MuLi4iIGhyZWY9Imh0dHBzOi8vcHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvY20yMDA2MDcvY21zZWxlY3QvY21oZWFsdGgvYzQyMi1pL2M0MjIwMi5odG0iIC8+PGNvbnRlbnQgdHlwZT0idGV4dCI+SW4gcGFydCBvZiB0aGUgZXZpZGVuY2UgaXQgc2F5cywgLi4uIE1yIEdyYW5nZXI6IE5vbmUgb2YgdGhlIG9wZXJhdGluZyBzeXN0ZW1zLCBiZWNhdXNlIHRoZXkgYXJlIGVpdGhlciBpbmR1c3RyeSBzdGFuZGFyZCBwcm9wcmlldGFyeSBzeXN0ZW1zIG9yIExJTlVYLjwvY29udGVudD48aGludHMgeG1sbnM9IiIgLz48L2VudHJ5PjwvZmVlZD4=
+    http_version: 
+  recorded_at: Tue, 17 Jul 2018 10:07:09 GMT
+recorded_with: VCR 4.0.0
