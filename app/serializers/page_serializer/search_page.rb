@@ -35,7 +35,7 @@ module PageSerializer
     end
 
     def total_results
-      @results.totalResults.to_i
+      @results&.totalResults.to_i
     end
   end
 end
