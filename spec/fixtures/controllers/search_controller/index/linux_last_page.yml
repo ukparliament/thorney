@@ -1,7 +1,11 @@
 ---
 layout:
   template: layout
-title: linux - Search - UK Parliament
+meta:
+  title: linux - Search - UK Parliament
+  request-id: "|y0NM2eOY/fnQPw==."
+  components:
+  - name: head__search-result-tracking
 pugin-version: 1.10.1
 open-search: http://www.example.com/search/opensearch
 header-components:
@@ -145,6 +149,15 @@ main-components:
               (Surplus Places) ...
         - name: card__search__search-result
           data:
+            heading-text: 'House of Commons - Banking Standards: Written evidence
+              ...'
+            url: https://publications.parliament.uk/pa/jt201314/jtselect/jtpcbs/27/27iv91.htm
+            short-url: https://publications.parliament.uk/pa/jt201314/jtselect/jtpcbs/27/...
+            paragraph-content: Banking Standards Written evidence from Intellect Financial
+              Infrastructure & the Reform of the Financial System 1. Executive Summary
+              The problem. In reality ...
+        - name: card__search__search-result
+          data:
             heading-text: Co-operatives and Community Benefit Societies Bill ...
             url: https://api.parliament.uk/historic-hansard/commons/2003/jan/31/co-operatives-and-community-benefit
             hints:
@@ -159,22 +172,6 @@ main-components:
             paragraph-content: If Bill Gates lies awake at night worrying about competition,
               he worries not about traditional companies, but about Linux, which is
               a true mutual.
-        - name: card__search__search-result
-          data:
-            heading-text: Industrial and Provident Societies Bill (Hansard, 25 ...
-            url: https://api.parliament.uk/historic-hansard/commons/2002/jan/25/industrial-and-provident-societies-bill
-            hints:
-            - name: hint
-              data:
-                display:
-                  data:
-                  - component: theme
-                    variant: grey-4
-                    content: Historic Hansard
-            short-url: https://api.parliament.uk/historic-hansard/commons/2002/jan/25/...
-            paragraph-content: 'Mutuality can be found even in high-tech business:
-              the Linux computer software outfit is a mutual. We are talking not just
-              about additional structures, ...'
         - name: card__search__search-result
           data:
             heading-text: Sitting of 16 February 1999 (Hansard) - api.parliament.uk

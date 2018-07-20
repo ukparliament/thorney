@@ -1,7 +1,9 @@
 ---
 layout:
   template: layout
-title: Search - UK Parliament
+meta:
+  title: Search - UK Parliament
+  request-id: 
 pugin-version: 1.10.1
 open-search: 
 header-components:
