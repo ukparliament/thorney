@@ -1,7 +1,11 @@
 ---
 layout:
   template: layout
-title: test - Search - UK Parliament
+meta:
+  title: test - Search - UK Parliament
+  request-id: "|y0NM2eOY/fnQPw==."
+  components:
+  - name: head__search-result-tracking
 pugin-version: 1.10.1
 open-search: http://www.example.com/search/opensearch
 header-components:
@@ -84,7 +88,7 @@ main-components:
         translation:
           key: search.count
           data:
-            count: 18900
+            count: 18200
         size: 2
     - name: status__highlight
       data:
@@ -106,18 +110,8 @@ main-components:
         components:
         - name: card__search__search-result
           data:
-            heading-text: House of Lords - O'Brien (Respondent) v Chief Constable
-              of ...
-            url: https://publications.parliament.uk/pa/ld200405/ldjudgmt/jd050428/obrien-1.htm
-            short-url: https://publications.parliament.uk/pa/ld200405/ldjudgmt/jd050428/...
-            paragraph-content: O'Brien (Respondent) v. Chief Constable of South Wales
-              Police (Appellant) ON. ... The test applied by the Court of Appeal and
-              the challenge to this. 24.
-        - name: card__search__search-result
-          data:
-            heading-text: 'Children in crisis: unaccompanied migrant children in the
-              EU'
-            url: https://publications.parliament.uk/pa/ld201617/ldselect/ldeucom/34/34.pdf
+            heading-text: Recovery of benefit overpayments due to official error
+            url: http://researchbriefings.files.parliament.uk/documents/SN05856/SN05856.pdf
             hints:
             - name: hint
               data:
@@ -126,73 +120,55 @@ main-components:
                   - component: theme
                     variant: grey-4
                     content: pdf
-            short-url: https://publications.parliament.uk/pa/ld201617/ldselect/ldeucom/34/...
-            paragraph-content: 'CHILDREN IN CRISIS: UNACCOMPANIED MIGRANT CHILDREN
-              IN ... 6 CHILDREN IN CRISIS: UNACCOMPANIED MIGRANT CHILDREN IN THE EU
-              ... age assessments to test that they truly ...'
+            short-url: researchbriefings.files.parliament.uk/documents/SN05856/SN05856.pdf
+            paragraph-content: We also agree with you that the CSR will dramatically
+              affect the lives of a generation, but the fact that issues around welfare
+              reform are vital to the social and economic
         - name: card__search__search-result
           data:
-            heading-text: House of Commons - publications.parliament.uk
-            url: https://publications.parliament.uk/pa/bills/cbill/2017-2019/0005/amend/euwithdrawal_rm_cwh_0911.pdf
-            hints:
-            - name: hint
-              data:
-                display:
-                  data:
-                  - component: theme
-                    variant: grey-4
-                    content: pdf
-            short-url: https://publications.parliament.uk/pa/bills/cbill/2017-2019/0005/...
-            paragraph-content: 'Amendments tabled since the last publication: ...
-              The test set out at Clause 4(1)(a), that such righ ts are available
-              in domestic law immediately before'
-        - name: card__search__search-result
-          data:
-            heading-text: Centre for Political and Constitutional Studies King’s ...
-            url: https://www.parliament.uk/pagefiles/56954/cpcs%20literature%20review%20(4).pdf
-            hints:
-            - name: hint
-              data:
-                display:
-                  data:
-                  - component: theme
-                    variant: grey-4
-                    content: pdf
-            short-url: https://www.parliament.uk/pagefiles/56954/cpcs literature review
-              (4...
-            paragraph-content: 'Centre for Political and Constitutional Studies .
-              King’s College London . Codifying – or not codifying – the UK constitution:
-              A Literature Review'
-        - name: card__search__search-result
-          data:
-            heading-text: Ex Parte Fahia - United Kingdom Parliament home page
-            url: https://publications.parliament.uk/pa/ld199798/ldjudgmt/jd980723/fahia.htm
-            short-url: https://publications.parliament.uk/.../ldjudgmt/jd980723/fahia.htm
-            paragraph-content: Mrs. Fahia then applied ... Until a recent decision
-              of your Lordships' House it was thought that only by satisfying that
-              test laid down by Ackner L.J ...
-        - name: card__search__search-result
-          data:
-            heading-text: A (FC) and others (FC) (Appellants) v. Secretary of State
+            heading-text: Irlen Syndrome to be a recognised condition and NHS funded
               ...
-            url: https://publications.parliament.uk/pa/ld200405/ldjudgmt/jd041216/a&oth-1.htm
-            short-url: https://publications.parliament.uk/pa/ld200405/ldjudgmt/jd041216/a&...
-            paragraph-content: Judgments - A (FC) and others (FC) (Appellants) v.
-              Secretary of State for the Home Department (Respondent ... the threshold
-              test for reliance on article 15 ...
+            url: https://petition.parliament.uk/archived/petitions/48990
+            short-url: https://petition.parliament.uk/archived/petitions/48990
+            paragraph-content: Rejected petition Irlen Syndrome to be a recognised
+              condition and NHS funded More details Irlen Syndrome can be a part of
+              the problem for people who have Eye problems, Dyslexia, ADD/HD, Autism,
+              Aspergers syndrome and Dyspraxia. Children are labelled within schools
+              as lazy, lacking in motivation or having behavioural problems when in
+              fact they ...
         - name: card__search__search-result
           data:
-            heading-text: House of Lords - R v. Coutts (Appellant) (On Appeal from
+            heading-text: Draft Investigatory Powers Bill - Joint Committee on the
               ...
-            url: https://publications.parliament.uk/pa/ld200506/ldjudgmt/jd060719/coutts-3.htm
-            short-url: https://publications.parliament.uk/pa/ld200506/ldjudgmt/jd060719/...
-            paragraph-content: Judgments - R v. Coutts (Appellant) (On Appeal from
-              the Court of Appeal (Criminal Division)) ... The test is still the objective
-              test.
+            url: https://publications.parliament.uk/pa/jt201516/jtselect/jtinvpowers/93/9302.htm
+            short-url: https://publications.parliament.uk/pa/jt201516/jtselect/jtinv...
+            paragraph-content: Joint Committee on the Draft Investigatory Powers Bill
+              Draft Investigatory Powers Bill Report of Session 2015-16 - published
+              11 February 2016 - HL Paper 93 - HC 651
         - name: card__search__search-result
           data:
-            heading-text: Education Funding Agency and Department for Education ...
-            url: https://publications.parliament.uk/pa/cm201314/cmselect/cmpubacc/1063/1063.pdf
+            heading-text: House of Lords - Macfarlane and Another v. Tayside Health
+              ...
+            url: https://publications.parliament.uk/pa/ld199900/ldjudgmt/jd991125/macfar-2.htm
+            short-url: https://publications.parliament.uk/pa/ld199900/ldjudgmt/jd991125/...
+            paragraph-content: As Mr. Stewart Q.C. says the alternative test is to
+              ask whether the doctor or the Board has assumed responsibility for the
+              economic interest of the claimant "with concomitant reliance by the
+              claimant".
+        - name: card__search__search-result
+          data:
+            heading-text: Written Ministerial Statements - publications.parliament.uk
+            url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110630/wmstext/110630m0001.htm
+            short-url: https://publications.parliament.uk/pa/cm201011/cmhansrd/cm110630/...
+            paragraph-content: In addition to the fact that this could not be considered
+              as part of the media plurality public interest test, these issues have
+              already been considered by the European Commission which concluded on
+              21 December last year that the increased shareholding would not significantly
+              impede effective competition.
+        - name: card__search__search-result
+          data:
+            heading-text: Confidence Motions - researchbriefings.files.parliament.uk
+            url: http://researchbriefings.files.parliament.uk/documents/SN02873/SN02873.pdf
             hints:
             - name: hint
               data:
@@ -201,31 +177,182 @@ main-components:
                   - component: theme
                     variant: grey-4
                     content: pdf
-            short-url: https://publications.parliament.uk/pa/cm201314/cmselect/cmpubacc/...
-            paragraph-content: Education Funding Agency and Department for Education
-              financial statements ... test for vetting those appointed as academy
-              trustees or chief executives.
+            short-url: researchbriefings.files.parliament.uk/documents/SN02873/SN02873.pdf
+            paragraph-content: on confidence motions since 1945, with related information,
+              such as the day(s) of the week on which they took place, and the full
+              terms of the motion(s). This information is provided to Members of Parliament
+              in support of their parliamentary duties
         - name: card__search__search-result
           data:
-            heading-text: House of Commons - Children and young people’s mental ...
-            url: https://publications.parliament.uk/pa/cm201719/cmselect/cmeduc/451/45102.htm
-            short-url: https://publications.parliament.uk/pa/cm201719/cmselect/cmeduc/451/...
-            paragraph-content: 'Children and young people’s mental health—the role
-              of education: Government Response to the First Joint Report of the Education
-              and Health Committees of Session ...'
+            heading-text: SCHOOLS AND CLASS SIZES ENGLAND & UK PROPORTION OF PUPILS
+              ...
+            url: http://researchbriefings.files.parliament.uk/documents/SN02625/SN02625.pdf
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
+            short-url: researchbriefings.files.parliament.uk/documents/SN02625/SN02625.pdf
+            paragraph-content: schools and class sizes england & uk The number of
+              primary schools declined by 5,874 (22%) between 1970/71 and 2016/17.
+              The number of secondary schools fell by 1,842 (31%) over the same period.
         - name: card__search__search-result
           data:
-            heading-text: 'Cancelled Rail electrification schemes: Secretary of State
+            heading-text: The roll–out of the Jobcentre Plus office network
+            url: https://publications.parliament.uk/pa/cm200708/cmselect/cmpubacc/532/532.pdf
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
+            short-url: https://publications.parliament.uk/pa/cm200708/cmselect/cmpubacc/...
+            paragraph-content: test the feasibility of combining benefits and employment
+              services within one organisation, and in April 2002, the merger of the
+              two bodies took place. Subsequently, the Treasury Subsequently, the
+              Treasury
+        - name: card__search__search-result
+          data:
+            heading-text: 'The retail industry: statistics and policy'
+            url: http://researchbriefings.files.parliament.uk/documents/SN06186/SN06186.pdf
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
+            short-url: researchbriefings.files.parliament.uk/documents/SN06186/SN06186.pdf
+            paragraph-content: competition for areas to be “Portas Pilots” to test
+              some of the recommendations. 27 towns were chosen act as Portas Pilots;
+              the Government reported on the progress of this project in July 2013.
+        - name: card__search__search-result
+          data:
+            heading-text: 'Summer-born children: starting school'
+            url: http://researchbriefings.files.parliament.uk/documents/CBP-7272/CBP-7272.pdf
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
+            short-url: researchbriefings.files.parliament.uk/documents/CBP-7272/CBP-7272.pdf
+            paragraph-content: '5 Summer-born children: starting school requests from
+              parents to allow their children to enter school a year later than would
+              be usual, and join the reception class when they do so.'
+        - name: card__search__search-result
+          data:
+            heading-text: FOI request relating to the Speaker - UK Parliament
+            url: https://www.parliament.uk/mps-lords-and-offices/offices/commons/speakers-office/speakers-publications/foi-request-on-speakers-expenditure/
+            short-url: https://www.parliament.uk/mps-lords-and-offices/offices/commons/...
+            paragraph-content: This is an absolute exemption and the public interest
+              test does not apply. Members Travel allowance The Members Travel allowance
+              is used by Mr Bercow when travelling on constituency business. Details
+              of MPs’ travel expenses for 2009/10 will be published due course and,
+              while held by the House of Commons, are therefore exempt under section
+              22 ...
+        - name: card__search__search-result
+          data:
+            heading-text: House of Commons Environment, Food and Rural Affairs ...
+            url: https://publications.parliament.uk/pa/cm201516/cmselect/cmenvfru/479/479.pdf
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
+            short-url: https://publications.parliament.uk/pa/cm201516/cmselect/cmenvfru/...
+            paragraph-content: HC 479 Published on 27 April 2016 by authority of the
+              House of Commons House of Commons Environment, Food and Rural Affairs
+              Committee Air quality Fourth Report of Session 2015–16
+        - name: card__search__search-result
+          data:
+            heading-text: House of Lords - Empress Car Company (Abertillery) Ltd.
+              v ...
+            url: https://publications.parliament.uk/pa/ld199798/ldjudgmt/jd980205/empre01.htm
+            short-url: https://publications.parliament.uk/pa/ld199798/ldjudgmt/jd980205/...
+            paragraph-content: Empress Car Company (Abertillery) Ltd. ("the company")
+              was convicted at the Crown Court sitting at Newport, Gwent (His Honour
+              Judge Crowther Q.C. and two justices) of "causing poisonous, noxious
+              or polluting matter or sold waste to enter controlled waters" contrary
+              to section 85(1) of the Water Resources Act 1991.
+        - name: card__search__search-result
+          data:
+            heading-text: Petitions – UK Government and Parliament
+            url: https://petition.parliament.uk/
+            short-url: https://petition.parliament.uk/
+            paragraph-content: Increase the sentence for failure to stop after a fatal
+              road traffic collision. The government responded on 6 July 2018. The
+              offence of failing to stop should not be used to punish an offender
+              for a serious, but not proven, offence.
+        - name: card__search__search-result
+          data:
+            heading-text: House of Lords - Malik v. Bank of Credit and Mahmud v ...
+            url: https://publications.parliament.uk/pa/ld199798/ldjudgmt/jd970612/malik03.htm
+            short-url: https://publications.parliament.uk/pa/ld199798/ldjudgmt/jd970612/...
+            paragraph-content: 'It was not argued that remoteness on the test posed
+              in Hadley v. Baxendale (1854) 9 Exch. 341 is an answer to the claims.
+              That is not surprising: it is a matter of fact whether the claims in
+              this case are too remote. It is at least arguable that they are not
+              too remote. Mitigation is, of course, another potential limiting principle
+              to the ...'
+        - name: card__search__search-result
+          data:
+            heading-text: House of Commons - Private Investigators - Home Affairs
+              ...
+            url: https://publications.parliament.uk/pa/cm201213/cmselect/cmhaff/100/10007.htm
+            short-url: https://publications.parliament.uk/pa/cm201213/cmselect/cmhaff/100/...
+            paragraph-content: 3 The remedies . 37. Though there is no direct regulation
+              of private investigators, there is some legislation which governs the
+              acquisition, storage and use of personal information—principally the
+              Data Protection Act 1998 and the Regulation of Investigatory Powers
+              Act 2000.
+        - name: card__search__search-result
+          data:
+            heading-text: Judgments - Regina v. Southwark Crown Court, Ex Parte Bowles
+            url: https://publications.parliament.uk/pa/ld199798/ldjudgmt/jd980402/bowl.htm
+            short-url: https://publications.parliament.uk/pa/ld199798/ldjudgmt/jd980402/...
+            paragraph-content: But when a circuit judge applies that test he will
+              do so, not because a requirement for the dominant purpose test has to
+              be imported or read into the words of section 93H, but because it is
+              the test which the law applies where an issue arises as to the purpose
+              or purposes for which a statutory power is exercised or sought to be
+              exercised.
+        - name: card__search__search-result
+          data:
+            heading-text: House of Lords - Serco Limited (Respondents) v. Lawson ...
+            url: https://publications.parliament.uk/pa/ld200506/ldjudgmt/jd060126/serco-1.htm
+            short-url: https://publications.parliament.uk/pa/ld200506/ldjudgmt/jd060126/...
+            paragraph-content: The repeal of section 196 means that the courts are
+              no longer rigidly confined to this single litmus test. Nevertheless,
+              the importance which parliament attached to the place of work is a relevant
+              historical fact which retains persuasive force.
+        - name: card__search__search-result
+          data:
+            heading-text: 'Private Members'' Ballot Bills First Reading: 24 June 2015
               ...'
-            url: https://www.parliament.uk/business/committees/committees-a-z/commons-select/transport-committee/news-parliament-2017/rail-electrification-schemes-secretary-of-state-recalled-17-19/
-            short-url: https://www.parliament.uk/business/committees/committees-a-z/...
-            paragraph-content: The choices the Government have made lock us into a
-              mode of operation that will persist for many years and we need to test
-              and challenge their position ...
+            url: https://www.parliament.uk/business/news/2015/june/private-members-ballot-bills-first-reading-24-june-2015/
+            short-url: https://www.parliament.uk/business/news/2015/june/private-members...
+            paragraph-content: Bill to require ministers to carry out an assessment
+              of the impact of government policies on families by giving statutory
+              effect to the family test; to place a duty on the Secretary of State
+              to make a report on the costs and benefits of requiring local authorities
+              to carry out equivalent tests on their policies; to require the Secretary
+              of ...
         - name: card__search__search-result
           data:
-            heading-text: Registration and Management of Sex Offenders
-            url: http://researchbriefings.files.parliament.uk/documents/SN05267/SN05267.pdf
+            heading-text: Sheffield to Rotherham tram-trains
+            url: https://publications.parliament.uk/pa/cm201719/cmselect/cmpubacc/453/453.pdf
             hints:
             - name: hint
               data:
@@ -234,79 +361,25 @@ main-components:
                   - component: theme
                     variant: grey-4
                     content: pdf
-            short-url: researchbriefings.files.parliament.uk/documents/SN05267/SN05267.pdf
-            paragraph-content: 7 Registration and Management of Sex Offenders . The
-              police will determine the application by reference to the matters listed
-              in section 91D of the 2003 Act, 9.
+            short-url: https://publications.parliament.uk/pa/cm201719/cmselect/cmpubacc/...
+            paragraph-content: and Rotherham to test the new technology and assess
+              the potential to extend it to other cities. Network Rail is responsible
+              for modifying the national rail sections of the route, Network Rail
+              is responsible for modifying the national rail sections of the route,
         - name: card__search__search-result
           data:
-            heading-text: Parliament and the Ombudsman - publications.parliament.uk
-            url: https://publications.parliament.uk/pa/cm200910/cmselect/cmpubadm/107/10703.htm
-            short-url: https://publications.parliament.uk/pa/cm200910/cmselect/cmpubadm/...
-            paragraph-content: PARLIAMENT AND THE OMBUDSMAN. 1. This short report
-              follows an evidence session with Ann Abraham, the Parliamentary and
-              Health Service Ombudsman ('the ...
+            heading-text: House of Lords - Mitchell (AP) and another (Original ...
+            url: https://publications.parliament.uk/pa/ld200809/ldjudgmt/jd090218/mitche-1.htm
+            short-url: https://publications.parliament.uk/pa/ld200809/ldjudgmt/jd090218/...
+            paragraph-content: He then set out the now familiar three-fold test which
+              requires, in addition to foreseeabilty and a relationship of proximity,
+              that the situation should be one in which the court considers it fair,
+              just and reasonable that the law should impose a duty of a given scope
+              upon the one party for the benefit of the other.
         - name: card__search__search-result
           data:
-            heading-text: Fourth Report - United Kingdom Parliament home page
-            url: https://publications.parliament.uk/pa/ld201011/ldselect/ldmerit/17/1702.htm
-            short-url: https://publications.parliament.uk/pa/ld201011/ldselect/ldmerit/17/...
-            paragraph-content: Fourth Report. Instrument drawn to ... as this will
-              ensure that most of the effect of the interim limit falls on those closer
-              to the margin of the original test.
-        - name: card__search__search-result
-          data:
-            heading-text: House of Lords - Phelps (A.P.) v. Mayor Etc. of The London
-              ...
-            url: https://publications.parliament.uk/pa/ld199900/ldjudgmt/jd000727/phelp-2.htm
-            short-url: https://publications.parliament.uk/pa/ld199900/ldjudgmt/jd000727/...
-            paragraph-content: It seems that their view was that she should have found
-              an ACID profile there but that if the test which she used did not give
-              very clear results the Bangor Test ...
-        - name: card__search__search-result
-          data:
-            heading-text: Cities and Local Government Devolution Act 2016 — UK ...
-            url: https://services.parliament.uk/bills/2015-16/citiesandlocalgovernmentdevolution.html
-            short-url: https://services.parliament.uk/bills/2015-16/citiesandlocal...
-            paragraph-content: Summary of the Cities and Local Government Devolution
-              Act 2016 A Bill to make provision for the election of mayors for the
-              areas of, ...
-        - name: card__search__search-result
-          data:
-            heading-text: Motorcyclists Matter – to ensure that biker related ...
-            url: https://petition.parliament.uk/petitions/26272
-            short-url: https://petition.parliament.uk/petitions/26272
-            paragraph-content: Petition Motorcyclists Matter – to ensure that biker
-              related questions are compulsory in the driving theory test More details
-        - name: card__search__search-result
-          data:
-            heading-text: House of Lords - Regina v Loosely
-            url: https://publications.parliament.uk/pa/ld200102/ldjudgmt/jd011025/loose-1.htm
-            short-url: https://publications.parliament.uk/pa/ld200102/ldjudgmt/jd011025/...
-            paragraph-content: The statute creating an offence may authorise officials
-              to make test purchases, as in section 27 of the Trade Descriptions Act
-              1968. 4. Thus, ...
-        - name: card__search__search-result
-          data:
-            heading-text: 'Section E : Written questions - archive.scottish.parliament.uk'
-            url: http://archive.scottish.parliament.uk/business/businessBulletin/bb-01/bb-11-26e.htm
-            short-url: archive.scottish.parliament.uk/business/businessBulletin/bb-01/bb...
-            paragraph-content: 'S1W-19876 Fergus Ewing: To ask the Presiding Officer
-              whether a copy of the contract with Flour City Architectural Metals
-              (UK) Ltd will be placed ...'
-        - name: card__search__search-result
-          data:
-            heading-text: Regina v. G and another (Appellants) (On Appeal from the
-              ...
-            url: https://publications.parliament.uk/pa/ld200203/ldjudgmt/jd031016/g-1.htm
-            short-url: https://publications.parliament.uk/pa/ld200203/ldjudgmt/jd031016/g...
-            paragraph-content: G and another (Appellants) (On Appeal from the Court
-              of Appeal (Criminal Division)) ... that you may think this is a harsh
-              test to apply to youngsters, ...
-        - name: card__search__search-result
-          data:
-            heading-text: CLAUSE 30.—(Regulations.) (Hansard, 21 July 1920)
-            url: https://api.parliament.uk/historic-hansard/commons/1920/jul/21/clause-30-regulations
+            heading-text: ST. ANDREW'S HOSPITAL, BILLERICAY (Hansard, 10 May 1954)
+            url: https://api.parliament.uk/historic-hansard/commons/1954/may/10/st-andrews-hospital-billericay
             hints:
             - name: hint
               data:
@@ -315,128 +388,96 @@ main-components:
                   - component: theme
                     variant: grey-4
                     content: Historic Hansard
-            short-url: https://api.parliament.uk/historic-hansard/commons/1920/jul/21/...
-            paragraph-content: Mr. CHAMBERLAIN. I beg to move, in page 31, line 38,
-              at the end, to insert the words (2) Regulations under this Act may also
-              be made providing that, subject to ...
+            short-url: https://api.parliament.uk/historic-hansard/commons/1954/may/10/st...
+            paragraph-content: "§Mr. Bernard Braine. I hope that the House will acquit
+              me of using the Adjournment as a device for prolonging the debate on
+              the National Health Service which we had earlier, but I sought to raise
+              the subject of St. Andrew's Hospital, Billericay, and hospital services
+              in South-East Essex, a considerable time before today's business was
+              fixed."
         - name: card__search__search-result
           data:
-            heading-text: 'Children and Social Work [HL] Bill 121: analysis for ...'
-            url: http://researchbriefings.parliament.uk/ResearchBriefing/Summary/CBP-7800
-            short-url: researchbriefings.parliament.uk/ResearchBriefing/Summary/CBP-7800
-            paragraph-content: This paper analyses the Children and Social Work [HL]
-              ahead of Commons Report Stage. ... powers for local authorities to test
-              different ways of working, ...
+            heading-text: 'House of Lords - Extradition: UK law and practice - Select
+              ...'
+            url: https://publications.parliament.uk/pa/ld201415/ldselect/ldextradition/126/12602.htm
+            short-url: https://publications.parliament.uk/pa/ld201415/ldselect/ld...
+            paragraph-content: 'Select Committee on Extradition Law - Second Report
+              Extradition: UK law and practice Here you can browse the report which
+              was ordered by the House of Lords to be printed 25 February 2015.'
         - name: card__search__search-result
           data:
-            heading-text: 'House of Commons - Exiting the EU: challenges and ...'
-            url: https://publications.parliament.uk/pa/cm201719/cmselect/cmeduc/502/50202.htm
-            short-url: https://publications.parliament.uk/pa/cm201719/cmselect/cmeduc/502/...
-            paragraph-content: 'Exiting the EU: challenges and opportunities for higher
-              education: Government Response to the Committee’s Ninth Report of Session
-              2016–17'
+            heading-text: Authorise open book examinations for GCSE English ...
+            url: https://petition.parliament.uk/archived/petitions/172405
+            short-url: https://petition.parliament.uk/archived/petitions/172405
+            paragraph-content: The introduction of closed book examinations,for GCSE
+              English Literature,requires students to learn and memorise quotes for
+              this exam.There are 2 literature papers which include the content of:15
+              poems,2 plays and 1 novella.Exams shouldn't be a test on the student's
+              memory,but how we interpret texts
         - name: card__search__search-result
           data:
-            heading-text: House of Commons Public Bill Committee Amendments ...
-            url: https://publications.parliament.uk/pa/bills/cbill/2017-2019/0005/amend/euwithdrawal_daily_cwh_1114.8-14.html
-            short-url: https://publications.parliament.uk/pa/bills/cbill/2017-2019/0005/...
-            paragraph-content: The test set out at Clause 4(1)(a), that such rights
-              are available in domestic law immediately before
+            heading-text: 1660-1688 - UK Parliament
+            url: https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/revolution/keydates/keydates1660-88/
+            short-url: https://www.parliament.uk/.../revolution/keydates/keydates1660-88
+            paragraph-content: '1660 The monarchy was restored, Charles II came to
+              the throne and the Lords were summoned to Parliament again. 1661 The
+              Cavalier Parliament first met and sat until January 1679: The bishops
+              sat again in the Lords and the Act of Uniformity enforced conformity
+              to the English Church.'
         - name: card__search__search-result
           data:
-            heading-text: Work & Pensions Committee Written evidence submitted by
+            heading-text: UK VACCINE CAPACITY
+            url: http://researchbriefings.files.parliament.uk/documents/POST-PN-314/POST-PN-314.pdf
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
+            short-url: researchbriefings.files.parliament.uk/documents/POST-PN-314/POST...
+            paragraph-content: manufacture and test vaccines for the relevant influenza
+              strains in time and in sufficient quantities to curtail the spread of
+              disease. The DH planning process to manage possible pandemics includes
+              estimating vaccine requirements (where they are available) and providing
+              manufacturers with forecasts of national needs. The Health Protection
+              Agency (HPA) monitors trends in infectious disease and ...
+        - name: card__search__search-result
+          data:
+            heading-text: Neighbourhood Planning Bill returns to the Lords - News
               ...
-            url: https://publications.parliament.uk/pa/cm201012/cmselect/cmworpen/1493/1493vw15.htm
-            short-url: https://publications.parliament.uk/pa/cm201012/cmselect/cmworpen/...
-            paragraph-content: Work & Pensions Committee Written evidence submitted
-              by the Muscular Dystrophy Campaign Executive Summary. We welcome the
-              Committee’s inquiry into the ...
-        - name: card__search__search-result
-          data:
-            heading-text: House of Lords - Science and Technology - Sixth Report
-            url: https://publications.parliament.uk/pa/ld200607/ldselect/ldsctech/166/16607.htm
-            short-url: https://publications.parliament.uk/pa/ld200607/ldselect/ldsctech/...
-            paragraph-content: 'CHAPTER 4: The Extent and Burden of Allergy in the
-              United Kingdom . Introduction. 4.1.Reports on allergy appear almost
-              weekly in the media and the vast majority of ...'
-        - name: card__search__search-result
-          data:
-            heading-text: Human Rights Act 1998 (Meaning of Public Function) Bill
-            url: https://publications.parliament.uk/pa/cm200708/cmbills/045/08045.i-i.html
-            short-url: https://publications.parliament.uk/pa/cm200708/cmbills/045/08045.i...
-            paragraph-content: c larify the meaning of “public function” in section
-              6 of the Human Rights Act . 1998. B e it enacted by the Queen’s most
-              Excellent Majesty, by and with the ...
-        - name: card__search__search-result
-          data:
-            heading-text: General elections - UK Parliament
-            url: https://www.parliament.uk/education/about-your-parliament/general-elections/
-            short-url: https://www.parliament.uk/.../about-your-parliament/general-elections
-            paragraph-content: General elections This educational resource for students
-              learning about democracy and voting provides an overview of how general
-              elections ...
+            url: https://www.parliament.uk/business/news/2017/january/lords-debates-neighbourhood-planning-bill/
+            short-url: https://www.parliament.uk/business/news/2017/january/lords-debates...
+            paragraph-content: Neighbourhood Planning Bill returns to the Lords 26
+              April 2017 The Neighbourhood Planning Bill returned to the House of
+              Lords on Tuesday 25 April for consideration of Commons amendments in
+              'ping pong'.
         - name: card__search__search-result
           data:
             heading-text: House of Commons - Impact of changes to civil legal aid
               ...
             url: https://publications.parliament.uk/pa/cm201415/cmselect/cmjust/311/31107.htm
             short-url: https://publications.parliament.uk/pa/cm201415/cmselect/cmjust/311/...
-            paragraph-content: The time limit provides a test of the on-going relevance
+            paragraph-content: 'The time limit provides a test of the on-going relevance
               of the abuse." We note that this case is likely to be the subject of
-              an appeal. Our ...
+              an appeal. Our witnesses gave us a number of examples where the 24 month
+              time limit presented problems, Philippa Newis, of Gingerbread, described
+              a case where:'
         - name: card__search__search-result
           data:
-            heading-text: House of Commons - Education and Skills - Third Report
-            url: https://publications.parliament.uk/pa/cm200203/cmselect/cmeduski/153/15304.htm
-            short-url: https://publications.parliament.uk/pa/cm200203/cmselect/cmeduski/...
-            paragraph-content: THE BACKGROUND TO THE A LEVELS DEBATE History of A
-              level. 3. ... the so­called 'can do' statements. A driving test is criterion
-              referenced.
+            heading-text: House of Lords - In re Officer L (Respondent) (Northern
+              ...
+            url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070731/office-1.htm
+            short-url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070731/...
+            paragraph-content: The Court of Appeal accordingly held that the tribunal
+              applied the wrong test, and that it was not inevitable that the same
+              conclusion would have been reached if the tribunal had asked the question
+              which the court regarded as correct.
         - name: card__search__search-result
           data:
-            heading-text: Benefit Claimants Sanctions (Required Assessment) Bill ...
-            url: http://researchbriefings.parliament.uk/ResearchBriefing/Summary/CBP-7813
-            short-url: researchbriefings.parliament.uk/ResearchBriefing/Summary/CBP-7813
-            paragraph-content: Benefit Claimants Sanctions (Required Assessment) Bill
-              ... on the Benefit Claimants Sanctions (Required Assessment) ... to
-              test the efficacy of a ...
-        - name: card__search__search-result
-          data:
-            heading-text: Written evidence from Michael Gordon, Lecturer in Law ...
-            url: https://publications.parliament.uk/pa/cm201011/cmselect/cmeuleg/682/682we02.htm
-            short-url: https://publications.parliament.uk/pa/cm201011/cmselect/cmeuleg/...
-            paragraph-content: 'Written evidence from Michael Gordon, Lecturer in
-              Law, University of Liverpool RE: PART 1 OF THE EUROPEAN UNION BILL (RESTRICTIONS
-              ON TREATIES AND ...'
-        - name: card__search__search-result
-          data:
-            heading-text: Mundic Block Houses (Repairs Grants) (Hansard, 4 May 1983)
-            url: https://api.parliament.uk/historic-hansard/commons/1983/may/04/mundic-block-houses-repairs-grants
-            hints:
-            - name: hint
-              data:
-                display:
-                  data:
-                  - component: theme
-                    variant: grey-4
-                    content: Historic Hansard
-            short-url: https://api.parliament.uk/historic-hansard/commons/1983/may/04/...
-            paragraph-content: "§Mr. David Penhaligon. I take the opportunity presented
-              by this Adjournment debate to raise what I believe is a problem unique
-              to my part of the country."
-        - name: card__search__search-result
-          data:
-            heading-text: 'House of Lords - Extradition: UK law and practice - Select
-              ...'
-            url: https://publications.parliament.uk/pa/ld201415/ldselect/ldextradition/126/12605.htm
-            short-url: https://publications.parliament.uk/pa/ld201415/ldselect/ld...
-            paragraph-content: 'Human rights bar. 31. ... The test applied in both
-              of these cases is that the breach would be ''flagrant'' (see Box 4).
-              Box 4: Articles 5 and 6 of the ECHR.'
-        - name: card__search__search-result
-          data:
-            heading-text: Ministry of Defence - parliament.uk
-            url: https://www.parliament.uk/documents/commons-committees/defence/160303%20SofS%20response%20-%20Type%2045%20Destroyers(1).pdf
+            heading-text: PWC KPMG Deloitte EY Individual Richard Adam (Finance ...
+            url: https://www.parliament.uk/documents/commons-committees/work-and-pensions/Correspondence/Grid-of-Big-Four-work-for-Carillion.pdf
             hints:
             - name: hint
               data:
@@ -445,14 +486,24 @@ main-components:
                   - component: theme
                     variant: grey-4
                     content: pdf
-            short-url: https://www.parliament.uk/documents/commons-committees/defence...
-            paragraph-content: based technology demonstrators to test and assure key
-              aspects of system performance and maturity before commencing sea trials.
-              ... Ministry of Defence
+            short-url: https://www.parliament.uk/documents/commons-committees/work-and...
+            paragraph-content: 'Conducting financial test of companies bidding for
+              HS2 contracts (some won by Carillion). Author: UNWIN-GOLDING, Helena
+              Created Date: 20180212173528Z ...'
         - name: card__search__search-result
           data:
-            heading-text: Number 501 August 2015 Herbicide Resistance
-            url: http://researchbriefings.files.parliament.uk/documents/POST-PN-0501/POST-PN-0501.pdf
+            heading-text: House of Commons - Spending Review 2010 - Treasury
+            url: https://publications.parliament.uk/pa/cm201011/cmselect/cmtreasy/544/54405.htm
+            short-url: https://publications.parliament.uk/pa/cm201011/cmselect/cmtreasy/...
+            paragraph-content: It also noted that "Over the summer, the PEX Committee
+              will test and challenge departments' plans, and ensure that they respond
+              to external engagement. These deliberations will be informed and supplemented
+              by the detailed conversations that will take place between the Treasury
+              and departments".
+        - name: card__search__search-result
+          data:
+            heading-text: Committee of Public Accounts - UK Parliament
+            url: https://www.parliament.uk/documents/commons-committees/public-accounts/Chair-to-Chris-Wormald.pdf
             hints:
             - name: hint
               data:
@@ -461,128 +512,18 @@ main-components:
                   - component: theme
                     variant: grey-4
                     content: pdf
-            short-url: researchbriefings.files.parliament.uk/documents/POST-PN-0501/POST...
-            paragraph-content: c Number 501 August 2015 Herbicide Resistance Increasing
-              resistance to herbicides, coupled with a lack of new types of herbicides,
-              has the potential to reduce crop ...
+            short-url: https://www.parliament.uk/documents/commons-committees/public...
+            paragraph-content: 'The lack of an appropriate fit and proper persons
+              test has allowed Directors of academy trusts to develop inappropriate
+              business interests ... Chair of the Committee of Public Accounts . Title:
+              24 April 2012 Author: MORDUE, Jamie Created Date: 20150212163726Z ...'
         - name: card__search__search-result
           data:
-            heading-text: 'Apprenticeships: Government Response to the Second Joint
-              ...'
-            url: https://publications.parliament.uk/pa/cm201719/cmselect/cmeduc/450/45002.htm
-            short-url: https://publications.parliament.uk/pa/cm201719/cmselect/cmeduc/450/...
-            paragraph-content: The Government welcomes the Committee’s recognition
-              of the importance of apprenticeships. We are committed to ensuring high
-              quality apprenticeships ...
-        - name: card__search__search-result
-          data:
-            heading-text: Yemen Update:Written statement - HCWS128 - UK Parliament
-            url: https://www.parliament.uk/business/publications/written-questions-answers-statements/written-statement/Commons/2016-09-05/HCWS128/
-            short-url: https://www.parliament.uk/business/publications/written-questions...
-            paragraph-content: Yemen Update:Written statement - HCWS128 WS. ... Having
-              regard to all the information available to us, we assess that this test
-              has not been met.
-        - name: card__search__search-result
-          data:
-            heading-text: House of Commons - BHS - Work and Pensions, and Business
-              ...
-            url: https://publications.parliament.uk/pa/cm201617/cmselect/cmworpen/54/5406.htm
-            short-url: https://publications.parliament.uk/pa/cm201617/cmselect/cmworpen/...
-            paragraph-content: Sir Philip Green originally set proof of finance as
-              the key test of Dominic Chappell’s credibility in purchasing BHS. Mr
-              Chappell did not, however, ...
-        - name: card__search__search-result
-          data:
-            heading-text: Changes to criminal legal aid - Commons Library briefing
-              ...
-            url: http://researchbriefings.parliament.uk/ResearchBriefing/Summary/SN06628
-            short-url: researchbriefings.parliament.uk/ResearchBriefing/Summary/SN06628
-            paragraph-content: The change in policy ended the long-running dispute
-              between the Ministry of Justice (MoJ) and the legal profession over
-              changes to criminal legal aid.
-        - name: card__search__search-result
-          data:
-            heading-text: House of Lords - R v C (Respondent) (On Appeal from the
-              ...
-            url: https://publications.parliament.uk/pa/ld200809/ldjudgmt/jd090730/rvc-1.htm
-            short-url: https://publications.parliament.uk/pa/ld200809/ldjudgmt/jd090730/...
-            paragraph-content: HOUSE OF LORDS. SESSION 2008-09 [2009] UKHL 42 . on
-              appeal from:[2008] EWCA Crim 1155. OPINIONS. OF THE LORDS OF APPEAL.
-              FOR JUDGMENT IN THE CAUSE. R v C (Respondent ...
-        - name: card__search__search-result
-          data:
-            heading-text: House of Commons Hansard Debates for 18 Dec 1996 (pt 23)
-            url: https://publications.parliament.uk/pa/cm199697/cmhansrd/vo961218/debtext/61218-23.htm
-            short-url: https://publications.parliament.uk/pa/cm199697/cmhansrd/vo961218/...
-            paragraph-content: 'The Attorney-General (Sir Nicholas Lyell): With permission,
-              Madam Speaker, I should like to make a statement on the future of public
-              interest immunity in ...'
-        - name: card__search__search-result
-          data:
-            heading-text: About Parliament - UK Parliament
-            url: https://www.parliament.uk/about/
-            short-url: https://www.parliament.uk/about
-            paragraph-content: Parliament examines what the Government is doing, makes
-              new laws, holds the power to set taxes and debates the issues of the
-              day
-        - name: card__search__search-result
-          data:
-            heading-text: European banking union - Commons Library briefing - UK ...
-            url: http://researchbriefings.parliament.uk/ResearchBriefing/Summary/SN06462
-            short-url: researchbriefings.parliament.uk/ResearchBriefing/Summary/SN06462
-            paragraph-content: European banking union ... Significant new measures
-              were approved of in December 2013 it faces a severe test in respect
-              to Greece in 2015..
-        - name: card__search__search-result
-          data:
-            heading-text: Transport Committee Written evidence from Enterprise Rent
-              ...
-            url: https://publications.parliament.uk/pa/cm201213/cmselect/cmtran/506/506vw30.htm
-            short-url: https://publications.parliament.uk/pa/cm201213/cmselect/cmtran/506/...
-            paragraph-content: Transport Committee Written evidence from Enterprise
-              Rent-A-Car 1. Overview. This paper has been prepared by Enterprise Rent-A-Car
-              in response to the ...
-        - name: card__search__search-result
-          data:
-            heading-text: Combatting Doping in Sport inquiry - UK Parliament
-            url: https://www.parliament.uk/business/committees/committees-a-z/commons-select/culture-media-and-sport-committee/inquiries/parliament-2015/blood-doping-15-16/
-            short-url: https://www.parliament.uk/business/committees/committees-a-z/...
-            paragraph-content: In August the Sunday Times published a series of articles
-              commenting on a database of test results from athletes taken between
-              2001 and 2012, which its ...
-        - name: card__search__search-result
-          data:
-            heading-text: House of Commons Hansard Debates for 05 Apr 2011 (pt 0002)
-            url: https://publications.parliament.uk/pa/cm201011/cmhansrd/test/cm110405/halltext/110405h0002.htm
-            short-url: https://publications.parliament.uk/pa/cm201011/cmhansrd/test/cm...
-            paragraph-content: '5 Apr 2011 : Column 240WH. Neil Parish: Absolutely.
-              I welcome the hon. Gentleman’s comment. Again, to take a wonderful,
-              if perhaps slightly overused, word, this is ...'
-        - name: card__search__search-result
-          data:
-            heading-text: An Introduction to Parliament - UK Parliament
-            url: https://www.parliament.uk/education/teaching-resources-lesson-plans/introduction-to-parliament-ks2-video/
-            short-url: https://www.parliament.uk/.../introduction-to-parliament-ks2-video
-            paragraph-content: An Introduction to Parliament is a video teaching resource
-              aimed at citizenship students exploring the House of Commons, House
-              of Lords and monarch’s role in...
-        - name: card__search__search-result
-          data:
-            heading-text: House of Lords - Malik v. Bank of Credit and Mahmud v ...
-            url: https://publications.parliament.uk/pa/ld199798/ldjudgmt/jd970612/malik02.htm
-            short-url: https://publications.parliament.uk/pa/ld199798/ldjudgmt/jd970612/...
-            paragraph-content: "(back to preceding text) In my view these observations
-              cannot be read as precluding the recovery of damages where the manner
-              of dismissal involved a breach of the ..."
-        - name: card__search__search-result
-          data:
-            heading-text: 'Prison Officers: Training:Written question - HL325 - UK
-              ...'
-            url: https://www.parliament.uk/business/publications/written-questions-answers-statements/written-question/Lords/2015-06-08/HL325/
-            short-url: https://www.parliament.uk/business/publications/written-questions...
-            paragraph-content: Currently, initial training of newly recruited prison
-              officers begins with an eight week Prison Officer Entry Level Training
-              (POELT) course. This includes ...
+            heading-text: Leo Docherty MP - UK Parliament
+            url: https://www.parliament.uk/biographies/commons/leo-docherty/4600
+            short-url: https://www.parliament.uk/biographies/commons/leo-docherty/4600
+            paragraph-content: 2018 marks 100 years since some women, and all men,
+              could vote. Find out how you can join in
         - name: card__search__search-result
           data:
             heading-text: Transport and accessibility to public services
@@ -596,9 +537,188 @@ main-components:
                     variant: grey-4
                     content: pdf
             short-url: https://publications.parliament.uk/pa/cm201314/cmselect/cmenvaud/...
-            paragraph-content: Transport and accessibility to public services ...
-              (Labour, Southampton, Test) Simon Wright MP ... Transport and accessibility
-              to public services 1
+            paragraph-content: 'Transport and accessibility to public services Third
+              Report of Session 2013 14 Volume I Volume I: Report, together with formal
+              ... Southampton, Test) Simon Wright MP (Liberal Democrat, Norwich South)
+              The following members were also me mbers of the committee during the
+              parliament: ...'
+        - name: card__search__search-result
+          data:
+            heading-text: 'Jobseeker''s Allowance: Habitual Residence Test:Written
+              ...'
+            url: https://www.parliament.uk/business/publications/written-questions-answers-statements/written-question/Commons/2015-09-04/8901/
+            short-url: https://www.parliament.uk/business/publications/written-questions...
+            paragraph-content: To ask the Secretary of State for Work and Pensions,
+              what assessment he has made of the effect of the Habitual Residence
+              Test on the ability of UK citizens...
+        - name: card__search__search-result
+          data:
+            heading-text: Catholics and Protestants - UK Parliament
+            url: https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/revolution/overview/catholicsprotestants/
+            short-url: https://www.parliament.uk/.../revolution/overview/catholicsprotestants
+            paragraph-content: Learn about the anti-Catholic Test Acts of 1673 and
+              1678 which lay at the heart of the conflict of 1688
+        - name: card__search__search-result
+          data:
+            heading-text: House of Lords - Phelps (A.P.) v. Mayor Etc. of The London
+              ...
+            url: https://publications.parliament.uk/pa/ld199900/ldjudgmt/jd000727/phelp-3.htm
+            short-url: https://publications.parliament.uk/pa/ld199900/ldjudgmt/jd000727/...
+            paragraph-content: (back to preceding text) He would not have struck out
+              the claim for "educational disbenefit" on the ground of lack of causation,
+              but held that since the claim for economic loss did not allege the assumption
+              of responsibility to David it must be struck out.
+        - name: card__search__search-result
+          data:
+            heading-text: The UK's compliance with the UN Convention on the Rights
+              ...
+            url: https://publications.parliament.uk/pa/jt201415/jtselect/jtrights/144/14402.htm
+            short-url: https://publications.parliament.uk/pa/jt201415/jtselect/jtrights/...
+            paragraph-content: Human Rights Joint Committee - Eighth Report The UK's
+              compliance with the UN Convention on the Rights of the Child Here you
+              can browse the report together with the Proceedings of the Committee.
+              The published report was ordered by the House of Lords and the House
+              of Commons to be printed 18 March 2015.
+        - name: card__search__search-result
+          data:
+            heading-text: How Parliament works - UK Parliament
+            url: https://www.parliament.uk/about/how/
+            short-url: https://www.parliament.uk/about/how
+            paragraph-content: Find out what happens at Parliament, how your MP represents
+              you and how Parliament checks up on the work of Government.
+        - name: card__search__search-result
+          data:
+            heading-text: The future of investigative journalism
+            url: https://publications.parliament.uk/pa/ld201012/ldselect/ldcomuni/256/256.pdf
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
+            short-url: https://publications.parliament.uk/pa/ld201012/ldselect/ldcomuni/...
+            paragraph-content: HOUSE OF LORDS . Select Committee on Communications
+              . 3rd Report of Session 2010–12 . The future of investigative journalism
+              . Report . Ordered to be printed 31 January 2012 and published 16 February
+              2012
+        - name: card__search__search-result
+          data:
+            heading-text: Guaranteed Minimum Pension (GMP) increases
+            url: http://researchbriefings.files.parliament.uk/documents/SN04956/SN04956.pdf
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
+            short-url: researchbriefings.files.parliament.uk/documents/SN04956/SN04956.pdf
+            paragraph-content: an individually calculated defined benefit known as
+              the Guaranteed Minimum Pension (GMP). Until April 1988, this was the
+              only Until April 1988, this was the only
+        - name: card__search__search-result
+          data:
+            heading-text: House of Lords - Helow (Ap) V Secretary of State For The
+              ...
+            url: https://publications.parliament.uk/pa/ld200708/ldjudgmt/jd081022/helow-1.htm
+            short-url: https://publications.parliament.uk/pa/ld200708/ldjudgmt/jd081022/...
+            paragraph-content: 'The legal test to be applied in cases of apparent
+              bias is to be found in the speech of my noble and learned friend, Lord
+              Hope of Craighead, in Porter v Magill [2002] 2 AC 357, 494H: “The question
+              is whether the fair-minded and informed observer, having considered
+              the facts, would conclude that there was a real possibility that the
+              tribunal ...'
+        - name: card__search__search-result
+          data:
+            heading-text: Education - UK Parliament
+            url: https://www.parliament.uk/education/
+            short-url: https://www.parliament.uk/education
+            paragraph-content: Find teacher resources, book school trips and take
+              part in teacher training opportunities.
+        - name: card__search__search-result
+          data:
+            heading-text: Number 381 June 2011 Mental Capacity and Healthcare
+            url: https://www.parliament.uk/pagefiles/504/postpn_381-mental-capacity-and-healthcare.pdf
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
+            short-url: https://www.parliament.uk/pagefiles/504/postpn_381-mental-capacity...
+            paragraph-content: capacity as a test of the impact of a mental disorder
+              on a decision-making process that faces a person. It tests ability to
+              decide in terms of both an ability to understand relevant information
+              and an ability to make decisions on the basis of that understanding
+              (see Box 2). It is not a test of a person‟s status (such as soundness
+              of mind)7 or of the eccentricity of someone‟s decision (such ...
+        - name: card__search__search-result
+          data:
+            heading-text: Freedom of information and the Royal Family - Commons ...
+            url: http://researchbriefings.parliament.uk/ResearchBriefing/Summary/SN05377
+            short-url: researchbriefings.parliament.uk/ResearchBriefing/Summary/SN05377
+            paragraph-content: Under the Act, as amended in 2010, certain information
+              relating to communications with the Sovereign and to the heir and second
+              in line to the Throne is absolutely exempt from the Act, whereas information
+              relating to other members of the Royal Family and the Royal Household
+              is subject to the public interest test.
+        - name: card__search__search-result
+          data:
+            heading-text: Order Paper | House of Lords Business
+            url: http://lordsbusiness.parliament.uk/
+            short-url: lordsbusiness.parliament.uk
+            paragraph-content: House of Lords Business. View the Business Paper for
+              the selected date. You must select a valid Business Paper date. Business
+              Paper date. Section ...
+        - name: card__search__search-result
+          data:
+            heading-text: Royal Assent - UK Parliament
+            url: https://www.parliament.uk/about/how/laws/passage-bill/lords/lrds-royal-assent/
+            short-url: https://www.parliament.uk/.../passage-bill/lords/lrds-royal-assent
+            paragraph-content: Bill becomes an Act of Parliament Once a bill has completed
+              all the parliamentary stages in both Houses, it is ready to receive
+              royal assent. This is...
+        - name: card__search__search-result
+          data:
+            heading-text: qna.files.parliament.uk
+            url: http://qna.files.parliament.uk/qna-attachments/934957/original/PQW08977%20UIN%20161079.docx
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: Word
+            short-url: qna.files.parliament.uk/qna-attachments/934957/original/PQW08977...
+            paragraph-content: 1Contract is with AWE and the contract value represents
+              Serco's 24.5% share.
+        - name: card__search__search-result
+          data:
+            heading-text: House of Lords - Moore Stephens (a firm) (Respondents) v
+              ...
+            url: https://publications.parliament.uk/pa/ld200809/ldjudgmt/jd090730/moore-1.htm
+            short-url: https://publications.parliament.uk/pa/ld200809/ldjudgmt/jd090730/...
+            paragraph-content: This test has been said to have originated from the
+              judgment of Hutchison J in Thackwell v Barclays Bank plc [1986] 1 All
+              ER 676 although reference to shocking the public conscience can be traced
+              back at least to the judgment of Salmon LJ in Gray v Barr [1971] 2 QB
+              554 at p. 581.
+        - name: card__search__search-result
+          data:
+            heading-text: House of Lords - Equitable Life Assurance Society v. Hyman
+            url: https://publications.parliament.uk/pa/ld199900/ldjudgmt/jd000720/equite-1.htm
+            short-url: https://publications.parliament.uk/pa/ld199900/ldjudgmt/jd000720/e...
+            paragraph-content: The legal test for the implication of such a term is
+              a standard of strict necessity. This is how I must approach the question
+              whether a term is to be implied into article 65(1) which precludes the
+              directors from adopting a principle which has the effect of overriding
+              or undermining the GARs.
 - name: section__section
   data:
     components:
@@ -611,52 +731,52 @@ main-components:
           data:
             url: http://www.example.com/search?count=100&q=test&start_index=69201
             number: 693
-            total-count: of 189
+            total-count: of 182
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=100&q=test&start_index=69301
             number: 694
-            total-count: of 189
+            total-count: of 182
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=100&q=test&start_index=69401
             number: 695
-            total-count: of 189
+            total-count: of 182
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=100&q=test&start_index=69501
             number: 696
-            total-count: of 189
+            total-count: of 182
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=100&q=test&start_index=69601
             number: 697
-            total-count: of 189
+            total-count: of 182
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=100&q=test&start_index=69701
             number: 698
-            total-count: of 189
+            total-count: of 182
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=100&q=test&start_index=69801
             number: 699
-            total-count: of 189
+            total-count: of 182
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=100&q=test&start_index=69901
             number: 700
-            total-count: of 189
+            total-count: of 182
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=100&q=test&start_index=70001
             number: 701
-            total-count: of 189
+            total-count: of 182
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=100&q=test&start_index=70101
             number: 702
-            total-count: of 189
+            total-count: of 182
             active: true
 footer-components:
 - name: footer

@@ -1,7 +1,11 @@
 ---
 layout:
   template: layout
-title: linux - Search - UK Parliament
+meta:
+  title: linux - Search - UK Parliament
+  request-id: "|y0NM2eOY/fnQPw==."
+  components:
+  - name: head__search-result-tracking
 pugin-version: 1.10.1
 open-search: http://www.example.com/search/opensearch
 header-components:
@@ -84,7 +88,7 @@ main-components:
         translation:
           key: search.count
           data:
-            count: 37
+            count: 38
         size: 2
     - name: status__highlight
       data:
@@ -138,8 +142,17 @@ main-components:
               o Powershell scripting
         - name: card__search__search-result
           data:
-            heading-text: Job Description and Person Specification - parliament.uk
-            url: https://www.parliament.uk/documents/jobs/pds-vacancies/A2-Lead-Web-Operations-Engineer-JD-Jul-17.pdf
+            heading-text: Browser, operating system and screen resolution data for
+              ...
+            url: https://pds.blog.parliament.uk/2014/04/09/browser-operating-system-and-screen-resolution-data-for-www-parliament-uk/
+            short-url: https://pds.blog.parliament.uk/2014/04/09/browser-operating-system...
+            paragraph-content: Following on from my post yesterday about user data,
+              and thanks to a timely suggestion from Roo Reynolds at GDS, here's some
+              more data to try and better understand ...
+        - name: card__search__search-result
+          data:
+            heading-text: Job Description and Person Specification - UK Parliament
+            url: https://www.parliament.uk/documents/B1-Web-Operations-Engineer-JD.pdf
             hints:
             - name: hint
               data:
@@ -148,10 +161,10 @@ main-components:
                   - component: theme
                     variant: grey-4
                     content: pdf
-            short-url: https://www.parliament.uk/documents/jobs/pds-vacancies/A2-Lead-Web...
-            paragraph-content: running Linux and will have practiced 'infrastructure
-              as code'. You will be keen to learn new tools, evolve best practice
-              and lead through example.
+            short-url: https://www.parliament.uk/documents/B1-Web-Operations-Engineer-JD.pdf
+            paragraph-content: Job Description and Person Specification This job description
+              lists the general tasks, ... Experience configuring and managing Linux
+              servers for a dynamic website.
         - name: card__search__search-result
           data:
             heading-text: Number 414 July 2012 Open Source and Open Standards
@@ -184,15 +197,6 @@ main-components:
             paragraph-content: Job Description and Person Specification ... Strong
               experience with Internet technologies, especially Linux, Apache, MySQL
               & PHP and
-        - name: card__search__search-result
-          data:
-            heading-text: Browser, operating system and screen resolution data for
-              ...
-            url: https://pds.blog.parliament.uk/2014/04/09/browser-operating-system-and-screen-resolution-data-for-www-parliament-uk/
-            short-url: https://pds.blog.parliament.uk/2014/04/09/browser-operating-system...
-            paragraph-content: Following on from my post yesterday about user data,
-              and thanks to a timely suggestion from Roo Reynolds at GDS, here's some
-              more data to try and better understand ...
         - name: card__search__search-result
           data:
             heading-text: Job Description and Person Specification - parliament.uk

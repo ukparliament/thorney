@@ -3,6 +3,13 @@ module PageSerializer
     class LandingPageSerializer < PageSerializer::SearchPage
       private
 
+      def meta
+        {}.tap do |meta|
+          meta[:title] = title
+          meta[:request_id] = request_id
+        end
+      end
+
       def title
         translation_key = @flash_message ? 'search.title.with_flash_message' : 'search.title.without_query'
 

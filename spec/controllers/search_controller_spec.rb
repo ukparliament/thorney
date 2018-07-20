@@ -55,13 +55,15 @@ RSpec.describe SearchController, vcr: true do
         end
 
         it 'calls the serializer with the correct arguments' do
-          expect(PageSerializer::SearchPage::ResultsPageSerializer).to have_received(:new).with(opensearch_description_url: 'http://:/search/opensearch', query: 'banana', results: [1, 2, 3], pagination_hash: 'pagination_hash')
+          expect(PageSerializer::SearchPage::ResultsPageSerializer).to have_received(:new).with(opensearch_description_url: 'http://:/search/opensearch', query: 'banana', results: [1, 2, 3], pagination_hash: 'pagination_hash', request_id: '|1234abcd.')
         end
       end
 
       context 'an invalid search' do
         before(:each) do
+          allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.', 'HTTP_HOST' => 'test.host'})
           allow(PageSerializer::SearchPage::ResultsPageSerializer).to receive(:new)
+
 
           get :index, params: { q: 'fdsfsd' }
         end
@@ -79,12 +81,13 @@ RSpec.describe SearchController, vcr: true do
               query: 'fdsfsd'
           }
 
-          expect(PageSerializer::SearchPage::ResultsPageSerializer).to have_received(:new).with(opensearch_description_url: 'http://test.host/search/opensearch', query: 'fdsfsd', results: an_instance_of(Feedjira::Parser::Atom), pagination_hash: pagination_hash)
+          expect(PageSerializer::SearchPage::ResultsPageSerializer).to have_received(:new).with(opensearch_description_url: 'http://test.host/search/opensearch', query: 'fdsfsd', results: an_instance_of(Feedjira::Parser::Atom), pagination_hash: pagination_hash, request_id: '|1234abcd.')
         end
       end
 
       context 'with an empty string' do
         before(:each) do
+          allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.', 'HTTP_HOST' => 'test.host'})
           allow(PageSerializer::SearchPage::LandingPageSerializer).to receive(:new)
 
           get :index, params: { q: '' }
@@ -95,7 +98,7 @@ RSpec.describe SearchController, vcr: true do
         end
 
         it 'calls the serializer with the correct arguments' do
-          expect(PageSerializer::SearchPage::LandingPageSerializer).to have_received(:new).with(opensearch_description_url: 'http://test.host/search/opensearch', flash_message: I18n.t('search_controller.index.flash'))
+          expect(PageSerializer::SearchPage::LandingPageSerializer).to have_received(:new).with(opensearch_description_url: 'http://test.host/search/opensearch', flash_message: I18n.t('search_controller.index.flash'), request_id: '|1234abcd.')
         end
       end
 
@@ -152,11 +155,13 @@ RSpec.describe SearchController, vcr: true do
 
           allow(Parliament::Request::OpenSearchRequest).to receive(:new) { open_search_request }
 
+          allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.', 'HTTP_HOST' => 'test.host'})
+
           allow(PageSerializer::SearchPage::ResultsPageSerializer).to receive(:new) { double('serializer', to_h: true) }
 
           get :index, params: { q: 'Allan Wazacz' }
 
-          expect(PageSerializer::SearchPage::ResultsPageSerializer).to have_received(:new).with(opensearch_description_url: 'http://test.host/search/opensearch', query: 'Allan Wazacz')
+          expect(PageSerializer::SearchPage::ResultsPageSerializer).to have_received(:new).with(opensearch_description_url: 'http://test.host/search/opensearch', query: 'Allan Wazacz', request_id: '|1234abcd.' )
         end
       end
     end
