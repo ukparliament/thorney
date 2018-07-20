@@ -48,5 +48,7 @@ module Thorney
     config.middleware.use ActionDispatch::Cookies
 
     config.session_store :cookie_store, key: '_beta_parliament_session', expire_after: 30.days
+
+    config.middleware.use ApplicationInsights::Rack::TrackRequest, 'c0960a0f-30ad-4a9a-b508-14c6a4f61179'
   end
 end

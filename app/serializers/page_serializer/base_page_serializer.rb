@@ -23,7 +23,7 @@ module PageSerializer
     def head_section(hash)
       hash.tap do |h|
         h[:layout] = { template: 'layout' }
-        h[:title] = title
+        h[:meta] = meta
         h[:pugin_version] = '1.10.1'
         h[:open_search] = opensearch_description_url
       end
@@ -51,8 +51,8 @@ module PageSerializer
       raise 'You must implement #opensearch_description_url'
     end
 
-    def title
-      raise 'You must implement #title'
+    def meta
+      raise 'You must implement #meta'
     end
   end
 end

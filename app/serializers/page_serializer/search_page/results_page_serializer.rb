@@ -3,8 +3,20 @@ module PageSerializer
     class ResultsPageSerializer < PageSerializer::SearchPage
       private
 
+      def meta
+        {}.tap do |meta|
+          meta[:title] = title
+          meta[:request_id] = request_id
+          meta[:components] = meta_components
+        end
+      end
+
       def title
         t('search.title.with_query', query: @query)
+      end
+
+      def meta_components
+        [{ "name": "head__search-result-tracking" }]
       end
 
       def content

@@ -28,4 +28,8 @@ class ApplicationController < ActionController::API
 
     render json: serializer.to_h
   end
+
+  def populate_request_id
+    @app_insights_request_id = request.env['ApplicationInsights.request.id']
+  end
 end
