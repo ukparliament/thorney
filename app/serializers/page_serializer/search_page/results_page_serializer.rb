@@ -16,7 +16,7 @@ module PageSerializer
       end
 
       def meta_components
-        [{ "name": "head__search-result-tracking" }]
+        [{ name: 'head__search-result-tracking' }]
       end
 
       def content
