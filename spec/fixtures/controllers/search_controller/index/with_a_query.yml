@@ -1,7 +1,11 @@
 ---
 layout:
   template: layout
-title: hello - Search - UK Parliament
+meta:
+  title: hello - Search - UK Parliament
+  request-id: "|y0NM2eOY/fnQPw==."
+  components:
+  - name: head__search-result-tracking
 pugin-version: 1.10.1
 open-search: http://www.example.com/search/opensearch
 header-components:
@@ -84,7 +88,7 @@ main-components:
         translation:
           key: search.count
           data:
-            count: 844
+            count: 1030
         size: 2
     - name: status__highlight
       data:
@@ -138,15 +142,6 @@ main-components:
               Home Department and Another (Scotland) Appellate
         - name: card__search__search-result
           data:
-            heading-text: OBG Limited and others (Appellants) v. Allan and others
-              ...
-            url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070502/obg-1.htm
-            short-url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070502/...
-            paragraph-content: Judgments - OBG Limited and others (Appellants) v.
-              Allan and others (Respondents)Douglas and another and others (Appellants)
-              v. Hello! Limited and others ...
-        - name: card__search__search-result
-          data:
             heading-text: Head%Office% 39$42!East!Street! Brighton.!BN1!1HL! hello
               ...
             url: https://www.parliament.uk/documents/speaker/digital-democracy/Digi058CharlotteMulcare.pdf
@@ -164,20 +159,37 @@ main-components:
               ...'
         - name: card__search__search-result
           data:
+            heading-text: HIGH SPEED RAIL BILL COMMITTEE - parliament.uk
+            url: https://www.parliament.uk/documents/HS2%20Evidence%20Uploads/10459574%20Hansard%20HSRBC%2019%2006%2018%20(Morning).pdf
+            hints:
+            - name: hint
+              data:
+                display:
+                  data:
+                  - component: theme
+                    variant: grey-4
+                    content: pdf
+            short-url: https://www.parliament.uk/documents/HS2 Evidence Uploads/10459574...
+            paragraph-content: '3 (At 9.35 a.m.) 1. THE CHAIR: Welcome back, Mr Gale,
+              and good to see another team change from HS2. Good to see you moving
+              forward from the ranks.'
+        - name: card__search__search-result
+          data:
+            heading-text: OBG Limited and others (Appellants) v. Allan and others
+              ...
+            url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070502/obg-1.htm
+            short-url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070502/...
+            paragraph-content: Judgments - OBG Limited and others (Appellants) v.
+              Allan and others (Respondents)Douglas and another and others (Appellants)
+              v. Hello! Limited and others ...
+        - name: card__search__search-result
+          data:
             heading-text: House of Lords - Campbell (Apellant) v. MGN Limited ...
             url: https://publications.parliament.uk/pa/ld200304/ldjudgmt/jd040506/campbe-2.htm
             short-url: https://publications.parliament.uk/pa/ld200304/ldjudgmt/jd040506/...
             paragraph-content: Judgments - Campbell (Appellant) v. MGN Limited (Respondents)
               ... see Sedley LJ in Douglas v Hello! Ltd [2001] QB 967, 1005, para
               137. 56.
-        - name: card__search__search-result
-          data:
-            heading-text: stop Theresa May trying to revoke the Scotland act - Petitions
-            url: https://petition.parliament.uk/petitions/223370
-            short-url: https://petition.parliament.uk/petitions/223370
-            paragraph-content: Hello This petition is to send a clear message to Westminster
-              that Scotland will not lie down and let them control us they want to
-              revoke the Scotland act ...
         - name: card__search__search-result
           data:
             heading-text: Campbell v MGN Ltd - publications.parliament.uk
@@ -196,12 +208,13 @@ main-components:
               for the"
         - name: card__search__search-result
           data:
-            heading-text: Fur Trade - Hansard Online
-            url: https://hansard.parliament.uk/Commons/2018-06-04/debates/8F9B6212-E631-4151-ABA7-AED8560CBBEB/FurTrade
-            short-url: https://hansard.parliament.uk/Commons/2018-06-04/debates/8F9B6212...
-            paragraph-content: Hansard (the Official Report) is the edited verbatim
-              report of proceedings of both the House of Commons and the House of
-              Lords. Daily Debates from Hansard are ...
+            heading-text: Early day motion 1499 - HELLO CAMPAIGN FOR THE NATIONAL
+              ...
+            url: https://www.parliament.uk/edm/2010-12/1499
+            short-url: https://www.parliament.uk/edm/2010-12/1499
+            paragraph-content: That this House welcomes the Hello Campaign for the
+              National Year of Communication; notes that the campaign, run by The
+              Communication Trust, a coalition of...
         - name: card__search__search-result
           data:
             heading-text: Tony Blair and Colonel Gaddafi call transcript - UK Parliament
@@ -230,53 +243,53 @@ main-components:
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=1
             number: 1
-            total-count: of 85
+            total-count: of 103
             active: true
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=11
             number: 2
-            total-count: of 85
+            total-count: of 103
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=21
             number: 3
-            total-count: of 85
+            total-count: of 103
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=31
             number: 4
-            total-count: of 85
+            total-count: of 103
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=41
             number: 5
-            total-count: of 85
+            total-count: of 103
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=51
             number: 6
-            total-count: of 85
+            total-count: of 103
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=61
             number: 7
-            total-count: of 85
+            total-count: of 103
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=71
             number: 8
-            total-count: of 85
+            total-count: of 103
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=81
             number: 9
-            total-count: of 85
+            total-count: of 103
         - name: navigation__number__card
           data:
             url: http://www.example.com/search?count=10&q=hello&start_index=91
             number: 10
-            total-count: of 85
+            total-count: of 103
 footer-components:
 - name: footer
   data:

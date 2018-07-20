@@ -4,6 +4,7 @@ describe PageSerializer::SearchPage::LandingPageSerializer do
   context '#to_h' do
     context 'without a query' do
       it 'produces the correct hash' do
+
         expected = get_fixture('without_query')
 
         expect(subject.to_yaml).to eq expected

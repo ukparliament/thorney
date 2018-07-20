@@ -5,7 +5,7 @@ describe PageSerializer::BasePageSerializer do
 
   context '#to_h' do
     it 'raises an error' do
-      expect { base_page_serializer.to_h }.to raise_error('You must implement #title')
+      expect { base_page_serializer.to_h }.to raise_error('You must implement #meta')
     end
   end
 
@@ -23,7 +23,7 @@ describe PageSerializer::BasePageSerializer do
 
   context '#hash' do
     it 'calls the correct serializer' do
-      allow(base_page_serializer).to receive(:title)
+      allow(base_page_serializer).to receive(:meta)
       allow(base_page_serializer).to receive(:main_components)
       allow(base_page_serializer).to receive(:opensearch_description_url)
 
