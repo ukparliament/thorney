@@ -4,8 +4,6 @@ layout:
 meta:
   title: No Results - Search - UK Parliament
   request-id: "|y0NM2eOY/fnQPw==."
-pugin-version: 1.10.1
-open-search: http://www.example.com/search/opensearch
 header-components:
 - name: link
   data:
@@ -65,11 +63,10 @@ main-components:
 - name: section__primary
   data:
     components:
-    - name: heading
+    - name: heading1
       data:
-        content:
-        - search.search-heading
-        size: 1
+        heading:
+          content: search.search-heading
     - name: form__search
       data:
         label: search.label

@@ -4,8 +4,6 @@ layout:
 meta:
   title: Search - UK Parliament
   request-id: 
-pugin-version: 1.10.1
-open-search: 
 header-components:
 - name: link
   data:
@@ -66,11 +64,10 @@ main-components:
   data:
     content-flag: true
     components:
-    - name: heading
+    - name: heading1
       data:
-        content:
-        - search.search-heading
-        size: 1
+        heading:
+          content: search.search-heading
     - name: form__search
       data:
         label: search.label

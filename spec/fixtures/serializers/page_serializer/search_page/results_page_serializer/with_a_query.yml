@@ -6,8 +6,6 @@ meta:
   request-id: 
   components:
   - name: head__search-result-tracking
-pugin-version: 1.10.1
-open-search: 
 header-components:
 - name: link
   data:
@@ -67,11 +65,13 @@ main-components:
 - name: section__primary
   data:
     components:
-    - name: heading
+    - name: heading1
       data:
-        content:
-        - search.results-heading
-        size: 1
+        heading:
+          content: search.results-heading
+        context:
+          content: hello
+          hidden: true
     - name: form__search
       data:
         value: hello
