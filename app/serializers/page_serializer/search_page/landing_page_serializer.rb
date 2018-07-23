@@ -24,7 +24,7 @@ module PageSerializer
 
       def content_with_flash_message
         [].tap do |content|
-          content << ComponentSerializer::SectionComponentSerializer.new(section_primary_components('search.search-heading'), type: 'primary').to_h
+          content << ComponentSerializer::SectionComponentSerializer.new(section_primary_components('search.search-heading', @query, true), type: 'primary').to_h
           content << ComponentSerializer::SectionComponentSerializer.new([ComponentSerializer::StatusComponentSerializer.new(type: 'highlight', display_data: flash_message_display_data, components: [flash_message_paragraph]).to_h], content_flag: true).to_h
         end
       end
