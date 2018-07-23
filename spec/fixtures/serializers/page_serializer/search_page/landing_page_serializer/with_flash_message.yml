@@ -1,7 +1,9 @@
 ---
 layout:
   template: layout
-title: No Results - Search - UK Parliament
+meta:
+  title: No Results - Search - UK Parliament
+  request-id: 
 pugin-version: 1.10.1
 open-search: 
 header-components:
