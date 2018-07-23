@@ -6,7 +6,7 @@
       data:
       - component: skip-to-content
     selector: skiplink
-    content: common.header.skip-to-content
+    content: shared.header.skip-to-content
 - name: status__banner
   data:
     display:
@@ -20,7 +20,7 @@
     components:
     - name: paragraph
       data:
-      - content: common.header.cookie-banner-text
+      - content: shared.header.cookie-banner-text
         data:
           link: "/meta/cookie-policy"
 - name: status__banner
@@ -38,8 +38,8 @@
           - component: list
             variant: inline
         contents:
-        - content: common.header.pages-being-tested
-        - content: common.header.current-website
+        - content: shared.header.pages-being-tested
+        - content: shared.header.current-website
 - name: header
   data:
     components:
@@ -49,7 +49,7 @@
         display:
           data:
           - component: uk_parliament
-        label: common.header.label
+        label: shared.header.label
         components:
         - name: icon__uk-parliament
-          data: common.header.label
+          data: shared.header.label
