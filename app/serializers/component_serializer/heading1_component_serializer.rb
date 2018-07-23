@@ -35,7 +35,7 @@ module ComponentSerializer
 
     def subheading
       {}.tap do |hash|
-        hash[:content] =  @subheading_content if @subheading_content
+        hash[:content] = @subheading_content if @subheading_content
         hash[:data] = @subheading_data if @subheading_data
       end
     end
@@ -54,6 +54,5 @@ module ComponentSerializer
         hash[:hidden] = @context_hidden if @context_hidden
       end
     end
-
   end
 end
