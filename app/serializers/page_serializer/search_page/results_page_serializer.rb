@@ -7,7 +7,7 @@ module PageSerializer
         {}.tap do |meta|
           meta[:title] = title
           meta[:request_id] = request_id
-          meta[:components] = meta_components
+          meta[:components] = meta_components if total_results > 0
         end
       end
 
@@ -21,7 +21,7 @@ module PageSerializer
 
       def content
         [].tap do |content|
-          content << ComponentSerializer::SectionComponentSerializer.new(section_primary_components('search.results-heading'), type: 'primary').to_h
+          content << ComponentSerializer::SectionComponentSerializer.new(section_primary_components('search.results-heading', @query, true), type: 'primary').to_h
           content << ComponentSerializer::SectionComponentSerializer.new(results_section_components, content_flag: true).to_h
           content << ComponentSerializer::SectionComponentSerializer.new(@pagination_helper.navigation_section_components).to_h if total_results >= 1
         end
