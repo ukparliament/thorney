@@ -15,12 +15,12 @@ describe PageSerializer::SearchPage do
   end
 
   it '#section_primary_components' do
-    allow(ComponentSerializer::HeadingComponentSerializer).to receive(:new)
+    allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new)
     allow(ComponentSerializer::SearchFormComponentSerializer).to receive(:new)
 
-    subject.send(:section_primary_components, 'results_heading')
+    subject.send(:section_primary_components, 'results_heading', 'banana', true)
 
-    expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(content: ['results_heading'], size: 1)
+    expect(ComponentSerializer::Heading1ComponentSerializer).to have_received(:new).with(heading_content: 'results_heading', context_content: 'banana', context_hidden: true)
     expect(ComponentSerializer::SearchFormComponentSerializer).to have_received(:new).with('banana', [ComponentSerializer::SearchIconComponentSerializer.new.to_h])
   end
 

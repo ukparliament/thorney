@@ -6,8 +6,6 @@ meta:
   request-id: "|y0NM2eOY/fnQPw==."
   components:
   - name: head__search-result-tracking
-pugin-version: 1.10.1
-open-search: http://www.example.com/search/opensearch
 header-components:
 - name: link
   data:
@@ -16,7 +14,7 @@ header-components:
       data:
       - component: skip-to-content
     selector: skiplink
-    content: common.header.skip-to-content
+    content: shared.header.skip-to-content
 - name: status__banner
   data:
     display:
@@ -30,7 +28,7 @@ header-components:
     components:
     - name: paragraph
       data:
-      - content: common.header.cookie-banner-text
+      - content: shared.header.cookie-banner-text
         data:
           link: "/meta/cookie-policy"
 - name: status__banner
@@ -48,8 +46,8 @@ header-components:
           - component: list
             variant: inline
         contents:
-        - content: common.header.pages-being-tested
-        - content: common.header.current-website
+        - content: shared.header.pages-being-tested
+        - content: shared.header.current-website
 - name: header
   data:
     components:
@@ -59,19 +57,21 @@ header-components:
         display:
           data:
           - component: uk_parliament
-        label: common.header.label
+        label: shared.header.label
         components:
         - name: icon__uk-parliament
-          data: common.header.label
+          data: shared.header.label
 main-components:
 - name: section__primary
   data:
     components:
-    - name: heading
+    - name: heading1
       data:
-        content:
-        - search.results-heading
-        size: 1
+        heading:
+          content: search.results-heading
+        context:
+          content: test
+          hidden: true
     - name: form__search
       data:
         value: test
@@ -781,7 +781,7 @@ main-components:
 footer-components:
 - name: footer
   data:
-    uk-parliament: common.footer.uk-parliament
+    uk-parliament: shared.footer.uk-parliament
     components:
     - name: list__generic
       data:
@@ -790,8 +790,8 @@ footer-components:
           data:
           - component: list
         contents:
-        - content: common.footer.current-website
-        - content: common.footer.cookie-policy
+        - content: shared.footer.current-website
+        - content: shared.footer.cookie-policy
           data:
             link: "/meta/cookie-policy"
-        - content: common.footer.data-protection-privacy
+        - content: shared.footer.data-protection-privacy

@@ -24,8 +24,6 @@ module PageSerializer
       hash.tap do |h|
         h[:layout] = { template: 'layout' }
         h[:meta] = meta
-        h[:pugin_version] = '1.10.1'
-        h[:open_search] = opensearch_description_url
       end
     end
 
