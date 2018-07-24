@@ -1,6 +1,6 @@
 require_relative '../../rails_helper'
 
-describe PageSerializer::BasePageSerializer do
+RSpec.describe PageSerializer::BasePageSerializer do
   let(:base_page_serializer) { described_class.new }
 
   context '#to_h' do

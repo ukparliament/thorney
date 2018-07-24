@@ -3,9 +3,10 @@ layout:
   template: layout
 meta:
   title: linux - Search - UK Parliament
-  request-id: "|y0NM2eOY/fnQPw==."
+  request-id: 123456
   components:
   - name: head__search-result-tracking
+  opensearch-description-url: http://www.example.com/search/opensearch
 header-components:
 - name: link
   data:
@@ -215,20 +216,20 @@ main-components:
               7\8, MAC OS) ...
         - name: card__search__search-result
           data:
+            heading-text: Petitions – UK Government and Parliament
+            url: https://petition.parliament.uk/
+            short-url: https://petition.parliament.uk/
+            paragraph-content: Official online petitions in response to issues of
+              the day, listing the number that got a Government response, and those
+              that have been debated in the House of Parliament
+        - name: card__search__search-result
+          data:
             heading-text: Bills before Parliament 2017-19 — UK Parliament
             url: https://services.parliament.uk/bills/
             short-url: https://services.parliament.uk/bills
             paragraph-content: Bills before Parliament 2017-19. Listed below are all
               Bills currently before Parliament. Any Bills which start in the Lords
               have [HL] in their title.
-        - name: card__search__search-result
-          data:
-            heading-text: Petitions – UK Government and Parliament
-            url: https://petition.parliament.uk/
-            short-url: https://petition.parliament.uk/
-            paragraph-content: If a petition gets 100,000 signatures, it will be considered
-              for debate in Parliament. Reclassify the theft of a pet to a specific
-              crime in its own right.
         - name: card__search__search-result
           data:
             heading-text: Web Operations Engineer - UK Parliament
