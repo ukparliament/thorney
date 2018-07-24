@@ -1,6 +1,6 @@
 require_relative '../../rails_helper'
 
-describe PageSerializer::SearchPage do
+RSpec.describe PageSerializer::SearchPage do
   let(:results) { double('results', totalResults: 658) }
   let(:subject) { described_class.new(query: 'banana', results: results) }
 

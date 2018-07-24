@@ -12,7 +12,7 @@ module PageSerializer
       @results = results
       @pagination_helper = PaginationHelper.new(pagination_hash) if pagination_hash
       @flash_message = flash_message
-      @request_id = request_id
+      @request_id = request_id if request_id
     end
 
     private
