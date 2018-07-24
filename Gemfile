@@ -35,6 +35,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'application_insights'
 
+# Include time zone information
+gem 'tzinfo-data'
+
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
