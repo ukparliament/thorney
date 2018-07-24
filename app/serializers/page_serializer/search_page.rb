@@ -5,14 +5,14 @@ module PageSerializer
     # @param [String] query a query string used for the search.
     # @param [Array<Object>] results an array of objects used for displaying results.
     # @param [Hash] pagination_hash a hash containing data used for pagination.
-    # @param [string] flash_message a translation block that is evaluated into a flash message.
-    # @param [string] AppInsights request id
-    def initialize(opensearch_description_url: nil, query: nil, results: nil, pagination_hash: nil, flash_message: nil, request_id: nil)
+    # @param [String] flash_message a translation block that is evaluated into a flash message.
+    # @param [String] request_id AppInsights request id
+    def initialize(query: nil, results: nil, pagination_hash: nil, flash_message: nil, request_id: nil)
       @query = query
       @results = results
       @pagination_helper = PaginationHelper.new(pagination_hash) if pagination_hash
       @flash_message = flash_message
-      @request_id = request_id
+      @request_id = request_id if request_id
     end
 
     private

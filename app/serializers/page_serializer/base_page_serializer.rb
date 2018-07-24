@@ -45,10 +45,6 @@ module PageSerializer
       end
     end
 
-    def opensearch_description_url
-      raise 'You must implement #opensearch_description_url'
-    end
-
     def meta
       raise 'You must implement #meta'
     end

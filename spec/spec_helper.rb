@@ -141,8 +141,8 @@ RSpec.configure do |config|
 
   # The settings below are suggested to provide a good initial experience
   # with RSpec, but feel free to customize to your heart's content.
-=begin
-  # This allows you to limit a spec run to individual examples or groups
+
+  # Thisallows you to limit a spec run to individual examples or groups
   # you care about by tagging them with `:focus` metadata. When nothing
   # is tagged with `:focus`, all examples get run. RSpec also provides
   # aliases for `it`, `describe`, and `context` that include `:focus`
@@ -187,7 +187,7 @@ RSpec.configure do |config|
   # test failures related to randomization by passing the same `--seed` value
   # as the one that triggered the failure.
   Kernel.srand config.seed
-=end
+
 
   config.before(:each) do
     allow(BANDIERA_CLIENT).to receive(:enabled?).and_return(false)
