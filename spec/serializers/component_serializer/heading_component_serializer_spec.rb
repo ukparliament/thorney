@@ -1,6 +1,6 @@
 require_relative '../../rails_helper'
 
-describe ComponentSerializer::HeadingComponentSerializer do
+RSpec.describe ComponentSerializer::HeadingComponentSerializer do
   let(:content) { ['Dianne Abbott'] }
   let(:translation_key) { 'search.about-count' }
   let(:translation_data) { { count: 123 } }

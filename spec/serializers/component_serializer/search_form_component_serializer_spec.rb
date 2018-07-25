@@ -1,6 +1,6 @@
 require_relative '../../rails_helper'
 
-describe ComponentSerializer::SearchFormComponentSerializer do
+RSpec.describe ComponentSerializer::SearchFormComponentSerializer do
   context '#to_h' do
     it 'it produces the correct hash' do
       serializer = described_class.new(nil, [1])
