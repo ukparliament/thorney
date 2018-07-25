@@ -1,0 +1,60 @@
+pipelines:
+  parliament.uk-thorney:
+    group: main
+    label_template: "${COUNT}"
+    environment_variables:
+      ASSET_LOCATION_URL: https://static.parliament.uk/pugin
+      STATIC_ASSET_LOCATION_URL: https://s3-eu-west-1.amazonaws.com/web1live.static-assets
+      RACK_ENV: development
+    materials:
+      parliament.uk-thorney-git:
+        git: https://github.com/ukparliament/thorney.git
+        branch: master
+        auto_update: true
+    stages:
+      - build:
+          jobs:
+            build:
+              tasks:
+                - exec:
+                    run_if: passed
+                    command: make
+                    arguments:
+                      - test
+                - exec:
+                    run_if: passed
+                    command: make
+                    arguments:
+                      - build
+                - exec:
+                    run_if: passed
+                    command: make
+                    arguments:
+                      - push
+                - exec:
+                    run_if: any
+                    command: make
+                    arguments:
+                      - rmi
+      - deploy:
+          jobs:
+            build:
+              tasks:
+                - exec:
+                    run_if: passed
+                    command: make
+                    arguments:
+                      - deploy-ecs
+                - exec:
+                    run_if: passed
+                    command: make
+                    arguments:
+                      - airbrake
+
+
+
+
+environments:
+  Web.DEVCI:
+    pipelines:
+      - parliament.uk-thorney
