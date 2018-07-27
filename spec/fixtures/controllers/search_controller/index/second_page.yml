@@ -6,6 +6,7 @@ meta:
   request-id: 123456
   components:
   - name: head__search-result-tracking
+  opensearch-description-url: http://www.example.com/search/opensearch
 header-components:
 - name: link
   data:

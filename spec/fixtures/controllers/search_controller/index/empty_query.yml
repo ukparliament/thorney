@@ -4,6 +4,7 @@ layout:
 meta:
   title: No Results - Search - UK Parliament
   request-id: 123456
+  opensearch-description-url: http://www.example.com/search/opensearch
 header-components:
 - name: link
   data:
