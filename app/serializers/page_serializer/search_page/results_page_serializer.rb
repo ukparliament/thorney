@@ -6,7 +6,7 @@ module PageSerializer
       def meta
         {}.tap do |meta|
           meta[:title] = title
-          meta[:request_id] = request_id
+          meta[:request_id] = request_id if request_id
           meta[:components] = meta_components if total_results.positive?
         end
       end

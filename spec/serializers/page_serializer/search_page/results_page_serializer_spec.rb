@@ -1,6 +1,6 @@
 require_relative '../../../rails_helper'
 
-describe PageSerializer::SearchPage::ResultsPageSerializer do
+RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
   let(:pagination_hash) { { start_index: 11, count: 100, results_total: 345, query: 'hello' } }
   let(:result_one) {
     double(

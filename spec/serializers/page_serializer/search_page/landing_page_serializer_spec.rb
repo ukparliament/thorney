@@ -1,6 +1,6 @@
 require_relative '../../../rails_helper'
 
-describe PageSerializer::SearchPage::LandingPageSerializer do
+RSpec.describe PageSerializer::SearchPage::LandingPageSerializer do
   context '#to_h' do
     context 'without a query' do
       it 'produces the correct hash' do
