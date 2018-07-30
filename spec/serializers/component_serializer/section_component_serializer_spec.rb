@@ -1,6 +1,6 @@
 require_relative '../../rails_helper'
 
-describe ComponentSerializer::SectionComponentSerializer do
+RSpec.describe ComponentSerializer::SectionComponentSerializer do
   let ( :components ) { [1, 2] }
 
   context '#to_h' do

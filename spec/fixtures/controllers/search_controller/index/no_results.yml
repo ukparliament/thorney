@@ -3,7 +3,8 @@ layout:
   template: layout
 meta:
   title: dfgdfh89rhosiubreoweh - Search - UK Parliament
-  request-id: "|y0NM2eOY/fnQPw==."
+  request-id: 123456
+  opensearch-description-url: http://www.example.com/search/opensearch
 header-components:
 - name: link
   data:

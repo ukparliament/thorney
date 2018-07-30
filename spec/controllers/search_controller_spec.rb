@@ -51,7 +51,7 @@ RSpec.describe SearchController, vcr: true do
         end
 
         it 'instantiates the SearchService' do
-          expect(SearchService).to have_received(:new).with(nil, 'http://:/search', controller.params)
+          expect(SearchService).to have_received(:new).with('|1234abcd.', 'http://:/search', controller.params)
         end
 
         it 'calls the serializer with the correct arguments' do
