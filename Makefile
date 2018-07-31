@@ -28,7 +28,7 @@ VERSION = 0.0.$(GO_PIPELINE_COUNTER)
 
 # ECS related variables used to build our image name
 # Cluster: list all clusters to update, separated by semicolons
-ECS_CLUSTER ?= ecs;ecs_green
+ECS_CLUSTER = ecs-routing
 AWS_REGION = eu-west-1
 
 # Tenable.io
