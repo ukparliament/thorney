@@ -3,7 +3,6 @@ layout:
   template: layout
 meta:
   title: No Results - Search - UK Parliament
-  request-id: 
 header-components:
 - name: link
   data:

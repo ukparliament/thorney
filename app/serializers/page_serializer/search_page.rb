@@ -2,22 +2,24 @@ module PageSerializer
   class SearchPage < PageSerializer::BasePageSerializer
     # Initialise a Search index page serializer.
     #
+    # @param [String] opensearch_description_url a description url for the search.
     # @param [String] query a query string used for the search.
     # @param [Array<Object>] results an array of objects used for displaying results.
     # @param [Hash] pagination_hash a hash containing data used for pagination.
     # @param [string] flash_message a translation block that is evaluated into a flash message.
     # @param [string] AppInsights request id
     def initialize(opensearch_description_url: nil, query: nil, results: nil, pagination_hash: nil, flash_message: nil, request_id: nil)
+      @opensearch_description_url = opensearch_description_url
       @query = query
       @results = results
       @pagination_helper = PaginationHelper.new(pagination_hash) if pagination_hash
       @flash_message = flash_message
-      @request_id = request_id
+      @request_id = request_id if request_id
     end
 
     private
 
-    attr_reader :request_id
+    attr_reader :request_id, :opensearch_description_url
 
     def meta
       raise StandardError, 'You must implement #meta'

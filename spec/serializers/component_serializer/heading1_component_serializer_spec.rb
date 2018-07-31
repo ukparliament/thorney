@@ -1,6 +1,6 @@
 require_relative '../../rails_helper'
 
-describe ComponentSerializer::Heading1ComponentSerializer do
+RSpec.describe ComponentSerializer::Heading1ComponentSerializer do
   let(:heading_content) { 'Dianne Abbott' }
   let(:heading_data) { 'www.dianneabbott.com' }
   let(:subheading_content) { 'MP for' }

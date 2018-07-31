@@ -1,6 +1,6 @@
 require_relative '../rails_helper'
 
-describe BaseSerializer do
+RSpec.describe BaseSerializer do
   context '#to_h' do
     it 'raises an error if called in BaseSerializer' do
       expect { subject.to_h }.to raise_error('You must implement #content')
