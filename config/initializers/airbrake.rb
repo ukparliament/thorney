@@ -1,4 +1,4 @@
-if defined?(Airbrake) && ENV['AIRBRAKE_PROJECT_ID'].present? && ENV['AIRBRAKE_PROJECT_KEY'].present?
+if defined?(Airbrake) && ENV['THORNEY_AIRBRAKE_PROJECT_ID'].present? && ENV['THORNEY_AIRBRAKE_PROJECT_KEY'].present?
   # Airbrake is an online tool that provides robust exception tracking in your Rails
   # applications. In doing so, it allows you to easily review errors, tie an error
   # to an individual piece of code, and trace the cause back to recent
@@ -13,8 +13,8 @@ if defined?(Airbrake) && ENV['AIRBRAKE_PROJECT_ID'].present? && ENV['AIRBRAKE_PR
     # project_key navigate to your project's General Settings and copy the values
     # from the right sidebar.
     # https://github.com/airbrake/airbrake-ruby#project_id--project_key
-    c.project_id = ENV['AIRBRAKE_PROJECT_ID']
-    c.project_key = ENV['AIRBRAKE_PROJECT_KEY']
+    c.project_id = ENV['THORNEY_AIRBRAKE_PROJECT_ID']
+    c.project_key = ENV['THORNEY_AIRBRAKE_PROJECT_KEY']
 
     # Configures the root directory of your project. Expects a String or a
     # Pathname, which represents the path to your project. Providing this option
