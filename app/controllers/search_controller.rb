@@ -34,6 +34,6 @@ class SearchController < ApplicationController
   private
 
   def search_service
-    @search_service ||= SearchService.new(app_insights_request_id, search_url, params)
+    @search_service ||= SearchService.new(app_insights_request_id, search_path, params)
   end
 end

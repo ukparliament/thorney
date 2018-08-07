@@ -6,7 +6,7 @@ class PaginationHelper
     @start_index = pagination_hash[:start_index]
     @count = pagination_hash[:count]
     @results_total = pagination_hash[:results_total]
-    @search_url = pagination_hash[:search_url]
+    @search_path = pagination_hash[:search_path]
     @query = pagination_hash[:query]
   end
 
@@ -129,6 +129,6 @@ class PaginationHelper
   end
 
   def create_page_url(start_index)
-    "#{@search_url}?count=#{@count}&q=#{@query}&start_index=#{start_index}"
+    "#{@search_path}?count=#{@count}&q=#{@query}&start_index=#{start_index}"
   end
 end
