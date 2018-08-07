@@ -37,11 +37,9 @@ class FixtureSweeper
   def unused_fixtures
     [].tap do |unused|
       specs_and_fixtures.each do |path|
-        begin
-          unused << check_file(path) if check_file(path)
-        rescue StandardError
-          unused << path_manager.fixture_parent_folder(path)
-        end
+        unused << check_file(path) if check_file(path)
+      rescue StandardError
+        unused << path_manager.fixture_parent_folder(path)
       end
     end
   end

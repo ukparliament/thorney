@@ -3,7 +3,7 @@ require_relative '../../rails_helper'
 RSpec.describe PaginationHelper, type: :helper do
   include SerializerFixtureHelper
 
-  let(:pagination_hash) { { start_index: 10, count: 123, results_total: 321, search_url: 'some_url', query: 'hello' } }
+  let(:pagination_hash) { { start_index: 10, count: 123, results_total: 321, search_path: 'some_url', query: 'hello' } }
   let(:pagination_helper) { described_class.new(pagination_hash) }
 
   describe 'pagination helpers' do
