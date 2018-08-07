@@ -40,22 +40,7 @@ class PaginationHelper
   # The array is populated by first finding where in the array the current page lies
   # and then filling in the elements preceding and succeeding the current page
   #
-  # There are 4 possible cases for deciding where in the array the current page lies
-  # 1. There are 10 or less pages in total:
-  #   The position of current page in the array is one less than itself due to zero index
-  #   For eg. The array for page 6 when there are 7 pages in total is [1, 2, 3, 4, 5, 6, 7]
-  #
-  # 2. The current page is at most 4 pages from the FIRST page
-  #   The position of the current page in the array is one less than itself due to zero index
-  #   For eg. The array for page 3 when there are 55 pages in total is [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  #
-  # 3. The current page is at most 4 pages from the LAST page
-  #   The position of the current page in the array is the difference between the total pages and current page subtracted from 9
-  #   For eg. The array for page 53 when there are 55 pages in total is [46, 47, 48, 49, 50, 51, 52, 53, 54, 55]
-  #
-  # 4. The current page is somewhere in the middle
-  #   The position of the current page in the array is 5, zero-indexed
-  #   For eg. The array for page 32 when there are 55 pages in total is [27, 28, 29, 30, 31, 32, 33, 34, 35, 36]
+  # Refer to the tests for this class to see this in action
   def page_range
     page_range = Array.new(page_range_length)
 
@@ -81,7 +66,7 @@ class PaginationHelper
 
   # This method returns a value that is used in the zero-indexed pagination array
   def active_tile_position
-    return current_page - 1 if current_page <= 5 || total_pages <= 10
+    return previous_page if current_page <= 5 || total_pages <= 10
 
     return 9 if current_page > total_pages
 
