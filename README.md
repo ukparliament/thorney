@@ -89,8 +89,6 @@ If you wish to submit a bug fix or feature, you can create a pull request and it
 ## License
 [Thorney][thorney] is licensed under [MIT][info-license].
 
-.
-
 [thorney]: https://github.com/ukparliament/thorney
 [beta]: https://beta.parliament.uk
 [rails]: https://rubyonrails.org
