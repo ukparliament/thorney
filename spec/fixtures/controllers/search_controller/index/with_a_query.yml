@@ -281,16 +281,6 @@ main-components:
             url: "/search?count=10&q=hello&start_index=71"
             number: 8
             total-count: of 103
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=hello&start_index=81"
-            number: 9
-            total-count: of 103
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=hello&start_index=91"
-            number: 10
-            total-count: of 103
 footer-components:
 - name: footer
   data:

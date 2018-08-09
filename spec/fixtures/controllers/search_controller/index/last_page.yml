@@ -194,15 +194,10 @@ main-components:
     components:
     - name: navigation__number__number
       data:
-        active-tile: 6
+        active-tile: 5
         previous-url: "/search?count=10&q=diane+abbott&start_index=7461"
         next-url: "/search?count=10&q=diane+abbott&start_index=7481"
         components:
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=diane+abbott&start_index=7421"
-            number: 743
-            total-count: of 752
         - name: navigation__number__card
           data:
             url: "/search?count=10&q=diane+abbott&start_index=7431"
@@ -243,11 +238,6 @@ main-components:
           data:
             url: "/search?count=10&q=diane+abbott&start_index=7501"
             number: 751
-            total-count: of 752
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=diane+abbott&start_index=7511"
-            number: 752
             total-count: of 752
 footer-components:
 - name: footer
