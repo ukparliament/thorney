@@ -725,19 +725,9 @@ main-components:
     components:
     - name: navigation__number__number
       data:
-        active-tile: 10
+        active-tile: 8
         previous-url: "/search?count=100&q=test&start_index=70001"
         components:
-        - name: navigation__number__card
-          data:
-            url: "/search?count=100&q=test&start_index=69201"
-            number: 693
-            total-count: of 182
-        - name: navigation__number__card
-          data:
-            url: "/search?count=100&q=test&start_index=69301"
-            number: 694
-            total-count: of 182
         - name: navigation__number__card
           data:
             url: "/search?count=100&q=test&start_index=69401"

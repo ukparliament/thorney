@@ -1,0 +1,48 @@
+---
+- name: navigation__number__number
+  data:
+    active-tile: 2
+    previous-url: some_url?count=123&q=hello&start_index=1
+    next-url: some_url?count=123&q=hello&start_index=247
+    components:
+    - name: navigation__number__card
+      data:
+        url: some_url?count=123&q=hello&start_index=1
+        number: 1
+        total-count: of 100
+    - name: navigation__number__card
+      data:
+        url: some_url?count=123&q=hello&start_index=124
+        number: 2
+        total-count: of 100
+        active: true
+    - name: navigation__number__card
+      data:
+        url: some_url?count=123&q=hello&start_index=247
+        number: 3
+        total-count: of 100
+    - name: navigation__number__card
+      data:
+        url: some_url?count=123&q=hello&start_index=370
+        number: 4
+        total-count: of 100
+    - name: navigation__number__card
+      data:
+        url: some_url?count=123&q=hello&start_index=493
+        number: 5
+        total-count: of 100
+    - name: navigation__number__card
+      data:
+        url: some_url?count=123&q=hello&start_index=616
+        number: 6
+        total-count: of 100
+    - name: navigation__number__card
+      data:
+        url: some_url?count=123&q=hello&start_index=739
+        number: 7
+        total-count: of 100
+    - name: navigation__number__card
+      data:
+        url: some_url?count=123&q=hello&start_index=862
+        number: 8
+        total-count: of 100

@@ -59,20 +59,20 @@ class PaginationHelper
 
   # The pagination array length is always 10, unless there are less than 10 pages in total
   def page_range_length
-    return total_pages if total_pages < 10
+    return total_pages if total_pages < 8
 
-    10
+    8
   end
 
   # This method returns a value that is used in the zero-indexed pagination array
   def active_tile_position
-    return previous_page if current_page <= 5 || total_pages <= 10
+    return previous_page if current_page <= 5 || total_pages <= 8
 
-    return 9 if current_page > total_pages
+    return 7 if current_page > total_pages
 
-    return 9 - (total_pages - current_page) if current_page >= (total_pages - 4)
+    return 7 - (total_pages - current_page) if current_page >= (total_pages - 3)
 
-    5
+    4
   end
 
   def next_page
