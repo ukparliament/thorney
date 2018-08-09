@@ -1,5 +1,5 @@
 class SearchService < ApplicationController
-  # This class handles all the parameters required for the SearchController and the SearchIndexPageSerializer
+  # This class handles all the parameters required for the SearchController and subclasses of PageSerializer::SearchPage
   attr_reader :app_insights_request_id, :search_path, :sanitised_query, :escaped_query, :start_index, :count
 
   def initialize(app_insights_request_id, search_path, params)
