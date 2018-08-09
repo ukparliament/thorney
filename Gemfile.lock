@@ -44,26 +44,23 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    airbrake (7.3.4)
+      airbrake-ruby (~> 2.10)
+    airbrake-ruby (2.11.0)
     application_insights (0.5.6)
     arel (9.0.0)
     ast (2.4.0)
-    bandiera-client (3.1.0)
-      macmillan-utils
-      typhoeus
     bootsnap (1.3.1)
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (10.0.2)
-    capybara (3.5.0)
+    capybara (3.5.1)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
       rack (>= 1.6.0)
       rack-test (>= 0.6.3)
       xpath (~> 3.1)
-    codeclimate-test-reporter (1.0.7)
-      simplecov
-    colorize (0.8.1)
     concurrent-ruby (1.0.5)
     coveralls (0.8.22)
       json (>= 1.8, < 3)
@@ -77,8 +74,6 @@ GEM
     diff-lcs (1.3)
     docile (1.3.1)
     erubi (1.7.1)
-    ethon (0.11.0)
-      ffi (>= 1.3.0)
     faraday (0.15.2)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.12.2)
@@ -103,17 +98,6 @@ GEM
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    macmillan-utils (1.0.44)
-      activesupport (>= 3.2.0)
-      codeclimate-test-reporter
-      colorize
-      multi_test
-      rspec
-      rubocop
-      simplecov
-      simplecov-rcov
-      syslog-logger
-      webmock
     mail (2.7.0)
       mini_mime (>= 0.1.1)
     marcel (0.3.2)
@@ -124,7 +108,6 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     msgpack (1.2.4)
-    multi_test (0.1.2)
     multipart-post (2.0.0)
     nio4r (2.3.1)
     nokogiri (1.8.4)
@@ -181,27 +164,23 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    rspec (3.7.0)
-      rspec-core (~> 3.7.0)
-      rspec-expectations (~> 3.7.0)
-      rspec-mocks (~> 3.7.0)
-    rspec-core (3.7.1)
-      rspec-support (~> 3.7.0)
-    rspec-expectations (3.7.0)
+    rspec-core (3.8.0)
+      rspec-support (~> 3.8.0)
+    rspec-expectations (3.8.1)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.7.0)
-    rspec-mocks (3.7.0)
+      rspec-support (~> 3.8.0)
+    rspec-mocks (3.8.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.7.0)
-    rspec-rails (3.7.2)
+      rspec-support (~> 3.8.0)
+    rspec-rails (3.8.0)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
-      rspec-core (~> 3.7.0)
-      rspec-expectations (~> 3.7.0)
-      rspec-mocks (~> 3.7.0)
-      rspec-support (~> 3.7.0)
-    rspec-support (3.7.1)
+      rspec-core (~> 3.8.0)
+      rspec-expectations (~> 3.8.0)
+      rspec-mocks (~> 3.8.0)
+      rspec-support (~> 3.8.0)
+    rspec-support (3.8.0)
     rubocop (0.58.2)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -223,8 +202,6 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.2)
-    simplecov-rcov (0.2.3)
-      simplecov (>= 0.4.1)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -237,15 +214,12 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    syslog-logger (1.6.8)
     term-ansicolor (1.6.0)
       tins (~> 1.0)
     thor (0.19.4)
     thread_safe (0.3.6)
     timecop (0.9.1)
     tins (1.16.3)
-    typhoeus (1.3.0)
-      ethon (>= 0.9.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     tzinfo-data (1.2018.5)
@@ -266,8 +240,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  airbrake (~> 7.3)
   application_insights
-  bandiera-client
   bootsnap (>= 1.1.0)
   byebug
   capybara
