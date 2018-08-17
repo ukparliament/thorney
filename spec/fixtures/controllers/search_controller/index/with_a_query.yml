@@ -12,6 +12,7 @@ header-components:
   data:
     link: "#content"
     display:
+      name: partials__display
       data:
       - component: skip-to-content
     selector: skiplink
@@ -19,6 +20,7 @@ header-components:
 - name: status__banner
   data:
     display:
+      name: partials__display
       data:
       - component: status
         variant: banner
@@ -35,6 +37,7 @@ header-components:
 - name: status__banner
   data:
     display:
+      name: partials__display
       data:
       - component: status
         variant: banner
@@ -43,6 +46,7 @@ header-components:
       data:
         type: ul
         display:
+          name: partials__display
           data:
           - component: list
             variant: inline
@@ -56,6 +60,7 @@ header-components:
       data:
         link: "/"
         display:
+          name: partials__display
           data:
           - component: uk_parliament
         label: shared.header.label
@@ -94,6 +99,7 @@ main-components:
     - name: status__highlight
       data:
         display:
+          name: partials__display
           data:
           - component: status
             variant: highlight
@@ -105,6 +111,7 @@ main-components:
       data:
         type: ol
         display:
+          name: partials__display
           data:
           - component: list
             variant: block
@@ -114,9 +121,10 @@ main-components:
             heading-text: OF THE LORDS OF APPEAL FOR JUDGMENT IN THE CAUSE
             url: https://publications.parliament.uk/pa/ld200607/ldjudgmt/jd070502/obg.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -147,9 +155,10 @@ main-components:
               ...
             url: https://www.parliament.uk/documents/speaker/digital-democracy/Digi058CharlotteMulcare.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -163,9 +172,10 @@ main-components:
             heading-text: HIGH SPEED RAIL BILL COMMITTEE - parliament.uk
             url: https://www.parliament.uk/documents/HS2%20Evidence%20Uploads/10459574%20Hansard%20HSRBC%2019%2006%2018%20(Morning).pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -196,9 +206,10 @@ main-components:
             heading-text: Campbell v MGN Ltd - publications.parliament.uk
             url: https://publications.parliament.uk/pa/ld200506/ldjudgmt/jd051020/camp.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -221,9 +232,10 @@ main-components:
             heading-text: Tony Blair and Colonel Gaddafi call transcript - UK Parliament
             url: https://www.parliament.uk/documents/commons-committees/foreign-affairs/09TBandGaddafiCallTranscript-1115-1145.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -290,6 +302,7 @@ footer-components:
       data:
         type: ul
         display:
+          name: partials__display
           data:
           - component: list
         contents:

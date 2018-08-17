@@ -40,6 +40,7 @@ RSpec.describe SearchResultHelper, type: :helper do
 
   describe '#create_search_results' do
     it 'creates the correct search result cards' do
+
       expected = get_fixture('fixture')
 
       expect(SearchResultHelper.create_search_results(results).to_yaml).to eq expected

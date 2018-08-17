@@ -3,6 +3,7 @@
   data:
     link: "#content"
     display:
+      name: partials__display
       data:
       - component: skip-to-content
     selector: skiplink
@@ -10,6 +11,7 @@
 - name: status__banner
   data:
     display:
+      name: partials__display
       data:
       - component: status
         variant: banner
@@ -26,6 +28,7 @@
 - name: status__banner
   data:
     display:
+      name: partials__display
       data:
       - component: status
         variant: banner
@@ -34,6 +37,7 @@
       data:
         type: ul
         display:
+          name: partials__display
           data:
           - component: list
             variant: inline
@@ -47,6 +51,7 @@
       data:
         link: "/"
         display:
+          name: partials__display
           data:
           - component: uk_parliament
         label: shared.header.label

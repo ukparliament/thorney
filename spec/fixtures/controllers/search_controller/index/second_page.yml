@@ -12,6 +12,7 @@ header-components:
   data:
     link: "#content"
     display:
+      name: partials__display
       data:
       - component: skip-to-content
     selector: skiplink
@@ -19,6 +20,7 @@ header-components:
 - name: status__banner
   data:
     display:
+      name: partials__display
       data:
       - component: status
         variant: banner
@@ -35,6 +37,7 @@ header-components:
 - name: status__banner
   data:
     display:
+      name: partials__display
       data:
       - component: status
         variant: banner
@@ -43,6 +46,7 @@ header-components:
       data:
         type: ul
         display:
+          name: partials__display
           data:
           - component: list
             variant: inline
@@ -56,6 +60,7 @@ header-components:
       data:
         link: "/"
         display:
+          name: partials__display
           data:
           - component: uk_parliament
         label: shared.header.label
@@ -94,6 +99,7 @@ main-components:
     - name: status__highlight
       data:
         display:
+          name: partials__display
           data:
           - component: status
             variant: highlight
@@ -105,6 +111,7 @@ main-components:
       data:
         type: ol
         display:
+          name: partials__display
           data:
           - component: list
             variant: block
@@ -122,9 +129,10 @@ main-components:
             heading-text: Miss Diane Abbott (Hansard) - api.parliament.uk
             url: https://api.parliament.uk/historic-hansard/people/miss-diane-abbott/index.html
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -194,9 +202,10 @@ main-components:
             heading-text: mpsallowances.parliament.uk
             url: https://mpsallowances.parliament.uk/mpslordsandoffices/hocallowances/allowances-by-mp/diane-abbott/Diane_Abbott_0708_IEP.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -262,6 +271,7 @@ footer-components:
       data:
         type: ul
         display:
+          name: partials__display
           data:
           - component: list
         contents:
