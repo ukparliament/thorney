@@ -1,10 +1,10 @@
 class SearchService < ApplicationController
-  # This class handles all the parameters required for the SearchController and the SearchIndexPageSerializer
-  attr_reader :app_insights_request_id, :search_url, :sanitised_query, :escaped_query, :start_index, :count
+  # This class handles all the parameters required for the SearchController and subclasses of PageSerializer::SearchPage
+  attr_reader :app_insights_request_id, :search_path, :sanitised_query, :escaped_query, :start_index, :count
 
-  def initialize(app_insights_request_id, search_url, params)
+  def initialize(app_insights_request_id, search_path, params)
     @app_insights_request_id = app_insights_request_id
-    @search_url = search_url
+    @search_path = search_path
 
     @query_parameter = params[:q]
     @sanitised_query = SearchHelper.sanitize_query(query_parameter)
@@ -40,7 +40,7 @@ class SearchService < ApplicationController
       start_index:   start_index,
       count:         count,
       results_total: total_results,
-      search_url:    search_url,
+      search_path:   search_path,
       query:         escaped_query
     }
   end

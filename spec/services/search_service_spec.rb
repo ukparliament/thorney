@@ -47,7 +47,7 @@ RSpec.describe SearchService, vcr: true do
           start_index: 21,
           count: 10,
           results_total: 100,
-          search_url: '/search',
+          search_path: '/search',
           query: 'banana'
       }
 

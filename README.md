@@ -4,8 +4,18 @@
 [![Build Status][shield-travis]][info-travis] [![Test Coverage][shield-coveralls]][info-coveralls] [![License][shield-license]][info-license]
 
 ### Contents
-<!-- START doctoc -->
-<!-- END doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Requirements](#requirements)
+- [Quick start](#quick-start)
+- [Running the application](#running-the-application)
+- [Using Docker Compose to run both Thorney and Augustus](#using-docker-compose-to-run-both-thorney-and-augustus)
+- [Contributing](#contributing)
+- [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Requirements
 [Thorney][thorney] requires the following:
@@ -34,6 +44,38 @@ By default, there is a service timeout of 5 seconds. This can be disabled by set
 ```bash
 DISABLE_TIMEOUT=true bundle exec rails s
 ```
+
+## Using Docker Compose to run both Thorney and Augustus
+Make sure to clone [Thorney][thorney] and [Augustus][augustus] into the same directory and then change into the directory that [Thorney][thorney] is in. 
+
+```bash
+git clone https://github.com/ukparliament/thorney.git
+git clone https://github.com/ukparliament/augustus.git
+cd thorney
+```
+
+Your folder structure should look like this:
+
+```bash
+/example_folder
+    /thorney
+    /augustus
+```
+
+To run both Thorney and Augustus, you will need to run the following commands from within the [Thorney][thorney] directory. Set up the application using:
+
+```bash
+docker-compose build --no-cache
+```
+
+Start the application using:
+
+```bash
+docker-compose up
+```
+
+The application will then be available from http://localhost:5400/.
+
 ## Contributing
 If you wish to submit a bug fix or feature, you can create a pull request and it will be merged pending a code review.
 
@@ -46,8 +88,6 @@ If you wish to submit a bug fix or feature, you can create a pull request and it
 
 ## License
 [Thorney][thorney] is licensed under [MIT][info-license].
-
-.
 
 [thorney]: https://github.com/ukparliament/thorney
 [beta]: https://beta.parliament.uk

@@ -1,0 +1,36 @@
+version: '3'
+services:
+  thorney.parliament.local:
+    build:
+      context: .
+      args:
+        RACK_ENV: 'development'
+    volumes:
+      - .:/app
+      - /app/vendor/bundle/
+      - /app/tmp/
+    command: '/bin/sh -c "if [ -f /app/tmp/pids/server.pid ]; then rm -f /app/tmp/pids/server.pid; fi && bundle exec rails s -b 0.0.0.0 -p 5401"'
+    ports:
+      - '3000:5401'
+    environment:
+      - OPENSEARCH_DESCRIPTION_URL
+      - OPENSEARCH_AUTH_TOKEN
+      - BANDIERA_URL
+      - APPLICATION_INSIGHTS_INSTRUMENTATION_KEY
+    
+  augustus.parliament.local:
+    build:
+      context: ../augustus
+      args:
+        NODE_ENV: 'development'
+    volumes:
+      - ../augustus/:/app
+      - /app/node_modules/
+    depends_on:
+      - thorney.parliament.local
+    command: 'npm start'
+    ports:
+      - '80:5400'
+    environment:
+      - APPLICATION_INSIGHTS_INSTRUMENTATION_KEY 
+      - THORNEY_HOST=thorney.parliament.local

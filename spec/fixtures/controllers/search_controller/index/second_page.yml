@@ -209,59 +209,49 @@ main-components:
     - name: navigation__number__number
       data:
         active-tile: 2
-        previous-url: http://www.example.com/search?count=10&q=diane+abbott&start_index=1
-        next-url: http://www.example.com/search?count=10&q=diane+abbott&start_index=21
+        previous-url: "/search?count=10&q=diane+abbott&start_index=1"
+        next-url: "/search?count=10&q=diane+abbott&start_index=21"
         components:
         - name: navigation__number__card
           data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=1
+            url: "/search?count=10&q=diane+abbott&start_index=1"
             number: 1
             total-count: of 752
         - name: navigation__number__card
           data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=11
+            url: "/search?count=10&q=diane+abbott&start_index=11"
             number: 2
             total-count: of 752
             active: true
         - name: navigation__number__card
           data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=21
+            url: "/search?count=10&q=diane+abbott&start_index=21"
             number: 3
             total-count: of 752
         - name: navigation__number__card
           data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=31
+            url: "/search?count=10&q=diane+abbott&start_index=31"
             number: 4
             total-count: of 752
         - name: navigation__number__card
           data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=41
+            url: "/search?count=10&q=diane+abbott&start_index=41"
             number: 5
             total-count: of 752
         - name: navigation__number__card
           data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=51
+            url: "/search?count=10&q=diane+abbott&start_index=51"
             number: 6
             total-count: of 752
         - name: navigation__number__card
           data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=61
+            url: "/search?count=10&q=diane+abbott&start_index=61"
             number: 7
             total-count: of 752
         - name: navigation__number__card
           data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=71
+            url: "/search?count=10&q=diane+abbott&start_index=71"
             number: 8
-            total-count: of 752
-        - name: navigation__number__card
-          data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=81
-            number: 9
-            total-count: of 752
-        - name: navigation__number__card
-          data:
-            url: http://www.example.com/search?count=10&q=diane+abbott&start_index=91
-            number: 10
             total-count: of 752
 footer-components:
 - name: footer
