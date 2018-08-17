@@ -1,6 +1,6 @@
 require_relative '../../rails_helper'
 
-describe ComponentSerializer::ParagraphComponentSerializer do
+RSpec.describe ComponentSerializer::ParagraphComponentSerializer do
   let(:paragraph_component_serializer) { described_class.new([{ content: 'one' }, { content: 'two', link: 'link' }]) }
 
   context '#to_h' do

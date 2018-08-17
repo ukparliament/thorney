@@ -1,6 +1,6 @@
 require_relative '../../rails_helper'
 
-describe ComponentSerializer::ListComponentSerializer do
+RSpec.describe ComponentSerializer::ListComponentSerializer do
   context '#to_h' do
     context 'generic' do
       context 'returns a hash containing the name and data' do
