@@ -42,17 +42,9 @@ header-components:
       - component: status
         variant: banner
     components:
-    - name: list__generic
+    - name: paragraph
       data:
-        type: ul
-        display:
-          name: partials__display
-          data:
-          - component: list
-            variant: inline
-        contents:
-        - content: shared.header.pages-being-tested
-        - content: shared.header.current-website
+      - content: shared.header.beta-status
 - name: header
   data:
     components:
