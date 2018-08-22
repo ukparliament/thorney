@@ -3,4 +3,5 @@ name: list__
 data:
   type: ol
   display:
+    name: partials__display
     data: 123

@@ -4,9 +4,10 @@
     heading-text: Result one
     url: link
     hints:
-    - name: hint
+    - name: partials__hint
       data:
         display:
+          name: partials__display
           data:
           - component: theme
             variant: grey-4
@@ -24,9 +25,10 @@
     heading-text: Result three
     url: link
     hints:
-    - name: hint
+    - name: partials__hint
       data:
         display:
+          name: partials__display
           data:
           - component: theme
             content: Beta
