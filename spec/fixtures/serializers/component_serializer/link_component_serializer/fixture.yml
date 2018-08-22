@@ -3,6 +3,7 @@ name: link
 data:
   link: link
   display:
+    name: partials__display
     data: display_data
   selector: selector
   content: content

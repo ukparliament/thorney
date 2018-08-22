@@ -8,6 +8,7 @@ header-components:
   data:
     link: "#content"
     display:
+      name: partials__display
       data:
       - component: skip-to-content
     selector: skiplink
@@ -15,6 +16,7 @@ header-components:
 - name: status__banner
   data:
     display:
+      name: partials__display
       data:
       - component: status
         variant: banner
@@ -31,20 +33,14 @@ header-components:
 - name: status__banner
   data:
     display:
+      name: partials__display
       data:
       - component: status
         variant: banner
     components:
-    - name: list__generic
+    - name: paragraph
       data:
-        type: ul
-        display:
-          data:
-          - component: list
-            variant: inline
-        contents:
-        - content: shared.header.pages-being-tested
-        - content: shared.header.current-website
+      - content: shared.header.beta-status
 - name: header
   data:
     components:
@@ -52,6 +48,7 @@ header-components:
       data:
         link: "/"
         display:
+          name: partials__display
           data:
           - component: uk_parliament
         label: shared.header.label
@@ -88,6 +85,7 @@ main-components:
     - name: status__highlight
       data:
         display:
+          name: partials__display
           data:
           - component: status
             variant: highlight
@@ -104,6 +102,7 @@ footer-components:
       data:
         type: ul
         display:
+          name: partials__display
           data:
           - component: list
         contents:
