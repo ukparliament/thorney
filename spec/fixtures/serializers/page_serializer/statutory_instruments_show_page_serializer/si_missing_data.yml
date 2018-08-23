@@ -1,0 +1,166 @@
+---
+layout:
+  template: layout
+meta:
+  title: SI Paper Test
+header-components:
+- name: link
+  data:
+    link: "#content"
+    display:
+      name: partials__display
+      data:
+      - component: skip-to-content
+    selector: skiplink
+    content: shared.header.skip-to-content
+- name: status__banner
+  data:
+    display:
+      name: partials__display
+      data:
+      - component: status
+        variant: banner
+      - component: theme
+        variant: caution
+      - component: cookie
+    selector: cookie
+    components:
+    - name: paragraph
+      data:
+      - content: shared.header.cookie-banner-text
+        data:
+          link: "/meta/cookie-policy"
+- name: status__banner
+  data:
+    display:
+      name: partials__display
+      data:
+      - component: status
+        variant: banner
+    components:
+    - name: paragraph
+      data:
+      - content: shared.header.beta-status
+- name: header
+  data:
+    components:
+    - name: link
+      data:
+        link: "/"
+        display:
+          name: partials__display
+          data:
+          - component: uk_parliament
+        label: shared.header.label
+        components:
+        - name: icon__uk-parliament
+          data: shared.header.label
+main-components:
+- name: section__primary
+  data:
+    components:
+    - name: heading1
+      data:
+        heading:
+          content: SI Paper Test
+- name: section__section
+  data:
+    components:
+    - name: heading
+      data:
+        content: statutory-instruments.show.literals
+        size: 2
+    - name: list__description
+      data:
+        items:
+        - term:
+            content: statutory-instruments.show.prefix
+          description:
+          - content: SI
+        - term:
+            content: statutory-instruments.show.year
+          description:
+          - content: '2018'
+        - term:
+            content: statutory-instruments.show.number
+          description:
+          - content: '568'
+        - term:
+            content: statutory-instruments.show.laid-date
+          description:
+          - content: 
+        - term:
+            content: statutory-instruments.show.coming-into-force-date
+          description:
+          - content: 
+        - term:
+            content: statutory-instruments.show.coming-into-force-note
+          description:
+          - content: SI Paper Test Note
+        - term:
+            content: statutory-instruments.show.made-date
+          description:
+          - content: 
+- name: section__section
+  data:
+    components:
+    - name: heading
+      data:
+        content: statutory-instruments.show.preceding-title
+        size: 2
+    - name: list__generic
+      data:
+        type: ol
+        display:
+          name: partials__display
+          data:
+          - component: list
+        components: []
+- name: section__section
+  data:
+    components:
+    - name: heading
+      data:
+        content: statutory-instruments.show.objects
+        size: 2
+    - name: list__description
+      data:
+        items:
+        - term:
+            content: statutory-instruments.show.web-link
+          description:
+          - content: "<a href=''></a>"
+        - term:
+            content: statutory-instruments.show.work-package
+          description:
+          - content: "<a href='/work-packages/'></a>"
+        - term:
+            content: statutory-instruments.show.procedure
+          description:
+          - content: "<a href='/procedures/'></a>"
+        - term:
+            content: statutory-instruments.show.laying-body
+          description:
+          - content: 
+        - term:
+            content: statutory-instruments.show.laying-person
+          description:
+          - content: 
+footer-components:
+- name: footer
+  data:
+    uk-parliament: shared.footer.uk-parliament
+    components:
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          name: partials__display
+          data:
+          - component: list
+        contents:
+        - content: shared.footer.current-website
+        - content: shared.footer.cookie-policy
+          data:
+            link: "/meta/cookie-policy"
+        - content: shared.footer.data-protection-privacy

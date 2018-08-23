@@ -3,10 +3,10 @@ module IntegrationFixtureHelper
     File.open("#{directory_name(caller_locations.first.path, controller_method)}/#{filename}.yml", 'r') { |f| f.read }
   end
 
-  def create_fixture(serializer, controller_method, filename)
+  def create_fixture(response, controller_method, filename)
     FileUtils::mkdir_p(directory_name(caller_locations.first.path, controller_method))
 
-    File.open("#{directory_name(caller_locations.first.path, controller_method)}/#{filename}.yml", 'w') { |f| p f.write serializer.to_yaml }
+    File.open("#{directory_name(caller_locations.first.path, controller_method)}/#{filename}.yml", 'w') { |f| p f.write response.to_yaml }
   end
 
   private

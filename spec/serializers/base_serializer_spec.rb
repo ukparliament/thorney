@@ -57,4 +57,37 @@ RSpec.describe BaseSerializer do
       expect(subject.display_data(variant: 'variant').to_yaml).to eq expected
     end
   end
+
+  context '#localize' do
+    it 'correctly localizes a date' do
+      date = DateTime.new(2018, 9, 10, 0, 0)
+
+      expect(subject.localize(date)).to eq('10 September 2018')
+    end
+
+    it 'handles a nil date without raising an error' do
+      expect(subject.localize(nil)).to be(nil)
+    end
+  end
+
+  context '#create_description_list_item' do
+    it 'produces the expected hash for a description list item' do
+      expected_hash = {
+        term:        {
+          content: 'email'
+        },
+        description: [
+                       {
+                         content: 'hello@example.com'
+                       },
+                       {
+                         content: 'hello@gmail.com'
+                       }
+                     ]
+      }
+      item = subject.create_description_list_item('email', ['hello@example.com', 'hello@gmail.com'])
+
+      expect(item).to eq(expected_hash)
+    end
+  end
 end
