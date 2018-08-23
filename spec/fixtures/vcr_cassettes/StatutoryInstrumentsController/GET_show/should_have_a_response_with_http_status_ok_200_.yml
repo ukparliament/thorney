@@ -67,6 +67,6 @@ http_interactions:
         <https://id.parliament.uk/D1234567> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper> .
         <https://id.parliament.uk/C1234567> <https://id.parliament.uk/schema/proposedNegativeStatutoryInstrumentPaperName> "proposedNegativeStatutoryInstrumentPaperName - 1" .
         <https://id.parliament.uk/D1234567> <https://id.parliament.uk/schema/proposedNegativeStatutoryInstrumentPaperName> "proposedNegativeStatutoryInstrumentPaperName - 2" .
-    http_version: 
+    http_version:
   recorded_at: Fri, 14 Sep 2018 14:28:09 GMT
 recorded_with: VCR 4.0.0

@@ -9,7 +9,7 @@ module ComponentSerializer
     #  a_serializer = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: 'Hero Section Heading').to_h
     #  boolean = true
     #  ComponentSerializer::HeroComponentSerializer.new([a_serializer], content_flag: boolean).to_h
-    def initialize(components, content_flag: nil)
+    def initialize(components: nil, content_flag: nil)
       @components = components
       @content_flag = content_flag
     end
