@@ -29,6 +29,7 @@ RSpec.describe PageSerializer::StatutoryInstrumentsShowPageSerializer do
 
   context '#to_h' do
     it 'produces the expected JSON hash' do
+
       expected = get_fixture('fixture')
 
       expect(subject.to_yaml).to eq expected
@@ -61,4 +62,3 @@ RSpec.describe PageSerializer::StatutoryInstrumentsShowPageSerializer do
     end
   end
 end
-

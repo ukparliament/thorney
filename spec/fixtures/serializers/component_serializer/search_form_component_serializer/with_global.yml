@@ -1,0 +1,8 @@
+---
+name: form__search
+data:
+  value: query
+  global: true
+  label: search.label
+  components:
+  - 1

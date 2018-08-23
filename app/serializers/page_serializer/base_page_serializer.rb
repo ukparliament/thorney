@@ -38,7 +38,7 @@ module PageSerializer
 
     def header_section(hash)
       hash.tap do |h|
-        h[:header_components] = PartialSerializer::HeaderComponentsPartialSerializer.new.to_h
+        h[:header_components] = PartialSerializer::HeaderComponentsPartialSerializer.new(include_global_search: include_global_search).to_h
       end
     end
 
@@ -65,6 +65,11 @@ module PageSerializer
         meta[:data_alternates] = @data_alternates
         meta[:open_graph]      = OpenGraphHelper.information(page_title: title, request_original_url: @request_original_url, image_id: image_id)
       end
+    end
+
+    # Sets the default for including global search in the header to true.
+    def include_global_search
+      true
     end
   end
 end

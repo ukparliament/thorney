@@ -5,7 +5,9 @@ module ComponentSerializer
     # @param [Array<Hash>] content one or more pieces of content to be wrapped in <p> tags. The hashes have a content key and and optional link key.
     #
     # @example Initialising a paragraph component
-    #   ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'some content', link: 'a link' }]).to_h
+    #  string_or_translation_key = 'Here is some paragraph text'
+    #  link = 'beta.parliament.uk'
+    #  ComponentSerializer::ParagraphComponentSerializer.new([{ content: string_or_translation_key, link: link }]).to_h
     def initialize(content)
       @content = content
     end

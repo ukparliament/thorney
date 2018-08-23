@@ -1,6 +1,7 @@
 module PageSerializer
   class SearchPage
     class LandingPageSerializer < PageSerializer::SearchPage
+      # This serializer inherits the basic search components from the search page, but adds in the landing page specific ones.
       private
 
       def meta

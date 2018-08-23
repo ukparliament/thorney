@@ -32,7 +32,7 @@ module RequestHelper
 
   # Returns uri with specific path added for filtering parliamentary data within sparql queries
   #
-  # @param [String] Path string to append to the base uri
+  # @param [String] path string to append to the base uri
   #
   # @return [String] uri with specific path added for filtering parliamentary data within sparql queries
   def self.namespace_uri_path(path)
@@ -41,7 +41,7 @@ module RequestHelper
 
   # Returns uri with schema path and specific type added for filtering parliamentary data within sparql queries
   #
-  # @param [String] Type string to append to the schema uri
+  # @param [String] type string to append to the schema uri
   #
   # @return [String] uri with schema path and specific type added for filtering parliamentary data within sparql queries
   def self.namespace_uri_schema_path(type)

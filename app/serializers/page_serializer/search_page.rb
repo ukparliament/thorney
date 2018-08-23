@@ -30,12 +30,17 @@ module PageSerializer
     def section_primary_components(heading_content, context_content = nil, context_hidden = nil)
       [].tap do |content|
         content << ComponentSerializer::Heading1ComponentSerializer.new(heading_content: heading_content, context_content: context_content, context_hidden: context_hidden).to_h
-        content << ComponentSerializer::SearchFormComponentSerializer.new(@query, [ComponentSerializer::SearchIconComponentSerializer.new.to_h]).to_h
+        content << ComponentSerializer::SearchFormComponentSerializer.new(query: @query, components: [ComponentSerializer::SearchIconComponentSerializer.new.to_h]).to_h
       end
     end
 
     def total_results
       @results&.totalResults.to_i
+    end
+
+    # Overrides the default of true (found in the base page serializer) for including global search in the header.
+    def include_global_search
+      false
     end
   end
 end

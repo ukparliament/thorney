@@ -1,0 +1,7 @@
+---
+name: hero
+data:
+  content-flag: true
+  components:
+  - 1
+  - 2

@@ -1,0 +1,9 @@
+---
+name: heading
+data:
+  translation:
+    key: search.about-count
+    data:
+      count: 123
+  size: 1
+  link: link.com

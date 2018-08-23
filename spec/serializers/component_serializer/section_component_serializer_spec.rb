@@ -20,6 +20,14 @@ RSpec.describe ComponentSerializer::SectionComponentSerializer do
 
         expect(serializer.to_yaml).to eq expected
       end
+
+      it 'if display data is provided' do
+        serializer = described_class.new(components, display_data: 123 )
+
+        expected = get_fixture('display_data')
+
+        expect(serializer.to_yaml).to eq expected
+      end
     end
 
     context 'a section__primary' do

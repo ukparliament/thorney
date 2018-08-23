@@ -15,8 +15,19 @@ module ComponentSerializer
     # @param [Array<String, Hash>] contents an array of translation blocks, either strings or hashes with a link, each is evaluated in the front-end.
     # @param [Array<Hash>] components an array of objects, each object is a component or atom.
     #
-    # @example Creating an unordered pipe list component
-    #   ComponentSerializer::ListComponentSerializer.new(display: 'pipe', display_data: [{ component: 'component', variant: 'variant' }], type: ComponentSerializer::ListComponentSerializer::Type::UNORDERED, contents: ['search.results', { content: 'cookie-policy', link: '/meta/cookie-policy' }], components: components)
+    # @example Creating a list component with content
+    #  type_of_list = 'generic'
+    #  display_data = [display_data(component: 'list', variant: 'block')]
+    #  ol_or_ul_list = ol
+    #  string_or_translation_key = 'An item in a list'
+    #  ComponentSerializer::ListComponentSerializer.new(display: type_of_list, display_data: display_data, type: ol_or_ul_list, contents: [string_or_translation_key, string_or_translation_key]).to_h
+    #
+    # @example Initialising a link component with components
+    #  type_of_list = 'generic'
+    #  display_data = [display_data(component: 'list', variant: 'block')]
+    #  ol_or_ul_list = ol
+    #  a_serializer = ComponentSerializer::CardComponentSerializer.new(name: 'card__generic', data: { card_type: 'small', heading: 'Card Heading', paragraph: 'Card information' }).to_h
+    #  ComponentSerializer::ListComponentSerializer.new(display: type_of_list, display_data: display_data, type: ol_or_ul_list, components: [a_serializer, a_serializer]).to_h
     def initialize(display: nil, display_data: nil, type: Type::ORDERED, contents: nil, components: nil)
       @display = display
       @display_data = display_data

@@ -50,3 +50,10 @@
         components:
         - name: icon__uk-parliament
           data: shared.header.label
+    - name: form__search
+      data:
+        global: true
+        label: search.label
+        components:
+        - name: icon__search
+          data: search.search-icon

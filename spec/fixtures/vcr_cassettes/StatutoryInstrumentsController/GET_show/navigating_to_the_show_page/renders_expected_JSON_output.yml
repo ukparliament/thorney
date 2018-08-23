@@ -26,14 +26,14 @@ http_interactions:
       Content-Disposition:
       - inline; filename="index"
       Last-Modified:
-      - Thu, 06 Sep 2018 09:05:38 GMT
+      - Fri, 14 Sep 2018 14:26:03 GMT
       X-Content-Type-Options:
       - nosniff
       Content-Length:
       - '4571'
     body:
       encoding: UTF-8
-      string: |-
+      string: |
         <https://id.parliament.uk/9PuVurua> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/StatutoryInstrumentPaper> .
         <https://id.parliament.uk/9PuVurua> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackagedThing> .
         <https://id.parliament.uk/9PuVurua> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing> .
@@ -68,5 +68,5 @@ http_interactions:
         <https://id.parliament.uk/C1234567> <https://id.parliament.uk/schema/proposedNegativeStatutoryInstrumentPaperName> "proposedNegativeStatutoryInstrumentPaperName - 1" .
         <https://id.parliament.uk/D1234567> <https://id.parliament.uk/schema/proposedNegativeStatutoryInstrumentPaperName> "proposedNegativeStatutoryInstrumentPaperName - 2" .
     http_version: 
-  recorded_at: Thu, 06 Sep 2018 14:42:36 GMT
+  recorded_at: Fri, 14 Sep 2018 14:28:11 GMT
 recorded_with: VCR 4.0.0
