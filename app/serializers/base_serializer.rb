@@ -1,5 +1,6 @@
 # The serializer which all serializers inherit from.
 class BaseSerializer
+  include Rails.application.routes.url_helpers
   # Creates a hash of the serializer's content
   def to_h
     dasherize_keys(content)

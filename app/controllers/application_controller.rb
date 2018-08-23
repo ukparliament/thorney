@@ -1,9 +1,13 @@
 require 'parliament'
 require 'parliament/open_search'
+require 'pugin/helpers/controller_helpers'
+require 'parliament/utils'
 
 class ApplicationController < ActionController::API
   include ActionController::RequestForgeryProtection
   include ActionController::Cookies
+  include Pugin::Helpers::ControllerHelpers
+  include Parliament::Utils::Helpers::ApplicationHelper
 
   attr_reader :app_insights_request_id
 
