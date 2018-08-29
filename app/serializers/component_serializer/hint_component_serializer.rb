@@ -12,7 +12,7 @@ module ComponentSerializer
     private
 
     def name
-      'hint'
+      'partials__hint'
     end
 
     def data

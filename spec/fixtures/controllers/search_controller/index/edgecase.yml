@@ -12,6 +12,7 @@ header-components:
   data:
     link: "#content"
     display:
+      name: partials__display
       data:
       - component: skip-to-content
     selector: skiplink
@@ -19,6 +20,7 @@ header-components:
 - name: status__banner
   data:
     display:
+      name: partials__display
       data:
       - component: status
         variant: banner
@@ -35,20 +37,14 @@ header-components:
 - name: status__banner
   data:
     display:
+      name: partials__display
       data:
       - component: status
         variant: banner
     components:
-    - name: list__generic
+    - name: paragraph
       data:
-        type: ul
-        display:
-          data:
-          - component: list
-            variant: inline
-        contents:
-        - content: shared.header.pages-being-tested
-        - content: shared.header.current-website
+      - content: shared.header.beta-status
 - name: header
   data:
     components:
@@ -56,6 +52,7 @@ header-components:
       data:
         link: "/"
         display:
+          name: partials__display
           data:
           - component: uk_parliament
         label: shared.header.label
@@ -94,6 +91,7 @@ main-components:
     - name: status__highlight
       data:
         display:
+          name: partials__display
           data:
           - component: status
             variant: highlight
@@ -105,6 +103,7 @@ main-components:
       data:
         type: ol
         display:
+          name: partials__display
           data:
           - component: list
             variant: block
@@ -114,9 +113,10 @@ main-components:
             heading-text: Recovery of benefit overpayments due to official error
             url: http://researchbriefings.files.parliament.uk/documents/SN05856/SN05856.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -171,9 +171,10 @@ main-components:
             heading-text: Confidence Motions - researchbriefings.files.parliament.uk
             url: http://researchbriefings.files.parliament.uk/documents/SN02873/SN02873.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -189,9 +190,10 @@ main-components:
               ...
             url: http://researchbriefings.files.parliament.uk/documents/SN02625/SN02625.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -205,9 +207,10 @@ main-components:
             heading-text: The roll–out of the Jobcentre Plus office network
             url: https://publications.parliament.uk/pa/cm200708/cmselect/cmpubacc/532/532.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -222,9 +225,10 @@ main-components:
             heading-text: 'The retail industry: statistics and policy'
             url: http://researchbriefings.files.parliament.uk/documents/SN06186/SN06186.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -238,9 +242,10 @@ main-components:
             heading-text: 'Summer-born children: starting school'
             url: http://researchbriefings.files.parliament.uk/documents/CBP-7272/CBP-7272.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -265,9 +270,10 @@ main-components:
             heading-text: House of Commons Environment, Food and Rural Affairs ...
             url: https://publications.parliament.uk/pa/cm201516/cmselect/cmenvfru/479/479.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -355,9 +361,10 @@ main-components:
             heading-text: Sheffield to Rotherham tram-trains
             url: https://publications.parliament.uk/pa/cm201719/cmselect/cmpubacc/453/453.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -382,9 +389,10 @@ main-components:
             heading-text: ST. ANDREW'S HOSPITAL, BILLERICAY (Hansard, 10 May 1954)
             url: https://api.parliament.uk/historic-hansard/commons/1954/may/10/st-andrews-hospital-billericay
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -430,9 +438,10 @@ main-components:
             heading-text: UK VACCINE CAPACITY
             url: http://researchbriefings.files.parliament.uk/documents/POST-PN-314/POST-PN-314.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -480,9 +489,10 @@ main-components:
             heading-text: PWC KPMG Deloitte EY Individual Richard Adam (Finance ...
             url: https://www.parliament.uk/documents/commons-committees/work-and-pensions/Correspondence/Grid-of-Big-Four-work-for-Carillion.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -506,9 +516,10 @@ main-components:
             heading-text: Committee of Public Accounts - UK Parliament
             url: https://www.parliament.uk/documents/commons-committees/public-accounts/Chair-to-Chris-Wormald.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -530,9 +541,10 @@ main-components:
             heading-text: Transport and accessibility to public services
             url: https://publications.parliament.uk/pa/cm201314/cmselect/cmenvaud/201/201.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -592,9 +604,10 @@ main-components:
             heading-text: The future of investigative journalism
             url: https://publications.parliament.uk/pa/ld201012/ldselect/ldcomuni/256/256.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -609,9 +622,10 @@ main-components:
             heading-text: Guaranteed Minimum Pension (GMP) increases
             url: http://researchbriefings.files.parliament.uk/documents/SN04956/SN04956.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -644,9 +658,10 @@ main-components:
             heading-text: Number 381 June 2011 Mental Capacity and Healthcare
             url: https://www.parliament.uk/pagefiles/504/postpn_381-mental-capacity-and-healthcare.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -689,9 +704,10 @@ main-components:
             heading-text: qna.files.parliament.uk
             url: http://qna.files.parliament.uk/qna-attachments/934957/original/PQW08977%20UIN%20161079.docx
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -778,6 +794,7 @@ footer-components:
       data:
         type: ul
         display:
+          name: partials__display
           data:
           - component: list
         contents:

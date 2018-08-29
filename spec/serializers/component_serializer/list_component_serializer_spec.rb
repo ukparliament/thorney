@@ -22,7 +22,6 @@ RSpec.describe ComponentSerializer::ListComponentSerializer do
 
         it 'when display_data is specified' do
           serializer = described_class.new(display_data: 123)
-
           expected = get_fixture('display_data')
 
           expect(serializer.to_yaml).to eq expected

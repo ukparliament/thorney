@@ -49,7 +49,7 @@ module PartialSerializer
     end
 
     def status_banner_components
-      [ComponentSerializer::ListComponentSerializer.new(display: 'generic', contents: ['shared.header.pages-being-tested', 'shared.header.current-website'], display_data: [display_data(component: 'list', variant: 'inline')], type: ComponentSerializer::ListComponentSerializer::Type::UNORDERED).to_h]
+      [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'shared.header.beta-status' }]).to_h]
     end
 
     def header_component
