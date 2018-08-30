@@ -88,17 +88,6 @@ main-components:
           data:
             count: 1030
         size: 2
-    - name: status__highlight
-      data:
-        display:
-          name: partials__display
-          data:
-          - component: status
-            variant: highlight
-        components:
-        - name: paragraph
-          data:
-          - content: search.new-search
     - name: list__generic
       data:
         type: ol

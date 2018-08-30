@@ -31,7 +31,6 @@ module PageSerializer
       def results_section_components
         [].tap do |content|
           content << results_section_heading
-          content << ComponentSerializer::StatusComponentSerializer.new(type: 'highlight', display_data: [display_data(component: 'status', variant: 'highlight')], components: [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'search.new-search' }]).to_h]).to_h
           content << ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: SearchResultHelper.create_search_results(@results)).to_h if total_results.positive?
         end
       end
