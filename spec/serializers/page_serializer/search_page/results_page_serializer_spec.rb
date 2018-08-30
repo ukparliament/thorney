@@ -100,7 +100,6 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
         subject.to_h
 
         expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(translation_key: 'search.count', translation_data: { count: 658 }, size: 2)
-        expect(ComponentSerializer::StatusComponentSerializer).to have_received(:new).with(type: 'highlight', display_data: [{ component: 'status', variant: 'highlight' }], components: [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'search.new-search' }]).to_h])
         expect(ComponentSerializer::ListComponentSerializer).to have_received(:new).with(display: 'generic', display_data: [{ component: 'list', variant: 'block' }], components: SearchResultHelper.create_search_results(results))
       end
 
@@ -110,7 +109,6 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
         subject.to_h
 
         expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(content: ['search.no-results'], size: 2)
-        expect(ComponentSerializer::StatusComponentSerializer).to have_received(:new).with(type: 'highlight', display_data: [{ component: 'status', variant: 'highlight' }], components: [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'search.new-search' }]).to_h])
         expect(ComponentSerializer::ListComponentSerializer).not_to have_received(:new).with(display: 'generic', display_data: [{ component: 'list', variant: 'block' }], components: SearchResultHelper.create_search_results(results))
       end
     end
