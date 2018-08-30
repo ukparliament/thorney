@@ -225,55 +225,52 @@ main-components:
             paragraph-content: 'Tony Blair and Gaddafi call February 25. 1h . 1115
               -1145 {the line was bad so there are some gaps} TB: Hello. I have been
               trying to reach you for the last few days.'
-- name: section__section
+- name: navigation__number__number
   data:
+    active-tile: 1
+    next-url: "/search?count=10&q=hello&start_index=11"
     components:
-    - name: navigation__number__number
+    - name: navigation__number__card
       data:
-        active-tile: 1
-        next-url: "/search?count=10&q=hello&start_index=11"
-        components:
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=hello&start_index=1"
-            number: 1
-            total-count: of 103
-            active: true
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=hello&start_index=11"
-            number: 2
-            total-count: of 103
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=hello&start_index=21"
-            number: 3
-            total-count: of 103
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=hello&start_index=31"
-            number: 4
-            total-count: of 103
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=hello&start_index=41"
-            number: 5
-            total-count: of 103
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=hello&start_index=51"
-            number: 6
-            total-count: of 103
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=hello&start_index=61"
-            number: 7
-            total-count: of 103
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=hello&start_index=71"
-            number: 8
-            total-count: of 103
+        url: "/search?count=10&q=hello&start_index=1"
+        number: 1
+        total-count: of 103
+        active: true
+    - name: navigation__number__card
+      data:
+        url: "/search?count=10&q=hello&start_index=11"
+        number: 2
+        total-count: of 103
+    - name: navigation__number__card
+      data:
+        url: "/search?count=10&q=hello&start_index=21"
+        number: 3
+        total-count: of 103
+    - name: navigation__number__card
+      data:
+        url: "/search?count=10&q=hello&start_index=31"
+        number: 4
+        total-count: of 103
+    - name: navigation__number__card
+      data:
+        url: "/search?count=10&q=hello&start_index=41"
+        number: 5
+        total-count: of 103
+    - name: navigation__number__card
+      data:
+        url: "/search?count=10&q=hello&start_index=51"
+        number: 6
+        total-count: of 103
+    - name: navigation__number__card
+      data:
+        url: "/search?count=10&q=hello&start_index=61"
+        number: 7
+        total-count: of 103
+    - name: navigation__number__card
+      data:
+        url: "/search?count=10&q=hello&start_index=71"
+        number: 8
+        total-count: of 103
 footer-components:
 - name: footer
   data:
