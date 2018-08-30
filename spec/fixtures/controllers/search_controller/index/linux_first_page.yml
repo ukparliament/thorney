@@ -12,6 +12,7 @@ header-components:
   data:
     link: "#content"
     display:
+      name: partials__display
       data:
       - component: skip-to-content
     selector: skiplink
@@ -19,6 +20,7 @@ header-components:
 - name: status__banner
   data:
     display:
+      name: partials__display
       data:
       - component: status
         variant: banner
@@ -35,20 +37,14 @@ header-components:
 - name: status__banner
   data:
     display:
+      name: partials__display
       data:
       - component: status
         variant: banner
     components:
-    - name: list__generic
+    - name: paragraph
       data:
-        type: ul
-        display:
-          data:
-          - component: list
-            variant: inline
-        contents:
-        - content: shared.header.pages-being-tested
-        - content: shared.header.current-website
+      - content: shared.header.beta-status
 - name: header
   data:
     components:
@@ -56,6 +52,7 @@ header-components:
       data:
         link: "/"
         display:
+          name: partials__display
           data:
           - component: uk_parliament
         label: shared.header.label
@@ -94,6 +91,7 @@ main-components:
     - name: status__highlight
       data:
         display:
+          name: partials__display
           data:
           - component: status
             variant: highlight
@@ -105,6 +103,7 @@ main-components:
       data:
         type: ol
         display:
+          name: partials__display
           data:
           - component: list
             variant: block
@@ -114,9 +113,10 @@ main-components:
             heading-text: OPEN SOURCE SOFTWARE - parliament.uk
             url: https://www.parliament.uk/documents/post/postpn242.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -130,9 +130,10 @@ main-components:
             heading-text: Job Description and Person Specification - parliament.uk
             url: https://www.parliament.uk/documents/jobs/pds-vacancies/A1-Head-of-Productivity-and-Collaboration-JD-May-18.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -155,9 +156,10 @@ main-components:
             heading-text: Job Description and Person Specification - UK Parliament
             url: https://www.parliament.uk/documents/B1-Web-Operations-Engineer-JD.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -171,9 +173,10 @@ main-components:
             heading-text: Number 414 July 2012 Open Source and Open Standards
             url: http://researchbriefings.files.parliament.uk/documents/POST-PN-414/POST-PN-414.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -187,9 +190,10 @@ main-components:
             heading-text: Job Description and Person Specification - UK Parliament
             url: https://www.parliament.uk/documents/jobs/pds-vacancies/Head_Of_Development_JD.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -203,9 +207,10 @@ main-components:
             heading-text: Job Description and Person Specification - parliament.uk
             url: https://www.parliament.uk/documents/jobs/PICT-Vacancies/Q10276_A1_Network_Architect_JD.pdf
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -276,6 +281,7 @@ footer-components:
       data:
         type: ul
         display:
+          name: partials__display
           data:
           - component: list
         contents:
