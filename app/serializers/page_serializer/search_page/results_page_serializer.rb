@@ -24,7 +24,7 @@ module PageSerializer
         [].tap do |content|
           content << ComponentSerializer::SectionComponentSerializer.new(section_primary_components('search.results-heading', @query, true), type: 'primary').to_h
           content << ComponentSerializer::SectionComponentSerializer.new(results_section_components, content_flag: true).to_h
-          content << ComponentSerializer::SectionComponentSerializer.new(@pagination_helper.navigation_section_components).to_h if total_results >= 1
+          content << @pagination_helper.navigation_section_components if total_results >= 1
         end
       end
 

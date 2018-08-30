@@ -188,35 +188,32 @@ main-components:
             paragraph-content: 'In part of the evidence it says, ... Mr Granger: None
               of the operating systems, because they are either industry standard
               proprietary systems or LINUX.'
-- name: section__section
+- name: navigation__number__number
   data:
+    active-tile: 4
+    previous-url: "/search?count=10&q=linux&start_index=21"
     components:
-    - name: navigation__number__number
+    - name: navigation__number__card
       data:
-        active-tile: 4
-        previous-url: "/search?count=10&q=linux&start_index=21"
-        components:
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=linux&start_index=1"
-            number: 1
-            total-count: of 4
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=linux&start_index=11"
-            number: 2
-            total-count: of 4
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=linux&start_index=21"
-            number: 3
-            total-count: of 4
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=linux&start_index=31"
-            number: 4
-            total-count: of 4
-            active: true
+        url: "/search?count=10&q=linux&start_index=1"
+        number: 1
+        total-count: of 4
+    - name: navigation__number__card
+      data:
+        url: "/search?count=10&q=linux&start_index=11"
+        number: 2
+        total-count: of 4
+    - name: navigation__number__card
+      data:
+        url: "/search?count=10&q=linux&start_index=21"
+        number: 3
+        total-count: of 4
+    - name: navigation__number__card
+      data:
+        url: "/search?count=10&q=linux&start_index=31"
+        number: 4
+        total-count: of 4
+        active: true
 footer-components:
 - name: footer
   data:

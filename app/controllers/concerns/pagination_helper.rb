@@ -21,7 +21,7 @@ class PaginationHelper
       hash[:components] = create_number_cards
     end
 
-    [ComponentSerializer::CardComponentSerializer.new('navigation__number__number', data).to_h]
+    ComponentSerializer::CardComponentSerializer.new('navigation__number__number', data).to_h
   end
 
   def current_page

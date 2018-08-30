@@ -41,7 +41,6 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
   context '#to_h' do
     context 'with a query' do
       it 'produces the correct hash' do
-
         expected = get_fixture('with_a_query')
 
         expect(subject.to_yaml).to eq(expected)
@@ -75,7 +74,6 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
 
         expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with([], type: 'primary')
         expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with('results section components', content_flag: true)
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with('navigation section components')
       end
 
       it 'without results' do
@@ -85,7 +83,6 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
 
         expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with([], type: 'primary')
         expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with('results section components', content_flag: true)
-        expect(ComponentSerializer::SectionComponentSerializer).not_to have_received(:new).with('navigation section components')
       end
     end
 
