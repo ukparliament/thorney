@@ -2,6 +2,7 @@
 name: status__banner
 data:
   display:
+    name: partials__display
     data: display_data
   selector: selector
   components: components

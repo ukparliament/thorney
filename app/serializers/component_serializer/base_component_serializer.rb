@@ -19,7 +19,10 @@ module ComponentSerializer
     end
 
     def display_hash(display_data)
-      { data: display_data }
+      {
+        name: 'partials__display',
+        data: display_data
+      }
     end
   end
 end
