@@ -3,7 +3,7 @@ module ComponentSerializer
     # Initialise a card component.
     #
     # @param [String] name name of the card.
-    # @param [String] data data of the card.
+    # @param [Hash] data data of the card.
     def initialize(name, data)
       @name = name
       @data = data
