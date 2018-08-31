@@ -1,6 +1,6 @@
 pipelines:
   parliament.uk-thorney:
-    group: main
+    group: Main
     label_template: "${COUNT}"
     environment_variables:
       RACK_ENV: development
