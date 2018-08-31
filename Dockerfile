@@ -54,9 +54,6 @@ ENV RAILS_LOG_TO_STDOUT $RAILS_LOG_TO_STDOUT
 ENV RACK_ENV $RACK_ENV
 ENV RAILS_SERVE_STATIC_FILES true
 
-# Precompile assets
-RUN bundle exec rails assets:precompile
-
 # Add additional labels to our image
 ARG GIT_SHA=unknown
 ARG GIT_TAG=unknown
