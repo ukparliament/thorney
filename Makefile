@@ -82,6 +82,7 @@ build: # Using the variables defined above, run `docker build`, tagging the imag
 		--build-arg BANDIERA_URL=$(BANDIERA_URL) \
 		--build-arg APPLICATION_INSIGHTS_INSTRUMENTATION_KEY=$(APPLICATION_INSIGHTS_INSTRUMENTATION_KEY) \
 		--build-arg RAILS_LOG_TO_STDOUT=$(RAILS_LOG_TO_STDOUT) \
+		--build-arg SECRET_KEY_BASE=$(SECRET_KEY_BASE) \
 		--build-arg RACK_ENV=$(RACK_ENV) \
 		--build-arg GIT_SHA="$(GIT_SHA)" \
 		--build-arg GIT_TAG="$(GIT_TAG)" \
