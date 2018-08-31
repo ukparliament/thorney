@@ -65,5 +65,8 @@ LABEL git-sha=$GIT_SHA \
 # Expose port 3000
 EXPOSE 3000
 
+# Setup a health check
+HEALTHCHECK --interval=5s --timeout=3s CMD curl --fail http://localhost:3000/health-check || exit 1
+
 # Launch puma
 CMD ["bundle", "exec", "rails", "s", "-b", "0.0.0.0"]
