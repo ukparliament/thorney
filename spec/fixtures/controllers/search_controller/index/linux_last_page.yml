@@ -12,6 +12,7 @@ header-components:
   data:
     link: "#content"
     display:
+      name: partials__display
       data:
       - component: skip-to-content
     selector: skiplink
@@ -19,6 +20,7 @@ header-components:
 - name: status__banner
   data:
     display:
+      name: partials__display
       data:
       - component: status
         variant: banner
@@ -35,20 +37,14 @@ header-components:
 - name: status__banner
   data:
     display:
+      name: partials__display
       data:
       - component: status
         variant: banner
     components:
-    - name: list__generic
+    - name: paragraph
       data:
-        type: ul
-        display:
-          data:
-          - component: list
-            variant: inline
-        contents:
-        - content: shared.header.pages-being-tested
-        - content: shared.header.current-website
+      - content: shared.header.beta-status
 - name: header
   data:
     components:
@@ -56,6 +52,7 @@ header-components:
       data:
         link: "/"
         display:
+          name: partials__display
           data:
           - component: uk_parliament
         label: shared.header.label
@@ -91,20 +88,11 @@ main-components:
           data:
             count: 37
         size: 2
-    - name: status__highlight
-      data:
-        display:
-          data:
-          - component: status
-            variant: highlight
-        components:
-        - name: paragraph
-          data:
-          - content: search.new-search
     - name: list__generic
       data:
         type: ol
         display:
+          name: partials__display
           data:
           - component: list
             variant: block
@@ -114,9 +102,10 @@ main-components:
             heading-text: E-services (Hansard, 16 January 2003) - api.parliament.uk
             url: https://api.parliament.uk/historic-hansard/westminster-hall/2003/jan/16/e-services
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -137,9 +126,10 @@ main-components:
             heading-text: 'Mr Charles Clarke: speeches in 1999 (Hansard)'
             url: https://api.parliament.uk/historic-hansard/people/mr-charles-clarke/1999
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -162,9 +152,10 @@ main-components:
             heading-text: Co-operatives and Community Benefit Societies Bill ...
             url: https://api.parliament.uk/historic-hansard/commons/2003/jan/31/co-operatives-and-community-benefit
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -178,9 +169,10 @@ main-components:
             heading-text: Sitting of 16 February 1999 (Hansard) - api.parliament.uk
             url: https://api.parliament.uk/historic-hansard/sittings/1999/feb/16
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -196,35 +188,32 @@ main-components:
             paragraph-content: 'In part of the evidence it says, ... Mr Granger: None
               of the operating systems, because they are either industry standard
               proprietary systems or LINUX.'
-- name: section__section
+- name: navigation__number__number
   data:
+    active-tile: 4
+    previous-url: "/search?count=10&q=linux&start_index=21"
     components:
-    - name: navigation__number__number
+    - name: navigation__number__card
       data:
-        active-tile: 4
-        previous-url: "/search?count=10&q=linux&start_index=21"
-        components:
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=linux&start_index=1"
-            number: 1
-            total-count: of 4
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=linux&start_index=11"
-            number: 2
-            total-count: of 4
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=linux&start_index=21"
-            number: 3
-            total-count: of 4
-        - name: navigation__number__card
-          data:
-            url: "/search?count=10&q=linux&start_index=31"
-            number: 4
-            total-count: of 4
-            active: true
+        url: "/search?count=10&q=linux&start_index=1"
+        number: 1
+        total-count: of 4
+    - name: navigation__number__card
+      data:
+        url: "/search?count=10&q=linux&start_index=11"
+        number: 2
+        total-count: of 4
+    - name: navigation__number__card
+      data:
+        url: "/search?count=10&q=linux&start_index=21"
+        number: 3
+        total-count: of 4
+    - name: navigation__number__card
+      data:
+        url: "/search?count=10&q=linux&start_index=31"
+        number: 4
+        total-count: of 4
+        active: true
 footer-components:
 - name: footer
   data:
@@ -234,6 +223,7 @@ footer-components:
       data:
         type: ul
         display:
+          name: partials__display
           data:
           - component: list
         contents:

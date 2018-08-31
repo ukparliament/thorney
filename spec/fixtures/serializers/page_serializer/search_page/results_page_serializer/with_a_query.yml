@@ -10,6 +10,7 @@ header-components:
   data:
     link: "#content"
     display:
+      name: partials__display
       data:
       - component: skip-to-content
     selector: skiplink
@@ -17,6 +18,7 @@ header-components:
 - name: status__banner
   data:
     display:
+      name: partials__display
       data:
       - component: status
         variant: banner
@@ -33,20 +35,14 @@ header-components:
 - name: status__banner
   data:
     display:
+      name: partials__display
       data:
       - component: status
         variant: banner
     components:
-    - name: list__generic
+    - name: paragraph
       data:
-        type: ul
-        display:
-          data:
-          - component: list
-            variant: inline
-        contents:
-        - content: shared.header.pages-being-tested
-        - content: shared.header.current-website
+      - content: shared.header.beta-status
 - name: header
   data:
     components:
@@ -54,6 +50,7 @@ header-components:
       data:
         link: "/"
         display:
+          name: partials__display
           data:
           - component: uk_parliament
         label: shared.header.label
@@ -89,20 +86,11 @@ main-components:
           data:
             count: 658
         size: 2
-    - name: status__highlight
-      data:
-        display:
-          data:
-          - component: status
-            variant: highlight
-        components:
-        - name: paragraph
-          data:
-          - content: search.new-search
     - name: list__generic
       data:
         type: ol
         display:
+          name: partials__display
           data:
           - component: list
             variant: block
@@ -112,9 +100,10 @@ main-components:
             heading-text: Result one
             url: link
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     variant: grey-4
@@ -132,43 +121,41 @@ main-components:
             heading-text: Result three
             url: link
             hints:
-            - name: hint
+            - name: partials__hint
               data:
                 display:
+                  name: partials__display
                   data:
                   - component: theme
                     content: Beta
             short-url: link...
             paragraph-content: Content three
-- name: section__section
+- name: navigation__number__number
   data:
+    active-tile: 1
+    next-url: "?count=100&q=hello&start_index=101"
     components:
-    - name: navigation__number__number
+    - name: navigation__number__card
       data:
-        active-tile: 1
-        next-url: "?count=100&q=hello&start_index=101"
-        components:
-        - name: navigation__number__card
-          data:
-            url: "?count=100&q=hello&start_index=1"
-            number: 1
-            total-count: of 4
-            active: true
-        - name: navigation__number__card
-          data:
-            url: "?count=100&q=hello&start_index=101"
-            number: 2
-            total-count: of 4
-        - name: navigation__number__card
-          data:
-            url: "?count=100&q=hello&start_index=201"
-            number: 3
-            total-count: of 4
-        - name: navigation__number__card
-          data:
-            url: "?count=100&q=hello&start_index=301"
-            number: 4
-            total-count: of 4
+        url: "?count=100&q=hello&start_index=1"
+        number: 1
+        total-count: of 4
+        active: true
+    - name: navigation__number__card
+      data:
+        url: "?count=100&q=hello&start_index=101"
+        number: 2
+        total-count: of 4
+    - name: navigation__number__card
+      data:
+        url: "?count=100&q=hello&start_index=201"
+        number: 3
+        total-count: of 4
+    - name: navigation__number__card
+      data:
+        url: "?count=100&q=hello&start_index=301"
+        number: 4
+        total-count: of 4
 footer-components:
 - name: footer
   data:
@@ -178,6 +165,7 @@ footer-components:
       data:
         type: ul
         display:
+          name: partials__display
           data:
           - component: list
         contents:
