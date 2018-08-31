@@ -3,7 +3,7 @@ pipelines:
     group: Main
     label_template: "${COUNT}"
     environment_variables:
-      RACK_ENV: development
+      RACK_ENV: production
     materials:
       parliament.uk-thorney-git:
         git: https://github.com/ukparliament/thorney.git
