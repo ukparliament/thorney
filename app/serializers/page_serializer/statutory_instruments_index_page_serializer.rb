@@ -1,14 +1,20 @@
 module PageSerializer
   class StatutoryInstrumentsIndexPageSerializer < PageSerializer::BasePageSerializer
-    def initialize(statutory_instruments: nil, request_id: nil)
+    def initialize(statutory_instruments:, request_id: nil, data_alternates: nil, request_original_url: nil)
       @statutory_instruments = statutory_instruments
-      @request_id = request_id if request_id
+      @data_alternates = data_alternates
+
+      super(request_id: request_id, data_alternates: data_alternates, request_original_url: request_original_url)
     end
 
     private
 
     def meta
-      { title: 'Statutory Instruments' }
+      super(title: title)
+    end
+
+    def title
+      'statutory-instruments.index.title'
     end
 
     def content
@@ -19,7 +25,7 @@ module PageSerializer
     end
 
     def section_primary_components
-      [ComponentSerializer::Heading1ComponentSerializer.new({ heading_content: 'Statutory Instruments' }).to_h]
+      [ComponentSerializer::Heading1ComponentSerializer.new({ heading_content: title }).to_h]
     end
 
     def section_components

@@ -9,7 +9,6 @@ require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 require 'parliament/open_search/description_cache'
-require 'parliament/utils/test_helpers'
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -60,5 +59,4 @@ RSpec.configure do |config|
   Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
   config.include(IntegrationFixtureHelper, type: :request)
   config.include(SerializerFixtureHelper, type: :serializer)
-  config.include Parliament::Utils::Helpers::ApplicationHelper
 end

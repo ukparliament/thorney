@@ -14,6 +14,7 @@ RSpec.describe PageSerializer::SearchPage::LandingPageSerializer do
     context 'with a flash message' do
       it 'produces the correct hash' do
         serializer = described_class.new(flash_message: 'some flash message')
+        create_fixture(serializer, 'with_flash_message')
 
         expected = get_fixture('with_flash_message')
 

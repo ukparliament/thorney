@@ -58,15 +58,15 @@ RSpec.describe BaseSerializer do
     end
   end
 
-  context '#localize' do
+  context '#l' do
     it 'correctly localizes a date' do
       date = DateTime.new(2018, 9, 10, 0, 0)
 
-      expect(subject.localize(date)).to eq('10 September 2018')
+      expect(subject.l(date)).to eq('10 September 2018')
     end
 
     it 'handles a nil date without raising an error' do
-      expect(subject.localize(nil)).to be(nil)
+      expect(subject.l(nil)).to be(nil)
     end
   end
 
@@ -88,6 +88,24 @@ RSpec.describe BaseSerializer do
       item = subject.create_description_list_item('email', ['hello@example.com', 'hello@gmail.com'])
 
       expect(item).to eq(expected_hash)
+    end
+
+    it 'does not produce a hash for an empty description array' do
+      item = subject.create_description_list_item('email', [])
+
+      expect(item).to be(nil)
+    end
+
+    it 'does not produce a hash for a description array with only nil content' do
+      item = subject.create_description_list_item('email', [nil, nil])
+
+      expect(item).to be(nil)
+    end
+
+    it 'does not produce a hash for a description array with only empty string content' do
+      item = subject.create_description_list_item('email', ['', ''])
+
+      expect(item).to be(nil)
     end
   end
 end

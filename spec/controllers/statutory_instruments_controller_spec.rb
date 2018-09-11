@@ -3,6 +3,24 @@ require 'rails_helper'
 
 RSpec.describe StatutoryInstrumentsController, vcr: true do
   describe 'GET index' do
+    let(:data_alternates) do
+      [{
+         :href => "#{ENV['PARLIAMENT_BASE_URL']}/statutory_instrument_index.nt",
+         :type => "application/n-triples" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/statutory_instrument_index.ttl",
+         :type => "text/turtle" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/statutory_instrument_index.tsv",
+         :type => "text/tab-separated-values" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/statutory_instrument_index.csv",
+         :type => "text/csv" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/statutory_instrument_index.rj",
+         :type => "application/json+rdf" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/statutory_instrument_index.json",
+         :type => "application/json+ld" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/statutory_instrument_index.xml",
+         :type => "application/rdf+xml" }]
+    end
+
     before(:each) do
       allow(PageSerializer::StatutoryInstrumentsIndexPageSerializer).to receive(:new)
       allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
@@ -24,11 +42,29 @@ RSpec.describe StatutoryInstrumentsController, vcr: true do
     it 'calls the serializer correctly' do
       statutory_instruments = assigns(:statutory_instruments)
 
-      expect(PageSerializer::StatutoryInstrumentsIndexPageSerializer).to have_received(:new).with(statutory_instruments: statutory_instruments, request_id: '|1234abcd.')
+      expect(PageSerializer::StatutoryInstrumentsIndexPageSerializer).to have_received(:new).with(statutory_instruments: statutory_instruments, request_id: '|1234abcd.', data_alternates: data_alternates, request_original_url: request.original_url)
     end
   end
 
   describe 'GET show' do
+    let(:data_alternates) do
+      [{
+         :href => "#{ENV['PARLIAMENT_BASE_URL']}/statutory_instrument_by_id.nt?statutory_instrument_id=12345678",
+         :type => "application/n-triples" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/statutory_instrument_by_id.ttl?statutory_instrument_id=12345678",
+         :type => "text/turtle" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/statutory_instrument_by_id.tsv?statutory_instrument_id=12345678",
+         :type => "text/tab-separated-values" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/statutory_instrument_by_id.csv?statutory_instrument_id=12345678",
+         :type => "text/csv" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/statutory_instrument_by_id.rj?statutory_instrument_id=12345678",
+         :type => "application/json+rdf" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/statutory_instrument_by_id.json?statutory_instrument_id=12345678",
+         :type => "application/json+ld" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/statutory_instrument_by_id.xml?statutory_instrument_id=12345678",
+         :type => "application/rdf+xml" }]
+    end
+
     before(:each) do
       allow(PageSerializer::StatutoryInstrumentsShowPageSerializer).to receive(:new)
       allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
@@ -48,7 +84,7 @@ RSpec.describe StatutoryInstrumentsController, vcr: true do
     it 'calls the serializer correctly' do
       statutory_instrument = assigns(:statutory_instrument)
 
-      expect(PageSerializer::StatutoryInstrumentsShowPageSerializer).to have_received(:new).with(statutory_instrument: statutory_instrument, request_id: '|1234abcd.')
+      expect(PageSerializer::StatutoryInstrumentsShowPageSerializer).to have_received(:new).with(statutory_instrument: statutory_instrument, request_id: '|1234abcd.', data_alternates: data_alternates, request_original_url: request.original_url)
     end
   end
 end

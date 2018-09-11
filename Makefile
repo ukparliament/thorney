@@ -74,7 +74,6 @@ checkout_to_release:
 
 build: # Using the variables defined above, run `docker build`, tagging the image and passing in the required arguments.
 	docker build -t $(IMAGE):$(VERSION) -t $(IMAGE):latest \
-	    --build-arg PARLIAMENT_BASE_URL=$(PARLIAMENT_BASE_URL) \
 		--build-arg PARLIAMENT_API_VERSION=$(PARLIAMENT_API_VERSION) \
 		--build-arg OPENSEARCH_DESCRIPTION_URL=$(OPENSEARCH_DESCRIPTION_URL) \
 		--build-arg OPENSEARCH_AUTH_TOKEN=$(OPENSEARCH_AUTH_TOKEN) \

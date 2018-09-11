@@ -5,10 +5,6 @@ RSpec.describe PageSerializer::SearchPage do
   let(:subject) { described_class.new(query: 'banana', results: results) }
 
   context 'raising errors' do
-    it '#meta' do
-      expect{ subject.send(:meta) }.to raise_error StandardError, 'You must implement #meta'
-    end
-
     it '#content' do
       expect{ subject.send(:content) }.to raise_error StandardError, 'You must implement #content'
     end

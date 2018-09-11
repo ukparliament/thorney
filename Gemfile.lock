@@ -50,9 +50,6 @@ GEM
     application_insights (0.5.6)
     arel (9.0.0)
     ast (2.4.0)
-    bandiera-client (3.1.0)
-      macmillan-utils
-      typhoeus
     bootsnap (1.3.1)
       msgpack (~> 1.0)
     builder (3.2.3)
@@ -64,9 +61,6 @@ GEM
       rack (>= 1.6.0)
       rack-test (>= 0.6.3)
       xpath (~> 3.1)
-    codeclimate-test-reporter (1.0.7)
-      simplecov
-    colorize (0.8.1)
     concurrent-ruby (1.0.5)
     coveralls (0.8.22)
       json (>= 1.8, < 3)
@@ -80,8 +74,6 @@ GEM
     diff-lcs (1.3)
     docile (1.3.1)
     erubi (1.7.1)
-    ethon (0.11.0)
-      ffi (>= 1.3.0)
     faraday (0.15.2)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.12.2)
@@ -98,9 +90,6 @@ GEM
       activesupport (>= 5.0.0.1)
       rdf (= 2.2.3)
       rdf-vocab (~> 2.2)
-    haml (5.0.4)
-      temple (>= 0.8.0)
-      tilt
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     hashdiff (0.3.7)
@@ -116,17 +105,6 @@ GEM
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    macmillan-utils (1.0.44)
-      activesupport (>= 3.2.0)
-      codeclimate-test-reporter
-      colorize
-      multi_test
-      rspec
-      rubocop
-      simplecov
-      simplecov-rcov
-      syslog-logger
-      webmock
     mail (2.7.0)
       mini_mime (>= 0.1.1)
     marcel (0.3.2)
@@ -137,7 +115,6 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     msgpack (1.2.4)
-    multi_test (0.1.2)
     multipart-post (2.0.0)
     nio4r (2.3.1)
     nokogiri (1.8.4)
@@ -153,23 +130,10 @@ GEM
       feedjira (~> 2.1, >= 2.1.2)
     parliament-routes (0.6.10)
     parliament-ruby (0.10.2)
-    parliament-utils (0.11.0)
-      bandiera-client
-      coveralls
-      haml
-      i18n
-      parliament-grom-decorators
-      parliament-ntriple
-      parliament-ruby
-      pugin
-      redcarpet (~> 3.0)
-      simplecov
-      vcard
     parser (2.5.1.2)
       ast (~> 2.4.0)
     powerpack (0.1.2)
     public_suffix (3.0.3)
-    pugin (1.9.7)
     puma (3.12.0)
     rack (2.0.5)
     rack-rewrite (1.5.1)
@@ -214,11 +178,6 @@ GEM
       link_header (~> 0.0, >= 0.0.8)
     rdf-vocab (2.2.9)
       rdf (>= 2.2, < 4.0)
-    redcarpet (3.4.0)
-    rspec (3.8.0)
-      rspec-core (~> 3.8.0)
-      rspec-expectations (~> 3.8.0)
-      rspec-mocks (~> 3.8.0)
     rspec-core (3.8.0)
       rspec-support (~> 3.8.0)
     rspec-expectations (3.8.1)
@@ -257,8 +216,6 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.2)
-    simplecov-rcov (0.2.3)
-      simplecov (>= 0.4.1)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -271,23 +228,17 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    syslog-logger (1.6.8)
-    temple (0.8.0)
     term-ansicolor (1.6.0)
       tins (~> 1.0)
     thor (0.19.4)
     thread_safe (0.3.6)
-    tilt (2.0.8)
     timecop (0.9.1)
     tins (1.16.3)
-    typhoeus (1.3.0)
-      ethon (>= 0.9.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     tzinfo-data (1.2018.5)
       tzinfo (>= 1.0.0)
     unicode-display_width (1.4.0)
-    vcard (0.2.15)
     vcr (4.0.0)
     webmock (3.4.2)
       addressable (>= 2.3.6)
@@ -305,18 +256,16 @@ PLATFORMS
 DEPENDENCIES
   airbrake (~> 7.3)
   application_insights
-  bandiera-client
   bootsnap (>= 1.1.0)
   byebug
   capybara
   coveralls
   listen (>= 3.0.5, < 3.2)
   parliament-grom-decorators (~> 0.2)
+  parliament-ntriple (~> 0.3)
   parliament-opensearch (~> 0.4)
   parliament-routes (~> 0.6)
   parliament-ruby (~> 0.8)
-  parliament-utils (~> 0.11.0)
-  pugin (~> 1.9.4)
   puma (~> 3.11)
   rack-rewrite
   rack-timeout

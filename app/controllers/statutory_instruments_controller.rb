@@ -2,22 +2,22 @@ class StatutoryInstrumentsController < ApplicationController
   before_action :build_request
 
   ROUTE_MAP = {
-    index: proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.statutory_instrument_index },
-    show:  proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.statutory_instrument_by_id.set_url_params({ statutory_instrument_id: params[:statutory_instrument_id] }) }
+    index: proc { ParliamentHelper.parliament_request.statutory_instrument_index },
+    show:  proc { |params| ParliamentHelper.parliament_request.statutory_instrument_by_id.set_url_params({ statutory_instrument_id: params[:statutory_instrument_id] }) }
   }.freeze
 
   def index
-    @statutory_instruments = Parliament::Utils::Helpers::FilterHelper.filter(@request, 'StatutoryInstrumentPaper')
-    serializer = PageSerializer::StatutoryInstrumentsIndexPageSerializer.new(statutory_instruments: @statutory_instruments, request_id: app_insights_request_id)
+    @statutory_instruments = FilterHelper.filter(@request, 'StatutoryInstrumentPaper')
+    serializer = PageSerializer::StatutoryInstrumentsIndexPageSerializer.new(statutory_instruments: @statutory_instruments, request_id: app_insights_request_id, data_alternates: @alternates, request_original_url: request.original_url)
 
     render_page(serializer)
   end
 
   def show
-    @statutory_instrument = Parliament::Utils::Helpers::FilterHelper.filter(@request, 'StatutoryInstrumentPaper')
+    @statutory_instrument = FilterHelper.filter(@request, 'StatutoryInstrumentPaper')
     @statutory_instrument = @statutory_instrument.first
 
-    serializer = PageSerializer::StatutoryInstrumentsShowPageSerializer.new(statutory_instrument: @statutory_instrument, request_id: app_insights_request_id)
+    serializer = PageSerializer::StatutoryInstrumentsShowPageSerializer.new(statutory_instrument: @statutory_instrument, request_id: app_insights_request_id, data_alternates: @alternates, request_original_url: request.original_url)
 
     render_page(serializer)
   end

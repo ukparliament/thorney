@@ -2,7 +2,30 @@
 layout:
   template: layout
 meta:
-  title: Statutory Instruments
+  title: statutory-instruments.index.title
+  request-id: 123456
+  data-alternates:
+  - type: application/n-triples
+    href: http://localhost:3030/statutory_instrument_index.nt
+  - type: text/turtle
+    href: http://localhost:3030/statutory_instrument_index.ttl
+  - type: text/tab-separated-values
+    href: http://localhost:3030/statutory_instrument_index.tsv
+  - type: text/csv
+    href: http://localhost:3030/statutory_instrument_index.csv
+  - type: application/json+rdf
+    href: http://localhost:3030/statutory_instrument_index.rj
+  - type: application/json+ld
+    href: http://localhost:3030/statutory_instrument_index.json
+  - type: application/rdf+xml
+    href: http://localhost:3030/statutory_instrument_index.xml
+  open-graph:
+    title: statutory-instruments.index.title
+    original-url: http://www.example.com/statutory-instruments
+    image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
+    image-width: '1200'
+    image-height: '630'
+    twitter-card: summary_large_image
 header-components:
 - name: link
   data:
@@ -62,7 +85,7 @@ main-components:
     - name: heading1
       data:
         heading:
-          content: Statutory Instruments
+          content: statutory-instruments.index.title
 - name: section__section
   data:
     components:

@@ -3,7 +3,7 @@ require_relative '../../rails_helper'
 RSpec.describe PageSerializer::StatutoryInstrumentsShowPageSerializer do
   let(:laying_body) { double('laying_body', name: 'LayingBodyTest', graph_id: 'E1234567') }
   let(:laying_person) { double('laying_person', display_name: 'LayingPersonTest', graph_id: 'F1234567') }
-  let(:laying) { double('laying', body: laying_body, person: laying_person, date: DateTime.new(2018, 8, 10, 0, 0)) }
+  let(:laying) { double('laying', body: laying_body, person: laying_person, date: DateTime.new(2018, 8, 10, 0, 0), graph_id: 'G1234567') }
   let(:procedure) { double('procedure', name: 'ProcedureTest', graph_id: 'D1234567') }
   let(:work_package) { double('work_package', name: 'WorkPackageTest', graph_id: 'C1234567', procedure: procedure) }
   let(:proposed_neg_stat_instrument_a) { double('proposed_neg_stat_instrument_a', name: 'ProposedNegSIPaperA', graph_id: 'A1234567') }

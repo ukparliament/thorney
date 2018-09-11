@@ -3,6 +3,14 @@ layout:
   template: layout
 meta:
   title: SI Paper Test
+  data-alternates: 
+  open-graph:
+    title: SI Paper Test
+    original-url: 
+    image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
+    image-width: '1200'
+    image-height: '630'
+    twitter-card: summary_large_image
 header-components:
 - name: link
   data:
@@ -61,8 +69,12 @@ main-components:
     components:
     - name: heading1
       data:
+        subheading:
+          content: statutory-instruments.show.subheading
         heading:
           content: SI Paper Test
+        context:
+          content: SI 2018/568
 - name: section__section
   data:
     components:
@@ -74,40 +86,69 @@ main-components:
       data:
         items:
         - term:
-            content: statutory-instruments.show.prefix
-          description:
-          - content: SI
-        - term:
-            content: statutory-instruments.show.year
-          description:
-          - content: '2018'
-        - term:
-            content: statutory-instruments.show.number
-          description:
-          - content: '568'
-        - term:
-            content: statutory-instruments.show.laid-date
-          description:
-          - content: 
-        - term:
-            content: statutory-instruments.show.coming-into-force-date
-          description:
-          - content: 
-        - term:
             content: statutory-instruments.show.coming-into-force-note
           description:
           - content: SI Paper Test Note
-        - term:
-            content: statutory-instruments.show.made-date
-          description:
-          - content: 
 - name: section__section
   data:
     components:
     - name: heading
       data:
-        content: statutory-instruments.show.preceding-title
+        content: statutory-instruments.show.objects
         size: 2
+    - name: heading
+      data:
+        content: statutory-instruments.show.work-package
+        size: 3
+    - name: paragraph
+      data:
+      - content: "<a href='/work-packages/'></a>"
+    - name: heading
+      data:
+        content: statutory-instruments.show.procedure
+        size: 4
+    - name: paragraph
+      data:
+      - content: "<a href='/procedures/'></a>"
+    - name: heading
+      data:
+        content: statutory-instruments.show.laying
+        size: 3
+    - name: paragraph
+      data:
+      - content: 
+    - name: heading
+      data:
+        content: statutory-instruments.show.laid-date
+        size: 4
+    - name: paragraph
+      data:
+      - content: 
+    - name: heading
+      data:
+        content: statutory-instruments.show.laying-body
+        size: 4
+    - name: paragraph
+      data:
+      - content: 
+    - name: heading
+      data:
+        content: statutory-instruments.show.laying-person
+        size: 4
+    - name: paragraph
+      data:
+      - content: 
+    - name: heading
+      data:
+        content: statutory-instruments.show.web-link
+        size: 3
+    - name: paragraph
+      data:
+      - content: "<a href=''></a>"
+    - name: heading
+      data:
+        content: statutory-instruments.show.following-title
+        size: 3
     - name: list__generic
       data:
         type: ol
@@ -116,36 +157,6 @@ main-components:
           data:
           - component: list
         components: []
-- name: section__section
-  data:
-    components:
-    - name: heading
-      data:
-        content: statutory-instruments.show.objects
-        size: 2
-    - name: list__description
-      data:
-        items:
-        - term:
-            content: statutory-instruments.show.web-link
-          description:
-          - content: "<a href=''></a>"
-        - term:
-            content: statutory-instruments.show.work-package
-          description:
-          - content: "<a href='/work-packages/'></a>"
-        - term:
-            content: statutory-instruments.show.procedure
-          description:
-          - content: "<a href='/procedures/'></a>"
-        - term:
-            content: statutory-instruments.show.laying-body
-          description:
-          - content: 
-        - term:
-            content: statutory-instruments.show.laying-person
-          description:
-          - content: 
 footer-components:
 - name: footer
   data:

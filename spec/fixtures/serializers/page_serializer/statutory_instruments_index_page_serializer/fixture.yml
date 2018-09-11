@@ -2,7 +2,15 @@
 layout:
   template: layout
 meta:
-  title: Statutory Instruments
+  title: statutory-instruments.index.title
+  data-alternates: 
+  open-graph:
+    title: statutory-instruments.index.title
+    original-url: 
+    image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
+    image-width: '1200'
+    image-height: '630'
+    twitter-card: summary_large_image
 header-components:
 - name: link
   data:
@@ -62,7 +70,7 @@ main-components:
     - name: heading1
       data:
         heading:
-          content: Statutory Instruments
+          content: statutory-instruments.index.title
 - name: section__section
   data:
     components:

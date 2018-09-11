@@ -1,6 +1,7 @@
 # The serializer which all serializers inherit from.
 class BaseSerializer
   include Rails.application.routes.url_helpers
+
   # Creates a hash of the serializer's content
   def to_h
     dasherize_keys(content)
@@ -24,6 +25,11 @@ class BaseSerializer
     I18n.t(*args)
   end
 
+  # Localizes a date
+  def l(date)
+    date ? I18n.l(date) : nil
+  end
+
   # Creates links for use in translation blocks
   def link_to(body, url, html_options = {})
     ActionController::Base.helpers.link_to(body, url, html_options).html_safe
@@ -41,13 +47,10 @@ class BaseSerializer
     end
   end
 
-  # Localizes dates using I18n, handling nil dates
-  def localize(date)
-    date ? I18n.l(date) : nil
-  end
-
   # Helper method to create hash for a ListDescriptionComponentSerializer item
   def create_description_list_item(term, descriptions)
+    return if descriptions.all?(&:blank?)
+
     {}.tap do |hash|
       hash[:term] = { content: term }
       hash[:description] = descriptions.map { |description| { content: description } }

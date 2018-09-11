@@ -4,6 +4,14 @@ layout:
 meta:
   title: linux - Search - UK Parliament
   request-id: 123456
+  data-alternates: 
+  open-graph:
+    title: linux - Search - UK Parliament
+    original-url: http://www.example.com/search?count=10&q=linux&start_index=31
+    image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
+    image-width: '1200'
+    image-height: '630'
+    twitter-card: summary_large_image
   components:
   - name: head__search-result-tracking
   opensearch-description-url: http://www.example.com/search/opensearch

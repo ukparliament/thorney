@@ -25,14 +25,7 @@ gem 'parliament-grom-decorators', '~> 0.2'
 # Parliament routing
 gem 'parliament-routes', '~> 0.6'
 
-# Use bandiera-client for feature flagging
-gem 'bandiera-client'
-
-# Parliament Pugin
-gem 'pugin', '~> 1.9.4'
-
-# Parliament utilities
-gem 'parliament-utils', '~> 0.11.0'
+gem 'parliament-ntriple', '~> 0.3', require: false
 
 gem 'sanitize'
 
