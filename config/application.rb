@@ -34,6 +34,9 @@ module Thorney
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # Get the Cloudflare ID from the HTTP headers and log it
+    config.log_tags = [->(request) { "Cloudflare ID: #{request.headers['HTTP_CF_RAY']}" }]
+
     # Add our custom validators to our autoload paths
     config.autoload_paths += %W["#{config.root}/app/validators/"]
 
