@@ -7,7 +7,7 @@ module ComponentSerializer
     # @example Initialising a header component
     #  a_serializer = ComponentSerializer::StatusComponentSerializernew(type: 'banner', display_data: [display_data(component: 'status', variant: 'banner')], selector: 'css id).to_h
     #  ComponentSerializer::HeaderComponentSerializer.new([a_serializer]).to_h
-    def initialize(components)
+    def initialize(components: nil)
       @components = components
     end
 
@@ -16,7 +16,7 @@ module ComponentSerializer
     end
 
     def data
-      @components
+      { 'components': @components }
     end
   end
 end

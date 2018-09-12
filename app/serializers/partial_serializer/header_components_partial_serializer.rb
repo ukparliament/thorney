@@ -39,7 +39,7 @@ module PartialSerializer
     end
 
     def cookie_banner_components
-      [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'shared.header.cookie-banner-text', link: '/meta/cookie-policy' }]).to_h]
+      [ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: 'shared.header.cookie-banner-text', link: '/meta/cookie-policy' }]).to_h]
     end
 
     def status_banner
@@ -53,7 +53,7 @@ module PartialSerializer
     end
 
     def status_banner_components
-      [ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'shared.header.beta-status' }]).to_h]
+      [ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: 'shared.header.beta-status' }]).to_h]
     end
 
     def header_component

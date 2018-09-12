@@ -14,7 +14,7 @@ module ComponentSerializer
     #  card_link_button = ComponentSerializer::FigureComponentSerializer.new('See figure for arguments').to_h
     #  card_count =  ComponentSerializer::CountComponentSerializer.new(count_number: 2, count_context: 'Mps').to_h
     #  ComponentSerializer::CardComponentSerializer.new(name: card_file_name, {card_type: pugin_card_type, heading: card_heading, paragraph: card_paragraph, figure: card_figure, link_button: card_link_button, count: card_count}).to_h
-    def initialize(name, data)
+    def initialize(name: nil, data: nil)
       @name = name
       @data = data
     end
