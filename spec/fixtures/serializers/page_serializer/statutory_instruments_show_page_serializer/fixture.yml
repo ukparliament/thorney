@@ -109,53 +109,53 @@ main-components:
     components:
     - name: heading
       data:
-        content: statutory-instruments.show.objects
+        content: laid-thing.objects
         size: 2
     - name: heading
       data:
-        content: statutory-instruments.show.work-package
+        content: laid-thing.work-package
         size: 3
     - name: paragraph
       data:
       - content: "<a href='/work-packages/C1234567'>C1234567</a>"
     - name: heading
       data:
-        content: statutory-instruments.show.procedure
+        content: laid-thing.procedure
         size: 4
     - name: paragraph
       data:
       - content: "<a href='/procedures/D1234567'>ProcedureTest</a>"
     - name: heading
       data:
-        content: statutory-instruments.show.laying
+        content: laid-thing.laying
         size: 3
     - name: paragraph
       data:
       - content: G1234567
     - name: heading
       data:
-        content: statutory-instruments.show.laid-date
+        content: laid-thing.laid-date
         size: 4
     - name: paragraph
       data:
       - content: 10 August 2018
     - name: heading
       data:
-        content: statutory-instruments.show.laying-body
+        content: laid-thing.laying-body
         size: 4
     - name: paragraph
       data:
       - content: LayingBodyTest
     - name: heading
       data:
-        content: statutory-instruments.show.laying-person
+        content: laid-thing.laying-person
         size: 4
     - name: paragraph
       data:
       - content: LayingPersonTest
     - name: heading
       data:
-        content: statutory-instruments.show.web-link
+        content: laid-thing.web-link
         size: 3
     - name: paragraph
       data:
