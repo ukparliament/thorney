@@ -1,6 +1,6 @@
 FROM ruby:2.5.1-alpine3.7
 
-# Add command line argument variables used to cusomise the image at build-time.
+# Add command line argument variables used to customise the image at build-time.
 
 ARG PARLIAMENT_API_VERSION
 ARG OPENSEARCH_DESCRIPTION_URL
