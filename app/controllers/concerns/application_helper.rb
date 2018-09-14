@@ -64,7 +64,7 @@ module ApplicationHelper
     response.headers['Accept'] = request.formats.first.to_s
 
     # Set redirect_url as URI object
-    redirect_url = build_redirect_url
+    redirect_url = build_redirect_url(request)
 
     redirect_to(redirect_url.to_s)
   end
@@ -108,11 +108,12 @@ module ApplicationHelper
     @alternates = []
   end
 
-  def build_redirect_url
+  def build_redirect_url(request)
     redirect_url = URI(@data_url.call(params).query_url)
 
     # Get the request url as a URI object
     request_extension = File.extname(URI.parse(request.url).path)
+
     redirect_url.path = redirect_url.path + request_extension if request_extension != ''
 
     redirect_url

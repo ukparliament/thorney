@@ -1,5 +1,6 @@
 class StatutoryInstrumentsController < ApplicationController
-  before_action :build_request
+  # Controller rendering statutory instruments index and show pages
+  before_action :build_request, :data_check
 
   ROUTE_MAP = {
     index: proc { ParliamentHelper.parliament_request.statutory_instrument_index },

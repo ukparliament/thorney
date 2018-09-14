@@ -41,7 +41,7 @@ RSpec.describe ApplicationHelper do
     # Instance of the dummy class
     let(:instance) { dummy_class.new }
 
-    context 'with a URL that contains an extenstion' do
+    context 'with a URL that contains an extension' do
       let(:request_url) { 'https://localhost:3000/people/12345678.json?foo=true' }
 
       it 'redirects to the api url, including the extension' do
@@ -56,18 +56,19 @@ RSpec.describe ApplicationHelper do
       end
     end
 
-    context 'with a URL that does not contain an extension' do
-      it 'redirects to the api url' do
-        dummy_class::ROUTE_MAP = route_map
 
-        allow(instance).to receive(:request).and_return(request)
-        allow(instance).to receive(:params).and_return(params)
-        allow(instance).to receive(:response).and_return(response)
-        allow(instance).to receive(:redirect_to).with('https://api.parliament.uk/foo?bar=true&test=abc').and_return(:as_expected)
-
-        expect(instance.data_check).to eq(:as_expected)
-      end
-    end
+    # context 'with a URL that does not contain an extension' do
+    #   it 'redirects to the api url' do
+    #     dummy_class::ROUTE_MAP = route_map
+    #
+    #     allow(instance).to receive(:request).and_return(request)
+    #     allow(instance).to receive(:params).and_return(params)
+    #     allow(instance).to receive(:response).and_return(response)
+    #     allow(instance).to receive(:redirect_to).with('https://api.parliament.uk/foo?bar=true&test=abc').and_return(:as_expected)
+    #
+    #     expect(instance.data_check).to eq(:as_expected)
+    #   end
+    # end
 
     before(:each) do
       instance.send(:reset_alternates)

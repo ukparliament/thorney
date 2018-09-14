@@ -8,6 +8,7 @@ module PageSerializer
     # @param [Hash] pagination_hash a hash containing data used for pagination.
     # @param [String] flash_message a translation block that is evaluated into a flash message.
     # @param [String] request_id AppInsights request id
+    # @param [String] request_original_url original url of the request
     def initialize(opensearch_description_url: nil, query: nil, results: nil, pagination_hash: nil, flash_message: nil, request_id: nil, request_original_url: nil)
       @opensearch_description_url = opensearch_description_url
       @query = query

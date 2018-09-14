@@ -1,5 +1,11 @@
 module PageSerializer
   class StatutoryInstrumentsShowPageSerializer < PageSerializer::BasePageSerializer
+    # Initialise a Statutory Instruments index page serializer.
+    #
+    # @param [<Grom::Node>] statutory_instrument a Grom::Node object of type StatutoryInstrumentPaper.
+    # @param [String] request_id AppInsights request id
+    # @param [Array<Hash>] data_alternates array containing the href and type of the alternative data urls
+    # @param [String] request_original_url original url of the request
     def initialize(statutory_instrument:, request_id: nil, data_alternates: nil, request_original_url: nil)
       @statutory_instrument                              = statutory_instrument
       @work_package                                      = @statutory_instrument.work_package
