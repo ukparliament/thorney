@@ -2,6 +2,9 @@ require 'coveralls'
 require 'simplecov'
 require 'vcr'
 require 'webmock/rspec'
+require 'parliament'
+require 'parliament/ntriple'
+require 'parliament/grom/decorator'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
  Coveralls::SimpleCov::Formatter,

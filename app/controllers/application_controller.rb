@@ -4,10 +4,11 @@ require 'parliament/open_search'
 class ApplicationController < ActionController::API
   include ActionController::RequestForgeryProtection
   include ActionController::Cookies
+  include ApplicationHelper
 
   attr_reader :app_insights_request_id
 
-  before_action :populate_request_id
+  before_action :populate_request_id, :reset_alternates
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.

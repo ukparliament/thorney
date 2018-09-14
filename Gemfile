@@ -25,6 +25,8 @@ gem 'parliament-grom-decorators', '~> 0.2'
 # Parliament routing
 gem 'parliament-routes', '~> 0.6'
 
+gem 'parliament-ntriple', '~> 0.3', require: false
+
 gem 'sanitize'
 
 gem 'airbrake', '~> 7.3'

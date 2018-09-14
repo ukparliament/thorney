@@ -1,5 +1,14 @@
 module PageSerializer
   class BasePageSerializer < BaseSerializer
+    include OpenGraphHelper
+    attr_reader :request_id, :data_alternates
+
+    def initialize(request_id: nil, data_alternates: nil, request_original_url: nil)
+      @request_id           = request_id if request_id
+      @data_alternates      = data_alternates
+      @request_original_url = request_original_url
+    end
+
     # Creates a hash of the serializer's content
     def to_h
       dasherize_keys(hash)
@@ -23,7 +32,7 @@ module PageSerializer
     def head_section(hash)
       hash.tap do |h|
         h[:layout] = { template: 'layout' }
-        h[:meta] = meta
+        h[:meta]   = meta
       end
     end
 
@@ -49,8 +58,13 @@ module PageSerializer
       raise 'You must implement #opensearch_description_url'
     end
 
-    def meta
-      raise 'You must implement #meta'
+    def meta(title: nil, image_id: nil)
+      {}.tap do |meta|
+        meta[:title]           = title
+        meta[:request_id]      = @request_id if @request_id
+        meta[:data_alternates] = @data_alternates
+        meta[:open_graph]      = OpenGraphHelper.information(page_title: title, request_original_url: @request_original_url, image_id: image_id)
+      end
     end
   end
 end

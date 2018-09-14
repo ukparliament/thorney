@@ -8,22 +8,20 @@ module PageSerializer
     # @param [Hash] pagination_hash a hash containing data used for pagination.
     # @param [String] flash_message a translation block that is evaluated into a flash message.
     # @param [String] request_id AppInsights request id
-    def initialize(opensearch_description_url: nil, query: nil, results: nil, pagination_hash: nil, flash_message: nil, request_id: nil)
+    # @param [String] request_original_url original url of the request
+    def initialize(opensearch_description_url: nil, query: nil, results: nil, pagination_hash: nil, flash_message: nil, request_id: nil, request_original_url: nil)
       @opensearch_description_url = opensearch_description_url
       @query = query
       @results = results
       @pagination_helper = PaginationHelper.new(pagination_hash) if pagination_hash
       @flash_message = flash_message
-      @request_id = request_id if request_id
+
+      super(request_id: request_id, data_alternates: nil, request_original_url: request_original_url)
     end
 
     private
 
-    attr_reader :request_id, :opensearch_description_url
-
-    def meta
-      raise StandardError, 'You must implement #meta'
-    end
+    attr_reader :opensearch_description_url
 
     def content
       raise StandardError, 'You must implement #content'
