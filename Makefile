@@ -86,6 +86,8 @@ build: # Using the variables defined above, run `docker build`, tagging the imag
 		--build-arg RACK_ENV=$(RACK_ENV) \
 		--build-arg GIT_SHA="$(GIT_SHA)" \
 		--build-arg GIT_TAG="$(GIT_TAG)" \
+		--build-arg IMAGE_SERVICE_URL="$(IMAGE_SERVICE_URL)" \
+		--build-arg PARLIAMENT_BASE_URL="$(PARLIAMENT_BASE_URL)" \
 		.
 
 run: # Run the Docker image we have created, mapping the HOST_PORT and CONTAINER_PORT
