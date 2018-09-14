@@ -30,6 +30,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  mp_plural: MPs
+  lord_plural: Lords
   time:
     formats:
       default: '%-d %B %Y'

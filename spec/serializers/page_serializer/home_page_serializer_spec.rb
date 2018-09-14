@@ -1,6 +1,6 @@
 require_relative '../../rails_helper'
 
-RSpec.describe PageSerializer::HomePageSerializer do
+RSpec.describe PageSerializer::HomePageSerializer, vcr: true do
 
   context '#to_h' do
     it 'produces a JSON hash' do

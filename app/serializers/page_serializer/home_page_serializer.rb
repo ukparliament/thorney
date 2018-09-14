@@ -1,5 +1,6 @@
 module PageSerializer
   class HomePageSerializer < PageSerializer::BasePageSerializer
+    # This serializer includes HousesHelper
     # Initialise a Home index page serializer.
     #
     # @param [String] opensearch_description_url a description url for the search.
@@ -34,9 +35,9 @@ module PageSerializer
         content << heading_serializer(translation_key: 'home.mps-and-lords.heading')
         content << list_serializer(components: mps_lords_list_components)
         content << heading_serializer(translation_key: 'home.parliament-activity.heading')
-        content << list_serializer(components: [card(heading_content: 'home.parliament-activity.statutory-instruments.heading', heading_link: '/statutory-instruments', paragraph_content: 'home.parliament-activity.statutory-instruments.find')])
+        content << list_serializer(components: [card(heading_content: 'home.parliament-activity.statutory-instruments.heading', heading_link: statutory_instruments_path, paragraph_content: 'home.parliament-activity.statutory-instruments.find')])
         content << heading_serializer(translation_key: 'home.guides.heading')
-        content << list_serializer(components: [card(heading_content: 'home.guides.guide-to-procedure.heading', heading_link: '/collections/6i8XQAfD', paragraph_content: 'home.guides.guide-to-procedure.find')])
+        content << list_serializer(components: [card(heading_content: 'home.guides.guide-to-procedure.heading', heading_link: collection_path('6i8XQAfD'), paragraph_content: 'home.guides.guide-to-procedure.find')])
       end
     end
 
@@ -50,18 +51,18 @@ module PageSerializer
 
     def mps_lords_list_components
       [].tap do |content|
-        content << card(heading_content: 'home.mps-and-lords.mps.heading', heading_link: '/mps', paragraph_content: 'home.mps-and-lords.mps.find')
-        content << card(heading_content: 'home.mps-and-lords.lords.heading', heading_link: '/houses/WkUWUBMx/members/current/a-z/a', paragraph_content: 'home.mps-and-lords.lords.find')
-        content << card(heading_content: 'home.mps-and-lords.constituencies.heading', heading_link: '/find-your-constituency', paragraph_content: 'home.mps-and-lords.constituencies.find')
-        content << card(heading_content: 'home.mps-and-lords.parties-and-groups.heading', heading_link: '/houses/1AFu55Hs/parties/current', paragraph_content: 'home.mps-and-lords.parties-and-groups.find')
+        content << card(heading_content: 'home.mps-and-lords.mps.heading', heading_link: mps_path, paragraph_content: 'home.mps-and-lords.mps.find')
+        content << card(heading_content: 'home.mps-and-lords.lords.heading', heading_link: house_members_current_a_z_letter_path(HousesHelper.lords_id, 'a'), paragraph_content: 'home.mps-and-lords.lords.find')
+        content << card(heading_content: 'home.mps-and-lords.constituencies.heading', heading_link: find_your_constituency_path, paragraph_content: 'home.mps-and-lords.constituencies.find')
+        content << card(heading_content: 'home.mps-and-lords.parties-and-groups.heading', heading_link: house_parties_current_path(HousesHelper.commons_id), paragraph_content: 'home.mps-and-lords.parties-and-groups.find')
       end
     end
 
     def card(heading_content: nil, heading_link: nil, paragraph_content: nil)
-      data_hash = {}
-      data_hash[:heading] = ComponentSerializer::HeadingComponentSerializer.new(content: [heading_content], size: 3, link: heading_link).to_h
-      data_hash[:paragraph] = ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: paragraph_content }]).to_h
-      ComponentSerializer::CardComponentSerializer.new(name: 'card__generic', data: data_hash).to_h
+      hash = {}
+      hash['heading'] = ComponentSerializer::HeadingComponentSerializer.new(content: [heading_content], size: 3, link: heading_link).to_h
+      hash['paragraph'] = ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: paragraph_content }]).to_h
+      ComponentSerializer::CardComponentSerializer.new(name: 'card__generic', data: hash).to_h
     end
   end
 end
