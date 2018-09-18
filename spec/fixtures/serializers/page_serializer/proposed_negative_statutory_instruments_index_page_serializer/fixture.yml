@@ -85,11 +85,11 @@ main-components:
         components:
         - name: link
           data:
-            link: "/statutory-instruments.A1234567"
+            link: proposed-negative-statutory-instruments/A1234567
             content: SI Paper A
         - name: link
           data:
-            link: "/statutory-instruments.B1234567"
+            link: proposed-negative-statutory-instruments/B1234567
             content: SI Paper B
 footer-components:
 - name: footer

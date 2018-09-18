@@ -18,7 +18,7 @@ module PageSerializer
 
     def list_components
       @statutory_instruments.map do |statutory_instrument|
-        ComponentSerializer::LinkComponentSerializer.new(link: statutory_instruments_path(statutory_instrument.graph_id), content: statutory_instrument.name).to_h
+        ComponentSerializer::LinkComponentSerializer.new(link: "statutory-instruments/#{statutory_instrument.graph_id}", content: statutory_instrument.name).to_h
       end
     end
   end
