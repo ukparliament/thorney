@@ -25,7 +25,7 @@ module PageSerializer
     def hero_components
       [].tap do |content|
         content << ComponentSerializer::Heading1ComponentSerializer.new(heading_content: 'home.hero.heading').to_h
-        content << ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'home.hero.building-new-website' }, { content: 'home.hero.follow-beta-progress' }]).to_h
+        content << ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: 'home.hero.building-new-website' }, { content: 'home.hero.follow-beta-progress' }]).to_h
       end
     end
 
@@ -50,10 +50,10 @@ module PageSerializer
 
     def mps_lords_list_components
       [].tap do |content|
-        content << card(heading_content: 'home.mps-heading', heading_link: '/mps', paragraph_content: 'home.find-all-mps')
-        content << card(heading_content: 'home.lords-heading', heading_link: '/houses/WkUWUBMx/members/current/a-z/a', paragraph_content: 'home.find-all-lords')
-        content << card(heading_content: 'home.constituencies-heading', heading_link: '/find-your-constituency', paragraph_content: 'home.find-mps-by-area')
-        content << card(heading_content: 'home.parties-and-groups-heading', heading_link: '/houses/1AFu55Hs/parties/current', paragraph_content: 'home.find-members-by-party-or-group')
+        content << card(heading_content: 'home.mps-and-lords.mps.heading', heading_link: '/mps', paragraph_content: 'home.mps-and-lords.mps.find')
+        content << card(heading_content: 'home.mps-and-lords.lords.heading', heading_link: '/houses/WkUWUBMx/members/current/a-z/a', paragraph_content: 'home.mps-and-lords.lords.find')
+        content << card(heading_content: 'home.mps-and-lords.constituencies.heading', heading_link: '/find-your-constituency', paragraph_content: 'home.mps-and-lords.constituencies.find')
+        content << card(heading_content: 'home.mps-and-lords.parties-and-groups.heading', heading_link: '/houses/1AFu55Hs/parties/current', paragraph_content: 'home.mps-and-lords.parties-and-groups.find')
       end
     end
 
