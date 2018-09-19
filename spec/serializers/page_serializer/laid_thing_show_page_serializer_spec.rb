@@ -19,7 +19,7 @@ RSpec.describe PageSerializer::LaidThingShowPageSerializer do
 
   context '#to_h' do
     it 'produces the expected JSON hash' do
-
+create_fixture(subject, 'fixture')
       expected = get_fixture('fixture')
 
       expect(subject.to_yaml).to eq expected

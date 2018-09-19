@@ -35,7 +35,7 @@ module PageSerializer
     def object_heading_paragraph(heading_size, heading_content, paragraph_content)
       [].tap do |components|
         components << ComponentSerializer::HeadingComponentSerializer.new(content: heading_content, size: heading_size).to_h
-        components << ComponentSerializer::ParagraphComponentSerializer.new([{ content: paragraph_content }]).to_h
+        components << ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: paragraph_content }]).to_h
       end
     end
 

@@ -25,8 +25,8 @@ module PageSerializer
 
     def content
       [].tap do |components|
-        components << ComponentSerializer::SectionComponentSerializer.new(section_primary_components, type: 'primary').to_h
-        components << ComponentSerializer::SectionComponentSerializer.new(section_objects, type: 'section').to_h
+        components << ComponentSerializer::SectionComponentSerializer.new(components: section_primary_components, type: 'primary').to_h
+        components << ComponentSerializer::SectionComponentSerializer.new(components: section_objects, type: 'section').to_h
       end
     end
 

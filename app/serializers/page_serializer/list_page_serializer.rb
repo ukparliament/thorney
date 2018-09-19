@@ -23,8 +23,8 @@ module PageSerializer
 
     def content
       [].tap do |content|
-        content << ComponentSerializer::SectionComponentSerializer.new(section_primary_components, type: 'primary').to_h
-        content << ComponentSerializer::SectionComponentSerializer.new(section_components, type: 'section').to_h
+        content << ComponentSerializer::SectionComponentSerializer.new(components: section_primary_components, type: 'primary').to_h
+        content << ComponentSerializer::SectionComponentSerializer.new(components: section_components, type: 'section').to_h
       end
     end
 
