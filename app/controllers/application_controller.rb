@@ -5,6 +5,7 @@ class ApplicationController < ActionController::API
   include ActionController::RequestForgeryProtection
   include ActionController::Cookies
   include ApplicationHelper
+  include HousesHelper
 
   attr_reader :app_insights_request_id
 
