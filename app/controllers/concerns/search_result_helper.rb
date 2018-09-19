@@ -6,8 +6,8 @@ module SearchResultHelper
     def create_search_results(results)
       results.entries.map do |entry|
         ComponentSerializer::CardComponentSerializer.new(
-          'card__search__search-result',
-          search_result_data(entry: entry, heading_text: entry.title, url: entry.url, hint: hint_data(entry), short_url: entry.formatted_url, paragraph_content: entry.content)
+          name: 'card__search__search-result',
+          data: search_result_data(entry: entry, heading_text: entry.title, url: entry.url, hint: hint_data(entry), short_url: entry.formatted_url, paragraph_content: entry.content)
         ).to_h
       end
     end

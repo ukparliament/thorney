@@ -31,7 +31,7 @@ RSpec.describe PageSerializer::SearchPage::LandingPageSerializer do
 
         subject.to_h
 
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with([], type: 'primary', content_flag: true)
+        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: [], type: 'primary', content_flag: true)
       end
     end
 
@@ -47,8 +47,8 @@ RSpec.describe PageSerializer::SearchPage::LandingPageSerializer do
 
         serializer.to_h
 
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with([], type: 'primary')
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with([ComponentSerializer::StatusComponentSerializer.new(type: 'highlight', display_data: 'flash_message_display_data', components: ['flash_message_paragraph']).to_h], content_flag: true)
+        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: [], type: 'primary')
+        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: [ComponentSerializer::StatusComponentSerializer.new(type: 'highlight', display_data: 'flash_message_display_data', components: ['flash_message_paragraph']).to_h], content_flag: true)
       end
     end
   end

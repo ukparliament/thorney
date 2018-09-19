@@ -28,8 +28,8 @@ RSpec.describe PageSerializer::StatutoryInstrumentsIndexPageSerializer do
       it 'receives the correct serializers' do
         subject.to_h
 
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with([], type: 'primary')
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with([], type: 'section')
+        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: [], type: 'primary')
+        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: [], type: 'section')
       end
     end
   end

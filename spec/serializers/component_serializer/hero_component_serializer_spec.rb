@@ -6,7 +6,7 @@ RSpec.describe ComponentSerializer::HeroComponentSerializer do
   context '#to_h' do
     context 'a hero' do
       it 'if content_flag is true' do
-        serializer = described_class.new(components, content_flag: true)
+        serializer = described_class.new(components: components, content_flag: true)
 
         expected = get_fixture('fixture')
 
@@ -14,7 +14,7 @@ RSpec.describe ComponentSerializer::HeroComponentSerializer do
       end
 
       it 'if content_flag is not provided' do
-        serializer = described_class.new(components)
+        serializer = described_class.new(components: components)
 
         expected = get_fixture('no_content_flag')
 

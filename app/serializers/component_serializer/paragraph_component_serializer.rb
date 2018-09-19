@@ -8,7 +8,7 @@ module ComponentSerializer
     #  string_or_translation_key = 'Here is some paragraph text'
     #  link = 'beta.parliament.uk'
     #  ComponentSerializer::ParagraphComponentSerializer.new([{ content: string_or_translation_key, link: link }]).to_h
-    def initialize(content)
+    def initialize(content: nil)
       @content = content
     end
 

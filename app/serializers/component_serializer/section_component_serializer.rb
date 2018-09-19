@@ -19,7 +19,7 @@ module ComponentSerializer
     #  type_of_section = primary
     #  boolean = true
     #  ComponentSerializer::SectionComponentSerializer.new([a_serializer], type: type_of_section, content_flag: boolean).to_h
-    def initialize(components, type: 'section', content_flag: nil, display_data: nil)
+    def initialize(components: nil, type: 'section', content_flag: nil, display_data: nil)
       @content_flag = content_flag
       @type = type
       @components = components

@@ -73,8 +73,8 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
       it 'with results' do
         subject.to_h
 
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with([], type: 'primary')
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with('results section components', content_flag: true)
+        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: [], type: 'primary')
+        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: 'results section components', content_flag: true)
       end
 
       it 'without results' do
@@ -82,8 +82,8 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
 
         subject.to_h
 
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with([], type: 'primary')
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with('results section components', content_flag: true)
+        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: [], type: 'primary')
+        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: 'results section components', content_flag: true)
       end
     end
 
