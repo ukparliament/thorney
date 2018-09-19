@@ -1,6 +1,10 @@
 module PartialSerializer
   # This serializer initializes all the components required for the header of a page.
   class HeaderComponentsPartialSerializer < BaseSerializer
+    def initialize(include_global_search: true)
+      @include_global_search = include_global_search
+    end
+
     def to_h
       header = []
 
@@ -53,11 +57,23 @@ module PartialSerializer
     end
 
     def header_component
-      ComponentSerializer::HeaderComponentSerializer.new(components: [header_link]).to_h
+      ComponentSerializer::HeaderComponentSerializer.new(components: header_components).to_h
+    end
+
+    # Allows for the option of not including global search if the default method found in the base page serializer is overridden.
+    def header_components
+      [].tap do |components|
+        components << header_link
+        components << header_search if @include_global_search
+      end
     end
 
     def header_link
-      ComponentSerializer::LinkComponentSerializer.new(link: '/', display_data: header_display_data, label: 'shared.header.label', components: header_link_components).to_h
+      ComponentSerializer::LinkComponentSerializer.new(link: root_path, display_data: header_display_data, label: 'shared.header.label', components: header_link_components).to_h
+    end
+
+    def header_search
+      ComponentSerializer::SearchFormComponentSerializer.new(components: [ComponentSerializer::SearchIconComponentSerializer.new.to_h], global: true).to_h
     end
 
     def header_display_data

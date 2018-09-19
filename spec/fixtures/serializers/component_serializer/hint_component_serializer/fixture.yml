@@ -1,7 +1,4 @@
 ---
 name: partials__hint
 data:
-  display:
-    name: partials__display
-    data: []
   content: content

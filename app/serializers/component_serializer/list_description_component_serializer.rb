@@ -6,49 +6,8 @@ module ComponentSerializer
     # @param [Array<Hash>] items an array of objects.
     #
     # @example Creating a description list component
-    #   ComponentSerializer::ListDescriptionComponentSerializer.new(
-    # "items":
-    # [{
-    #    "term":
-    #      {
-    #        "content": "telephone"
-    #      },
-    #    "description":
-    #      [
-    #        {
-    #          "content": "020 1234 567"
-    #        }
-    #      ]
-    #  },
-    #  {
-    #    "term":
-    #      {
-    #        "content": "website"
-    #      },
-    #    "description":
-    #      [
-    #        {
-    #          "content": "<a href='www.example.com'>My home page</a>"
-    #        }
-    #      ]
-    #  },
-    #  {
-    #    "term":
-    #      {
-    #        "content": "email"
-    #      },
-    #    "description":
-    #      [
-    #        {
-    #          "content": "hello@example.com"
-    #        },
-    #        {
-    #          "content": "hello@gmail.com"
-    #        }
-    #      ]
-    #  }
-    # ])
-    #
+    #  string_or_translation_key = 'List item'
+    #  ComponentSerializer::ListDescriptionComponentSerializer.new(items: [{ 'term': { 'content': string_or_translation_key }, 'description': [{ 'content': string_or_translation_key }] }, { 'term': { 'content': string_or_translation_key }, 'description': [{ 'content': string_or_translation_key }] }]).to_h
     def initialize(items: nil)
       @items = items
     end

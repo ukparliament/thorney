@@ -2,7 +2,7 @@ module FilterHelper
   # Takes a request object and a variable amount of types for filtering, gets types_to_filter using #filter_types method, and calls RequestHelper.filter_response_data to return filtered NTriple Object
   #
   # @param [Parliament::Request] request a Parliament::Request object
-  # @param [String] *types a variable amount of types to filter by
+  # @param [String] types a variable amount of types to filter by
   #
   # @return [Parliament::Response::NTripleResponse] Ntriple response filtered by types
   def self.filter(request, *types)
@@ -14,7 +14,7 @@ module FilterHelper
 
   # Takes variable amount of types for filtering, checks if type is 'ordnance', and returns array of types to filter
   #
-  # @param [String] *types a variable amount of types to filter by
+  # @param [String] types a variable amount of types to filter by
   #
   # @return [Array] array of types to filter by
   def self.filter_types(*types)

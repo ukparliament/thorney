@@ -30,6 +30,21 @@ RSpec.describe ComponentSerializer::HeadingComponentSerializer do
       end
     end
 
+    context 'with link' do
+      it 'returns a hash containing the name and data' do
+        serializer = described_class.new(
+            translation_key: translation_key,
+            translation_data: translation_data,
+            size: 1,
+            link: "link.com"
+        )
+
+        expected = get_fixture('with_link')
+
+        expect(serializer.to_yaml).to eq expected
+      end
+    end
+
     context 'with content and translation' do
       it 'returns a hash containing the name and data' do
         serializer = described_class.new(
