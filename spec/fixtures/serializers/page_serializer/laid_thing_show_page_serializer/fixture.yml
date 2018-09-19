@@ -2,10 +2,10 @@
 layout:
   template: layout
 meta:
-  title: statutory-instruments.index.title
+  title: 
   data-alternates: 
   open-graph:
-    title: statutory-instruments.index.title
+    title: 
     original-url: 
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -70,34 +70,7 @@ header-components:
         components:
         - name: icon__search
           data: search.search-icon
-main-components:
-- name: section__primary
-  data:
-    components:
-    - name: heading1
-      data:
-        heading:
-          content: statutory-instruments.index.title
-- name: section__section
-  data:
-    components:
-    - name: list__generic
-      data:
-        type: ol
-        display:
-          name: partials__display
-          data:
-          - component: list
-            variant: block
-        components:
-        - name: link
-          data:
-            link: statutory-instruments/A1234567
-            content: SI Paper A
-        - name: link
-          data:
-            link: statutory-instruments/B1234567
-            content: SI Paper B
+main-components: 
 footer-components:
 - name: footer
   data:

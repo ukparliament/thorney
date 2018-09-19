@@ -2,26 +2,26 @@
 layout:
   template: layout
 meta:
-  title: statutoryInstrumentPaperName - 1
+  title: proposedNegativeStatutoryInstrumentPaperName - 1
   request-id: 123456
   data-alternates:
   - type: application/n-triples
-    href: http://localhost:3030/statutory_instrument_by_id.nt?statutory_instrument_id=1234567
+    href: http://localhost:3030/proposed_negative_statutory_instrument_by_id.nt?proposed_negative_statutory_instrument_id=12345678
   - type: text/turtle
-    href: http://localhost:3030/statutory_instrument_by_id.ttl?statutory_instrument_id=1234567
+    href: http://localhost:3030/proposed_negative_statutory_instrument_by_id.ttl?proposed_negative_statutory_instrument_id=12345678
   - type: text/tab-separated-values
-    href: http://localhost:3030/statutory_instrument_by_id.tsv?statutory_instrument_id=1234567
+    href: http://localhost:3030/proposed_negative_statutory_instrument_by_id.tsv?proposed_negative_statutory_instrument_id=12345678
   - type: text/csv
-    href: http://localhost:3030/statutory_instrument_by_id.csv?statutory_instrument_id=1234567
+    href: http://localhost:3030/proposed_negative_statutory_instrument_by_id.csv?proposed_negative_statutory_instrument_id=12345678
   - type: application/json+rdf
-    href: http://localhost:3030/statutory_instrument_by_id.rj?statutory_instrument_id=1234567
+    href: http://localhost:3030/proposed_negative_statutory_instrument_by_id.rj?proposed_negative_statutory_instrument_id=12345678
   - type: application/json+ld
-    href: http://localhost:3030/statutory_instrument_by_id.json?statutory_instrument_id=1234567
+    href: http://localhost:3030/proposed_negative_statutory_instrument_by_id.json?proposed_negative_statutory_instrument_id=12345678
   - type: application/rdf+xml
-    href: http://localhost:3030/statutory_instrument_by_id.xml?statutory_instrument_id=1234567
+    href: http://localhost:3030/proposed_negative_statutory_instrument_by_id.xml?proposed_negative_statutory_instrument_id=12345678
   open-graph:
-    title: statutoryInstrumentPaperName - 1
-    original-url: http://www.example.com/statutory-instruments/1234567
+    title: proposedNegativeStatutoryInstrumentPaperName - 1
+    original-url: http://www.example.com/proposed-negative-statutory-instruments/12345678
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
     image-height: '630'
@@ -92,26 +92,9 @@ main-components:
     - name: heading1
       data:
         subheading:
-          content: statutory-instruments.show.subheading
+          content: proposed-negative-statutory-instruments.show.subheading
         heading:
-          content: statutoryInstrumentPaperName - 1
-        context:
-          content: statutoryInstrumentPaperPrefix - 1 statutoryInstrumentPaperYear
-            - 1/538
-- name: section__section
-  data:
-    components:
-    - name: heading
-      data:
-        content: statutory-instruments.show.literals
-        size: 2
-    - name: list__description
-      data:
-        items:
-        - term:
-            content: statutory-instruments.show.coming-into-force-date
-          description:
-          - content: 1 June 2018
+          content: proposedNegativeStatutoryInstrumentPaperName - 1
 - name: section__section
   data:
     components:
@@ -125,52 +108,52 @@ main-components:
         size: 3
     - name: paragraph
       data:
-      - content: "<a href='/work-packages/zhi6ZHnQ'>zhi6ZHnQ</a>"
+      - content: "<a href='/work-packages/7xwjxL0R'>7xwjxL0R</a>"
     - name: heading
       data:
         content: laid-thing.procedure
         size: 4
     - name: paragraph
       data:
-      - content: "<a href='/procedures/5S6p4YsP'>procedureName - 1</a>"
+      - content: "<a href='/procedures/iCdMN1MW'>procedureName - 1</a>"
     - name: heading
       data:
         content: laid-thing.laying
         size: 3
     - name: paragraph
       data:
-      - content: 2iDuQtrK
+      - content: 
     - name: heading
       data:
         content: laid-thing.laid-date
         size: 4
     - name: paragraph
       data:
-      - content: 1 May 2018
+      - content: 
     - name: heading
       data:
         content: laid-thing.laying-body
         size: 4
     - name: paragraph
       data:
-      - content: groupName - 1
+      - content: 
     - name: heading
       data:
         content: laid-thing.laying-person
         size: 4
     - name: paragraph
       data:
-      - content: F31CBD81AD8343898B49DC65743F0BDF - 1
+      - content: 
     - name: heading
       data:
         content: laid-thing.web-link
         size: 3
     - name: paragraph
       data:
-      - content: "<a href='http://www.legislation.gov.uk/uksi/2018/538/made'>http://www.legislation.gov.uk/uksi/2018/538/made</a>"
+      - content: "<a href='https://www.gov.uk/eu-withdrawal-act-2018-statutory-instruments/the-airport-charges-amendment-eu-exit-regulations-2018'>https://www.gov.uk/eu-withdrawal-act-2018-statutory-instruments/the-airport-charges-amendment-eu-exit-regulations-2018</a>"
     - name: heading
       data:
-        content: statutory-instruments.show.following-title
+        content: proposed-negative-statutory-instruments.show.preceding-title
         size: 3
     - name: list__generic
       data:
@@ -182,12 +165,12 @@ main-components:
         components:
         - name: link
           data:
-            link: "/proposed-negative-statutory-instruments/C1234567"
-            content: proposedNegativeStatutoryInstrumentPaperName - 1
+            link: "/statutory-instruments/C1234567"
+            content: statutoryInstrumentPaperName - 1
         - name: link
           data:
-            link: "/proposed-negative-statutory-instruments/D1234567"
-            content: proposedNegativeStatutoryInstrumentPaperName - 2
+            link: "/statutory-instruments/D1234567"
+            content: statutoryInstrumentPaperName - 2
 footer-components:
 - name: footer
   data:
