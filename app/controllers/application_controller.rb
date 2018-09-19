@@ -1,7 +1,5 @@
 require 'parliament'
 require 'parliament/open_search'
-require 'pugin/helpers/controller_helpers'
-require 'parliament/utils'
 
 class ApplicationController < ActionController::API
   include ActionController::RequestForgeryProtection

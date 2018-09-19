@@ -29,9 +29,9 @@ module PageSerializer
 
     def content
       [].tap do |components|
-        components << ComponentSerializer::SectionComponentSerializer.new(section_primary_components, type: 'primary').to_h
-        components << ComponentSerializer::SectionComponentSerializer.new(section_literals, type: 'section').to_h
-        components << ComponentSerializer::SectionComponentSerializer.new(section_objects, type: 'section').to_h
+        components << ComponentSerializer::SectionComponentSerializer.new(components: section_primary_components, type: 'primary').to_h
+        components << ComponentSerializer::SectionComponentSerializer.new(components: section_literals, type: 'section').to_h
+        components << ComponentSerializer::SectionComponentSerializer.new(components: section_objects, type: 'section').to_h
       end
     end
 
@@ -78,7 +78,7 @@ module PageSerializer
     def object_heading_paragraph(heading_size, heading_content, paragraph_content)
       [].tap do |components|
         components << ComponentSerializer::HeadingComponentSerializer.new(content: heading_content, size: heading_size).to_h
-        components << ComponentSerializer::ParagraphComponentSerializer.new([{ content: paragraph_content }]).to_h
+        components << ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: paragraph_content }]).to_h
       end
     end
 
