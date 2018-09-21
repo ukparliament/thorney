@@ -53,7 +53,7 @@ module PageSerializer
     def connected_statutory_instruments
       @preceding_proposed_negative_statutory_instruments.map do |stat_instrument|
         ComponentSerializer::LinkComponentSerializer.new(
-          link:    "/proposed-negative-statutory-instruments/#{stat_instrument.graph_id}",
+          link:    proposed_negative_statutory_instrument_path(stat_instrument.graph_id),
           content: stat_instrument.name
         ).to_h
       end

@@ -9,7 +9,15 @@ class StatutoryInstrumentsController < ApplicationController
 
   def index
     @statutory_instruments = FilterHelper.filter(@request, 'StatutoryInstrumentPaper')
-    serializer = PageSerializer::StatutoryInstrumentsIndexPageSerializer.new(statutory_instruments: @statutory_instruments, request_id: app_insights_request_id, data_alternates: @alternates, request_original_url: request.original_url)
+
+    list_components = @statutory_instruments.map do |statutory_instrument|
+      CardFactory.new(
+        heading_text: statutory_instrument.name,
+        heading_url:  statutory_instrument_path(statutory_instrument.graph_id)
+      ).build_card
+    end
+
+    serializer = PageSerializer::ListPageSerializer.new(page_title: 'statutory-instruments.index.title', list_components: list_components, request_id: app_insights_request_id, data_alternates: @alternates, request_original_url: request.original_url)
 
     render_page(serializer)
   end

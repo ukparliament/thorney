@@ -2,7 +2,7 @@
 layout:
   template: layout
 meta:
-  title: Test page
+  title: Group Test
 header-components:
 - name: link
   data:
@@ -68,21 +68,24 @@ main-components:
     components:
     - name: heading1
       data:
+        subheading:
+          content: Group
         heading:
-          content: Test page
+          content: Group Test
 - name: section__section
   data:
     components:
-    - name: list__generic
+    - name: heading
       data:
-        type: ol
-        display:
-          name: partials__display
-          data:
-          - component: list
-            variant: block
-        components:
-        - list-component: list component
+        content: Literals
+        size: 2
+    - name: list__description
+      data:
+        items:
+        - term:
+            content: Name
+          description:
+          - content: Group Test
 footer-components:
 - name: footer
   data:

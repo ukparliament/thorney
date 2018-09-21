@@ -65,7 +65,7 @@ module HousesHelper
       types.reverse
     end
 
-    private_class_method
+    private
 
     def set_ids
       return if @commons_id && @lords_id

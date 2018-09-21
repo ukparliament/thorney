@@ -1,0 +1,2048 @@
+---
+layout:
+  template: layout
+meta:
+  title: groups.current.title
+header-components:
+- name: link
+  data:
+    link: "#content"
+    display:
+      name: partials__display
+      data:
+      - component: skip-to-content
+    selector: skiplink
+    content: shared.header.skip-to-content
+- name: status__banner
+  data:
+    display:
+      name: partials__display
+      data:
+      - component: status
+        variant: banner
+      - component: theme
+        variant: caution
+      - component: cookie
+    selector: cookie
+    components:
+    - name: paragraph
+      data:
+      - content: shared.header.cookie-banner-text
+        data:
+          link: "/meta/cookie-policy"
+- name: status__banner
+  data:
+    display:
+      name: partials__display
+      data:
+      - component: status
+        variant: banner
+    components:
+    - name: paragraph
+      data:
+      - content: shared.header.beta-status
+- name: header
+  data:
+    components:
+    - name: link
+      data:
+        link: "/"
+        display:
+          name: partials__display
+          data:
+          - component: uk_parliament
+        label: shared.header.label
+        components:
+        - name: icon__uk-parliament
+          data: shared.header.label
+    - name: form__search
+      data:
+        global: true
+        label: search.label
+        components:
+        - name: icon__search
+          data: search.search-icon
+main-components:
+- name: section__primary
+  data:
+    components:
+    - name: heading1
+      data:
+        heading:
+          content: groups.current.title
+- name: section__section
+  data:
+    components:
+    - name: list__generic
+      data:
+        type: ol
+        display:
+          name: partials__display
+          data:
+          - component: list
+            variant: block
+        components:
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 1
+                size: 2
+                link: "/groups/wZVxomZk"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 12 November 1974
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 2
+                size: 2
+                link: "/groups/iGeIyqdU"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 13 July 2010
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 3
+                size: 2
+                link: "/groups/onOuCmwm"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 7 January 2013
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 4
+                size: 2
+                link: "/groups/jULkdAwx"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 16 November 1994
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 5
+                size: 2
+                link: "/groups/xiMNmUSh"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 28 June 2001
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 6
+                size: 2
+                link: "/groups/ANA3YJJx"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 28 June 2001
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 7
+                size: 2
+                link: "/groups/fYbWHWhk"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 3 May 1979
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 8
+                size: 2
+                link: "/groups/cLjFRjRt"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 15 November 1995
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 9
+                size: 2
+                link: "/groups/tpnIn2BN"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 September 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 10
+                size: 2
+                link: "/groups/eHK3fAn2"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 13 November 2002
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 11
+                size: 2
+                link: "/groups/U7EjDeFU"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 12 November 1974
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 12
+                size: 2
+                link: "/groups/ILGTEgcO"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 27 May 2015
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 13
+                size: 2
+                link: "/groups/x7eu4YYX"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 31 October 1991
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 14
+                size: 2
+                link: "/groups/dN4Dh5qf"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 November 1978
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 15
+                size: 2
+                link: "/groups/GZwoZ6sm"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 31 October 2012
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 16
+                size: 2
+                link: "/groups/VjeqH4MS"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 17 November 1998
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 17
+                size: 2
+                link: "/groups/1SujEdqu"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 18 June 2015
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 18
+                size: 2
+                link: "/groups/vS4ICCTW"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 16 July 2015
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 19
+                size: 2
+                link: "/groups/TPDK1RsN"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 17 October 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 20
+                size: 2
+                link: "/groups/kS1qNRTA"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 3 June 2015
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 21
+                size: 2
+                link: "/groups/8sI5979J"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 20 December 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 22
+                size: 2
+                link: "/groups/Q04p6jUr"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 17 May 2012
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 23
+                size: 2
+                link: "/groups/riFJAR1y"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 16 April 1975
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 24
+                size: 2
+                link: "/groups/wiDotwa3"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 31 January 1980
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 25
+                size: 2
+                link: "/groups/KRbbFVCS"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 29 June 2010
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 26
+                size: 2
+                link: "/groups/73Fl48wp"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 28 October 2009
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 27
+                size: 2
+                link: "/groups/jLIc7oPt"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 12 June 2015
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 28
+                size: 2
+                link: "/groups/5Mlzzi7F"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 December 1993
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 29
+                size: 2
+                link: "/groups/IjGmcAj5"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 September 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 30
+                size: 2
+                link: "/groups/8ERS54Na"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 8 September 2015
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 31
+                size: 2
+                link: "/groups/SZrZn6gs"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 November 1978
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 32
+                size: 2
+                link: "/groups/5ErDuzXd"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 16 July 2001
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 33
+                size: 2
+                link: "/groups/xLDCGkEU"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 21 April 2010
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 34
+                size: 2
+                link: "/groups/PUQvEZi8"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 12 June 2015
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 35
+                size: 2
+                link: "/groups/BueyYdWd"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 6 November 2007
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 36
+                size: 2
+                link: "/groups/KUG5GwaV"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 13 September 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 37
+                size: 2
+                link: "/groups/FucHjbMu"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 25 May 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 38
+                size: 2
+                link: "/groups/jrUSwaNE"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 3 May 1979
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 39
+                size: 2
+                link: "/groups/SnKxyzm3"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 3 May 1979
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 40
+                size: 2
+                link: "/groups/Qp0xvHUJ"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 12 November 1981
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 41
+                size: 2
+                link: "/groups/mHE3vCVC"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 27 June 2017
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 42
+                size: 2
+                link: "/groups/sRBUWwFf"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 12 June 2015
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 43
+                size: 2
+                link: "/groups/ZyRIvFmC"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 July 1994
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 44
+                size: 2
+                link: "/groups/5IgASPKH"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 November 1978
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 45
+                size: 2
+                link: "/groups/XLifv1Ff"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 December 2015
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 46
+                size: 2
+                link: "/groups/ReE8wVWz"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 18 November 1986
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 47
+                size: 2
+                link: "/groups/XK1JDE1t"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 12 July 2010
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 48
+                size: 2
+                link: "/groups/VthF9ZwL"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 28 June 2011
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 49
+                size: 2
+                link: "/groups/6gYld9ky"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 20 April 1999
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 50
+                size: 2
+                link: "/groups/5NJVAuSn"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 30 October 1974
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 51
+                size: 2
+                link: "/groups/NTScA2qc"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 27 May 2015
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 52
+                size: 2
+                link: "/groups/9VxPCSem"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 11 June 2015
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 53
+                size: 2
+                link: "/groups/7Uq2MmBH"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 December 2015
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 54
+                size: 2
+                link: "/groups/xlEqw7ED"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 23 April 2007
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 55
+                size: 2
+                link: "/groups/3KVfKVJt"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 27 June 2006
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 56
+                size: 2
+                link: "/groups/FgqBLTpL"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 3 May 1979
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 57
+                size: 2
+                link: "/groups/SFPzebqT"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 5 January 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 58
+                size: 2
+                link: "/groups/gOA14XL1"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 18 May 2012
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 59
+                size: 2
+                link: "/groups/SKcyZHEb"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 3 June 2015
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 60
+                size: 2
+                link: "/groups/jsXAOUDV"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 15 November 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 61
+                size: 2
+                link: "/groups/KTALGXnk"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 2 November 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 62
+                size: 2
+                link: "/groups/EGqxzqiP"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 7 December 2004
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 63
+                size: 2
+                link: "/groups/26fpkWHF"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 November 1978
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 64
+                size: 2
+                link: "/groups/Wyn715u2"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 3 May 1979
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 65
+                size: 2
+                link: "/groups/cxrBWmAE"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 June 2003
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 66
+                size: 2
+                link: "/groups/vqoVsXim"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 November 1978
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 67
+                size: 2
+                link: "/groups/0XAGDhKm"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 17 October 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 68
+                size: 2
+                link: "/groups/SYd7RdQp"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 12 September 2017
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 69
+                size: 2
+                link: "/groups/jGHZgrut"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 23 June 2015
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 70
+                size: 2
+                link: "/groups/PjvAC3mK"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 14 April 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 71
+                size: 2
+                link: "/groups/eISFSRjA"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 23 March 2015
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 72
+                size: 2
+                link: "/groups/KeIrjh46"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 5 December 1991
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 73
+                size: 2
+                link: "/groups/EbwlhEhI"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 January 2001
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 74
+                size: 2
+                link: "/groups/P7Ne09WK"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 17 January 2001
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 75
+                size: 2
+                link: "/groups/9n1vTHKU"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 27 June 2017
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 76
+                size: 2
+                link: "/groups/QMRPyNmE"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 13 May 2014
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 77
+                size: 2
+                link: "/groups/2aP5lDF0"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 16 July 2001
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 78
+                size: 2
+                link: "/groups/sWVTowyI"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 21 April 2010
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 79
+                size: 2
+                link: "/groups/QbVZ6ENL"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 November 1978
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 80
+                size: 2
+                link: "/groups/tWzrJATE"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 12 November 1997
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 81
+                size: 2
+                link: "/groups/oaWaMRnb"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 3 May 1979
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 82
+                size: 2
+                link: "/groups/F8su1PU4"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 16 July 2001
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 83
+                size: 2
+                link: "/groups/dSZupNQR"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 31 October 1991
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 84
+                size: 2
+                link: "/groups/ml5W3Beh"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 12 July 2010
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 85
+                size: 2
+                link: "/groups/HksJaO3e"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 3 May 1979
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 86
+                size: 2
+                link: "/groups/FkVzBipk"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 November 1978
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 87
+                size: 2
+                link: "/groups/DBFruMTZ"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 27 June 2017
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 88
+                size: 2
+                link: "/groups/64upzhTs"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 17 October 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 89
+                size: 2
+                link: "/groups/XTC5vyzw"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 7 November 1974
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 90
+                size: 2
+                link: "/groups/TnpbWYqi"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 2 November 2010
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 91
+                size: 2
+                link: "/groups/D4ldIHfK"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 23 May 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 92
+                size: 2
+                link: "/groups/u1WDOF9U"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 27 June 2017
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 93
+                size: 2
+                link: "/groups/HrO1jVgi"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 18 November 2010
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 94
+                size: 2
+                link: "/groups/o5apPSOq"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 12 June 2015
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 95
+                size: 2
+                link: "/groups/IsCRoCUL"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 12 June 2015
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 96
+                size: 2
+                link: "/groups/ShdLf35P"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 14 July 1997
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 97
+                size: 2
+                link: "/groups/tKuBqAfP"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 29 January 2004
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 98
+                size: 2
+                link: "/groups/GxZPl6JY"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 6 January 2010
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 99
+                size: 2
+                link: "/groups/Uq5DbjFp"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 7 January 2013
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 100
+                size: 2
+                link: "/groups/7D3ynJt9"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 13 January 2010
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 101
+                size: 2
+                link: "/groups/T9zOBPqn"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 September 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 102
+                size: 2
+                link: "/groups/RnMSHi4S"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 25 January 2017
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 103
+                size: 2
+                link: "/groups/62zm4Q6d"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 12 September 2017
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 104
+                size: 2
+                link: "/groups/A5J2HJme"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 14 September 2017
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 105
+                size: 2
+                link: "/groups/8cJTWqHw"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 7 November 2017
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 106
+                size: 2
+                link: "/groups/yoPyDWdW"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 13 November 2017
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 107
+                size: 2
+                link: "/groups/NDZSYjeE"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 January 1900
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 108
+                size: 2
+                link: "/groups/ZL6nMgfa"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 January 1900
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 109
+                size: 2
+                link: "/groups/fKqMNz79"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 8 January 2018
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 110
+                size: 2
+                link: "/groups/ZZU064pS"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 18 March 2013
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 111
+                size: 2
+                link: "/groups/kv2Qqfn9"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 January 1900
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 112
+                size: 2
+                link: "/groups/ZU3IXBtP"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 3 July 2017
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 113
+                size: 2
+                link: "/groups/KSMOf7aM"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 13 July 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 114
+                size: 2
+                link: "/groups/Wfqub8yz"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 25 January 2008
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 115
+                size: 2
+                link: "/groups/Pt4e6RQz"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 24 November 2008
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 116
+                size: 2
+                link: "/groups/FQpTC4h6"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 18 March 2013
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 117
+                size: 2
+                link: "/groups/fpWTqVKh"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 8 January 2018
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 118
+                size: 2
+                link: "/groups/nFL8Pq3e"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 January 1900
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 119
+                size: 2
+                link: "/groups/7dSvuueH"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 12 May 2010
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 120
+                size: 2
+                link: "/groups/HYfypSOE"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 January 1900
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 121
+                size: 2
+                link: "/groups/5LQ5Ar74"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 8 June 2001
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 122
+                size: 2
+                link: "/groups/axUvDO2Z"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 18 March 2013
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 123
+                size: 2
+                link: "/groups/IEhsxklh"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 30 March 2012
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 124
+                size: 2
+                link: "/groups/XouN12Ow"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 29 May 2002
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 125
+                size: 2
+                link: "/groups/7gnSwbLO"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 11 December 1916
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 126
+                size: 2
+                link: "/groups/wxX46AN2"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 January 1900
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 127
+                size: 2
+                link: "/groups/kuekFr24"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 19 March 2013
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 128
+                size: 2
+                link: "/groups/Xm62G5S5"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 8 September 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 129
+                size: 2
+                link: "/groups/7y79fQPC"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 January 1900
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 130
+                size: 2
+                link: "/groups/92T6GQ6k"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 22 October 2013
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 131
+                size: 2
+                link: "/groups/ERtBa2Td"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 July 2013
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 132
+                size: 2
+                link: "/groups/BoXqhrq6"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 18 March 2013
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 133
+                size: 2
+                link: "/groups/ni8aOEk3"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 13 July 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 134
+                size: 2
+                link: "/groups/P8FS4eb5"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 3 December 2008
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 135
+                size: 2
+                link: "/groups/BRTNQywN"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 May 2007
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 136
+                size: 2
+                link: "/groups/JVJB3tuB"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 January 1900
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 137
+                size: 2
+                link: "/groups/yiuTaSI4"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 14 July 2016
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 138
+                size: 2
+                link: "/groups/g8hByIik"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 January 1900
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 139
+                size: 2
+                link: "/groups/UIV7W27r"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 January 1900
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 140
+                size: 2
+                link: "/groups/iZhvs5JB"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 1 January 1900
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 141
+                size: 2
+                link: "/groups/XbTBTDMo"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 8 June 2001
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 142
+                size: 2
+                link: "/groups/DkHdH4kZ"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 19 December 1946
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 143
+                size: 2
+                link: "/groups/9MITTmIv"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 20 February 2018
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 144
+                size: 2
+                link: "/groups/WStZnc2g"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 20 February 2018
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 145
+                size: 2
+                link: "/groups/358Oqy7M"
+            paragraph:
+              name: paragraph
+              data: []
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 146
+                size: 2
+                link: "/groups/yqP7PEWe"
+            paragraph:
+              name: paragraph
+              data: []
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 147
+                size: 2
+                link: "/groups/HJ8C09hf"
+            paragraph:
+              name: paragraph
+              data: []
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 148
+                size: 2
+                link: "/groups/8cOdYWqq"
+            paragraph:
+              name: paragraph
+              data: []
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 149
+                size: 2
+                link: "/groups/KAbWfdyx"
+            paragraph:
+              name: paragraph
+              data: []
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 150
+                size: 2
+                link: "/groups/bTYrBpXw"
+            paragraph:
+              name: paragraph
+              data: []
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 151
+                size: 2
+                link: "/groups/7L1AFKPj"
+            paragraph:
+              name: paragraph
+              data: []
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 152
+                size: 2
+                link: "/groups/Xell1E4r"
+            paragraph:
+              name: paragraph
+              data: []
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 153
+                size: 2
+                link: "/groups/5Za9SQqQ"
+            paragraph:
+              name: paragraph
+              data: []
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 154
+                size: 2
+                link: "/groups/Fg4qGY2n"
+            paragraph:
+              name: paragraph
+              data: []
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 155
+                size: 2
+                link: "/groups/DiSTTHYB"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 15 May 2018
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 156
+                size: 2
+                link: "/groups/0yVLP1jN"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 9 May 2018
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 157
+                size: 2
+                link: "/groups/yKvRcFgi"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 9 May 2018
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 158
+                size: 2
+                link: "/groups/nFSNUoHJ"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 9 May 2018
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 159
+                size: 2
+                link: "/groups/QvUdOIHy"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 9 May 2018
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 160
+                size: 2
+                link: "/groups/exx8DPVr"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 4 June 2018
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 161
+                size: 2
+                link: "/groups/Bwp39lLq"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 16 July 2018
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 162
+                size: 2
+                link: "/groups/saE5XUw4"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 4 September 2018
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groupName - 163
+                size: 2
+                link: "/groups/06prkjjf"
+            paragraph:
+              name: paragraph
+              data:
+              - content: Start Date 4 September 2018
+footer-components:
+- name: footer
+  data:
+    uk-parliament: shared.footer.uk-parliament
+    components:
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          name: partials__display
+          data:
+          - component: list
+        contents:
+        - content: shared.footer.current-website
+        - content: shared.footer.cookie-policy
+          data:
+            link: "/meta/cookie-policy"
+        - content: shared.footer.data-protection-privacy

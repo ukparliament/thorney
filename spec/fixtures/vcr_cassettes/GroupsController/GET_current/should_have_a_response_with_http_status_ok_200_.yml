@@ -1,0 +1,518 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3030/group_current
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/n-triples
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<AUTH_TOKEN>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/n-triples
+      Content-Disposition:
+      - inline; filename="index"
+      Last-Modified:
+      - Thu, 20 Sep 2018 15:39:49 GMT
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '62674'
+    body:
+      encoding: UTF-8
+      string: |
+        <https://id.parliament.uk/wZVxomZk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/wZVxomZk> <https://id.parliament.uk/schema/groupName> "groupName - 1" .
+        <https://id.parliament.uk/wZVxomZk> <https://id.parliament.uk/schema/groupStartDate> "1974-11-12+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/iGeIyqdU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/iGeIyqdU> <https://id.parliament.uk/schema/groupName> "groupName - 2" .
+        <https://id.parliament.uk/iGeIyqdU> <https://id.parliament.uk/schema/groupStartDate> "2010-07-13+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/onOuCmwm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/onOuCmwm> <https://id.parliament.uk/schema/groupName> "groupName - 3" .
+        <https://id.parliament.uk/onOuCmwm> <https://id.parliament.uk/schema/groupStartDate> "2013-01-07+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/jULkdAwx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/jULkdAwx> <https://id.parliament.uk/schema/groupName> "groupName - 4" .
+        <https://id.parliament.uk/jULkdAwx> <https://id.parliament.uk/schema/groupStartDate> "1994-11-16+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/xiMNmUSh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/xiMNmUSh> <https://id.parliament.uk/schema/groupName> "groupName - 5" .
+        <https://id.parliament.uk/xiMNmUSh> <https://id.parliament.uk/schema/groupStartDate> "2001-06-28+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/ANA3YJJx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/ANA3YJJx> <https://id.parliament.uk/schema/groupName> "groupName - 6" .
+        <https://id.parliament.uk/ANA3YJJx> <https://id.parliament.uk/schema/groupStartDate> "2001-06-28+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/fYbWHWhk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/fYbWHWhk> <https://id.parliament.uk/schema/groupName> "groupName - 7" .
+        <https://id.parliament.uk/fYbWHWhk> <https://id.parliament.uk/schema/groupStartDate> "1979-05-03+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/cLjFRjRt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/cLjFRjRt> <https://id.parliament.uk/schema/groupName> "groupName - 8" .
+        <https://id.parliament.uk/cLjFRjRt> <https://id.parliament.uk/schema/groupStartDate> "1995-11-15+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/tpnIn2BN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/tpnIn2BN> <https://id.parliament.uk/schema/groupName> "groupName - 9" .
+        <https://id.parliament.uk/tpnIn2BN> <https://id.parliament.uk/schema/groupStartDate> "2016-09-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/eHK3fAn2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/eHK3fAn2> <https://id.parliament.uk/schema/groupName> "groupName - 10" .
+        <https://id.parliament.uk/eHK3fAn2> <https://id.parliament.uk/schema/groupStartDate> "2002-11-13+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/U7EjDeFU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/U7EjDeFU> <https://id.parliament.uk/schema/groupName> "groupName - 11" .
+        <https://id.parliament.uk/U7EjDeFU> <https://id.parliament.uk/schema/groupStartDate> "1974-11-12+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/ILGTEgcO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/ILGTEgcO> <https://id.parliament.uk/schema/groupName> "groupName - 12" .
+        <https://id.parliament.uk/ILGTEgcO> <https://id.parliament.uk/schema/groupStartDate> "2015-05-27+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/x7eu4YYX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/x7eu4YYX> <https://id.parliament.uk/schema/groupName> "groupName - 13" .
+        <https://id.parliament.uk/x7eu4YYX> <https://id.parliament.uk/schema/groupStartDate> "1991-10-31+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/dN4Dh5qf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/dN4Dh5qf> <https://id.parliament.uk/schema/groupName> "groupName - 14" .
+        <https://id.parliament.uk/dN4Dh5qf> <https://id.parliament.uk/schema/groupStartDate> "1978-11-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/GZwoZ6sm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/GZwoZ6sm> <https://id.parliament.uk/schema/groupName> "groupName - 15" .
+        <https://id.parliament.uk/GZwoZ6sm> <https://id.parliament.uk/schema/groupStartDate> "2012-10-31+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/VjeqH4MS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/VjeqH4MS> <https://id.parliament.uk/schema/groupName> "groupName - 16" .
+        <https://id.parliament.uk/VjeqH4MS> <https://id.parliament.uk/schema/groupStartDate> "1998-11-17+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/1SujEdqu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/1SujEdqu> <https://id.parliament.uk/schema/groupName> "groupName - 17" .
+        <https://id.parliament.uk/1SujEdqu> <https://id.parliament.uk/schema/groupStartDate> "2015-06-18+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/vS4ICCTW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/vS4ICCTW> <https://id.parliament.uk/schema/groupName> "groupName - 18" .
+        <https://id.parliament.uk/vS4ICCTW> <https://id.parliament.uk/schema/groupStartDate> "2015-07-16+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/TPDK1RsN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/TPDK1RsN> <https://id.parliament.uk/schema/groupName> "groupName - 19" .
+        <https://id.parliament.uk/TPDK1RsN> <https://id.parliament.uk/schema/groupStartDate> "2016-10-17+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/kS1qNRTA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/kS1qNRTA> <https://id.parliament.uk/schema/groupName> "groupName - 20" .
+        <https://id.parliament.uk/kS1qNRTA> <https://id.parliament.uk/schema/groupStartDate> "2015-06-03+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/8sI5979J> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/8sI5979J> <https://id.parliament.uk/schema/groupName> "groupName - 21" .
+        <https://id.parliament.uk/8sI5979J> <https://id.parliament.uk/schema/groupStartDate> "2016-12-20+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/Q04p6jUr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/Q04p6jUr> <https://id.parliament.uk/schema/groupName> "groupName - 22" .
+        <https://id.parliament.uk/Q04p6jUr> <https://id.parliament.uk/schema/groupStartDate> "2012-05-17+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/riFJAR1y> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/riFJAR1y> <https://id.parliament.uk/schema/groupName> "groupName - 23" .
+        <https://id.parliament.uk/riFJAR1y> <https://id.parliament.uk/schema/groupStartDate> "1975-04-16+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/wiDotwa3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/wiDotwa3> <https://id.parliament.uk/schema/groupName> "groupName - 24" .
+        <https://id.parliament.uk/wiDotwa3> <https://id.parliament.uk/schema/groupStartDate> "1980-01-31+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/KRbbFVCS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/KRbbFVCS> <https://id.parliament.uk/schema/groupName> "groupName - 25" .
+        <https://id.parliament.uk/KRbbFVCS> <https://id.parliament.uk/schema/groupStartDate> "2010-06-29+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/73Fl48wp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/73Fl48wp> <https://id.parliament.uk/schema/groupName> "groupName - 26" .
+        <https://id.parliament.uk/73Fl48wp> <https://id.parliament.uk/schema/groupStartDate> "2009-10-28+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/jLIc7oPt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/jLIc7oPt> <https://id.parliament.uk/schema/groupName> "groupName - 27" .
+        <https://id.parliament.uk/jLIc7oPt> <https://id.parliament.uk/schema/groupStartDate> "2015-06-12+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/5Mlzzi7F> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/5Mlzzi7F> <https://id.parliament.uk/schema/groupName> "groupName - 28" .
+        <https://id.parliament.uk/5Mlzzi7F> <https://id.parliament.uk/schema/groupStartDate> "1993-12-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/IjGmcAj5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/IjGmcAj5> <https://id.parliament.uk/schema/groupName> "groupName - 29" .
+        <https://id.parliament.uk/IjGmcAj5> <https://id.parliament.uk/schema/groupStartDate> "2016-09-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/8ERS54Na> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/8ERS54Na> <https://id.parliament.uk/schema/groupName> "groupName - 30" .
+        <https://id.parliament.uk/8ERS54Na> <https://id.parliament.uk/schema/groupStartDate> "2015-09-08+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/SZrZn6gs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/SZrZn6gs> <https://id.parliament.uk/schema/groupName> "groupName - 31" .
+        <https://id.parliament.uk/SZrZn6gs> <https://id.parliament.uk/schema/groupStartDate> "1978-11-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/5ErDuzXd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/5ErDuzXd> <https://id.parliament.uk/schema/groupName> "groupName - 32" .
+        <https://id.parliament.uk/5ErDuzXd> <https://id.parliament.uk/schema/groupStartDate> "2001-07-16+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/xLDCGkEU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/xLDCGkEU> <https://id.parliament.uk/schema/groupName> "groupName - 33" .
+        <https://id.parliament.uk/xLDCGkEU> <https://id.parliament.uk/schema/groupStartDate> "2010-04-21+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/PUQvEZi8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/PUQvEZi8> <https://id.parliament.uk/schema/groupName> "groupName - 34" .
+        <https://id.parliament.uk/PUQvEZi8> <https://id.parliament.uk/schema/groupStartDate> "2015-06-12+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/BueyYdWd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/BueyYdWd> <https://id.parliament.uk/schema/groupName> "groupName - 35" .
+        <https://id.parliament.uk/BueyYdWd> <https://id.parliament.uk/schema/groupStartDate> "2007-11-06+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/KUG5GwaV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/KUG5GwaV> <https://id.parliament.uk/schema/groupName> "groupName - 36" .
+        <https://id.parliament.uk/KUG5GwaV> <https://id.parliament.uk/schema/groupStartDate> "2016-09-13+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/FucHjbMu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/FucHjbMu> <https://id.parliament.uk/schema/groupName> "groupName - 37" .
+        <https://id.parliament.uk/FucHjbMu> <https://id.parliament.uk/schema/groupStartDate> "2016-05-25+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/jrUSwaNE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/jrUSwaNE> <https://id.parliament.uk/schema/groupName> "groupName - 38" .
+        <https://id.parliament.uk/jrUSwaNE> <https://id.parliament.uk/schema/groupStartDate> "1979-05-03+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/SnKxyzm3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/SnKxyzm3> <https://id.parliament.uk/schema/groupName> "groupName - 39" .
+        <https://id.parliament.uk/SnKxyzm3> <https://id.parliament.uk/schema/groupStartDate> "1979-05-03+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/Qp0xvHUJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/Qp0xvHUJ> <https://id.parliament.uk/schema/groupName> "groupName - 40" .
+        <https://id.parliament.uk/Qp0xvHUJ> <https://id.parliament.uk/schema/groupStartDate> "1981-11-12+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/mHE3vCVC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/mHE3vCVC> <https://id.parliament.uk/schema/groupName> "groupName - 41" .
+        <https://id.parliament.uk/mHE3vCVC> <https://id.parliament.uk/schema/groupStartDate> "2017-06-27+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/sRBUWwFf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/sRBUWwFf> <https://id.parliament.uk/schema/groupName> "groupName - 42" .
+        <https://id.parliament.uk/sRBUWwFf> <https://id.parliament.uk/schema/groupStartDate> "2015-06-12+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/ZyRIvFmC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/ZyRIvFmC> <https://id.parliament.uk/schema/groupName> "groupName - 43" .
+        <https://id.parliament.uk/ZyRIvFmC> <https://id.parliament.uk/schema/groupStartDate> "1994-07-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/5IgASPKH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/5IgASPKH> <https://id.parliament.uk/schema/groupName> "groupName - 44" .
+        <https://id.parliament.uk/5IgASPKH> <https://id.parliament.uk/schema/groupStartDate> "1978-11-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/XLifv1Ff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/XLifv1Ff> <https://id.parliament.uk/schema/groupName> "groupName - 45" .
+        <https://id.parliament.uk/XLifv1Ff> <https://id.parliament.uk/schema/groupStartDate> "2015-12-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/ReE8wVWz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/ReE8wVWz> <https://id.parliament.uk/schema/groupName> "groupName - 46" .
+        <https://id.parliament.uk/ReE8wVWz> <https://id.parliament.uk/schema/groupStartDate> "1986-11-18+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/XK1JDE1t> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/XK1JDE1t> <https://id.parliament.uk/schema/groupName> "groupName - 47" .
+        <https://id.parliament.uk/XK1JDE1t> <https://id.parliament.uk/schema/groupStartDate> "2010-07-12+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/VthF9ZwL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/VthF9ZwL> <https://id.parliament.uk/schema/groupName> "groupName - 48" .
+        <https://id.parliament.uk/VthF9ZwL> <https://id.parliament.uk/schema/groupStartDate> "2011-06-28+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/6gYld9ky> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/6gYld9ky> <https://id.parliament.uk/schema/groupName> "groupName - 49" .
+        <https://id.parliament.uk/6gYld9ky> <https://id.parliament.uk/schema/groupStartDate> "1999-04-20+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/5NJVAuSn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/5NJVAuSn> <https://id.parliament.uk/schema/groupName> "groupName - 50" .
+        <https://id.parliament.uk/5NJVAuSn> <https://id.parliament.uk/schema/groupStartDate> "1974-10-30+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/NTScA2qc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/NTScA2qc> <https://id.parliament.uk/schema/groupName> "groupName - 51" .
+        <https://id.parliament.uk/NTScA2qc> <https://id.parliament.uk/schema/groupStartDate> "2015-05-27+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/9VxPCSem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/9VxPCSem> <https://id.parliament.uk/schema/groupName> "groupName - 52" .
+        <https://id.parliament.uk/9VxPCSem> <https://id.parliament.uk/schema/groupStartDate> "2015-06-11+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/7Uq2MmBH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/7Uq2MmBH> <https://id.parliament.uk/schema/groupName> "groupName - 53" .
+        <https://id.parliament.uk/7Uq2MmBH> <https://id.parliament.uk/schema/groupStartDate> "2015-12-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/xlEqw7ED> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/xlEqw7ED> <https://id.parliament.uk/schema/groupName> "groupName - 54" .
+        <https://id.parliament.uk/xlEqw7ED> <https://id.parliament.uk/schema/groupStartDate> "2007-04-23+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/3KVfKVJt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/3KVfKVJt> <https://id.parliament.uk/schema/groupName> "groupName - 55" .
+        <https://id.parliament.uk/3KVfKVJt> <https://id.parliament.uk/schema/groupStartDate> "2006-06-27+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/FgqBLTpL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/FgqBLTpL> <https://id.parliament.uk/schema/groupName> "groupName - 56" .
+        <https://id.parliament.uk/FgqBLTpL> <https://id.parliament.uk/schema/groupStartDate> "1979-05-03+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/SFPzebqT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/SFPzebqT> <https://id.parliament.uk/schema/groupName> "groupName - 57" .
+        <https://id.parliament.uk/SFPzebqT> <https://id.parliament.uk/schema/groupStartDate> "2016-01-05+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/gOA14XL1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/gOA14XL1> <https://id.parliament.uk/schema/groupName> "groupName - 58" .
+        <https://id.parliament.uk/gOA14XL1> <https://id.parliament.uk/schema/groupStartDate> "2012-05-18+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/SKcyZHEb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/SKcyZHEb> <https://id.parliament.uk/schema/groupName> "groupName - 59" .
+        <https://id.parliament.uk/SKcyZHEb> <https://id.parliament.uk/schema/groupStartDate> "2015-06-03+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/jsXAOUDV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/jsXAOUDV> <https://id.parliament.uk/schema/groupName> "groupName - 60" .
+        <https://id.parliament.uk/jsXAOUDV> <https://id.parliament.uk/schema/groupStartDate> "2016-11-15+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/KTALGXnk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/KTALGXnk> <https://id.parliament.uk/schema/groupName> "groupName - 61" .
+        <https://id.parliament.uk/KTALGXnk> <https://id.parliament.uk/schema/groupStartDate> "2016-11-02+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/EGqxzqiP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/EGqxzqiP> <https://id.parliament.uk/schema/groupName> "groupName - 62" .
+        <https://id.parliament.uk/EGqxzqiP> <https://id.parliament.uk/schema/groupStartDate> "2004-12-07+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/26fpkWHF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/26fpkWHF> <https://id.parliament.uk/schema/groupName> "groupName - 63" .
+        <https://id.parliament.uk/26fpkWHF> <https://id.parliament.uk/schema/groupStartDate> "1978-11-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/Wyn715u2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/Wyn715u2> <https://id.parliament.uk/schema/groupName> "groupName - 64" .
+        <https://id.parliament.uk/Wyn715u2> <https://id.parliament.uk/schema/groupStartDate> "1979-05-03+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/cxrBWmAE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/cxrBWmAE> <https://id.parliament.uk/schema/groupName> "groupName - 65" .
+        <https://id.parliament.uk/cxrBWmAE> <https://id.parliament.uk/schema/groupStartDate> "2003-06-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/vqoVsXim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/vqoVsXim> <https://id.parliament.uk/schema/groupName> "groupName - 66" .
+        <https://id.parliament.uk/vqoVsXim> <https://id.parliament.uk/schema/groupStartDate> "1978-11-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/0XAGDhKm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/0XAGDhKm> <https://id.parliament.uk/schema/groupName> "groupName - 67" .
+        <https://id.parliament.uk/0XAGDhKm> <https://id.parliament.uk/schema/groupStartDate> "2016-10-17+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/SYd7RdQp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/SYd7RdQp> <https://id.parliament.uk/schema/groupName> "groupName - 68" .
+        <https://id.parliament.uk/SYd7RdQp> <https://id.parliament.uk/schema/groupStartDate> "2017-09-12+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/jGHZgrut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/jGHZgrut> <https://id.parliament.uk/schema/groupName> "groupName - 69" .
+        <https://id.parliament.uk/jGHZgrut> <https://id.parliament.uk/schema/groupStartDate> "2015-06-23+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/PjvAC3mK> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/PjvAC3mK> <https://id.parliament.uk/schema/groupName> "groupName - 70" .
+        <https://id.parliament.uk/PjvAC3mK> <https://id.parliament.uk/schema/groupStartDate> "2016-04-14+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/eISFSRjA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/eISFSRjA> <https://id.parliament.uk/schema/groupName> "groupName - 71" .
+        <https://id.parliament.uk/eISFSRjA> <https://id.parliament.uk/schema/groupStartDate> "2015-03-23+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/KeIrjh46> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/KeIrjh46> <https://id.parliament.uk/schema/groupName> "groupName - 72" .
+        <https://id.parliament.uk/KeIrjh46> <https://id.parliament.uk/schema/groupStartDate> "1991-12-05+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/EbwlhEhI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/EbwlhEhI> <https://id.parliament.uk/schema/groupName> "groupName - 73" .
+        <https://id.parliament.uk/EbwlhEhI> <https://id.parliament.uk/schema/groupStartDate> "2001-01-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/P7Ne09WK> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/P7Ne09WK> <https://id.parliament.uk/schema/groupName> "groupName - 74" .
+        <https://id.parliament.uk/P7Ne09WK> <https://id.parliament.uk/schema/groupStartDate> "2001-01-17+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/9n1vTHKU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/9n1vTHKU> <https://id.parliament.uk/schema/groupName> "groupName - 75" .
+        <https://id.parliament.uk/9n1vTHKU> <https://id.parliament.uk/schema/groupStartDate> "2017-06-27+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/QMRPyNmE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/QMRPyNmE> <https://id.parliament.uk/schema/groupName> "groupName - 76" .
+        <https://id.parliament.uk/QMRPyNmE> <https://id.parliament.uk/schema/groupStartDate> "2014-05-13+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/2aP5lDF0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/2aP5lDF0> <https://id.parliament.uk/schema/groupName> "groupName - 77" .
+        <https://id.parliament.uk/2aP5lDF0> <https://id.parliament.uk/schema/groupStartDate> "2001-07-16+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/sWVTowyI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/sWVTowyI> <https://id.parliament.uk/schema/groupName> "groupName - 78" .
+        <https://id.parliament.uk/sWVTowyI> <https://id.parliament.uk/schema/groupStartDate> "2010-04-21+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/QbVZ6ENL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/QbVZ6ENL> <https://id.parliament.uk/schema/groupName> "groupName - 79" .
+        <https://id.parliament.uk/QbVZ6ENL> <https://id.parliament.uk/schema/groupStartDate> "1978-11-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/tWzrJATE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/tWzrJATE> <https://id.parliament.uk/schema/groupName> "groupName - 80" .
+        <https://id.parliament.uk/tWzrJATE> <https://id.parliament.uk/schema/groupStartDate> "1997-11-12+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/oaWaMRnb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/oaWaMRnb> <https://id.parliament.uk/schema/groupName> "groupName - 81" .
+        <https://id.parliament.uk/oaWaMRnb> <https://id.parliament.uk/schema/groupStartDate> "1979-05-03+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/F8su1PU4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/F8su1PU4> <https://id.parliament.uk/schema/groupName> "groupName - 82" .
+        <https://id.parliament.uk/F8su1PU4> <https://id.parliament.uk/schema/groupStartDate> "2001-07-16+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/dSZupNQR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/dSZupNQR> <https://id.parliament.uk/schema/groupName> "groupName - 83" .
+        <https://id.parliament.uk/dSZupNQR> <https://id.parliament.uk/schema/groupStartDate> "1991-10-31+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/ml5W3Beh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/ml5W3Beh> <https://id.parliament.uk/schema/groupName> "groupName - 84" .
+        <https://id.parliament.uk/ml5W3Beh> <https://id.parliament.uk/schema/groupStartDate> "2010-07-12+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/HksJaO3e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/HksJaO3e> <https://id.parliament.uk/schema/groupName> "groupName - 85" .
+        <https://id.parliament.uk/HksJaO3e> <https://id.parliament.uk/schema/groupStartDate> "1979-05-03+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/FkVzBipk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/FkVzBipk> <https://id.parliament.uk/schema/groupName> "groupName - 86" .
+        <https://id.parliament.uk/FkVzBipk> <https://id.parliament.uk/schema/groupStartDate> "1978-11-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/DBFruMTZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/DBFruMTZ> <https://id.parliament.uk/schema/groupName> "groupName - 87" .
+        <https://id.parliament.uk/DBFruMTZ> <https://id.parliament.uk/schema/groupStartDate> "2017-06-27+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/64upzhTs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/64upzhTs> <https://id.parliament.uk/schema/groupName> "groupName - 88" .
+        <https://id.parliament.uk/64upzhTs> <https://id.parliament.uk/schema/groupStartDate> "2016-10-17+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/XTC5vyzw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/XTC5vyzw> <https://id.parliament.uk/schema/groupName> "groupName - 89" .
+        <https://id.parliament.uk/XTC5vyzw> <https://id.parliament.uk/schema/groupStartDate> "1974-11-07+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/TnpbWYqi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/TnpbWYqi> <https://id.parliament.uk/schema/groupName> "groupName - 90" .
+        <https://id.parliament.uk/TnpbWYqi> <https://id.parliament.uk/schema/groupStartDate> "2010-11-02+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/D4ldIHfK> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/D4ldIHfK> <https://id.parliament.uk/schema/groupName> "groupName - 91" .
+        <https://id.parliament.uk/D4ldIHfK> <https://id.parliament.uk/schema/groupStartDate> "2016-05-23+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/u1WDOF9U> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/u1WDOF9U> <https://id.parliament.uk/schema/groupName> "groupName - 92" .
+        <https://id.parliament.uk/u1WDOF9U> <https://id.parliament.uk/schema/groupStartDate> "2017-06-27+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/HrO1jVgi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/HrO1jVgi> <https://id.parliament.uk/schema/groupName> "groupName - 93" .
+        <https://id.parliament.uk/HrO1jVgi> <https://id.parliament.uk/schema/groupStartDate> "2010-11-18+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/o5apPSOq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/o5apPSOq> <https://id.parliament.uk/schema/groupName> "groupName - 94" .
+        <https://id.parliament.uk/o5apPSOq> <https://id.parliament.uk/schema/groupStartDate> "2015-06-12+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/IsCRoCUL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/IsCRoCUL> <https://id.parliament.uk/schema/groupName> "groupName - 95" .
+        <https://id.parliament.uk/IsCRoCUL> <https://id.parliament.uk/schema/groupStartDate> "2015-06-12+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/ShdLf35P> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/ShdLf35P> <https://id.parliament.uk/schema/groupName> "groupName - 96" .
+        <https://id.parliament.uk/ShdLf35P> <https://id.parliament.uk/schema/groupStartDate> "1997-07-14+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/tKuBqAfP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/tKuBqAfP> <https://id.parliament.uk/schema/groupName> "groupName - 97" .
+        <https://id.parliament.uk/tKuBqAfP> <https://id.parliament.uk/schema/groupStartDate> "2004-01-29+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/GxZPl6JY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/GxZPl6JY> <https://id.parliament.uk/schema/groupName> "groupName - 98" .
+        <https://id.parliament.uk/GxZPl6JY> <https://id.parliament.uk/schema/groupStartDate> "2010-01-06+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/Uq5DbjFp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/Uq5DbjFp> <https://id.parliament.uk/schema/groupName> "groupName - 99" .
+        <https://id.parliament.uk/Uq5DbjFp> <https://id.parliament.uk/schema/groupStartDate> "2013-01-07+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/7D3ynJt9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/7D3ynJt9> <https://id.parliament.uk/schema/groupName> "groupName - 100" .
+        <https://id.parliament.uk/7D3ynJt9> <https://id.parliament.uk/schema/groupStartDate> "2010-01-13+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/T9zOBPqn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/T9zOBPqn> <https://id.parliament.uk/schema/groupName> "groupName - 101" .
+        <https://id.parliament.uk/T9zOBPqn> <https://id.parliament.uk/schema/groupStartDate> "2016-09-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/RnMSHi4S> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/RnMSHi4S> <https://id.parliament.uk/schema/groupName> "groupName - 102" .
+        <https://id.parliament.uk/RnMSHi4S> <https://id.parliament.uk/schema/groupStartDate> "2017-01-25+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/62zm4Q6d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/62zm4Q6d> <https://id.parliament.uk/schema/groupName> "groupName - 103" .
+        <https://id.parliament.uk/62zm4Q6d> <https://id.parliament.uk/schema/groupStartDate> "2017-09-12+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/A5J2HJme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/A5J2HJme> <https://id.parliament.uk/schema/groupName> "groupName - 104" .
+        <https://id.parliament.uk/A5J2HJme> <https://id.parliament.uk/schema/groupStartDate> "2017-09-14+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/8cJTWqHw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/8cJTWqHw> <https://id.parliament.uk/schema/groupName> "groupName - 105" .
+        <https://id.parliament.uk/8cJTWqHw> <https://id.parliament.uk/schema/groupStartDate> "2017-11-07+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/yoPyDWdW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/yoPyDWdW> <https://id.parliament.uk/schema/groupName> "groupName - 106" .
+        <https://id.parliament.uk/yoPyDWdW> <https://id.parliament.uk/schema/groupStartDate> "2017-11-13+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/NDZSYjeE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/NDZSYjeE> <https://id.parliament.uk/schema/groupName> "groupName - 107" .
+        <https://id.parliament.uk/NDZSYjeE> <https://id.parliament.uk/schema/groupStartDate> "1900-01-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/ZL6nMgfa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/ZL6nMgfa> <https://id.parliament.uk/schema/groupName> "groupName - 108" .
+        <https://id.parliament.uk/ZL6nMgfa> <https://id.parliament.uk/schema/groupStartDate> "1900-01-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/fKqMNz79> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/fKqMNz79> <https://id.parliament.uk/schema/groupName> "groupName - 109" .
+        <https://id.parliament.uk/fKqMNz79> <https://id.parliament.uk/schema/groupStartDate> "2018-01-08+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/ZZU064pS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/ZZU064pS> <https://id.parliament.uk/schema/groupName> "groupName - 110" .
+        <https://id.parliament.uk/ZZU064pS> <https://id.parliament.uk/schema/groupStartDate> "2013-03-18+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/kv2Qqfn9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/kv2Qqfn9> <https://id.parliament.uk/schema/groupName> "groupName - 111" .
+        <https://id.parliament.uk/kv2Qqfn9> <https://id.parliament.uk/schema/groupStartDate> "1900-01-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/ZU3IXBtP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/ZU3IXBtP> <https://id.parliament.uk/schema/groupName> "groupName - 112" .
+        <https://id.parliament.uk/ZU3IXBtP> <https://id.parliament.uk/schema/groupStartDate> "2017-07-03+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/KSMOf7aM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/KSMOf7aM> <https://id.parliament.uk/schema/groupName> "groupName - 113" .
+        <https://id.parliament.uk/KSMOf7aM> <https://id.parliament.uk/schema/groupStartDate> "2016-07-13+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/Wfqub8yz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/Wfqub8yz> <https://id.parliament.uk/schema/groupName> "groupName - 114" .
+        <https://id.parliament.uk/Wfqub8yz> <https://id.parliament.uk/schema/groupStartDate> "2008-01-25+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/Pt4e6RQz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/Pt4e6RQz> <https://id.parliament.uk/schema/groupName> "groupName - 115" .
+        <https://id.parliament.uk/Pt4e6RQz> <https://id.parliament.uk/schema/groupStartDate> "2008-11-24+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/FQpTC4h6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/FQpTC4h6> <https://id.parliament.uk/schema/groupName> "groupName - 116" .
+        <https://id.parliament.uk/FQpTC4h6> <https://id.parliament.uk/schema/groupStartDate> "2013-03-18+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/fpWTqVKh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/fpWTqVKh> <https://id.parliament.uk/schema/groupName> "groupName - 117" .
+        <https://id.parliament.uk/fpWTqVKh> <https://id.parliament.uk/schema/groupStartDate> "2018-01-08+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/nFL8Pq3e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/nFL8Pq3e> <https://id.parliament.uk/schema/groupName> "groupName - 118" .
+        <https://id.parliament.uk/nFL8Pq3e> <https://id.parliament.uk/schema/groupStartDate> "1900-01-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/7dSvuueH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/7dSvuueH> <https://id.parliament.uk/schema/groupName> "groupName - 119" .
+        <https://id.parliament.uk/7dSvuueH> <https://id.parliament.uk/schema/groupStartDate> "2010-05-12+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/HYfypSOE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/HYfypSOE> <https://id.parliament.uk/schema/groupName> "groupName - 120" .
+        <https://id.parliament.uk/HYfypSOE> <https://id.parliament.uk/schema/groupStartDate> "1900-01-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/5LQ5Ar74> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/5LQ5Ar74> <https://id.parliament.uk/schema/groupName> "groupName - 121" .
+        <https://id.parliament.uk/5LQ5Ar74> <https://id.parliament.uk/schema/groupStartDate> "2001-06-08+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/axUvDO2Z> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/axUvDO2Z> <https://id.parliament.uk/schema/groupName> "groupName - 122" .
+        <https://id.parliament.uk/axUvDO2Z> <https://id.parliament.uk/schema/groupStartDate> "2013-03-18+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/IEhsxklh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/IEhsxklh> <https://id.parliament.uk/schema/groupName> "groupName - 123" .
+        <https://id.parliament.uk/IEhsxklh> <https://id.parliament.uk/schema/groupStartDate> "2012-03-30+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/XouN12Ow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/groupName> "groupName - 124" .
+        <https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/groupStartDate> "2002-05-29+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/7gnSwbLO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/7gnSwbLO> <https://id.parliament.uk/schema/groupName> "groupName - 125" .
+        <https://id.parliament.uk/7gnSwbLO> <https://id.parliament.uk/schema/groupStartDate> "1916-12-11+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/wxX46AN2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/wxX46AN2> <https://id.parliament.uk/schema/groupName> "groupName - 126" .
+        <https://id.parliament.uk/wxX46AN2> <https://id.parliament.uk/schema/groupStartDate> "1900-01-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/kuekFr24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/kuekFr24> <https://id.parliament.uk/schema/groupName> "groupName - 127" .
+        <https://id.parliament.uk/kuekFr24> <https://id.parliament.uk/schema/groupStartDate> "2013-03-19+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/Xm62G5S5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/Xm62G5S5> <https://id.parliament.uk/schema/groupName> "groupName - 128" .
+        <https://id.parliament.uk/Xm62G5S5> <https://id.parliament.uk/schema/groupStartDate> "2016-09-08+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/7y79fQPC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/7y79fQPC> <https://id.parliament.uk/schema/groupName> "groupName - 129" .
+        <https://id.parliament.uk/7y79fQPC> <https://id.parliament.uk/schema/groupStartDate> "1900-01-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/92T6GQ6k> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/92T6GQ6k> <https://id.parliament.uk/schema/groupName> "groupName - 130" .
+        <https://id.parliament.uk/92T6GQ6k> <https://id.parliament.uk/schema/groupStartDate> "2013-10-22+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/ERtBa2Td> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/ERtBa2Td> <https://id.parliament.uk/schema/groupName> "groupName - 131" .
+        <https://id.parliament.uk/ERtBa2Td> <https://id.parliament.uk/schema/groupStartDate> "2013-07-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/BoXqhrq6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/BoXqhrq6> <https://id.parliament.uk/schema/groupName> "groupName - 132" .
+        <https://id.parliament.uk/BoXqhrq6> <https://id.parliament.uk/schema/groupStartDate> "2013-03-18+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/ni8aOEk3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/ni8aOEk3> <https://id.parliament.uk/schema/groupName> "groupName - 133" .
+        <https://id.parliament.uk/ni8aOEk3> <https://id.parliament.uk/schema/groupStartDate> "2016-07-13+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/P8FS4eb5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/P8FS4eb5> <https://id.parliament.uk/schema/groupName> "groupName - 134" .
+        <https://id.parliament.uk/P8FS4eb5> <https://id.parliament.uk/schema/groupStartDate> "2008-12-03+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/BRTNQywN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/BRTNQywN> <https://id.parliament.uk/schema/groupName> "groupName - 135" .
+        <https://id.parliament.uk/BRTNQywN> <https://id.parliament.uk/schema/groupStartDate> "2007-05-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/JVJB3tuB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/JVJB3tuB> <https://id.parliament.uk/schema/groupName> "groupName - 136" .
+        <https://id.parliament.uk/JVJB3tuB> <https://id.parliament.uk/schema/groupStartDate> "1900-01-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/yiuTaSI4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/yiuTaSI4> <https://id.parliament.uk/schema/groupName> "groupName - 137" .
+        <https://id.parliament.uk/yiuTaSI4> <https://id.parliament.uk/schema/groupStartDate> "2016-07-14+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/g8hByIik> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/g8hByIik> <https://id.parliament.uk/schema/groupName> "groupName - 138" .
+        <https://id.parliament.uk/g8hByIik> <https://id.parliament.uk/schema/groupStartDate> "1900-01-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/UIV7W27r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/UIV7W27r> <https://id.parliament.uk/schema/groupName> "groupName - 139" .
+        <https://id.parliament.uk/UIV7W27r> <https://id.parliament.uk/schema/groupStartDate> "1900-01-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/iZhvs5JB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/iZhvs5JB> <https://id.parliament.uk/schema/groupName> "groupName - 140" .
+        <https://id.parliament.uk/iZhvs5JB> <https://id.parliament.uk/schema/groupStartDate> "1900-01-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/XbTBTDMo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/XbTBTDMo> <https://id.parliament.uk/schema/groupName> "groupName - 141" .
+        <https://id.parliament.uk/XbTBTDMo> <https://id.parliament.uk/schema/groupStartDate> "2001-06-08+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/DkHdH4kZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/DkHdH4kZ> <https://id.parliament.uk/schema/groupName> "groupName - 142" .
+        <https://id.parliament.uk/DkHdH4kZ> <https://id.parliament.uk/schema/groupStartDate> "1946-12-19+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/9MITTmIv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/9MITTmIv> <https://id.parliament.uk/schema/groupName> "groupName - 143" .
+        <https://id.parliament.uk/9MITTmIv> <https://id.parliament.uk/schema/groupStartDate> "2018-02-20+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/WStZnc2g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/WStZnc2g> <https://id.parliament.uk/schema/groupName> "groupName - 144" .
+        <https://id.parliament.uk/WStZnc2g> <https://id.parliament.uk/schema/groupStartDate> "2018-02-20+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/358Oqy7M> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/358Oqy7M> <https://id.parliament.uk/schema/groupName> "groupName - 145" .
+        <https://id.parliament.uk/yqP7PEWe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/yqP7PEWe> <https://id.parliament.uk/schema/groupName> "groupName - 146" .
+        <https://id.parliament.uk/HJ8C09hf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/HJ8C09hf> <https://id.parliament.uk/schema/groupName> "groupName - 147" .
+        <https://id.parliament.uk/8cOdYWqq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/8cOdYWqq> <https://id.parliament.uk/schema/groupName> "groupName - 148" .
+        <https://id.parliament.uk/KAbWfdyx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/KAbWfdyx> <https://id.parliament.uk/schema/groupName> "groupName - 149" .
+        <https://id.parliament.uk/bTYrBpXw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/bTYrBpXw> <https://id.parliament.uk/schema/groupName> "groupName - 150" .
+        <https://id.parliament.uk/7L1AFKPj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/7L1AFKPj> <https://id.parliament.uk/schema/groupName> "groupName - 151" .
+        <https://id.parliament.uk/Xell1E4r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/Xell1E4r> <https://id.parliament.uk/schema/groupName> "groupName - 152" .
+        <https://id.parliament.uk/5Za9SQqQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/5Za9SQqQ> <https://id.parliament.uk/schema/groupName> "groupName - 153" .
+        <https://id.parliament.uk/Fg4qGY2n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/Fg4qGY2n> <https://id.parliament.uk/schema/groupName> "groupName - 154" .
+        <https://id.parliament.uk/DiSTTHYB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/DiSTTHYB> <https://id.parliament.uk/schema/groupName> "groupName - 155" .
+        <https://id.parliament.uk/DiSTTHYB> <https://id.parliament.uk/schema/groupStartDate> "2018-05-15+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/0yVLP1jN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/0yVLP1jN> <https://id.parliament.uk/schema/groupName> "groupName - 156" .
+        <https://id.parliament.uk/0yVLP1jN> <https://id.parliament.uk/schema/groupStartDate> "2018-05-09+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/yKvRcFgi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/yKvRcFgi> <https://id.parliament.uk/schema/groupName> "groupName - 157" .
+        <https://id.parliament.uk/yKvRcFgi> <https://id.parliament.uk/schema/groupStartDate> "2018-05-09+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/nFSNUoHJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/nFSNUoHJ> <https://id.parliament.uk/schema/groupName> "groupName - 158" .
+        <https://id.parliament.uk/nFSNUoHJ> <https://id.parliament.uk/schema/groupStartDate> "2018-05-09+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/QvUdOIHy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/QvUdOIHy> <https://id.parliament.uk/schema/groupName> "groupName - 159" .
+        <https://id.parliament.uk/QvUdOIHy> <https://id.parliament.uk/schema/groupStartDate> "2018-05-09+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/exx8DPVr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/exx8DPVr> <https://id.parliament.uk/schema/groupName> "groupName - 160" .
+        <https://id.parliament.uk/exx8DPVr> <https://id.parliament.uk/schema/groupStartDate> "2018-06-04+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/Bwp39lLq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/Bwp39lLq> <https://id.parliament.uk/schema/groupName> "groupName - 161" .
+        <https://id.parliament.uk/Bwp39lLq> <https://id.parliament.uk/schema/groupStartDate> "2018-07-16+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/saE5XUw4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/saE5XUw4> <https://id.parliament.uk/schema/groupName> "groupName - 162" .
+        <https://id.parliament.uk/saE5XUw4> <https://id.parliament.uk/schema/groupStartDate> "2018-09-04+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/06prkjjf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/06prkjjf> <https://id.parliament.uk/schema/groupName> "groupName - 163" .
+        <https://id.parliament.uk/06prkjjf> <https://id.parliament.uk/schema/groupStartDate> "2018-09-04+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 13:57:57 GMT
+recorded_with: VCR 4.0.0
