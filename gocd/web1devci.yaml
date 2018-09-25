@@ -4,6 +4,7 @@ pipelines:
     label_template: "${COUNT}"
     environment_variables:
       RACK_ENV: development
+      PARLIAMENT_API_VERSION: Staging
     materials:
       parliament.uk-thorney-git:
         git: https://github.com/ukparliament/thorney.git
