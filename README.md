@@ -1,5 +1,5 @@
 # Thorney
-[Thorney][thorney] is a proposed back-end API for [beta.parliament.uk][beta]. It's built on [Rails][rails], and outputs [JSON][json] which is consumed by [Augustus][augustus].
+[Thorney][thorney] is a back-end API for [beta.parliament.uk][beta]. It's built on [Rails][rails], and outputs [JSON][json] which is consumed by [Augustus][augustus].
 
 [![Build Status][shield-travis]][info-travis] [![Test Coverage][shield-coveralls]][info-coveralls] [![License][shield-license]][info-license]
 
