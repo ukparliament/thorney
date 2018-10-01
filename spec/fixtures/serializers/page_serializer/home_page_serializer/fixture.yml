@@ -62,6 +62,7 @@ header-components:
         components:
         - name: icon__search
           data: search.search-icon
+        search-action: "/search"
 main-components:
 - name: hero
   data:
