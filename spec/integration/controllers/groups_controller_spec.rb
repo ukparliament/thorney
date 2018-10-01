@@ -9,7 +9,7 @@ RSpec.describe GroupsController, vcr: true do
     context 'navigating to the index page' do
       it 'renders expected JSON output' do
         get '/groups'
-create_fixture(response.body, 'index', 'fixture')
+
         expected_json = get_fixture('index', 'fixture')
 
         expect(JSON.parse(response.body).to_yaml).to eq(expected_json)
