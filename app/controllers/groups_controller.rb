@@ -4,7 +4,6 @@ class GroupsController < ApplicationController
 
   ROUTE_MAP = {
     index:   proc { ParliamentHelper.parliament_request.group_index },
-    current: proc { ParliamentHelper.parliament_request.group_current },
     show:    proc { |params| ParliamentHelper.parliament_request.group_by_id.set_url_params({ group_id: params[:group_id] }) }
   }.freeze
 

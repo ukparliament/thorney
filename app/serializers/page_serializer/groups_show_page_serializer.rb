@@ -56,7 +56,7 @@ module PageSerializer
 
     def literals
       [].tap do |items|
-        items << { 'term': { 'content': 'Name' }, 'description': [{ 'content': @group.groupName }] } if @group.try(:groupName)
+        items << { 'term': { 'content': 'Name' }, 'description': [{ 'content': @group.groupName }] }
         items << { 'term': { 'content': 'Start Date' }, 'description': [{ 'content': l(DateTime.parse(@group.groupStartDate)) }] } if @group.try(:groupStartDate)
         items << { 'term': { 'content': 'End Date' }, 'description': [{ 'content': l(DateTime.parse(@group.groupEndDate)) }] } if @group.try(:groupEndDate)
       end.compact
