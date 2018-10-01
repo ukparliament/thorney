@@ -42,8 +42,8 @@ module PageSerializer
     end
 
     def date_range
-      start_date = l(DateTime.parse(@group.try(:groupStartDate))) if @group.try(:groupStartDate)
-      end_date = l(DateTime.parse(@group.try(:groupEndDate))) if @group.try(:groupEndDate)
+      start_date = l(Time.parse(@group.try(:groupStartDate))) if @group.try(:groupStartDate)
+      end_date = l(Time.parse(@group.try(:groupEndDate))) if @group.try(:groupEndDate)
       "#{start_date} to #{end_date}"
     end
 
@@ -57,8 +57,8 @@ module PageSerializer
     def literals
       [].tap do |items|
         items << { 'term': { 'content': 'Name' }, 'description': [{ 'content': @group.groupName }] }
-        items << { 'term': { 'content': 'Start Date' }, 'description': [{ 'content': l(DateTime.parse(@group.groupStartDate)) }] } if @group.try(:groupStartDate)
-        items << { 'term': { 'content': 'End Date' }, 'description': [{ 'content': l(DateTime.parse(@group.groupEndDate)) }] } if @group.try(:groupEndDate)
+        items << { 'term': { 'content': 'Start Date' }, 'description': [{ 'content': l(Time.parse(@group.groupStartDate)) }] } if @group.try(:groupStartDate)
+        items << { 'term': { 'content': 'End Date' }, 'description': [{ 'content': l(Time.parse(@group.groupEndDate)) }] } if @group.try(:groupEndDate)
       end.compact
     end
   end
