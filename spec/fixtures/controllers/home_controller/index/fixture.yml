@@ -2,7 +2,7 @@
 layout:
   template: layout
 meta:
-  title: Pretendy Beta.paliament.uk
+  title: beta.parliament.uk
 header-components:
 - name: link
   data:
@@ -62,6 +62,7 @@ header-components:
         components:
         - name: icon__search
           data: search.search-icon
+        search-action: "/search"
 main-components:
 - name: hero
   data:

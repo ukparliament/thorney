@@ -57,3 +57,4 @@
         components:
         - name: icon__search
           data: search.search-icon
+        search-action: "/search"

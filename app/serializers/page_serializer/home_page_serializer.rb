@@ -13,7 +13,7 @@ module PageSerializer
     attr_reader :opensearch_description_url
 
     def meta
-      { title: 'Pretendy Beta.paliament.uk' }
+      { title: 'beta.parliament.uk' }
     end
 
     def content
