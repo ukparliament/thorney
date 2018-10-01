@@ -11,9 +11,15 @@ pipelines:
         auto_update: true
     stages:
       - build:
+          approval: manual
           jobs:
             build:
               tasks:
+                - exec:
+                    run_if: passed
+                    command: make
+                    arguments:
+                      - checkout_to_release
                 - exec:
                     run_if: passed
                     command: make
