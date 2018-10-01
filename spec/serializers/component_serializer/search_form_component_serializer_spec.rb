@@ -26,5 +26,14 @@ RSpec.describe ComponentSerializer::SearchFormComponentSerializer do
       expect(serializer.to_yaml).to eq expected
     end
 
+    context 'with a search_action passed' do
+      it 'returns the expected JSON' do
+        serializer = described_class.new(query: 'query', components: [1], search_action: '/foo/search')
+
+        expected = get_fixture('with_search_action')
+
+        expect(serializer.to_yaml).to eq expected
+      end
+    end
   end
 end

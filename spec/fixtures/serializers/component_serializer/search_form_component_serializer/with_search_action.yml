@@ -1,0 +1,8 @@
+---
+name: form__search
+data:
+  value: query
+  label: search.label
+  components:
+  - 1
+  search-action: "/foo/search"
