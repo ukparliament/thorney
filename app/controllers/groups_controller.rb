@@ -3,8 +3,8 @@ class GroupsController < ApplicationController
   before_action :build_request, :data_check
 
   ROUTE_MAP = {
-    index:   proc { ParliamentHelper.parliament_request.group_index },
-    show:    proc { |params| ParliamentHelper.parliament_request.group_by_id.set_url_params({ group_id: params[:group_id] }) }
+    index: proc { ParliamentHelper.parliament_request.group_index },
+    show:  proc { |params| ParliamentHelper.parliament_request.group_by_id.set_url_params({ group_id: params[:group_id] }) }
   }.freeze
 
   def index
