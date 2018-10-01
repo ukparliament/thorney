@@ -2,7 +2,7 @@
 layout:
   template: layout
 meta:
-  title: Pretendy Beta.paliament.uk
+  title: beta.parliament.uk
 header-components:
 - name: link
   data:
