@@ -8,6 +8,8 @@ RSpec.describe FixtureSweeper do
 
   context '#sweep' do
     before(:each) do
+      allow(subject).to receive(:exit)
+
       allow(stdout_double).to receive(:puts)
     end
 
@@ -25,9 +27,11 @@ RSpec.describe FixtureSweeper do
       it 'it is a simulation' do
         subject.sweep(stdout_double, simulate: true)
 
+        expect(stdout_double).to have_received(:puts ).with 'Checking for unused fixtures...'
         expect(stdout_double).to have_received(:puts ).with 'The following unused fixtures were found:'
         expect(path_manager_instance).to have_received(:list_paths )
         expect(stdout_double).to have_received(:puts ).with no_args
+        expect(stdout_double).to have_received(:puts ).with 'Run "bundle exec rake sweep" to delete unused fixtures'
       end
 
       it 'it is for real this time' do

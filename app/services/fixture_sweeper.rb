@@ -6,11 +6,17 @@ class FixtureSweeper
   end
 
   def sweep(stdout = $stdout, simulate: false)
+    stdout.puts 'Checking for unused fixtures...'
+
     return stdout.puts 'No unused fixtures were found' if unused_fixtures.empty?
 
     show_unused_fixtures(stdout)
 
-    return if simulate
+    if simulate
+      stdout.puts 'Run "bundle exec rake sweep" to delete unused fixtures'
+
+      exit(1)
+    end
 
     delete_fixtures
     stdout.puts 'The unused fixtures were deleted'
