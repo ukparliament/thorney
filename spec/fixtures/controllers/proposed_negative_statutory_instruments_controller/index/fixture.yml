@@ -3,29 +3,6 @@ layout:
   template: layout
 meta:
   title: proposed-negative-statutory-instruments.index.title
-  request-id: 123456
-  data-alternates:
-  - type: application/n-triples
-    href: http://localhost:3030/proposed_negative_statutory_instrument_index.nt
-  - type: text/turtle
-    href: http://localhost:3030/proposed_negative_statutory_instrument_index.ttl
-  - type: text/tab-separated-values
-    href: http://localhost:3030/proposed_negative_statutory_instrument_index.tsv
-  - type: text/csv
-    href: http://localhost:3030/proposed_negative_statutory_instrument_index.csv
-  - type: application/json+rdf
-    href: http://localhost:3030/proposed_negative_statutory_instrument_index.rj
-  - type: application/json+ld
-    href: http://localhost:3030/proposed_negative_statutory_instrument_index.json
-  - type: application/rdf+xml
-    href: http://localhost:3030/proposed_negative_statutory_instrument_index.xml
-  open-graph:
-    title: proposed-negative-statutory-instruments.index.title
-    original-url: http://www.example.com/proposed-negative-statutory-instruments
-    image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
-    image-width: '1200'
-    image-height: '630'
-    twitter-card: summary_large_image
 header-components:
 - name: link
   data:
@@ -106,102 +83,198 @@ main-components:
           - component: list
             variant: block
         components:
-        - name: link
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/Tn1xqHc0
-            content: proposedNegativeStatutoryInstrumentPaperName - 1
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 1
+                size: 2
+                link: "/proposed-negative-statutory-instruments/Tn1xqHc0"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/wzsrSFQP
-            content: proposedNegativeStatutoryInstrumentPaperName - 2
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 2
+                size: 2
+                link: "/proposed-negative-statutory-instruments/wzsrSFQP"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/H95FzZVv
-            content: proposedNegativeStatutoryInstrumentPaperName - 3
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 3
+                size: 2
+                link: "/proposed-negative-statutory-instruments/H95FzZVv"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/cL5yuFbG
-            content: proposedNegativeStatutoryInstrumentPaperName - 4
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 4
+                size: 2
+                link: "/proposed-negative-statutory-instruments/cL5yuFbG"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/mssRQnqj
-            content: proposedNegativeStatutoryInstrumentPaperName - 5
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 5
+                size: 2
+                link: "/proposed-negative-statutory-instruments/mssRQnqj"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/PkQCvHkT
-            content: proposedNegativeStatutoryInstrumentPaperName - 6
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 6
+                size: 2
+                link: "/proposed-negative-statutory-instruments/PkQCvHkT"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/AcoKsOuw
-            content: proposedNegativeStatutoryInstrumentPaperName - 7
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 7
+                size: 2
+                link: "/proposed-negative-statutory-instruments/AcoKsOuw"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/zPhl1zVB
-            content: proposedNegativeStatutoryInstrumentPaperName - 8
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 8
+                size: 2
+                link: "/proposed-negative-statutory-instruments/zPhl1zVB"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/7KgIpwmP
-            content: proposedNegativeStatutoryInstrumentPaperName - 9
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 9
+                size: 2
+                link: "/proposed-negative-statutory-instruments/7KgIpwmP"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/YOGGjydt
-            content: proposedNegativeStatutoryInstrumentPaperName - 10
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 10
+                size: 2
+                link: "/proposed-negative-statutory-instruments/YOGGjydt"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/a2L0zxbo
-            content: proposedNegativeStatutoryInstrumentPaperName - 11
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 11
+                size: 2
+                link: "/proposed-negative-statutory-instruments/a2L0zxbo"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/3XfjyKc7
-            content: proposedNegativeStatutoryInstrumentPaperName - 12
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 12
+                size: 2
+                link: "/proposed-negative-statutory-instruments/3XfjyKc7"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/sUpfiOCM
-            content: proposedNegativeStatutoryInstrumentPaperName - 13
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 13
+                size: 2
+                link: "/proposed-negative-statutory-instruments/sUpfiOCM"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/szRasC5x
-            content: proposedNegativeStatutoryInstrumentPaperName - 14
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 14
+                size: 2
+                link: "/proposed-negative-statutory-instruments/szRasC5x"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/OtGAt1n4
-            content: proposedNegativeStatutoryInstrumentPaperName - 15
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 15
+                size: 2
+                link: "/proposed-negative-statutory-instruments/OtGAt1n4"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/SiA85FTV
-            content: proposedNegativeStatutoryInstrumentPaperName - 16
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 16
+                size: 2
+                link: "/proposed-negative-statutory-instruments/SiA85FTV"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/XCCCh1kE
-            content: proposedNegativeStatutoryInstrumentPaperName - 17
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 17
+                size: 2
+                link: "/proposed-negative-statutory-instruments/XCCCh1kE"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/78cgn2Dx
-            content: proposedNegativeStatutoryInstrumentPaperName - 18
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 18
+                size: 2
+                link: "/proposed-negative-statutory-instruments/78cgn2Dx"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/OuKyf9Ne
-            content: proposedNegativeStatutoryInstrumentPaperName - 19
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 19
+                size: 2
+                link: "/proposed-negative-statutory-instruments/OuKyf9Ne"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/mEznEN3a
-            content: proposedNegativeStatutoryInstrumentPaperName - 20
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 20
+                size: 2
+                link: "/proposed-negative-statutory-instruments/mEznEN3a"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/Ykks9FXW
-            content: proposedNegativeStatutoryInstrumentPaperName - 21
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 21
+                size: 2
+                link: "/proposed-negative-statutory-instruments/Ykks9FXW"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/W3l3iqIJ
-            content: proposedNegativeStatutoryInstrumentPaperName - 22
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 22
+                size: 2
+                link: "/proposed-negative-statutory-instruments/W3l3iqIJ"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/Xpyq1I4Q
-            content: proposedNegativeStatutoryInstrumentPaperName - 23
-        - name: link
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 23
+                size: 2
+                link: "/proposed-negative-statutory-instruments/Xpyq1I4Q"
+        - name: card__generic
           data:
-            link: proposed-negative-statutory-instruments/lTbB3os8
-            content: proposedNegativeStatutoryInstrumentPaperName - 24
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 24
+                size: 2
+                link: "/proposed-negative-statutory-instruments/lTbB3os8"
 footer-components:
 - name: footer
   data:

@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3030/group_by_id?group_id=0RNgrC4q
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/n-triples
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<AUTH_TOKEN>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/n-triples
+      Content-Disposition:
+      - inline; filename="index"
+      Last-Modified:
+      - Tue, 25 Sep 2018 12:08:53 GMT
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '545'
+    body:
+      encoding: UTF-8
+      string: |
+        <https://id.parliament.uk/0RNgrC4q> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/0RNgrC4q> <https://id.parliament.uk/schema/groupName> "groupName - 1" .
+        <https://id.parliament.uk/0RNgrC4q> <https://id.parliament.uk/schema/groupStartDate> "1969-10-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/0RNgrC4q> <https://id.parliament.uk/schema/groupEndDate> "1974-05-10+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 13:38:15 GMT
+recorded_with: VCR 4.0.0

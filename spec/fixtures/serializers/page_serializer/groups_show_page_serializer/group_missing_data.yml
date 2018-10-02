@@ -2,15 +2,7 @@
 layout:
   template: layout
 meta:
-  title: proposed-negative-statutory-instruments.index.title
-  data-alternates: 
-  open-graph:
-    title: proposed-negative-statutory-instruments.index.title
-    original-url: 
-    image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
-    image-width: '1200'
-    image-height: '630'
-    twitter-card: summary_large_image
+  title: Group Test
 header-components:
 - name: link
   data:
@@ -77,28 +69,24 @@ main-components:
     components:
     - name: heading1
       data:
+        subheading:
+          content: Group
         heading:
-          content: proposed-negative-statutory-instruments.index.title
+          content: Group Test
 - name: section__section
   data:
     components:
-    - name: list__generic
+    - name: heading
       data:
-        type: ol
-        display:
-          name: partials__display
-          data:
-          - component: list
-            variant: block
-        components:
-        - name: link
-          data:
-            link: proposed-negative-statutory-instruments/A1234567
-            content: SI Paper A
-        - name: link
-          data:
-            link: proposed-negative-statutory-instruments/B1234567
-            content: SI Paper B
+        content: Literals
+        size: 2
+    - name: list__description
+      data:
+        items:
+        - term:
+            content: Name
+          description:
+          - content: Group Test
 footer-components:
 - name: footer
   data:

@@ -37,7 +37,7 @@ module PageSerializer
     def connected_statutory_instruments
       @following_statutory_instruments.map do |stat_instrument|
         ComponentSerializer::LinkComponentSerializer.new(
-          link:    "/statutory-instruments/#{stat_instrument.graph_id}",
+          link:    statutory_instrument_path(stat_instrument.graph_id),
           content: stat_instrument.name
         ).to_h
       end

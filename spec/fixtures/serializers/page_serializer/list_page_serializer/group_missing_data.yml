@@ -83,7 +83,15 @@ main-components:
           - component: list
             variant: block
         components:
-        - list-component: list component
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content:
+                - Test Heading
+                size: 2
+                link: Test Link
 footer-components:
 - name: footer
   data:

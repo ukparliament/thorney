@@ -1,0 +1,13 @@
+---
+name: card__generic
+data:
+  heading:
+    name: heading
+    data:
+      content: card__example
+      size: 2
+      link: example url
+  paragraph:
+    name: paragraph
+    data:
+    - content: example paragraph

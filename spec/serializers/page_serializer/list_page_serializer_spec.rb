@@ -1,7 +1,7 @@
 require_relative '../../rails_helper'
 
 RSpec.describe PageSerializer::ListPageSerializer do
-  let(:subject) { described_class.new(page_title: 'Test page') }
+  let(:subject) { described_class.new(page_title: 'Test page', list_components: [{ list_component: 'list component' }]) }
 
   context 'the serializers are correctly called' do
     context '#content' do
@@ -35,17 +35,21 @@ RSpec.describe PageSerializer::ListPageSerializer do
   context '#section_components' do
     it 'calls the correct components' do
       allow(ComponentSerializer::ListComponentSerializer).to receive(:new)
-      allow(subject).to receive(:list_components).and_return([])
 
       subject.send(:section_components)
 
-      expect(ComponentSerializer::ListComponentSerializer).to have_received(:new).with(display: 'generic', display_data: [{:component => 'list', :variant => 'block' }], components: [])
+      expect(ComponentSerializer::ListComponentSerializer).to have_received(:new).with(display: 'generic', display_data: [{:component => 'list', :variant => 'block' }], :components=>[{:list_component=>"list component"}])
     end
   end
 
-  context 'raising errors' do
-    it '#list_components' do
-      expect{ subject.send(:list_components) }.to raise_error StandardError, 'You must implement #list_components'
+  context 'the JSON is produced correctly' do
+    context '#to_h' do
+      it 'produces the expected JSON hash' do
+
+        expected = get_fixture('fixture')
+
+        expect(subject.to_yaml).to eq expected
+      end
     end
   end
 end

@@ -22,7 +22,7 @@ RSpec.describe ProposedNegativeStatutoryInstrumentsController, vcr: true do
     end
 
     before(:each) do
-      allow(PageSerializer::ProposedNegativeStatutoryInstrumentsIndexPageSerializer).to receive(:new)
+      allow(PageSerializer::ListPageSerializer).to receive(:new)
       allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
 
       get :index
@@ -40,9 +40,8 @@ RSpec.describe ProposedNegativeStatutoryInstrumentsController, vcr: true do
     end
 
     it 'calls the serializer correctly' do
-      statutory_instruments = assigns(:proposed_negative_statutory_instruments)
-
-      expect(PageSerializer::ProposedNegativeStatutoryInstrumentsIndexPageSerializer).to have_received(:new).with(proposed_negative_statutory_instruments: statutory_instruments, request_id: '|1234abcd.', data_alternates: data_alternates, request_original_url: request.original_url)
+      list_components = [{"data"=> {"heading"=> {"data"=> {"content"=>"proposedNegativeStatutoryInstrumentPaperName - 1", "link"=>"/proposed-negative-statutory-instruments/Tn1xqHc0", "size"=>2}, "name"=>"heading"}}, "name"=>"card__generic"}]
+      expect(PageSerializer::ListPageSerializer).to have_received(:new).with(page_title: "proposed-negative-statutory-instruments.index.title", list_components: list_components, request_id: '|1234abcd.', data_alternates: data_alternates, request_original_url: request.original_url)
     end
   end
 

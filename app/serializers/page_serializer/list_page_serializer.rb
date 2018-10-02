@@ -3,11 +3,13 @@ module PageSerializer
     # Initialise a list page serializer.
     #
     # @param [String] page_title title of the page
+    # @param [Array<Hash>] list_components an array of components to be passed into the list
     # @param [String] request_id AppInsights request id
     # @param [Array<Hash>] data_alternates array containing the href and type of the alternative data urls
     # @param [String] request_original_url original url of the request
-    def initialize(page_title: nil, request_id: nil, data_alternates: nil, request_original_url: nil)
+    def initialize(page_title: nil, list_components: nil, request_id: nil, data_alternates: nil, request_original_url: nil)
       @page_title = page_title
+      @list_components = list_components
       @data_alternates = data_alternates
 
       super(request_id: request_id, data_alternates: data_alternates, request_original_url: request_original_url)
@@ -15,10 +17,8 @@ module PageSerializer
 
     private
 
-    attr_reader :page_title
-
     def meta
-      super(title: page_title)
+      { title: @page_title }
     end
 
     def content
@@ -29,15 +29,11 @@ module PageSerializer
     end
 
     def section_primary_components
-      [ComponentSerializer::Heading1ComponentSerializer.new({ heading_content: page_title }).to_h]
+      [ComponentSerializer::Heading1ComponentSerializer.new({ heading_content: @page_title }).to_h]
     end
 
     def section_components
-      [ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: list_components).to_h]
-    end
-
-    def list_components
-      raise StandardError, 'You must implement #list_components'
+      [ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: @list_components).to_h]
     end
   end
 end

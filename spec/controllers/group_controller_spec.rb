@@ -1,0 +1,88 @@
+require 'rails_helper'
+
+RSpec.describe GroupsController, vcr: true do
+  describe 'GET index' do
+    let(:data_alternates) do
+      [{
+         :href => "#{ENV['PARLIAMENT_BASE_URL']}/group_index.nt",
+         :type => "application/n-triples" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/group_index.ttl",
+         :type => "text/turtle" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/group_index.tsv",
+         :type => "text/tab-separated-values" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/group_index.csv",
+         :type => "text/csv" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/group_index.rj",
+         :type => "application/json+rdf" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/group_index.json",
+         :type => "application/json+ld" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/group_index.xml",
+         :type => "application/rdf+xml" }]
+    end
+
+    before(:each) do
+      allow(PageSerializer::ListPageSerializer).to receive(:new)
+      allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
+
+      get :index
+    end
+
+    it 'should have a response with http status ok (200)' do
+      expect(response).to have_http_status(:ok)
+    end
+
+      it 'assigns @groups' do
+        assigns(:groups).each do |group|
+          expect(group).to be_a(Grom::Node)
+          expect(group.type).to include('https://id.parliament.uk/schema/Group')
+        end
+      end
+
+    it 'calls the serializer correctly' do
+      list_components = [{"data"=> {"heading"=> {"data"=> {"content"=>"groupName - 1", "link"=>"/groups/tz34m7Vt", "size"=>2}, "name"=>"heading"}, "paragraph"=> {"data"=> [{"content"=>"28 July 1997 to 12 September 2017"}],"name"=>"paragraph"}}, "name"=>"card__generic"}]
+      expect(PageSerializer::ListPageSerializer).to have_received(:new).with(page_title: "groups.index.title", list_components: list_components, request_id: '|1234abcd.', data_alternates: data_alternates, request_original_url: request.original_url)
+    end
+  end
+
+  describe 'GET show' do
+    let(:data_alternates) do
+      [{
+         :href => "#{ENV['PARLIAMENT_BASE_URL']}/group_by_id.nt?group_id=12345678",
+         :type => "application/n-triples" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/group_by_id.ttl?group_id=12345678",
+         :type => "text/turtle" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/group_by_id.tsv?group_id=12345678",
+         :type => "text/tab-separated-values" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/group_by_id.csv?group_id=12345678",
+         :type => "text/csv" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/group_by_id.rj?group_id=12345678",
+         :type => "application/json+rdf" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/group_by_id.json?group_id=12345678",
+         :type => "application/json+ld" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/group_by_id.xml?group_id=12345678",
+         :type => "application/rdf+xml" }]
+    end
+
+    before(:each) do
+      allow(PageSerializer::GroupsShowPageSerializer).to receive(:new)
+      allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
+
+      get :show, params: { group_id: 12345678 }
+    end
+
+    it 'should have a response with http status ok (200)' do
+      expect(response).to have_http_status(:ok)
+    end
+
+    it 'assigns @group' do
+      expect(assigns(:group)).to be_a(Grom::Node)
+      expect(assigns(:group).type).to include('https://id.parliament.uk/schema/Group')
+    end
+
+    it 'calls the serializer correctly' do
+      group = assigns(:group)
+
+      expect(PageSerializer::GroupsShowPageSerializer).to have_received(:new).with(group: group, request_id: '|1234abcd.', data_alternates: data_alternates, request_original_url: request.original_url)
+    end
+  end
+end
