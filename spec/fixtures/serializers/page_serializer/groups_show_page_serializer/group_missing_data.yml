@@ -3,6 +3,14 @@ layout:
   template: layout
 meta:
   title: Group Test
+  data-alternates: 
+  open-graph:
+    title: Group Test
+    original-url: 
+    image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
+    image-width: '1200'
+    image-height: '630'
+    twitter-card: summary_large_image
 header-components:
 - name: link
   data:

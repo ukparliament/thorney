@@ -15,7 +15,7 @@ module PageSerializer
     private
 
     def meta
-      { title: title }
+      super(title: title)
     end
 
     def title

@@ -4,8 +4,10 @@ module PageSerializer
     # Initialise a Home index page serializer.
     #
     # @param [String] opensearch_description_url a description url for the search.
-    def initialize(opensearch_description_url: nil)
+    def initialize(opensearch_description_url: nil, request_id: nil, request_original_url: nil)
       @opensearch_description_url = opensearch_description_url
+
+      super(request_id: request_id, request_original_url: request_original_url)
     end
 
     private
@@ -13,7 +15,7 @@ module PageSerializer
     attr_reader :opensearch_description_url
 
     def meta
-      { title: 'beta.parliament.uk' }
+      super(title: 'beta.parliament.uk')
     end
 
     def content
