@@ -25,6 +25,7 @@ RSpec.describe ProposedNegativeStatutoryInstrumentsController, vcr: true do
 
     before(:each) do
       allow(PageSerializer::ListPageSerializer).to receive(:new)
+      allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading_content: 'Proposed Negative Statutory Instruments') { heading }
 
       allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
 
@@ -44,7 +45,8 @@ RSpec.describe ProposedNegativeStatutoryInstrumentsController, vcr: true do
 
     it 'calls the serializer correctly' do
       list_components = [{"data"=> {"heading"=> {"data"=> {"content"=>"proposedNegativeStatutoryInstrumentPaperName - 1", "link"=>"/proposed-negative-statutory-instruments/Tn1xqHc0", "size"=>2}, "name"=>"heading"}}, "name"=>"card__generic"}]
-      expect(PageSerializer::ListPageSerializer).to have_received(:new).with(request: request, page_title: 'Proposed Negative Statutory Instruments', list_components: list_components, data_alternates: data_alternates)
+
+      expect(PageSerializer::ListPageSerializer).to have_received(:new).with(request: request, heading_component: heading, list_components: list_components, data_alternates: data_alternates)
     end
   end
 

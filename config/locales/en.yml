@@ -47,8 +47,11 @@ en:
       flash: "Please enter a search term."
     opensearch:
       short_name: "UK Parliament"
-
-  layings: Layings
+  layings:
+    title: "Layings"
+    type:
+      si: "Statutory Instrument"
+      pnsi: "Proposed Negative Statutory Instrument"
   groups:
     index:
       title: Groups

@@ -2,10 +2,10 @@
 layout:
   template: layout
 meta:
-  title: Test page - UK Parliament
+  title: some meta heading - UK Parliament
   request-id: 123456
   open-graph:
-    title: Test page - UK Parliament
+    title: some meta heading - UK Parliament
     original-url: https://example.com/
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'

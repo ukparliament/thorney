@@ -17,7 +17,9 @@ class ProposedNegativeStatutoryInstrumentsController < ApplicationController
       ).build_card
     end
 
-    serializer = PageSerializer::ListPageSerializer.new(request: request, page_title: I18n.t('proposed_negative_statutory_instruments.index.title'), list_components: list_components, data_alternates: @alternates)
+    heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('proposed_negative_statutory_instruments.index.title'))
+
+    serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 
     render_page(serializer)
   end

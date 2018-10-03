@@ -17,7 +17,7 @@ class PageRangeHelper
   # If there are at least 8 pages, the array has 8 zero-indexed elements as such:
   # [0 .. 7]
   # Otherwise, the array has as many elements as there are pages. For example, if there are 4 pages in total, the array would be:
-  # [0 .. 4]
+  # [0 .. 3]
   #
   # The array is populated by first finding where in the array the current page lies
   # and then filling in the elements preceding and succeeding the current page
