@@ -1,6 +1,8 @@
 require_relative '../../../rails_helper'
 
 RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
+  include_context "sample request", :include_shared => true
+
   let(:pagination_hash) { { start_index: 11, count: 100, results_total: 345, query: 'hello' } }
   let(:result_one) {
     double(
@@ -36,7 +38,7 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
   }
 
   let(:results) { double('results', totalResults: 658, entries: [result_one, result_two, result_three]) }
-  let(:subject) { described_class.new(query: 'hello', results: results, pagination_hash: pagination_hash) }
+  subject { described_class.new(request: request, query: 'hello', results: results, pagination_hash: pagination_hash) }
 
   context '#to_h' do
     context 'with a query' do

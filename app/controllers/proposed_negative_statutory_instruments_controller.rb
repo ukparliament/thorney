@@ -8,7 +8,7 @@ class ProposedNegativeStatutoryInstrumentsController < ApplicationController
   }.freeze
 
   def index
-    @proposed_negative_statutory_instruments = FilterHelper.filter(@request, 'ProposedNegativeStatutoryInstrumentPaper')
+    @proposed_negative_statutory_instruments = FilterHelper.filter(@api_request, 'ProposedNegativeStatutoryInstrumentPaper')
 
     list_components = @proposed_negative_statutory_instruments.map do |proposed_negative_statutory_instrument|
       CardFactory.new(
@@ -17,16 +17,16 @@ class ProposedNegativeStatutoryInstrumentsController < ApplicationController
       ).build_card
     end
 
-    serializer = PageSerializer::ListPageSerializer.new(page_title: 'proposed-negative-statutory-instruments.index.title', list_components: list_components, request_id: app_insights_request_id, data_alternates: @alternates, request_original_url: request.original_url)
+    serializer = PageSerializer::ListPageSerializer.new(request: request, page_title: 'proposed-negative-statutory-instruments.index.title', list_components: list_components, data_alternates: @alternates)
 
     render_page(serializer)
   end
 
   def show
-    @proposed_negative_statutory_instrument = FilterHelper.filter(@request, 'ProposedNegativeStatutoryInstrumentPaper')
+    @proposed_negative_statutory_instrument = FilterHelper.filter(@api_request, 'ProposedNegativeStatutoryInstrumentPaper')
     @proposed_negative_statutory_instrument = @proposed_negative_statutory_instrument.first
 
-    serializer = PageSerializer::ProposedNegativeStatutoryInstrumentsShowPageSerializer.new(proposed_negative_statutory_instrument: @proposed_negative_statutory_instrument, request_id: app_insights_request_id, data_alternates: @alternates, request_original_url: request.original_url)
+    serializer = PageSerializer::ProposedNegativeStatutoryInstrumentsShowPageSerializer.new(request: request, proposed_negative_statutory_instrument: @proposed_negative_statutory_instrument, data_alternates: @alternates)
 
     render_page(serializer)
   end

@@ -21,11 +21,12 @@ meta:
     href: http://localhost:3030/proposed_negative_statutory_instrument_by_id.xml?proposed_negative_statutory_instrument_id=12345678
   open-graph:
     title: proposedNegativeStatutoryInstrumentPaperName - 1
-    original-url: http://www.example.com/proposed-negative-statutory-instruments/12345678
+    original-url: https://www.example.com/proposed-negative-statutory-instruments/12345678
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
     image-height: '630'
     twitter-card: summary_large_image
+  opensearch-description-url: https://www.example.com/search/opensearch
 header-components:
 - name: link
   data:

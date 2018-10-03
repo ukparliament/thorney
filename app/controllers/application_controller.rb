@@ -9,7 +9,7 @@ class ApplicationController < ActionController::API
 
   attr_reader :app_insights_request_id
 
-  before_action :populate_request_id, :reset_alternates
+  before_action :reset_alternates
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -35,7 +35,7 @@ class ApplicationController < ActionController::API
     render json: serializer.to_h
   end
 
-  def populate_request_id
-    @app_insights_request_id = request.env['ApplicationInsights.request.id']
+  def default_url_options
+    { port: nil, protocol: 'https' }
   end
 end

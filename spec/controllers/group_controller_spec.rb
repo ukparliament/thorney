@@ -40,7 +40,7 @@ RSpec.describe GroupsController, vcr: true do
 
     it 'calls the serializer correctly' do
       list_components = [{"data"=> {"heading"=> {"data"=> {"content"=>"groupName - 1", "link"=>"/groups/tz34m7Vt", "size"=>2}, "name"=>"heading"}, "paragraph"=> {"data"=> [{"content"=>"28 July 1997 to 12 September 2017"}],"name"=>"paragraph"}}, "name"=>"card__generic"}]
-      expect(PageSerializer::ListPageSerializer).to have_received(:new).with(page_title: "groups.index.title", list_components: list_components, request_id: '|1234abcd.', data_alternates: data_alternates, request_original_url: request.original_url)
+      expect(PageSerializer::ListPageSerializer).to have_received(:new).with(request: request, page_title: "groups.index.title", list_components: list_components, data_alternates: data_alternates)
     end
   end
 
@@ -82,7 +82,7 @@ RSpec.describe GroupsController, vcr: true do
     it 'calls the serializer correctly' do
       group = assigns(:group)
 
-      expect(PageSerializer::GroupsShowPageSerializer).to have_received(:new).with(group: group, request_id: '|1234abcd.', data_alternates: data_alternates, request_original_url: request.original_url)
+      expect(PageSerializer::GroupsShowPageSerializer).to have_received(:new).with(request: request, group: group, data_alternates: data_alternates)
     end
   end
 end

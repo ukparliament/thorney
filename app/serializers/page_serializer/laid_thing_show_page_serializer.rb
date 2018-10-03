@@ -2,18 +2,17 @@ module PageSerializer
   class LaidThingShowPageSerializer < PageSerializer::BasePageSerializer
     # Initialise a Laid Thing show page serializer.
     #
+    # @param [ActionDispatch::Request] request the current request object.
     # @param [<Grom::Node>] laid_thing a Grom::Node object of type LaidThing.
-    # @param [String] request_id AppInsights request id
-    # @param [Array<Hash>] data_alternates array containing the href and type of the alternative data urls
-    # @param [String] request_original_url original url of the request
-    def initialize(laid_thing:, request_id: nil, data_alternates: nil, request_original_url: nil)
+    # @param [Array<Hash>] data_alternates array containing the href and type of the alternative data urls.
+    def initialize(request: nil, laid_thing:, data_alternates: nil)
       @laid_thing    = laid_thing
       @work_package  = @laid_thing.work_package
       @laying_body   = @laid_thing&.laying&.body
       @laying_person = @laid_thing&.laying&.person
       @procedure     = @work_package&.procedure
 
-      super(request_id: request_id, data_alternates: data_alternates, request_original_url: request_original_url)
+      super(request: request, data_alternates: data_alternates)
     end
 
     private

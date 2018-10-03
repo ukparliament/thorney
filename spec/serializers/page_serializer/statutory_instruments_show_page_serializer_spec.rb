@@ -1,6 +1,8 @@
 require_relative '../../rails_helper'
 
 RSpec.describe PageSerializer::StatutoryInstrumentsShowPageSerializer do
+  include_context "sample request", :include_shared => true
+
   let(:laying_body) { double('laying_body', name: 'LayingBodyTest', graph_id: 'E1234567') }
   let(:laying_person) { double('laying_person', display_name: 'LayingPersonTest', graph_id: 'F1234567') }
   let(:laying) { double('laying', body: laying_body, person: laying_person, date: DateTime.new(2018, 8, 10, 0, 0), graph_id: 'G1234567') }
@@ -25,7 +27,7 @@ RSpec.describe PageSerializer::StatutoryInstrumentsShowPageSerializer do
     )
   end
 
-  let(:subject) { described_class.new(statutory_instrument: statutory_instrument) }
+  subject { described_class.new(request: request, statutory_instrument: statutory_instrument) }
 
   context '#to_h' do
     it 'produces the expected JSON hash' do
@@ -54,7 +56,7 @@ RSpec.describe PageSerializer::StatutoryInstrumentsShowPageSerializer do
     end
 
     it 'produces the expected JSON hash with missing data' do
-      serializer = described_class.new(statutory_instrument: si_missing_data)
+      serializer = described_class.new(request: request, statutory_instrument: si_missing_data)
 
       expected = get_fixture('si_missing_data')
 

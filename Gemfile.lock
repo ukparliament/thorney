@@ -125,7 +125,7 @@ GEM
     parliament-grom-decorators (0.31.1)
     parliament-ntriple (0.4.0)
       grom (~> 1.0)
-    parliament-opensearch (0.6.0)
+    parliament-opensearch (0.7.0)
       activesupport (>= 5.0.0.1)
       feedjira (~> 2.1, >= 2.1.2)
     parliament-routes (0.6.13)

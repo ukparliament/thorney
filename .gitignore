@@ -38,3 +38,4 @@
 /doc
 /.yardoc
 
+.DS_Store

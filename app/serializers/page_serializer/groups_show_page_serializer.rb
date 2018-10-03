@@ -2,14 +2,13 @@ module PageSerializer
   class GroupsShowPageSerializer < PageSerializer::BasePageSerializer
     # Initialise a Groups show page serializer.
     #
+    # @param [ActionDispatch::Request] request the current request object.
     # @param [<Grom::Node>] group a Grom::Node object of type StatutoryInstrumentPaper.
-    # @param [String] request_id AppInsights request id
-    # @param [Array<Hash>] data_alternates array containing the href and type of the alternative data urls
-    # @param [String] request_original_url original url of the request
-    def initialize(group: nil, request_id: nil, data_alternates: nil, request_original_url: nil)
+    # @param [Array<Hash>] data_alternates array containing the href and type of the alternative data urls.
+    def initialize(request: nil, group: nil, data_alternates: nil)
       @group = group
 
-      super(request_id: request_id, data_alternates: data_alternates, request_original_url: request_original_url)
+      super(request: request, data_alternates: data_alternates)
     end
 
     private

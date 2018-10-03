@@ -21,11 +21,12 @@ meta:
     href: http://localhost:3030/statutory_instrument_by_id.xml?statutory_instrument_id=1234567
   open-graph:
     title: statutoryInstrumentPaperName - 1
-    original-url: http://www.example.com/statutory-instruments/1234567
+    original-url: https://www.example.com/statutory-instruments/1234567
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
     image-height: '630'
     twitter-card: summary_large_image
+  opensearch-description-url: https://www.example.com/search/opensearch
 header-components:
 - name: link
   data:

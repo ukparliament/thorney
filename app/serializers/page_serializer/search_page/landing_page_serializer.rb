@@ -6,9 +6,7 @@ module PageSerializer
       private
 
       def meta
-        super(title: title).tap do |meta|
-          meta[:opensearch_description_url] = opensearch_description_url if opensearch_description_url
-        end
+        super(title: title)
       end
 
       def title

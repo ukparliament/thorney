@@ -1,18 +1,6 @@
 module PageSerializer
   class HomePageSerializer < PageSerializer::BasePageSerializer
-    # This serializer includes HousesHelper
-    # Initialise a Home index page serializer.
-    #
-    # @param [String] opensearch_description_url a description url for the search.
-    def initialize(opensearch_description_url: nil, request_id: nil, request_original_url: nil)
-      @opensearch_description_url = opensearch_description_url
-
-      super(request_id: request_id, request_original_url: request_original_url)
-    end
-
     private
-
-    attr_reader :opensearch_description_url
 
     def meta
       super(title: 'beta.parliament.uk')

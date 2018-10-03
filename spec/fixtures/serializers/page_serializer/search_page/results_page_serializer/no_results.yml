@@ -3,14 +3,15 @@ layout:
   template: layout
 meta:
   title: hello - Search - UK Parliament
-  data-alternates: 
+  request-id: 123456
   open-graph:
     title: hello - Search - UK Parliament
-    original-url: 
+    original-url: https://example.com/
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
     image-height: '630'
     twitter-card: summary_large_image
+  opensearch-description-url: https://example.com/search/opensearch
 header-components:
 - name: link
   data:

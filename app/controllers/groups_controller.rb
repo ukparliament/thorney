@@ -8,7 +8,7 @@ class GroupsController < ApplicationController
   }.freeze
 
   def index
-    @groups = FilterHelper.filter(@request, 'Group')
+    @groups = FilterHelper.filter(@api_request, 'Group')
 
     list_components = @groups.map do |group|
       paragraph_content = [].tap do |content|
@@ -22,16 +22,16 @@ class GroupsController < ApplicationController
       ).build_card
     end
 
-    serializer = PageSerializer::ListPageSerializer.new(page_title: 'groups.index.title', list_components: list_components, request_id: app_insights_request_id, data_alternates: @alternates, request_original_url: request.original_url)
+    serializer = PageSerializer::ListPageSerializer.new(request: request, page_title: 'groups.index.title', list_components: list_components, data_alternates: @alternates)
 
     render_page(serializer)
   end
 
   def show
-    @group = FilterHelper.filter(@request, 'Group')
+    @group = FilterHelper.filter(@api_request, 'Group')
     @group = @group.first
 
-    serializer = PageSerializer::GroupsShowPageSerializer.new(group: @group, request_id: app_insights_request_id, data_alternates: @alternates, request_original_url: request.original_url)
+    serializer = PageSerializer::GroupsShowPageSerializer.new(request: request, group: @group, data_alternates: @alternates)
 
     render_page(serializer)
   end
