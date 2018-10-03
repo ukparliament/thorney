@@ -3,6 +3,29 @@ layout:
   template: layout
 meta:
   title: groups.index.title
+  request-id: 123456
+  data-alternates:
+  - type: application/n-triples
+    href: http://localhost:3030/group_index.nt
+  - type: text/turtle
+    href: http://localhost:3030/group_index.ttl
+  - type: text/tab-separated-values
+    href: http://localhost:3030/group_index.tsv
+  - type: text/csv
+    href: http://localhost:3030/group_index.csv
+  - type: application/json+rdf
+    href: http://localhost:3030/group_index.rj
+  - type: application/json+ld
+    href: http://localhost:3030/group_index.json
+  - type: application/rdf+xml
+    href: http://localhost:3030/group_index.xml
+  open-graph:
+    title: groups.index.title
+    original-url: http://www.example.com/groups
+    image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
+    image-width: '1200'
+    image-height: '630'
+    twitter-card: summary_large_image
 header-components:
 - name: link
   data:
