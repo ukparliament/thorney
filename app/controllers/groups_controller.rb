@@ -12,7 +12,7 @@ class GroupsController < ApplicationController
 
     list_components = @groups.map do |group|
       paragraph_content = [].tap do |content|
-        content << { content: "#{I18n.l(Time.parse(group.groupStartDate))} to #{I18n.l(Time.parse(group.groupEndDate))}" } if group.try(:groupStartDate) && group.try(:groupEndDate)
+        content << { content: I18n.t('prepositional_to', first: I18n.l(Time.parse(group.groupStartDate)), second: I18n.l(Time.parse(group.groupEndDate))) } if group.try(:groupStartDate) && group.try(:groupEndDate)
         content << { content: I18n.l(Time.parse(group.groupStartDate)) } if group.try(:groupStartDate) && !group.try(:groupEndDate)
       end
       CardFactory.new(

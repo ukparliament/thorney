@@ -65,7 +65,6 @@ RSpec.describe GroupsController, vcr: true do
 
     before(:each) do
       allow(PageSerializer::GroupsShowPageSerializer).to receive(:new)
-      allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
 
       get :show, params: { group_id: 12345678 }
     end
