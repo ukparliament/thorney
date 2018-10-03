@@ -2,7 +2,7 @@
 layout:
   template: layout
 meta:
-  title: statutoryInstrumentPaperName - 1
+  title: statutoryInstrumentPaperName - 1 - UK Parliament
   request-id: 123456
   data-alternates:
   - type: application/n-triples
@@ -20,7 +20,7 @@ meta:
   - type: application/rdf+xml
     href: http://localhost:3030/statutory_instrument_by_id.xml?statutory_instrument_id=1234567
   open-graph:
-    title: statutoryInstrumentPaperName - 1
+    title: statutoryInstrumentPaperName - 1 - UK Parliament
     original-url: https://www.example.com/statutory-instruments/1234567
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'

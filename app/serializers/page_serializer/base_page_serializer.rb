@@ -58,7 +58,9 @@ module PageSerializer
       end
     end
 
-    def meta(title: nil, image_id: nil)
+    def meta(title: 'UK Parliament', image_id: nil)
+      title += ' - UK Parliament'
+
       {}.tap do |meta|
         meta[:title]           = title
         meta[:request_id]      = request_id if request_id
