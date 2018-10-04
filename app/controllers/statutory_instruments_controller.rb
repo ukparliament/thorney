@@ -8,7 +8,7 @@ class StatutoryInstrumentsController < ApplicationController
   }.freeze
 
   def index
-    @statutory_instruments = FilterHelper.filter(@request, 'StatutoryInstrumentPaper')
+    @statutory_instruments = FilterHelper.filter(@api_request, 'StatutoryInstrumentPaper')
 
     list_components = @statutory_instruments.map do |statutory_instrument|
       CardFactory.new(
@@ -17,16 +17,16 @@ class StatutoryInstrumentsController < ApplicationController
       ).build_card
     end
 
-    serializer = PageSerializer::ListPageSerializer.new(page_title: 'statutory-instruments.index.title', list_components: list_components, request_id: app_insights_request_id, data_alternates: @alternates, request_original_url: request.original_url)
+    serializer = PageSerializer::ListPageSerializer.new(request: request, page_title: 'statutory-instruments.index.title', list_components: list_components, data_alternates: @alternates)
 
     render_page(serializer)
   end
 
   def show
-    @statutory_instrument = FilterHelper.filter(@request, 'StatutoryInstrumentPaper')
+    @statutory_instrument = FilterHelper.filter(@api_request, 'StatutoryInstrumentPaper')
     @statutory_instrument = @statutory_instrument.first
 
-    serializer = PageSerializer::StatutoryInstrumentsShowPageSerializer.new(statutory_instrument: @statutory_instrument, request_id: app_insights_request_id, data_alternates: @alternates, request_original_url: request.original_url)
+    serializer = PageSerializer::StatutoryInstrumentsShowPageSerializer.new(request: request, statutory_instrument: @statutory_instrument, data_alternates: @alternates)
 
     render_page(serializer)
   end

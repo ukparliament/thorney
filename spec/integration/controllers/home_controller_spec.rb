@@ -3,7 +3,7 @@ require_relative '../../rails_helper'
 RSpec.describe HomeController, vcr: true do
   describe 'GET index' do
     before(:each) do
-      allow_any_instance_of(HomeController).to receive(:app_insights_request_id) { 123456 }
+      allow_any_instance_of(PageSerializer::HomePageSerializer).to receive(:request_id) { 123456 }
     end
 
     context 'navigating to the index page' do

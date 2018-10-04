@@ -78,11 +78,11 @@ module ApplicationHelper
     self.class::ROUTE_MAP[params[:action].to_sym] || raise(StandardError, "You must provide a ROUTE_MAP proc for #{params[:controller]}##{params[:action]}")
   end
 
-  # Populates @request with a data url which can be used within controllers.
+  # Populates @api_request with a data url which can be used within controllers.
   def build_request
-    @request = data_url.call(params)
+    @api_request = data_url.call(params)
 
-    populate_alternates(@request.query_url)
+    populate_alternates(@api_request.query_url)
   end
 
   # Populates @alternates with a list of data formats and corresponding urls

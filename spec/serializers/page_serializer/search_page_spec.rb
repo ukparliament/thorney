@@ -1,8 +1,11 @@
 require_relative '../../rails_helper'
 
 RSpec.describe PageSerializer::SearchPage do
+  include_context "sample request", include_shared: true
+
   let(:results) { double('results', totalResults: 658) }
-  let(:subject) { described_class.new(query: 'banana', results: results) }
+
+  subject { described_class.new(request: request, query: 'banana', results: results) }
 
   context 'raising errors' do
     it '#content' do

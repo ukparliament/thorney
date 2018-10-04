@@ -3,7 +3,7 @@ require_relative '../../rails_helper'
 RSpec.describe ProposedNegativeStatutoryInstrumentsController, vcr: true do
   describe 'GET index' do
     before(:each) do
-      allow_any_instance_of(ProposedNegativeStatutoryInstrumentsController).to receive(:app_insights_request_id) { 123456 }
+      allow_any_instance_of(PageSerializer::ListPageSerializer).to receive(:request_id) { 123456 }
     end
 
     context 'navigating to the index page' do
@@ -20,7 +20,7 @@ RSpec.describe ProposedNegativeStatutoryInstrumentsController, vcr: true do
 
   describe 'GET show' do
     before(:each) do
-      allow_any_instance_of(ProposedNegativeStatutoryInstrumentsController).to receive(:app_insights_request_id) { 123456 }
+      allow_any_instance_of(PageSerializer::ProposedNegativeStatutoryInstrumentsShowPageSerializer).to receive(:request_id) { 123456 }
     end
 
     context 'navigating to the show page' do
