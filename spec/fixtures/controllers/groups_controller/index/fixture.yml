@@ -21,11 +21,12 @@ meta:
     href: http://localhost:3030/group_index.xml
   open-graph:
     title: groups.index.title
-    original-url: http://www.example.com/groups
+    original-url: https://www.example.com/groups
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
     image-height: '630'
     twitter-card: summary_large_image
+  opensearch-description-url: https://www.example.com/search/opensearch
 header-components:
 - name: link
   data:

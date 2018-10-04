@@ -41,7 +41,7 @@ RSpec.describe StatutoryInstrumentsController, vcr: true do
 
     it 'calls the serializer correctly' do
       list_components = [{"data"=> {"heading"=> {"data"=> {"content"=>"statutoryInstrumentPaperName - 1", "link"=>"/statutory-instruments/5trFJNih", "size"=>2}, "name"=>"heading"}}, "name"=>"card__generic"}]
-      expect(PageSerializer::ListPageSerializer).to have_received(:new).with(page_title: "statutory-instruments.index.title", list_components: list_components, request_id: '|1234abcd.', data_alternates: data_alternates, request_original_url: request.original_url)
+      expect(PageSerializer::ListPageSerializer).to have_received(:new).with(request: request, page_title: "statutory-instruments.index.title", list_components: list_components, data_alternates: data_alternates)
     end
   end
 
@@ -83,7 +83,7 @@ RSpec.describe StatutoryInstrumentsController, vcr: true do
     it 'calls the serializer correctly' do
       statutory_instrument = assigns(:statutory_instrument)
 
-      expect(PageSerializer::StatutoryInstrumentsShowPageSerializer).to have_received(:new).with(statutory_instrument: statutory_instrument, request_id: '|1234abcd.', data_alternates: data_alternates, request_original_url: request.original_url)
+      expect(PageSerializer::StatutoryInstrumentsShowPageSerializer).to have_received(:new).with(request: request, statutory_instrument: statutory_instrument, data_alternates: data_alternates)
     end
   end
 end

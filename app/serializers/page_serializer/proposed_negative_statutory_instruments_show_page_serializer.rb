@@ -2,15 +2,14 @@ module PageSerializer
   class ProposedNegativeStatutoryInstrumentsShowPageSerializer < LaidThingShowPageSerializer
     # Initialise a Proposed Negative Statutory Instruments show page serializer.
     #
+    # @param [ActionDispatch::Request] request the current request object.
     # @param [<Grom::Node>] proposed_negative_statutory_instrument a Grom::Node object of type ProposedNegativeStatutoryInstrumentPaper.
-    # @param [String] request_id AppInsights request id
     # @param [Array<Hash>] data_alternates array containing the href and type of the alternative data urls
-    # @param [String] request_original_url original url of the request
-    def initialize(proposed_negative_statutory_instrument:, request_id: nil, data_alternates: nil, request_original_url: nil)
+    def initialize(request: nil, proposed_negative_statutory_instrument:, data_alternates: nil)
       @proposed_negative_statutory_instrument = proposed_negative_statutory_instrument
       @following_statutory_instruments        = @proposed_negative_statutory_instrument.statutory_instrument_papers
 
-      super(laid_thing: @proposed_negative_statutory_instrument, request_id: request_id, data_alternates: data_alternates, request_original_url: request_original_url)
+      super(request: request, laid_thing: @proposed_negative_statutory_instrument, data_alternates: data_alternates)
     end
 
     private

@@ -1,6 +1,7 @@
 require_relative '../../rails_helper'
 
 RSpec.describe PageSerializer::GroupsShowPageSerializer do
+  include_context "sample request", include_shared: true
 
   let(:group) do
     double('group',
@@ -10,7 +11,7 @@ RSpec.describe PageSerializer::GroupsShowPageSerializer do
     )
   end
 
-  let(:subject) { described_class.new(group: group) }
+  let(:subject) { described_class.new(request: request, group: group) }
 
   context '#to_h' do
     it 'produces the expected JSON hash' do
@@ -30,7 +31,7 @@ RSpec.describe PageSerializer::GroupsShowPageSerializer do
     end
 
     it 'produces the expected JSON hash with missing data' do
-      serializer = described_class.new(group: group_missing_data)
+      serializer = described_class.new(request: request, group: group_missing_data)
 
       expected = get_fixture('group_missing_data')
 

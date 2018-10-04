@@ -1,7 +1,9 @@
 require_relative '../../rails_helper'
 
 RSpec.describe PageSerializer::ListPageSerializer do
-  let(:subject) { described_class.new(page_title: 'Test page', list_components: [{ list_component: 'list component' }]) }
+  include_context "sample request", include_shared: true
+
+  subject { described_class.new(request: request, page_title: 'Test page', list_components: [{ list_component: 'list component' }]) }
 
   context 'the serializers are correctly called' do
     context '#content' do

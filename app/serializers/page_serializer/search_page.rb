@@ -2,21 +2,20 @@ module PageSerializer
   class SearchPage < PageSerializer::BasePageSerializer
     # Initialise a Search index page serializer.
     #
+    # @param [ActionDispatch::Request] request the current request object.
     # @param [String] opensearch_description_url a description url for the search.
     # @param [String] query a query string used for the search.
     # @param [Array<Object>] results an array of objects used for displaying results.
     # @param [Hash] pagination_hash a hash containing data used for pagination.
     # @param [String] flash_message a translation block that is evaluated into a flash message.
-    # @param [String] request_id AppInsights request id
-    # @param [String] request_original_url original url of the request
-    def initialize(opensearch_description_url: nil, query: nil, results: nil, pagination_hash: nil, flash_message: nil, request_id: nil, request_original_url: nil)
+    def initialize(request: nil, opensearch_description_url: nil, query: nil, results: nil, pagination_hash: nil, flash_message: nil)
       @opensearch_description_url = opensearch_description_url
       @query = query
       @results = results
       @pagination_helper = PaginationHelper.new(pagination_hash) if pagination_hash
       @flash_message = flash_message
 
-      super(request_id: request_id, data_alternates: nil, request_original_url: request_original_url)
+      super(request: request, data_alternates: nil)
     end
 
     private

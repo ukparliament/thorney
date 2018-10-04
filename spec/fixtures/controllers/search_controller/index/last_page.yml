@@ -4,17 +4,16 @@ layout:
 meta:
   title: diane abbott - Search - UK Parliament
   request-id: 123456
-  data-alternates: 
   open-graph:
     title: diane abbott - Search - UK Parliament
-    original-url: http://www.example.com/search?count=10&q=diane+abbott&start_index=7471
+    original-url: https://www.example.com/search?count=10&q=diane+abbott&start_index=7471
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
     image-height: '630'
     twitter-card: summary_large_image
+  opensearch-description-url: https://www.example.com/search/opensearch
   components:
   - name: head__search-result-tracking
-  opensearch-description-url: http://www.example.com/search/opensearch
 header-components:
 - name: link
   data:
