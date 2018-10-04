@@ -1,7 +1,7 @@
 require_relative '../../rails_helper'
 
 RSpec.describe PageSerializer::SearchPage do
-  include_context "sample request", :include_shared => true
+  include_context "sample request", include_shared: true
 
   let(:results) { double('results', totalResults: 658) }
 

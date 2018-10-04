@@ -1,7 +1,7 @@
 require_relative '../../rails_helper'
 
 RSpec.describe PageSerializer::ListPageSerializer do
-  include_context "sample request", :include_shared => true
+  include_context "sample request", include_shared: true
 
   subject { described_class.new(request: request, page_title: 'Test page', list_components: [{ list_component: 'list component' }]) }
 

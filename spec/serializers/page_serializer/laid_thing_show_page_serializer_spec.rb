@@ -1,7 +1,7 @@
 require_relative '../../rails_helper'
 
 RSpec.describe PageSerializer::LaidThingShowPageSerializer do
-  include_context "sample request", :include_shared => true
+  include_context "sample request", include_shared: true
 
   let(:laying_body) { double('laying_body', name: 'LayingBodyTest', graph_id: 'E1234567') }
   let(:laying_person) { double('laying_person', display_name: 'LayingPersonTest', graph_id: 'F1234567') }
@@ -21,7 +21,6 @@ RSpec.describe PageSerializer::LaidThingShowPageSerializer do
 
   context '#to_h' do
     it 'produces the expected JSON hash' do
-create_fixture(subject, 'fixture')
       expected = get_fixture('fixture')
 
       expect(subject.to_yaml).to eq expected

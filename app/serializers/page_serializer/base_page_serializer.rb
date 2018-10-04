@@ -4,7 +4,8 @@ module PageSerializer
     attr_reader :request, :request_id, :data_alternates, :request_original_url
     include ActionDispatch::Routing::UrlFor
 
-    # @param [ActionDispatch::Request] request the current request object
+    # @param [ActionDispatch::Request] request the current request object.
+    # @param [Array<Hash>] data_alternates array containing the href and type of the alternative data urls.
     def initialize(request: nil, data_alternates: nil)
       @request              = request
       @request_id           = request.try(:env)&.fetch('ApplicationInsights.request.id', nil) if request

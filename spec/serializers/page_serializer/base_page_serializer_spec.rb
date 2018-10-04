@@ -1,7 +1,7 @@
 require_relative '../../rails_helper'
 
 RSpec.describe PageSerializer::BasePageSerializer do
-  include_context "sample request", :include_shared => true
+  include_context "sample request", include_shared: true
 
   let(:base_page_serializer) { described_class.new(request: request) }
 

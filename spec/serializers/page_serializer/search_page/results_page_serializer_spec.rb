@@ -1,7 +1,7 @@
 require_relative '../../../rails_helper'
 
 RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
-  include_context "sample request", :include_shared => true
+  include_context "sample request", include_shared: true
 
   let(:pagination_hash) { { start_index: 11, count: 100, results_total: 345, query: 'hello' } }
   let(:result_one) {

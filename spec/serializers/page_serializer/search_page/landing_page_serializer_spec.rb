@@ -1,7 +1,7 @@
 require_relative '../../../rails_helper'
 
 RSpec.describe PageSerializer::SearchPage::LandingPageSerializer do
-  include_context "sample request", :include_shared => true
+  include_context "sample request", include_shared: true
 
   context '#to_h' do
     context 'without a query' do
