@@ -24,11 +24,11 @@ http_interactions:
       Content-Disposition:
       - inline; filename="index"
       Last-Modified:
-      - Fri, 05 Oct 2018 13:50:13 GMT
+      - Fri, 05 Oct 2018 18:13:28 GMT
       X-Content-Type-Options:
       - nosniff
       Content-Length:
-      - '5090'
+      - '4007'
     body:
       encoding: UTF-8
       string: |-
@@ -42,10 +42,8 @@ http_interactions:
         <https://id.parliament.uk/9PuVurua> <https://id.parliament.uk/schema/statutoryInstrumentPaperComingIntoForceDate> "2018-06-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
         <https://id.parliament.uk/9PuVurua> <https://id.parliament.uk/schema/statutoryInstrumentPaperMadeDate> "2018-05-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
         <https://id.parliament.uk/9PuVurua> <https://id.parliament.uk/schema/statutoryInstrumentPaperComingIntoForceNote> "statutoryInstrumentPaperComingIntoForceNote - 1" .
-        <https://id.parliament.uk/schema/statutoryInstrumentPaperComingIntoForceDate> <http://www.w3.org/2000/01/rdf-schema#label> "rdf-schema#label - 1" .
-        <https://id.parliament.uk/schema/statutoryInstrumentPaperMadeDate> <http://www.w3.org/2000/01/rdf-schema#label> "rdf-schema#label - 2" .
-        <https://id.parliament.uk/schema/statutoryInstrumentPaperComingIntoForceNote> <http://www.w3.org/2000/01/rdf-schema#label> "rdf-schema#label - 3" .
+
 
     http_version: 
-  recorded_at: Fri, 05 Oct 2018 14:24:16 GMT
+  recorded_at: Fri, 05 Oct 2018 18:17:15 GMT
 recorded_with: VCR 4.0.0
