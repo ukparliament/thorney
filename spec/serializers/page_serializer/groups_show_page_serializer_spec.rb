@@ -11,7 +11,7 @@ RSpec.describe PageSerializer::GroupsShowPageSerializer do
     )
   end
 
-  let(:subject) { described_class.new(request: request, group: group) }
+  subject { described_class.new(request: request, group: group) }
 
   context '#to_h' do
     it 'produces the expected JSON hash' do
