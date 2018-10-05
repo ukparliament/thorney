@@ -100,80 +100,39 @@ main-components:
         context:
           content: statutoryInstrumentPaperPrefix - 1 statutoryInstrumentPaperYear
             - 1/538
-- name: section__section
-  data:
-    components:
-    - name: heading
-      data:
-        content: statutory-instruments.show.literals
-        size: 2
     - name: list__description
       data:
         items:
         - term:
+            content: laid-thing.web-link
+          description:
+          - content: "<a href='http://www.legislation.gov.uk/uksi/2018/538/made'>http://www.legislation.gov.uk/uksi/2018/538/made</a>"
+        - term:
+            content: laid-thing.laid-date
+          description:
+          - content: 1 May 2018
+        - term:
             content: statutory-instruments.show.coming-into-force-date
           description:
           - content: 1 June 2018
+        - term:
+            content: statutory-instruments.show.following-title
+          description:
+          - content: "<a href='/proposed-negative-statutory-instruments/C1234567'>proposedNegativeStatutoryInstrumentPaperName
+              - 1</a>"
+          - content: "<a href='/proposed-negative-statutory-instruments/D1234567'>proposedNegativeStatutoryInstrumentPaperName
+              - 2</a>"
+        - term:
+            content: laid-thing.laying-person
+          description:
+          - content: F31CBD81AD8343898B49DC65743F0BDF - 1
+        - term:
+            content: laid-thing.laying-body
+          description:
+          - content: groupName - 1
 - name: section__section
   data:
     components:
-    - name: heading
-      data:
-        content: laid-thing.objects
-        size: 2
-    - name: heading
-      data:
-        content: laid-thing.work-package
-        size: 3
-    - name: paragraph
-      data:
-      - content: "<a href='/work-packages/zhi6ZHnQ'>zhi6ZHnQ</a>"
-    - name: heading
-      data:
-        content: laid-thing.procedure
-        size: 4
-    - name: paragraph
-      data:
-      - content: "<a href='/procedures/5S6p4YsP'>procedureName - 1</a>"
-    - name: heading
-      data:
-        content: laid-thing.laying
-        size: 3
-    - name: paragraph
-      data:
-      - content: 2iDuQtrK
-    - name: heading
-      data:
-        content: laid-thing.laid-date
-        size: 4
-    - name: paragraph
-      data:
-      - content: 1 May 2018
-    - name: heading
-      data:
-        content: laid-thing.laying-body
-        size: 4
-    - name: paragraph
-      data:
-      - content: groupName - 1
-    - name: heading
-      data:
-        content: laid-thing.laying-person
-        size: 4
-    - name: paragraph
-      data:
-      - content: F31CBD81AD8343898B49DC65743F0BDF - 1
-    - name: heading
-      data:
-        content: laid-thing.web-link
-        size: 3
-    - name: paragraph
-      data:
-      - content: "<a href='http://www.legislation.gov.uk/uksi/2018/538/made'>http://www.legislation.gov.uk/uksi/2018/538/made</a>"
-    - name: heading
-      data:
-        content: statutory-instruments.show.following-title
-        size: 3
     - name: list__generic
       data:
         type: ol
@@ -181,15 +140,21 @@ main-components:
           name: partials__display
           data:
           - component: list
+            variant: block
         components:
-        - name: link
+        - name: card__generic
           data:
-            link: "/proposed-negative-statutory-instruments/C1234567"
-            content: proposedNegativeStatutoryInstrumentPaperName - 1
-        - name: link
-          data:
-            link: "/proposed-negative-statutory-instruments/D1234567"
-            content: proposedNegativeStatutoryInstrumentPaperName - 2
+            heading:
+              name: heading
+              data:
+                content: laid-thing.work-package
+                size: 2
+                link: "/work-packages/zhi6ZHnQ"
+            paragraph:
+              name: paragraph
+              data:
+              - content: 'Procedure: <a href=''/procedures/5S6p4YsP''>procedureName
+                  - 1</a>'
 footer-components:
 - name: footer
   data:

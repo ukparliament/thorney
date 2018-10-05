@@ -19,31 +19,27 @@ module PageSerializer
     end
 
     def title
-      @proposed_negative_statutory_instrument.name
+      @proposed_negative_statutory_instrument.try(:proposedNegativeStatutoryInstrumentPaperName)
     end
 
-    def content
-      [].tap do |components|
-        components << ComponentSerializer::SectionComponentSerializer.new(components: section_primary_components, type: 'primary').to_h
-        components << ComponentSerializer::SectionComponentSerializer.new(components: section_objects, type: 'section').to_h
-      end
+    def heading1_component
+      ComponentSerializer::Heading1ComponentSerializer.new({ subheading_content: 'proposed-negative-statutory-instruments.show.subheading', heading_content: title }).to_h
     end
 
-    def section_primary_components
-      [ComponentSerializer::Heading1ComponentSerializer.new({ subheading_content: 'proposed-negative-statutory-instruments.show.subheading', heading_content: title }).to_h]
+    def meta_info
+      [].tap do |items|
+        items << create_description_list_item('laid-thing.web-link', ["<a href='#{@laid_thing.try(:workPackagedThingHasWorkPackagedThingWebLink)}'>#{@laid_thing.try(:workPackagedThingHasWorkPackagedThingWebLink)}</a>"])
+        items << create_description_list_item('laid-thing.laid-date', [l(@laid_thing&.laying&.date)])
+        items << create_description_list_item('proposed-negative-statutory-instruments.show.preceding-title', connected_statutory_instruments)
+        items << create_description_list_item('laid-thing.laying-person', [@laying_person&.display_name])
+        items << create_description_list_item('laid-thing.laying-body', [@laying_body.try(:groupName)])
+      end.compact
     end
 
     def connected_statutory_instruments
       @following_statutory_instruments.map do |stat_instrument|
-        ComponentSerializer::LinkComponentSerializer.new(
-          link:    statutory_instrument_path(stat_instrument.graph_id),
-          content: stat_instrument.name
-        ).to_h
+        "<a href='#{statutory_instrument_path(stat_instrument.graph_id)}'>#{stat_instrument.try(:statutoryInstrumentPaperName)}</a>"
       end
-    end
-
-    def connected_statutory_instruments_title
-      'proposed-negative-statutory-instruments.show.preceding-title'
     end
   end
 end

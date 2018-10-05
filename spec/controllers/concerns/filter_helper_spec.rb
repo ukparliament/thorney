@@ -41,9 +41,9 @@ RSpec.describe FilterHelper, vcr: true do
   context '#filter_sort' do
     it 'filters and then sorts types passed in' do
       constituencies, letters = subject.filter_sort(ParliamentHelper.parliament_request.constituency_current, :name, 'ConstituencyGroup', ::Grom::Node::BLANK)
-      expect(constituencies[0].name).to eq("constituencyGroupName - 1")
-      expect(constituencies[1].name).to eq("constituencyGroupName - 10")
-      expect(constituencies[2].name).to eq("constituencyGroupName - 100")
+      expect(constituencies[0].constituencyGroupName).to eq("constituencyGroupName - 1")
+      expect(constituencies[1].constituencyGroupName).to eq("constituencyGroupName - 2")
+      expect(constituencies[2].constituencyGroupName).to eq("constituencyGroupName - 3")
     end
   end
 end
