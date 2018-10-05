@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3030/statutory_instrument_by_id
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/n-triples
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/n-triples
+      Content-Disposition:
+      - inline; filename="index"
+      Last-Modified:
+      - Fri, 05 Oct 2018 13:50:13 GMT
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '5090'
+    body:
+      encoding: UTF-8
+      string: |-
+        <https://id.parliament.uk/9PuVurua> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/StatutoryInstrumentPaper> .
+        <https://id.parliament.uk/9PuVurua> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackagedThing> .
+        <https://id.parliament.uk/9PuVurua> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing> .
+        <https://id.parliament.uk/9PuVurua> <https://id.parliament.uk/schema/statutoryInstrumentPaperYear> "statutoryInstrumentPaperYear - 1"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+        <https://id.parliament.uk/9PuVurua> <https://id.parliament.uk/schema/statutoryInstrumentPaperPrefix> "statutoryInstrumentPaperPrefix - 1" .
+        <https://id.parliament.uk/9PuVurua> <https://id.parliament.uk/schema/statutoryInstrumentPaperNumber> "538"^^<http://www.w3.org/2001/XMLSchema#integer> .
+        <https://id.parliament.uk/9PuVurua> <https://id.parliament.uk/schema/statutoryInstrumentPaperName> "statutoryInstrumentPaperName - 1" .
+        <https://id.parliament.uk/9PuVurua> <https://id.parliament.uk/schema/statutoryInstrumentPaperComingIntoForceDate> "2018-06-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/9PuVurua> <https://id.parliament.uk/schema/statutoryInstrumentPaperMadeDate> "2018-05-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/9PuVurua> <https://id.parliament.uk/schema/statutoryInstrumentPaperComingIntoForceNote> "statutoryInstrumentPaperComingIntoForceNote - 1" .
+        <https://id.parliament.uk/9PuVurua> <https://id.parliament.uk/schema/workPackagedThingHasWorkPackagedThingWebLink> <http://www.legislation.gov.uk/uksi/2018/538/made> .
+        <https://id.parliament.uk/9PuVurua> <https://id.parliament.uk/schema/laidThingHasLaying> <https://id.parliament.uk/2iDuQtrK> .
+        <https://id.parliament.uk/9PuVurua> <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/zhi6ZHnQ> .
+        <https://id.parliament.uk/schema/statutoryInstrumentPaperComingIntoForceDate> <http://www.w3.org/2000/01/rdf-schema#label> "rdf-schema#label - 1" .
+        <https://id.parliament.uk/schema/statutoryInstrumentPaperMadeDate> <http://www.w3.org/2000/01/rdf-schema#label> "rdf-schema#label - 2" .
+        <https://id.parliament.uk/schema/statutoryInstrumentPaperComingIntoForceNote> <http://www.w3.org/2000/01/rdf-schema#label> "rdf-schema#label - 3" .
+        <https://id.parliament.uk/schema/workPackagedThingHasWorkPackagedThingWebLink> <http://www.w3.org/2000/01/rdf-schema#label> "rdf-schema#label - 4" .
+        <https://id.parliament.uk/zhi6ZHnQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackage> .
+        <https://id.parliament.uk/zhi6ZHnQ> <http://www.w3.org/2000/01/rdf-schema#label> "rdf-schema#label - 5" .
+        <https://id.parliament.uk/zhi6ZHnQ> <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/5S6p4YsP> .
+        <https://id.parliament.uk/2iDuQtrK> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying> .
+        <https://id.parliament.uk/2iDuQtrK> <https://id.parliament.uk/schema/layingDate> "2018-04-30+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/2iDuQtrK> <https://id.parliament.uk/schema/layingHasLayingBody> <https://id.parliament.uk/79sn5e3n> .
+        <https://id.parliament.uk/schema/layingDate> <http://www.w3.org/2000/01/rdf-schema#label> "rdf-schema#label - 6" .
+        <https://id.parliament.uk/5S6p4YsP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Procedure> .
+        <https://id.parliament.uk/5S6p4YsP> <http://www.w3.org/2000/01/rdf-schema#label> "rdf-schema#label - 7" .
+
+        <https://id.parliament.uk/5S6p4YsP> <https://id.parliament.uk/schema/procedureName> "procedureName - 1" .
+        <https://id.parliament.uk/79sn5e3n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/79sn5e3n> <http://www.w3.org/2000/01/rdf-schema#label> "rdf-schema#label - 8" .
+        <https://id.parliament.uk/79sn5e3n> <https://id.parliament.uk/schema/groupName> "groupName - 1" .
+
+        <https://id.parliament.uk/9PuVurua> <https://id.parliament.uk/schema/statutoryInstrumentPaperFollowsProposedNegativeStatutoryInstrumentPaper> <https://id.parliament.uk/C1234567> .
+        <https://id.parliament.uk/9PuVurua> <https://id.parliament.uk/schema/statutoryInstrumentPaperFollowsProposedNegativeStatutoryInstrumentPaper> <https://id.parliament.uk/D1234567> .
+        <https://id.parliament.uk/C1234567> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper> .
+        <https://id.parliament.uk/D1234567> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper> .
+        <https://id.parliament.uk/C1234567> <https://id.parliament.uk/schema/proposedNegativeStatutoryInstrumentPaperName> "proposedNegativeStatutoryInstrumentPaperName - 1" .
+        <https://id.parliament.uk/D1234567> <https://id.parliament.uk/schema/proposedNegativeStatutoryInstrumentPaperName> "proposedNegativeStatutoryInstrumentPaperName - 2" .
+    http_version: 
+  recorded_at: Fri, 05 Oct 2018 15:31:55 GMT
+recorded_with: VCR 4.0.0

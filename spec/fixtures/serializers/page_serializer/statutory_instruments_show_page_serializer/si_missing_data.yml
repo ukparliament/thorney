@@ -2,10 +2,10 @@
 layout:
   template: layout
 meta:
-  title: SI Paper Test
+  title: statutoryInstrumentPaperName - 1
   request-id: 123456
   open-graph:
-    title: SI Paper Test
+    title: statutoryInstrumentPaperName - 1
     original-url: https://example.com/
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -81,91 +81,29 @@ main-components:
         subheading:
           content: statutory-instruments.show.subheading
         heading:
-          content: SI Paper Test
+          content: statutoryInstrumentPaperName - 1
         context:
-          content: SI 2018/568
-- name: section__section
-  data:
-    components:
-    - name: heading
-      data:
-        content: statutory-instruments.show.literals
-        size: 2
+          content: statutoryInstrumentPaperPrefix - 1 statutoryInstrumentPaperYear
+            - 1/538
     - name: list__description
       data:
         items:
         - term:
+            content: laid-thing.web-link
+          description:
+          - content: "<a href=''></a>"
+        - term:
+            content: statutory-instruments.show.made-date
+          description:
+          - content: 1 May 2018
+        - term:
+            content: statutory-instruments.show.coming-into-force-date
+          description:
+          - content: 1 June 2018
+        - term:
             content: statutory-instruments.show.coming-into-force-note
           description:
-          - content: SI Paper Test Note
-- name: section__section
-  data:
-    components:
-    - name: heading
-      data:
-        content: laid-thing.objects
-        size: 2
-    - name: heading
-      data:
-        content: laid-thing.work-package
-        size: 3
-    - name: paragraph
-      data:
-      - content: "<a href='/work-packages/'></a>"
-    - name: heading
-      data:
-        content: laid-thing.procedure
-        size: 4
-    - name: paragraph
-      data:
-      - content: "<a href='/procedures/'></a>"
-    - name: heading
-      data:
-        content: laid-thing.laying
-        size: 3
-    - name: paragraph
-      data:
-      - content: 
-    - name: heading
-      data:
-        content: laid-thing.laid-date
-        size: 4
-    - name: paragraph
-      data:
-      - content: 
-    - name: heading
-      data:
-        content: laid-thing.laying-body
-        size: 4
-    - name: paragraph
-      data:
-      - content: 
-    - name: heading
-      data:
-        content: laid-thing.laying-person
-        size: 4
-    - name: paragraph
-      data:
-      - content: 
-    - name: heading
-      data:
-        content: laid-thing.web-link
-        size: 3
-    - name: paragraph
-      data:
-      - content: "<a href=''></a>"
-    - name: heading
-      data:
-        content: statutory-instruments.show.following-title
-        size: 3
-    - name: list__generic
-      data:
-        type: ol
-        display:
-          name: partials__display
-          data:
-          - component: list
-        components: []
+          - content: statutoryInstrumentPaperComingIntoForceNote - 1
 footer-components:
 - name: footer
   data:

@@ -20,13 +20,16 @@ gem 'parliament-ruby', '~> 0.8'
 gem 'parliament-opensearch', '~> 0.4', require: false
 
 # Parliament Grom Decorators decorates Grom nodes
-gem 'parliament-grom-decorators', '~> 0.2'
+# gem 'parliament-grom-decorators', '~> 0.2'
+gem 'parliament-grom-decorators', '~> 1.0'
 
 # Parliament routing
 gem 'parliament-routes', '~> 0.6'
 
-gem 'parliament-ntriple', '~> 0.3', require: false
+# gem 'parliament-ntriple', '~> 0.3', require: false
 
+gem 'grom', path: '../grom'
+gem 'parliament-ntriple', path: '../parliament-ntriple', require: false
 gem 'sanitize'
 
 gem 'airbrake', '~> 7.3'

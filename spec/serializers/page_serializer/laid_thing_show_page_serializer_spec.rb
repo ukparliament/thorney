@@ -1,47 +1,70 @@
 require_relative '../../rails_helper'
 
-RSpec.describe PageSerializer::LaidThingShowPageSerializer do
+RSpec.describe PageSerializer::LaidThingShowPageSerializer, vcr: true do
   include_context "sample request", include_shared: true
 
-  let(:laying_body) { double('laying_body', name: 'LayingBodyTest', graph_id: 'E1234567') }
-  let(:laying_person) { double('laying_person', display_name: 'LayingPersonTest', graph_id: 'F1234567') }
-  let(:laying) { double('laying', body: laying_body, person: laying_person, date: DateTime.new(2018, 8, 10, 0, 0), graph_id: 'G1234567') }
-  let(:procedure) { double('procedure', name: 'ProcedureTest', graph_id: 'D1234567') }
-  let(:work_package) { double('work_package', name: 'WorkPackageTest', graph_id: 'C1234567', procedure: procedure) }
+  let(:response) {Parliament::Request::UrlRequest.new(base_url:   'http://localhost:3030/api/v1',
+                                                      builder:    Parliament::Builder::NTripleResponseBuilder,
+                                                      decorators: Parliament::Grom::Decorator).statutory_instrument_by_id.get}
 
-  let(:laid_thing) do
-    double('laid_thing',
-           web_link: 'http://example.com',
-           laying: laying,
-           work_package: work_package
-    )
-  end
+  let(:laid_thing) {response.filter('https://id.parliament.uk/schema/StatutoryInstrumentPaper').first}
 
   subject { described_class.new(request: request, laid_thing: laid_thing) }
 
-  context '#to_h' do
-    it 'produces the expected JSON hash' do
-      expected = get_fixture('fixture')
-
-      expect(subject.to_yaml).to eq expected
+  context '#heading1_component' do
+    it 'raises an error' do
+      expect { subject.send(:heading1_component) }.to raise_error('You must implement #heading1_component')
     end
   end
 
-  context 'partial data' do
-    let(:laid_thing_missing_data) do
-      double('laid_thing_missing_data',
-             web_link: '',
-             laying: nil,
-             work_package: nil
-      )
+  context '#meta_info' do
+    it 'raises an error' do
+      expect { subject.send(:meta_info) }.to raise_error('You must implement #meta_info')
     end
+  end
 
-    it 'produces the expected JSON hash with missing data' do
-      serializer = described_class.new(request: request, laid_thing: laid_thing_missing_data)
+  context '#content' do
+    it 'calls the correct serializers' do
+      allow(subject).to receive(:heading1_component)
+      allow(subject).to receive(:meta_info)
 
-      expected = get_fixture('laid_thing_missing_data')
+      allow(ComponentSerializer::SectionComponentSerializer).to receive(:new)
 
-      expect(serializer.to_yaml).to eq expected
+      subject.send(:content)
+
+      expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).twice
+    end
+  end
+
+  context '#section_primary_components' do
+    it 'calls the correct serializers' do
+      allow(subject).to receive(:heading1_component)
+      allow(subject).to receive(:meta_info)
+
+      allow(ComponentSerializer::ListDescriptionComponentSerializer).to receive(:new)
+
+      subject.send(:content)
+
+      expect(ComponentSerializer::ListDescriptionComponentSerializer).to have_received(:new)
+    end
+  end
+
+  context '#work_package_section' do
+    it 'calls the correct serializers' do
+      allow(subject).to receive(:heading1_component)
+      allow(subject).to receive(:meta_info)
+
+      allow(ComponentSerializer::ListComponentSerializer).to receive(:new)
+      allow(ComponentSerializer::CardComponentSerializer).to receive(:new)
+      allow(ComponentSerializer::HeadingComponentSerializer).to receive(:new)
+      allow(ComponentSerializer::ParagraphComponentSerializer).to receive(:new)
+
+      subject.send(:content)
+
+      expect(ComponentSerializer::ListComponentSerializer).to have_received(:new)
+      expect(ComponentSerializer::CardComponentSerializer).to have_received(:new)
+      expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new)
+      expect(ComponentSerializer::ParagraphComponentSerializer).to have_received(:new)
     end
   end
 end

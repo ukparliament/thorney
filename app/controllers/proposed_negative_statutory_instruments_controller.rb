@@ -12,7 +12,7 @@ class ProposedNegativeStatutoryInstrumentsController < ApplicationController
 
     list_components = @proposed_negative_statutory_instruments.map do |proposed_negative_statutory_instrument|
       CardFactory.new(
-        heading_text: proposed_negative_statutory_instrument.name,
+        heading_text: proposed_negative_statutory_instrument.try(:proposedNegativeStatutoryInstrumentPaperName),
         heading_url:  proposed_negative_statutory_instrument_path(proposed_negative_statutory_instrument.graph_id)
       ).build_card
     end
