@@ -3,7 +3,7 @@ require_relative '../../rails_helper'
 RSpec.describe PageSerializer::ProposedNegativeStatutoryInstrumentsShowPageSerializer, vcr: true do
   include_context "sample request", include_shared: true
 
-  let(:response) {Parliament::Request::UrlRequest.new(base_url:   'http://localhost:3030/api/v1',
+  let(:response) {Parliament::Request::UrlRequest.new(base_url:   ENV['PARLIAMENT_BASE_URL'],
                                                       builder:    Parliament::Builder::NTripleResponseBuilder,
                                                       decorators: Parliament::Grom::Decorator).proposed_negative_statutory_instrument_by_id.get}
 
