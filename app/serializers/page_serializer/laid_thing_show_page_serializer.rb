@@ -17,34 +17,46 @@ module PageSerializer
 
     private
 
-    def content; end
-
-    def parent_child_objects
+    def content
       [].tap do |components|
-        components << object_heading_paragraph(3, 'laid-thing.work-package', "<a href='/work-packages/#{@work_package&.graph_id}'>#{@work_package&.graph_id}</a>")
-        components << object_heading_paragraph(4, 'laid-thing.procedure', "<a href='/procedures/#{@procedure&.graph_id}'>#{@procedure&.name}</a>")
-        components << object_heading_paragraph(3, 'laid-thing.laying', @laid_thing&.laying&.graph_id)
-        components << object_heading_paragraph(4, 'laid-thing.laid-date', l(@laid_thing&.laying&.date))
-        components << object_heading_paragraph(4, 'laid-thing.laying-body', @laying_body&.name)
-        components << object_heading_paragraph(4, 'laid-thing.laying-person', @laying_person&.display_name)
-        components << object_heading_paragraph(3, 'laid-thing.web-link', "<a href='#{@laid_thing.web_link}'>#{@laid_thing.web_link}</a>")
-      end.flatten
-    end
-
-    def object_heading_paragraph(heading_size, heading_content, paragraph_content)
-      [].tap do |components|
-        components << ComponentSerializer::HeadingComponentSerializer.new(content: heading_content, size: heading_size).to_h
-        components << ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: paragraph_content }]).to_h
+        components << ComponentSerializer::SectionComponentSerializer.new(components: section_primary_components, type: 'primary').to_h
+        components << ComponentSerializer::SectionComponentSerializer.new(components: work_package_section, type: 'section').to_h if @work_package
       end
     end
 
-    def section_objects
+    def section_primary_components
       [].tap do |components|
-        components << ComponentSerializer::HeadingComponentSerializer.new(content: 'laid-thing.objects', size: 2).to_h
-        components << parent_child_objects
-        components << ComponentSerializer::HeadingComponentSerializer.new(content: connected_statutory_instruments_title, size: 3).to_h
-        components << ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list')], components: connected_statutory_instruments).to_h
-      end.flatten
+        components << heading1_component
+        components << ComponentSerializer::ListDescriptionComponentSerializer.new(items: meta_info).to_h
+      end
+    end
+
+    def work_package_section
+      [].tap do |components|
+        components << ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: work_package_list_components).to_h
+      end
+    end
+
+    def work_package_list_components
+      [].tap do |components|
+        components << ComponentSerializer::CardComponentSerializer.new(name: 'card__generic', data: { heading: work_package_card_heading, paragraph: work_package_paragraphs }).to_h
+      end
+    end
+
+    def work_package_card_heading
+      ComponentSerializer::HeadingComponentSerializer.new(content: 'laid-thing.work-package', link: work_package_path(@work_package&.graph_id), size: 2).to_h
+    end
+
+    def work_package_paragraphs
+      ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: "Procedure: <a href='/procedures/#{@procedure&.graph_id}'>#{@procedure.try(:procedureName)}</a>" }]).to_h
+    end
+
+    def heading1_component
+      raise StandardError, 'You must implement #heading1_component'
+    end
+
+    def meta_info
+      raise StandardError, 'You must implement #meta_info'
     end
   end
 end

@@ -12,7 +12,7 @@ class StatutoryInstrumentsController < ApplicationController
 
     list_components = @statutory_instruments.map do |statutory_instrument|
       CardFactory.new(
-        heading_text: statutory_instrument.name,
+        heading_text: statutory_instrument.try(:statutoryInstrumentPaperName),
         heading_url:  statutory_instrument_path(statutory_instrument.graph_id)
       ).build_card
     end

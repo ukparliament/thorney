@@ -6,7 +6,7 @@ module ComponentSerializer
     # @param [String] translation_key a translation block.
     # @param [Hash] translation_data a hash of data that is to be used in the translation block.
     # @param [Integer] size number from 1 - 4 to be placed in the <h> tag.
-    # @param [String] link the URL or other link conneted to the heading.
+    # @param [String] link the URL or other link connected to the heading.
     #
     # @example Initialising a heading component with content
     #  string = 'House of Commons'
