@@ -26,6 +26,9 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # Prepend all log lines with the Cloudflare ID if PRODUCTION_LOGGING is "true".
+  config.log_tags = [->(request) { "Cloudflare ID: #{request.headers['HTTP_CF_RAY']}" }] if ENV['PRODUCTION_LOGGING'] == 'true'
+
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
