@@ -1,15 +1,13 @@
 require_relative '../../rails_helper'
 
-RSpec.describe PageSerializer::GroupsShowPageSerializer do
+RSpec.describe PageSerializer::GroupsShowPageSerializer, vcr: true do
   include_context "sample request", include_shared: true
 
-  let(:group) do
-    double('group',
-           groupName: 'Group Test',
-           groupStartDate: '12/12/12',
-           groupEndDate: '12/12/13'
-    )
-  end
+  let(:response) { Parliament::Request::UrlRequest.new(
+      base_url: 'http://localhost:3030',
+      builder: Parliament::Builder::NTripleResponseBuilder,
+      decorators: Parliament::Grom::Decorator).group_by_id.get }
+  let(:group) { response.filter('https://id.parliament.uk/schema/Group').first }
 
   subject { described_class.new(request: request, group: group) }
 
@@ -22,20 +20,42 @@ RSpec.describe PageSerializer::GroupsShowPageSerializer do
     end
   end
 
-  context 'partial data' do
-    let(:group_missing_data) do
-      double('group',
-             groupName: 'Group Test',
-             groupStartDate: nil
-      )
+  context 'group not laying body' do
+    it 'produces the expected JSON hash without layings' do
+
+      expected = get_fixture('group_not_laying_body')
+
+      expect(subject.to_yaml).to eq expected
     end
+  end
 
-    it 'produces the expected JSON hash with missing data' do
-      serializer = described_class.new(request: request, group: group_missing_data)
+  context 'no layings' do
 
-      expected = get_fixture('group_missing_data')
+    it 'produces the expected JSON hash without layings' do
 
-      expect(serializer.to_yaml).to eq expected
+      expected = get_fixture('group_no_layings')
+
+      expect(subject.to_yaml).to eq expected
+    end
+  end
+
+  context 'with end date' do
+
+    it 'produces the expected JSON hash with an end date' do
+
+      expected = get_fixture('group_with_end_date')
+
+      expect(subject.to_yaml).to eq expected
+    end
+  end
+
+  context 'with no start or end date' do
+
+    it 'produces the expected JSON hash with no start or end date' do
+
+      expected = get_fixture('group_with_no_date')
+
+      expect(subject.to_yaml).to eq expected
     end
   end
 end

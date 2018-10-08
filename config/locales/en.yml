@@ -32,6 +32,7 @@
 en:
   mp_plural: MPs
   lord_plural: Lords
+  prepositional_to: "%{first} to %{second}"
   time:
     formats:
       default: '%-d %B %Y'

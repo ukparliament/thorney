@@ -2,10 +2,10 @@
 layout:
   template: layout
 meta:
-  title: Group Test
+  title: groupName - 1
   request-id: 123456
   open-graph:
-    title: Group Test
+    title: groupName - 1
     original-url: https://example.com/
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -79,9 +79,13 @@ main-components:
     - name: heading1
       data:
         subheading:
-          content: Group
+          content: groups.group
+          data:
+            link: "/groups"
         heading:
-          content: Group Test
+          content: groupName - 1
+        context:
+          content: 12 May 2010 to present
 - name: section__section
   data:
     components:
@@ -95,7 +99,16 @@ main-components:
         - term:
             content: Name
           description:
-          - content: Group Test
+          - content: groupName - 1
+        - term:
+            content: Start Date
+          description:
+          - content: 12 May 2010
+    - name: heading
+      data:
+        content: Objects
+        size: 2
+    - 
 footer-components:
 - name: footer
   data:
