@@ -67,7 +67,7 @@ module PageSerializer
     end
 
     def card_heading(laying)
-      ComponentSerializer::HeadingComponentSerializer.new(content: laying.laid_thing.try(laidThingName), size: 2, link: statutory_instrument_path(laying.laid_thing.graph_id)).to_h
+      ComponentSerializer::HeadingComponentSerializer.new(content: laying.laid_thing.try(:laidThingName), size: 2, link: statutory_instrument_path(laying.laid_thing.graph_id)).to_h
     end
 
     def card_paragraph(laying)
