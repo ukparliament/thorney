@@ -9,6 +9,7 @@ class GroupsController < ApplicationController
 
   def index
     @groups = FilterHelper.filter(@api_request, 'Group')
+    @groups = @groups.sort_by(:groupName)
 
     list_components = @groups.map do |group|
       paragraph_content = [].tap do |content|
