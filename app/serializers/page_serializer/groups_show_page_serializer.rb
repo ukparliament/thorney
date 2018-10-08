@@ -47,8 +47,8 @@ module PageSerializer
         components << ComponentSerializer::ListDescriptionComponentSerializer.new(items: literals).to_h
         components << ComponentSerializer::HeadingComponentSerializer.new(content: 'Objects', size: 2).to_h
         components << if @group.is_a?(Parliament::Grom::Decorator::LayingBody) && @layings
-          ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: objects).to_h
-        end
+                        ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: objects).to_h
+                      end
       end
     end
 
