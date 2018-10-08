@@ -91,7 +91,8 @@ main-components:
     components:
     - name: heading
       data:
-        content: Literals
+        translation:
+          key: groups.current.objects
         size: 2
     - name: list__description
       data:
@@ -104,10 +105,6 @@ main-components:
             content: Start Date
           description:
           - content: 12 May 2010
-    - name: heading
-      data:
-        content: Objects
-        size: 2
     - 
 footer-components:
 - name: footer

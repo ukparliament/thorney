@@ -4,7 +4,7 @@ RSpec.describe PageSerializer::GroupsShowPageSerializer, vcr: true do
   include_context "sample request", include_shared: true
 
   let(:response) { Parliament::Request::UrlRequest.new(
-      base_url: 'http://localhost:3030',
+      base_url: ENV['PARLIAMENT_BASE_URL'],
       builder: Parliament::Builder::NTripleResponseBuilder,
       decorators: Parliament::Grom::Decorator).group_by_id.get }
   let(:group) { response.filter('https://id.parliament.uk/schema/Group').first }
@@ -13,7 +13,7 @@ RSpec.describe PageSerializer::GroupsShowPageSerializer, vcr: true do
 
   context '#to_h' do
     it 'produces the expected JSON hash' do
-
+create_fixture(subject, 'fixture')
       expected = get_fixture('fixture')
 
       expect(subject.to_yaml).to eq expected
@@ -22,7 +22,7 @@ RSpec.describe PageSerializer::GroupsShowPageSerializer, vcr: true do
 
   context 'group not laying body' do
     it 'produces the expected JSON hash without layings' do
-
+create_fixture(subject, 'group_not_laying_body')
       expected = get_fixture('group_not_laying_body')
 
       expect(subject.to_yaml).to eq expected
@@ -32,7 +32,7 @@ RSpec.describe PageSerializer::GroupsShowPageSerializer, vcr: true do
   context 'no layings' do
 
     it 'produces the expected JSON hash without layings' do
-
+create_fixture(subject, 'group_no_layings')
       expected = get_fixture('group_no_layings')
 
       expect(subject.to_yaml).to eq expected
@@ -42,7 +42,7 @@ RSpec.describe PageSerializer::GroupsShowPageSerializer, vcr: true do
   context 'with end date' do
 
     it 'produces the expected JSON hash with an end date' do
-
+create_fixture(subject, 'group_with_end_date')
       expected = get_fixture('group_with_end_date')
 
       expect(subject.to_yaml).to eq expected
@@ -52,8 +52,28 @@ RSpec.describe PageSerializer::GroupsShowPageSerializer, vcr: true do
   context 'with no start or end date' do
 
     it 'produces the expected JSON hash with no start or end date' do
-
+create_fixture(subject, 'group_with_no_date')
       expected = get_fixture('group_with_no_date')
+
+      expect(subject.to_yaml).to eq expected
+    end
+  end
+
+  context 'with no name' do
+
+    it 'produces the expected JSON hash with no name' do
+create_fixture(subject, 'group_with_no_name')
+      expected = get_fixture('group_with_no_name')
+
+      expect(subject.to_yaml).to eq expected
+    end
+  end
+
+  context 'with no name or dates' do
+
+    it 'produces the expected JSON hash with no name or dates' do
+create_fixture(subject, 'group_with_no_name_or_dates')
+      expected = get_fixture('group_with_no_name_or_dates')
 
       expect(subject.to_yaml).to eq expected
     end
