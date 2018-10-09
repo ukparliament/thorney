@@ -10,7 +10,7 @@ module PageSerializer
       @layings = @group.try(:layingBodyHasLaying)
       if @layings
         options = {
-          list: @layings,
+          list:       @layings,
           parameters: [:date]
         }
         @layings = Parliament::NTriple::Utils.sort_by(options).reverse
