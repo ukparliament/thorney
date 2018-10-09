@@ -15,6 +15,7 @@ class GroupsController < ApplicationController
         content << { content: I18n.t('prepositional_to', first: I18n.l(Time.parse(group.groupStartDate)), second: I18n.l(Time.parse(group.groupEndDate))) } if group.try(:groupStartDate) && group.try(:groupEndDate)
         content << { content: I18n.l(Time.parse(group.groupStartDate)) } if group.try(:groupStartDate) && !group.try(:groupEndDate)
       end
+
       CardFactory.new(
         heading_text:      group.try(:groupName),
         heading_url:       group_path(group.graph_id),

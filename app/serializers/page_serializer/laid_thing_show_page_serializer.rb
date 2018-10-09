@@ -48,7 +48,7 @@ module PageSerializer
     end
 
     def work_package_paragraphs
-      ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: "Procedure: <a href='/procedures/#{@procedure&.graph_id}'>#{@procedure.try(:procedureName)}</a>" }]).to_h
+      ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: "Procedure: #{@procedure.try(:procedureName)}" }]).to_h
     end
 
     def heading1_component
