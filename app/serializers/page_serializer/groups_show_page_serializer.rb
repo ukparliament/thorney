@@ -8,7 +8,15 @@ module PageSerializer
     def initialize(request: nil, group: nil, data_alternates: nil)
       @group = group
       @layings = @group.try(:layingBodyHasLaying)
-      @layings = @layings.sort_by(&:date).reverse if @layings != nil
+      # @layings = @layings.sort_by(&:date).reverse if @layings
+      if @layings
+        options = {
+          list: @layings,
+          parameters: [:date]
+        }
+        @layings = Parliament::NTriple::Utils.sort_by(options).reverse
+      end
+
       super(request: request, data_alternates: data_alternates)
     end
 

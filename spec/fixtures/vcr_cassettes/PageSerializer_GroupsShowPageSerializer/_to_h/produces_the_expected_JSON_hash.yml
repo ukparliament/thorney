@@ -222,6 +222,6 @@ http_interactions:
         <https://id.parliament.uk/7dSvuueH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/AnsweringBody> .
         <https://id.parliament.uk/7dSvuueH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/MnisAnsweringBody> .
         <https://id.parliament.uk/7dSvuueH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LayingBody> .
-    http_version: 
+    http_version:
   recorded_at: Fri, 05 Oct 2018 13:36:19 GMT
 recorded_with: VCR 4.0.0
