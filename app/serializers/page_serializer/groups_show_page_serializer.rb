@@ -8,7 +8,6 @@ module PageSerializer
     def initialize(request: nil, group: nil, data_alternates: nil)
       @group = group
       @layings = @group.try(:layingBodyHasLaying)
-      # @layings = @layings.sort_by(&:date).reverse if @layings
       if @layings
         options = {
           list: @layings,

@@ -8,8 +8,13 @@ module ComponentSerializer
     # @example Creating a description list component
     #  string_or_translation_key = 'List item'
     #  ComponentSerializer::ListDescriptionComponentSerializer.new(items: [{ 'term': { 'content': string_or_translation_key }, 'description': [{ 'content': string_or_translation_key }] }, { 'term': { 'content': string_or_translation_key }, 'description': [{ 'content': string_or_translation_key }] }]).to_h
-    def initialize(items: nil)
+    # @example Creating a description list component with a meta tag
+    #  meta_tag = true
+    #  string_or_translation_key = 'List item'
+    #  ComponentSerializer::ListDescriptionComponentSerializer.new(meta: meta_tag, items: [{ 'term': { 'content': string_or_translation_key }, 'description': [{ 'content': string_or_translation_key }] }, { 'term': { 'content': string_or_translation_key }, 'description': [{ 'content': string_or_translation_key }] }]).to_h
+    def initialize(meta: nil, items: nil)
       @items = items
+      @meta = meta
     end
 
     private
@@ -20,6 +25,7 @@ module ComponentSerializer
 
     def data
       {}.tap do |hash|
+        hash[:meta] = @meta if @meta
         hash[:items] = @items if @items
       end
     end
