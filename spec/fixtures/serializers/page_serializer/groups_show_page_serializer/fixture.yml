@@ -299,19 +299,6 @@ main-components:
               name: paragraph
               data:
               - content: 'Laying date: 6 July 2018'
-      - name: card__generic
-        data:
-          card-type: small
-          heading:
-            name: heading
-            data:
-              content: laidThingName - 15
-              size: 2
-              link: "/statutory-instruments/c0IpQmwt"
-          paragraph:
-            name: paragraph
-            data:
-            - content: 'Laying date: 2 July 2018'
         - name: card__generic
           data:
             card-type: small
@@ -321,6 +308,19 @@ main-components:
                 content: laidThingName - 14
                 size: 2
                 link: "/statutory-instruments/JPx0duf2"
+            paragraph:
+              name: paragraph
+              data:
+              - content: 'Laying date: 2 July 2018'
+        - name: card__generic
+          data:
+            card-type: small
+            heading:
+              name: heading
+              data:
+                content: laidThingName - 15
+                size: 2
+                link: "/statutory-instruments/c0IpQmwt"
             paragraph:
               name: paragraph
               data:
