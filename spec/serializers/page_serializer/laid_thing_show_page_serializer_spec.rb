@@ -23,10 +23,17 @@ RSpec.describe PageSerializer::LaidThingShowPageSerializer, vcr: true do
     end
   end
 
+  context '#title' do
+    it 'raises an error' do
+      expect { subject.send(:title) }.to raise_error('You must implement #title')
+    end
+  end
+
   context '#content' do
     it 'calls the correct serializers' do
       allow(subject).to receive(:heading1_component)
-      allow(subject).to receive(:meta_info)
+      allow(subject).to receive(:meta_info).and_return(double(:collection, empty?: false))
+      allow(subject).to receive(:title)
 
       allow(ComponentSerializer::SectionComponentSerializer).to receive(:new)
 
@@ -39,7 +46,8 @@ RSpec.describe PageSerializer::LaidThingShowPageSerializer, vcr: true do
   context '#section_primary_components' do
     it 'calls the correct serializers' do
       allow(subject).to receive(:heading1_component)
-      allow(subject).to receive(:meta_info)
+      allow(subject).to receive(:meta_info).and_return(double(:collection, empty?: false))
+      allow(subject).to receive(:title)
 
       allow(ComponentSerializer::ListDescriptionComponentSerializer).to receive(:new)
 
@@ -47,12 +55,27 @@ RSpec.describe PageSerializer::LaidThingShowPageSerializer, vcr: true do
 
       expect(ComponentSerializer::ListDescriptionComponentSerializer).to have_received(:new)
     end
+
+    context 'with empty meta_info' do
+      it 'does not create a ComponentSerializer::ListDescriptionComponentSerializer' do
+        allow(subject).to receive(:heading1_component)
+        allow(subject).to receive(:meta_info).and_return(double(:collection, empty?: true))
+        allow(subject).to receive(:title)
+
+        allow(ComponentSerializer::ListDescriptionComponentSerializer).to receive(:new)
+
+        subject.send(:content)
+
+        expect(ComponentSerializer::ListDescriptionComponentSerializer).not_to have_received(:new)
+      end
+    end
   end
 
   context '#work_package_section' do
     it 'calls the correct serializers' do
       allow(subject).to receive(:heading1_component)
-      allow(subject).to receive(:meta_info)
+      allow(subject).to receive(:meta_info).and_return(double(:collection, empty?: false))
+      allow(subject).to receive(:title)
 
       allow(ComponentSerializer::ListComponentSerializer).to receive(:new)
       allow(ComponentSerializer::CardComponentSerializer).to receive(:new)

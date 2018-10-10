@@ -28,7 +28,9 @@ module PageSerializer
 
     def meta_info
       [].tap do |items|
-        items << create_description_list_item('laid-thing.web-link', ["<a href='#{@laid_thing.try(:workPackagedThingHasWorkPackagedThingWebLink)}'>#{@laid_thing.try(:workPackagedThingHasWorkPackagedThingWebLink)}</a>"])
+        web_link = @laid_thing.try(:workPackagedThingHasWorkPackagedThingWebLink)
+        items << create_description_list_item('laid-thing.web-link', [link_to(web_link, web_link)]) if web_link
+
         items << create_description_list_item('statutory-instruments.show.made-date', [l(@statutory_instrument.made_date)])
         items << create_description_list_item('laid-thing.laid-date', [l(@laid_thing&.laying&.date)])
         items << create_description_list_item('statutory-instruments.show.coming-into-force-date', [l(@statutory_instrument.coming_into_force_date)])
@@ -41,7 +43,7 @@ module PageSerializer
 
     def connected_statutory_instruments
       @preceding_proposed_negative_statutory_instruments.map do |stat_instrument|
-        "<a href='#{proposed_negative_statutory_instrument_path(stat_instrument.graph_id)}'>#{stat_instrument.try(:proposedNegativeStatutoryInstrumentPaperName)}</a>"
+        link_to(stat_instrument.try(:proposedNegativeStatutoryInstrumentPaperName), proposed_negative_statutory_instrument_path(stat_instrument.graph_id))
       end
     end
   end

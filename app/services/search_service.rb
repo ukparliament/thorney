@@ -51,7 +51,7 @@ class SearchService < ApplicationController
 
   def build_request
     headers = {}.tap do |hash|
-      hash['Request-Id']                 = "#{app_insights_request_id}1" if app_insights_request_id
+      hash['Request-Id'] = "#{app_insights_request_id}1" if app_insights_request_id
     end
 
     Parliament::Request::OpenSearchRequest.new(headers: headers,

@@ -2,10 +2,10 @@ require_relative '../../rails_helper'
 
 RSpec.describe ComponentSerializer::ListDescriptionComponentSerializer do
   context '#to_h' do
-    context 'returns a hash containing the name and data' do
-      it 'when items is specified' do
+    context 'with items provided' do
+      it 'returns a hash containing the name and data' do
         serializer = described_class.new(
-          "items":
+          items:
             [{
                "term":
                    {
@@ -47,7 +47,17 @@ RSpec.describe ComponentSerializer::ListDescriptionComponentSerializer do
              }
             ])
 
-        expected   = get_fixture('description')
+        expected = get_fixture('description')
+
+        expect(serializer.to_yaml).to eq expected
+      end
+    end
+
+    context 'with meta set to true' do
+      it 'returns a hash containing name and data as expected' do
+        serializer = described_class.new(meta: true)
+
+        expected = get_fixture('meta')
 
         expect(serializer.to_yaml).to eq expected
       end

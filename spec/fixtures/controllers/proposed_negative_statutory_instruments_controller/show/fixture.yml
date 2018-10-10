@@ -99,18 +99,19 @@ main-components:
           content: proposedNegativeStatutoryInstrumentPaperName - 1
     - name: list__description
       data:
+        meta: true
         items:
         - term:
             content: laid-thing.web-link
           description:
-          - content: "<a href='https://www.gov.uk/eu-withdrawal-act-2018-statutory-instruments/the-airport-charges-amendment-eu-exit-regulations-2018'>https://www.gov.uk/eu-withdrawal-act-2018-statutory-instruments/the-airport-charges-amendment-eu-exit-regulations-2018</a>"
+          - content: <a href="https://www.gov.uk/eu-withdrawal-act-2018-statutory-instruments/the-airport-charges-amendment-eu-exit-regulations-2018">https://www.gov.uk/eu-withdrawal-act-2018-statutory-instruments/the-airport-charges-amendment-eu-exit-regulations-2018</a>
         - term:
             content: proposed-negative-statutory-instruments.show.preceding-title
           description:
-          - content: "<a href='/statutory-instruments/C1234567'>statutoryInstrumentPaperName
-              - 1</a>"
-          - content: "<a href='/statutory-instruments/D1234567'>statutoryInstrumentPaperName
-              - 2</a>"
+          - content: <a href="/statutory-instruments/C1234567">statutoryInstrumentPaperName
+              - 1</a>
+          - content: <a href="/statutory-instruments/D1234567">statutoryInstrumentPaperName
+              - 2</a>
 - name: section__section
   data:
     components:
@@ -125,17 +126,20 @@ main-components:
         components:
         - name: card__generic
           data:
+            small:
+              name: partials__small
+              data:
+                content: laid-thing.work-package
             heading:
               name: heading
               data:
-                content: laid-thing.work-package
+                content: <a href="/work-packages/7xwjxL0R">proposedNegativeStatutoryInstrumentPaperName
+                  - 1</a>
                 size: 2
-                link: "/work-packages/7xwjxL0R"
             paragraph:
               name: paragraph
               data:
-              - content: 'Procedure: <a href=''/procedures/iCdMN1MW''>procedureName
-                  - 1</a>'
+              - content: 'Procedure: procedureName - 1'
 footer-components:
 - name: footer
   data:

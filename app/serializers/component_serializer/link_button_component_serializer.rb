@@ -1,6 +1,6 @@
 module ComponentSerializer
   class LinkButtonComponentSerializer < BaseComponentSerializer
-    # Initialise a count partial.
+    # Initialise a link button partial.
     #
     # @param [String] link URL or other link.
     # @param [String] text a string or translation key for the text on the button.

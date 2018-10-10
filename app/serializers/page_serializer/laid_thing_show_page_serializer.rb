@@ -7,12 +7,16 @@ module PageSerializer
     # @param [Array<Hash>] data_alternates array containing the href and type of the alternative data urls.
     def initialize(request: nil, laid_thing:, data_alternates: nil)
       @laid_thing    = laid_thing
-      @work_package  = @laid_thing.work_package
-      @laying_body   = @laid_thing&.laying&.body
-      @laying_person = @laid_thing&.laying&.person
-      @procedure     = @work_package&.procedure
+      @work_package  = @laid_thing.try(:work_package)
+      @laying_body   = @laid_thing.try(:laying).try(:body)
+      @laying_person = @laid_thing.try(:laying).try(:person)
+      @procedure     = @work_package.try(:procedure)
 
       super(request: request, data_alternates: data_alternates)
+    end
+
+    def title
+      raise StandardError, 'You must implement #title'
     end
 
     private
@@ -27,24 +31,35 @@ module PageSerializer
     def section_primary_components
       [].tap do |components|
         components << heading1_component
-        components << ComponentSerializer::ListDescriptionComponentSerializer.new(items: meta_info).to_h
+        components << ComponentSerializer::ListDescriptionComponentSerializer.new(items: meta_info, meta: true).to_h unless meta_info.empty?
       end
     end
 
     def work_package_section
       [].tap do |components|
-        components << ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: work_package_list_components).to_h
+        components << ComponentSerializer::ListComponentSerializer.new(
+          display:      'generic',
+          display_data: [display_data(component: 'list', variant: 'block')],
+          components:   work_package_list_components
+        ).to_h
       end
     end
 
     def work_package_list_components
       [].tap do |components|
-        components << ComponentSerializer::CardComponentSerializer.new(name: 'card__generic', data: { heading: work_package_card_heading, paragraph: work_package_paragraphs }).to_h
+        components << ComponentSerializer::CardComponentSerializer.new(
+          name: 'card__generic',
+          data: {
+            small:     ComponentSerializer::SmallComponentSerializer.new({ content: 'laid-thing.work-package' }).to_h,
+            heading:   work_package_card_heading,
+            paragraph: work_package_paragraphs
+          }
+        ).to_h
       end
     end
 
     def work_package_card_heading
-      ComponentSerializer::HeadingComponentSerializer.new(content: 'laid-thing.work-package', link: work_package_path(@work_package&.graph_id), size: 2).to_h
+      ComponentSerializer::HeadingComponentSerializer.new(content: link_to(title, work_package_path(@work_package.try(:graph_id))), size: 2).to_h
     end
 
     def work_package_paragraphs
