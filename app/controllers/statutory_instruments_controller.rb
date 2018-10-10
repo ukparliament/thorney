@@ -17,7 +17,7 @@ class StatutoryInstrumentsController < ApplicationController
       ).build_card
     end
 
-    serializer = PageSerializer::ListPageSerializer.new(request: request, page_title: 'statutory-instruments.index.title', list_components: list_components, data_alternates: @alternates)
+    serializer = PageSerializer::ListPageSerializer.new(request: request, page_title: I18n.t('statutory_instruments.index.title'), list_components: list_components, data_alternates: @alternates)
 
     render_page(serializer)
   end

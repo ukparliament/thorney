@@ -3,7 +3,7 @@ module PageSerializer
     private
 
     def meta
-      super(title: 'beta.parliament.uk')
+      super(title: 'Homepage')
     end
 
     def content

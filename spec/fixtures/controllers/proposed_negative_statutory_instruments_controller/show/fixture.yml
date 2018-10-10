@@ -2,7 +2,7 @@
 layout:
   template: layout
 meta:
-  title: proposedNegativeStatutoryInstrumentPaperName - 1
+  title: proposedNegativeStatutoryInstrumentPaperName - 1 - UK Parliament
   request-id: 123456
   data-alternates:
   - type: application/n-triples
@@ -20,7 +20,7 @@ meta:
   - type: application/rdf+xml
     href: http://localhost:3030/proposed_negative_statutory_instrument_by_id.xml?proposed_negative_statutory_instrument_id=12345678
   open-graph:
-    title: proposedNegativeStatutoryInstrumentPaperName - 1
+    title: proposedNegativeStatutoryInstrumentPaperName - 1 - UK Parliament
     original-url: https://www.example.com/proposed-negative-statutory-instruments/12345678
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'

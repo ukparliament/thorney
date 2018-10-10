@@ -2,7 +2,7 @@
 layout:
   template: layout
 meta:
-  title: groupName - 1
+  title: groupName - 1 - UK Parliament
   request-id: 123456
   data-alternates:
   - type: application/n-triples
@@ -20,7 +20,7 @@ meta:
   - type: application/rdf+xml
     href: http://localhost:3030/group_by_id.xml?group_id=0RNgrC4q
   open-graph:
-    title: groupName - 1
+    title: groupName - 1 - UK Parliament
     original-url: https://www.example.com/groups/0RNgrC4q
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'

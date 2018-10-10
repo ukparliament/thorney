@@ -2,7 +2,7 @@
 layout:
   template: layout
 meta:
-  title: statutory-instruments.index.title
+  title: Statutory Instruments - UK Parliament
   request-id: 123456
   data-alternates:
   - type: application/n-triples
@@ -20,7 +20,7 @@ meta:
   - type: application/rdf+xml
     href: http://localhost:3030/statutory_instrument_index.xml
   open-graph:
-    title: statutory-instruments.index.title
+    title: Statutory Instruments - UK Parliament
     original-url: https://www.example.com/statutory-instruments
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -94,7 +94,7 @@ main-components:
     - name: heading1
       data:
         heading:
-          content: statutory-instruments.index.title
+          content: Statutory Instruments
 - name: section__section
   data:
     components:
