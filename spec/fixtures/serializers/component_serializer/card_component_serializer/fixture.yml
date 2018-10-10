@@ -1,3 +1,11 @@
 ---
 name: some_card
-data: some_data
+data:
+  card-type: pugin_card_type
+  heading: card_heading
+  paragraph: card_paragraph
+  list-description: card_list_description
+  list-generic: card_list_generic
+  figure: card_figure
+  link-button: card_link_button
+  count: card_count
