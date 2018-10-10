@@ -87,11 +87,8 @@ main-components:
             - 1/538
     - name: list__description
       data:
+        meta: true
         items:
-        - term:
-            content: laid-thing.web-link
-          description:
-          - content: "<a href=''></a>"
         - term:
             content: statutory-instruments.show.made-date
           description:

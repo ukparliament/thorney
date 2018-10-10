@@ -87,11 +87,12 @@ main-components:
             - 1/538
     - name: list__description
       data:
+        meta: true
         items:
         - term:
             content: laid-thing.web-link
           description:
-          - content: "<a href='http://www.legislation.gov.uk/uksi/2018/538/made'>http://www.legislation.gov.uk/uksi/2018/538/made</a>"
+          - content: <a href="http://www.legislation.gov.uk/uksi/2018/538/made">http://www.legislation.gov.uk/uksi/2018/538/made</a>
         - term:
             content: statutory-instruments.show.made-date
           description:
@@ -111,10 +112,10 @@ main-components:
         - term:
             content: statutory-instruments.show.following-title
           description:
-          - content: "<a href='/proposed-negative-statutory-instruments/C1234567'>proposedNegativeStatutoryInstrumentPaperName
-              - 1</a>"
-          - content: "<a href='/proposed-negative-statutory-instruments/D1234567'>proposedNegativeStatutoryInstrumentPaperName
-              - 2</a>"
+          - content: <a href="/proposed-negative-statutory-instruments/C1234567">proposedNegativeStatutoryInstrumentPaperName
+              - 1</a>
+          - content: <a href="/proposed-negative-statutory-instruments/D1234567">proposedNegativeStatutoryInstrumentPaperName
+              - 2</a>
         - term:
             content: laid-thing.laying-body
           description:
@@ -133,17 +134,20 @@ main-components:
         components:
         - name: card__generic
           data:
+            small:
+              name: partials__small
+              data:
+                content: laid-thing.work-package
             heading:
               name: heading
               data:
-                content: laid-thing.work-package
+                content: <a href="/work-packages/zhi6ZHnQ">statutoryInstrumentPaperName
+                  - 1</a>
                 size: 2
-                link: "/work-packages/zhi6ZHnQ"
             paragraph:
               name: paragraph
               data:
-              - content: 'Procedure: <a href=''/procedures/5S6p4YsP''>procedureName
-                  - 1</a>'
+              - content: 'Procedure: procedureName - 1'
 footer-components:
 - name: footer
   data:

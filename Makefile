@@ -117,3 +117,6 @@ deploy-ecs: # Deploy our new Docker image onto an AWS cluster (Run in GoCD to de
 
 airbrake: # Notify Airbrake that we have made a new deployment
 	curl -X POST -H "Content-Type: application/json" -d "{ \"environment\":\"${AIRBRAKE_ENVIRONMENT}\", \"username\":\"${AWS_ACCOUNT}\", \"repository\":\"${AIRBRAKE_REPOSITORY}\", \"revision\":\"${GIT_SHA}\", \"version\": \"${GIT_TAG}\" }" "https://airbrake.io/api/v4/projects/${AIRBRAKE_PROJECT_ID}/deploys?key=${AIRBRAKE_PROJECT_KEY}"
+
+run-dev:
+	DISABLE_TIMEOUT=true bundle exec rails s -p 5401

@@ -82,13 +82,6 @@ main-components:
           content: proposed-negative-statutory-instruments.show.subheading
         heading:
           content: proposedNegativeStatutoryInstrumentPaperName - 1
-    - name: list__description
-      data:
-        items:
-        - term:
-            content: laid-thing.web-link
-          description:
-          - content: "<a href=''></a>"
 footer-components:
 - name: footer
   data:
