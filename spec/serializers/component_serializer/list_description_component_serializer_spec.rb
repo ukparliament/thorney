@@ -51,6 +51,57 @@ RSpec.describe ComponentSerializer::ListDescriptionComponentSerializer do
 
         expect(serializer.to_yaml).to eq expected
       end
+
+      it 'when items meta specified' do
+        serializer = described_class.new(
+          "meta": true,
+          "items":
+            [{
+               "term":
+                   {
+                     "content": "telephone"
+                   },
+               "description":
+                 [
+                   {
+                     "content": "012349586"
+                   }
+                 ]
+             },
+             {
+               "term":
+                   {
+                     "content": "website"
+                   },
+               "description":
+                 [
+                   {
+                     "content": "<a href='www.example.com'>My home page</a>"
+                   }
+                 ]
+             },
+             {
+               "term":
+                   {
+                     "content": "email"
+                   },
+               "description":
+                 [
+                   {
+                     "content": "hello@example.com"
+                   },
+                   {
+                     "content": "hello@gmail.com"
+                   }
+                 ]
+             }
+            ])
+
+        expected   = get_fixture('description_meta')
+
+        expect(serializer.to_yaml).to eq expected
+      end
+
     end
   end
 end
