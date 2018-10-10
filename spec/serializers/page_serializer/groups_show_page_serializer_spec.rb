@@ -4,7 +4,7 @@ RSpec.describe PageSerializer::GroupsShowPageSerializer, vcr: true do
   include_context "sample request", include_shared: true
 
   let(:response) { Parliament::Request::UrlRequest.new(
-      base_url: 'http://localhost:3030/api/v1',
+      base_url: 'http://localhost:3030',
       builder: Parliament::Builder::NTripleResponseBuilder,
       decorators: Parliament::Grom::Decorator).group_by_id.get }
   let(:group) { response.filter('https://id.parliament.uk/schema/Group').first }
