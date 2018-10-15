@@ -8,6 +8,20 @@ RSpec.describe SortHelper, type: :helper do
   let(:object_one) {double('1', date: DateTime.parse('03/01/2018'))}
   let(:objects) { [object_one, object_two, object_three, object_four] }
 
+  describe '#sort_by' do
+    it 'sorts an array by a given attribute' do
+      sort_by_example = SortHelper.sort_by(collection: objects, attributes: [:date])
+
+      expect(sort_by_example).to eq([object_two, object_three, object_one, object_four])
+    end
+
+    it 'sorts an array by a given attribute and removes entries with out that attribute' do
+      sort_by_example = SortHelper.sort_by(collection: objects, attributes: [:date], prepend_rejected: true)
+
+      expect(sort_by_example).to eq([object_four, object_two, object_three, object_one])
+    end
+  end
+
   describe '#sort_by_reverse' do
     it 'sorts an array by a given attribute' do
       sort_by_example = SortHelper.sort_by_reverse(collection: objects, attributes: [:date])

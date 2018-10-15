@@ -8,7 +8,7 @@ module PageSerializer
     def initialize(request: nil, group: nil, data_alternates: nil)
       @group = group
       @layings = @group.try(:layingBodyHasLaying)
-      @layings = SortHelper.sort_by_reverse(collection: @layings, attributes: [:date, :graph_id]) if @layings
+      @layings = SortHelper.sort_by_reverse(collection: @layings, attributes: %i[date graph_id]) if @layings
       super(request: request, data_alternates: data_alternates)
     end
 
@@ -19,7 +19,7 @@ module PageSerializer
     end
 
     def title
-      @group.try(:groupName) ? @group.try(:groupName) : t('no_name')
+      @group.try(:groupName) || t('no_name')
     end
 
     def content
@@ -44,11 +44,15 @@ module PageSerializer
 
     def section_literals
       [].tap do |components|
-        components << ComponentSerializer::HeadingComponentSerializer.new(translation_key: 'groups.current.objects', size: 2).to_h unless literals.empty?
+        components << ComponentSerializer::HeadingComponentSerializer.new(translation_key: 'groups.current.literals', size: 2).to_h unless literals.empty?
         components << ComponentSerializer::ListDescriptionComponentSerializer.new(items: literals).to_h unless literals.empty?
-        components << ComponentSerializer::HeadingComponentSerializer.new(translation_key: 'groups.current.literals', size: 2).to_h if @layings
+        components << ComponentSerializer::HeadingComponentSerializer.new(translation_key: 'groups.current.objects', size: 2).to_h if @layings
         components << if @group.is_a?(Parliament::Grom::Decorator::LayingBody) && @layings
-                        ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: objects).to_h
+                        ComponentSerializer::ListComponentSerializer.new(
+                          display:      'generic',
+                          display_data: [display_data(component: 'list', variant: 'block')],
+                          components:   objects
+                        ).to_h
                       end
       end
     end
@@ -63,16 +67,24 @@ module PageSerializer
 
     def objects
       @layings.map do |laying|
-        ComponentSerializer::CardComponentSerializer.new(name: 'card__generic', data: { card_type: 'small', heading: card_heading(laying), list_description: card_list(laying) }).to_h
+        ComponentSerializer::CardComponentSerializer.new(
+          name: 'card__generic',
+          data: { card_type: 'small', heading: card_heading(laying), list_description: card_list(laying) }
+        ).to_h
       end
     end
 
     def card_heading(laying)
-      ComponentSerializer::HeadingComponentSerializer.new(content: laying.laid_thing.try(:laidThingName), size: 2, link: statutory_instrument_path(laying.laid_thing.graph_id)).to_h
+      ComponentSerializer::HeadingComponentSerializer.new(
+        content: laying.laid_thing.try(:laidThingName),
+        size: 2, link: statutory_instrument_path(laying.laid_thing.graph_id)
+      ).to_h
     end
 
     def card_list(laying)
-      ComponentSerializer::ListDescriptionComponentSerializer.new(items: [{ 'term': { 'content': 'laid-thing.laid-date' }, 'description': [{ 'content': l(laying.date) }] }]).to_h
+      ComponentSerializer::ListDescriptionComponentSerializer.new(
+        items: [{ 'term': { 'content': 'laid-thing.laid-date' }, 'description': [{ 'content': l(laying.date) }] }]
+      ).to_h
     end
   end
 end

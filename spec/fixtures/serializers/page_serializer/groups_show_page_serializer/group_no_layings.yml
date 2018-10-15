@@ -92,7 +92,7 @@ main-components:
     - name: heading
       data:
         translation:
-          key: groups.current.objects
+          key: groups.current.literals
         size: 2
     - name: list__description
       data:
