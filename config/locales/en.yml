@@ -47,6 +47,7 @@ en:
       flash: "Please enter a search term."
     opensearch:
       short_name: "UK Parliament"
+
   layings: Layings
   groups:
     index:
@@ -57,3 +58,4 @@ en:
   proposed_negative_statutory_instruments:
     index:
       title: "Proposed Negative Statutory Instruments"
+  no_name: "[Name unavailable]"
