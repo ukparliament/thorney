@@ -2,10 +2,10 @@
 layout:
   template: layout
 meta:
-  title: groupName - 1 - UK Parliament
+  title: "[Name unavailable] - UK Parliament"
   request-id: 123456
   open-graph:
-    title: groupName - 1 - UK Parliament
+    title: "[Name unavailable] - UK Parliament"
     original-url: https://example.com/
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -83,9 +83,9 @@ main-components:
           data:
             link: "/groups"
         heading:
-          content: groupName - 1
+          content: "[Name unavailable]"
         context:
-          content: 12 May 2010 to 12 July 2010
+          content: 12 May 2010 to present
 - name: section__section
   data:
     components:
@@ -98,17 +98,9 @@ main-components:
       data:
         items:
         - term:
-            content: Name
-          description:
-          - content: groupName - 1
-        - term:
             content: Start Date
           description:
           - content: 12 May 2010
-        - term:
-            content: End Date
-          description:
-          - content: 12 July 2010
     - name: heading
       data:
         translation:
