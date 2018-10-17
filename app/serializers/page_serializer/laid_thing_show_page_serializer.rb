@@ -11,6 +11,8 @@ module PageSerializer
       @laying_body   = @laid_thing.try(:laying).try(:body)
       @laying_person = @laid_thing.try(:laying).try(:person)
       @procedure     = @work_package.try(:procedure)
+      @business_item = @work_package.try(:business_item)
+      @procedure_step = @business_item.try(:procedure_step) if @business_item
 
       super(request: request, data_alternates: data_alternates)
     end
@@ -50,9 +52,9 @@ module PageSerializer
         components << ComponentSerializer::CardComponentSerializer.new(
           name: 'card__generic',
           data: {
-            small:     ComponentSerializer::SmallComponentSerializer.new({ content: 'laid-thing.work-package' }).to_h,
-            heading:   work_package_card_heading,
-            paragraph: work_package_paragraphs
+            small:            ComponentSerializer::SmallComponentSerializer.new({ content: 'laid-thing.work-package' }).to_h,
+            heading:          work_package_card_heading,
+            list_description: work_package_list_description
           }
         ).to_h
       end
@@ -62,8 +64,20 @@ module PageSerializer
       ComponentSerializer::HeadingComponentSerializer.new(content: link_to(title, work_package_path(@work_package.try(:graph_id))), size: 2).to_h
     end
 
-    def work_package_paragraphs
-      ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: "Procedure: #{@procedure.try(:procedureName)}" }]).to_h
+    def work_package_list_description
+      ComponentSerializer::ListDescriptionComponentSerializer.new(items: list_description_items).to_h
+    end
+
+    def list_description_items
+      [].tap do |items|
+        items << { 'term': { 'content': 'Procedure' }, 'description': [{ 'content': @procedure.try(:procedureName) }] }
+        items << if @business_item && @business_item.try(:date)
+                   {
+                     'term':        { 'content': @procedure_step.try(:procedureStepName) },
+                     'description': [{ 'content': l(@business_item.try(:date)) }]
+                   }
+                 end
+      end
     end
 
     def heading1_component

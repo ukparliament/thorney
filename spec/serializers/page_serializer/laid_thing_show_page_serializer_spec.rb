@@ -51,7 +51,7 @@ RSpec.describe PageSerializer::LaidThingShowPageSerializer, vcr: true do
 
       allow(ComponentSerializer::ListDescriptionComponentSerializer).to receive(:new)
 
-      subject.send(:content)
+      subject.send(:section_primary_components)
 
       expect(ComponentSerializer::ListDescriptionComponentSerializer).to have_received(:new)
     end
@@ -64,7 +64,7 @@ RSpec.describe PageSerializer::LaidThingShowPageSerializer, vcr: true do
 
         allow(ComponentSerializer::ListDescriptionComponentSerializer).to receive(:new)
 
-        subject.send(:content)
+        subject.send(:section_primary_components)
 
         expect(ComponentSerializer::ListDescriptionComponentSerializer).not_to have_received(:new)
       end
@@ -80,15 +80,14 @@ RSpec.describe PageSerializer::LaidThingShowPageSerializer, vcr: true do
       allow(ComponentSerializer::ListComponentSerializer).to receive(:new)
       allow(ComponentSerializer::CardComponentSerializer).to receive(:new)
       allow(ComponentSerializer::HeadingComponentSerializer).to receive(:new)
-      allow(ComponentSerializer::ParagraphComponentSerializer).to receive(:new)
+      allow(ComponentSerializer::ListDescriptionComponentSerializer).to receive(:new)
 
-      subject.send(:content)
+      subject.send(:work_package_section)
 
       expect(ComponentSerializer::ListComponentSerializer).to have_received(:new)
       expect(ComponentSerializer::CardComponentSerializer).to have_received(:new)
       expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new)
-      expect(ComponentSerializer::ParagraphComponentSerializer).to have_received(:new)
+      expect(ComponentSerializer::ListDescriptionComponentSerializer).to have_received(:new)
     end
   end
 end
-

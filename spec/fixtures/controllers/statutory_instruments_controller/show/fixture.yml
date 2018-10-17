@@ -99,7 +99,7 @@ main-components:
           content: statutoryInstrumentPaperName - 1
         context:
           content: statutoryInstrumentPaperPrefix - 1 statutoryInstrumentPaperYear
-            - 1/538
+            - 1/488
     - name: list__description
       data:
         meta: true
@@ -107,26 +107,15 @@ main-components:
         - term:
             content: laid-thing.web-link
           description:
-          - content: <a href="http://www.legislation.gov.uk/uksi/2018/538/made">http://www.legislation.gov.uk/uksi/2018/538/made</a>
+          - content: <a href="http://www.legislation.gov.uk/uksi/2018/488/made">http://www.legislation.gov.uk/uksi/2018/488/made</a>
         - term:
             content: laid-thing.laid-date
           description:
-          - content: 1 May 2018
+          - content: 20 April 2018
         - term:
             content: statutory-instruments.show.coming-into-force-date
           description:
-          - content: 1 June 2018
-        - term:
-            content: statutory-instruments.show.following-title
-          description:
-          - content: <a href="/proposed-negative-statutory-instruments/C1234567">proposedNegativeStatutoryInstrumentPaperName
-              - 1</a>
-          - content: <a href="/proposed-negative-statutory-instruments/D1234567">proposedNegativeStatutoryInstrumentPaperName
-              - 2</a>
-        - term:
-            content: laid-thing.laying-person
-          description:
-          - content: F31CBD81AD8343898B49DC65743F0BDF - 1
+          - content: 18 May 2018
         - term:
             content: laid-thing.laying-body
           description:
@@ -152,13 +141,21 @@ main-components:
             heading:
               name: heading
               data:
-                content: <a href="/work-packages/zhi6ZHnQ">statutoryInstrumentPaperName
+                content: <a href="/work-packages/EgDK23iB">statutoryInstrumentPaperName
                   - 1</a>
                 size: 2
-            paragraph:
-              name: paragraph
+            list-description:
+              name: list__description
               data:
-              - content: 'Procedure: procedureName - 1'
+                items:
+                - term:
+                    content: Procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedureStepName - 1
+                  description:
+                  - content: 8 June 2018
 footer-components:
 - name: footer
   data:
