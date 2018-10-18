@@ -116,10 +116,6 @@ RSpec.describe SearchController, vcr: true do
         it 'should prevent xss on search' do
           expect(response.body).not_to include('<script>alert(document.cookie)</script>')
         end
-
-        it 'should sanitize the search term' do
-          expect(response.body).to include('alert(document.cookie)')
-        end
       end
 
       context 'with no count or start_index value' do

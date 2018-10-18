@@ -43,7 +43,15 @@ RSpec.describe StatutoryInstrumentsController, vcr: true do
     end
 
     it 'calls the serializer correctly' do
-      list_components = [{"data"=> {"heading"=> {"data"=> {"content"=>"statutoryInstrumentPaperName - 1", "link"=>"/statutory-instruments/5trFJNih", "size"=>2}, "name"=>"heading"}}, "name"=>"card__generic"}]
+      list_components = [{"data"=>
+                            {"heading"=>
+                               {"data"=>
+                                  {"content"=>"statutoryInstrumentPaperName - 1",
+                                   "link"=>"/statutory-instruments/5trFJNih",
+                                   "size"=>2},
+                                "name"=>"heading"},
+                             "list-description"=>
+                               {"data"=>{"items"=>[{"description"=>[{"content"=>"shared.time-html", "data"=>{"date"=>"23 April 2018", "datetime-value"=>"2018-04-23"}}], "term"=>{"content"=>"laid-thing.laid-date"}}, {"description"=>[{"content"=>"groupName - 1"}],"term"=>{"content"=>"laid-thing.laying-body"}}, {"description"=>[{"content"=>"procedureName - 1"}], "term"=>{"content"=>"laid-thing.procedure"}}]}, "name"=>"list__description"}}, "name"=>"card__generic"}]
 
       expect(PageSerializer::ListPageSerializer).to have_received(:new).with(request: request, page_title: 'Statutory Instruments', list_components: list_components, data_alternates: data_alternates)
     end

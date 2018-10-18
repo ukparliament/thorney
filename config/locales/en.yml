@@ -37,6 +37,8 @@ en:
   time:
     formats:
       default: '%-d %B %Y'
+      datetime_format: '%Y-%m-%d'
+
   search:
     title:
       without_query: "Search"
