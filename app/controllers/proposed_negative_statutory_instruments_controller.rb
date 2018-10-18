@@ -10,7 +10,7 @@ class ProposedNegativeStatutoryInstrumentsController < ApplicationController
   def index
     @proposed_negative_statutory_instruments = FilterHelper.filter(@api_request, 'ProposedNegativeStatutoryInstrumentPaper')
 
-    list_components = LaidThingListComponentsFactory.new(statutory_instruments: @proposed_negative_statutory_instruments, type: :proposed_negative_statutory_instrument).build_components
+    list_components = LaidThingListComponentsFactory.build_components(statutory_instruments: @proposed_negative_statutory_instruments, type: :proposed_negative_statutory_instrument)
 
     heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('proposed_negative_statutory_instruments.index.title'))
 

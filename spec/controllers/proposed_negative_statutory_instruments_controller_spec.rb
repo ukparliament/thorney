@@ -44,14 +44,8 @@ RSpec.describe ProposedNegativeStatutoryInstrumentsController, vcr: true do
     end
 
     it 'calls the serializer correctly' do
-<<<<<<< d4f5255772243016a9d9808aecd9a0fffdf1e508
-      list_components = [{"data"=> {"heading"=> {"data"=> {"content"=>"proposedNegativeStatutoryInstrumentPaperName - 1", "link"=>"/proposed-negative-statutory-instruments/Tn1xqHc0", "size"=>2}, "name"=>"heading"}}, "name"=>"card__generic"}]
-
-      expect(PageSerializer::ListPageSerializer).to have_received(:new).with(request: request, heading_component: heading, list_components: list_components, data_alternates: data_alternates)
-=======
       list_components = [{"data"=> {"heading"=> {"data"=> {"content"=>"proposedNegativeStatutoryInstrumentPaperName - 1", "link"=>"/proposed-negative-statutory-instruments/Tn1xqHc0", "size"=>2}, "name"=>"heading"}, "list-description"=> {"data"=> {"items"=> [{"description"=> [{"content"=>"shared.time-html", "data"=> {"date"=>"19 July 2018", "datetime-value"=>"2018-07-19"}}], "term"=>{"content"=>"laid-thing.laid-date"}}, {"description"=>[{"content"=>"groupName - 1"}], "term"=>{"content"=>"laid-thing.laying-body"}}, {"description"=>[{"content"=>"procedureName - 1"}],  "term"=>{"content"=>"laid-thing.procedure"}}]}, "name"=>"list__description"}}, "name"=>"card__generic"}]
-      expect(PageSerializer::ListPageSerializer).to have_received(:new).with(request: request, page_title: 'Proposed Negative Statutory Instruments', list_components: list_components, data_alternates: data_alternates)
->>>>>>> [WEBDEV-822] Refactor SI and PNSI index pages
+      expect(PageSerializer::ListPageSerializer).to have_received(:new).with(request: request, heading_component: heading, list_components: list_components, data_alternates: data_alternates)
     end
   end
 

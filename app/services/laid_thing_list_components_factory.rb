@@ -1,55 +1,67 @@
 class LaidThingListComponentsFactory
-  include ListDescriptionHelper
-  include Rails.application.routes.url_helpers
-
-  def initialize(statutory_instruments: nil, type: nil)
-    @statutory_instruments = statutory_instruments
-    @type                  = type
+  class << self
+    include Rails.application.routes.url_helpers
+    include ListDescriptionHelper
   end
 
-  def heading_text(statutory_instrument)
-    if @type == :statutory_instrument
-      statutory_instrument.try(:statutoryInstrumentPaperName)
-    elsif @type == :proposed_negative_statutory_instrument
-      statutory_instrument.try(:proposedNegativeStatutoryInstrumentPaperName)
+  def self.build_components(statutory_instruments: nil, type: nil)
+    statutory_instruments.map do |statutory_instrument|
+      CardFactory.new(
+        heading_text:             heading_text(statutory_instrument, type),
+        heading_url:              heading_url(statutory_instrument, type),
+        description_list_content: description_list_content(statutory_instrument)
+      ).build_card
     end
   end
 
-  def heading_url(statutory_instrument)
-    if @type == :statutory_instrument
-      statutory_instrument_path(statutory_instrument.graph_id)
-    elsif @type == :proposed_negative_statutory_instrument
-      proposed_negative_statutory_instrument_path(statutory_instrument.graph_id)
+  class << self
+    def heading_text(statutory_instrument, type)
+      if type == :statutory_instrument
+        statutory_instrument.try(:statutoryInstrumentPaperName)
+      elsif type == :proposed_negative_statutory_instrument
+        statutory_instrument.try(:proposedNegativeStatutoryInstrumentPaperName)
+      end
     end
-  end
 
-  def date_description_item(statutory_instrument)
-    { term:        {
-      content: 'laid-thing.laid-date'
-    },
-      description: [{
-                      content: 'shared.time-html',
-                      data:    {
-                        datetime_value: I18n.l(statutory_instrument&.laying&.date, format: :datetime_format),
-                        date:           I18n.l(statutory_instrument&.laying&.date)
-                      }
-                    }]
-    }
-  end
+    def heading_url(statutory_instrument, type)
+      if type == :statutory_instrument
+        statutory_instrument_path(statutory_instrument.graph_id)
+      elsif type == :proposed_negative_statutory_instrument
+        proposed_negative_statutory_instrument_path(statutory_instrument.graph_id)
+      end
+    end
 
-  def build_components
-    @statutory_instruments.map do |statutory_instrument|
-      description_list_content = [].tap do |items|
+    def date_description_item(statutory_instrument)
+      {}.tap do |item|
+        term_hash(item)
+        description_hash(item, statutory_instrument)
+      end
+    end
+
+    def term_hash(item)
+      item.tap do |hash|
+        hash[:term] = { content: 'laid-thing.laid-date' }
+      end
+    end
+
+    def description_hash(item, statutory_instrument)
+      item.tap do |hash|
+        hash[:description] = [{
+          content: 'shared.time-html',
+          data:    {
+            datetime_value: I18n.l(statutory_instrument&.laying&.date, format: :datetime_format),
+            date:           I18n.l(statutory_instrument&.laying&.date)
+          }
+        }]
+      end
+    end
+
+    def description_list_content(statutory_instrument)
+      [].tap do |items|
         items << date_description_item(statutory_instrument) if statutory_instrument&.laying&.date
         items << create_description_list_item('laid-thing.laying-body', [statutory_instrument&.laying&.body.try(:groupName)]) if statutory_instrument&.laying&.body
         items << create_description_list_item('laid-thing.procedure', [statutory_instrument&.work_package&.procedure.try(:procedureName)]) if statutory_instrument&.work_package&.procedure
       end
-
-      CardFactory.new(
-        heading_text:             heading_text(statutory_instrument),
-        heading_url:              heading_url(statutory_instrument),
-        description_list_content: description_list_content
-      ).build_card
     end
   end
 end

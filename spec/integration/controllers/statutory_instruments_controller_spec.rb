@@ -10,7 +10,7 @@ RSpec.describe StatutoryInstrumentsController, vcr: true do
       it 'renders expected JSON output' do
         get '/statutory-instruments'
         filtered_response_body = filter_sensitive_data(response.body)
-create_fixture(filtered_response_body, 'index', 'fixture')
+
         expected_json = get_fixture('index', 'fixture')
 
         expect(JSON.parse(filtered_response_body).to_yaml).to eq(expected_json)
