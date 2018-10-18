@@ -10,12 +10,7 @@ class StatutoryInstrumentsController < ApplicationController
   def index
     @statutory_instruments = FilterHelper.filter(@api_request, 'StatutoryInstrumentPaper')
 
-    list_components = @statutory_instruments.map do |statutory_instrument|
-      CardFactory.new(
-        heading_text: statutory_instrument.try(:statutoryInstrumentPaperName),
-        heading_url:  statutory_instrument_path(statutory_instrument.graph_id)
-      ).build_card
-    end
+    list_components = LaidThingListComponentsFactory.build_components(statutory_instruments: @statutory_instruments, type: :statutory_instrument)
 
     heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('statutory_instruments.index.title'))
 

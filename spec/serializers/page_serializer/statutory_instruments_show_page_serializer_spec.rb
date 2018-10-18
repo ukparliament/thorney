@@ -7,7 +7,7 @@ RSpec.describe PageSerializer::StatutoryInstrumentsShowPageSerializer, vcr: true
                                                       builder:    Parliament::Builder::NTripleResponseBuilder,
                                                       decorators: Parliament::Grom::Decorator).statutory_instrument_by_id.get}
 
-  let(:statutory_instrument) {response.filter('https://id.parliament.uk/schema/StatutoryInstrumentPaper').first}
+  let(:statutory_instrument) { response.filter('https://id.parliament.uk/schema/StatutoryInstrumentPaper').first }
 
   subject { described_class.new(request: request, statutory_instrument: statutory_instrument) }
 

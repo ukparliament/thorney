@@ -115,6 +115,25 @@ main-components:
                 content: proposedNegativeStatutoryInstrumentPaperName - 1
                 size: 2
                 link: "/proposed-negative-statutory-instruments/Tn1xqHc0"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-19'
+                      date: 19 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 1
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -123,6 +142,25 @@ main-components:
                 content: proposedNegativeStatutoryInstrumentPaperName - 2
                 size: 2
                 link: "/proposed-negative-statutory-instruments/wzsrSFQP"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-19'
+                      date: 19 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 1
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -131,6 +169,25 @@ main-components:
                 content: proposedNegativeStatutoryInstrumentPaperName - 3
                 size: 2
                 link: "/proposed-negative-statutory-instruments/H95FzZVv"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-19'
+                      date: 19 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 1
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -139,6 +196,25 @@ main-components:
                 content: proposedNegativeStatutoryInstrumentPaperName - 4
                 size: 2
                 link: "/proposed-negative-statutory-instruments/cL5yuFbG"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-19'
+                      date: 19 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 1
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -147,6 +223,25 @@ main-components:
                 content: proposedNegativeStatutoryInstrumentPaperName - 5
                 size: 2
                 link: "/proposed-negative-statutory-instruments/mssRQnqj"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-19'
+                      date: 19 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 1
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -155,6 +250,25 @@ main-components:
                 content: proposedNegativeStatutoryInstrumentPaperName - 6
                 size: 2
                 link: "/proposed-negative-statutory-instruments/PkQCvHkT"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-20'
+                      date: 20 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 2
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -163,6 +277,25 @@ main-components:
                 content: proposedNegativeStatutoryInstrumentPaperName - 7
                 size: 2
                 link: "/proposed-negative-statutory-instruments/AcoKsOuw"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-20'
+                      date: 20 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 3
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -170,7 +303,26 @@ main-components:
               data:
                 content: proposedNegativeStatutoryInstrumentPaperName - 8
                 size: 2
-                link: "/proposed-negative-statutory-instruments/zPhl1zVB"
+                link: "/proposed-negative-statutory-instruments/YOGGjydt"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-20'
+                      date: 20 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 2
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -179,6 +331,25 @@ main-components:
                 content: proposedNegativeStatutoryInstrumentPaperName - 9
                 size: 2
                 link: "/proposed-negative-statutory-instruments/7KgIpwmP"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-20'
+                      date: 20 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 3
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -186,7 +357,26 @@ main-components:
               data:
                 content: proposedNegativeStatutoryInstrumentPaperName - 10
                 size: 2
-                link: "/proposed-negative-statutory-instruments/YOGGjydt"
+                link: "/proposed-negative-statutory-instruments/a2L0zxbo"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-23'
+                      date: 23 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 4
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -194,7 +384,26 @@ main-components:
               data:
                 content: proposedNegativeStatutoryInstrumentPaperName - 11
                 size: 2
-                link: "/proposed-negative-statutory-instruments/a2L0zxbo"
+                link: "/proposed-negative-statutory-instruments/zPhl1zVB"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-23'
+                      date: 23 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 4
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -202,7 +411,26 @@ main-components:
               data:
                 content: proposedNegativeStatutoryInstrumentPaperName - 12
                 size: 2
-                link: "/proposed-negative-statutory-instruments/3XfjyKc7"
+                link: "/proposed-negative-statutory-instruments/SiA85FTV"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-23'
+                      date: 23 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 3
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -210,7 +438,26 @@ main-components:
               data:
                 content: proposedNegativeStatutoryInstrumentPaperName - 13
                 size: 2
-                link: "/proposed-negative-statutory-instruments/sUpfiOCM"
+                link: "/proposed-negative-statutory-instruments/XCCCh1kE"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-23'
+                      date: 23 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 5
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -218,7 +465,26 @@ main-components:
               data:
                 content: proposedNegativeStatutoryInstrumentPaperName - 14
                 size: 2
-                link: "/proposed-negative-statutory-instruments/szRasC5x"
+                link: "/proposed-negative-statutory-instruments/OtGAt1n4"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-23'
+                      date: 23 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 3
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -226,7 +492,26 @@ main-components:
               data:
                 content: proposedNegativeStatutoryInstrumentPaperName - 15
                 size: 2
-                link: "/proposed-negative-statutory-instruments/OtGAt1n4"
+                link: "/proposed-negative-statutory-instruments/szRasC5x"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-23'
+                      date: 23 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 6
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -234,7 +519,26 @@ main-components:
               data:
                 content: proposedNegativeStatutoryInstrumentPaperName - 16
                 size: 2
-                link: "/proposed-negative-statutory-instruments/SiA85FTV"
+                link: "/proposed-negative-statutory-instruments/3XfjyKc7"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-23'
+                      date: 23 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 5
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -242,7 +546,26 @@ main-components:
               data:
                 content: proposedNegativeStatutoryInstrumentPaperName - 17
                 size: 2
-                link: "/proposed-negative-statutory-instruments/XCCCh1kE"
+                link: "/proposed-negative-statutory-instruments/sUpfiOCM"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-23'
+                      date: 23 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 6
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -251,6 +574,25 @@ main-components:
                 content: proposedNegativeStatutoryInstrumentPaperName - 18
                 size: 2
                 link: "/proposed-negative-statutory-instruments/78cgn2Dx"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-24'
+                      date: 24 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 7
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -259,6 +601,25 @@ main-components:
                 content: proposedNegativeStatutoryInstrumentPaperName - 19
                 size: 2
                 link: "/proposed-negative-statutory-instruments/OuKyf9Ne"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-24'
+                      date: 24 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 7
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -266,7 +627,26 @@ main-components:
               data:
                 content: proposedNegativeStatutoryInstrumentPaperName - 20
                 size: 2
-                link: "/proposed-negative-statutory-instruments/mEznEN3a"
+                link: "/proposed-negative-statutory-instruments/Ykks9FXW"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-24'
+                      date: 24 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 8
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -274,7 +654,26 @@ main-components:
               data:
                 content: proposedNegativeStatutoryInstrumentPaperName - 21
                 size: 2
-                link: "/proposed-negative-statutory-instruments/Ykks9FXW"
+                link: "/proposed-negative-statutory-instruments/mEznEN3a"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-24'
+                      date: 24 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 7
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -283,6 +682,25 @@ main-components:
                 content: proposedNegativeStatutoryInstrumentPaperName - 22
                 size: 2
                 link: "/proposed-negative-statutory-instruments/W3l3iqIJ"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-25'
+                      date: 25 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 9
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -290,7 +708,26 @@ main-components:
               data:
                 content: proposedNegativeStatutoryInstrumentPaperName - 23
                 size: 2
-                link: "/proposed-negative-statutory-instruments/Xpyq1I4Q"
+                link: "/proposed-negative-statutory-instruments/lTbB3os8"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-27'
+                      date: 27 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 10
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
         - name: card__generic
           data:
             heading:
@@ -298,7 +735,593 @@ main-components:
               data:
                 content: proposedNegativeStatutoryInstrumentPaperName - 24
                 size: 2
-                link: "/proposed-negative-statutory-instruments/lTbB3os8"
+                link: "/proposed-negative-statutory-instruments/Xpyq1I4Q"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-25'
+                      date: 25 July 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 4
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 25
+                size: 2
+                link: "/proposed-negative-statutory-instruments/pzau2957"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-08-15'
+                      date: 15 August 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 4
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 26
+                size: 2
+                link: "/proposed-negative-statutory-instruments/CSVKuT3Q"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-08-20'
+                      date: 20 August 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 10
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 27
+                size: 2
+                link: "/proposed-negative-statutory-instruments/mPyCVKAK"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-08-31'
+                      date: 31 August 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 3
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 28
+                size: 2
+                link: "/proposed-negative-statutory-instruments/thnAcmar"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-08-31'
+                      date: 31 August 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 3
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 29
+                size: 2
+                link: "/proposed-negative-statutory-instruments/u2CkM7KS"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-09-13'
+                      date: 13 September 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 11
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 30
+                size: 2
+                link: "/proposed-negative-statutory-instruments/6XjAcXQO"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-09-13'
+                      date: 13 September 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 11
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 31
+                size: 2
+                link: "/proposed-negative-statutory-instruments/eIcl19m5"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-09-18'
+                      date: 18 September 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 1
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 32
+                size: 2
+                link: "/proposed-negative-statutory-instruments/xPakvw9Y"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-09-27'
+                      date: 27 September 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 7
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 33
+                size: 2
+                link: "/proposed-negative-statutory-instruments/AHgBl2vF"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-09-27'
+                      date: 27 September 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 7
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 34
+                size: 2
+                link: "/proposed-negative-statutory-instruments/pCTXaGyQ"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-09-28'
+                      date: 28 September 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 3
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 35
+                size: 2
+                link: "/proposed-negative-statutory-instruments/SXtlN96I"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-10-01'
+                      date: 1 October 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 9
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 36
+                size: 2
+                link: "/proposed-negative-statutory-instruments/XyrWfzSG"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-10-02'
+                      date: 2 October 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 4
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 37
+                size: 2
+                link: "/proposed-negative-statutory-instruments/eS3rrWn2"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-10-03'
+                      date: 3 October 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 7
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 38
+                size: 2
+                link: "/proposed-negative-statutory-instruments/6itOwgLT"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-10-09'
+                      date: 9 October 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 1
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 39
+                size: 2
+                link: "/proposed-negative-statutory-instruments/c9tfxxSG"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-10-09'
+                      date: 9 October 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 1
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 40
+                size: 2
+                link: "/proposed-negative-statutory-instruments/XOLYsYbh"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-10-08'
+                      date: 8 October 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 11
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 41
+                size: 2
+                link: "/proposed-negative-statutory-instruments/EfjqJrpr"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-10-10'
+                      date: 10 October 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 1
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 42
+                size: 2
+                link: "/proposed-negative-statutory-instruments/JZ7gvDu6"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-10-10'
+                      date: 10 October 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 3
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 43
+                size: 2
+                link: "/proposed-negative-statutory-instruments/OqROoJsG"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-10-12'
+                      date: 12 October 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 1
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 44
+                size: 2
+                link: "/proposed-negative-statutory-instruments/e93zn4Ry"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-10-15'
+                      date: 15 October 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 1
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: proposedNegativeStatutoryInstrumentPaperName - 45
+                size: 2
+                link: "/proposed-negative-statutory-instruments/sHOlA3ji"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-10-15'
+                      date: 15 October 2018
+                - term:
+                    content: laid-thing.laying-body
+                  description:
+                  - content: groupName - 7
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
 footer-components:
 - name: footer
   data:

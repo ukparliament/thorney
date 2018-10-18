@@ -69,43 +69,4 @@ RSpec.describe BaseSerializer do
       expect(subject.l(nil)).to be(nil)
     end
   end
-
-  context '#create_description_list_item' do
-    it 'produces the expected hash for a description list item' do
-      expected_hash = {
-        term:        {
-          content: 'email'
-        },
-        description: [
-                       {
-                         content: 'hello@example.com'
-                       },
-                       {
-                         content: 'hello@gmail.com'
-                       }
-                     ]
-      }
-      item = subject.create_description_list_item('email', ['hello@example.com', 'hello@gmail.com'])
-
-      expect(item).to eq(expected_hash)
-    end
-
-    it 'does not produce a hash for an empty description array' do
-      item = subject.create_description_list_item('email', [])
-
-      expect(item).to be(nil)
-    end
-
-    it 'does not produce a hash for a description array with only nil content' do
-      item = subject.create_description_list_item('email', [nil, nil])
-
-      expect(item).to be(nil)
-    end
-
-    it 'does not produce a hash for a description array with only empty string content' do
-      item = subject.create_description_list_item('email', ['', ''])
-
-      expect(item).to be(nil)
-    end
-  end
 end
