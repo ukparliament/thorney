@@ -10,12 +10,7 @@ class ProposedNegativeStatutoryInstrumentsController < ApplicationController
   def index
     @proposed_negative_statutory_instruments = FilterHelper.filter(@api_request, 'ProposedNegativeStatutoryInstrumentPaper')
 
-    list_components = @proposed_negative_statutory_instruments.map do |proposed_negative_statutory_instrument|
-      CardFactory.new(
-        heading_text: proposed_negative_statutory_instrument.try(:proposedNegativeStatutoryInstrumentPaperName),
-        heading_url:  proposed_negative_statutory_instrument_path(proposed_negative_statutory_instrument.graph_id)
-      ).build_card
-    end
+    list_components = LaidThingListComponentsFactory.new(statutory_instruments: @proposed_negative_statutory_instruments, type: :proposed_negative_statutory_instrument).build_components
 
     serializer = PageSerializer::ListPageSerializer.new(request: request, page_title: I18n.t('proposed_negative_statutory_instruments.index.title'), list_components: list_components, data_alternates: @alternates)
 
