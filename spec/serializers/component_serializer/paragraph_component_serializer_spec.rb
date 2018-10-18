@@ -9,5 +9,15 @@ RSpec.describe ComponentSerializer::ParagraphComponentSerializer do
 
       expect(paragraph_component_serializer.to_yaml).to eq expected
     end
+
+    context 'handling any property' do
+      it 'returns a hash containing the name and data' do
+        serializer = described_class.new(content: [{ content: 'some content', one: 'property', yet: 'another' }])
+
+        expected = get_fixture('any_property')
+
+        expect(serializer.to_yaml).to eq expected
+      end
+    end
   end
 end

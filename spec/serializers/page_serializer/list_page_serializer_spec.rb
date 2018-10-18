@@ -3,7 +3,10 @@ require_relative '../../rails_helper'
 RSpec.describe PageSerializer::ListPageSerializer do
   include_context "sample request", include_shared: true
 
-  subject { described_class.new(request: request, page_title: 'Test page', list_components: [{ list_component: 'list component' }]) }
+  # let(:heading) { double('heading', heading_content: 'Test page', subheading_content: nil, linkify_subheading: nil, to_h: { name: 'heading1', data: { heading: { content: 'Test page' } } }) }
+  let(:heading) { double('heading', to_s: 'some meta heading', to_h: { name: 'heading1', data: { heading: { content: 'Test page' } } }) }
+
+  subject { described_class.new(request: request, heading_component: heading, list_components: [{ list_component: 'list component' }]) }
 
   context 'the serializers are correctly called' do
     context '#content' do
@@ -23,16 +26,21 @@ RSpec.describe PageSerializer::ListPageSerializer do
     end
   end
 
-  context '#section_primary_components' do
-    it 'calls the correct components' do
-      allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new)
+  context '#meta' do
+    it 'calls #to_s on the heading component' do
+      meta = subject.send(:meta)
 
-      subject.send(:section_primary_components)
-
-      expect(ComponentSerializer::Heading1ComponentSerializer).to have_received(:new).with(heading_content: 'Test page')
+      expect(meta[:title]).to eq 'some meta heading - UK Parliament'
     end
   end
 
+  context '#section_primary_components' do
+    it 'calls the correct methods on the heading component' do
+      subject.send(:section_primary_components)
+
+      expect(heading).to have_received(:to_h)
+    end
+  end
 
   context '#section_components' do
     it 'calls the correct components' do
@@ -47,7 +55,6 @@ RSpec.describe PageSerializer::ListPageSerializer do
   context 'the JSON is produced correctly' do
     context '#to_h' do
       it 'produces the expected JSON hash' do
-
         expected = get_fixture('fixture')
 
         expect(subject.to_yaml).to eq expected

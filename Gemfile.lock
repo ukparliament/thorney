@@ -128,7 +128,7 @@ GEM
     parliament-opensearch (0.7.0)
       activesupport (>= 5.0.0.1)
       feedjira (~> 2.1, >= 2.1.2)
-    parliament-routes (0.6.13)
+    parliament-routes (0.6.15)
     parliament-ruby (0.10.2)
     parser (2.5.1.2)
       ast (~> 2.4.0)

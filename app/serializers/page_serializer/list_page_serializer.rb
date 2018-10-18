@@ -3,11 +3,11 @@ module PageSerializer
     # Initialise a list page serializer.
     #
     # @param [ActionDispatch::Request] request the current request object
-    # @param @param [String] page_title title of the page
+    # @param [ComponentSerializer::Heading1ComponentSerializer] heading_component a heading object used for heading information
     # @param [Array<Hash>] list_components an array of components to be passed into the list
     # @param [Array<Hash>] data_alternates array containing the href and type of the alternative data url
-    def initialize(request: nil, page_title: nil, list_components: nil, data_alternates: nil)
-      @page_title = page_title
+    def initialize(request: nil, heading_component: nil, list_components: nil, data_alternates: nil)
+      @heading_component = heading_component
       @list_components = list_components
       @data_alternates = data_alternates
 
@@ -17,7 +17,7 @@ module PageSerializer
     private
 
     def meta
-      super(title: @page_title)
+      super(title: @heading_component.to_s)
     end
 
     def content
@@ -28,7 +28,7 @@ module PageSerializer
     end
 
     def section_primary_components
-      [ComponentSerializer::Heading1ComponentSerializer.new({ heading_content: @page_title }).to_h]
+      [@heading_component.to_h]
     end
 
     def section_components
