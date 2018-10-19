@@ -7,17 +7,12 @@ module PageSerializer
 
       def meta
         super(title: title).tap do |meta|
-          meta[:components] = meta_components if total_results.positive?
           meta[:opensearch_description_url] = opensearch_description_url if opensearch_description_url
         end
       end
 
       def title
         t('search.title.with_query', query: @query)
-      end
-
-      def meta_components
-        [{ name: 'head__search-result-tracking' }]
       end
 
       def content
@@ -41,6 +36,14 @@ module PageSerializer
         return ComponentSerializer::HeadingComponentSerializer.new(content: ['search.no-results'], size: 2).to_h if total_results < 1
 
         ComponentSerializer::HeadingComponentSerializer.new(translation_key: 'search.count', translation_data: translation_data, size: 2).to_h
+      end
+
+      def foot_components
+        return nil unless total_results.positive?
+
+        {}.tap do |hash|
+          hash[:components] = [{ name: 'foot__search-result-tracking' }]
+        end
       end
     end
   end
