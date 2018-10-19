@@ -12,8 +12,6 @@ meta:
     image-height: '630'
     twitter-card: summary_large_image
   opensearch-description-url: https://www.example.com/search/opensearch
-  components:
-  - name: head__search-result-tracking
 header-components:
 - name: link
   data:
@@ -296,3 +294,6 @@ footer-components:
           data:
             link: "/meta/cookie-policy"
         - content: shared.footer.data-protection-privacy
+foot:
+  components:
+  - name: foot__search-result-tracking
