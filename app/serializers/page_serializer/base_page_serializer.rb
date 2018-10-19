@@ -26,6 +26,7 @@ module PageSerializer
         header_section(hash)
         main_section(hash)
         footer_section(hash)
+        foot_section(hash) if foot_components
       end
     end
 
@@ -56,6 +57,16 @@ module PageSerializer
       hash.tap do |h|
         h[:footer_components] = PartialSerializer::FooterComponentsPartialSerializer.new.to_h
       end
+    end
+
+    def foot_section(hash)
+      hash.tap do |h|
+        h[:foot] = foot_components
+      end
+    end
+
+    def foot_components
+      nil
     end
 
     def meta(title: 'UK Parliament', image_id: nil)

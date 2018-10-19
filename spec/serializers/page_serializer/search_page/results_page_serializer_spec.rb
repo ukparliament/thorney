@@ -43,7 +43,6 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
   context '#to_h' do
     context 'with a query' do
       it 'produces the correct hash' do
-
         expected = get_fixture('with_a_query')
 
         expect(subject.to_yaml).to eq(expected)
