@@ -30,7 +30,6 @@ module PageSerializer
       [].tap do |items|
         web_link = @laid_thing.try(:workPackagedThingHasWorkPackagedThingWebLink)
         items << create_description_list_item('laid-thing.web-link', [link_to(web_link, web_link)]) if web_link
-
         items << create_description_list_item('statutory-instruments.show.made-date', [l(@statutory_instrument.made_date)])
         items << create_description_list_item('laid-thing.laid-date', [l(@laid_thing&.laying&.date)])
         items << create_description_list_item('statutory-instruments.show.coming-into-force-date', [l(@statutory_instrument.coming_into_force_date)])

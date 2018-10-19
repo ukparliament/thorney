@@ -104,7 +104,11 @@ main-components:
         - term:
             content: laid-thing.web-link
           description:
-          - content: <a href="https://www.gov.uk/eu-withdrawal-act-2018-statutory-instruments/the-airport-charges-amendment-eu-exit-regulations-2018">https://www.gov.uk/eu-withdrawal-act-2018-statutory-instruments/the-airport-charges-amendment-eu-exit-regulations-2018</a>
+          - content: <a href="https://www.gov.uk/eu-withdrawal-act-2018-statutory-instruments/the-airports-groundhandling-amendment-eu-exit-regulations-2018">https://www.gov.uk/eu-withdrawal-act-2018-statutory-instruments/the-airports-groundhandling-amendment-eu-exit-regulations-2018</a>
+        - term:
+            content: laid-thing.laid-date
+          description:
+          - content: 19 July 2018
         - term:
             content: proposed-negative-statutory-instruments.show.preceding-title
           description:
@@ -112,6 +116,10 @@ main-components:
               - 1</a>
           - content: <a href="/statutory-instruments/D1234567">statutoryInstrumentPaperName
               - 2</a>
+        - term:
+            content: laid-thing.laying-body
+          description:
+          - content: groupName - 1
 - name: section__section
   data:
     components:
@@ -133,13 +141,21 @@ main-components:
             heading:
               name: heading
               data:
-                content: <a href="/work-packages/7xwjxL0R">proposedNegativeStatutoryInstrumentPaperName
+                content: <a href="/work-packages/xyYZNFHJ">proposedNegativeStatutoryInstrumentPaperName
                   - 1</a>
                 size: 2
-            paragraph:
-              name: paragraph
+            list-description:
+              name: list__description
               data:
-              - content: 'Procedure: procedureName - 1'
+                items:
+                - term:
+                    content: Procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedureStepName - 1
+                  description:
+                  - content: 9 October 2018
 footer-components:
 - name: footer
   data:
