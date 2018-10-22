@@ -64,3 +64,8 @@ en:
     index:
       title: "Proposed Negative Statutory Instruments"
   no_name: "[Name unavailable]"
+  procedure_steps:
+    index:
+      title: "Procedure Steps"
+  work_packages:
+    title: "Work Packages"
