@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3030/procedure_step_by_id?procedure_step_id=12345678
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/n-triples
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<AUTH_TOKEN>"
+      Api-Version:
+      - Staging
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, must-revalidate, no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '4089'
+      Content-Type:
+      - application/n-triples
+      Expires:
+      - Mon, 22 Oct 2018 14:40:02 GMT
+      Request-Context:
+      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
+      Access-Control-Expose-Headers:
+      - Request-Context
+      Set-Cookie:
+      - ARRAffinity=51129f6ce0b17a195eed11bdad8f788427b282cd2b3794cb0536e014bc0b3fc3;Path=/;HttpOnly;Domain=fixedquery201810051005.azurewebsites.net
+      Strict-Transport-Security:
+      - max-age=31536000
+      Date:
+      - Mon, 22 Oct 2018 14:40:01 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: "<https://id.parliament.uk/e9G2vHbc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+         <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/e9G2vHbc>
+         <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+         1\" .\r\n"
+    http_version: 
+  recorded_at: Mon, 22 Oct 2018 14:39:43 GMT
+recorded_with: VCR 4.0.0
