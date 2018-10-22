@@ -89,13 +89,9 @@ main-components:
 - name: section__section
   data:
     components:
-    - name: heading
-      data:
-        translation:
-          key: groups.current.literals
-        size: 2
     - name: list__description
       data:
+        meta: true
         items:
         - term:
             content: Name
@@ -105,12 +101,11 @@ main-components:
             content: Start Date
           description:
           - content: 12 May 2010
-    - name: heading
+    - name: paragraph
       data:
-        translation:
-          key: groups.current.objects
-        size: 2
-    - 
+      - content: groups.subsidiary-resources.layings
+        data:
+          link: "/groups/7dSvuueH/made-available/availability-types/layings"
 footer-components:
 - name: footer
   data:
