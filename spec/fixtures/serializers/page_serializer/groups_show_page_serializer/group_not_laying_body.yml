@@ -86,9 +86,6 @@ main-components:
           content: groupName - 1
         context:
           content: 12 May 2010 to present
-- name: section__section
-  data:
-    components:
     - name: list__description
       data:
         meta: true
@@ -101,6 +98,9 @@ main-components:
             content: Start Date
           description:
           - content: 12 May 2010
+- name: section__section
+  data:
+    components:
     - name: paragraph
       data:
       - content: groups.subsidiary-resources.layings

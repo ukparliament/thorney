@@ -86,9 +86,6 @@ main-components:
           content: groupName - 1
         context:
           content: "[Date unavailable]"
-- name: section__section
-  data:
-    components:
     - name: list__description
       data:
         meta: true
@@ -97,6 +94,9 @@ main-components:
             content: Name
           description:
           - content: groupName - 1
+- name: section__section
+  data:
+    components:
     - name: paragraph
       data:
       - content: groups.subsidiary-resources.layings
