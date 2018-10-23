@@ -28,7 +28,10 @@ module PageSerializer
     end
 
     def section_primary_components
-      [ComponentSerializer::Heading1ComponentSerializer.new(heading_content).to_h]
+      [].tap do |component|
+        component << ComponentSerializer::Heading1ComponentSerializer.new(heading_content).to_h
+        component << ComponentSerializer::ListDescriptionComponentSerializer.new(meta: true, items: literals).to_h unless literals.empty?
+      end
     end
 
     def heading_content
@@ -42,7 +45,6 @@ module PageSerializer
 
     def section_literals
       [].tap do |component|
-        component << ComponentSerializer::ListDescriptionComponentSerializer.new(meta: true, items: literals).to_h unless literals.empty?
         component << ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: 'groups.subsidiary-resources.layings', link: group_layings_path(@group.try(:graph_id)) }]).to_h
       end
     end
