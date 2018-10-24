@@ -29,16 +29,6 @@ RSpec.describe PageSerializer::GroupsShowPageSerializer, vcr: true do
     end
   end
 
-  context 'no layings' do
-
-    it 'produces the expected JSON hash without layings' do
-
-      expected = get_fixture('group_no_layings')
-
-      expect(subject.to_yaml).to eq expected
-    end
-  end
-
   context 'with end date' do
 
     it 'produces the expected JSON hash with an end date' do

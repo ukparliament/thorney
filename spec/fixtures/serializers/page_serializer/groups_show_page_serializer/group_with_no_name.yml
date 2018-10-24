@@ -79,21 +79,13 @@ main-components:
     - name: heading1
       data:
         subheading:
-          content: groups.group
+          content: groups.groups
           data:
             link: "/groups"
         heading:
           content: "[Name unavailable]"
         context:
           content: 12 May 2010 to present
-    - name: list__description
-      data:
-        meta: true
-        items:
-        - term:
-            content: Start Date
-          description:
-          - content: 12 May 2010
 - name: section__section
   data:
     components:
