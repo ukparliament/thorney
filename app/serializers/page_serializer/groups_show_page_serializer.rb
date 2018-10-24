@@ -36,7 +36,7 @@ module PageSerializer
 
     def heading_content
       {}.tap do |hash|
-        hash[:subheading_content] = 'groups.group'
+        hash[:subheading_content] = 'groups.groups'
         hash[:subheading_data] = { link: groups_path }
         hash[:heading_content] = title
         hash[:context_content] = @group.date_range
