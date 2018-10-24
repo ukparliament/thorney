@@ -187,7 +187,7 @@ main-components:
                 content:
                 - home.parliament-activity.statutory-instruments.heading
                 size: 3
-                link: "/statutory-instruments"
+                link: "/find-a-statutory-instrument"
             paragraph:
               name: paragraph
               data:
