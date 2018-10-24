@@ -3,9 +3,9 @@ require_relative '../../rails_helper'
 RSpec.describe PageSerializer::StatutoryInstrumentsShowPageSerializer, vcr: true do
   include_context "sample request", include_shared: true
 
-  let(:response) {Parliament::Request::UrlRequest.new(base_url:   ENV['PARLIAMENT_BASE_URL'],
+  let(:response) { Parliament::Request::UrlRequest.new(base_url:   ENV['PARLIAMENT_BASE_URL'],
                                                       builder:    Parliament::Builder::NTripleResponseBuilder,
-                                                      decorators: Parliament::Grom::Decorator).statutory_instrument_by_id.get}
+                                                      decorators: Parliament::Grom::Decorator).statutory_instrument_by_id.get }
 
   let(:statutory_instrument) { response.filter('https://id.parliament.uk/schema/StatutoryInstrumentPaper').first }
 

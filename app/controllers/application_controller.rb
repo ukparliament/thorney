@@ -6,6 +6,7 @@ class ApplicationController < ActionController::API
   include ActionController::Cookies
   include ApplicationHelper
   include HousesHelper
+  include GroupSortHelper
 
   attr_reader :app_insights_request_id
 
