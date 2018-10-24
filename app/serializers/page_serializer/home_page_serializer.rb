@@ -25,7 +25,7 @@ module PageSerializer
         content << heading_serializer(translation_key: 'home.mps-and-lords.heading')
         content << list_serializer(components: mps_lords_list_components)
         content << heading_serializer(translation_key: 'home.parliament-activity.heading')
-        content << list_serializer(components: [card(heading_content: 'home.parliament-activity.statutory-instruments.heading', heading_link: statutory_instruments_path, paragraph_content: 'home.parliament-activity.statutory-instruments.find')])
+        content << list_serializer(components: [card(heading_content: 'home.parliament-activity.statutory-instruments.heading', heading_link: find_a_statutory_instrument_path, paragraph_content: 'home.parliament-activity.statutory-instruments.find')])
         content << heading_serializer(translation_key: 'home.guides.heading')
         content << list_serializer(components: [card(heading_content: 'home.guides.guide-to-procedure.heading', heading_link: collection_path('6i8XQAfD'), paragraph_content: 'home.guides.guide-to-procedure.find')])
       end
