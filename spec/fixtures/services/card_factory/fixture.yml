@@ -1,6 +1,10 @@
 ---
 name: card__generic
 data:
+  small:
+    name: partials__small
+    data:
+      content: some_small
   heading:
     name: heading
     data:

@@ -8,10 +8,12 @@ module Groups
 
     def index
       @group, @layings = FilterHelper.filter(@api_request, 'Group', 'Laying')
+      @layings = @layings.sort_by(:date, :graph_id).reverse
       @group = @group.first
 
       list_components = @layings.map do |laying|
         laying_type = I18n.t('layings.type.si')
+        heading_text = laying.laid_thing.try(:laidThingName)
         heading_url = statutory_instrument_path(laying.laid_thing.graph_id)
 
         if laying.laid_thing.is_a?(Parliament::Grom::Decorator::ProposedNegativeStatutoryInstrumentPaper)
@@ -19,15 +21,15 @@ module Groups
           heading_url = proposed_negative_statutory_instrument_path(laying.laid_thing.graph_id)
         end
 
-        paragraph_content = [].tap do |content|
-          content << { content: 'groups.layings.date', date: I18n.l(Time.parse(laying.date.to_s)) } if laying.date
-          content << { content: 'groups.layings.type', type: laying_type } if laying.type
+        list_description_items = [].tap do |items|
+          items << { term: { content: 'laid-thing.laid-date' }, description: [{ content: I18n.l(laying&.date) }] }
         end
 
         CardFactory.new(
-          heading_text:      laying.laid_thing.try(:laidThingName),
-          heading_url:       heading_url,
-          paragraph_content: paragraph_content
+          small:                    laying_type,
+          heading_text:             heading_text,
+          heading_url:              heading_url,
+          description_list_content: list_description_items
         ).build_card
       end
 

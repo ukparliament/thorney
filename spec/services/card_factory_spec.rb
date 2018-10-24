@@ -1,7 +1,7 @@
 require_relative '../rails_helper'
 
 RSpec.describe CardFactory, type: :serializer do
-  let(:subject) { described_class.new(heading_text: 'card__example', heading_url: 'example url', paragraph_content: [{ content: 'example paragraph' }]) }
+  let(:subject) { described_class.new(small: 'some_small', heading_text: 'card__example', heading_url: 'example url', paragraph_content: [{ content: 'example paragraph' }]) }
 
 
   context '#build_card' do
@@ -10,12 +10,11 @@ RSpec.describe CardFactory, type: :serializer do
 
       subject.build_card
 
-      expect(ComponentSerializer::CardComponentSerializer).to have_received(:new).with(name: 'card__generic', data: { heading: { "data"=> { "content"=>"card__example", "link"=>"example url", "size"=>2 }, "name"=>"heading"}, paragraph: {"data"=>[{"content"=>"example paragraph"}], "name"=>"paragraph" } } )
+      expect(ComponentSerializer::CardComponentSerializer).to have_received(:new).with(name: 'card__generic', data: { small: {"data"=>{"content"=>"some_small"}, "name"=>"partials__small"}, heading: { "data"=> { "content"=>"card__example", "link"=>"example url", "size"=>2 }, "name"=>"heading"}, paragraph: {"data"=>[{"content"=>"example paragraph"}], "name"=>"paragraph" } } )
     end
 
     context 'when given all data' do
       it 'produces the expected JSON hash' do
-
         expected = get_fixture('fixture')
 
         expect(subject.build_card.to_yaml).to eq expected
