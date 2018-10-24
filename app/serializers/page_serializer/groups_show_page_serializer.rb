@@ -30,7 +30,6 @@ module PageSerializer
     def section_primary_components
       [].tap do |component|
         component << ComponentSerializer::Heading1ComponentSerializer.new(heading_content).to_h
-        component << ComponentSerializer::ListDescriptionComponentSerializer.new(meta: true, items: literals).to_h unless literals.empty?
       end
     end
 
@@ -45,17 +44,15 @@ module PageSerializer
 
     def section_literals
       [].tap do |component|
-        component << ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: 'groups.subsidiary-resources.layings', link: group_layings_path(@group.try(:graph_id)) }]).to_h
+        component << if @group.is_a?(Parliament::Grom::Decorator::LayingBody)
+                       ComponentSerializer::ParagraphComponentSerializer.new(
+                         content: [{
+                           content: 'groups.subsidiary-resources.layings',
+                           link:    group_layings_path(@group.try(:graph_id))
+                         }]
+                       ).to_h
+                     end
       end
     end
-
-    def literals
-      [].tap do |items|
-        items << { 'term': { 'content': 'Name' }, 'description': [{ 'content': @group.groupName }] } if @group.try(:groupName)
-        items << { 'term': { 'content': 'Start Date' }, 'description': [{ 'content': l(@group.start_date) }] } if @group.try(:groupStartDate)
-        items << { 'term': { 'content': 'End Date' }, 'description': [{ 'content': l(@group.end_date) }] } if @group.try(:groupEndDate)
-      end.compact
-    end
-
   end
 end

@@ -2,10 +2,10 @@
 layout:
   template: layout
 meta:
-  title: Department for Education - UK Parliament
+  title: groupName - 1 - UK Parliament
   request-id: 123456
   open-graph:
-    title: Department for Education - UK Parliament
+    title: groupName - 1 - UK Parliament
     original-url: https://example.com/
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -79,25 +79,13 @@ main-components:
     - name: heading1
       data:
         subheading:
-          content: groups.group
+          content: groups.groups
           data:
             link: "/groups"
         heading:
-          content: Department for Education
+          content: groupName - 1
         context:
           content: 12 May 2010 to present
-    - name: list__description
-      data:
-        meta: true
-        items:
-        - term:
-            content: Name
-          description:
-          - content: Department for Education
-        - term:
-            content: Start Date
-          description:
-          - content: 12 May 2010
 - name: section__section
   data:
     components:
