@@ -70,7 +70,7 @@ module GroupSortHelper
 
       grouped_nodes
     end
-    
+
     private
 
     def get_linked_value(method_symbols)
