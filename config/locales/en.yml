@@ -67,3 +67,5 @@ en:
   procedure_steps:
     index:
       title: "Procedure Steps"
+  work_packages:
+    title: "Work Packages"
