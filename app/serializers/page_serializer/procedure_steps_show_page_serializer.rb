@@ -38,7 +38,7 @@ module PageSerializer
       houses = @procedure_step.try(:procedureStepHasHouse)
       return if houses.nil? || houses.empty?
 
-      houses = houses.map { |house| house.try(:houseName) }.compact.join(' and ')
+      houses = houses.map { |house| house.try(:houseName) }.compact.to_sentence
 
       [create_description_list_item('procedure-steps.houses', [houses])]
     end

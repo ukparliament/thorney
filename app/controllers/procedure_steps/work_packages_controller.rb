@@ -13,8 +13,11 @@ module ProcedureSteps
       @business_items = @business_items.sort_by(:date, :graph_id).reverse
 
       list_components = @business_items.map do |business_item|
-        list_description_items = [].tap do |items|
-          items << { term: { content: 'procedure-steps.subsidiary-resources.actualised-date' }, description: [{ content: I18n.l(business_item&.date) }] }
+        next nil unless business_item.work_package
+
+        list_description_items = nil
+        if business_item.date
+          list_description_items = [{ term: { content: 'procedure-steps.subsidiary-resources.actualised-date' }, description: [{ content: I18n.l(business_item.date) }] }]
         end
 
         CardFactory.new(
@@ -24,12 +27,13 @@ module ProcedureSteps
           description_list_content: list_description_items
         ).build_card
       end
+      list_components.compact!
 
       heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('work_packages.title'), subheading_content: @procedure_step.try(:procedureStepName), subheading_link: procedure_step_path)
 
       serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 
       render_page(serializer)
-    end
+      end
   end
 end
