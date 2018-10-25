@@ -1,6 +1,8 @@
 require_relative '../../rails_helper'
 
 RSpec.describe GroupSortHelper, type: :helper, vcr: true do
+# The doubles below used together create a data set on which to test the various methods within the module.
+# At the bottom of the file are tests using n-triple data.
 
   let(:object_one) { double('one', date: DateTime.parse('23/12/2016'), person: person_one) }
   let(:object_two) { double('two', date: DateTime.parse('10/08/2009'), person: person_two) }
@@ -79,6 +81,12 @@ RSpec.describe GroupSortHelper, type: :helper, vcr: true do
   end
 
   describe '#group' do
+    context 'with no block or method_symbols' do
+      it 'returns out of the method' do
+        expect(described_class.group(full_data_objects)).to be(nil)
+      end
+    end
+
     context 'with a block' do
       context 'full data' do
         it 'returns the data grouped by the given block' do
@@ -109,6 +117,12 @@ RSpec.describe GroupSortHelper, type: :helper, vcr: true do
   end
 
   describe '#sort' do
+    context 'with no block or method_symbols' do
+      it 'returns out of the method' do
+        expect(described_class.sort(full_data_hash_by_person)).to be(nil)
+      end
+    end
+
     context 'with a block' do
       context 'full data' do
         it 'returns the data sorted by the given block' do
@@ -171,6 +185,14 @@ RSpec.describe GroupSortHelper, type: :helper, vcr: true do
           expect(described_class.sort_keys(hash)).to eq({ 'a' => 2, 'b' => 4, 'c' => 1, 'd' => 3, nil => 5 })
         end
       end
+    end
+  end
+
+  describe '#group_and_sort' do
+    it 'returns the data grouped and sorted' do
+      expected = [object_six, object_nine, object_eight, object_one, object_two, object_eleven, object_four, object_three]
+
+      expect(described_class.group_and_sort(full_data_objects, group_block: block, key_sort_descending: true, sort_method_symbols: [:person, :name])).to eq(expected)
     end
   end
 
