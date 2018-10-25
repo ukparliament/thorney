@@ -10,7 +10,9 @@ class ProposedNegativeStatutoryInstrumentsController < ApplicationController
   def index
     @proposed_negative_statutory_instruments = FilterHelper.filter(@api_request, 'ProposedNegativeStatutoryInstrumentPaper')
 
-    list_components = LaidThingListComponentsFactory.build_components(statutory_instruments: @proposed_negative_statutory_instruments, type: :proposed_negative_statutory_instrument)
+    sorted_statutory_instruments = GroupSortHelper.group_and_sort(@proposed_negative_statutory_instruments, group_method_symbols: %i[laying date to_date], key_sort_descending: true, sort_method_symbols: [:proposedNegativeStatutoryInstrumentPaperName])
+
+    list_components = LaidThingListComponentsFactory.build_components(statutory_instruments: sorted_statutory_instruments, type: :proposed_negative_statutory_instrument)
 
     heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('proposed_negative_statutory_instruments.index.title'))
 
