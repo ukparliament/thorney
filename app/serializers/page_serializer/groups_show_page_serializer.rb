@@ -3,7 +3,7 @@ module PageSerializer
     # Initialise a Groups show page serializer.
     #
     # @param [ActionDispatch::Request] request the current request object.
-    # @param [<Grom::Node>] group a Grom::Node object of type StatutoryInstrumentPaper.
+    # @param [<Grom::Node>] group a Grom::Node object of type Group.
     # @param [Array<Hash>] data_alternates array containing the href and type of the alternative data urls.
     def initialize(request: nil, group: nil, data_alternates: nil)
       @group = group
