@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3030/procedure_step_by_id?procedure_step_id=e9G2vHbc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/n-triples
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, must-revalidate, no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '275'
+      Content-Type:
+      - application/n-triples
+      Expires:
+      - Thu, 25 Oct 2018 13:50:42 GMT
+      Request-Context:
+      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
+      Access-Control-Expose-Headers:
+      - Request-Context
+      Strict-Transport-Security:
+      - max-age=31536000
+      Date:
+      - Thu, 25 Oct 2018 13:50:41 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: "<https://id.parliament.uk/e9G2vHbc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/e9G2vHbc>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        1\" .\r\n<https://id.parliament.uk/e9G2vHbc> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/1AFu55Hs> .\r\n<https://id.parliament.uk/1AFu55Hs>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/House>
+        .\r\n<https://id.parliament.uk/1AFu55Hs> <https://id.parliament.uk/schema/houseName>
+        \"houseName - 1\" .\r\n<https://id.parliament.uk/e9G2vHbc> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/WkUWUBMx> .\r\n<https://id.parliament.uk/WkUWUBMx>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/House>
+        .\r\n"
+    http_version: 
+  recorded_at: Thu, 25 Oct 2018 13:50:40 GMT
+recorded_with: VCR 4.0.0
