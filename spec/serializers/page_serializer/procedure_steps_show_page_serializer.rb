@@ -11,11 +11,19 @@ RSpec.describe PageSerializer::ProcedureStepsShowPageSerializer, vcr: true do
 
   subject { described_class.new(request: request, procedure_step: procedure_step) }
 
-  context '#to_h' do
+  describe '#to_h' do
     it 'produces the expected JSON hash' do
       expected = get_fixture('fixture')
 
       expect(subject.to_yaml).to eq expected
+    end
+
+    context 'when there is partial data for a house' do
+      it 'produces the expected JSON hash' do
+        expected = get_fixture('fixture_with_partial_house_data')
+
+        expect(subject.to_yaml).to eq expected
+      end
     end
   end
 end

@@ -35,9 +35,10 @@ module PageSerializer
     end
 
     def meta_info
-      return if @procedure_step.houses.empty?
+      houses = @procedure_step.try(:procedureStepHasHouse)
+      return if houses.nil? || houses.empty?
 
-      houses = @procedure_step.houses.map { |house| house.try(:houseName) }.join(' and ')
+      houses = houses.map { |house| house.try(:houseName) }.compact.join(' and ')
 
       [create_description_list_item('procedure-steps.houses', [houses])]
     end
