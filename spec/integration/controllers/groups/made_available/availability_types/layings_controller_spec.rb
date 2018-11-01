@@ -1,6 +1,6 @@
-require_relative '../../../rails_helper'
+require_relative '../../../../../rails_helper'
 
-RSpec.describe Groups::LayingsController, vcr: true do
+RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LayingsController, vcr: true do
   describe 'GET index' do
     before(:each) do
       allow_any_instance_of(PageSerializer::ListPageSerializer).to receive(:request_id) { 123456 }
