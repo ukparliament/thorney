@@ -1,7 +1,7 @@
 require_relative '../../rails_helper'
 
 RSpec.describe PageSerializer::GroupsShowPageSerializer, vcr: true do
-  include_context "sample request", include_shared: true
+  include_context 'sample request', include_shared: true
 
   let(:response) { Parliament::Request::UrlRequest.new(
       base_url: ENV['PARLIAMENT_BASE_URL'],
