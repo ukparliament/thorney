@@ -2,7 +2,7 @@
 layout:
   template: layout
 meta:
-  title: groupName - 1 - Layings - UK Parliament
+  title: groupName - 1 - Made Available - UK Parliament
   request-id: 123456
   data-alternates:
   - type: application/n-triples
@@ -20,8 +20,8 @@ meta:
   - type: application/rdf+xml
     href: http://localhost:3030/group_layings_index.xml?group_id=XouN12Ow
   open-graph:
-    title: groupName - 1 - Layings - UK Parliament
-    original-url: https://www.example.com/groups/XouN12Ow/made-available/availability-types/layings
+    title: groupName - 1 - Made Available - UK Parliament
+    original-url: https://www.example.com/groups/XouN12Ow/made-available
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
     image-height: '630'
@@ -96,7 +96,7 @@ main-components:
         subheading:
           content: <a href="/groups/XouN12Ow">groupName - 1</a>
         heading:
-          content: Layings
+          content: Made Available
 - name: section__section
   data:
     components:
@@ -109,6 +109,166 @@ main-components:
           - component: list
             variant: block
         components:
+        - name: card__generic
+          data:
+            small:
+              name: partials__small
+              data:
+                content: Proposed Negative Statutory Instrument
+            heading:
+              name: heading
+              data:
+                content: laidThingName - 35
+                size: 2
+                link: "/proposed-negative-statutory-instruments/e93zn4Ry"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: 15 October 2018
+        - name: card__generic
+          data:
+            small:
+              name: partials__small
+              data:
+                content: Proposed Negative Statutory Instrument
+            heading:
+              name: heading
+              data:
+                content: laidThingName - 36
+                size: 2
+                link: "/proposed-negative-statutory-instruments/OqROoJsG"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: 12 October 2018
+        - name: card__generic
+          data:
+            small:
+              name: partials__small
+              data:
+                content: Proposed Negative Statutory Instrument
+            heading:
+              name: heading
+              data:
+                content: laidThingName - 34
+                size: 2
+                link: "/proposed-negative-statutory-instruments/EfjqJrpr"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: 10 October 2018
+        - name: card__generic
+          data:
+            small:
+              name: partials__small
+              data:
+                content: Statutory Instrument
+            heading:
+              name: heading
+              data:
+                content: laidThingName - 33
+                size: 2
+                link: "/statutory-instruments/Y5wgjNCe"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: 10 October 2018
+        - name: card__generic
+          data:
+            small:
+              name: partials__small
+              data:
+                content: Proposed Negative Statutory Instrument
+            heading:
+              name: heading
+              data:
+                content: laidThingName - 32
+                size: 2
+                link: "/proposed-negative-statutory-instruments/6itOwgLT"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: 9 October 2018
+        - name: card__generic
+          data:
+            small:
+              name: partials__small
+              data:
+                content: Statutory Instrument
+            heading:
+              name: heading
+              data:
+                content: laidThingName - 30
+                size: 2
+                link: "/statutory-instruments/5ISSgu1W"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: 9 October 2018
+        - name: card__generic
+          data:
+            small:
+              name: partials__small
+              data:
+                content: Proposed Negative Statutory Instrument
+            heading:
+              name: heading
+              data:
+                content: laidThingName - 31
+                size: 2
+                link: "/proposed-negative-statutory-instruments/c9tfxxSG"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: 9 October 2018
+        - name: card__generic
+          data:
+            small:
+              name: partials__small
+              data:
+                content: Statutory Instrument
+            heading:
+              name: heading
+              data:
+                content: laidThingName - 29
+                size: 2
+                link: "/statutory-instruments/HD6sJ5Bq"
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: 9 October 2018
         - name: card__generic
           data:
             small:

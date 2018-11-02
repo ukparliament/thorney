@@ -48,7 +48,7 @@ module PageSerializer
                        ComponentSerializer::ParagraphComponentSerializer.new(
                          content: [{
                            content: 'groups.subsidiary-resources.layings',
-                           link:    group_layings_path(@group.try(:graph_id))
+                           link:    group_made_available_availability_types_layings_path(@group.try(:graph_id))
                          }]
                        ).to_h
                      end

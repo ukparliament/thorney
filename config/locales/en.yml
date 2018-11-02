@@ -57,6 +57,10 @@ en:
   groups:
     index:
       title: Groups
+    made_available:
+      title: "Made Available"
+      availability_types:
+        title: "Availability Types"
   statutory_instruments:
     index:
       title: "Statutory Instruments"

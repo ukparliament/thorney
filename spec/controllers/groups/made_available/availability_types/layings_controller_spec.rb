@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Groups::LayingsController, vcr: true do
+RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LayingsController, vcr: true do
   describe 'GET index' do
     let(:data_alternates) do
       [{
