@@ -23,7 +23,7 @@ module PageSerializer
     def content
       [].tap do |components|
         components << ComponentSerializer::SectionComponentSerializer.new(components: section_primary_components, type: 'primary').to_h
-        components << ComponentSerializer::SectionComponentSerializer.new(components: section_literals, type: 'section').to_h
+        components << ComponentSerializer::SectionComponentSerializer.new(components: section_components, type: 'section').to_h
       end
     end
 
@@ -38,21 +38,21 @@ module PageSerializer
         hash[:subheading_content] = 'groups.groups'
         hash[:subheading_data] = { link: groups_path }
         hash[:heading_content] = title
-        hash[:context_content] = @group.date_range
       end
     end
 
-    def section_literals
-      [].tap do |component|
-        component << if @group.is_a?(Parliament::Grom::Decorator::LayingBody)
-                       ComponentSerializer::ParagraphComponentSerializer.new(
-                         content: [{
-                           content: 'groups.subsidiary-resources.layings',
-                           link:    group_made_available_availability_types_layings_path(@group.try(:graph_id))
-                         }]
-                       ).to_h
-                     end
+    def list_components
+      section_components = []
+
+      if @group.is_a?(Parliament::Grom::Decorator::LayingBody)
+        section_components << CardFactory.new(heading_text: 'groups.subsidiary-resources.layings-title', heading_url: group_made_available_availability_types_layings_path(@group.try(:graph_id))).build_card
       end
+
+      section_components
+    end
+
+    def section_components
+      [ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: list_components).to_h]
     end
   end
 end
