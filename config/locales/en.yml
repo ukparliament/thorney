@@ -73,3 +73,6 @@ en:
       title: "Procedure Steps"
   work_packages:
     title: "Work Packages"
+  laying_bodies:
+    index:
+      title: "Laying Bodies"
