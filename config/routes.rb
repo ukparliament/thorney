@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   ### Health check ###
   # /health-check
   get '/health-check', to: 'health_check#index'
+
+  get '/laying-bodies', to: 'laying_bodies#index'
 end
