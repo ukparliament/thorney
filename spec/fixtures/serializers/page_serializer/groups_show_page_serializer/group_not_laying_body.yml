@@ -84,12 +84,18 @@ main-components:
             link: "/groups"
         heading:
           content: groupName - 1
-        context:
-          content: 12 May 2010 to present
 - name: section__section
   data:
     components:
-    - 
+    - name: list__generic
+      data:
+        type: ol
+        display:
+          name: partials__display
+          data:
+          - component: list
+            variant: block
+        components: []
 footer-components:
 - name: footer
   data:
