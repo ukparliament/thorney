@@ -4,14 +4,12 @@ module ComponentSerializer
     #
     # @param [Array<Hash>] content one or more pieces of content to be wrapped in <p> tags. The hashes have a content key and any other optional keys.
     #
-    # @example Initialising a paragraph component
+    # @example Initialising a paragraph component with only a string or translation key
     #  string_or_translation_key = 'Here is some paragraph text'
-    #  link = 'beta.parliament.uk'
-    #  ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: string_or_translation_key, link: link }]).to_h
+    #  ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: string_or_translation_key }, { content: string_or_translation_key }]).to_h
     #
-    # @example You can also add custom properties for use with translations on the front end
-    #  hash = { content: 'some content', date: '14 May 2018', type: 'Statutory Instrument' }
-    #  ComponentSerializer::ParagraphComponentSerializer.new(content: [hash]).to_h
+    # @example Initialising a paragraph component with a translation key and data to be interpolated you must use the ContentDataHelper
+    #  ComponentSerializer::ParagraphComponentSerializer.new(content: [ContentDataHelper.content_data(content: 'some content', one: 'property', yet: 'another'), ContentDataHelper.content_data(content: 'some content', one: 'property', yet: 'another')]).to_h
     def initialize(content: nil)
       @content = content
     end
@@ -23,15 +21,8 @@ module ComponentSerializer
     end
 
     def data
-      @content.map do |content|
-        {}.tap do |hash|
-          hash[:content] = content[:content]
-
-          data = content.try(:except, :content)
-
-          hash[:data] = data if data.present?
-        end
-      end
+      @content if @content
     end
+
   end
 end

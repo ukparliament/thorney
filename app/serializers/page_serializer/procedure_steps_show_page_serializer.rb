@@ -54,7 +54,7 @@ module PageSerializer
 
     def section_links
       [].tap do |component|
-        component << ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: 'procedure-steps.subsidiary-resources.work-packages', link: procedure_step_work_packages_path(@procedure_step.graph_id) }]).to_h
+        component << ComponentSerializer::ParagraphComponentSerializer.new(content: [ContentDataHelper.content_data(content: 'procedure-steps.subsidiary-resources.work-packages', link: procedure_step_work_packages_path(@procedure_step.graph_id))]).to_h
       end
     end
   end
