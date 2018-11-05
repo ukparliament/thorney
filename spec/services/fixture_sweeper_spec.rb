@@ -30,7 +30,7 @@ RSpec.describe FixtureSweeper do
         expect(stdout_double).to have_received(:puts ).with 'Checking for unused fixtures...'
         expect(stdout_double).to have_received(:puts ).with 'The following unused fixtures were found:'
         expect(path_manager_instance).to have_received(:list_paths )
-        expect(stdout_double).to have_received(:puts ).with no_args
+        expect(stdout_double).to have_received(:puts ).twice.with no_args
         expect(stdout_double).to have_received(:puts ).with 'Run "bundle exec rake sweep" to delete unused fixtures'
       end
 

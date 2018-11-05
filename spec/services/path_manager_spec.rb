@@ -43,9 +43,11 @@ RSpec.describe PathManager do
   it '#list_paths' do
     stdout_double = double('stdout_double', puts: '')
 
-    subject.list_paths([1], stdout: stdout_double)
+    subject.list_paths([{ path: 'path', reason: 'reason' }], stdout: stdout_double)
 
-    expect(stdout_double).to have_received(:puts).with 1
+    expect(stdout_double).to have_received(:puts).with 'path'
+    expect(stdout_double).to have_received(:puts).with ' - reason'
+    expect(stdout_double).to have_received(:puts).with no_args
   end
 
   context '#controller_spec_path' do

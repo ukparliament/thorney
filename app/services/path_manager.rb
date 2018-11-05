@@ -21,7 +21,9 @@ class PathManager
 
   def list_paths(paths, stdout: $stdout)
     paths.each do |path|
-      stdout.puts path
+      stdout.puts path[:path]
+      stdout.puts " - #{path[:reason]}"
+      stdout.puts
     end
   end
 
