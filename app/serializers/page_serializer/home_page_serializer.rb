@@ -16,7 +16,7 @@ module PageSerializer
     def hero_components
       [].tap do |content|
         content << ComponentSerializer::Heading1ComponentSerializer.new(heading_content: 'home.hero.heading').to_h
-        content << ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: 'home.hero.building-new-website' }, { content: 'home.hero.follow-beta-progress' }]).to_h
+        content << ComponentSerializer::ParagraphComponentSerializer.new(content: ['home.hero.building-new-website', { content: 'home.hero.follow-beta-progress' }]).to_h
       end
     end
 
@@ -51,7 +51,7 @@ module PageSerializer
     def card(heading_content: nil, heading_link: nil, paragraph_content: nil)
       hash = {}
       hash['heading'] = ComponentSerializer::HeadingComponentSerializer.new(content: [heading_content], size: 3, link: heading_link).to_h
-      hash['paragraph'] = ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: paragraph_content }]).to_h
+      hash['paragraph'] = ComponentSerializer::ParagraphComponentSerializer.new(content: [paragraph_content]).to_h
       ComponentSerializer::CardComponentSerializer.new(name: 'card__generic', data: hash).to_h
     end
   end

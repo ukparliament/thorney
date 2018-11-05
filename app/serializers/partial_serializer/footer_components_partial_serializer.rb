@@ -8,7 +8,7 @@ module PartialSerializer
     def footer_components_data
       contents = [
         'shared.footer.current-website',
-        { content: 'shared.footer.cookie-policy', link: '/meta/cookie-policy' },
+        ContentDataHelper.content_data(content: 'shared.footer.cookie-policy', link: '/meta/cookie-policy'),
         'shared.footer.data-protection-privacy'
       ]
 

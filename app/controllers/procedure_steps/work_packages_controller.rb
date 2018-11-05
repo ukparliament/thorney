@@ -16,9 +16,7 @@ module ProcedureSteps
         next nil unless business_item.work_package
 
         list_description_items = nil
-        if business_item.date
-          list_description_items = [{ term: { content: 'procedure-steps.subsidiary-resources.actualised-date' }, description: [{ content: I18n.l(business_item.date) }] }]
-        end
+        list_description_items = [{ term: { content: 'procedure-steps.subsidiary-resources.actualised-date' }, description: [{ content: I18n.l(business_item.date) }] }] if business_item.date
 
         CardFactory.new(
           small:                    'laid-thing.work-package',
