@@ -63,6 +63,34 @@ RSpec.describe ListDescriptionHelper, type: :helper do
         },
         description: [
                        {
+                         content: 'translation key 2',
+                         data: { first_bit_of_data: "Data 3", second_bit_of_data: "Data 4" }
+                       },
+                       {
+                         content: 'translation key 3',
+                         data: { first_bit_of_data: "Data 5", second_bit_of_data: "Data 6" }
+                       }
+                     ]
+      }
+      item = dummy_class.create_description_list_item(
+        term: ContentDataHelper.content_data(content: 'translation key', first_bit_of_data: "Data 1", second_bit_of_data: "Data 2"),
+        descriptions: [
+          ContentDataHelper.content_data(content: 'translation key 2', first_bit_of_data: "Data 3", second_bit_of_data: "Data 4"),
+          ContentDataHelper.content_data(content: 'translation key 3', first_bit_of_data: "Data 5", second_bit_of_data: "Data 6")
+        ]
+      )
+
+      expect(item).to eq(expected_hash)
+    end
+
+    it 'produces the expected hash when term and description items have translation keys and data' do
+      expected_hash = {
+        term:        {
+          content: 'translation key',
+          data: { first_bit_of_data: "Data 1", second_bit_of_data: "Data 2" }
+        },
+        description: [
+                       {
                          content: 'hello@example.com'
                        },
                        {
