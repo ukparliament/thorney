@@ -23,6 +23,5 @@ module ComponentSerializer
     def data
       @content if @content
     end
-
   end
 end
