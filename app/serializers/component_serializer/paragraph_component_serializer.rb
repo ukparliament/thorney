@@ -21,7 +21,7 @@ module ComponentSerializer
     end
 
     def data
-      @content if @content
+      @content
     end
   end
 end

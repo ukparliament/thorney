@@ -29,12 +29,12 @@ module PageSerializer
     def meta_info
       [].tap do |items|
         web_link = @laid_thing.try(:workPackagedThingHasWorkPackagedThingWebLink)
-        items << create_description_list_item('laid-thing.web-link', [link_to(web_link, web_link)]) if web_link
+        items << create_description_list_item(term: 'laid-thing.web-link', descriptions: [link_to(web_link, web_link)]) if web_link
 
-        items << create_description_list_item('laid-thing.laid-date', [l(@laid_thing&.laying&.date)])
-        items << create_description_list_item('proposed-negative-statutory-instruments.show.preceding-title', connected_statutory_instruments)
-        items << create_description_list_item('laid-thing.laying-person', [@laying_person&.display_name])
-        items << create_description_list_item('laid-thing.laying-body', [@laying_body.try(:groupName)])
+        items << create_description_list_item(term: 'laid-thing.laid-date', descriptions: [l(@laid_thing&.laying&.date)])
+        items << create_description_list_item(term: 'proposed-negative-statutory-instruments.show.preceding-title', descriptions: connected_statutory_instruments)
+        items << create_description_list_item(term: 'laid-thing.laying-person', descriptions: [@laying_person&.display_name])
+        items << create_description_list_item(term: 'laid-thing.laying-body', descriptions: [@laying_body.try(:groupName)])
       end.compact
     end
 
