@@ -8,6 +8,7 @@ module PageSerializer
       def meta
         super(title: title).tap do |meta|
           meta[:opensearch_description_url] = opensearch_description_url if opensearch_description_url
+          meta[:disable_format_detection] = true
         end
       end
 
