@@ -23,7 +23,7 @@ class CardFactory
   end
 
   def card_small
-    ComponentSerializer::SmallComponentSerializer.new({ content: @small }).to_h
+    ComponentSerializer::SmallComponentSerializer.new(content: @small).to_h
   end
 
   def card_heading

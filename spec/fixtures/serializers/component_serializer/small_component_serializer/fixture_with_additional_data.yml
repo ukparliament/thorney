@@ -1,5 +1,6 @@
 ---
 name: partials__small
 data:
-  bar: "/bar"
   content: Foo
+  data:
+    bar: "/bar"
