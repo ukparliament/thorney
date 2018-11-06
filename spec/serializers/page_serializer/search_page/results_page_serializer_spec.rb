@@ -52,7 +52,6 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
     context 'with no results' do
       it 'produces the correct hash' do
         allow(results).to receive(:totalResults) { 0 }
-
         expected = get_fixture('no_results')
 
         expect(subject.to_yaml).to eq(expected)
