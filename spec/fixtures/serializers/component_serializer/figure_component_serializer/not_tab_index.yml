@@ -8,5 +8,7 @@ data:
   alt-text: Here is a picture of Dianne Abbot
   alt-data: Dianne Abbott
   source: https://and-yet-another-photo.uk
-  figcap-content: image.image-of
-  figcap-data: Dianne Abbott
+  figcaption:
+    content: image.image_of
+    data:
+      name: Dianne Abbott
