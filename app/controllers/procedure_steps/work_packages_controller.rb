@@ -27,7 +27,7 @@ module ProcedureSteps
       end
       list_components.compact!
 
-      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('work_packages.index.title'), subheading_content: @procedure_step.try(:procedureStepName), subheading_link: procedure_step_path)
+      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('work_packages.index.title'), subheading: @procedure_step.try(:procedureStepName), subheading_link: procedure_step_path)
 
       serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 

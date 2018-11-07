@@ -45,7 +45,7 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypesController, vcr: true do
 
     context 'calling the serializers correctly' do
       it 'calls the Heading1ComponentSerializer correctly' do
-        expect(ComponentSerializer::Heading1ComponentSerializer).to have_received(:new).with(heading_content: 'Availability Types', subheading_content: 'groupName - 1', subheading_link: '/groups/XouN12Ow')
+        expect(ComponentSerializer::Heading1ComponentSerializer).to have_received(:new).with(heading: 'Availability Types', subheading: 'groupName - 1', subheading_link: '/groups/XouN12Ow')
       end
 
       it 'calls the ListPageSerializer correctly' do

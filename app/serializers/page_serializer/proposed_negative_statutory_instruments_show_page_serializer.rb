@@ -23,7 +23,7 @@ module PageSerializer
     end
 
     def heading1_component
-      ComponentSerializer::Heading1ComponentSerializer.new({ subheading_content: 'proposed-negative-statutory-instruments.show.subheading', heading_content: title }).to_h
+      ComponentSerializer::Heading1ComponentSerializer.new({ subheading: 'proposed-negative-statutory-instruments.show.subheading', heading: title }).to_h
     end
 
     def meta_info

@@ -5,6 +5,7 @@ data:
     content: MP for
   heading:
     content: Dianne Abbott
-    data: www.dianneabbott.com
+    data:
+      link: www.dianneabbott.com
   context:
     content: Ingelbert and Humperdink
