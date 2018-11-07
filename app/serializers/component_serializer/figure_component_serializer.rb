@@ -8,7 +8,7 @@ module ComponentSerializer
     # @param [boolean] tab_index an optional parameter which adds a tab_index property to data.
     # @param [Array<Hash>] source_info is a hash containing the any source tag information, up to three key/value pairs. Including: media, srcset and additional srcset.
     # @param [Array<Hash>] img is a hash containing three key/value pairs to go in the img tag. One string of text or translation key for the alt label, one with any data from the backend to go in the alt label and the link for the src.
-    # @param [Array<Hash>] figcap is a hash containing two key/value pairs. One for the content strign or translation key of the figure caption and one for any data it might need from the backend.
+    # @param [String/Array<Hash>] figcap  can be a string or translation key, or it can be a hash containing a translation key and data to be interpolated. To create the hash you must use the ContentDataHelper
     #
     # @example Initialising a figure partial
     #  display_data_info = [display_data(component: 'avitar', variant: 'round')]
@@ -19,9 +19,8 @@ module ComponentSerializer
     #  text_describing_image = 'This is a picture of Dianne Abbott'
     #  backend_data_for_text_describing_image = 'MP for Hackeny'
     #  img_source_link = 'https://api.parliament.uk/photo/S3bGSTqn.jpeg?width=1464&amp;quality=90'
-    #  figcap_text_or_translation_key = 'Here is an image of Dianne Abbott'
-    #  backend_data_for_figcap_text = 'MP for Hackeny'
-    #  ComponentSerializer::FigureComponentSerializer.new(display_data: display_data_info, link: link_when_image_clicked, aria_hidden: boolean, tab_index: boolean, source_info: { source_media: size_of_image, source_srcset: links_to_source_info, source_srcset_2: links_to_source_info }, img: { alt_text: text_describing_image, alt_data: backend_data_for_text_describing_image, source: img_source_link }, figcap: { figcap_content: figcap_text_or_translation_key, figcap_data: backend_data_for_figcap_text }).to_h
+    #  figcap_content = 'Here is a picture of an MP' or ContentDataHelper.content_data(content: 'translation_key' , link: 'parliament.uk' )
+    #  ComponentSerializer::FigureComponentSerializer.new(display_data: display_data_info, link: link_when_image_clicked, aria_hidden: boolean, tab_index: boolean, source_info: { source_media: size_of_image, source_srcset: links_to_source_info, source_srcset_2: links_to_source_info }, img: { alt_text: text_describing_image, alt_data: backend_data_for_text_describing_image, source: img_source_link }, figcap: figcap_content).to_h
     def initialize(display_data: nil, link: nil, aria_hidden: nil, tab_index: nil, source_info: nil, img: nil, figcap: nil)
       @display_data = display_data
       @link = link
@@ -67,8 +66,8 @@ module ComponentSerializer
 
     def extract_figcap
       {}.tap do |hash|
-        hash[:figcap_content] = @figcap[:figcap_content] if @figcap && @figcap[:figcap_content]
-        hash[:figcap_data] = @figcap[:figcap_data] if @figcap && @figcap[:figcap_data]
+        hash[:figcaption] = { content: @figcap } if @figcap.is_a?(String)
+        hash[:figcaption] = @figcap if @figcap.is_a?(Hash)
       end
     end
   end
