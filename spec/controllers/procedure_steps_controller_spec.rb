@@ -36,7 +36,7 @@ RSpec.describe ProcedureStepsController, vcr: true do
       expect(response).to have_http_status(:ok)
     end
 
-    it 'assigns @statutory_instruments' do
+    it 'assigns @procedure_steps' do
       assigns(:procedure_steps).each do |procedure_step|
         expect(procedure_step).to be_a(Grom::Node)
         expect(procedure_step.type).to include('https://id.parliament.uk/schema/ProcedureStep')
@@ -65,6 +65,12 @@ RSpec.describe ProcedureStepsController, vcr: true do
                           "name" => "card__generic"}]
 
       expect(PageSerializer::ListPageSerializer).to have_received(:new).with(request: request, heading_component: heading, list_components: list_components, data_alternates: data_alternates)
+    end
+
+    context 'if a house does not have a name' do
+      it 'can handle the nils' do
+        expect(PageSerializer::ListPageSerializer).to have_received(:new)
+      end
     end
   end
 
