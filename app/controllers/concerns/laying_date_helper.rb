@@ -11,6 +11,7 @@ module LayingDateHelper
 
     return layings.first.date if layings.length == 1
 
+    # Remove any nil values and find the earliest date.
     layings.map(&:date).compact.min
   end
 end

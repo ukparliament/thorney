@@ -3,19 +3,19 @@ class WorkPackageListComponentsFactory
     include Rails.application.routes.url_helpers
     include ListDescriptionHelper
     include LayingDateHelper
-  end
 
-  def self.build_components(work_packages: nil)
-    work_packages.map do |work_package|
-      CardFactory.new(
-        heading_text:             work_package&.work_packaged_thing.try(:workPackagedThingName),
-        heading_url:              work_package_path(work_package.graph_id),
-        description_list_content: date_description_item(work_package)
-      ).build_card
+    def build_components(work_packages: nil)
+      work_packages.map do |work_package|
+        CardFactory.new(
+          heading_text:             work_package&.work_packaged_thing.try(:workPackagedThingName),
+          heading_url:              work_package_path(work_package.graph_id),
+          description_list_content: date_description_item(work_package)
+        ).build_card
+      end
     end
-  end
 
-  class << self
+    private
+
     def date_description_item(work_package)
       laying_date = LayingDateHelper.get_date(work_package)
 

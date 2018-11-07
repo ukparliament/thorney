@@ -5,18 +5,22 @@ module WorkPackages
 
     ROUTE_MAP = {
       show:    proc do |params|
-        if params.fetch(:paper_type) == 'statutory-instruments'
-          ParliamentHelper.parliament_request.work_packages_paper_types_statutory_instruments
-        elsif params.fetch(:paper_type) == 'proposed-negative-statutory-instruments'
-          ParliamentHelper.parliament_request.work_packages_paper_types_proposed_negative_statutory_instruments
-        end
+        request = ParliamentHelper.parliament_request
+        paper_type = params.fetch(:paper_type)
+
+        request.work_packages_paper_types_statutory_instruments if paper_type == 'statutory-instruments'
+        request.work_packages_paper_types_proposed_negative_statutory_instruments if paper_type == 'proposed-negative-statutory-instruments'
+
+        request
       end,
       current: proc do |params|
-        if params.fetch(:paper_type) == 'statutory-instruments'
-          ParliamentHelper.parliament_request.work_packages_paper_types_statutory_instruments_current
-        elsif params.fetch(:paper_type) == 'proposed-negative-statutory-instruments'
-          ParliamentHelper.parliament_request.work_packages_paper_types_proposed_negative_statutory_instruments_current
-        end
+        request = ParliamentHelper.parliament_request
+        paper_type = params.fetch(:paper_type)
+
+        request.work_packages_paper_types_statutory_instruments_current if paper_type == 'statutory-instruments'
+        request.work_packages_paper_types_proposed_negative_statutory_instruments_current if paper_type == 'proposed-negative-statutory-instruments'
+
+        request
       end
     }.freeze
 
@@ -50,11 +54,11 @@ module WorkPackages
 
       list_components = WorkPackageListComponentsFactory.build_components(work_packages: sorted_work_packages)
 
-      heading = if params.fetch(:paper_type) == 'statutory-instruments'
-                  ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('work_packages.paper_types.show.si_title'))
-                elsif params.fetch(:paper_type) == 'proposed-negative-statutory-instruments'
-                  ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('work_packages.paper_types.show.psni_title'))
-                end
+      paper_type = params.fetch(:paper_type)
+      heading_translation = 'work_packages.paper_types.show.si_title' if paper_type == 'statutory-instruments'
+      heading_translation = 'work_packages.paper_types.show.psni_title' if paper_type == 'proposed-negative-statutory-instruments'
+
+      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t(heading_translation))
 
       serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 
@@ -72,11 +76,11 @@ module WorkPackages
 
       list_components = WorkPackageListComponentsFactory.build_components(work_packages: sorted_work_packages)
 
-      heading = if params.fetch(:paper_type) == 'statutory-instruments'
-                  ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('work_packages.paper_types.current.si_title'))
-                elsif params.fetch(:paper_type) == 'proposed-negative-statutory-instruments'
-                  ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('work_packages.paper_types.current.psni_title'))
-                end
+      paper_type = params.fetch(:paper_type)
+      heading_translation = 'work_packages.paper_types.current.si_title' if paper_type == 'statutory-instruments'
+      heading_translation = 'work_packages.paper_types.current.psni_title' if paper_type == 'proposed-negative-statutory-instruments'
+
+      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t(heading_translation))
 
       serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 
