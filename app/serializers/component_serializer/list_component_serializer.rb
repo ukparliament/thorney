@@ -53,8 +53,8 @@ module ComponentSerializer
 
     def contents
       @contents.map do |content|
-        element = { content: content }
-        element = { content: content[:content], data: { link: content[:link] } } if content.is_a?(Hash) && content[:link]
+        element = { content: content } unless content.is_a?(Hash)
+        element = content if content.is_a?(Hash)
         element
       end
     end
