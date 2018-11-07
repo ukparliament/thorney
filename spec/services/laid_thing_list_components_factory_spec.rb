@@ -1,13 +1,13 @@
 require_relative '../rails_helper'
 
 RSpec.describe LaidThingListComponentsFactory, type: :serializer, vcr: true do
-  let(:si_response) {Parliament::Request::UrlRequest.new(base_url:   ENV['PARLIAMENT_BASE_URL'],
+  let(:si_response) { Parliament::Request::UrlRequest.new(base_url:   ENV['PARLIAMENT_BASE_URL'],
                                                       builder:    Parliament::Builder::NTripleResponseBuilder,
-                                                      decorators: Parliament::Grom::Decorator).statutory_instrument_index.get}
+                                                      decorators: Parliament::Grom::Decorator).statutory_instrument_index.get }
 
-  let(:pnsi_response) {Parliament::Request::UrlRequest.new(base_url:   ENV['PARLIAMENT_BASE_URL'],
+  let(:pnsi_response) { Parliament::Request::UrlRequest.new(base_url:   ENV['PARLIAMENT_BASE_URL'],
                                                          builder:    Parliament::Builder::NTripleResponseBuilder,
-                                                         decorators: Parliament::Grom::Decorator).proposed_negative_statutory_instrument_index.get}
+                                                         decorators: Parliament::Grom::Decorator).proposed_negative_statutory_instrument_index.get }
 
   let(:statutory_instruments) { si_response.filter('https://id.parliament.uk/schema/StatutoryInstrumentPaper') }
   let(:proposed_negative_statutory_instruments) { pnsi_response.filter('https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper') }
