@@ -52,7 +52,8 @@ RSpec.describe WorkPackagesController, vcr: true do
                                    "size"=>2},
                                 "name"=>"heading"},
                              "list-description"=>
-                               {"data"=>{"items"=>[{"description"=>[{"content"=>"shared.time-html", "data"=>{"date"=>"23 April 2018", "datetime-value"=>"2018-04-23"}}], "term"=>{"content"=>"laid-thing.laid-date"}}]}, "name"=>"list__description"}}, "name"=>"card__generic"}]
+                               {"data"=>{"items"=>[{"description"=>[{"content"=>"procedureName - 1"}],
+                                                   "term"=>{"content"=>"laid-thing.procedure"}}, {"description"=>[{"content"=>"shared.time-html", "data"=>{"date"=>"23 April 2018", "datetime-value"=>"2018-04-23"}}], "term"=>{"content"=>"laid-thing.laid-date"}}]}, "name"=>"list__description"}}, "name"=>"card__generic"}]
 
       expect(PageSerializer::ListPageSerializer).to have_received(:new).with(request: request, heading_component: heading, list_components: list_components, data_alternates: data_alternates)
     end

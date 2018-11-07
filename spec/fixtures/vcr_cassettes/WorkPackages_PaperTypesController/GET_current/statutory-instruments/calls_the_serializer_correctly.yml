@@ -26,11 +26,11 @@ http_interactions:
       Content-Disposition:
       - inline; filename="index"
       Last-Modified:
-      - Tue, 06 Nov 2018 12:29:08 GMT
+      - Wed, 07 Nov 2018 13:27:31 GMT
       X-Content-Type-Options:
       - nosniff
       Content-Length:
-      - '396740'
+      - '462662'
     body:
       encoding: UTF-8
       string: |
@@ -39,8 +39,12 @@ http_interactions:
         <https://id.parliament.uk/5trFJNih> <https://id.parliament.uk/schema/laidThingHasLaying> <https://id.parliament.uk/PSi2j23h> .
         <https://id.parliament.uk/rlJaCEwJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackage> .
         <https://id.parliament.uk/rlJaCEwJ> <https://id.parliament.uk/schema/workPackageHasWorkPackagedThing> <https://id.parliament.uk/5trFJNih> .
+        <https://id.parliament.uk/rlJaCEwJ> <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/5S6p4YsP> .
         <https://id.parliament.uk/PSi2j23h> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying> .
         <https://id.parliament.uk/PSi2j23h> <https://id.parliament.uk/schema/layingDate> "2018-04-23+01:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/5S6p4YsP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Procedure> .
+        <https://id.parliament.uk/5S6p4YsP> <https://id.parliament.uk/schema/procedureName> "procedureName - 1" .
+
     http_version: 
-  recorded_at: Wed, 07 Nov 2018 09:33:45 GMT
+  recorded_at: Wed, 07 Nov 2018 14:44:15 GMT
 recorded_with: VCR 4.0.0
