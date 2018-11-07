@@ -40,7 +40,7 @@ module PageSerializer
 
       houses = houses.map { |house| house.try(:houseName) }.compact.to_sentence
 
-      [create_description_list_item('procedure-steps.houses', [houses])]
+      [create_description_list_item(term: 'procedure-steps.houses', descriptions: [houses])]
     end
 
     def heading_content
