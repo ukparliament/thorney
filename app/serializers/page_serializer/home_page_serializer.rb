@@ -15,8 +15,8 @@ module PageSerializer
 
     def hero_components
       [].tap do |content|
-        content << ComponentSerializer::Heading1ComponentSerializer.new(heading_content: 'home.hero.heading').to_h
-        content << ComponentSerializer::ParagraphComponentSerializer.new(content: ['home.hero.building-new-website', { content: 'home.hero.follow-beta-progress' }]).to_h
+        content << ComponentSerializer::Heading1ComponentSerializer.new(heading: 'home.hero.heading').to_h
+        content << ComponentSerializer::ParagraphComponentSerializer.new(content: ['home.hero.building-new-website', 'home.hero.follow-beta-progress']).to_h
       end
     end
 
