@@ -2,10 +2,10 @@ module ComponentSerializer
   class Heading1ComponentSerializer < ComponentSerializer::BaseComponentSerializer
     # Initialise a heading1 component.
     #
-    # @param [Hash,String] subheading content of the subheading, this could be a string/ translation key or a content data hash.
+    # @param [Hash | String] subheading content of the subheading, this could be a string/ translation key or a content data hash.
     # @param [String] subheading_link link for the subheading, providing this will wrap the subheading in <a> tags
-    # @param [Hash,String] heading content of the heading, this could be a string/ translation key or a content data hash.
-    # @param [Hash,String] context content of the context, this could be a string/ translation key or a content data hash.
+    # @param [Hash | String] heading content of the heading, this could be a string/ translation key or a content data hash.
+    # @param [Hash | String] context content of the context, this could be a string/ translation key or a content data hash.
     # @param [Boolean] context_hidden this boolean indicated if the context is only available to screen readers.
     #
     # @example Initialising a heading1 component with content
@@ -42,7 +42,8 @@ module ComponentSerializer
       {}.tap do |hash|
         hash[:subheading] = subheading if @subheading[:content]
         hash[:heading] = @heading if @heading[:content]
-        hash[:context] = context if @context[:content]
+        hash[:context] = @context if @context[:content] && !@context_hidden
+        hash[:context] = context_hidden if @context[:content] && @context_hidden
       end
     end
 
@@ -51,13 +52,9 @@ module ComponentSerializer
       @subheading
     end
 
-    def context
-      if @context[:content] && @context_hidden
-        @context[:hidden] = @context_hidden
-        @context
-      else
-        @context
-      end
+    def context_hidden
+      @context[:hidden] = @context_hidden
+      @context
     end
   end
 end

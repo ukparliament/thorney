@@ -36,7 +36,7 @@ module WorkPackages
         ).build_card
       ]
 
-      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('work_packages.paper_types.index.title'))
+      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('work_packages.paper_types.index.title'))
 
       serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components)
 
@@ -58,7 +58,7 @@ module WorkPackages
       heading_translation = 'work_packages.paper_types.show.si_title' if paper_type == 'statutory-instruments'
       heading_translation = 'work_packages.paper_types.show.psni_title' if paper_type == 'proposed-negative-statutory-instruments'
 
-      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t(heading_translation))
+      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t(heading_translation))
 
       serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 
@@ -80,7 +80,7 @@ module WorkPackages
       heading_translation = 'work_packages.paper_types.current.si_title' if paper_type == 'statutory-instruments'
       heading_translation = 'work_packages.paper_types.current.psni_title' if paper_type == 'proposed-negative-statutory-instruments'
 
-      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t(heading_translation))
+      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t(heading_translation))
 
       serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 

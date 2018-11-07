@@ -2,13 +2,13 @@ module ComponentSerializer
   class FigureComponentSerializer < BaseComponentSerializer
     # Initialise a figure partial.
     #
-    # @param [Array<Hash>] display_data used for the element's css.
+    # @param [Hash] display_data used for the element's css.
     # @param [String] link a URL or other link which the user will follow if they click on the figure.
     # @param [boolean] aria_hidden an optional parameter which adds a aria_hidden property to data.
     # @param [boolean] tab_index an optional parameter which adds a tab_index property to data.
-    # @param [Array<Hash>] source_info is a hash containing the any source tag information, up to three key/value pairs. Including: media, srcset and additional srcset.
-    # @param [Array<Hash>] img is a hash containing three key/value pairs to go in the img tag. One string of text or translation key for the alt label, one with any data from the backend to go in the alt label and the link for the src.
-    # @param [String/Array<Hash>] figcap  can be a string or translation key, or it can be a hash containing a translation key and data to be interpolated. To create the hash you must use the ContentDataHelper
+    # @param [Hash] source_info is a hash containing the any source tag information, up to three key/value pairs. Including: media, srcset and additional srcset.
+    # @param [Hash] img is a hash containing three key/value pairs to go in the img tag. One string of text or translation key for the alt label, one with any data from the backend to go in the alt label and the link for the src.
+    # @param [String | Hash] figcap  can be a string or translation key, or it can be a hash containing a translation key and data to be interpolated. To create the hash you must use the ContentDataHelper
     #
     # @example Initialising a figure partial
     #  display_data_info = [display_data(component: 'avitar', variant: 'round')]
