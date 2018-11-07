@@ -36,6 +36,7 @@ http_interactions:
       string: |
         <https://id.parliament.uk/rlJaCEwJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackage> .
         <https://id.parliament.uk/rlJaCEwJ> <https://id.parliament.uk/schema/workPackageHasWorkPackagedThing> <https://id.parliament.uk/5trFJNih> .
+        <https://id.parliament.uk/rlJaCEwJ> <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/5S6p4YsP> .
         <https://id.parliament.uk/5trFJNih> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackagedThing> .
         <https://id.parliament.uk/5trFJNih> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing> .
         <https://id.parliament.uk/5trFJNih> <https://id.parliament.uk/schema/workPackagedThingName> "workPackagedThingName - 1" .
