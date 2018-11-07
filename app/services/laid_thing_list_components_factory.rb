@@ -2,19 +2,19 @@ class LaidThingListComponentsFactory
   class << self
     include Rails.application.routes.url_helpers
     include ListDescriptionHelper
-  end
 
-  def self.build_components(statutory_instruments: nil, type: nil)
-    statutory_instruments.map do |statutory_instrument|
-      CardFactory.new(
-        heading_text:             heading_text(statutory_instrument, type),
-        heading_url:              heading_url(statutory_instrument, type),
-        description_list_content: description_list_content(statutory_instrument)
-      ).build_card
+    def build_components(statutory_instruments: nil, type: nil)
+      statutory_instruments.map do |statutory_instrument|
+        CardFactory.new(
+          heading_text:             heading_text(statutory_instrument, type),
+          heading_url:              heading_url(statutory_instrument, type),
+          description_list_content: description_list_content(statutory_instrument)
+        ).build_card
+      end
     end
-  end
 
-  class << self
+    private
+
     def heading_text(statutory_instrument, type)
       if type == :statutory_instrument
         statutory_instrument.try(:statutoryInstrumentPaperName)

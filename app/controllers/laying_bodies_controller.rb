@@ -3,7 +3,7 @@ class LayingBodiesController < ApplicationController
   before_action :build_request, :data_check
 
   ROUTE_MAP = {
-    index: proc {ParliamentHelper.parliament_request.laying_body_index},
+    index: proc { ParliamentHelper.parliament_request.laying_body_index }
   }.freeze
 
   def index

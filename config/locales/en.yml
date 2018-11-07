@@ -71,8 +71,20 @@ en:
   procedure_steps:
     index:
       title: "Procedure Steps"
-  work_packages:
-    title: "Work Packages"
   laying_bodies:
     index:
       title: "Laying Bodies"
+  work_packages:
+    index:
+      title: "Work Packages"
+    current:
+      title: "Current Work Packages"
+    paper_types:
+      index:
+        title: "Paper Types"
+      show:
+        si_title: "Work Packages - Statutory Instruments"
+        psni_title:  "Work Packages - Proposed Negative Statutory Instruments"
+      current:
+        si_title: "Current Work Packages - Statutory Instruments"
+        psni_title:  "Current Work Packages - Proposed Negative Statutory Instruments"

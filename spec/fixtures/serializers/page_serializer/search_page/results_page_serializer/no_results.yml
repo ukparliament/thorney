@@ -12,6 +12,7 @@ meta:
     image-height: '630'
     twitter-card: summary_large_image
   opensearch-description-url: https://example.com/search/opensearch
+  disable-format-detection: true
 header-components:
 - name: link
   data:

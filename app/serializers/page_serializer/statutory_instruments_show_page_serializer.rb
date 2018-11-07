@@ -22,8 +22,21 @@ module PageSerializer
       @statutory_instrument.try(:statutoryInstrumentPaperName)
     end
 
+    def title_context
+      paper_prefix  = @statutory_instrument.try(:statutoryInstrumentPaperPrefix)
+      paper_year    = @statutory_instrument.try(:statutoryInstrumentPaperYear)
+      paper_number  = @statutory_instrument.try(:statutoryInstrumentPaperNumber)
+
+      ctx_info = ''
+      ctx_info << paper_prefix.to_s if paper_prefix
+      ctx_info << " #{paper_year}" if paper_year
+      ctx_info << "/#{paper_number}" if paper_number
+
+      ctx_info unless ctx_info.empty?
+    end
+
     def heading1_component
-      ComponentSerializer::Heading1ComponentSerializer.new({ subheading_content: 'statutory-instruments.show.subheading', heading_content: title, context_content: "#{@statutory_instrument.try(:statutoryInstrumentPaperPrefix)} #{@statutory_instrument.try(:statutoryInstrumentPaperYear)}/#{@statutory_instrument.try(:statutoryInstrumentPaperNumber)}" }).to_h
+      ComponentSerializer::Heading1ComponentSerializer.new({ subheading_content: 'statutory-instruments.show.subheading', heading_content: title, context_content: title_context }).to_h
     end
 
     def meta_info
