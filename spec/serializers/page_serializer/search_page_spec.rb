@@ -19,7 +19,7 @@ RSpec.describe PageSerializer::SearchPage do
 
     subject.send(:section_primary_components, 'results_heading', 'banana', true)
 
-    expect(ComponentSerializer::Heading1ComponentSerializer).to have_received(:new).with(heading_content: 'results_heading', context_content: 'banana', context_hidden: true)
+    expect(ComponentSerializer::Heading1ComponentSerializer).to have_received(:new).with(heading: 'results_heading', context: 'banana', context_hidden: true)
     expect(ComponentSerializer::SearchFormComponentSerializer).to have_received(:new).with(query: 'banana', components: [ComponentSerializer::SearchIconComponentSerializer.new.to_h])
   end
 

@@ -20,7 +20,7 @@ class ProcedureStepsController < ApplicationController
       ).build_card
     end
 
-    heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('procedure_steps.index.title'))
+    heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('procedure_steps.index.title'))
 
     serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 

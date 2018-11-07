@@ -1,19 +1,16 @@
 require_relative '../../rails_helper'
 
 RSpec.describe ComponentSerializer::Heading1ComponentSerializer do
-  let(:heading_content) { 'Dianne Abbott' }
-  let(:heading_data) { 'www.dianneabbott.com' }
-  let(:subheading_content) { 'MP for' }
-  let(:subheading_data) { 'www.MP.com' }
+  let(:heading) { ContentDataHelper.content_data(content: 'Dianne Abbott', link: 'www.dianneabbott.com') }
+  let(:subheading) { ContentDataHelper.content_data(content: 'MP for', link: 'www.MP.com') }
   let(:subheading_link) { '/people/12345678' }
-  let(:context_content) { 'Ingelbert and Humperdink' }
-  let(:context_data) { 'www.londonborughofingelbertandhumperdink.com' }
+  let(:context) { ContentDataHelper.content_data(content: 'Ingelbert and Humperdink', link: 'londonbouroughofingelbertandhumperdink.com') }
   let(:context_hidden) { true }
 
   context '#to_h' do
     context 'with just heading content' do
       it 'returns a hash containing the name and data' do
-        serializer = described_class.new(heading_content: heading_content)
+        serializer = described_class.new(heading: 'Dianne Abbott')
 
         expected = get_fixture('only_heading_content')
 
@@ -23,7 +20,7 @@ RSpec.describe ComponentSerializer::Heading1ComponentSerializer do
 
     context 'with just subheading content' do
       it 'returns a hash containing the name and data' do
-        serializer = described_class.new(subheading_content: subheading_content)
+        serializer = described_class.new(subheading: 'MP for')
 
         expected = get_fixture('only_subheading_content')
 
@@ -33,7 +30,7 @@ RSpec.describe ComponentSerializer::Heading1ComponentSerializer do
 
     context 'with just context content' do
       it 'returns a hash containing the name and data' do
-        serializer = described_class.new(context_content: context_content)
+        serializer = described_class.new(context: 'Ingelbert and Humperdink')
 
         expected = get_fixture('only_context_content')
 
@@ -43,7 +40,7 @@ RSpec.describe ComponentSerializer::Heading1ComponentSerializer do
 
     context 'with subheading, heading and context content' do
       it 'returns a hash containing the name and data' do
-        serializer = described_class.new(heading_content: heading_content, subheading_content: subheading_content, context_content: context_content)
+        serializer = described_class.new(heading: 'Dianne Abbott', subheading: 'MP for', context: 'Ingelbert and Humperdink')
 
         expected = get_fixture('all_content')
 
@@ -53,7 +50,7 @@ RSpec.describe ComponentSerializer::Heading1ComponentSerializer do
 
     context 'with all content and heading data' do
       it 'returns a hash containing the name and data' do
-        serializer = described_class.new(heading_content: heading_content, heading_data: heading_data, subheading_content: subheading_content, context_content: context_content)
+        serializer = described_class.new(heading: heading, subheading: 'MP for', context: 'Ingelbert and Humperdink')
 
         expected = get_fixture('all_content_heading_data')
 
@@ -63,7 +60,7 @@ RSpec.describe ComponentSerializer::Heading1ComponentSerializer do
 
     context 'with all content and heading, subheading data' do
       it 'returns a hash containing the name and data' do
-        serializer = described_class.new(heading_content: heading_content, heading_data: heading_data, subheading_content: subheading_content, subheading_data: subheading_data, context_content: context_content)
+        serializer = described_class.new(heading: heading, subheading: subheading, context: 'Ingelbert and Humperdink')
 
         expected = get_fixture('all_content_heading_subheading_data')
 
@@ -73,7 +70,7 @@ RSpec.describe ComponentSerializer::Heading1ComponentSerializer do
 
     context 'with all content and all data' do
       it 'returns a hash containing the name and data' do
-        serializer = described_class.new(heading_content: heading_content, heading_data: heading_data, subheading_content: subheading_content, subheading_data: subheading_data, context_content: context_content, context_data: context_data)
+        serializer = described_class.new(heading: heading, subheading: subheading, context: context)
 
         expected = get_fixture('all_content_all_data')
 
@@ -83,8 +80,8 @@ RSpec.describe ComponentSerializer::Heading1ComponentSerializer do
 
     context 'with all content and all data and context hidden' do
       it 'returns a hash containing the name and data' do
-        serializer = described_class.new(heading_content: heading_content, heading_data: heading_data, subheading_content: subheading_content, subheading_data: subheading_data, context_content: context_content, context_data: context_data, context_hidden: context_hidden)
-
+        serializer = described_class.new(heading: heading, subheading: subheading, context: context, context_hidden: context_hidden)
+create_fixture(serializer, 'all_content_all_data_context_hidden')
         expected = get_fixture('all_content_all_data_context_hidden')
 
         expect(serializer.to_yaml).to eq expected
@@ -94,7 +91,7 @@ RSpec.describe ComponentSerializer::Heading1ComponentSerializer do
     context 'with a subheading link' do
       context 'when there is subheading_content and subheading_link' do
         it 'wraps subheading_content in an href with a link' do
-          serializer = described_class.new(subheading_content: subheading_content, subheading_link: subheading_link)
+          serializer = described_class.new(subheading: 'MP for', subheading_link: subheading_link)
 
           expected = get_fixture('subheading_link')
 
@@ -104,7 +101,7 @@ RSpec.describe ComponentSerializer::Heading1ComponentSerializer do
 
       context 'when there is no subheading_link' do
         it 'does not modify subheading_content' do
-          serializer = described_class.new(subheading_content: subheading_content )
+          serializer = described_class.new(subheading: 'MP for' )
 
           expected = get_fixture('no_subheading_link')
 
@@ -117,7 +114,7 @@ RSpec.describe ComponentSerializer::Heading1ComponentSerializer do
   context '#to_s' do
     context 'with no subheading content' do
       it 'returns only the heading content' do
-        serializer = described_class.new(heading_content: 'I am a heading')
+        serializer = described_class.new(heading: 'I am a heading')
 
         expect(serializer.to_s).to eq 'I am a heading'
       end
@@ -125,7 +122,7 @@ RSpec.describe ComponentSerializer::Heading1ComponentSerializer do
 
     context 'with subheading content' do
       it 'returns the subheading content and heading content with a hyphen in between' do
-        serializer = described_class.new(heading_content: 'I am a heading', subheading_content: 'I am a subheading')
+        serializer = described_class.new(heading: 'I am a heading', subheading: 'I am a subheading')
 
         expect(serializer.to_s).to eq 'I am a subheading - I am a heading'
       end

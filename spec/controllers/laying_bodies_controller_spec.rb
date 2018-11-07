@@ -24,7 +24,7 @@ RSpec.describe LayingBodiesController, vcr: true do
 
     before(:each) do
       allow(PageSerializer::ListPageSerializer).to receive(:new)
-      allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading_content: 'Laying Bodies') { heading }
+      allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'Laying Bodies') { heading }
 
       allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
 

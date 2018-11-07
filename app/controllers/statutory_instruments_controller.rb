@@ -14,7 +14,7 @@ class StatutoryInstrumentsController < ApplicationController
 
     list_components = LaidThingListComponentsFactory.build_components(statutory_instruments: sorted_statutory_instruments, type: :statutory_instrument)
 
-    heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('statutory_instruments.index.title'))
+    heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('statutory_instruments.index.title'))
 
     serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 

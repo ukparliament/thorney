@@ -7,7 +7,7 @@ RSpec.describe WorkPackages::PaperTypesController, vcr: true do
 
     before(:each) do
       allow(PageSerializer::ListPageSerializer).to receive(:new)
-      allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading_content: 'Paper Types') { heading }
+      allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'Paper Types') { heading }
 
       allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
 
@@ -64,7 +64,7 @@ RSpec.describe WorkPackages::PaperTypesController, vcr: true do
     context 'statutory-instruments' do
       before(:each) do
         allow(PageSerializer::ListPageSerializer).to receive(:new)
-        allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading_content: 'Work Packages - Statutory Instruments') { heading }
+        allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'Work Packages - Statutory Instruments') { heading }
 
         allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
 
@@ -104,7 +104,7 @@ RSpec.describe WorkPackages::PaperTypesController, vcr: true do
     context 'proposed-negative-statutory-instruments' do
       before(:each) do
         allow(PageSerializer::ListPageSerializer).to receive(:new)
-        allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading_content: 'Work Packages - Proposed Negative Statutory Instruments') { heading }
+        allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'Work Packages - Proposed Negative Statutory Instruments') { heading }
 
         allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
 
@@ -141,7 +141,7 @@ RSpec.describe WorkPackages::PaperTypesController, vcr: true do
     context 'statutory-instruments' do
       before(:each) do
         allow(PageSerializer::ListPageSerializer).to receive(:new)
-        allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading_content: 'Current Work Packages - Statutory Instruments') { heading }
+        allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'Current Work Packages - Statutory Instruments') { heading }
 
         allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
 
@@ -181,7 +181,7 @@ RSpec.describe WorkPackages::PaperTypesController, vcr: true do
     context 'proposed-negative-statutory-instruments' do
       before(:each) do
         allow(PageSerializer::ListPageSerializer).to receive(:new)
-        allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading_content: 'Current Work Packages - Proposed Negative Statutory Instruments') { heading }
+        allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'Current Work Packages - Proposed Negative Statutory Instruments') { heading }
 
         allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
 

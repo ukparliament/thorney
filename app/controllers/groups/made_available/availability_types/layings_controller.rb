@@ -35,7 +35,7 @@ module Groups
             ).build_card
           end
 
-          heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('layings.title'), subheading_content: @group.try(:groupName), subheading_link: group_path)
+          heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('layings.title'), subheading: @group.try(:groupName), subheading_link: group_path)
 
           serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 

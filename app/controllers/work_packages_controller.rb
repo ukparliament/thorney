@@ -17,7 +17,7 @@ class WorkPackagesController < ApplicationController
 
     list_components = WorkPackageListComponentsFactory.build_components(work_packages: sorted_work_packages)
 
-    heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('work_packages.current.title'))
+    heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('work_packages.current.title'))
 
     serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 
