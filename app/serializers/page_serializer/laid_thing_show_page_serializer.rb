@@ -52,7 +52,7 @@ module PageSerializer
         components << ComponentSerializer::CardComponentSerializer.new(
           name: 'card__generic',
           data: {
-            small:            ComponentSerializer::SmallComponentSerializer.new({ content: 'laid-thing.work-package' }).to_h,
+            small:            ComponentSerializer::SmallComponentSerializer.new(content: 'laid-thing.work-package').to_h,
             heading:          work_package_card_heading,
             list_description: work_package_list_description
           }
