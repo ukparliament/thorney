@@ -9,13 +9,7 @@ class WorkPackagesController < ApplicationController
   def current
     @work_packages = FilterHelper.filter(@api_request, 'WorkPackage')
 
-    grouping_block = proc do |work_package|
-      LayingDateHelper.get_date(work_package)
-    end
-
-    sorted_work_packages = GroupSortHelper.group_and_sort(@work_packages, group_block: grouping_block, key_sort_descending: true, sort_method_symbols: %i[work_packaged_thing workPackagedThingName])
-
-    list_components = WorkPackageListComponentsFactory.build_components(work_packages: sorted_work_packages)
+    list_components = WorkPackageListComponentsFactory.sort_and_build_components(work_packages: @work_packages, group_by: :laying_date)
 
     heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('work_packages.current.title'))
 

@@ -46,13 +46,7 @@ module WorkPackages
     def show
       @work_packages = FilterHelper.filter(@api_request, 'WorkPackage')
 
-      grouping_block = proc do |work_package|
-        LayingDateHelper.get_date(work_package)
-      end
-
-      sorted_work_packages = GroupSortHelper.group_and_sort(@work_packages, group_block: grouping_block, key_sort_descending: true, sort_method_symbols: %i[work_packaged_thing workPackagedThingName])
-
-      list_components = WorkPackageListComponentsFactory.build_components(work_packages: sorted_work_packages)
+      list_components = WorkPackageListComponentsFactory.sort_and_build_components(work_packages: @work_packages, group_by: :laying_date)
 
       paper_type = params.fetch(:paper_type)
       heading_translation = 'work_packages.paper_types.show.si_title' if paper_type == 'statutory-instruments'
@@ -68,13 +62,7 @@ module WorkPackages
     def current
       @work_packages = FilterHelper.filter(@api_request, 'WorkPackage')
 
-      grouping_block = proc do |work_package|
-        LayingDateHelper.get_date(work_package)
-      end
-
-      sorted_work_packages = GroupSortHelper.group_and_sort(@work_packages, group_block: grouping_block, key_sort_descending: true, sort_method_symbols: %i[work_packaged_thing workPackagedThingName])
-
-      list_components = WorkPackageListComponentsFactory.build_components(work_packages: sorted_work_packages)
+      list_components = WorkPackageListComponentsFactory.sort_and_build_components(work_packages: @work_packages, group_by: :laying_date)
 
       paper_type = params.fetch(:paper_type)
       heading_translation = 'work_packages.paper_types.current.si_title' if paper_type == 'statutory-instruments'
