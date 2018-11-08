@@ -2,7 +2,7 @@
 layout:
   template: layout
 meta:
-  title: groupName - 1 - Layings - UK Parliament
+  title: groupName - 1 - laid papers - UK Parliament
   request-id: 123456
   data-alternates:
   - type: application/n-triples
@@ -20,7 +20,7 @@ meta:
   - type: application/rdf+xml
     href: http://localhost:3030/group_layings_index.xml?group_id=XouN12Ow
   open-graph:
-    title: groupName - 1 - Layings - UK Parliament
+    title: groupName - 1 - laid papers - UK Parliament
     original-url: https://www.example.com/groups/XouN12Ow/made-available/availability-types/layings
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -96,7 +96,7 @@ main-components:
         subheading:
           content: <a href="/groups/XouN12Ow">groupName - 1</a>
         heading:
-          content: Layings
+          content: groupName - 1 - laid papers
 - name: section__section
   data:
     components:
@@ -114,7 +114,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Proposed Negative Statutory Instrument
+                content: Proposed negative statutory instrument
             heading:
               name: heading
               data:
@@ -134,7 +134,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Proposed Negative Statutory Instrument
+                content: Proposed negative statutory instrument
             heading:
               name: heading
               data:
@@ -154,7 +154,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Proposed Negative Statutory Instrument
+                content: Proposed negative statutory instrument
             heading:
               name: heading
               data:
@@ -174,7 +174,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -194,7 +194,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Proposed Negative Statutory Instrument
+                content: Proposed negative statutory instrument
             heading:
               name: heading
               data:
@@ -214,7 +214,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -234,7 +234,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Proposed Negative Statutory Instrument
+                content: Proposed negative statutory instrument
             heading:
               name: heading
               data:
@@ -254,7 +254,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -274,7 +274,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Proposed Negative Statutory Instrument
+                content: Proposed negative statutory instrument
             heading:
               name: heading
               data:
@@ -294,7 +294,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -314,7 +314,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -334,7 +334,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -354,7 +354,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -374,7 +374,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -394,7 +394,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -414,7 +414,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -434,7 +434,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Proposed Negative Statutory Instrument
+                content: Proposed negative statutory instrument
             heading:
               name: heading
               data:
@@ -454,7 +454,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Proposed Negative Statutory Instrument
+                content: Proposed negative statutory instrument
             heading:
               name: heading
               data:
@@ -474,7 +474,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Proposed Negative Statutory Instrument
+                content: Proposed negative statutory instrument
             heading:
               name: heading
               data:
@@ -494,7 +494,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Proposed Negative Statutory Instrument
+                content: Proposed negative statutory instrument
             heading:
               name: heading
               data:
@@ -514,7 +514,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -534,7 +534,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Proposed Negative Statutory Instrument
+                content: Proposed negative statutory instrument
             heading:
               name: heading
               data:
@@ -554,7 +554,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -574,7 +574,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -594,7 +594,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -614,7 +614,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -634,7 +634,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -654,7 +654,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -674,7 +674,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -694,7 +694,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -714,7 +714,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -734,7 +734,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -754,7 +754,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -774,7 +774,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -794,7 +794,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:
@@ -814,7 +814,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory Instrument
+                content: Statutory instrument
             heading:
               name: heading
               data:

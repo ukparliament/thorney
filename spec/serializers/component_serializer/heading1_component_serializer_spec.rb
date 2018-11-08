@@ -81,7 +81,7 @@ RSpec.describe ComponentSerializer::Heading1ComponentSerializer do
     context 'with all content and all data and context hidden' do
       it 'returns a hash containing the name and data' do
         serializer = described_class.new(heading: heading, subheading: subheading, context: context, context_hidden: context_hidden)
-create_fixture(serializer, 'all_content_all_data_context_hidden')
+
         expected = get_fixture('all_content_all_data_context_hidden')
 
         expect(serializer.to_yaml).to eq expected
@@ -124,7 +124,7 @@ create_fixture(serializer, 'all_content_all_data_context_hidden')
       it 'returns the subheading content and heading content with a hyphen in between' do
         serializer = described_class.new(heading: 'I am a heading', subheading: 'I am a subheading')
 
-        expect(serializer.to_s).to eq 'I am a subheading - I am a heading'
+        expect(serializer.to_s).to eq 'I am a heading'
       end
     end
 

@@ -27,11 +27,11 @@ module WorkPackages
     def index
       list_components = [
         CardFactory.new(
-          heading_text: 'Proposed Negative Statutory Instruments',
+          heading_text: I18n.t('proposed_negative_statutory_instruments.type').pluralize,
           heading_url:  work_packages_paper_type_path('proposed-negative-statutory-instruments')
         ).build_card,
         CardFactory.new(
-          heading_text: 'Statutory Instruments',
+          heading_text: I18n.t('statutory_instruments.type').pluralize,
           heading_url:  work_packages_paper_type_path('statutory-instruments')
         ).build_card
       ]
@@ -46,7 +46,7 @@ module WorkPackages
     def show
       @work_packages = FilterHelper.filter(@api_request, 'WorkPackage')
 
-      list_components = WorkPackageListComponentsFactory.sort_and_build_components(work_packages: @work_packages, group_by: :laying_date)
+      list_components = WorkPackageListComponentsFactory.sort_and_build_components(work_packages: @work_packages, date_type: :laying_date)
 
       paper_type = params.fetch(:paper_type)
       heading_translation = 'work_packages.paper_types.show.si_title' if paper_type == 'statutory-instruments'
@@ -62,7 +62,7 @@ module WorkPackages
     def current
       @work_packages = FilterHelper.filter(@api_request, 'WorkPackage')
 
-      list_components = WorkPackageListComponentsFactory.sort_and_build_components(work_packages: @work_packages, group_by: :laying_date)
+      list_components = WorkPackageListComponentsFactory.sort_and_build_components(work_packages: @work_packages, date_type: :laying_date)
 
       paper_type = params.fetch(:paper_type)
       heading_translation = 'work_packages.paper_types.current.si_title' if paper_type == 'statutory-instruments'
