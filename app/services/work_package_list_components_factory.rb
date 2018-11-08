@@ -4,6 +4,16 @@ class WorkPackageListComponentsFactory
     include ListDescriptionHelper
     include LayingDateHelper
 
+    def sort_and_build_components(work_packages: nil, group_by: nil)
+      grouping_block = nil
+
+      grouping_block = laying_date_block if group_by == :laying_date
+
+      sorted_work_packages = GroupSortHelper.group_and_sort(work_packages, group_block: grouping_block, key_sort_descending: true, sort_method_symbols: %i[work_packaged_thing workPackagedThingName])
+
+      build_components(work_packages: sorted_work_packages)
+    end
+
     def build_components(work_packages: nil)
       work_packages.map do |work_package|
         CardFactory.new(
@@ -16,31 +26,17 @@ class WorkPackageListComponentsFactory
 
     private
 
+    def laying_date_block
+      proc { |work_package| LayingDateHelper.get_date(work_package) }
+    end
+
     def description_list_items(work_package)
-      laying_date = LayingDateHelper.get_date(work_package)
+      laying_date = laying_date_block.call(work_package)
 
       [].tap do |items|
-        items << (procedure_description_item(work_package) if work_package&.procedure)
-        items << (date_description_item(laying_date) if laying_date)
+        items << (create_description_list_item(term: 'laid-thing.procedure', descriptions: [work_package&.procedure.try(:procedureName)]) if work_package&.procedure)
+        items << (create_description_list_item(term: 'laid-thing.laid-date', descriptions: [ContentDataHelper.content_data(content: 'shared.time-html', datetime_value: I18n.l(laying_date, format: :datetime_format), date: I18n.l(laying_date))]) if laying_date)
       end
-    end
-
-    def procedure_description_item(work_package)
-      { 'term':
-                       { 'content': 'laid-thing.procedure' },
-        'description':
-                       [{ 'content': work_package&.procedure.try(:procedureName) }] }
-    end
-
-    def date_description_item(laying_date)
-      { term:        { content: 'laid-thing.laid-date' },
-        description: [{
-          content: 'shared.time-html',
-          data:    {
-            datetime_value: I18n.l(laying_date, format: :datetime_format),
-            date:           I18n.l(laying_date)
-          }
-        }] }
     end
   end
 end
