@@ -110,11 +110,23 @@ main-components:
 - name: section__section
   data:
     components:
-    - name: paragraph
+    - name: list__generic
       data:
-      - content: procedure-steps.subsidiary-resources.work-packages
-        data:
-          link: "/procedure-steps/e9G2vHbc/work-packages"
+        type: ol
+        display:
+          name: partials__display
+          data:
+          - component: list
+            variant: block
+        components:
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: procedure-steps.subsidiary-resources.work-packages
+                size: 2
+                link: "/procedure-steps/e9G2vHbc/work-packages"
 footer-components:
 - name: footer
   data:
