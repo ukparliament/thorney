@@ -4,8 +4,8 @@ module Procedures
     before_action :data_check, :build_request
 
     ROUTE_MAP = {
-      index: proc {|params| ParliamentHelper.parliament_request.procedure_work_packages.set_url_params({ procedure_id: params[:procedure_id] })},
-      current: proc {|params| ParliamentHelper.parliament_request.procedure_work_packages_current.set_url_params({ procedure_id: params[:procedure_id] })}
+      index:   proc { |params| ParliamentHelper.parliament_request.procedure_work_packages.set_url_params({ procedure_id: params[:procedure_id] }) },
+      current: proc { |params| ParliamentHelper.parliament_request.procedure_work_packages_current.set_url_params({ procedure_id: params[:procedure_id] }) }
     }.freeze
 
     def index
@@ -21,7 +21,7 @@ module Procedures
 
       list_components = WorkPackageListComponentsFactory.build_components(work_packages: sorted_work_packages)
 
-      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('work_packages.index.title'), subheading_content: @procedure.try(:procedureName), subheading_link: procedure_path)
+      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('work_packages.index.title'), subheading: @procedure.try(:procedureName), subheading_link: procedure_path)
 
       serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 
@@ -41,7 +41,7 @@ module Procedures
 
       list_components = WorkPackageListComponentsFactory.build_components(work_packages: sorted_work_packages)
 
-      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('work_packages.current.title'), subheading_content: @procedure.try(:procedureName), subheading_link: procedure_path)
+      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('work_packages.current.title'), subheading: @procedure.try(:procedureName), subheading_link: procedure_path)
 
       serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 

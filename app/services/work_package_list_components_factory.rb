@@ -26,17 +26,17 @@ class WorkPackageListComponentsFactory
     end
 
     def procedure_description_item(work_package)
-      { 'term':
-                       { 'content': 'laid-thing.procedure' },
-        'description':
-                       [{ 'content': work_package&.procedure.try(:procedureName) }] }
+      {
+        'term':        { 'content': 'laid-thing.procedure' },
+        'description': [{ 'content': work_package&.procedure.try(:procedureName) }]
+      }
     end
 
     def date_description_item(laying_date)
-      [{
+      {
         term:        { content: 'laid-thing.laid-date' },
         description: [ContentDataHelper.content_data(content: 'shared.time-html', datetime_value: I18n.l(laying_date, format: :datetime_format), date: I18n.l(laying_date))]
-      }]
+      }
     end
   end
 end
