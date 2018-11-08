@@ -4,6 +4,5 @@ data:
   heading:
     name: heading
     data:
-      content: card__example
+      content: <a href="example url">card__example</a>
       size: 2
-      link: example url
