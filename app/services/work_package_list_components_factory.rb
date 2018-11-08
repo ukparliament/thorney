@@ -27,7 +27,7 @@ class WorkPackageListComponentsFactory
     private
 
     def laying_date_block
-      proc {|work_package| LayingDateHelper.get_date(work_package)}
+      proc { |work_package| LayingDateHelper.get_date(work_package) }
     end
 
     def description_list_items(work_package)
