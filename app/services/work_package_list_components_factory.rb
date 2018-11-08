@@ -33,14 +33,10 @@ class WorkPackageListComponentsFactory
     end
 
     def date_description_item(laying_date)
-      { term:        { content: 'laid-thing.laid-date' },
-        description: [{
-          content: 'shared.time-html',
-          data:    {
-            datetime_value: I18n.l(laying_date, format: :datetime_format),
-            date:           I18n.l(laying_date)
-          }
-        }] }
+      [{
+        term:        { content: 'laid-thing.laid-date' },
+        description: [ContentDataHelper.content_data(content: 'shared.time-html', datetime_value: I18n.l(laying_date, format: :datetime_format), date: I18n.l(laying_date))]
+      }]
     end
   end
 end
