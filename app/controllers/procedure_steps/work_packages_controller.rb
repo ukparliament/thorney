@@ -16,9 +16,7 @@ module ProcedureSteps
         next nil unless business_item.work_package
 
         list_description_items = nil
-        if business_item.date
-          list_description_items = [{ term: { content: 'procedure-steps.subsidiary-resources.actualised-date' }, description: [{ content: I18n.l(business_item.date) }] }]
-        end
+        list_description_items = [{ term: { content: 'procedure-steps.subsidiary-resources.actualised-date' }, description: [{ content: I18n.l(business_item.date) }] }] if business_item.date
 
         CardFactory.new(
           small:                    'laid-thing.work-package',
@@ -29,11 +27,11 @@ module ProcedureSteps
       end
       list_components.compact!
 
-      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading_content: I18n.t('work_packages.title'), subheading_content: @procedure_step.try(:procedureStepName), subheading_link: procedure_step_path)
+      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('work_packages.index.title'), subheading: @procedure_step.try(:procedureStepName), subheading_link: procedure_step_path)
 
       serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 
       render_page(serializer)
-      end
+    end
   end
 end

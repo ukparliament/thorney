@@ -40,15 +40,14 @@ module PageSerializer
 
       houses = houses.map { |house| house.try(:houseName) }.compact.to_sentence
 
-      [create_description_list_item('procedure-steps.houses', [houses])]
+      [create_description_list_item(term: 'procedure-steps.houses', descriptions: [houses])]
     end
 
     def heading_content
       {}.tap do |hash|
-        hash[:subheading_content] = 'procedure-steps.procedure-step'
-        hash[:subheading_data] = { link: procedure_steps_path }
-        hash[:heading_content] = title
-        hash[:context_content] = @procedure_step.try(:procedureStepDescription)
+        hash[:subheading] = ContentDataHelper.content_data(content: 'procedure-steps.procedure-step', link: procedure_steps_path)
+        hash[:heading] = title
+        hash[:context] = @procedure_step.try(:procedureStepDescription)
       end
     end
 

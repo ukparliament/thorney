@@ -5,7 +5,15 @@ RSpec.describe ComponentSerializer::ListComponentSerializer do
     context 'generic' do
       context 'returns a hash containing the name and data' do
         it 'when contents is specified' do
-          serializer = described_class.new(display: 'generic', contents: [1, { content: 2, link: 'link' }, 3])
+          serializer = described_class.new(
+            display: 'generic',
+            contents:
+              [
+                1,
+                ContentDataHelper.content_data(content: 2 , link: 'link' ),
+                3
+              ]
+            )
 
           expected = get_fixture('generic')
 

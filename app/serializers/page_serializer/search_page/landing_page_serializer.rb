@@ -29,7 +29,7 @@ module PageSerializer
       end
 
       def flash_message_paragraph
-        ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: @flash_message }]).to_h
+        ComponentSerializer::ParagraphComponentSerializer.new(content: [@flash_message]).to_h
       end
 
       def flash_message_display_data

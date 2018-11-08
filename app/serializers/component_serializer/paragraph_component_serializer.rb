@@ -6,7 +6,7 @@ module ComponentSerializer
     #
     # @example Initialising a paragraph component with only a string or translation key
     #  string_or_translation_key = 'Here is some paragraph text'
-    #  ComponentSerializer::ParagraphComponentSerializer.new(content: [{ content: string_or_translation_key }, { content: string_or_translation_key }]).to_h
+    #  ComponentSerializer::ParagraphComponentSerializer.new(content: [string_or_translation_key,string_or_translation_key]).to_h
     #
     # @example Initialising a paragraph component with a translation key and data to be interpolated you must use the ContentDataHelper
     #  ComponentSerializer::ParagraphComponentSerializer.new(content: [ContentDataHelper.content_data(content: 'some content', one: 'property', yet: 'another'), ContentDataHelper.content_data(content: 'some content', one: 'property', yet: 'another')]).to_h
@@ -21,7 +21,11 @@ module ComponentSerializer
     end
 
     def data
-      @content if @content
+      @content.map do |content|
+        element = { content: content } unless content.is_a?(Hash)
+        element = content if content.is_a?(Hash)
+        element
+      end
     end
   end
 end

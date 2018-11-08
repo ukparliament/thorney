@@ -1,0 +1,128 @@
+---
+layout:
+  template: layout
+meta:
+  title: Paper Types - UK Parliament
+  request-id: 123456
+  open-graph:
+    title: Paper Types - UK Parliament
+    original-url: https://www.example.com/work-packages/paper-types
+    image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
+    image-width: '1200'
+    image-height: '630'
+    twitter-card: summary_large_image
+  opensearch-description-url: https://www.example.com/search/opensearch
+header-components:
+- name: link
+  data:
+    link: "#content"
+    display:
+      name: partials__display
+      data:
+      - component: skip-to-content
+    selector: skiplink
+    content: shared.header.skip-to-content
+- name: status__banner
+  data:
+    display:
+      name: partials__display
+      data:
+      - component: status
+        variant: banner
+      - component: theme
+        variant: caution
+      - component: cookie
+    selector: cookie
+    components:
+    - name: paragraph
+      data:
+      - content: shared.header.cookie-banner-text
+        data:
+          link: "/meta/cookie-policy"
+- name: status__banner
+  data:
+    display:
+      name: partials__display
+      data:
+      - component: status
+        variant: banner
+    components:
+    - name: paragraph
+      data:
+      - content: shared.header.beta-status
+- name: header
+  data:
+    components:
+    - name: link
+      data:
+        link: "/"
+        display:
+          name: partials__display
+          data:
+          - component: uk_parliament
+        label: shared.header.label
+        components:
+        - name: icon__uk-parliament
+          data: shared.header.label
+    - name: form__search
+      data:
+        global: true
+        label: search.label
+        components:
+        - name: icon__search
+          data: search.search-icon
+        search-action: "/search"
+main-components:
+- name: section__primary
+  data:
+    components:
+    - name: heading1
+      data:
+        heading:
+          content: Paper Types
+- name: section__section
+  data:
+    components:
+    - name: list__generic
+      data:
+        type: ol
+        display:
+          name: partials__display
+          data:
+          - component: list
+            variant: block
+        components:
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: Proposed Negative Statutory Instruments
+                size: 2
+                link: "/work-packages/paper-types/proposed-negative-statutory-instruments"
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: Statutory Instruments
+                size: 2
+                link: "/work-packages/paper-types/statutory-instruments"
+footer-components:
+- name: footer
+  data:
+    uk-parliament: shared.footer.uk-parliament
+    components:
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          name: partials__display
+          data:
+          - component: list
+        contents:
+        - content: shared.footer.current-website
+        - content: shared.footer.cookie-policy
+          data:
+            link: "/meta/cookie-policy"
+        - content: shared.footer.data-protection-privacy

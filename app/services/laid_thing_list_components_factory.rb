@@ -2,19 +2,19 @@ class LaidThingListComponentsFactory
   class << self
     include Rails.application.routes.url_helpers
     include ListDescriptionHelper
-  end
 
-  def self.build_components(statutory_instruments: nil, type: nil)
-    statutory_instruments.map do |statutory_instrument|
-      CardFactory.new(
-        heading_text:             heading_text(statutory_instrument, type),
-        heading_url:              heading_url(statutory_instrument, type),
-        description_list_content: description_list_content(statutory_instrument)
-      ).build_card
+    def build_components(statutory_instruments: nil, type: nil)
+      statutory_instruments.map do |statutory_instrument|
+        CardFactory.new(
+          heading_text:             heading_text(statutory_instrument, type),
+          heading_url:              heading_url(statutory_instrument, type),
+          description_list_content: description_list_content(statutory_instrument)
+        ).build_card
+      end
     end
-  end
 
-  class << self
+    private
+
     def heading_text(statutory_instrument, type)
       if type == :statutory_instrument
         statutory_instrument.try(:statutoryInstrumentPaperName)
@@ -59,8 +59,8 @@ class LaidThingListComponentsFactory
     def description_list_content(statutory_instrument)
       [].tap do |items|
         items << date_description_item(statutory_instrument) if statutory_instrument&.laying&.date
-        items << create_description_list_item('laid-thing.laying-body', [statutory_instrument&.laying&.body.try(:groupName)]) if statutory_instrument&.laying&.body
-        items << create_description_list_item('laid-thing.procedure', [statutory_instrument&.work_package&.procedure.try(:procedureName)]) if statutory_instrument&.work_package&.procedure
+        items << create_description_list_item(term: 'laid-thing.laying-body', descriptions: [statutory_instrument&.laying&.body.try(:groupName)]) if statutory_instrument&.laying&.body
+        items << create_description_list_item(term: 'laid-thing.procedure', descriptions: [statutory_instrument&.work_package&.procedure.try(:procedureName)]) if statutory_instrument&.work_package&.procedure
       end
     end
   end

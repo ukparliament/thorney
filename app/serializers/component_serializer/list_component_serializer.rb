@@ -16,11 +16,13 @@ module ComponentSerializer
     # @param [Array<Hash>] components an array of objects, each object is a component or atom.
     #
     # @example Creating a list component with content
+    #  When initalising with both content and data to be interpolated you must use the ContentDataHelper.
     #  type_of_list = 'generic'
     #  display_data = [display_data(component: 'list', variant: 'block')]
     #  ol_or_ul_list = ol
     #  string_or_translation_key = 'An item in a list'
-    #  ComponentSerializer::ListComponentSerializer.new(display: type_of_list, display_data: display_data, type: ol_or_ul_list, contents: [string_or_translation_key, string_or_translation_key]).to_h
+    #  content_with_data = ContentDataHelper.content_data(content: 'Foo' , bar: '/bar' )
+    #  ComponentSerializer::ListComponentSerializer.new(display: type_of_list, display_data: display_data, type: ol_or_ul_list, contents: [string_or_translation_key, content_with_data]).to_h
     #
     # @example Initialising a link component with components
     #  type_of_list = 'generic'
@@ -53,8 +55,8 @@ module ComponentSerializer
 
     def contents
       @contents.map do |content|
-        element = { content: content }
-        element = { content: content[:content], data: { link: content[:link] } } if content.is_a?(Hash) && content[:link]
+        element = { content: content } unless content.is_a?(Hash)
+        element = content if content.is_a?(Hash)
         element
       end
     end

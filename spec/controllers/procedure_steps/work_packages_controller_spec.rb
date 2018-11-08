@@ -52,7 +52,7 @@ RSpec.describe ProcedureSteps::WorkPackagesController, vcr: true do
 
     context 'calling the serializers correctly' do
       it 'calls the Heading1ComponentSerializer correctly' do
-        expect(ComponentSerializer::Heading1ComponentSerializer).to have_received(:new).with(heading_content: 'Work Packages', subheading_content: 'procedureStepName - 1', subheading_link: '/procedure-steps/e9G2vHbc')
+        expect(ComponentSerializer::Heading1ComponentSerializer).to have_received(:new).with(heading: 'Work Packages', subheading: 'procedureStepName - 1', subheading_link: '/procedure-steps/e9G2vHbc')
       end
 
       it 'calls the ListPageSerializer correctly' do
