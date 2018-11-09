@@ -114,9 +114,8 @@ main-components:
             heading:
               name: heading
               data:
-                content: groups.subsidiary-resources.layings-title
+                content: <a href="/groups/XouN12Ow/made-available/availability-types/layings">groups.subsidiary-resources.layings-title</a>
                 size: 2
-                link: "/groups/XouN12Ow/made-available/availability-types/layings"
 footer-components:
 - name: footer
   data:

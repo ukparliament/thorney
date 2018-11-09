@@ -47,8 +47,7 @@ RSpec.describe StatutoryInstrumentsController, vcr: true do
       list_components = [{"data"=>
                             {"heading"=>
                                {"data"=>
-                                  {"content"=>"statutoryInstrumentPaperName - 1",
-                                   "link"=>"/statutory-instruments/5trFJNih",
+                                  {"content"=>"<a href=\"/statutory-instruments/5trFJNih\">statutoryInstrumentPaperName - 1</a>",
                                    "size"=>2},
                                 "name"=>"heading"},
                              "list-description"=>

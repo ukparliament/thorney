@@ -52,9 +52,7 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypesController, vcr: true do
         list_components = [{"data" =>
                                 {"heading" =>
                                      {"data" =>
-                                          {"content" => "groups.subsidiary-resources.layings-title",
-                                           "link" =>
-                                               "/groups/XouN12Ow/made-available/availability-types/layings",
+                                          {"content" => "<a href=\"/groups/XouN12Ow/made-available/availability-types/layings\">groups.subsidiary-resources.layings-title</a>",
                                            "size" => 2},
                                       "name" => "heading"}},
                             "name" => "card__generic"}]

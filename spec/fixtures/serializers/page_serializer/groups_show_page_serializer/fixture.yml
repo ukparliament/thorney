@@ -102,8 +102,9 @@ main-components:
               name: heading
               data:
                 content: groups.subsidiary-resources.layings-title
+                data:
+                  link: "/groups/7dSvuueH/made-available/availability-types/layings"
                 size: 2
-                link: "/groups/7dSvuueH/made-available/availability-types/layings"
 footer-components:
 - name: footer
   data:

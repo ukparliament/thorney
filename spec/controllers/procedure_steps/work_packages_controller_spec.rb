@@ -59,8 +59,7 @@ RSpec.describe ProcedureSteps::WorkPackagesController, vcr: true do
         list_components = [{"data" =>
                                 {"heading" =>
                                      {"data" =>
-                                          {"content" => "workPackagedThingName - 1",
-                                           "link" => "/work-packages/UsdZhECl",
+                                          {"content" => "<a href=\"/work-packages/UsdZhECl\">workPackagedThingName - 1</a>",
                                            "size" => 2},
                                       "name" => "heading"},
                                  "list-description" =>
