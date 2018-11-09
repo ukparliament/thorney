@@ -18,9 +18,8 @@ class GroupsController < ApplicationController
       end
 
       CardFactory.new(
-        heading_text:      group.try(:groupName),
-        heading_url:       group_path(group.graph_id),
-        paragraph_content: paragraph_content
+        heading_text: 'laid-thing.laying-bodies',
+        heading_url:  laying_bodies_path
       ).build_card
     end
 
