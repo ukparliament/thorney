@@ -43,7 +43,7 @@ RSpec.describe GroupsController, vcr: true do
       end
 
     it 'calls the serializer correctly' do
-      list_components = [{"data"=> {"heading"=> {"data"=> {"content"=>"groupName - 1", "link"=>"/groups/tz34m7Vt", "size"=>2}, "name"=>"heading"}, "paragraph"=> {"data"=> [{"content"=>"28 July 1997 to 12 September 2017"}],"name"=>"paragraph"}}, "name"=>"card__generic"}]
+      list_components = [{"data"=> {"heading"=> {"data"=> {"content"=>"laid-thing.laying-bodies", "link"=>"/laying-bodies", "size"=>2}, "name"=>"heading"}}, "name"=>"card__generic"}]
 
       expect(PageSerializer::ListPageSerializer).to have_received(:new).with(request: request, heading_component: heading, list_components: list_components, data_alternates: data_alternates)
     end
