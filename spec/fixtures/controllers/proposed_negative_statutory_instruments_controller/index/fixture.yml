@@ -2,7 +2,7 @@
 layout:
   template: layout
 meta:
-  title: Proposed Negative Statutory Instruments - UK Parliament
+  title: Proposed negative statutory instruments - UK Parliament
   request-id: 123456
   data-alternates:
   - type: application/n-triples
@@ -20,7 +20,7 @@ meta:
   - type: application/rdf+xml
     href: http://localhost:3030/proposed_negative_statutory_instrument_index.xml
   open-graph:
-    title: Proposed Negative Statutory Instruments - UK Parliament
+    title: Proposed negative statutory instruments - UK Parliament
     original-url: https://www.example.com/proposed-negative-statutory-instruments
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -94,7 +94,7 @@ main-components:
     - name: heading1
       data:
         heading:
-          content: Proposed Negative Statutory Instruments
+          content: Proposed negative statutory instruments
 - name: section__section
   data:
     components:

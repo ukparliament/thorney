@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3030/work_package_current
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/n-triples
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/n-triples
+      Content-Disposition:
+      - inline; filename="index"
+      Last-Modified:
+      - Wed, 07 Nov 2018 13:56:45 GMT
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '561152'
+    body:
+      encoding: UTF-8
+      string: |
+        <https://id.parliament.uk/e9G2vHbc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep> .
+        <https://id.parliament.uk/e9G2vHbc> <https://id.parliament.uk/schema/procedureStepName> "procedureStepName - 1" .
+        <https://id.parliament.uk/e9G2vHbc> <https://id.parliament.uk/schema/procedureStepHasBusinessItem> <https://id.parliament.uk/mh3hcCoq> .
+        <https://id.parliament.uk/mh3hcCoq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/BusinessItem> .
+        <https://id.parliament.uk/mh3hcCoq> <https://id.parliament.uk/schema/businessItemDate> "2018-05-09+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/PsB0pq0l> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackage> .
+        <https://id.parliament.uk/PsB0pq0l> <https://id.parliament.uk/schema/workPackageHasWorkPackagedThing> <https://id.parliament.uk/ITuNnxmw> .
+        <https://id.parliament.uk/PsB0pq0l> <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/H5YJQsK2> .
+        <https://id.parliament.uk/PsB0pq0l> <https://id.parliament.uk/schema/workPackageHasBusinessItem> <https://id.parliament.uk/mh3hcCoq> .
+        <https://id.parliament.uk/ITuNnxmw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackagedThing> .
+        <https://id.parliament.uk/ITuNnxmw> <https://id.parliament.uk/schema/workPackagedThingName> "workPackagedThingName - 1" .
+        <https://id.parliament.uk/H5YJQsK2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Procedure> .
+        <https://id.parliament.uk/H5YJQsK2> <https://id.parliament.uk/schema/procedureName> "procedureName - 1" .
+    http_version: 
+  recorded_at: Thu, 08 Nov 2018 15:34:54 GMT
+recorded_with: VCR 4.0.0

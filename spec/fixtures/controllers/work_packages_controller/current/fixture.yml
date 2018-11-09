@@ -2,7 +2,7 @@
 layout:
   template: layout
 meta:
-  title: Current Work Packages - UK Parliament
+  title: Current procedural activity - UK Parliament
   request-id: 123456
   data-alternates:
   - type: application/n-triples
@@ -20,7 +20,7 @@ meta:
   - type: application/rdf+xml
     href: http://localhost:3030/work_package_current.xml
   open-graph:
-    title: Current Work Packages - UK Parliament
+    title: Current procedural activity - UK Parliament
     original-url: https://www.example.com/work-packages/current
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -94,7 +94,7 @@ main-components:
     - name: heading1
       data:
         heading:
-          content: Current Work Packages
+          content: Current procedural activity
 - name: section__section
   data:
     components:
