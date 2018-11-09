@@ -119,7 +119,7 @@ main-components:
         - term:
             content: laid-thing.laying-body
           description:
-          - content: groupName - 1
+          - content: <a href="/groups/XouN12Ow">groupName - 1</a>
 - name: section__section
   data:
     components:
