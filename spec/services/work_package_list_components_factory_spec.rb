@@ -25,7 +25,7 @@ RSpec.describe WorkPackageListComponentsFactory, type: :serializer, vcr: true do
 
       described_class.build_components(work_packages: work_packages, date_type: :laying_date, grouping_block: grouping_block)
 
-      expect(ComponentSerializer::CardComponentSerializer).to have_received(:new).with(name: 'card__generic', data: { heading: { "data" => { "content" => "workPackagedThingName - 1", "link" => "/work-packages/rlJaCEwJ", "size" => 2 }, "name" => "heading" }, list_description: { "data" => { "items" => [{ "description" => [{ "content" => "procedureName - 1" }], "term" => { "content" => "laid-thing.procedure" } }, { "description" => [{ "content" => "shared.time-html", "data" => { "date" => "23 April 2018", "datetime-value" => "2018-04-23" } }], "term" => { "content" => "laid-thing.laid-date" } }] }, "name" => "list__description" } })
+      expect(ComponentSerializer::CardComponentSerializer).to have_received(:new).with(name: 'card__generic', data: { heading: { "data" => { "content" => "<a href=\"/work-packages/rlJaCEwJ\">workPackagedThingName - 1</a>", "size" => 2 }, "name" => "heading" }, list_description: { "data" => { "items" => [{ "description" => [{ "content" => "procedureName - 1" }], "term" => { "content" => "laid-thing.procedure" } }, { "description" => [{ "content" => "shared.time-html", "data" => { "date" => "23 April 2018", "datetime-value" => "2018-04-23" } }], "term" => { "content" => "laid-thing.laid-date" } }] }, "name" => "list__description" } })
     end
   end
 

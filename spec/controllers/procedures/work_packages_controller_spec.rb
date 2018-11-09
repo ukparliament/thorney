@@ -47,8 +47,7 @@ RSpec.describe Procedures::WorkPackagesController, vcr: true do
       list_components = [{ "data"                                                                                                                                                                                                                                                                 =>
                              { "heading"          =>
                                  { "data" =>
-                                     { "content" => "workPackagedThingName - 1",
-                                       "link"    => "/work-packages/zlDxL3xS",
+                                     { "content" => "<a href=\"/work-packages/zlDxL3xS\">workPackagedThingName - 1</a>",
                                        "size"    => 2 },
                                    "name" => "heading" },
                                "list-description" =>
@@ -103,8 +102,7 @@ RSpec.describe Procedures::WorkPackagesController, vcr: true do
       list_components = [{ "data"                                                                                                                                                                                                                                                                                                                               =>
                              { "heading"          =>
                                  { "data" =>
-                                     { "content" => "workPackagedThingName - 1",
-                                       "link"    => "/work-packages/zlDxL3xS",
+                                     { "content" => "<a href=\"/work-packages/zlDxL3xS\">workPackagedThingName - 1</a>",
                                        "size"    => 2 },
                                    "name" => "heading" },
                                "list-description" =>

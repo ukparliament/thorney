@@ -99,7 +99,6 @@ main-components:
               data:
                 content: Proposed negative statutory instruments
                 size: 2
-                link: "/work-packages/paper-types/proposed-negative-statutory-instruments"
         - name: card__generic
           data:
             heading:
@@ -107,7 +106,6 @@ main-components:
               data:
                 content: Statutory instruments
                 size: 2
-                link: "/work-packages/paper-types/statutory-instruments"
 footer-components:
 - name: footer
   data:
