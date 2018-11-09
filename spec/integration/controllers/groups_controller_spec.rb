@@ -10,7 +10,7 @@ RSpec.describe GroupsController, vcr: true do
       it 'renders expected JSON output' do
         get '/groups'
         filtered_response_body = filter_sensitive_data(response.body)
-        
+
         expected_json = get_fixture('index', 'fixture')
 
         expect(JSON.parse(filtered_response_body).to_yaml).to eq(expected_json)
