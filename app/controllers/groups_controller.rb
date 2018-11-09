@@ -13,7 +13,7 @@ class GroupsController < ApplicationController
 
     list_components = [
       CardFactory.new(
-        heading_text: 'laid-thing.laying-bodies',
+        heading_text: I18n.t('laying_bodies.index.title'),
         heading_url:  laying_bodies_path
       ).build_card
     ]

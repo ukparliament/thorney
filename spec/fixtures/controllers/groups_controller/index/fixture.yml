@@ -112,7 +112,7 @@ main-components:
             heading:
               name: heading
               data:
-                content: laid-thing.laying-bodies
+                content: Laying bodies
                 size: 2
                 link: "/laying-bodies"
 footer-components:
