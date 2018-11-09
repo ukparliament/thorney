@@ -50,41 +50,54 @@ en:
     opensearch:
       short_name: "UK Parliament"
   layings:
-    title: "Layings"
+    title: "%{group} - laid papers"
     type:
-      si: "Statutory Instrument"
-      pnsi: "Proposed Negative Statutory Instrument"
+      si: "Statutory instrument"
+      pnsi: "Proposed negative statutory instrument"
   groups:
     index:
       title: Groups
     made_available:
-      title: "Made Available"
+      title: "%{group} - made available"
       availability_types:
-        title: "Availability Types"
+        title: "%{group} - made available by availability types"
   statutory_instruments:
+    type: "Statutory instrument"
     index:
-      title: "Statutory Instruments"
+      title: "Statutory instruments"
   proposed_negative_statutory_instruments:
+    type: "Proposed negative statutory instrument"
     index:
-      title: "Proposed Negative Statutory Instruments"
+      title: "Proposed negative statutory instruments"
   no_name: "[Name unavailable]"
   procedure_steps:
     index:
-      title: "Procedure Steps"
+      title: "Procedure steps"
+    work_packages:
+      index:
+        title: "%{procedure_step} - procedural activity"
+      current:
+        title: "%{procedure_step} - current procedural activity"
   laying_bodies:
     index:
-      title: "Laying Bodies"
+      title: "Laying bodies"
+  procedures:
+    work_packages:
+      index:
+        title: "%{procedure} - procedural activity"
+      current:
+        title: "%{procedure} - current procedural activity"
   work_packages:
     index:
-      title: "Work Packages"
+      title: "Work packages"
     current:
-      title: "Current Work Packages"
+      title: "Current procedural activity"
     paper_types:
       index:
-        title: "Paper Types"
+        title: "Procedural activity by paper type"
       show:
-        si_title: "Work Packages - Statutory Instruments"
-        psni_title:  "Work Packages - Proposed Negative Statutory Instruments"
+        si_title: "Procedural activity for statutory instruments"
+        psni_title:  "Procedural activity for proposed negative statutory instruments"
       current:
-        si_title: "Current Work Packages - Statutory Instruments"
-        psni_title:  "Current Work Packages - Proposed Negative Statutory Instruments"
+        si_title: "Current procedural activity for statutory instruments"
+        psni_title:  "Current procedural activity for proposed negative statutory instruments"

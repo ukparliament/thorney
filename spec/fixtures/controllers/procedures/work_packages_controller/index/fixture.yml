@@ -2,7 +2,7 @@
 layout:
   template: layout
 meta:
-  title: procedureName - 1 - Work Packages - UK Parliament
+  title: procedureName - 1 - procedural activity - UK Parliament
   request-id: 123456
   data-alternates:
   - type: application/n-triples
@@ -20,7 +20,7 @@ meta:
   - type: application/rdf+xml
     href: http://localhost:3030/procedure_work_packages.xml?procedure_id=12345678
   open-graph:
-    title: procedureName - 1 - Work Packages - UK Parliament
+    title: procedureName - 1 - procedural activity - UK Parliament
     original-url: https://www.example.com/procedures/12345678/work-packages
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -96,7 +96,7 @@ main-components:
         subheading:
           content: <a href="/procedures/12345678">procedureName - 1</a>
         heading:
-          content: Work Packages
+          content: procedureName - 1 - procedural activity
 - name: section__section
   data:
     components:

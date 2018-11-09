@@ -25,7 +25,7 @@ RSpec.describe WorkPackagesController, vcr: true do
 
     before(:each) do
       allow(PageSerializer::ListPageSerializer).to receive(:new)
-      allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'Current Work Packages') { heading }
+      allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'Current procedural activity') { heading }
 
       allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
 

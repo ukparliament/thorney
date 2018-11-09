@@ -52,7 +52,7 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LayingsController, vcr:
 
     context 'calling the serializers correctly' do
       it 'calls the Heading1ComponentSerializer correctly' do
-        expect(ComponentSerializer::Heading1ComponentSerializer).to have_received(:new).with(heading: 'Layings', subheading: 'groupName - 1', subheading_link: '/groups/XouN12Ow')
+        expect(ComponentSerializer::Heading1ComponentSerializer).to have_received(:new).with(heading: 'groupName - 1 - laid papers', subheading: 'groupName - 1', subheading_link: '/groups/XouN12Ow')
       end
 
       it 'calls the ListPageSerializer correctly' do
@@ -72,7 +72,7 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LayingsController, vcr:
                                                                                            'term'        => { 'content' => 'laid-thing.laid-date' } }] },
                                                                  'name' => 'list__description' },
                                          'small'            =>
-                                                               { 'data' => { 'content' => 'Statutory Instrument' },
+                                                               { 'data' => { 'content' => 'Statutory instrument' },
                                                                  'name' => 'partials__small' } },
                              'name' => 'card__generic' },
                            { 'data' =>
@@ -91,7 +91,7 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LayingsController, vcr:
                                                                                            +'term'       => { 'content' => 'laid-thing.laid-date' } }] },
                                                                  'name' => 'list__description' },
                                          'small'            =>
-                                                               { 'data' => { 'content' => 'Statutory Instrument' },
+                                                               { 'data' => { 'content' => 'Statutory instrument' },
                                                                  'name' => 'partials__small' } },
                              'name' => 'card__generic' },
                            { 'data' =>
@@ -110,7 +110,7 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LayingsController, vcr:
                                                                                            'term'        => { 'content' => 'laid-thing.laid-date' } }] },
                                                                  'name' => 'list__description' },
                                          'small'            =>
-                                                               { 'data' => { 'content' => 'Proposed Negative Statutory Instrument' },
+                                                               { 'data' => { 'content' => 'Proposed negative statutory instrument' },
                                                                  'name' => 'partials__small' } },
                              'name' => 'card__generic' },
                            { 'data' =>
@@ -129,7 +129,7 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LayingsController, vcr:
                                                                                            'term'        => { 'content' => 'laid-thing.laid-date' } }] },
                                                                  'name' => 'list__description' },
                                          'small'            =>
-                                                               { 'data' => { 'content' => 'Statutory Instrument' },
+                                                               { 'data' => { 'content' => 'Statutory instrument' },
                                                                  'name' => 'partials__small' } },
                              'name' => 'card__generic' }]
 

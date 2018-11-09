@@ -2,7 +2,7 @@
 layout:
   template: layout
 meta:
-  title: Procedure Steps - UK Parliament
+  title: Procedure steps - UK Parliament
   request-id: 123456
   data-alternates:
   - type: application/n-triples
@@ -20,7 +20,7 @@ meta:
   - type: application/rdf+xml
     href: http://localhost:3030/procedure_step_index.xml
   open-graph:
-    title: Procedure Steps - UK Parliament
+    title: Procedure steps - UK Parliament
     original-url: https://www.example.com/procedure-steps
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -94,7 +94,7 @@ main-components:
     - name: heading1
       data:
         heading:
-          content: Procedure Steps
+          content: Procedure steps
 - name: section__section
   data:
     components:

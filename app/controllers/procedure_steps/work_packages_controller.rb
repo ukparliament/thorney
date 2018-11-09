@@ -3,31 +3,30 @@ module ProcedureSteps
     before_action :build_request, :data_check
 
     ROUTE_MAP = {
-      index: proc { |params| ParliamentHelper.parliament_request.procedure_step_work_packages.set_url_params({ procedure_step_id: params[:procedure_step_id] }) }
+      index:   proc { |params| ParliamentHelper.parliament_request.procedure_step_work_packages.set_url_params({ procedure_step_id: params[:procedure_step_id] }) },
+      current: proc { |params| ParliamentHelper.parliament_request.procedure_step_work_packages_current.set_url_params({ procedure_step_id: params[:procedure_step_id] }) }
     }.freeze
 
     def index
-      @procedure_step, @business_items = FilterHelper.filter(@api_request, 'ProcedureStep', 'BusinessItem')
+      @procedure_step, @work_packages = FilterHelper.filter(@api_request, 'ProcedureStep', 'WorkPackage')
       @procedure_step = @procedure_step.first
 
-      @business_items = @business_items.sort_by(:date, :graph_id).reverse
+      list_components = WorkPackageListComponentsFactory.sort_and_build_components(work_packages: @work_packages, date_type: :business_item_date)
 
-      list_components = @business_items.map do |business_item|
-        next nil unless business_item.work_package
+      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('procedure_steps.work_packages.index.title', procedure_step: @procedure_step.try(:procedureStepName)), subheading: @procedure_step.try(:procedureStepName), subheading_link: procedure_step_path)
 
-        list_description_items = nil
-        list_description_items = [{ term: { content: 'procedure-steps.subsidiary-resources.actualised-date' }, description: [{ content: I18n.l(business_item.date) }] }] if business_item.date
+      serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 
-        CardFactory.new(
-          small:                    'laid-thing.work-package',
-          heading_text:             business_item.work_package.work_packaged_thing.try(:workPackagedThingName),
-          heading_url:              work_package_path(business_item.work_package.graph_id),
-          description_list_content: list_description_items
-        ).build_card
-      end
-      list_components.compact!
+      render_page(serializer)
+    end
 
-      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('work_packages.index.title'), subheading: @procedure_step.try(:procedureStepName), subheading_link: procedure_step_path)
+    def current
+      @procedure_step, @work_packages = FilterHelper.filter(@api_request, 'ProcedureStep', 'WorkPackage')
+      @procedure_step = @procedure_step.first
+
+      list_components = WorkPackageListComponentsFactory.sort_and_build_components(work_packages: @work_packages, date_type: :business_item_date)
+
+      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('procedure_steps.work_packages.current.title', procedure_step: @procedure_step.try(:procedureStepName)), subheading: @procedure_step.try(:procedureStepName), subheading_link: procedure_step_path)
 
       serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 

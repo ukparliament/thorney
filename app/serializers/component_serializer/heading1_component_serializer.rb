@@ -27,8 +27,6 @@ module ComponentSerializer
     end
 
     def to_s
-      return "#{@subheading[:content]} - #{@heading[:content]}" unless @subheading[:content].nil?
-
       @heading[:content] || t('no_name')
     end
 

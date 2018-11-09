@@ -44,7 +44,7 @@ class FixtureSweeper
   def unused_fixtures
     [].tap do |unused|
       specs_and_fixtures.each do |path|
-        unused << unused_fixture_hash(check_file(path), reason:  "Could not find fixture usage in spec file #{path[:spec]}") if check_file(path)
+        unused << unused_fixture_hash(check_file(path), reason: "Could not find fixture usage in spec file #{path[:spec]}") if check_file(path)
       rescue StandardError
         unused << unused_fixture_hash(path_manager.fixture_parent_folder(path), reason: "Could not find associated spec file #{path[:spec]}")
       end

@@ -9,7 +9,7 @@ class WorkPackagesController < ApplicationController
   def current
     @work_packages = FilterHelper.filter(@api_request, 'WorkPackage')
 
-    list_components = WorkPackageListComponentsFactory.sort_and_build_components(work_packages: @work_packages, group_by: :laying_date)
+    list_components = WorkPackageListComponentsFactory.sort_and_build_components(work_packages: @work_packages, date_type: :laying_date)
 
     heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('work_packages.current.title'))
 

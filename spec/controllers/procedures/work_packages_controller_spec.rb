@@ -25,7 +25,7 @@ RSpec.describe Procedures::WorkPackagesController, vcr: true do
 
     before(:each) do
       allow(PageSerializer::ListPageSerializer).to receive(:new)
-      allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'Work Packages', subheading: 'procedureName - 1', subheading_link: '/procedures/12345678') { heading }
+      allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'procedureName - 1 - procedural activity', subheading: 'procedureName - 1', subheading_link: '/procedures/12345678') { heading }
 
       allow(controller.request).to receive(:env).and_return({ 'ApplicationInsights.request.id' => '|1234abcd.' })
 
@@ -81,7 +81,7 @@ RSpec.describe Procedures::WorkPackagesController, vcr: true do
 
     before(:each) do
       allow(PageSerializer::ListPageSerializer).to receive(:new)
-      allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'Current Work Packages', subheading: 'procedureName - 1', subheading_link: '/procedures/12345678') { heading }
+      allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'procedureName - 1 - current procedural activity', subheading: 'procedureName - 1', subheading_link: '/procedures/12345678') { heading }
 
       allow(controller.request).to receive(:env).and_return({ 'ApplicationInsights.request.id' => '|1234abcd.' })
 
