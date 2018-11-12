@@ -29,7 +29,7 @@ class CardFactory
 
   def card_heading
     return ComponentSerializer::HeadingComponentSerializer.new(content: ContentDataHelper.content_data(content: @heading_text, link: @heading_translation_url), size: 2).to_h if @heading_translation_url
-     
+
     ComponentSerializer::HeadingComponentSerializer.new(content: @heading_text, size: 2, link: @heading_url).to_h
   end
 

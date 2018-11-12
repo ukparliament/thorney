@@ -13,7 +13,7 @@ RSpec.describe PageSerializer::GroupsShowPageSerializer, vcr: true do
 
   context '#to_h' do
     it 'produces the expected JSON hash' do
-
+create_fixture(subject,'fixture')
       expected = get_fixture('fixture')
 
       expect(subject.to_yaml).to eq expected
@@ -31,6 +31,7 @@ RSpec.describe PageSerializer::GroupsShowPageSerializer, vcr: true do
 
   context 'with no name' do
     it 'produces the expected JSON hash with no name' do
+      create_fixture(subject,'group_with_no_name')
 
       expected = get_fixture('group_with_no_name')
 
@@ -40,7 +41,8 @@ RSpec.describe PageSerializer::GroupsShowPageSerializer, vcr: true do
 
   context 'with no name or dates' do
     it 'produces the expected JSON hash with no name or dates' do
-    
+      create_fixture(subject,'group_with_no_name_or_dates')
+
       expected = get_fixture('group_with_no_name_or_dates')
 
       expect(subject.to_yaml).to eq expected

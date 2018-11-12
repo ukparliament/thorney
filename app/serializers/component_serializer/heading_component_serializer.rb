@@ -8,11 +8,12 @@ module ComponentSerializer
     # @param [Integer] size number from 1 - 4 to be placed in the <h> tag.
     # @param [String] link the URL or other link connected to the heading.
     #
+    #  When adding a translation key with data please always use the ContentDataHelper.
     # @example Initialising a heading component with content
-    #  string = 'House of Commons'
+    #  string_or_translation_key_or_ContentDataHelper= 'House of Commons' or ContentDataHelper.content_data(content: 'Dianne Abbott', link: 'www.dianneabbott.com')
     #  integer = 3
     #  link = '/mps'
-    #  ComponentSerializer::HeadingComponentSerializer.new(content: [string_or_translation_key], size: integer, link: link).to_h
+    #  ComponentSerializer::HeadingComponentSerializer.new(content: string_or_translation_key_or_ContentDataHelper, size: integer, link: link).to_h
     def initialize(content: nil, size: nil, link: nil)
       @content = content.is_a?(Hash) ? content : { content: content }
       @size = size
