@@ -47,8 +47,7 @@ RSpec.describe WorkPackagesController, vcr: true do
       list_components = [{"data"=>
                             {"heading"=>
                                {"data"=>
-                                  {"content"=>"workPackagedThingName - 1",
-                                   "link"=>"/work-packages/rlJaCEwJ",
+                                  {"content"=>"<a href=\"/work-packages/rlJaCEwJ\">workPackagedThingName - 1</a>",
                                    "size"=>2},
                                 "name"=>"heading"},
                              "list-description"=>

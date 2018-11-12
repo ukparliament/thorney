@@ -1,0 +1,7 @@
+---
+name: heading
+data:
+  content: translation_key
+  data:
+    backend-data: Information from the backend
+  size: 1

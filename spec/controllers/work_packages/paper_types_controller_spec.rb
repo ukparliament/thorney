@@ -22,16 +22,14 @@ RSpec.describe WorkPackages::PaperTypesController, vcr: true do
       list_components = [{"data"=>
                             {"heading"=>
                                {"data"=>
-                                  {"content"=>"Proposed negative statutory instruments",
-                                   "link"=>"/work-packages/paper-types/proposed-negative-statutory-instruments",
+                                  {"content"=>"<a href=\"/work-packages/paper-types/proposed-negative-statutory-instruments\">Proposed negative statutory instruments</a>",
                                    "size"=>2},
                                 "name"=>"heading"}},
                            "name"=>"card__generic"},
                          {"data"=>
                            {"heading"=>
                               {"data"=>
-                                 {"content"=>"Statutory instruments",
-                                  "link"=>"/work-packages/paper-types/statutory-instruments",
+                                 {"content"=>"<a href=\"/work-packages/paper-types/statutory-instruments\">Statutory instruments</a>",
                                   "size"=>2},
                                "name"=>"heading"}},
                          "name"=>"card__generic"}]
@@ -86,8 +84,7 @@ RSpec.describe WorkPackages::PaperTypesController, vcr: true do
         list_components = [{"data"=>
                               {"heading"=>
                                  {"data"=>
-                                    {"content"=>"workPackagedThingName - 1",
-                                     "link"=>"/work-packages/rlJaCEwJ",
+                                    {"content"=>"<a href=\"/work-packages/rlJaCEwJ\">workPackagedThingName - 1</a>",
                                      "size"=>2},
                                   "name"=>"heading"},
                                "list-description"=>
@@ -164,8 +161,7 @@ RSpec.describe WorkPackages::PaperTypesController, vcr: true do
         list_components = [{"data"=>
                               {"heading"=>
                                  {"data"=>
-                                    {"content"=>"workPackagedThingName - 1",
-                                     "link"=>"/work-packages/rlJaCEwJ",
+                                    {"content"=>"<a href=\"/work-packages/rlJaCEwJ\">workPackagedThingName - 1</a>",
                                      "size"=>2},
                                   "name"=>"heading"},
                                "list-description"=>

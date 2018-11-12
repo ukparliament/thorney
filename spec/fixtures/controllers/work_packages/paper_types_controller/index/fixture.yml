@@ -97,17 +97,17 @@ main-components:
             heading:
               name: heading
               data:
-                content: Proposed negative statutory instruments
+                content: <a href="/work-packages/paper-types/proposed-negative-statutory-instruments">Proposed
+                  negative statutory instruments</a>
                 size: 2
-                link: "/work-packages/paper-types/proposed-negative-statutory-instruments"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: Statutory instruments
+                content: <a href="/work-packages/paper-types/statutory-instruments">Statutory
+                  instruments</a>
                 size: 2
-                link: "/work-packages/paper-types/statutory-instruments"
 footer-components:
 - name: footer
   data:

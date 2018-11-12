@@ -60,9 +60,7 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LayingsController, vcr:
                                        { 'heading'          =>
                                                                { 'data' =>
                                                                            { 'content' =>
-                                                                                          'laidThingName - 24',
-                                                                             'link' =>
-                                                                                 '/statutory-instruments/WBlaNvyq',
+                                                                                          "<a href=\"/statutory-instruments/WBlaNvyq\">laidThingName - 24</a>",
                                                                              'size'    => 2 },
                                                                  'name' => 'heading' },
                                          'list-description' =>
@@ -79,9 +77,7 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LayingsController, vcr:
                                        { 'heading'          =>
                                                                { 'data' =>
                                                                            { 'content' =>
-                                                                                          'laidThingName - 23',
-                                                                             'link' =>
-                                                                                 '/statutory-instruments/BuMKAKjA',
+                                                                                          "<a href=\"/statutory-instruments/BuMKAKjA\">laidThingName - 23</a>",
                                                                              'size'    => 2 },
                                                                  'name' => 'heading' },
                                          'list-description' =>
@@ -98,9 +94,7 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LayingsController, vcr:
                                        { 'heading'          =>
                                                                { 'data' =>
                                                                            { 'content' =>
-                                                                                          'laidThingName - 21',
-                                                                             'link' =>
-                                                                                 '/proposed-negative-statutory-instruments/W3l3iqIJ',
+                                                                                          "<a href=\"/proposed-negative-statutory-instruments/W3l3iqIJ\">laidThingName - 21</a>",
                                                                              'size'    => 2 },
                                                                  'name' => 'heading' },
                                          'list-description' =>
@@ -117,9 +111,7 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LayingsController, vcr:
                                        { 'heading'          =>
                                                                { 'data' =>
                                                                            { 'content' =>
-                                                                                          'laidThingName - 1',
-                                                                             'link' =>
-                                                                                 '/statutory-instruments/QV9rpep6',
+                                                                                          "<a href=\"/statutory-instruments/QV9rpep6\">laidThingName - 1</a>",
                                                                              'size'    => 2 },
                                                                  'name' => 'heading' },
                                          'list-description' =>

@@ -19,7 +19,7 @@ RSpec.describe LaidThingListComponentsFactory, type: :serializer, vcr: true do
 
         described_class.build_components(statutory_instruments: statutory_instruments, type: :statutory_instrument)
 
-        expect(ComponentSerializer::CardComponentSerializer).to have_received(:new).with(name: 'card__generic', data: { heading: { "data"=> { "content"=>"statutoryInstrumentPaperName - 1", "link"=>"/statutory-instruments/QmvfCS3N", "size"=>2 }, "name"=>"heading"}, list_description: {"data"=>{"items"=>[{"description"=>[{"content"=>"shared.time-html","data"=>{"date"=>"3 May 2018", "datetime-value"=>"2018-05-03"}}],"term"=>{"content"=>"laid-thing.laid-date"}},{"description"=>[{"content"=>"groupName - 1"}],"term"=>{"content"=>"laid-thing.laying-body"}},{"description"=>[{"content"=>"procedureName - 1"}],"term"=>{"content"=>"laid-thing.procedure"}}]}, "name"=>"list__description" } } )
+        expect(ComponentSerializer::CardComponentSerializer).to have_received(:new).with(name: 'card__generic', data: { heading: { "data"=> { "content"=> "<a href=\"/statutory-instruments/QmvfCS3N\">statutoryInstrumentPaperName - 1</a>", "size"=>2 }, "name"=>"heading"}, list_description: {"data"=>{"items"=>[{"description"=>[{"content"=>"shared.time-html","data"=>{"date"=>"3 May 2018", "datetime-value"=>"2018-05-03"}}],"term"=>{"content"=>"laid-thing.laid-date"}},{"description"=>[{"content"=>"groupName - 1"}],"term"=>{"content"=>"laid-thing.laying-body"}},{"description"=>[{"content"=>"procedureName - 1"}],"term"=>{"content"=>"laid-thing.procedure"}}]}, "name"=>"list__description" } } )
       end
     end
 
@@ -29,7 +29,7 @@ RSpec.describe LaidThingListComponentsFactory, type: :serializer, vcr: true do
 
         described_class.build_components(statutory_instruments: proposed_negative_statutory_instruments, type: :proposed_negative_statutory_instrument)
 
-        expect(ComponentSerializer::CardComponentSerializer).to have_received(:new).with(name: 'card__generic', data: { heading: { "data"=> { "content"=>"proposedNegativeStatutoryInstrumentPaperName - 1", "link"=>"/proposed-negative-statutory-instruments/Tn1xqHc0", "size"=>2 }, "name"=>"heading"}, list_description: {"data"=>{"items"=>[{"description"=>[{"content"=>"shared.time-html","data"=>{"date"=>"19 July 2018", "datetime-value"=>"2018-07-19"}}],"term"=>{"content"=>"laid-thing.laid-date"}},{"description"=>[{"content"=>"groupName - 9"}],"term"=>{"content"=>"laid-thing.laying-body"}},{"description"=>[{"content"=>"procedureName - 1"}],"term"=>{"content"=>"laid-thing.procedure"}}]}, "name"=>"list__description" } } )
+        expect(ComponentSerializer::CardComponentSerializer).to have_received(:new).with(name: 'card__generic', data: { heading: { "data"=> { "content"=> "<a href=\"/proposed-negative-statutory-instruments/Tn1xqHc0\">proposedNegativeStatutoryInstrumentPaperName - 1</a>", "size"=>2 }, "name"=>"heading"}, list_description: {"data"=>{"items"=>[{"description"=>[{"content"=>"shared.time-html","data"=>{"date"=>"19 July 2018", "datetime-value"=>"2018-07-19"}}],"term"=>{"content"=>"laid-thing.laid-date"}},{"description"=>[{"content"=>"groupName - 9"}],"term"=>{"content"=>"laid-thing.laying-body"}},{"description"=>[{"content"=>"procedureName - 1"}],"term"=>{"content"=>"laid-thing.procedure"}}]}, "name"=>"list__description" } } )
       end
     end
   end

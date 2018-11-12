@@ -112,177 +112,155 @@ main-components:
             heading:
               name: heading
               data:
-                content: groupName - 1
+                content: <a href="/groups/NDZSYjeE">groupName - 1</a>
                 size: 2
-                link: "/groups/NDZSYjeE"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 10
+                content: <a href="/groups/HYfypSOE">groupName - 10</a>
                 size: 2
-                link: "/groups/HYfypSOE"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 11
+                content: <a href="/groups/5LQ5Ar74">groupName - 11</a>
                 size: 2
-                link: "/groups/5LQ5Ar74"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 12
+                content: <a href="/groups/XouN12Ow">groupName - 12</a>
                 size: 2
-                link: "/groups/XouN12Ow"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 13
+                content: <a href="/groups/7gnSwbLO">groupName - 13</a>
                 size: 2
-                link: "/groups/7gnSwbLO"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 14
+                content: <a href="/groups/ni8aOEk3">groupName - 14</a>
                 size: 2
-                link: "/groups/ni8aOEk3"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 15
+                content: <a href="/groups/BRTNQywN">groupName - 15</a>
                 size: 2
-                link: "/groups/BRTNQywN"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 16
+                content: <a href="/groups/JVJB3tuB">groupName - 16</a>
                 size: 2
-                link: "/groups/JVJB3tuB"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 17
+                content: <a href="/groups/yiuTaSI4">groupName - 17</a>
                 size: 2
-                link: "/groups/yiuTaSI4"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 18
+                content: <a href="/groups/g8hByIik">groupName - 18</a>
                 size: 2
-                link: "/groups/g8hByIik"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 19
+                content: <a href="/groups/UIV7W27r">groupName - 19</a>
                 size: 2
-                link: "/groups/UIV7W27r"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 2
+                content: <a href="/groups/79sn5e3n">groupName - 2</a>
                 size: 2
-                link: "/groups/79sn5e3n"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 20
+                content: <a href="/groups/XbTBTDMo">groupName - 20</a>
                 size: 2
-                link: "/groups/XbTBTDMo"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 21
+                content: <a href="/groups/DkHdH4kZ">groupName - 21</a>
                 size: 2
-                link: "/groups/DkHdH4kZ"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 22
+                content: <a href="/groups/eup4DwE5">groupName - 22</a>
                 size: 2
-                link: "/groups/eup4DwE5"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 3
+                content: <a href="/groups/fKqMNz79">groupName - 3</a>
                 size: 2
-                link: "/groups/fKqMNz79"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 4
+                content: <a href="/groups/kv2Qqfn9">groupName - 4</a>
                 size: 2
-                link: "/groups/kv2Qqfn9"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 5
+                content: <a href="/groups/ZU3IXBtP">groupName - 5</a>
                 size: 2
-                link: "/groups/ZU3IXBtP"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 6
+                content: <a href="/groups/KSMOf7aM">groupName - 6</a>
                 size: 2
-                link: "/groups/KSMOf7aM"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 7
+                content: <a href="/groups/fpWTqVKh">groupName - 7</a>
                 size: 2
-                link: "/groups/fpWTqVKh"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 8
+                content: <a href="/groups/nFL8Pq3e">groupName - 8</a>
                 size: 2
-                link: "/groups/nFL8Pq3e"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: groupName - 9
+                content: <a href="/groups/7dSvuueH">groupName - 9</a>
                 size: 2
-                link: "/groups/7dSvuueH"
 footer-components:
 - name: footer
   data:

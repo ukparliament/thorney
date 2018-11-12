@@ -44,7 +44,7 @@ module PageSerializer
       section_components = []
 
       if @group.is_a?(Parliament::Grom::Decorator::LayingBody)
-        section_components << CardFactory.new(heading_text: 'groups.subsidiary-resources.layings-title', heading_url: group_made_available_availability_types_layings_path(@group.try(:graph_id))).build_card
+        section_components << CardFactory.new(heading_text: 'groups.subsidiary-resources.layings', heading_translation_url: group_made_available_availability_types_layings_path(@group.try(:graph_id))).build_card
       end
 
       section_components

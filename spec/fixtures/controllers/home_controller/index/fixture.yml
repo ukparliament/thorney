@@ -97,8 +97,7 @@ main-components:
     components:
     - name: heading
       data:
-        translation:
-          key: home.mps-and-lords.heading
+        content: home.mps-and-lords.heading
         size: 2
     - name: list__generic
       data:
@@ -116,10 +115,10 @@ main-components:
             heading:
               name: heading
               data:
-                content:
-                - home.mps-and-lords.mps.heading
+                content: home.mps-and-lords.mps.heading
+                data:
+                  link: "/mps"
                 size: 3
-                link: "/mps"
             paragraph:
               name: paragraph
               data:
@@ -129,10 +128,10 @@ main-components:
             heading:
               name: heading
               data:
-                content:
-                - home.mps-and-lords.lords.heading
+                content: home.mps-and-lords.lords.heading
+                data:
+                  link: "/houses/WkUWUBMx/members/current/a-z/a"
                 size: 3
-                link: "/houses/WkUWUBMx/members/current/a-z/a"
             paragraph:
               name: paragraph
               data:
@@ -142,10 +141,10 @@ main-components:
             heading:
               name: heading
               data:
-                content:
-                - home.mps-and-lords.constituencies.heading
+                content: home.mps-and-lords.constituencies.heading
+                data:
+                  link: "/find-your-constituency"
                 size: 3
-                link: "/find-your-constituency"
             paragraph:
               name: paragraph
               data:
@@ -155,18 +154,17 @@ main-components:
             heading:
               name: heading
               data:
-                content:
-                - home.mps-and-lords.parties-and-groups.heading
+                content: home.mps-and-lords.parties-and-groups.heading
+                data:
+                  link: "/houses/1AFu55Hs/parties/current"
                 size: 3
-                link: "/houses/1AFu55Hs/parties/current"
             paragraph:
               name: paragraph
               data:
               - content: home.mps-and-lords.parties-and-groups.find
     - name: heading
       data:
-        translation:
-          key: home.parliament-activity.heading
+        content: home.parliament-activity.heading
         size: 2
     - name: list__generic
       data:
@@ -184,18 +182,17 @@ main-components:
             heading:
               name: heading
               data:
-                content:
-                - home.parliament-activity.statutory-instruments.heading
+                content: home.parliament-activity.statutory-instruments.heading
+                data:
+                  link: "/find-a-statutory-instrument"
                 size: 3
-                link: "/find-a-statutory-instrument"
             paragraph:
               name: paragraph
               data:
               - content: home.parliament-activity.statutory-instruments.find
     - name: heading
       data:
-        translation:
-          key: home.guides.heading
+        content: home.guides.heading
         size: 2
     - name: list__generic
       data:
@@ -213,10 +210,10 @@ main-components:
             heading:
               name: heading
               data:
-                content:
-                - home.guides.guide-to-procedure.heading
+                content: home.guides.guide-to-procedure.heading
+                data:
+                  link: "/collections/6i8XQAfD"
                 size: 3
-                link: "/collections/6i8XQAfD"
             paragraph:
               name: paragraph
               data:
