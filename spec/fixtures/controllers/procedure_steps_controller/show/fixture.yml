@@ -124,7 +124,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: <a href="/procedure-steps/e9G2vHbc/work-packages">procedure-steps.subsidiary-resources.work-packages</a>
+                content: procedure-steps.subsidiary-resources.work-packages
+                data:
+                  link: "/procedure-steps/e9G2vHbc/work-packages"
                 size: 2
 footer-components:
 - name: footer

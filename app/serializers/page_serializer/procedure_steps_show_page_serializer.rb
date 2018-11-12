@@ -45,7 +45,7 @@ module PageSerializer
 
     def list_components
       [].tap do |components|
-        components << CardFactory.new(heading_text: 'procedure-steps.subsidiary-resources.work-packages', heading_url: procedure_step_work_packages_path(@procedure_step.try(:graph_id))).build_card
+        components << CardFactory.new(heading_text: 'procedure-steps.subsidiary-resources.work-packages', heading_translation_url: procedure_step_work_packages_path(@procedure_step.try(:graph_id))).build_card
       end
     end
 
