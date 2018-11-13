@@ -1,6 +1,6 @@
 require_relative '../../../../../rails_helper'
 
-RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LayingsController, vcr: true do
+RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LaidPapersController, vcr: true do
   describe 'GET index' do
     before(:each) do
       allow_any_instance_of(PageSerializer::ListPageSerializer).to receive(:request_id) { 123456 }
@@ -8,7 +8,7 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LayingsController, vcr:
 
     context 'navigating to the index page' do
       it 'renders expected JSON output' do
-        get '/groups/XouN12Ow/made-available/availability-types/layings'
+        get '/groups/XouN12Ow/made-available/availability-types/laid-papers'
         filtered_response_body = filter_sensitive_data(response.body)
 
         expected_json = get_fixture('index', 'fixture')

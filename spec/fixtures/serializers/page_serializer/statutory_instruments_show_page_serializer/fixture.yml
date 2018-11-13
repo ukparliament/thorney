@@ -129,7 +129,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: laid-thing.work-package
+                content: laid-thing.procedural-activity
             heading:
               name: heading
               data:

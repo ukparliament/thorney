@@ -53,7 +53,7 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypesController, vcr: true do
                                 {"heading" =>
                                      {"data" =>
                                           {"content" => "groups.subsidiary-resources.layings",
-                                            "data"=> {"link"=>"/groups/XouN12Ow/made-available/availability-types/layings"},
+                                            "data"=> {"link"=>"/groups/XouN12Ow/made-available/availability-types/laid-papers"},
                                            "size" => 2},
                                       "name" => "heading"}},
                             "name" => "card__generic"}]
