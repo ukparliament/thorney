@@ -14,10 +14,10 @@ module Groups
         list_components = []
 
         if @group.is_a?(Parliament::Grom::Decorator::LayingBody)
-          list_components << CardFactory.new(heading_text: 'groups.subsidiary-resources.layings-title', heading_url: group_made_available_availability_types_layings_path).build_card
+          list_components << CardFactory.new(heading_text: 'groups.subsidiary-resources.layings', heading_translation_url: group_made_available_availability_types_laid_papers_path).build_card
         end
 
-        heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('groups.made_available.availability_types.title'), subheading: @group.try(:groupName), subheading_link: group_path)
+        heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('groups.made_available.availability_types.title', group: @group.try(:groupName)), subheading: @group.try(:groupName), subheading_link: group_path)
 
         serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 

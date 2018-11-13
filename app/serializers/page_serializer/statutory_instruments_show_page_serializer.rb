@@ -49,7 +49,7 @@ module PageSerializer
         items << create_description_list_item(term: 'statutory-instruments.show.coming-into-force-note', descriptions: [@statutory_instrument.try(:statutoryInstrumentPaperComingIntoForceNote)])
         items << create_description_list_item(term: 'statutory-instruments.show.following-title', descriptions: connected_statutory_instruments)
         items << create_description_list_item(term: 'laid-thing.laying-person', descriptions: [@laying_person&.display_name])
-        items << create_description_list_item(term: 'laid-thing.laying-body', descriptions: [@laying_body.try(:groupName)])
+        items << create_description_list_item(term: 'laid-thing.laying-body', descriptions: [link_to(@laying_body.try(:groupName), group_path(@laying_body.graph_id))]) if @laying_body
       end.compact
     end
 

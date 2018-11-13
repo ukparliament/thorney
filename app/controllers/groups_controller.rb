@@ -11,18 +11,12 @@ class GroupsController < ApplicationController
     @groups = FilterHelper.filter(@api_request, 'Group')
     @groups = @groups.sort_by(:groupName, :graph_id)
 
-    list_components = @groups.map do |group|
-      paragraph_content = [].tap do |content|
-        content << { content: I18n.t('prepositional_to', first: I18n.l(group.start_date), second: I18n.l(group.end_date)) } if group.start_date && group.end_date
-        content << { content: I18n.l(group.start_date) } if group.start_date && !group.end_date
-      end
-
+    list_components = [
       CardFactory.new(
-        heading_text:      group.try(:groupName),
-        heading_url:       group_path(group.graph_id),
-        paragraph_content: paragraph_content
+        heading_text: I18n.t('laying_bodies.index.title'),
+        heading_url:  laying_bodies_path
       ).build_card
-    end
+    ]
 
     heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('groups.index.title'))
 

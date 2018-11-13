@@ -22,6 +22,7 @@ RSpec.describe PageSerializer::ProposedNegativeStatutoryInstrumentsShowPageSeria
 
   context 'partial data' do
     it 'produces the expected JSON hash with missing data' do
+
       expected = get_fixture('si_missing_data')
 
       expect(subject.to_yaml).to eq expected

@@ -116,14 +116,19 @@ main-components:
             heading:
               name: heading
               data:
-                content: groups.subsidiary-resources.layings-title
+                content: groups.subsidiary-resources.layings
+                data:
+                  link: "/groups/7dSvuueH/made-available/availability-types/laid-papers"
                 size: 2
-                link: "/groups/7dSvuueH/made-available/availability-types/layings"
 footer-components:
 - name: footer
   data:
     uk-parliament: shared.footer.uk-parliament
     components:
+    - name: heading
+      data:
+        content: shared.meta.title
+        size: 2
     - name: list__generic
       data:
         type: ul

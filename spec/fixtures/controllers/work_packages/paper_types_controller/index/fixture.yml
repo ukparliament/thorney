@@ -2,10 +2,10 @@
 layout:
   template: layout
 meta:
-  title: Paper Types - UK Parliament
+  title: Procedural activity by paper type - UK Parliament
   request-id: 123456
   open-graph:
-    title: Paper Types - UK Parliament
+    title: Procedural activity by paper type - UK Parliament
     original-url: https://www.example.com/work-packages/paper-types
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -79,7 +79,7 @@ main-components:
     - name: heading1
       data:
         heading:
-          content: Paper Types
+          content: Procedural activity by paper type
 - name: section__section
   data:
     components:
@@ -97,22 +97,26 @@ main-components:
             heading:
               name: heading
               data:
-                content: Proposed Negative Statutory Instruments
+                content: <a href="/work-packages/paper-types/proposed-negative-statutory-instruments">Proposed
+                  negative statutory instruments</a>
                 size: 2
-                link: "/work-packages/paper-types/proposed-negative-statutory-instruments"
         - name: card__generic
           data:
             heading:
               name: heading
               data:
-                content: Statutory Instruments
+                content: <a href="/work-packages/paper-types/statutory-instruments">Statutory
+                  instruments</a>
                 size: 2
-                link: "/work-packages/paper-types/statutory-instruments"
 footer-components:
 - name: footer
   data:
     uk-parliament: shared.footer.uk-parliament
     components:
+    - name: heading
+      data:
+        content: shared.meta.title
+        size: 2
     - name: list__generic
       data:
         type: ul

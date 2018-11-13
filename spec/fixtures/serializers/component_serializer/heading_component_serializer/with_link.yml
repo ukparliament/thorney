@@ -1,9 +1,5 @@
 ---
 name: heading
 data:
-  translation:
-    key: search.about-count
-    data:
-      count: 123
+  content: <a href="parliament.uk">Dianne Abbott</a>
   size: 1
-  link: link.com

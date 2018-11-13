@@ -25,7 +25,7 @@ RSpec.describe ProcedureStepsController, vcr: true do
 
     before(:each) do
       allow(PageSerializer::ListPageSerializer).to receive(:new)
-      allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'Procedure Steps') { heading }
+      allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'Procedure steps') { heading }
 
       allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
 
@@ -47,16 +47,14 @@ RSpec.describe ProcedureStepsController, vcr: true do
       list_components = [{"data" =>
                               {"heading" =>
                                    {"data" =>
-                                        {"content" => "procedureStepName - 1",
-                                         "link" => "/procedure-steps/e9G2vHbc",
+                                        {"content" => "<a href=\"/procedure-steps/e9G2vHbc\">procedureStepName - 1</a>",
                                          "size" => 2},
                                     "name" => "heading"}},
                           "name" => "card__generic"},
                          {"data" =>
                               {"heading" =>
                                    {"data" =>
-                                        {"content" => "procedureStepName - 85",
-                                         "link" => "/procedure-steps/2J36nNXG",
+                                        {"content" => "<a href=\"/procedure-steps/2J36nNXG\">procedureStepName - 85</a>",
                                          "size" => 2},
                                     "name" => "heading"},
                                "paragraph" =>

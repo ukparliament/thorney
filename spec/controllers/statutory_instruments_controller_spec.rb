@@ -25,7 +25,7 @@ RSpec.describe StatutoryInstrumentsController, vcr: true do
 
     before(:each) do
       allow(PageSerializer::ListPageSerializer).to receive(:new)
-      allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'Statutory Instruments') { heading }
+      allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'Statutory instruments') { heading }
 
       allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
 
@@ -47,8 +47,7 @@ RSpec.describe StatutoryInstrumentsController, vcr: true do
       list_components = [{"data"=>
                             {"heading"=>
                                {"data"=>
-                                  {"content"=>"statutoryInstrumentPaperName - 1",
-                                   "link"=>"/statutory-instruments/5trFJNih",
+                                  {"content"=>"<a href=\"/statutory-instruments/5trFJNih\">statutoryInstrumentPaperName - 1</a>",
                                    "size"=>2},
                                 "name"=>"heading"},
                              "list-description"=>

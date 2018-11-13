@@ -43,6 +43,7 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
   context '#to_h' do
     context 'with a query' do
       it 'produces the correct hash' do
+
         expected = get_fixture('with_a_query')
 
         expect(subject.to_yaml).to eq(expected)
@@ -52,6 +53,7 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
     context 'with no results' do
       it 'produces the correct hash' do
         allow(results).to receive(:totalResults) { 0 }
+
         expected = get_fixture('no_results')
 
         expect(subject.to_yaml).to eq(expected)
@@ -97,7 +99,7 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
       it 'with results' do
         subject.to_h
 
-        expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(translation_key: 'search.count', translation_data: { count: 658 }, size: 2)
+        expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(content: { content: 'search.count', data:{ count: 658 } }, size: 2)
         expect(ComponentSerializer::ListComponentSerializer).to have_received(:new).with(display: 'generic', display_data: [{ component: 'list', variant: 'block' }], components: SearchResultHelper.create_search_results(results))
       end
 
@@ -106,7 +108,7 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
 
         subject.to_h
 
-        expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(content: ['search.no-results'], size: 2)
+        expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(content: 'search.no-results', size: 2)
         expect(ComponentSerializer::ListComponentSerializer).not_to have_received(:new).with(display: 'generic', display_data: [{ component: 'list', variant: 'block' }], components: SearchResultHelper.create_search_results(results))
       end
     end

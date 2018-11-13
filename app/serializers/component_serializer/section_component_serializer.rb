@@ -8,7 +8,7 @@ module ComponentSerializer
     # @param [Array<Hash>] display_data used for the element's css.
     #
     # @example Initialising a section section component
-    #  a_serializer = ComponentSerializer::HeadingComponentSerializer.new(content: ['This is a heading for a section section'], size: 2).to_h
+    #  a_serializer = ComponentSerializer::HeadingComponentSerializer.new(content: 'This is a heading for a section section', size: 2).to_h
     #  type_of_section = section
     #  boolean = true
     # display_data = [display_data(component: 'section')]

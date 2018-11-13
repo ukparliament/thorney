@@ -1,7 +1,7 @@
 module Groups
   module MadeAvailable
     module AvailabilityTypes
-      class LayingsController < ApplicationController
+      class LaidPapersController < ApplicationController
         before_action :build_request, :data_check
 
         ROUTE_MAP = {
@@ -35,7 +35,7 @@ module Groups
             ).build_card
           end
 
-          heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('layings.title'), subheading: @group.try(:groupName), subheading_link: group_path)
+          heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('layings.title', group: @group.try(:groupName)), subheading: @group.try(:groupName), subheading_link: group_path)
 
           serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 

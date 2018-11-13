@@ -2,7 +2,7 @@
 layout:
   template: layout
 meta:
-  title: groupName - 1 - Availability Types - UK Parliament
+  title: groupName - 1 - made available by availability types - UK Parliament
   request-id: 123456
   data-alternates:
   - type: application/n-triples
@@ -20,7 +20,7 @@ meta:
   - type: application/rdf+xml
     href: http://localhost:3030/group_by_id.xml?group_id=XouN12Ow
   open-graph:
-    title: groupName - 1 - Availability Types - UK Parliament
+    title: groupName - 1 - made available by availability types - UK Parliament
     original-url: https://www.example.com/groups/XouN12Ow/made-available/availability-types
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -96,7 +96,7 @@ main-components:
         subheading:
           content: <a href="/groups/XouN12Ow">groupName - 1</a>
         heading:
-          content: Availability Types
+          content: groupName - 1 - made available by availability types
 - name: section__section
   data:
     components:
@@ -114,14 +114,19 @@ main-components:
             heading:
               name: heading
               data:
-                content: groups.subsidiary-resources.layings-title
+                content: groups.subsidiary-resources.layings
+                data:
+                  link: "/groups/XouN12Ow/made-available/availability-types/laid-papers"
                 size: 2
-                link: "/groups/XouN12Ow/made-available/availability-types/layings"
 footer-components:
 - name: footer
   data:
     uk-parliament: shared.footer.uk-parliament
     components:
+    - name: heading
+      data:
+        content: shared.meta.title
+        size: 2
     - name: list__generic
       data:
         type: ul

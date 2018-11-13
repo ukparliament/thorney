@@ -52,7 +52,7 @@ RSpec.describe Groups::MadeAvailableController, vcr: true do
 
     context 'calling the serializers correctly' do
       it 'calls the Heading1ComponentSerializer correctly' do
-        expect(ComponentSerializer::Heading1ComponentSerializer).to have_received(:new).with(heading: 'Made Available', subheading: 'groupName - 1', subheading_link: '/groups/XouN12Ow')
+        expect(ComponentSerializer::Heading1ComponentSerializer).to have_received(:new).with(heading: 'groupName - 1 - made available', subheading: 'groupName - 1', subheading_link: '/groups/XouN12Ow')
       end
 
       it 'calls the ListPageSerializer correctly' do
@@ -60,9 +60,7 @@ RSpec.describe Groups::MadeAvailableController, vcr: true do
                                        { 'heading'          =>
                                                                { 'data' =>
                                                                            { 'content' =>
-                                                                                          'laidThingName - 24',
-                                                                             'link' =>
-                                                                                 '/statutory-instruments/WBlaNvyq',
+                                                                                          "<a href=\"/statutory-instruments/WBlaNvyq\">laidThingName - 24</a>",
                                                                              'size'    => 2 },
                                                                  'name' => 'heading' },
                                          'list-description' =>
@@ -72,16 +70,14 @@ RSpec.describe Groups::MadeAvailableController, vcr: true do
                                                                                            'term'        => { 'content' => 'laid-thing.laid-date' } }] },
                                                                  'name' => 'list__description' },
                                          'small'            =>
-                                                               { 'data' => { 'content' => 'Statutory Instrument' },
+                                                               { 'data' => { 'content' => 'Statutory instrument' },
                                                                  'name' => 'partials__small' } },
                              'name' => 'card__generic' },
                            { 'data' =>
                                        { 'heading'          =>
                                                                { 'data' =>
                                                                            { 'content' =>
-                                                                                          'laidThingName - 23',
-                                                                             'link' =>
-                                                                                 '/statutory-instruments/BuMKAKjA',
+                                                                                          "<a href=\"/statutory-instruments/BuMKAKjA\">laidThingName - 23</a>",
                                                                              'size'    => 2 },
                                                                  'name' => 'heading' },
                                          'list-description' =>
@@ -91,16 +87,14 @@ RSpec.describe Groups::MadeAvailableController, vcr: true do
                                                                                            +'term'       => { 'content' => 'laid-thing.laid-date' } }] },
                                                                  'name' => 'list__description' },
                                          'small'            =>
-                                                               { 'data' => { 'content' => 'Statutory Instrument' },
+                                                               { 'data' => { 'content' => 'Statutory instrument' },
                                                                  'name' => 'partials__small' } },
                              'name' => 'card__generic' },
                            { 'data' =>
                                        { 'heading'          =>
                                                                { 'data' =>
                                                                            { 'content' =>
-                                                                                          'laidThingName - 21',
-                                                                             'link' =>
-                                                                                 '/proposed-negative-statutory-instruments/W3l3iqIJ',
+                                                                                          "<a href=\"/proposed-negative-statutory-instruments/W3l3iqIJ\">laidThingName - 21</a>",
                                                                              'size'    => 2 },
                                                                  'name' => 'heading' },
                                          'list-description' =>
@@ -110,16 +104,14 @@ RSpec.describe Groups::MadeAvailableController, vcr: true do
                                                                                            'term'        => { 'content' => 'laid-thing.laid-date' } }] },
                                                                  'name' => 'list__description' },
                                          'small'            =>
-                                                               { 'data' => { 'content' => 'Proposed Negative Statutory Instrument' },
+                                                               { 'data' => { 'content' => 'Proposed negative statutory instrument' },
                                                                  'name' => 'partials__small' } },
                              'name' => 'card__generic' },
                            { 'data' =>
                                        { 'heading'          =>
                                                                { 'data' =>
                                                                            { 'content' =>
-                                                                                          'laidThingName - 1',
-                                                                             'link' =>
-                                                                                 '/statutory-instruments/QV9rpep6',
+                                                                                          "<a href=\"/statutory-instruments/QV9rpep6\">laidThingName - 1</a>",
                                                                              'size'    => 2 },
                                                                  'name' => 'heading' },
                                          'list-description' =>
@@ -129,7 +121,7 @@ RSpec.describe Groups::MadeAvailableController, vcr: true do
                                                                                            'term'        => { 'content' => 'laid-thing.laid-date' } }] },
                                                                  'name' => 'list__description' },
                                          'small'            =>
-                                                               { 'data' => { 'content' => 'Statutory Instrument' },
+                                                               { 'data' => { 'content' => 'Statutory instrument' },
                                                                  'name' => 'partials__small' } },
                              'name' => 'card__generic' }]
 

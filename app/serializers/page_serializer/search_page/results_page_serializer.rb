@@ -32,11 +32,9 @@ module PageSerializer
       end
 
       def results_section_heading
-        translation_data = { count: total_results }
+        return ComponentSerializer::HeadingComponentSerializer.new(content: 'search.no-results', size: 2).to_h if total_results < 1
 
-        return ComponentSerializer::HeadingComponentSerializer.new(content: ['search.no-results'], size: 2).to_h if total_results < 1
-
-        ComponentSerializer::HeadingComponentSerializer.new(translation_key: 'search.count', translation_data: translation_data, size: 2).to_h
+        ComponentSerializer::HeadingComponentSerializer.new(content: ContentDataHelper.content_data(content: 'search.count', count: total_results), size: 2).to_h
       end
 
       def foot_components

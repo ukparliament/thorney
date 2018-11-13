@@ -89,10 +89,9 @@ main-components:
     components:
     - name: heading
       data:
-        translation:
-          key: search.count
-          data:
-            count: 38
+        content: search.count
+        data:
+          count: 38
         size: 2
     - name: list__generic
       data:
@@ -269,6 +268,10 @@ footer-components:
   data:
     uk-parliament: shared.footer.uk-parliament
     components:
+    - name: heading
+      data:
+        content: shared.meta.title
+        size: 2
     - name: list__generic
       data:
         type: ul

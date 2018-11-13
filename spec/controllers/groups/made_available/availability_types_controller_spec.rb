@@ -45,16 +45,15 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypesController, vcr: true do
 
     context 'calling the serializers correctly' do
       it 'calls the Heading1ComponentSerializer correctly' do
-        expect(ComponentSerializer::Heading1ComponentSerializer).to have_received(:new).with(heading: 'Availability Types', subheading: 'groupName - 1', subheading_link: '/groups/XouN12Ow')
+        expect(ComponentSerializer::Heading1ComponentSerializer).to have_received(:new).with(heading: 'groupName - 1 - made available by availability types', subheading: 'groupName - 1', subheading_link: '/groups/XouN12Ow')
       end
 
       it 'calls the ListPageSerializer correctly' do
         list_components = [{"data" =>
                                 {"heading" =>
                                      {"data" =>
-                                          {"content" => "groups.subsidiary-resources.layings-title",
-                                           "link" =>
-                                               "/groups/XouN12Ow/made-available/availability-types/layings",
+                                          {"content" => "groups.subsidiary-resources.layings",
+                                            "data"=> {"link"=>"/groups/XouN12Ow/made-available/availability-types/laid-papers"},
                                            "size" => 2},
                                       "name" => "heading"}},
                             "name" => "card__generic"}]

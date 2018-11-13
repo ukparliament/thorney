@@ -23,7 +23,7 @@ module PageSerializer
     def content
       [].tap do |components|
         components << ComponentSerializer::SectionComponentSerializer.new(components: section_primary_components, type: 'primary').to_h
-        components << ComponentSerializer::SectionComponentSerializer.new(components: section_links, type: 'section').to_h
+        components << ComponentSerializer::SectionComponentSerializer.new(components: section_components, type: 'section').to_h
       end
     end
 
@@ -43,17 +43,21 @@ module PageSerializer
       [create_description_list_item(term: 'procedure-steps.houses', descriptions: [houses])]
     end
 
+    def list_components
+      [].tap do |components|
+        components << CardFactory.new(heading_text: 'procedure-steps.subsidiary-resources.work-packages', heading_translation_url: procedure_step_work_packages_path(@procedure_step.try(:graph_id))).build_card
+      end
+    end
+
+    def section_components
+      [ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: list_components).to_h]
+    end
+
     def heading_content
       {}.tap do |hash|
         hash[:subheading] = ContentDataHelper.content_data(content: 'procedure-steps.procedure-step', link: procedure_steps_path)
         hash[:heading] = title
         hash[:context] = @procedure_step.try(:procedureStepDescription)
-      end
-    end
-
-    def section_links
-      [].tap do |component|
-        component << ComponentSerializer::ParagraphComponentSerializer.new(content: [ContentDataHelper.content_data(content: 'procedure-steps.subsidiary-resources.work-packages', link: procedure_step_work_packages_path(@procedure_step.graph_id))]).to_h
       end
     end
   end

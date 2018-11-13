@@ -2,7 +2,7 @@
 layout:
   template: layout
 meta:
-  title: Proposed Negative Statutory Instruments - UK Parliament
+  title: Proposed negative statutory instruments - UK Parliament
   request-id: 123456
   data-alternates:
   - type: application/n-triples
@@ -20,7 +20,7 @@ meta:
   - type: application/rdf+xml
     href: http://localhost:3030/proposed_negative_statutory_instrument_index.xml
   open-graph:
-    title: Proposed Negative Statutory Instruments - UK Parliament
+    title: Proposed negative statutory instruments - UK Parliament
     original-url: https://www.example.com/proposed-negative-statutory-instruments
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -94,7 +94,7 @@ main-components:
     - name: heading1
       data:
         heading:
-          content: Proposed Negative Statutory Instruments
+          content: Proposed negative statutory instruments
 - name: section__section
   data:
     components:
@@ -112,9 +112,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 44
+                content: <a href="/proposed-negative-statutory-instruments/e93zn4Ry">proposedNegativeStatutoryInstrumentPaperName
+                  - 44</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/e93zn4Ry"
             list-description:
               name: list__description
               data:
@@ -139,9 +139,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 45
+                content: <a href="/proposed-negative-statutory-instruments/sHOlA3ji">proposedNegativeStatutoryInstrumentPaperName
+                  - 45</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/sHOlA3ji"
             list-description:
               name: list__description
               data:
@@ -166,9 +166,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 43
+                content: <a href="/proposed-negative-statutory-instruments/OqROoJsG">proposedNegativeStatutoryInstrumentPaperName
+                  - 43</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/OqROoJsG"
             list-description:
               name: list__description
               data:
@@ -193,9 +193,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 41
+                content: <a href="/proposed-negative-statutory-instruments/EfjqJrpr">proposedNegativeStatutoryInstrumentPaperName
+                  - 41</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/EfjqJrpr"
             list-description:
               name: list__description
               data:
@@ -220,9 +220,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 42
+                content: <a href="/proposed-negative-statutory-instruments/JZ7gvDu6">proposedNegativeStatutoryInstrumentPaperName
+                  - 42</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/JZ7gvDu6"
             list-description:
               name: list__description
               data:
@@ -247,9 +247,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 38
+                content: <a href="/proposed-negative-statutory-instruments/6itOwgLT">proposedNegativeStatutoryInstrumentPaperName
+                  - 38</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/6itOwgLT"
             list-description:
               name: list__description
               data:
@@ -274,9 +274,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 39
+                content: <a href="/proposed-negative-statutory-instruments/c9tfxxSG">proposedNegativeStatutoryInstrumentPaperName
+                  - 39</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/c9tfxxSG"
             list-description:
               name: list__description
               data:
@@ -301,9 +301,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 40
+                content: <a href="/proposed-negative-statutory-instruments/XOLYsYbh">proposedNegativeStatutoryInstrumentPaperName
+                  - 40</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/XOLYsYbh"
             list-description:
               name: list__description
               data:
@@ -328,9 +328,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 37
+                content: <a href="/proposed-negative-statutory-instruments/eS3rrWn2">proposedNegativeStatutoryInstrumentPaperName
+                  - 37</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/eS3rrWn2"
             list-description:
               name: list__description
               data:
@@ -355,9 +355,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 36
+                content: <a href="/proposed-negative-statutory-instruments/XyrWfzSG">proposedNegativeStatutoryInstrumentPaperName
+                  - 36</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/XyrWfzSG"
             list-description:
               name: list__description
               data:
@@ -382,9 +382,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 35
+                content: <a href="/proposed-negative-statutory-instruments/SXtlN96I">proposedNegativeStatutoryInstrumentPaperName
+                  - 35</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/SXtlN96I"
             list-description:
               name: list__description
               data:
@@ -409,9 +409,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 34
+                content: <a href="/proposed-negative-statutory-instruments/pCTXaGyQ">proposedNegativeStatutoryInstrumentPaperName
+                  - 34</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/pCTXaGyQ"
             list-description:
               name: list__description
               data:
@@ -436,9 +436,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 32
+                content: <a href="/proposed-negative-statutory-instruments/xPakvw9Y">proposedNegativeStatutoryInstrumentPaperName
+                  - 32</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/xPakvw9Y"
             list-description:
               name: list__description
               data:
@@ -463,9 +463,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 33
+                content: <a href="/proposed-negative-statutory-instruments/AHgBl2vF">proposedNegativeStatutoryInstrumentPaperName
+                  - 33</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/AHgBl2vF"
             list-description:
               name: list__description
               data:
@@ -490,9 +490,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 31
+                content: <a href="/proposed-negative-statutory-instruments/eIcl19m5">proposedNegativeStatutoryInstrumentPaperName
+                  - 31</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/eIcl19m5"
             list-description:
               name: list__description
               data:
@@ -517,9 +517,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 29
+                content: <a href="/proposed-negative-statutory-instruments/u2CkM7KS">proposedNegativeStatutoryInstrumentPaperName
+                  - 29</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/u2CkM7KS"
             list-description:
               name: list__description
               data:
@@ -544,9 +544,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 30
+                content: <a href="/proposed-negative-statutory-instruments/6XjAcXQO">proposedNegativeStatutoryInstrumentPaperName
+                  - 30</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/6XjAcXQO"
             list-description:
               name: list__description
               data:
@@ -571,9 +571,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 27
+                content: <a href="/proposed-negative-statutory-instruments/mPyCVKAK">proposedNegativeStatutoryInstrumentPaperName
+                  - 27</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/mPyCVKAK"
             list-description:
               name: list__description
               data:
@@ -598,9 +598,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 28
+                content: <a href="/proposed-negative-statutory-instruments/thnAcmar">proposedNegativeStatutoryInstrumentPaperName
+                  - 28</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/thnAcmar"
             list-description:
               name: list__description
               data:
@@ -625,9 +625,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 26
+                content: <a href="/proposed-negative-statutory-instruments/CSVKuT3Q">proposedNegativeStatutoryInstrumentPaperName
+                  - 26</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/CSVKuT3Q"
             list-description:
               name: list__description
               data:
@@ -652,9 +652,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 25
+                content: <a href="/proposed-negative-statutory-instruments/pzau2957">proposedNegativeStatutoryInstrumentPaperName
+                  - 25</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/pzau2957"
             list-description:
               name: list__description
               data:
@@ -679,9 +679,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 23
+                content: <a href="/proposed-negative-statutory-instruments/lTbB3os8">proposedNegativeStatutoryInstrumentPaperName
+                  - 23</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/lTbB3os8"
             list-description:
               name: list__description
               data:
@@ -706,9 +706,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 22
+                content: <a href="/proposed-negative-statutory-instruments/W3l3iqIJ">proposedNegativeStatutoryInstrumentPaperName
+                  - 22</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/W3l3iqIJ"
             list-description:
               name: list__description
               data:
@@ -733,9 +733,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 24
+                content: <a href="/proposed-negative-statutory-instruments/Xpyq1I4Q">proposedNegativeStatutoryInstrumentPaperName
+                  - 24</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/Xpyq1I4Q"
             list-description:
               name: list__description
               data:
@@ -760,9 +760,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 18
+                content: <a href="/proposed-negative-statutory-instruments/78cgn2Dx">proposedNegativeStatutoryInstrumentPaperName
+                  - 18</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/78cgn2Dx"
             list-description:
               name: list__description
               data:
@@ -787,9 +787,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 19
+                content: <a href="/proposed-negative-statutory-instruments/OuKyf9Ne">proposedNegativeStatutoryInstrumentPaperName
+                  - 19</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/OuKyf9Ne"
             list-description:
               name: list__description
               data:
@@ -814,9 +814,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 20
+                content: <a href="/proposed-negative-statutory-instruments/Ykks9FXW">proposedNegativeStatutoryInstrumentPaperName
+                  - 20</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/Ykks9FXW"
             list-description:
               name: list__description
               data:
@@ -841,9 +841,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 21
+                content: <a href="/proposed-negative-statutory-instruments/mEznEN3a">proposedNegativeStatutoryInstrumentPaperName
+                  - 21</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/mEznEN3a"
             list-description:
               name: list__description
               data:
@@ -868,9 +868,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 10
+                content: <a href="/proposed-negative-statutory-instruments/a2L0zxbo">proposedNegativeStatutoryInstrumentPaperName
+                  - 10</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/a2L0zxbo"
             list-description:
               name: list__description
               data:
@@ -895,9 +895,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 11
+                content: <a href="/proposed-negative-statutory-instruments/zPhl1zVB">proposedNegativeStatutoryInstrumentPaperName
+                  - 11</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/zPhl1zVB"
             list-description:
               name: list__description
               data:
@@ -922,9 +922,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 12
+                content: <a href="/proposed-negative-statutory-instruments/SiA85FTV">proposedNegativeStatutoryInstrumentPaperName
+                  - 12</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/SiA85FTV"
             list-description:
               name: list__description
               data:
@@ -949,9 +949,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 13
+                content: <a href="/proposed-negative-statutory-instruments/XCCCh1kE">proposedNegativeStatutoryInstrumentPaperName
+                  - 13</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/XCCCh1kE"
             list-description:
               name: list__description
               data:
@@ -976,9 +976,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 14
+                content: <a href="/proposed-negative-statutory-instruments/OtGAt1n4">proposedNegativeStatutoryInstrumentPaperName
+                  - 14</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/OtGAt1n4"
             list-description:
               name: list__description
               data:
@@ -1003,9 +1003,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 15
+                content: <a href="/proposed-negative-statutory-instruments/szRasC5x">proposedNegativeStatutoryInstrumentPaperName
+                  - 15</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/szRasC5x"
             list-description:
               name: list__description
               data:
@@ -1030,9 +1030,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 16
+                content: <a href="/proposed-negative-statutory-instruments/3XfjyKc7">proposedNegativeStatutoryInstrumentPaperName
+                  - 16</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/3XfjyKc7"
             list-description:
               name: list__description
               data:
@@ -1057,9 +1057,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 17
+                content: <a href="/proposed-negative-statutory-instruments/sUpfiOCM">proposedNegativeStatutoryInstrumentPaperName
+                  - 17</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/sUpfiOCM"
             list-description:
               name: list__description
               data:
@@ -1084,9 +1084,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 6
+                content: <a href="/proposed-negative-statutory-instruments/PkQCvHkT">proposedNegativeStatutoryInstrumentPaperName
+                  - 6</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/PkQCvHkT"
             list-description:
               name: list__description
               data:
@@ -1111,9 +1111,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 7
+                content: <a href="/proposed-negative-statutory-instruments/AcoKsOuw">proposedNegativeStatutoryInstrumentPaperName
+                  - 7</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/AcoKsOuw"
             list-description:
               name: list__description
               data:
@@ -1138,9 +1138,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 8
+                content: <a href="/proposed-negative-statutory-instruments/YOGGjydt">proposedNegativeStatutoryInstrumentPaperName
+                  - 8</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/YOGGjydt"
             list-description:
               name: list__description
               data:
@@ -1165,9 +1165,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 9
+                content: <a href="/proposed-negative-statutory-instruments/7KgIpwmP">proposedNegativeStatutoryInstrumentPaperName
+                  - 9</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/7KgIpwmP"
             list-description:
               name: list__description
               data:
@@ -1192,9 +1192,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 1
+                content: <a href="/proposed-negative-statutory-instruments/Tn1xqHc0">proposedNegativeStatutoryInstrumentPaperName
+                  - 1</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/Tn1xqHc0"
             list-description:
               name: list__description
               data:
@@ -1219,9 +1219,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 2
+                content: <a href="/proposed-negative-statutory-instruments/wzsrSFQP">proposedNegativeStatutoryInstrumentPaperName
+                  - 2</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/wzsrSFQP"
             list-description:
               name: list__description
               data:
@@ -1246,9 +1246,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 3
+                content: <a href="/proposed-negative-statutory-instruments/H95FzZVv">proposedNegativeStatutoryInstrumentPaperName
+                  - 3</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/H95FzZVv"
             list-description:
               name: list__description
               data:
@@ -1273,9 +1273,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 4
+                content: <a href="/proposed-negative-statutory-instruments/cL5yuFbG">proposedNegativeStatutoryInstrumentPaperName
+                  - 4</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/cL5yuFbG"
             list-description:
               name: list__description
               data:
@@ -1300,9 +1300,9 @@ main-components:
             heading:
               name: heading
               data:
-                content: proposedNegativeStatutoryInstrumentPaperName - 5
+                content: <a href="/proposed-negative-statutory-instruments/mssRQnqj">proposedNegativeStatutoryInstrumentPaperName
+                  - 5</a>
                 size: 2
-                link: "/proposed-negative-statutory-instruments/mssRQnqj"
             list-description:
               name: list__description
               data:
@@ -1327,6 +1327,10 @@ footer-components:
   data:
     uk-parliament: shared.footer.uk-parliament
     components:
+    - name: heading
+      data:
+        content: shared.meta.title
+        size: 2
     - name: list__generic
       data:
         type: ul

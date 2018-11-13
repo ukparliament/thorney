@@ -32,7 +32,10 @@ module PageSerializer
     end
 
     def section_components
-      [ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: @list_components).to_h]
+      list_items = @list_components
+      list_items = [CardFactory.new(heading_text: 'shared.no-results').build_card] if @list_components.empty?
+
+      [ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: list_items).to_h]
     end
   end
 end

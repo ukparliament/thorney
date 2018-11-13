@@ -15,16 +15,16 @@ RSpec.describe ProcedureSteps::WorkPackagesController, vcr: true do
 
         expect(JSON.parse(filtered_response_body).to_yaml).to eq(expected_json)
       end
+    end
 
-      context 'when a business item does not have a date' do
-        it 'renders expected JSON output' do
-          get '/procedure-steps/e9G2vHbc/work-packages'
-          filtered_response_body = filter_sensitive_data(response.body)
+    context 'navigating to the current page' do
+      it 'renders expected JSON output' do
+        get '/procedure-steps/e9G2vHbc/work-packages/current'
+        filtered_response_body = filter_sensitive_data(response.body)
 
-          expected_json = get_fixture('index', 'fixture_with_missing_business_item_date')
+        expected_json = get_fixture('current', 'fixture')
 
-          expect(JSON.parse(filtered_response_body).to_yaml).to eq(expected_json)
-        end
+        expect(JSON.parse(filtered_response_body).to_yaml).to eq(expected_json)
       end
     end
   end
