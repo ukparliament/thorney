@@ -1,7 +1,7 @@
 module Groups
   module MadeAvailable
     module AvailabilityTypes
-      class LayingsController < ApplicationController
+      class LaidPapersController < ApplicationController
         before_action :build_request, :data_check
 
         ROUTE_MAP = {

@@ -2,10 +2,10 @@
 layout:
   template: layout
 meta:
-  title: groupName - 1 - UK Parliament
+  title: some meta heading - UK Parliament
   request-id: 123456
   open-graph:
-    title: groupName - 1 - UK Parliament
+    title: some meta heading - UK Parliament
     original-url: https://example.com/
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -78,12 +78,8 @@ main-components:
     components:
     - name: heading1
       data:
-        subheading:
-          content: groups.groups
-          data:
-            link: "/groups"
         heading:
-          content: groupName - 1
+          content: Test page
 - name: section__section
   data:
     components:
@@ -101,9 +97,7 @@ main-components:
             heading:
               name: heading
               data:
-                content: groups.subsidiary-resources.layings
-                data:
-                  link: "/groups/7dSvuueH/made-available/availability-types/laid-papers"
+                content: shared.no-results
                 size: 2
 footer-components:
 - name: footer
