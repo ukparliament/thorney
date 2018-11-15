@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3030/group_laid_papers_index?group_id=XouN12Ow
+    uri: http://localhost:3030/group_laid_papers_index
     body:
       encoding: US-ASCII
       string: ''
@@ -14,8 +14,6 @@ http_interactions:
       - application/n-triples
       User-Agent:
       - Ruby
-      Ocp-Apim-Subscription-Key:
-      - "<AUTH_TOKEN>"
   response:
     status:
       code: 200
@@ -577,5 +575,5 @@ http_interactions:
         <https://id.parliament.uk/OBx31AlY> <https://id.parliament.uk/schema/layingDate> "2018-11-07+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
         <https://id.parliament.uk/auXnT4rF> <https://id.parliament.uk/schema/laidThingHasLaying> <https://id.parliament.uk/OBx31AlY> .
     http_version: 
-  recorded_at: Thu, 15 Nov 2018 12:18:03 GMT
+  recorded_at: Thu, 15 Nov 2018 14:59:03 GMT
 recorded_with: VCR 4.0.0
