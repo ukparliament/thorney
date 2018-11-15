@@ -29,7 +29,13 @@ class PaginationHelper
   end
 
   def total_pages
-    @total_pages ||= (@results_total.to_f / @count).ceil
+    return @total_pages if @total_pages
+
+    calculated_total = (@results_total.to_f / @count).ceil
+
+    return @total_pages = current_page if current_page > calculated_total
+
+    @total_pages = calculated_total
   end
 
   def previous_page

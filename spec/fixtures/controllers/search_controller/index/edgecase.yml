@@ -739,48 +739,52 @@ main-components:
       data:
         url: "/search?count=100&q=test&start_index=69401"
         number: 695
-        total-count: of 182
+        total-count: of 702
     - name: navigation__number__card
       data:
         url: "/search?count=100&q=test&start_index=69501"
         number: 696
-        total-count: of 182
+        total-count: of 702
     - name: navigation__number__card
       data:
         url: "/search?count=100&q=test&start_index=69601"
         number: 697
-        total-count: of 182
+        total-count: of 702
     - name: navigation__number__card
       data:
         url: "/search?count=100&q=test&start_index=69701"
         number: 698
-        total-count: of 182
+        total-count: of 702
     - name: navigation__number__card
       data:
         url: "/search?count=100&q=test&start_index=69801"
         number: 699
-        total-count: of 182
+        total-count: of 702
     - name: navigation__number__card
       data:
         url: "/search?count=100&q=test&start_index=69901"
         number: 700
-        total-count: of 182
+        total-count: of 702
     - name: navigation__number__card
       data:
         url: "/search?count=100&q=test&start_index=70001"
         number: 701
-        total-count: of 182
+        total-count: of 702
     - name: navigation__number__card
       data:
         url: "/search?count=100&q=test&start_index=70101"
         number: 702
-        total-count: of 182
+        total-count: of 702
         active: true
 footer-components:
 - name: footer
   data:
     uk-parliament: shared.footer.uk-parliament
     components:
+    - name: heading
+      data:
+        content: shared.meta.title
+        size: 2
     - name: list__generic
       data:
         type: ul
