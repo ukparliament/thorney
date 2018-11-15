@@ -2,26 +2,26 @@
 layout:
   template: layout
 meta:
-  title: groupName - 1 - laid papers - UK Parliament
+  title: groupName - 1 - procedural activity for statutory instruments - UK Parliament
   request-id: 123456
   data-alternates:
   - type: application/n-triples
-    href: http://localhost:3030/group_laid_papers_index.nt?group_id=XouN12Ow
+    href: http://localhost:3030/group_laid_papers_paper_type_statutory_instruments.nt?group_id=XouN12Ow
   - type: text/turtle
-    href: http://localhost:3030/group_laid_papers_index.ttl?group_id=XouN12Ow
+    href: http://localhost:3030/group_laid_papers_paper_type_statutory_instruments.ttl?group_id=XouN12Ow
   - type: text/tab-separated-values
-    href: http://localhost:3030/group_laid_papers_index.tsv?group_id=XouN12Ow
+    href: http://localhost:3030/group_laid_papers_paper_type_statutory_instruments.tsv?group_id=XouN12Ow
   - type: text/csv
-    href: http://localhost:3030/group_laid_papers_index.csv?group_id=XouN12Ow
+    href: http://localhost:3030/group_laid_papers_paper_type_statutory_instruments.csv?group_id=XouN12Ow
   - type: application/json+rdf
-    href: http://localhost:3030/group_laid_papers_index.rj?group_id=XouN12Ow
+    href: http://localhost:3030/group_laid_papers_paper_type_statutory_instruments.rj?group_id=XouN12Ow
   - type: application/json+ld
-    href: http://localhost:3030/group_laid_papers_index.json?group_id=XouN12Ow
+    href: http://localhost:3030/group_laid_papers_paper_type_statutory_instruments.json?group_id=XouN12Ow
   - type: application/rdf+xml
-    href: http://localhost:3030/group_laid_papers_index.xml?group_id=XouN12Ow
+    href: http://localhost:3030/group_laid_papers_paper_type_statutory_instruments.xml?group_id=XouN12Ow
   open-graph:
-    title: groupName - 1 - laid papers - UK Parliament
-    original-url: https://www.example.com/groups/XouN12Ow/made-available/availability-types/laid-papers
+    title: groupName - 1 - procedural activity for statutory instruments - UK Parliament
+    original-url: https://www.example.com/groups/XouN12Ow/made-available/availability-types/laid-papers/paper-types/statutory-instruments
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
     image-height: '630'
@@ -96,7 +96,7 @@ main-components:
         subheading:
           content: <a href="/groups/XouN12Ow">groupName - 1</a>
         heading:
-          content: groupName - 1 - laid papers
+          content: groupName - 1 - procedural activity for statutory instruments
 - name: section__section
   data:
     components:
@@ -111,15 +111,11 @@ main-components:
         components:
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/auXnT4rF">laidThingName -
-                  33</a>
+                content: <a href="/statutory-instruments/Kg3d4nur">laidThingName -
+                  36</a>
                 size: 2
             list-description:
               name: list__description
@@ -130,22 +126,18 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 7 November 2018
-                      datetime-value: '2018-11-07'
+                      datetime-value: '2018-11-01'
+                      date: 1 November 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 1
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/DGMmHxFe">laidThingName -
+                content: <a href="/statutory-instruments/miSZb1AQ">laidThingName -
                   32</a>
                 size: 2
             list-description:
@@ -157,22 +149,87 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 1 November 2018
-                      datetime-value: '2018-11-01'
+                      datetime-value: '2018-10-29'
+                      date: 29 October 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 1
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/FCEVApnx">laidThingName -
+                content: <a href="/statutory-instruments/LEX2jZFW">laidThingName -
+                  33</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-10-29'
+                      date: 29 October 2018
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/statutory-instruments/IOuLptrU">laidThingName -
+                  34</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-10-29'
+                      date: 29 October 2018
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/statutory-instruments/HYXUKvzP">laidThingName -
+                  35</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-10-29'
+                      date: 29 October 2018
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/statutory-instruments/9OuZ0Ga5">laidThingName -
                   31</a>
                 size: 2
             list-description:
@@ -184,22 +241,18 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 22 October 2018
                       datetime-value: '2018-10-22'
+                      date: 22 October 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 1
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/CFyWykUZ">laidThingName -
+                content: <a href="/statutory-instruments/MUGoc12O">laidThingName -
                   30</a>
                 size: 2
             list-description:
@@ -211,49 +264,18 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 11 October 2018
-                      datetime-value: '2018-10-11'
+                      datetime-value: '2018-10-19'
+                      date: 19 October 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 1
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/gVLa6U8S">laidThingName -
-                  29</a>
-                size: 2
-            list-description:
-              name: list__description
-              data:
-                items:
-                - term:
-                    content: laid-thing.laid-date
-                  description:
-                  - content: shared.time-html
-                    data:
-                      date: 14 September 2018
-                      datetime-value: '2018-09-14'
-                - term:
-                    content: laid-thing.procedure
-                  description:
-                  - content: procedureName - 1
-        - name: card__generic
-          data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
-            heading:
-              name: heading
-              data:
-                content: <a href="/statutory-instruments/CoWkZnVU">laidThingName -
+                content: <a href="/statutory-instruments/iYcTtFEN">laidThingName -
                   28</a>
                 size: 2
             list-description:
@@ -265,23 +287,19 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 12 September 2018
-                      datetime-value: '2018-09-12'
+                      datetime-value: '2018-10-18'
+                      date: 18 October 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 1
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/TFdnSOeu">laidThingName -
-                  27</a>
+                content: <a href="/statutory-instruments/QT68Vc00">laidThingName -
+                  29</a>
                 size: 2
             list-description:
               name: list__description
@@ -292,22 +310,18 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 5 September 2018
-                      datetime-value: '2018-09-05'
+                      datetime-value: '2018-10-18'
+                      date: 18 October 2018
                 - term:
                     content: laid-thing.procedure
                   description:
-                  - content: procedureName - 2
+                  - content: procedureName - 1
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/nuicNnFk">laidThingName -
+                content: <a href="/statutory-instruments/DSe9UJ2F">laidThingName -
                   26</a>
                 size: 2
             list-description:
@@ -319,22 +333,41 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 31 August 2018
-                      datetime-value: '2018-08-31'
+                      datetime-value: '2018-10-17'
+                      date: 17 October 2018
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/statutory-instruments/9ZSPHAyw">laidThingName -
+                  27</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-10-17'
+                      date: 17 October 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 1
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/Wa2pnyo2">laidThingName -
+                content: <a href="/statutory-instruments/Y5wgjNCe">laidThingName -
                   25</a>
                 size: 2
             list-description:
@@ -346,22 +379,41 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 13 August 2018
-                      datetime-value: '2018-08-13'
+                      datetime-value: '2018-10-10'
+                      date: 10 October 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 1
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/evNAwjHg">laidThingName -
+                content: <a href="/statutory-instruments/HD6sJ5Bq">laidThingName -
+                  23</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-10-09'
+                      date: 9 October 2018
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/statutory-instruments/5ISSgu1W">laidThingName -
                   24</a>
                 size: 2
             list-description:
@@ -373,184 +425,18 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 8 August 2018
-                      datetime-value: '2018-08-08'
-                - term:
-                    content: laid-thing.procedure
-                  description:
-                  - content: procedureName - 1
-        - name: card__generic
-          data:
-            small:
-              name: partials__small
-              data:
-                content: Proposed negative statutory instrument
-            heading:
-              name: heading
-              data:
-                content: <a href="/proposed-negative-statutory-instruments/KKMVpl6g">laidThingName
-                  - 23</a>
-                size: 2
-            list-description:
-              name: list__description
-              data:
-                items:
-                - term:
-                    content: laid-thing.laid-date
-                  description:
-                  - content: shared.time-html
-                    data:
-                      date: 26 July 2018
-                      datetime-value: '2018-07-26'
-                - term:
-                    content: laid-thing.procedure
-                  description:
-                  - content: procedureName - 1
-        - name: card__generic
-          data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
-            heading:
-              name: heading
-              data:
-                content: <a href="/statutory-instruments/dHwDR0Xw">laidThingName -
-                  17</a>
-                size: 2
-            list-description:
-              name: list__description
-              data:
-                items:
-                - term:
-                    content: laid-thing.laid-date
-                  description:
-                  - content: shared.time-html
-                    data:
-                      date: 23 July 2018
-                      datetime-value: '2018-07-23'
+                      datetime-value: '2018-10-09'
+                      date: 9 October 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 2
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/zRBB7JhE">laidThingName -
-                  18</a>
-                size: 2
-            list-description:
-              name: list__description
-              data:
-                items:
-                - term:
-                    content: laid-thing.laid-date
-                  description:
-                  - content: shared.time-html
-                    data:
-                      date: 23 July 2018
-                      datetime-value: '2018-07-23'
-                - term:
-                    content: laid-thing.procedure
-                  description:
-                  - content: procedureName - 2
-        - name: card__generic
-          data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
-            heading:
-              name: heading
-              data:
-                content: <a href="/statutory-instruments/xRUG9ARI">laidThingName -
-                  19</a>
-                size: 2
-            list-description:
-              name: list__description
-              data:
-                items:
-                - term:
-                    content: laid-thing.laid-date
-                  description:
-                  - content: shared.time-html
-                    data:
-                      date: 23 July 2018
-                      datetime-value: '2018-07-23'
-                - term:
-                    content: laid-thing.procedure
-                  description:
-                  - content: procedureName - 2
-        - name: card__generic
-          data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
-            heading:
-              name: heading
-              data:
-                content: <a href="/statutory-instruments/DVgODdNe">laidThingName -
-                  20</a>
-                size: 2
-            list-description:
-              name: list__description
-              data:
-                items:
-                - term:
-                    content: laid-thing.laid-date
-                  description:
-                  - content: shared.time-html
-                    data:
-                      date: 23 July 2018
-                      datetime-value: '2018-07-23'
-                - term:
-                    content: laid-thing.procedure
-                  description:
-                  - content: procedureName - 2
-        - name: card__generic
-          data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
-            heading:
-              name: heading
-              data:
-                content: <a href="/statutory-instruments/j0R3vR5s">laidThingName -
-                  21</a>
-                size: 2
-            list-description:
-              name: list__description
-              data:
-                items:
-                - term:
-                    content: laid-thing.laid-date
-                  description:
-                  - content: shared.time-html
-                    data:
-                      date: 23 July 2018
-                      datetime-value: '2018-07-23'
-                - term:
-                    content: laid-thing.procedure
-                  description:
-                  - content: procedureName - 2
-        - name: card__generic
-          data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
-            heading:
-              name: heading
-              data:
-                content: <a href="/statutory-instruments/2JipSGt3">laidThingName -
+                content: <a href="/statutory-instruments/558R1vHw">laidThingName -
                   22</a>
                 size: 2
             list-description:
@@ -562,22 +448,87 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 23 July 2018
-                      datetime-value: '2018-07-23'
+                      datetime-value: '2018-09-17'
+                      date: 17 September 2018
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/statutory-instruments/IyxF7Re7">laidThingName -
+                  20</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-09-13'
+                      date: 13 September 2018
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/statutory-instruments/vWSvjJPY">laidThingName -
+                  21</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-09-13'
+                      date: 13 September 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 2
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/UBL9i00X">laidThingName -
+                content: <a href="/statutory-instruments/l05U8jIT">laidThingName -
+                  19</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-09-07'
+                      date: 7 September 2018
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/statutory-instruments/ePPVgmgN">laidThingName -
                   16</a>
                 size: 2
             list-description:
@@ -589,23 +540,19 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 6 July 2018
-                      datetime-value: '2018-07-06'
+                      datetime-value: '2018-07-23'
+                      date: 23 July 2018
                 - term:
                     content: laid-thing.procedure
                   description:
-                  - content: procedureName - 1
+                  - content: procedureName - 2
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/JPx0duf2">laidThingName -
-                  14</a>
+                content: <a href="/statutory-instruments/qRweamaE">laidThingName -
+                  17</a>
                 size: 2
             list-description:
               name: list__description
@@ -616,22 +563,41 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 2 July 2018
-                      datetime-value: '2018-07-02'
+                      datetime-value: '2018-07-23'
+                      date: 23 July 2018
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/statutory-instruments/YdIWHZS3">laidThingName -
+                  18</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-23'
+                      date: 23 July 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 1
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/c0IpQmwt">laidThingName -
+                content: <a href="/statutory-instruments/QI5WArIQ">laidThingName -
                   15</a>
                 size: 2
             list-description:
@@ -643,22 +609,41 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 2 July 2018
-                      datetime-value: '2018-07-02'
+                      datetime-value: '2018-07-19'
+                      date: 19 July 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 2
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/VdxVTQ0L">laidThingName -
+                content: <a href="/statutory-instruments/55gPdheg">laidThingName -
+                  14</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-13'
+                      date: 13 July 2018
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/statutory-instruments/KF90wtY4">laidThingName -
                   13</a>
                 size: 2
             list-description:
@@ -670,49 +655,18 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 25 June 2018
-                      datetime-value: '2018-06-25'
+                      datetime-value: '2018-07-09'
+                      date: 9 July 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 1
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/D9vkxjm0">laidThingName -
-                  12</a>
-                size: 2
-            list-description:
-              name: list__description
-              data:
-                items:
-                - term:
-                    content: laid-thing.laid-date
-                  description:
-                  - content: shared.time-html
-                    data:
-                      date: 15 June 2018
-                      datetime-value: '2018-06-15'
-                - term:
-                    content: laid-thing.procedure
-                  description:
-                  - content: procedureName - 2
-        - name: card__generic
-          data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
-            heading:
-              name: heading
-              data:
-                content: <a href="/statutory-instruments/tiA7a71r">laidThingName -
+                content: <a href="/statutory-instruments/C8kKvTBL">laidThingName -
                   11</a>
                 size: 2
             list-description:
@@ -724,22 +678,41 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 7 June 2018
-                      datetime-value: '2018-06-07'
+                      datetime-value: '2018-07-02'
+                      date: 2 July 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 1
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/NRSdVnQe">laidThingName -
+                content: <a href="/statutory-instruments/BZPGfEza">laidThingName -
+                  12</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-07-02'
+                      date: 2 July 2018
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/statutory-instruments/NTd30zpo">laidThingName -
                   10</a>
                 size: 2
             list-description:
@@ -751,49 +724,18 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 4 June 2018
-                      datetime-value: '2018-06-04'
+                      datetime-value: '2018-06-28'
+                      date: 28 June 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 1
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/KUKpCZa3">laidThingName -
-                  8</a>
-                size: 2
-            list-description:
-              name: list__description
-              data:
-                items:
-                - term:
-                    content: laid-thing.laid-date
-                  description:
-                  - content: shared.time-html
-                    data:
-                      date: 4 June 2018
-                      datetime-value: '2018-06-04'
-                - term:
-                    content: laid-thing.procedure
-                  description:
-                  - content: procedureName - 2
-        - name: card__generic
-          data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
-            heading:
-              name: heading
-              data:
-                content: <a href="/statutory-instruments/58xXcnw9">laidThingName -
+                content: <a href="/statutory-instruments/rdYNYrB9">laidThingName -
                   9</a>
                 size: 2
             list-description:
@@ -805,49 +747,18 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 1 June 2018
-                      datetime-value: '2018-06-01'
+                      datetime-value: '2018-06-15'
+                      date: 15 June 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 1
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/dNxWbKuU">laidThingName -
-                  6</a>
-                size: 2
-            list-description:
-              name: list__description
-              data:
-                items:
-                - term:
-                    content: laid-thing.laid-date
-                  description:
-                  - content: shared.time-html
-                    data:
-                      date: 23 May 2018
-                      datetime-value: '2018-05-23'
-                - term:
-                    content: laid-thing.procedure
-                  description:
-                  - content: procedureName - 1
-        - name: card__generic
-          data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
-            heading:
-              name: heading
-              data:
-                content: <a href="/statutory-instruments/lh2dYuHD">laidThingName -
+                content: <a href="/statutory-instruments/LldrrMNS">laidThingName -
                   7</a>
                 size: 2
             list-description:
@@ -859,23 +770,19 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 21 May 2018
-                      datetime-value: '2018-05-21'
+                      datetime-value: '2018-06-08'
+                      date: 8 June 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 1
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/keUmDe6y">laidThingName -
-                  1</a>
+                content: <a href="/statutory-instruments/nohxpB6K">laidThingName -
+                  8</a>
                 size: 2
             list-description:
               name: list__description
@@ -886,23 +793,19 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 27 April 2018
-                      datetime-value: '2018-04-27'
+                      datetime-value: '2018-06-08'
+                      date: 8 June 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 1
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/VIqyNL58">laidThingName -
-                  4</a>
+                content: <a href="/statutory-instruments/8xNcqHgV">laidThingName -
+                  6</a>
                 size: 2
             list-description:
               name: list__description
@@ -913,76 +816,18 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 16 April 2018
-                      datetime-value: '2018-04-16'
-                - term:
-                    content: laid-thing.procedure
-                  description:
-                  - content: procedureName - 2
-        - name: card__generic
-          data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
-            heading:
-              name: heading
-              data:
-                content: <a href="/statutory-instruments/XnLvIexa">laidThingName -
-                  3</a>
-                size: 2
-            list-description:
-              name: list__description
-              data:
-                items:
-                - term:
-                    content: laid-thing.laid-date
-                  description:
-                  - content: shared.time-html
-                    data:
-                      date: 13 April 2018
-                      datetime-value: '2018-04-13'
+                      datetime-value: '2018-06-07'
+                      date: 7 June 2018
                 - term:
                     content: laid-thing.procedure
                   description:
                   - content: procedureName - 1
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
             heading:
               name: heading
               data:
-                content: <a href="/statutory-instruments/On2R0Zeb">laidThingName -
-                  2</a>
-                size: 2
-            list-description:
-              name: list__description
-              data:
-                items:
-                - term:
-                    content: laid-thing.laid-date
-                  description:
-                  - content: shared.time-html
-                    data:
-                      date: 4 April 2018
-                      datetime-value: '2018-04-04'
-                - term:
-                    content: laid-thing.procedure
-                  description:
-                  - content: procedureName - 1
-        - name: card__generic
-          data:
-            small:
-              name: partials__small
-              data:
-                content: Statutory instrument
-            heading:
-              name: heading
-              data:
-                content: <a href="/statutory-instruments/Ly5VtVqc">laidThingName -
+                content: <a href="/statutory-instruments/9PfnbabC">laidThingName -
                   5</a>
                 size: 2
             list-description:
@@ -994,8 +839,100 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      date: 4 April 2018
-                      datetime-value: '2018-04-04'
+                      datetime-value: '2018-05-16'
+                      date: 16 May 2018
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/statutory-instruments/xic2yu5i">laidThingName -
+                  1</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-04-20'
+                      date: 20 April 2018
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/statutory-instruments/O8GS8jnH">laidThingName -
+                  2</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-04-03'
+                      date: 3 April 2018
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/statutory-instruments/AaXxxzda">laidThingName -
+                  3</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-04-03'
+                      date: 3 April 2018
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/statutory-instruments/daySypEn">laidThingName -
+                  4</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      datetime-value: '2018-04-03'
+                      date: 3 April 2018
                 - term:
                     content: laid-thing.procedure
                   description:
