@@ -4,20 +4,20 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LaidPapersController, v
   describe 'GET index' do
     let(:data_alternates) do
       [{
-        href: "#{ENV['PARLIAMENT_BASE_URL']}/group_layings_index.nt?group_id=XouN12Ow",
+        href: "#{ENV['PARLIAMENT_BASE_URL']}/group_laid_papers_index.nt?group_id=XouN12Ow",
         type: 'application/n-triples'
       },
-       { href: "#{ENV['PARLIAMENT_BASE_URL']}/group_layings_index.ttl?group_id=XouN12Ow",
+       { href: "#{ENV['PARLIAMENT_BASE_URL']}/group_laid_papers_index.ttl?group_id=XouN12Ow",
          type: 'text/turtle' },
-       { href: "#{ENV['PARLIAMENT_BASE_URL']}/group_layings_index.tsv?group_id=XouN12Ow",
+       { href: "#{ENV['PARLIAMENT_BASE_URL']}/group_laid_papers_index.tsv?group_id=XouN12Ow",
          type: 'text/tab-separated-values' },
-       { href: "#{ENV['PARLIAMENT_BASE_URL']}/group_layings_index.csv?group_id=XouN12Ow",
+       { href: "#{ENV['PARLIAMENT_BASE_URL']}/group_laid_papers_index.csv?group_id=XouN12Ow",
          type: 'text/csv' },
-       { href: "#{ENV['PARLIAMENT_BASE_URL']}/group_layings_index.rj?group_id=XouN12Ow",
+       { href: "#{ENV['PARLIAMENT_BASE_URL']}/group_laid_papers_index.rj?group_id=XouN12Ow",
          type: 'application/json+rdf' },
-       { href: "#{ENV['PARLIAMENT_BASE_URL']}/group_layings_index.json?group_id=XouN12Ow",
+       { href: "#{ENV['PARLIAMENT_BASE_URL']}/group_laid_papers_index.json?group_id=XouN12Ow",
          type: 'application/json+ld' },
-       { href: "#{ENV['PARLIAMENT_BASE_URL']}/group_layings_index.xml?group_id=XouN12Ow",
+       { href: "#{ENV['PARLIAMENT_BASE_URL']}/group_laid_papers_index.xml?group_id=XouN12Ow",
          type: 'application/rdf+xml' }]
     end
 
@@ -42,10 +42,10 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LaidPapersController, v
         expect(assigns(:group).type).to include('https://id.parliament.uk/schema/Group')
       end
 
-      it 'assigns @layings' do
-        assigns(:layings).each do |laying|
-          expect(laying).to be_a(Grom::Node)
-          expect(laying.type).to include('https://id.parliament.uk/schema/Laying')
+      it 'assigns @laid_papers' do
+        assigns(:laid_papers).each do |laid_paper|
+          expect(laid_paper).to be_a(Grom::Node)
+          expect(laid_paper.type).to include('https://id.parliament.uk/schema/LaidThing')
         end
       end
     end
@@ -60,65 +60,17 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LaidPapersController, v
                                        { 'heading'          =>
                                                                { 'data' =>
                                                                            { 'content' =>
-                                                                                          "<a href=\"/statutory-instruments/WBlaNvyq\">laidThingName - 24</a>",
+                                                                                          "<a href=\"/statutory-instruments/keUmDe6y\">laidThingName - 1</a>",
                                                                              'size'    => 2 },
                                                                  'name' => 'heading' },
                                          'list-description' =>
                                                                { 'data' =>
                                                                            { 'items' =>
-                                                                                        [{ 'description' => [{ 'content' => '10 September 2018' }],
-                                                                                           'term'        => { 'content' => 'laid-thing.laid-date' } }] },
-                                                                 'name' => 'list__description' },
-                                         'small'            =>
-                                                               { 'data' => { 'content' => 'Statutory instrument' },
-                                                                 'name' => 'partials__small' } },
-                             'name' => 'card__generic' },
-                           { 'data' =>
-                                       { 'heading'          =>
-                                                               { 'data' =>
-                                                                           { 'content' =>
-                                                                                          "<a href=\"/statutory-instruments/BuMKAKjA\">laidThingName - 23</a>",
-                                                                             'size'    => 2 },
-                                                                 'name' => 'heading' },
-                                         'list-description' =>
-                                                               { 'data' =>
-                                                                           { 'items' =>
-                                                                                        [{ 'description' => [{ 'content' => '6 September 2018' }],
-                                                                                           +'term'       => { 'content' => 'laid-thing.laid-date' } }] },
-                                                                 'name' => 'list__description' },
-                                         'small'            =>
-                                                               { 'data' => { 'content' => 'Statutory instrument' },
-                                                                 'name' => 'partials__small' } },
-                             'name' => 'card__generic' },
-                           { 'data' =>
-                                       { 'heading'          =>
-                                                               { 'data' =>
-                                                                           { 'content' =>
-                                                                                          "<a href=\"/proposed-negative-statutory-instruments/W3l3iqIJ\">laidThingName - 21</a>",
-                                                                             'size'    => 2 },
-                                                                 'name' => 'heading' },
-                                         'list-description' =>
-                                                               { 'data' =>
-                                                                           { 'items' =>
-                                                                                        [{ 'description' => [{ 'content' => '25 July 2018' }],
-                                                                                           'term'        => { 'content' => 'laid-thing.laid-date' } }] },
-                                                                 'name' => 'list__description' },
-                                         'small'            =>
-                                                               { 'data' => { 'content' => 'Proposed negative statutory instrument' },
-                                                                 'name' => 'partials__small' } },
-                             'name' => 'card__generic' },
-                           { 'data' =>
-                                       { 'heading'          =>
-                                                               { 'data' =>
-                                                                           { 'content' =>
-                                                                                          "<a href=\"/statutory-instruments/QV9rpep6\">laidThingName - 1</a>",
-                                                                             'size'    => 2 },
-                                                                 'name' => 'heading' },
-                                         'list-description' =>
-                                                               { 'data' =>
-                                                                           { 'items' =>
-                                                                                        [{ 'description' => [{ 'content' => '27 April 2018' }],
-                                                                                           'term'        => { 'content' => 'laid-thing.laid-date' } }] },
+                                                                                        [{ 'description' => [{"content"=>"shared.time-html", "data"=>{"date"=>"27 April 2018", "datetime-value"=>"2018-04-27"}}],
+                                                                                           'term'        => { 'content' => 'laid-thing.laid-date' } },
+                                                                                           {"description"=>[{"content"=>"procedureName - 1"}],
+                                                                                           "term"=>{"content"=>"laid-thing.procedure"}}
+                                                                                           ] },
                                                                  'name' => 'list__description' },
                                          'small'            =>
                                                                { 'data' => { 'content' => 'Statutory instrument' },
