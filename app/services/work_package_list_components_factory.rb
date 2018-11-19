@@ -81,7 +81,7 @@ class WorkPackageListComponentsFactory
     end
 
     def create_date_description_list_item(translation_string, date)
-      create_description_list_item(term: translation_string, descriptions: [ContentDataHelper.content_data(content: 'shared.time-html', datetime_value: I18n.l(date, format: :datetime_format), date: I18n.l(date))])
+      create_description_list_item(term: translation_string, descriptions: [TimeHelper.time_translation(date_first: date)])
     end
   end
 end

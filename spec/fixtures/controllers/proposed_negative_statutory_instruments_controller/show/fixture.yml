@@ -108,7 +108,10 @@ main-components:
         - term:
             content: laid-thing.laid-date
           description:
-          - content: 19 July 2018
+          - content: shared.time-html
+            data:
+              date: 19 July 2018
+              datetime-value: '2018-07-19'
         - term:
             content: proposed-negative-statutory-instruments.show.preceding-title
           description:
@@ -137,7 +140,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: laid-thing.work-package
+                content: laid-thing.procedural-activity
             heading:
               name: heading
               data:
@@ -155,7 +158,10 @@ main-components:
                 - term:
                     content: procedureStepName - 1
                   description:
-                  - content: 9 October 2018
+                  - content: shared.time-html
+                    data:
+                      date: 9 October 2018
+                      datetime-value: '2018-10-09'
 footer-components:
 - name: footer
   data:

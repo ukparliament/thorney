@@ -52,7 +52,7 @@ module PageSerializer
         components << ComponentSerializer::CardComponentSerializer.new(
           name: 'card__generic',
           data: {
-            small:            ComponentSerializer::SmallComponentSerializer.new(content: 'laid-thing.work-package').to_h,
+            small:            ComponentSerializer::SmallComponentSerializer.new(content: 'laid-thing.procedural-activity').to_h,
             heading:          work_package_card_heading,
             list_description: work_package_list_description
           }
@@ -74,7 +74,7 @@ module PageSerializer
         items << if @business_item && @business_item.try(:date)
                    {
                      'term':        { 'content': @procedure_step.try(:procedureStepName) },
-                     'description': [{ 'content': l(@business_item.try(:date)) }]
+                     'description': [TimeHelper.time_translation(date_first: @business_item.try(:date))]
                    }
                  end
       end

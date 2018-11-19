@@ -43,9 +43,9 @@ module PageSerializer
       [].tap do |items|
         web_link = @laid_thing.try(:workPackagedThingHasWorkPackagedThingWebLink)
         items << create_description_list_item(term: 'laid-thing.web-link', descriptions: [link_to(web_link, web_link)]) if web_link
-        items << create_description_list_item(term: 'statutory-instruments.show.made-date', descriptions: [l(@statutory_instrument.made_date)])
-        items << create_description_list_item(term: 'laid-thing.laid-date', descriptions: [l(@laid_thing&.laying&.date)])
-        items << create_description_list_item(term: 'statutory-instruments.show.coming-into-force-date', descriptions: [l(@statutory_instrument.coming_into_force_date)])
+        items << create_description_list_item(term: 'statutory-instruments.show.made-date', descriptions: [TimeHelper.time_translation(date_first: @statutory_instrument.made_date)]) if @statutory_instrument.made_date
+        items << create_description_list_item(term: 'laid-thing.laid-date', descriptions: [TimeHelper.time_translation(date_first: @laid_thing&.laying&.date)]) if @laid_thing&.laying&.date
+        items << create_description_list_item(term: 'statutory-instruments.show.coming-into-force-date', descriptions: [TimeHelper.time_translation(date_first: @statutory_instrument.coming_into_force_date)]) if @statutory_instrument.coming_into_force_date
         items << create_description_list_item(term: 'statutory-instruments.show.coming-into-force-note', descriptions: [@statutory_instrument.try(:statutoryInstrumentPaperComingIntoForceNote)])
         items << create_description_list_item(term: 'statutory-instruments.show.following-title', descriptions: connected_statutory_instruments)
         items << create_description_list_item(term: 'laid-thing.laying-person', descriptions: [@laying_person&.display_name])

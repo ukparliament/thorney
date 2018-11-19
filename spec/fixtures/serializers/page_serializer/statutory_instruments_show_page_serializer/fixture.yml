@@ -96,11 +96,17 @@ main-components:
         - term:
             content: laid-thing.laid-date
           description:
-          - content: 20 April 2018
+          - content: shared.time-html
+            data:
+              date: 20 April 2018
+              datetime-value: '2018-04-20'
         - term:
             content: statutory-instruments.show.coming-into-force-date
           description:
-          - content: 18 May 2018
+          - content: shared.time-html
+            data:
+              date: 18 May 2018
+              datetime-value: '2018-05-18'
         - term:
             content: statutory-instruments.show.following-title
           description:
@@ -129,7 +135,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: laid-thing.work-package
+                content: laid-thing.procedural-activity
             heading:
               name: heading
               data:
@@ -147,7 +153,10 @@ main-components:
                 - term:
                     content: procedureStepName - 1
                   description:
-                  - content: 8 June 2018
+                  - content: shared.time-html
+                    data:
+                      date: 8 June 2018
+                      datetime-value: '2018-06-08'
 footer-components:
 - name: footer
   data:

@@ -46,13 +46,9 @@ class LaidThingListComponentsFactory
 
     def description_hash(item, statutory_instrument)
       item.tap do |hash|
-        hash[:description] = [{
-          content: 'shared.time-html',
-          data:    {
-            datetime_value: I18n.l(statutory_instrument&.laying&.date, format: :datetime_format),
-            date:           I18n.l(statutory_instrument&.laying&.date)
-          }
-        }]
+        hash[:description] = [
+          TimeHelper.time_translation(date_first: statutory_instrument&.laying&.date)
+        ]
       end
     end
 
