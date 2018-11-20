@@ -59,6 +59,14 @@ RSpec.describe PageSerializer::ListPageSerializer do
 
         expect(subject.to_yaml).to eq expected
       end
+
+      it 'produces the expected JSON hash when no list items are given' do
+        serializer = described_class.new(request: request, heading_component: heading, list_components: [])
+
+        expected = get_fixture('no_list_items')
+
+        expect(serializer.to_yaml).to eq expected
+      end
     end
   end
 end

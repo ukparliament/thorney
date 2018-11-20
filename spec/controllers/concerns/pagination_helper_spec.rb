@@ -12,8 +12,18 @@ RSpec.describe PaginationHelper, type: :helper do
     expect(pagination_helper.current_page).to eq 1
   end
 
-  it '#total_pages' do
-    expect(pagination_helper.total_pages).to eq 3
+  context '#total_pages' do
+    it 'returns 3' do
+      expect(pagination_helper.total_pages).to eq 3
+    end
+
+    context 'if the current page is greater than the calculated total' do
+      it 'returns the current page as the total pages' do
+        allow(pagination_helper).to receive(:current_page) { 5 }
+
+        expect(pagination_helper.total_pages).to eq 5
+      end
+    end
   end
 
   it '#previous_page' do
