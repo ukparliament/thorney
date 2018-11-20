@@ -25,16 +25,7 @@ module WorkPackages
     }.freeze
 
     def index
-      list_components = [
-        CardFactory.new(
-          heading_text: I18n.t('proposed_negative_statutory_instruments.type').pluralize,
-          heading_url:  work_packages_paper_type_path('proposed-negative-statutory-instruments')
-        ).build_card,
-        CardFactory.new(
-          heading_text: I18n.t('statutory_instruments.type').pluralize,
-          heading_url:  work_packages_paper_type_path('statutory-instruments')
-        ).build_card
-      ]
+      list_components = PaperTypesListComponentsFactory.build_components
 
       heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('work_packages.paper_types.index.title'))
 

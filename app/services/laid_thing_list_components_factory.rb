@@ -21,6 +21,7 @@ class LaidThingListComponentsFactory
     def build_components(statutory_instruments: nil, type: nil, small: false)
       statutory_instruments.map do |statutory_instrument|
         laying_type = small ? laying_type(statutory_instrument) : nil
+
         CardFactory.new(
           small:                    laying_type,
           heading_text:             heading_text(statutory_instrument, type),

@@ -23,16 +23,7 @@ module Groups
             @group = FilterHelper.filter(@api_request, 'Group')
             @group = @group.first
 
-            list_components = [
-              CardFactory.new(
-                heading_text: I18n.t('proposed_negative_statutory_instruments.type').pluralize,
-                heading_url:  group_made_available_availability_types_laid_papers_paper_type_path(group_id: @group.graph_id, paper_type: 'proposed-negative-statutory-instruments')
-              ).build_card,
-              CardFactory.new(
-                heading_text: I18n.t('statutory_instruments.type').pluralize,
-                heading_url:  group_made_available_availability_types_laid_papers_paper_type_path(group_id: @group.graph_id, paper_type: 'statutory-instruments')
-              ).build_card
-            ]
+            list_components = PaperTypesListComponentsFactory.build_components(group: @group)
 
             heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('groups.made_available.availability_types.paper_types.index.title', group: @group.try(:groupName)), subheading: @group.try(:groupName), subheading_link: group_path)
 
