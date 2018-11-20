@@ -51,6 +51,26 @@ RSpec.describe ComponentSerializer::ListDescriptionComponentSerializer do
 
         expect(serializer.to_yaml).to eq expected
       end
+
+      it 'when time tags are passed in to the description' do
+        serializer = described_class.new(
+          "items":
+            [{
+               "term":
+                   {
+                     "content": "Date"
+                   },
+               "description":
+                 [
+                   TimeHelper.time_translation(date_first: DateTime.parse('23/12/2016'), date_second: DateTime.parse('23/12/2017'))
+                 ]
+             }
+            ])
+
+        expected   = get_fixture('time_helper')
+
+        expect(serializer.to_yaml).to eq expected
+      end
     end
 
     context 'with meta set to true' do

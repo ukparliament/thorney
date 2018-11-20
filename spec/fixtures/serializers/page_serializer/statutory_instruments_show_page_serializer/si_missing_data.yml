@@ -92,11 +92,17 @@ main-components:
         - term:
             content: statutory-instruments.show.made-date
           description:
-          - content: 1 May 2018
+          - content: shared.time-html
+            data:
+              date: 1 May 2018
+              datetime-value: '2018-05-01'
         - term:
             content: statutory-instruments.show.coming-into-force-date
           description:
-          - content: 1 June 2018
+          - content: shared.time-html
+            data:
+              date: 1 June 2018
+              datetime-value: '2018-06-01'
         - term:
             content: statutory-instruments.show.coming-into-force-note
           description:

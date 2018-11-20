@@ -19,7 +19,7 @@ RSpec.describe ComponentSerializer::ParagraphComponentSerializer do
         expect(serializer.to_yaml).to eq expected
       end
 
-      it 'returns a hash containing the name and multiple paragraphs with multiple bit of data' do
+      it 'returns a hash containing the name and multiple paragraphs with multiple bits of data' do
         serializer = described_class.new(
           content: [
             ContentDataHelper.content_data(content: 'some content', one: 'property', yet: 'another'),
@@ -29,6 +29,18 @@ RSpec.describe ComponentSerializer::ParagraphComponentSerializer do
           )
 
         expected = get_fixture('many_properties')
+
+        expect(serializer.to_yaml).to eq expected
+      end
+
+      it 'returns a hash containing the name and paragraphs with time helper' do
+        serializer = described_class.new(
+          content: [
+            TimeHelper.time_translation(date_first: DateTime.parse('23/12/2016'), date_second: DateTime.parse('23/12/2017'))
+            ]
+          )
+
+        expected = get_fixture('time_helper')
 
         expect(serializer.to_yaml).to eq expected
       end
