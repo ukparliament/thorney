@@ -7,31 +7,10 @@ module Groups
     }.freeze
 
     def index
-      @group, @layings = FilterHelper.filter(@api_request, 'Group', 'Laying')
-      @layings = @layings.sort_by(:date, :graph_id).reverse
+      @group, @laid_papers = FilterHelper.filter(@api_request, 'Group', 'LaidThing')
       @group = @group.first
 
-      list_components = @layings.map do |laying|
-        laying_type = I18n.t('layings.type.si')
-        heading_text = laying.laid_thing.try(:laidThingName)
-        heading_url = statutory_instrument_path(laying.laid_thing.graph_id)
-
-        if laying.laid_thing.is_a?(Parliament::Grom::Decorator::ProposedNegativeStatutoryInstrumentPaper)
-          laying_type = I18n.t('layings.type.pnsi')
-          heading_url = proposed_negative_statutory_instrument_path(laying.laid_thing.graph_id)
-        end
-
-        list_description_items = [].tap do |items|
-          items << { term: { content: 'laid-thing.laid-date' }, description: [{ content: I18n.l(laying&.date) }] }
-        end
-
-        CardFactory.new(
-          small:                    laying_type,
-          heading_text:             heading_text,
-          heading_url:              heading_url,
-          description_list_content: list_description_items
-        ).build_card
-      end
+      list_components = LaidThingListComponentsFactory.sort_and_build_components(statutory_instruments: @laid_papers, type: :laid_thing, small: true)
 
       heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('groups.made_available.title', group: @group.try(:groupName)), subheading: @group.try(:groupName), subheading_link: group_path)
 
