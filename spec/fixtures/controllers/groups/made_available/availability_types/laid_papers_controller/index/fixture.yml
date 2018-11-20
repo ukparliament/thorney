@@ -130,8 +130,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-11-07'
                       date: 7 November 2018
+                      datetime-value: '2018-11-07'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -157,8 +157,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-11-01'
                       date: 1 November 2018
+                      datetime-value: '2018-11-01'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -184,8 +184,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-10-22'
                       date: 22 October 2018
+                      datetime-value: '2018-10-22'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -211,8 +211,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-10-11'
                       date: 11 October 2018
+                      datetime-value: '2018-10-11'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -238,8 +238,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-09-14'
                       date: 14 September 2018
+                      datetime-value: '2018-09-14'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -265,8 +265,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-09-12'
                       date: 12 September 2018
+                      datetime-value: '2018-09-12'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -292,8 +292,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-09-05'
                       date: 5 September 2018
+                      datetime-value: '2018-09-05'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -319,8 +319,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-08-31'
                       date: 31 August 2018
+                      datetime-value: '2018-08-31'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -346,8 +346,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-08-13'
                       date: 13 August 2018
+                      datetime-value: '2018-08-13'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -373,8 +373,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-08-08'
                       date: 8 August 2018
+                      datetime-value: '2018-08-08'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -400,8 +400,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-07-26'
                       date: 26 July 2018
+                      datetime-value: '2018-07-26'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -427,8 +427,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-07-23'
                       date: 23 July 2018
+                      datetime-value: '2018-07-23'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -454,8 +454,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-07-23'
                       date: 23 July 2018
+                      datetime-value: '2018-07-23'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -481,8 +481,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-07-23'
                       date: 23 July 2018
+                      datetime-value: '2018-07-23'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -508,8 +508,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-07-23'
                       date: 23 July 2018
+                      datetime-value: '2018-07-23'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -535,8 +535,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-07-23'
                       date: 23 July 2018
+                      datetime-value: '2018-07-23'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -562,8 +562,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-07-23'
                       date: 23 July 2018
+                      datetime-value: '2018-07-23'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -589,8 +589,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-07-06'
                       date: 6 July 2018
+                      datetime-value: '2018-07-06'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -616,8 +616,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-07-02'
                       date: 2 July 2018
+                      datetime-value: '2018-07-02'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -643,8 +643,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-07-02'
                       date: 2 July 2018
+                      datetime-value: '2018-07-02'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -670,8 +670,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-06-25'
                       date: 25 June 2018
+                      datetime-value: '2018-06-25'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -697,8 +697,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-06-15'
                       date: 15 June 2018
+                      datetime-value: '2018-06-15'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -724,8 +724,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-06-07'
                       date: 7 June 2018
+                      datetime-value: '2018-06-07'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -751,8 +751,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-06-04'
                       date: 4 June 2018
+                      datetime-value: '2018-06-04'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -778,8 +778,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-06-04'
                       date: 4 June 2018
+                      datetime-value: '2018-06-04'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -805,8 +805,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-06-01'
                       date: 1 June 2018
+                      datetime-value: '2018-06-01'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -832,8 +832,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-05-23'
                       date: 23 May 2018
+                      datetime-value: '2018-05-23'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -859,8 +859,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-05-21'
                       date: 21 May 2018
+                      datetime-value: '2018-05-21'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -886,8 +886,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-04-27'
                       date: 27 April 2018
+                      datetime-value: '2018-04-27'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -913,8 +913,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-04-16'
                       date: 16 April 2018
+                      datetime-value: '2018-04-16'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -940,8 +940,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-04-13'
                       date: 13 April 2018
+                      datetime-value: '2018-04-13'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -967,8 +967,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-04-04'
                       date: 4 April 2018
+                      datetime-value: '2018-04-04'
                 - term:
                     content: laid-thing.procedure
                   description:
@@ -994,8 +994,8 @@ main-components:
                   description:
                   - content: shared.time-html
                     data:
-                      datetime-value: '2018-04-04'
                       date: 4 April 2018
+                      datetime-value: '2018-04-04'
                 - term:
                     content: laid-thing.procedure
                   description:
