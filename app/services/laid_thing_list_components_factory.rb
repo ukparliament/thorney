@@ -75,8 +75,8 @@ class LaidThingListComponentsFactory
     def description_list_content(statutory_instrument)
       [].tap do |items|
         items << date_description_item(statutory_instrument) if statutory_instrument&.laying&.date
-        items << create_description_list_item(term: 'laid-thing.laying-body', descriptions: [statutory_instrument&.laying&.body.try(:groupName)]) if statutory_instrument&.laying&.body
-        items << create_description_list_item(term: 'laid-thing.procedure', descriptions: [statutory_instrument&.work_package&.procedure.try(:procedureName)]) if statutory_instrument.try(:work_package).try(:procedure)
+        items << create_description_list_item(term: 'laid-thing.laying-body', descriptions: [statutory_instrument.laying.body.try(:groupName)]) if statutory_instrument.try(:laying).try(:body)
+        items << create_description_list_item(term: 'laid-thing.procedure', descriptions: [statutory_instrument.work_package.procedure.try(:procedureName)]) if statutory_instrument.try(:work_package).try(:procedure)
       end
     end
 
