@@ -1,13 +1,13 @@
 require_relative '../rails_helper'
 
 RSpec.describe WorkPackageListComponentsFactory, type: :serializer, vcr: true do
-  let(:response) { Parliament::Request::UrlRequest.new(base_url:   ENV['PARLIAMENT_BASE_URL'],
-                                                      builder:    Parliament::Builder::NTripleResponseBuilder,
-                                                      decorators: Parliament::Grom::Decorator).work_package_current.get }
+    let(:response) { Parliament::Request::UrlRequest.new(base_url:   ENV['PARLIAMENT_BASE_URL'],
+                                                         builder:    Parliament::Builder::NTripleResponseBuilder,
+                                                         decorators: Parliament::Grom::Decorator).work_package_current.get }
 
-  let(:work_packages) { response.filter('https://id.parliament.uk/schema/WorkPackage') }
+    let(:work_packages) { response.filter('https://id.parliament.uk/schema/WorkPackage') }
 
-  let(:grouping_block) { proc { |work_package| LayingDateHelper.get_date(work_package) } }
+    let(:grouping_block) { proc { |work_package| LayingDateHelper.get_date(work_package) } }
 
   context '#build_components' do
     context 'where an incorrect date_type is provided' do

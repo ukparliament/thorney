@@ -21,6 +21,7 @@ class LaidThingListComponentsFactory
     def build_components(statutory_instruments: nil, type: nil, small: false)
       statutory_instruments.map do |statutory_instrument|
         laying_type = small ? laying_type(statutory_instrument) : nil
+
         CardFactory.new(
           small:                    laying_type,
           heading_text:             heading_text(statutory_instrument, type),
@@ -75,7 +76,7 @@ class LaidThingListComponentsFactory
       [].tap do |items|
         items << date_description_item(statutory_instrument) if statutory_instrument&.laying&.date
         items << create_description_list_item(term: 'laid-thing.laying-body', descriptions: [statutory_instrument&.laying&.body.try(:groupName)]) if statutory_instrument&.laying&.body
-        items << create_description_list_item(term: 'laid-thing.procedure', descriptions: [statutory_instrument&.work_package&.procedure.try(:procedureName)]) if statutory_instrument&.work_package&.procedure
+        items << create_description_list_item(term: 'laid-thing.procedure', descriptions: [statutory_instrument&.work_package&.procedure.try(:procedureName)]) if statutory_instrument.try(:work_package).try(:procedure)
       end
     end
 

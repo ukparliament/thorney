@@ -1,0 +1,292 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3030/group_laid_papers_paper_type_proposed_negative_statutory_instruments?group_id=XouN12Ow
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/n-triples
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<AUTH_TOKEN>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, must-revalidate, no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '1895'
+      Content-Type:
+      - application/n-triples
+      Expires:
+      - Tue, 20 Nov 2018 10:24:07 GMT
+      Request-Context:
+      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
+      Access-Control-Expose-Headers:
+      - Request-Context
+      Set-Cookie:
+      - ARRAffinity=962880a44b3c948dcdf487dfb529377adbd3199c49fc6e34b01e1a66c48ac6b9;Path=/;HttpOnly;Domain=fixedquery201810051005.azurewebsites.net
+      Strict-Transport-Security:
+      - max-age=31536000
+      Date:
+      - Tue, 20 Nov 2018 10:24:06 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: "<https://id.parliament.uk/XouN12Ow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/Group> .\r\n<https://id.parliament.uk/XouN12Ow>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LayingBody>
+        .\r\n<https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/groupName>
+        \"groupName - 1\" .\r\n<https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/layingBodyHasLaying>
+        <https://id.parliament.uk/jzHlJ1mb> .\r\n<https://id.parliament.uk/jzHlJ1mb>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying>
+        .\r\n<https://id.parliament.uk/jzHlJ1mb> <https://id.parliament.uk/schema/layingDate>
+        \"2018-07-19+01:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/Tn1xqHc0>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing>
+        .\r\n<https://id.parliament.uk/Tn1xqHc0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackagedThing> .\r\n<https://id.parliament.uk/Tn1xqHc0>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper>
+        .\r\n<https://id.parliament.uk/Tn1xqHc0> <https://id.parliament.uk/schema/laidThingName>
+        \"laidThingName - 1\" .\r\n<https://id.parliament.uk/Tn1xqHc0> <https://id.parliament.uk/schema/laidThingHasLaying>
+        <https://id.parliament.uk/jzHlJ1mb> .\r\n<https://id.parliament.uk/Tn1xqHc0>
+        <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/7xwjxL0R>
+        .\r\n<https://id.parliament.uk/7xwjxL0R> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackage> .\r\n<https://id.parliament.uk/7xwjxL0R>
+        <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/iCdMN1MW>
+        .\r\n<https://id.parliament.uk/iCdMN1MW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/Procedure> .\r\n<https://id.parliament.uk/iCdMN1MW>
+        <https://id.parliament.uk/schema/procedureName> \"procedureName - 1\" .\r\n<https://id.parliament.uk/XouN12Ow>
+        <https://id.parliament.uk/schema/layingBodyHasLaying> <https://id.parliament.uk/wN2D7eGI>
+        .\r\n<https://id.parliament.uk/wN2D7eGI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/Laying> .\r\n<https://id.parliament.uk/wN2D7eGI>
+        <https://id.parliament.uk/schema/layingDate> \"2018-07-19+01:00\"^^<http://www.w3.org/2001/XMLSchema#date>
+        .\r\n<https://id.parliament.uk/wzsrSFQP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/LaidThing> .\r\n<https://id.parliament.uk/wzsrSFQP>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackagedThing>
+        .\r\n<https://id.parliament.uk/wzsrSFQP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper>
+        .\r\n<https://id.parliament.uk/wzsrSFQP> <https://id.parliament.uk/schema/laidThingName>
+        \"laidThingName - 2\" .\r\n<https://id.parliament.uk/wzsrSFQP> <https://id.parliament.uk/schema/laidThingHasLaying>
+        <https://id.parliament.uk/wN2D7eGI> .\r\n<https://id.parliament.uk/wzsrSFQP>
+        <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/xyYZNFHJ>
+        .\r\n<https://id.parliament.uk/xyYZNFHJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackage> .\r\n<https://id.parliament.uk/xyYZNFHJ>
+        <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/iCdMN1MW>
+        .\r\n<https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/layingBodyHasLaying>
+        <https://id.parliament.uk/3ZBwPCUy> .\r\n<https://id.parliament.uk/3ZBwPCUy>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying>
+        .\r\n<https://id.parliament.uk/3ZBwPCUy> <https://id.parliament.uk/schema/layingDate>
+        \"2018-07-19+01:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/H95FzZVv>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing>
+        .\r\n<https://id.parliament.uk/H95FzZVv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackagedThing> .\r\n<https://id.parliament.uk/H95FzZVv>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper>
+        .\r\n<https://id.parliament.uk/H95FzZVv> <https://id.parliament.uk/schema/laidThingName>
+        \"laidThingName - 3\" .\r\n<https://id.parliament.uk/H95FzZVv> <https://id.parliament.uk/schema/laidThingHasLaying>
+        <https://id.parliament.uk/3ZBwPCUy> .\r\n<https://id.parliament.uk/H95FzZVv>
+        <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/cy5h6E6l>
+        .\r\n<https://id.parliament.uk/cy5h6E6l> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackage> .\r\n<https://id.parliament.uk/cy5h6E6l>
+        <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/iCdMN1MW>
+        .\r\n<https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/layingBodyHasLaying>
+        <https://id.parliament.uk/lh0DnMME> .\r\n<https://id.parliament.uk/lh0DnMME>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying>
+        .\r\n<https://id.parliament.uk/lh0DnMME> <https://id.parliament.uk/schema/layingDate>
+        \"2018-07-19+01:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/cL5yuFbG>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing>
+        .\r\n<https://id.parliament.uk/cL5yuFbG> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackagedThing> .\r\n<https://id.parliament.uk/cL5yuFbG>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper>
+        .\r\n<https://id.parliament.uk/cL5yuFbG> <https://id.parliament.uk/schema/laidThingName>
+        \"laidThingName - 4\" .\r\n<https://id.parliament.uk/cL5yuFbG> <https://id.parliament.uk/schema/laidThingHasLaying>
+        <https://id.parliament.uk/lh0DnMME> .\r\n<https://id.parliament.uk/cL5yuFbG>
+        <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/OXRdMq8p>
+        .\r\n<https://id.parliament.uk/OXRdMq8p> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackage> .\r\n<https://id.parliament.uk/OXRdMq8p>
+        <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/iCdMN1MW>
+        .\r\n<https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/layingBodyHasLaying>
+        <https://id.parliament.uk/qO4klsgb> .\r\n<https://id.parliament.uk/qO4klsgb>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying>
+        .\r\n<https://id.parliament.uk/qO4klsgb> <https://id.parliament.uk/schema/layingDate>
+        \"2018-07-19+01:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/mssRQnqj>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing>
+        .\r\n<https://id.parliament.uk/mssRQnqj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackagedThing> .\r\n<https://id.parliament.uk/mssRQnqj>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper>
+        .\r\n<https://id.parliament.uk/mssRQnqj> <https://id.parliament.uk/schema/laidThingName>
+        \"laidThingName - 5\" .\r\n<https://id.parliament.uk/mssRQnqj> <https://id.parliament.uk/schema/laidThingHasLaying>
+        <https://id.parliament.uk/qO4klsgb> .\r\n<https://id.parliament.uk/mssRQnqj>
+        <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/ns7vd6HL>
+        .\r\n<https://id.parliament.uk/ns7vd6HL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackage> .\r\n<https://id.parliament.uk/ns7vd6HL>
+        <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/iCdMN1MW>
+        .\r\n<https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/layingBodyHasLaying>
+        <https://id.parliament.uk/fSnMQqcj> .\r\n<https://id.parliament.uk/fSnMQqcj>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying>
+        .\r\n<https://id.parliament.uk/fSnMQqcj> <https://id.parliament.uk/schema/layingDate>
+        \"2018-09-18+01:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/eIcl19m5>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing>
+        .\r\n<https://id.parliament.uk/eIcl19m5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackagedThing> .\r\n<https://id.parliament.uk/eIcl19m5>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper>
+        .\r\n<https://id.parliament.uk/eIcl19m5> <https://id.parliament.uk/schema/laidThingName>
+        \"laidThingName - 6\" .\r\n<https://id.parliament.uk/eIcl19m5> <https://id.parliament.uk/schema/laidThingHasLaying>
+        <https://id.parliament.uk/fSnMQqcj> .\r\n<https://id.parliament.uk/eIcl19m5>
+        <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/cauCS1Nc>
+        .\r\n<https://id.parliament.uk/cauCS1Nc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackage> .\r\n<https://id.parliament.uk/cauCS1Nc>
+        <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/iCdMN1MW>
+        .\r\n<https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/layingBodyHasLaying>
+        <https://id.parliament.uk/D259fbue> .\r\n<https://id.parliament.uk/D259fbue>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying>
+        .\r\n<https://id.parliament.uk/D259fbue> <https://id.parliament.uk/schema/layingDate>
+        \"2018-10-09+01:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/c9tfxxSG>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing>
+        .\r\n<https://id.parliament.uk/c9tfxxSG> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackagedThing> .\r\n<https://id.parliament.uk/c9tfxxSG>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper>
+        .\r\n<https://id.parliament.uk/c9tfxxSG> <https://id.parliament.uk/schema/laidThingName>
+        \"laidThingName - 7\" .\r\n<https://id.parliament.uk/c9tfxxSG> <https://id.parliament.uk/schema/laidThingHasLaying>
+        <https://id.parliament.uk/D259fbue> .\r\n<https://id.parliament.uk/c9tfxxSG>
+        <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/iNTV8jgu>
+        .\r\n<https://id.parliament.uk/iNTV8jgu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackage> .\r\n<https://id.parliament.uk/iNTV8jgu>
+        <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/iCdMN1MW>
+        .\r\n<https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/layingBodyHasLaying>
+        <https://id.parliament.uk/wPIBbvzv> .\r\n<https://id.parliament.uk/wPIBbvzv>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying>
+        .\r\n<https://id.parliament.uk/wPIBbvzv> <https://id.parliament.uk/schema/layingDate>
+        \"2018-10-09+01:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/6itOwgLT>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing>
+        .\r\n<https://id.parliament.uk/6itOwgLT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackagedThing> .\r\n<https://id.parliament.uk/6itOwgLT>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper>
+        .\r\n<https://id.parliament.uk/6itOwgLT> <https://id.parliament.uk/schema/laidThingName>
+        \"laidThingName - 8\" .\r\n<https://id.parliament.uk/6itOwgLT> <https://id.parliament.uk/schema/laidThingHasLaying>
+        <https://id.parliament.uk/wPIBbvzv> .\r\n<https://id.parliament.uk/6itOwgLT>
+        <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/GQ1CGlLr>
+        .\r\n<https://id.parliament.uk/GQ1CGlLr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackage> .\r\n<https://id.parliament.uk/GQ1CGlLr>
+        <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/iCdMN1MW>
+        .\r\n<https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/layingBodyHasLaying>
+        <https://id.parliament.uk/iZgMmYhp> .\r\n<https://id.parliament.uk/iZgMmYhp>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying>
+        .\r\n<https://id.parliament.uk/iZgMmYhp> <https://id.parliament.uk/schema/layingDate>
+        \"2018-10-10+01:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/EfjqJrpr>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing>
+        .\r\n<https://id.parliament.uk/EfjqJrpr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackagedThing> .\r\n<https://id.parliament.uk/EfjqJrpr>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper>
+        .\r\n<https://id.parliament.uk/EfjqJrpr> <https://id.parliament.uk/schema/laidThingName>
+        \"laidThingName - 9\" .\r\n<https://id.parliament.uk/EfjqJrpr> <https://id.parliament.uk/schema/laidThingHasLaying>
+        <https://id.parliament.uk/iZgMmYhp> .\r\n<https://id.parliament.uk/EfjqJrpr>
+        <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/sgMO7X2P>
+        .\r\n<https://id.parliament.uk/sgMO7X2P> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackage> .\r\n<https://id.parliament.uk/sgMO7X2P>
+        <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/iCdMN1MW>
+        .\r\n<https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/layingBodyHasLaying>
+        <https://id.parliament.uk/9JbSXMud> .\r\n<https://id.parliament.uk/9JbSXMud>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying>
+        .\r\n<https://id.parliament.uk/9JbSXMud> <https://id.parliament.uk/schema/layingDate>
+        \"2018-10-15+01:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/e93zn4Ry>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing>
+        .\r\n<https://id.parliament.uk/e93zn4Ry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackagedThing> .\r\n<https://id.parliament.uk/e93zn4Ry>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper>
+        .\r\n<https://id.parliament.uk/e93zn4Ry> <https://id.parliament.uk/schema/laidThingName>
+        \"laidThingName - 10\" .\r\n<https://id.parliament.uk/e93zn4Ry> <https://id.parliament.uk/schema/laidThingHasLaying>
+        <https://id.parliament.uk/9JbSXMud> .\r\n<https://id.parliament.uk/e93zn4Ry>
+        <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/1dryUpwJ>
+        .\r\n<https://id.parliament.uk/1dryUpwJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackage> .\r\n<https://id.parliament.uk/1dryUpwJ>
+        <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/iCdMN1MW>
+        .\r\n<https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/layingBodyHasLaying>
+        <https://id.parliament.uk/no1sNxap> .\r\n<https://id.parliament.uk/no1sNxap>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying>
+        .\r\n<https://id.parliament.uk/no1sNxap> <https://id.parliament.uk/schema/layingDate>
+        \"2018-10-12+01:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/OqROoJsG>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing>
+        .\r\n<https://id.parliament.uk/OqROoJsG> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackagedThing> .\r\n<https://id.parliament.uk/OqROoJsG>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper>
+        .\r\n<https://id.parliament.uk/OqROoJsG> <https://id.parliament.uk/schema/laidThingName>
+        \"laidThingName - 11\" .\r\n<https://id.parliament.uk/OqROoJsG> <https://id.parliament.uk/schema/laidThingHasLaying>
+        <https://id.parliament.uk/no1sNxap> .\r\n<https://id.parliament.uk/OqROoJsG>
+        <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/3pWfoYuD>
+        .\r\n<https://id.parliament.uk/3pWfoYuD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackage> .\r\n<https://id.parliament.uk/3pWfoYuD>
+        <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/iCdMN1MW>
+        .\r\n<https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/layingBodyHasLaying>
+        <https://id.parliament.uk/fJNcX8II> .\r\n<https://id.parliament.uk/fJNcX8II>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying>
+        .\r\n<https://id.parliament.uk/fJNcX8II> <https://id.parliament.uk/schema/layingDate>
+        \"2018-10-18+01:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/G2uQ6egN>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing>
+        .\r\n<https://id.parliament.uk/G2uQ6egN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackagedThing> .\r\n<https://id.parliament.uk/G2uQ6egN>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper>
+        .\r\n<https://id.parliament.uk/G2uQ6egN> <https://id.parliament.uk/schema/laidThingName>
+        \"laidThingName - 12\" .\r\n<https://id.parliament.uk/G2uQ6egN> <https://id.parliament.uk/schema/laidThingHasLaying>
+        <https://id.parliament.uk/fJNcX8II> .\r\n<https://id.parliament.uk/G2uQ6egN>
+        <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/WyTp0Uxp>
+        .\r\n<https://id.parliament.uk/WyTp0Uxp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackage> .\r\n<https://id.parliament.uk/WyTp0Uxp>
+        <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/iCdMN1MW>
+        .\r\n<https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/layingBodyHasLaying>
+        <https://id.parliament.uk/X9GtpUqc> .\r\n<https://id.parliament.uk/X9GtpUqc>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying>
+        .\r\n<https://id.parliament.uk/X9GtpUqc> <https://id.parliament.uk/schema/layingDate>
+        \"2018-10-29+00:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/ZrFEt5Lr>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing>
+        .\r\n<https://id.parliament.uk/ZrFEt5Lr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackagedThing> .\r\n<https://id.parliament.uk/ZrFEt5Lr>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper>
+        .\r\n<https://id.parliament.uk/ZrFEt5Lr> <https://id.parliament.uk/schema/laidThingName>
+        \"laidThingName - 13\" .\r\n<https://id.parliament.uk/ZrFEt5Lr> <https://id.parliament.uk/schema/laidThingHasLaying>
+        <https://id.parliament.uk/X9GtpUqc> .\r\n<https://id.parliament.uk/ZrFEt5Lr>
+        <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/acmgretb>
+        .\r\n<https://id.parliament.uk/acmgretb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackage> .\r\n<https://id.parliament.uk/acmgretb>
+        <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/iCdMN1MW>
+        .\r\n<https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/layingBodyHasLaying>
+        <https://id.parliament.uk/D57ZtGAi> .\r\n<https://id.parliament.uk/D57ZtGAi>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying>
+        .\r\n<https://id.parliament.uk/D57ZtGAi> <https://id.parliament.uk/schema/layingDate>
+        \"2018-10-29+00:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/ZrFEt5Lr>
+        <https://id.parliament.uk/schema/laidThingHasLaying> <https://id.parliament.uk/D57ZtGAi>
+        .\r\n<https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/layingBodyHasLaying>
+        <https://id.parliament.uk/E6gxXfbE> .\r\n<https://id.parliament.uk/E6gxXfbE>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying>
+        .\r\n<https://id.parliament.uk/E6gxXfbE> <https://id.parliament.uk/schema/layingDate>
+        \"2018-10-30+00:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/seZP85ix>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing>
+        .\r\n<https://id.parliament.uk/seZP85ix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackagedThing> .\r\n<https://id.parliament.uk/seZP85ix>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper>
+        .\r\n<https://id.parliament.uk/seZP85ix> <https://id.parliament.uk/schema/laidThingName>
+        \"laidThingName - 14\" .\r\n<https://id.parliament.uk/seZP85ix> <https://id.parliament.uk/schema/laidThingHasLaying>
+        <https://id.parliament.uk/E6gxXfbE> .\r\n<https://id.parliament.uk/seZP85ix>
+        <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/69nLZHeJ>
+        .\r\n<https://id.parliament.uk/69nLZHeJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackage> .\r\n<https://id.parliament.uk/69nLZHeJ>
+        <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/iCdMN1MW>
+        .\r\n<https://id.parliament.uk/XouN12Ow> <https://id.parliament.uk/schema/layingBodyHasLaying>
+        <https://id.parliament.uk/EKEJRrX3> .\r\n<https://id.parliament.uk/EKEJRrX3>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying>
+        .\r\n<https://id.parliament.uk/EKEJRrX3> <https://id.parliament.uk/schema/layingDate>
+        \"2018-10-30+00:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/seZP85ix>
+        <https://id.parliament.uk/schema/laidThingHasLaying> <https://id.parliament.uk/EKEJRrX3>
+        .\r\n"
+    http_version: 
+  recorded_at: Tue, 20 Nov 2018 10:24:21 GMT
+recorded_with: VCR 4.0.0

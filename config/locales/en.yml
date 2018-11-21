@@ -61,6 +61,12 @@ en:
       title: "%{group} - made available"
       availability_types:
         title: "%{group} - made available by availability types"
+        paper_types:
+          index:
+            title: "%{group} - procedural activity by paper type"
+          show:
+            si_title: "%{group} - procedural activity for statutory instruments"
+            pnsi_title: "%{group} - procedural activity for proposed negative statutory instruments"
   statutory_instruments:
     type: "Statutory instrument"
     index:
