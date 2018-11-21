@@ -114,3 +114,6 @@ en:
         title: "%{house} - made available by availability types"
         laid_papers:
           title: "%{house} - laid papers"
+  laid_papers:
+    index:
+      title: "Laid papers"
