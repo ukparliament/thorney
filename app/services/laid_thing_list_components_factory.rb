@@ -32,7 +32,6 @@ class LaidThingListComponentsFactory
     end
 
     private
-    
     # Type needs to be refactored out of the params
     def heading_text(statutory_instrument, type)
       if type == :statutory_instrument
