@@ -7,10 +7,12 @@ module Houses
     }.freeze
 
     def index
-      @house, @laid_papers = FilterHelper.filter(@api_request, 'House', 'Laying')
+      @house, @laid_papers = FilterHelper.filter(@api_request, 'House', 'LaidThing')
+      @house = @house.first
 
+      list_components = LaidThingListComponentsFactory.sort_and_build_components(statutory_instruments: @laid_papers, type: :laid_thing, small: true)
 
-      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('groups.made_available.title', group: @group.try(:groupName)), subheading: @group.try(:groupName), subheading_link: group_path)
+      heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('houses.made_available.title', house: @house.try(:houseName)), subheading: @house.try(:houseName), subheading_link: house_path)
 
       serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 

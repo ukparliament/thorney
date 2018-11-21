@@ -107,3 +107,10 @@ en:
       current:
         si_title: "Current procedural activity for statutory instruments"
         psni_title:  "Current procedural activity for proposed negative statutory instruments"
+  houses:
+    made_available:
+      title: "%{house} - made available"
+      availability_types:
+        title: "%{house} - made available by availability types"
+        laid_papers:
+          title: "%{house} - laid papers"
