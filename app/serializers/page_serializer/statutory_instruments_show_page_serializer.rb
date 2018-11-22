@@ -36,7 +36,7 @@ module PageSerializer
     end
 
     def heading1_component
-      ComponentSerializer::Heading1ComponentSerializer.new({ subheading: 'statutory-instruments.show.subheading', heading: title, context: title_context }).to_h
+      ComponentSerializer::Heading1ComponentSerializer.new({ subheading: ContentDataHelper.content_data(content: 'statutory-instruments.show.subheading', link: statutory_instruments_path), heading: title, context: title_context }).to_h
     end
 
     def meta_info
