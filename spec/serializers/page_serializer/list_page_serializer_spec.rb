@@ -20,7 +20,7 @@ RSpec.describe PageSerializer::ListPageSerializer do
       it 'receives the correct serializers' do
         subject.to_h
 
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: [], type: 'primary')
+        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: [], type: 'primary', content_flag: true)
         expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: [], type: 'section')
       end
     end
