@@ -95,6 +95,8 @@ main-components:
       data:
         subheading:
           content: statutory-instruments.show.subheading
+          data:
+            link: "/statutory-instruments"
         heading:
           content: statutoryInstrumentPaperName - 1
         context:

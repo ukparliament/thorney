@@ -80,6 +80,8 @@ main-components:
       data:
         subheading:
           content: proposed-negative-statutory-instruments.show.subheading
+          data:
+            link: "/proposed-negative-statutory-instruments"
         heading:
           content: proposedNegativeStatutoryInstrumentPaperName - 1
     - name: list__description
