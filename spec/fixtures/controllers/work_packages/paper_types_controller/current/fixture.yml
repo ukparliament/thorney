@@ -90,6 +90,7 @@ header-components:
 main-components:
 - name: section__primary
   data:
+    content-flag: true
     components:
     - name: heading1
       data:
