@@ -44,7 +44,7 @@ RSpec.describe ProposedNegativeStatutoryInstrumentsController, vcr: true do
     end
 
     it 'calls the serializer correctly' do
-      list_components = [{"data"=> {"heading"=> {"data"=> {"content"=>"<a href=\"/proposed-negative-statutory-instruments/Tn1xqHc0\">proposedNegativeStatutoryInstrumentPaperName - 1</a>", "size"=>2}, "name"=>"heading"}, "list-description"=> {"data"=> {"items"=> [{"description"=> [{"content"=>"shared.time-html", "data"=> {"date"=>"19 July 2018", "datetime-value"=>"2018-07-19"}}], "term"=>{"content"=>"laid-thing.laid-date"}}, {"description"=>[{"content"=>"groupName - 1"}], "term"=>{"content"=>"laid-thing.laying-body"}}, {"description"=>[{"content"=>"procedureName - 1"}],  "term"=>{"content"=>"laid-thing.procedure"}}]}, "name"=>"list__description"}}, "name"=>"card__generic"}]
+      list_components = [{"data"=> {"heading"=> {"data"=> {"content"=>"<a href=\"/proposed-negative-statutory-instruments/Tn1xqHc0\">laidThingName - 1</a>", "size"=>2}, "name"=>"heading"}, "list-description"=> {"data"=> {"items"=> [{"description"=> [{"content"=>"shared.time-html", "data"=> {"date"=>"19 July 2018", "datetime-value"=>"2018-07-19"}}], "term"=>{"content"=>"laid-thing.laid-date"}}, {"description"=>[{"content"=>"groupName - 1"}], "term"=>{"content"=>"laid-thing.laying-body"}}, {"description"=>[{"content"=>"procedureName - 1"}],  "term"=>{"content"=>"laid-thing.procedure"}}]}, "name"=>"list__description"}}, "name"=>"card__generic"}]
       expect(PageSerializer::ListPageSerializer).to have_received(:new).with(request: request, heading_component: heading, list_components: list_components, data_alternates: data_alternates)
     end
   end

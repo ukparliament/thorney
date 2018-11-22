@@ -10,21 +10,21 @@ class LaidThingListComponentsFactory
     # @param [Boolean] small is a boolean to indicate if a small will be included on the cards in the list
     #
     # @return [Array] array of Card components populated with the statutory_instrument data
-    def sort_and_build_components(statutory_instruments: nil, type: nil, small: false)
+    def sort_and_build_components(statutory_instruments: nil, small: false)
       grouping_block = proc { |statutory_instrument| LayingDateHelper.get_date(statutory_instrument) }
 
       sorted_statutory_instruments = GroupSortHelper.group_and_sort(statutory_instruments, group_block: grouping_block, key_sort_descending: true, sort_method_symbols: %i[laidThingName])
 
-      build_components(statutory_instruments: sorted_statutory_instruments, type: type, small: small)
+      build_components(statutory_instruments: sorted_statutory_instruments, small: small)
     end
 
-    def build_components(statutory_instruments: nil, type: nil, small: false)
+    def build_components(statutory_instruments: nil, small: false)
       statutory_instruments.map do |statutory_instrument|
         laying_type = small ? laying_type(statutory_instrument) : nil
 
         CardFactory.new(
           small:                    laying_type,
-          heading_text:             heading_text(statutory_instrument, type),
+          heading_text:             heading_text(statutory_instrument),
           heading_url:              heading_url(statutory_instrument),
           description_list_content: description_list_content(statutory_instrument)
         ).build_card
@@ -32,15 +32,9 @@ class LaidThingListComponentsFactory
     end
 
     private
-    # Type needs to be refactored out of the params
-    def heading_text(statutory_instrument, type)
-      if type == :statutory_instrument
-        statutory_instrument.try(:statutoryInstrumentPaperName)
-      elsif type == :proposed_negative_statutory_instrument
-        statutory_instrument.try(:proposedNegativeStatutoryInstrumentPaperName)
-      elsif type == :laid_thing
-        statutory_instrument.try(:laidThingName)
-      end
+
+    def heading_text(statutory_instrument)
+      statutory_instrument.try(:laidThingName)
     end
 
     def heading_url(statutory_instrument)
@@ -67,7 +61,7 @@ class LaidThingListComponentsFactory
     def description_hash(item, statutory_instrument)
       item.tap do |hash|
         hash[:description] = [
-          TimeHelper.time_translation(date_first: statutory_instrument&.laying&.date)
+          TimeHelper.time_translation(date_first: LayingDateHelper.get_date(statutory_instrument))
         ]
       end
     end

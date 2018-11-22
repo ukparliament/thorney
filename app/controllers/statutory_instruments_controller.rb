@@ -9,10 +9,7 @@ class StatutoryInstrumentsController < ApplicationController
 
   def index
     @statutory_instruments = FilterHelper.filter(@api_request, 'StatutoryInstrumentPaper')
-
-    sorted_statutory_instruments = GroupSortHelper.group_and_sort(@statutory_instruments, group_method_symbols: %i[laying date to_date], key_sort_descending: true, sort_method_symbols: [:statutoryInstrumentPaperName])
-
-    list_components = LaidThingListComponentsFactory.build_components(statutory_instruments: sorted_statutory_instruments, type: :statutory_instrument)
+    list_components = LaidThingListComponentsFactory.sort_and_build_components(statutory_instruments: @statutory_instruments)
 
     heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('statutory_instruments.index.title'))
 
