@@ -36,7 +36,7 @@ module Groups
             @group, @laid_things = FilterHelper.filter(@api_request, 'Group', 'LaidThing')
             @group = @group.first
 
-            list_components = LaidThingListComponentsFactory.sort_and_build_components(statutory_instruments: @laid_things, type: :laid_thing)
+            list_components = LaidThingListComponentsFactory.sort_and_build_components(statutory_instruments: @laid_things)
 
             paper_type          = params.fetch(:paper_type)
             heading_translation = 'groups.made_available.availability_types.paper_types.show.si_title' if paper_type == 'statutory-instruments'

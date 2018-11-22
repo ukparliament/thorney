@@ -12,7 +12,7 @@ module Houses
           @house, @laid_papers = FilterHelper.filter(@api_request, 'House', 'LaidThing')
           @house = @house.first
 
-          list_components = LaidThingListComponentsFactory.sort_and_build_components(statutory_instruments: @laid_papers, type: :laid_thing, small: true)
+          list_components = LaidThingListComponentsFactory.sort_and_build_components(statutory_instruments: @laid_papers, small: true)
 
           heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('houses.made_available.availability_types.laid_papers.title', house: @house.try(:houseName)), subheading: @house.try(:houseName), subheading_link: house_path)
 
