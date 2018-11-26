@@ -31,9 +31,10 @@
 
 en:
   title: "UK Parliament"
-  mp_plural: MPs
-  lord_plural: Lords
+  mp_plural: 'MPs'
+  lord_plural: 'Lords'
   prepositional_to: "%{first} to %{second}"
+  present: 'present'
   time:
     formats:
       default: '%-d %B %Y'
@@ -127,3 +128,8 @@ en:
     inquries:
       index:
         title: "Inquiries"
+    card:
+      small:
+        commons: "House of Commons"
+        lords: "House of Lords"
+        both: "Joint"
