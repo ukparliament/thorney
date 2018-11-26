@@ -119,3 +119,11 @@ en:
   laid_papers:
     index:
       title: "Laid papers"
+  committee_prototype:
+    index:
+      title: "Committees"
+    current:
+      title: "Current Committees"
+    inquries:
+      index:
+        title: "Inquiries"
