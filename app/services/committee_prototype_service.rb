@@ -18,6 +18,9 @@ class Hash
 end
 
 class CommitteePrototypeService
+  extend ListDescriptionHelper
+  extend ActionView::Helpers::UrlHelper
+
   def self.all_committees
     request = committee_request.committees.get(params: {take: 1000})
 
@@ -54,12 +57,14 @@ class CommitteePrototypeService
 
       small = generate_card_small_text(committee.try(:house)) if include_house
       paragraph = generate_card_paragraph_text(committee) if include_date
+      description_list = generate_description_list(committee, committees)
 
       CardFactory.new(
           small: small,
           heading_text: committee.name,
           heading_url:  Rails.application.routes.url_helpers.committee_prototype_path(committee.id),
-          paragraph_content: paragraph
+          paragraph_content: paragraph,
+          description_list_content: description_list
       ).build_card
     end
   end
@@ -93,11 +98,62 @@ class CommitteePrototypeService
     rescue I18n::ArgumentError => e
       logger.warn 'Attempted to localise non-date object'
       logger.warn e
+      paragraph = nil
     rescue ArgumentError => e
       logger.warn 'Possible data issue: Attempted to parse non-date string value'
       logger.warn e
+      paragraph = nil
     end
 
     paragraph
+  end
+
+  def self.generate_description_list(committee, committees)
+    type_descriptions = generate_description_list_type_descriptions(committee)
+    parent_link = generate_description_list_parent_link(committee, committees)
+
+    lead_house_commons = committee.try(:leadHouse).try(:isCommons)
+    lead_house_lords   = committee.try(:leadHouse).try(:isLords)
+    if lead_house_commons || lead_house_lords
+      lead_house = if lead_house_commons
+                     I18n.t('committee_prototype.card.small.commons')
+                   elsif lead_house_lords
+                     I18n.t('committee_prototype.card.small.lords')
+                   end
+    end
+
+    [].tap do |items|
+      items << create_description_list_item(term: I18n.t('committee_prototype.card.terms.type'),   descriptions: type_descriptions) if type_descriptions.present?
+      items << create_description_list_item(term: I18n.t('committee_prototype.card.terms.parent'), descriptions: [parent_link])     if parent_link
+      items << create_description_list_item(term: I18n.t('committee_prototype.card.terms.lead'),   descriptions: [lead_house])      if lead_house
+    end
+  end
+
+  def self.generate_description_list_type_descriptions(committee)
+    return nil unless committee.try(:committeeTypes)
+
+    type_strings = committee.committeeTypes.map do |type|
+      type_name = type.try(:name)
+      category_name = type.try(:category).try(:name)
+
+      [type_name, category_name].compact.join(' ')
+    end
+
+    type_strings.compact
+  end
+
+  def self.generate_description_list_parent_link(committee, committees)
+    return nil unless committee.try(:parentCommitteeId)
+
+    parents = committees.select { |parent_committee| parent_committee.try(:value).try(:id) == committee.parentCommitteeId }
+
+    if parents.try(:first)
+      parent = parents.first.try(:value)
+      parent_name = parent.try(:name)
+      parent_name ||= I18n.t('no_name')
+      parent_link = ActionController::Base.helpers.link_to(parent_name, Rails.application.routes.url_helpers.committee_prototype_path(parent.id)) if parent.try(:id)
+    end
+
+    parent_link
   end
 end

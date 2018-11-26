@@ -35,6 +35,7 @@ en:
   lord_plural: 'Lords'
   prepositional_to: "%{first} to %{second}"
   present: 'present'
+  no_name: "[Name unavailable]"
   time:
     formats:
       default: '%-d %B %Y'
@@ -76,7 +77,6 @@ en:
     type: "Proposed negative statutory instrument"
     index:
       title: "Proposed negative statutory instruments"
-  no_name: "[Name unavailable]"
   procedure_steps:
     index:
       title: "Procedure steps"
@@ -133,3 +133,8 @@ en:
         commons: "House of Commons"
         lords: "House of Lords"
         both: "Joint"
+        house_type_committee: "%{house} %{type} Committee"
+      terms:
+        parent: "Parent committee"
+        type: "Committee type"
+        lead: "Lead house"
