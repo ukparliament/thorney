@@ -88,6 +88,8 @@ en:
     index:
       title: "Laying bodies"
   procedures:
+    index:
+      title: "Procedures"
     work_packages:
       index:
         title: "%{procedure} - procedural activity"

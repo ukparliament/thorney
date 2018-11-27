@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3030/procedure_index
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/n-triples
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<AUTH_TOKEN>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, must-revalidate, no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '262'
+      Content-Type:
+      - application/n-triples
+      Expires:
+      - Tue, 27 Nov 2018 13:26:42 GMT
+      Request-Context:
+      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
+      Access-Control-Expose-Headers:
+      - Request-Context
+      Set-Cookie:
+      - ARRAffinity=962880a44b3c948dcdf487dfb529377adbd3199c49fc6e34b01e1a66c48ac6b9;Path=/;HttpOnly;Domain=fixedquery201810051005.azurewebsites.net
+      Strict-Transport-Security:
+      - max-age=31536000
+      Date:
+      - Tue, 27 Nov 2018 13:26:42 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: "<https://id.parliament.uk/5S6p4YsP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/Procedure> .\r\n<https://id.parliament.uk/5S6p4YsP>
+        <https://id.parliament.uk/schema/procedureName> \"procedureName - 1\" .\r\n<https://id.parliament.uk/H5YJQsK2>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Procedure>
+        .\r\n<https://id.parliament.uk/H5YJQsK2> <https://id.parliament.uk/schema/procedureName>
+        \"procedureName - 1\" .\r\n<https://id.parliament.uk/gTgidljI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/Procedure> .\r\n<https://id.parliament.uk/gTgidljI>
+        <https://id.parliament.uk/schema/procedureName> \"procedureName - 3\" .\r\n<https://id.parliament.uk/iCdMN1MW>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Procedure>
+        .\r\n<https://id.parliament.uk/iCdMN1MW> <https://id.parliament.uk/schema/procedureName>
+        \"procedureName - 4\" .\r\n<https://id.parliament.uk/iWugpxMn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/Procedure> .\r\n<https://id.parliament.uk/iWugpxMn>
+        <https://id.parliament.uk/schema/procedureName> \"procedureName - 5\" .\r\n"
+    http_version: 
+  recorded_at: Tue, 27 Nov 2018 13:27:01 GMT
+recorded_with: VCR 4.0.0

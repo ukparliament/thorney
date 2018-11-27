@@ -1,0 +1,148 @@
+---
+layout:
+  template: layout
+meta:
+  title: procedureName - 1 - UK Parliament
+  data-alternates:
+  - type: application/n-triples
+    href: http://localhost:3030/procedure_by_id.nt?procedure_id=H5YJQsK2
+  - type: text/turtle
+    href: http://localhost:3030/procedure_by_id.ttl?procedure_id=H5YJQsK2
+  - type: text/tab-separated-values
+    href: http://localhost:3030/procedure_by_id.tsv?procedure_id=H5YJQsK2
+  - type: text/csv
+    href: http://localhost:3030/procedure_by_id.csv?procedure_id=H5YJQsK2
+  - type: application/json+rdf
+    href: http://localhost:3030/procedure_by_id.rj?procedure_id=H5YJQsK2
+  - type: application/json+ld
+    href: http://localhost:3030/procedure_by_id.json?procedure_id=H5YJQsK2
+  - type: application/rdf+xml
+    href: http://localhost:3030/procedure_by_id.xml?procedure_id=H5YJQsK2
+  open-graph:
+    title: procedureName - 1 - UK Parliament
+    original-url: https://www.example.com/procedures/H5YJQsK2
+    image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
+    image-width: '1200'
+    image-height: '630'
+    twitter-card: summary_large_image
+  opensearch-description-url: https://www.example.com/search/opensearch
+header-components:
+- name: link
+  data:
+    link: "#content"
+    display:
+      name: partials__display
+      data:
+      - component: skip-to-content
+    selector: skiplink
+    content: shared.header.skip-to-content
+- name: status__banner
+  data:
+    display:
+      name: partials__display
+      data:
+      - component: status
+        variant: banner
+      - component: theme
+        variant: caution
+      - component: cookie
+    selector: cookie
+    components:
+    - name: paragraph
+      data:
+      - content: shared.header.cookie-banner-text
+        data:
+          link: "/meta/cookie-policy"
+- name: status__banner
+  data:
+    display:
+      name: partials__display
+      data:
+      - component: status
+        variant: banner
+    components:
+    - name: paragraph
+      data:
+      - content: shared.header.beta-status
+- name: header
+  data:
+    components:
+    - name: link
+      data:
+        link: "/"
+        display:
+          name: partials__display
+          data:
+          - component: uk_parliament
+        label: shared.header.label
+        components:
+        - name: icon__uk-parliament
+          data: shared.header.label
+    - name: form__search
+      data:
+        global: true
+        label: search.label
+        components:
+        - name: icon__search
+          data: search.search-icon
+        search-action: "/search"
+main-components:
+- name: section__primary
+  data:
+    components:
+    - name: heading1
+      data:
+        subheading:
+          content: procedures.procedures
+          data:
+            link: "/procedures"
+        heading:
+          content: procedureName - 1
+    - name: paragraph
+      data:
+      - content: procedures.about
+        data:
+          procedure: procedurename - 1
+- name: section__section
+  data:
+    components:
+    - name: list__generic
+      data:
+        type: ol
+        display:
+          name: partials__display
+          data:
+          - component: list
+            variant: block
+        components:
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: procedures.subsidiary-resources.work-packages
+                data:
+                  link: "/procedures/H5YJQsK2/work-packages"
+                size: 2
+footer-components:
+- name: footer
+  data:
+    uk-parliament: shared.footer.uk-parliament
+    components:
+    - name: heading
+      data:
+        content: shared.meta.title
+        size: 2
+    - name: list__generic
+      data:
+        type: ul
+        display:
+          name: partials__display
+          data:
+          - component: list
+        contents:
+        - content: shared.footer.current-website
+        - content: shared.footer.cookie-policy
+          data:
+            link: "/meta/cookie-policy"
+        - content: shared.footer.data-protection-privacy
