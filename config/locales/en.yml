@@ -90,8 +90,6 @@ en:
   procedures:
     index:
       title: "Procedures"
-    subsidiary_resources:
-      work_packages: "Procedural activity"
     work_packages:
       index:
         title: "%{procedure} - procedural activity"
