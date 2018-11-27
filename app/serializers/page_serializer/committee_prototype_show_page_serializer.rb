@@ -55,11 +55,11 @@ module PageSerializer
         components << ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: [
             CardFactory.new(
                 heading_text: I18n.t('committee_prototype.show.business.current_business'),
-                heading_url: committee_prototype_committee_prototype_business_current_path(committee_id: @committee.try(:id))
+                heading_url: committee_prototype_business_current_path(committee_id: @committee.try(:id))
             ).build_card,
             CardFactory.new(
                 heading_text: I18n.t('committee_prototype.show.business.former_business'),
-                heading_url: committee_prototype_committee_prototype_business_former_path(committee_id: @committee.try(:id))
+                heading_url: committee_prototype_business_former_path(committee_id: @committee.try(:id))
             ).build_card
         ]).to_h
 

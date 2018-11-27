@@ -15,12 +15,12 @@ Rails.application.routes.draw do
     scope '/:committee_id' do
       get '/', to: 'committee_prototype#show'
 
-      scope '/business', as: 'committee_prototype_business' do
+      scope '/business', as: 'business' do
         get '/', to: 'committee_prototype/business#index'
         get '/current', to: 'committee_prototype/business#current'
         get '/former', to: 'committee_prototype/business#former'
 
-        get '/:business_id', to: 'committee_prototype/business#show'
+        get '/:business_id', to: 'committee_prototype/business#show', as: 'show'
       end
     end
   end

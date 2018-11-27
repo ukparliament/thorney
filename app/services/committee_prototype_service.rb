@@ -40,6 +40,14 @@ class CommitteePrototypeService
     return committees
   end
 
+  def self.business(id)
+    request = committee_request.committees.business(id).get(params: {take: 1000})
+
+    data = JSON.parse(request.response.body).to_ostruct
+
+    return data.value
+  end
+
   def self.all_business(id)
     [current_business(id), former_business(id)].flatten
   end
@@ -183,7 +191,7 @@ class CommitteePrototypeService
       CardFactory.new(
           small: small,
           heading_text: business_item.title,
-          heading_url:  Rails.application.routes.url_helpers.committee_prototype_committee_prototype_business_path(committee_id: committee.id, business_id: business_item.id),
+          heading_url:  Rails.application.routes.url_helpers.committee_prototype_business_show_path(committee_id: committee.id, business_id: business_item.id),
           description_list_content: business_item_card_description_list(business_item)
       ).build_card
     end
