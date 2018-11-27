@@ -31,9 +31,11 @@
 
 en:
   title: "UK Parliament"
-  mp_plural: MPs
-  lord_plural: Lords
+  mp_plural: 'MPs'
+  lord_plural: 'Lords'
   prepositional_to: "%{first} to %{second}"
+  present: 'present'
+  no_name: "[Name unavailable]"
   time:
     formats:
       default: '%-d %B %Y'
@@ -75,7 +77,6 @@ en:
     type: "Proposed negative statutory instrument"
     index:
       title: "Proposed negative statutory instruments"
-  no_name: "[Name unavailable]"
   procedure_steps:
     index:
       title: "Procedure steps"
@@ -119,3 +120,54 @@ en:
   laid_papers:
     index:
       title: "Laid papers"
+  committee_prototype:
+    index:
+      title: "Committees"
+    show:
+      subheading: "Committees"
+      purpose: "Purpose"
+      members: "Membership"
+      business:
+        title: "Committee business"
+        current_business: "Current business"
+        former_business: "Former business"
+      meta:
+        house: "House"
+        lead_house: "Lead house"
+        category: "Category"
+        type: "Type(s)"
+        commons_appointment: "Date commons appointed"
+        lords_appointment: "Date lords appointed"
+        parent_committee: "Parent committee"
+        child_committees: "Child committee(s)"
+        committee_type: "Committee type"
+        contact_email: "Email"
+        contact_phone: "Phone"
+    current:
+      title: "Current Committees"
+    inquries:
+      index:
+        title: "Inquiries"
+    card:
+      small:
+        commons: "House of Commons"
+        lords: "House of Lords"
+        both: "Joint"
+        house_type_committee: "%{house} %{type} Committee"
+      terms:
+        parent: "Parent committee"
+        type: "Type(s)"
+        category: "Category"
+        lead: "Lead house"
+    business:
+      current:
+        title: "Current Business"
+      former:
+        title: "Former Business"
+      index:
+        title: "Business"
+      card:
+        terms:
+          open: "Open date"
+          closed: "Closed date"
+          prefix: "Prefix"
