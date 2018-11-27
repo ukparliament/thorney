@@ -40,8 +40,66 @@ class CommitteePrototypeService
     return committees
   end
 
-  def self.committee(_)
-    return {}.to_ostruct
+  def self.all_business(id)
+    [current_business(id), former_business(id)].flatten
+  end
+
+  def self.current_business(id)
+    request = committee_request.committees(id).business.current.get(params: {take: 1000})
+
+    data = JSON.parse(request.response.body).to_ostruct
+
+    return data.items
+  end
+
+  def self.former_business(id)
+    request = committee_request.committees(id).business.former.get(params: {take: 1000})
+
+    data = JSON.parse(request.response.body).to_ostruct
+
+    return data.items
+  end
+
+  def self.committee_only(id)
+    request = committee_request.committees(id).get
+
+    data = JSON.parse(request.response.body).to_ostruct
+
+    return data.value
+  end
+
+  def self.committee(id)
+    c, business, memberships = [committee_request.committees(id), committee_request.committees(id).business.current, committee_request.committees(id).membership.current].map do |request|
+      begin
+        response = request.get
+      rescue Parliament::ServerError
+        Rails.logger.warn "Got a 5XX response from #{request.query_url}"
+        next nil
+      end
+
+      JSON.parse(response.response.body).to_ostruct
+    end
+
+    c           = c.value
+    business    = business.items
+    memberships = memberships.items
+
+    parent = nil
+    children = []
+    all_committees.each do |committee_to_check|
+      next unless committee_to_check.try(:value)
+
+      committee_to_check = committee_to_check.value
+      if committee_to_check.try(:id) && c.try(:parentCommitteeId)
+        parent = committee_to_check if committee_to_check.id == c.parentCommitteeId
+      end
+
+      if c.try(:id)
+        children << committee_to_check if committee_to_check.try(:parentCommitteeId) == c.id
+      end
+    end
+
+    [c, business, memberships, parent, children]
   end
 
   def self.committee_request()
@@ -55,8 +113,8 @@ class CommitteePrototypeService
     committees.map do |committee|
       committee = committee.value
 
-      small = generate_card_small_text(committee.try(:house)) if include_house
-      paragraph = generate_card_paragraph_text(committee) if include_date
+      small = generate_card_small_text(committee) if include_house
+      paragraph = generate_committee_date_range(committee) if include_date
       description_list = generate_description_list(committee, committees)
 
       CardFactory.new(
@@ -69,22 +127,7 @@ class CommitteePrototypeService
     end
   end
 
-  private
-  def self.generate_card_small_text(house)
-    return nil if house.nil?
-
-    type = if house.isCommons && house.isLords
-             'both'
-           elsif house.isCommons
-             'commons'
-           elsif house.isLords
-             'lords'
-           end
-
-    I18n.t("committee_prototype.card.small.#{type}") if type
-  end
-
-  def self.generate_card_paragraph_text(committee)
+  def self.generate_committee_date_range(committee)
     begin
       current = (committee.try(:startDate).present? && committee.try(:endDate).nil?)
       complete_data = (committee.try(:startDate).present? && committee.try(:endDate).present?)
@@ -92,25 +135,79 @@ class CommitteePrototypeService
       start_date = DateTime.parse(committee.startDate) if committee.try(:startDate).present?
       end_date = DateTime.parse(committee.endDate) if committee.try(:endDate).present?
 
-      paragraph = []
-      paragraph << I18n.t('prepositional_to', first: I18n.l(start_date), second: I18n.t('present')) if current
-      paragraph << I18n.t('prepositional_to', first: I18n.l(start_date), second: I18n.l(end_date))  if !current && complete_data
+      range = []
+      range << I18n.t('prepositional_to', first: I18n.l(start_date), second: I18n.t('present')) if current
+      range << I18n.t('prepositional_to', first: I18n.l(start_date), second: I18n.l(end_date))  if !current && complete_data
     rescue I18n::ArgumentError => e
       logger.warn 'Attempted to localise non-date object'
       logger.warn e
-      paragraph = nil
+      range = nil
     rescue ArgumentError => e
       logger.warn 'Possible data issue: Attempted to parse non-date string value'
       logger.warn e
-      paragraph = nil
+      range = nil
     end
 
-    paragraph
+    range
+  end
+
+  def self.all_images
+    request = Parliament::Request::UrlRequest.new(
+        base_url: 'https://api.parliament.uk/query/mnis_id_image_table.json',
+        builder: Parliament::Builder::BaseResponseBuilder
+    )
+    response = request.get.response
+    raw_data = JSON.parse(response.body)
+
+    values = raw_data.dig('results', 'bindings') || []
+
+    image_hash = {}
+    values.each do |value|
+      mnis_id = value.dig('mnisId', 'value')
+      image_uri = value.dig('imageUri', 'value')
+      next unless image_uri
+
+      image_id = image_uri.split('/').last
+      image_hash[mnis_id] = image_id if mnis_id && image_id
+    end
+
+    image_hash
+  end
+
+  def self.business_cards(business, committee)
+    business.map do |business_item|
+      business_item = business_item.value
+
+      small = business_item.try(:committeeBusinessType).try(:name)
+
+      CardFactory.new(
+          small: small,
+          heading_text: business_item.title,
+          heading_url:  Rails.application.routes.url_helpers.committee_prototype_committee_prototype_business_path(committee_id: committee.id, business_id: business_item.id),
+          description_list_content: business_item_card_description_list(business_item)
+      ).build_card
+    end
+  end
+
+  private
+  def self.generate_card_small_text(committee)
+    return nil if committee.nil?
+
+    type = if committee.try(:isCommons) && committee.try(:isLords)
+             'both'
+           elsif committee.try(:isCommons)
+             'commons'
+           elsif committee.try(:isLords)
+             'lords'
+           end
+
+    I18n.t("committee_prototype.card.small.#{type}") if type
   end
 
   def self.generate_description_list(committee, committees)
+    category          = committee.try(:category).try(:name)
     type_descriptions = generate_description_list_type_descriptions(committee)
-    parent_link = generate_description_list_parent_link(committee, committees)
+    parent_link       = generate_description_list_parent_link(committee, committees)
 
     lead_house_commons = committee.try(:leadHouse).try(:isCommons)
     lead_house_lords   = committee.try(:leadHouse).try(:isLords)
@@ -123,23 +220,17 @@ class CommitteePrototypeService
     end
 
     [].tap do |items|
-      items << create_description_list_item(term: I18n.t('committee_prototype.card.terms.type'),   descriptions: type_descriptions) if type_descriptions.present?
-      items << create_description_list_item(term: I18n.t('committee_prototype.card.terms.parent'), descriptions: [parent_link])     if parent_link
-      items << create_description_list_item(term: I18n.t('committee_prototype.card.terms.lead'),   descriptions: [lead_house])      if lead_house
+      items << create_description_list_item(term: I18n.t('committee_prototype.card.terms.category'), descriptions: [category]) if category.present?
+      items << create_description_list_item(term: I18n.t('committee_prototype.card.terms.type'), descriptions: type_descriptions) if type_descriptions.present?
+      items << create_description_list_item(term: I18n.t('committee_prototype.card.terms.parent'), descriptions: [parent_link]) if parent_link
+      items << create_description_list_item(term: I18n.t('committee_prototype.card.terms.lead'), descriptions: [lead_house]) if lead_house
     end
   end
 
   def self.generate_description_list_type_descriptions(committee)
     return nil unless committee.try(:committeeTypes)
 
-    type_strings = committee.committeeTypes.map do |type|
-      type_name = type.try(:name)
-      category_name = type.try(:category).try(:name)
-
-      [type_name, category_name].compact.join(' ')
-    end
-
-    type_strings.compact
+    committee.committeeTypes.map { |type| type.try(:name) }.compact
   end
 
   def self.generate_description_list_parent_link(committee, committees)
@@ -155,5 +246,13 @@ class CommitteePrototypeService
     end
 
     parent_link
+  end
+
+  def self.business_item_card_description_list(business_item)
+    [].tap do |items|
+      items << create_description_list_item(term: I18n.t('committee_prototype.business.card.terms.open'), descriptions: [I18n.l(DateTime.parse(business_item.openDate))]) if business_item.try(:openDate)
+      items << create_description_list_item(term: I18n.t('committee_prototype.business.card.terms.closed'), descriptions: [I18n.l(DateTime.parse(business_item.closedDate))]) if business_item.try(:closedDate)
+      items << create_description_list_item(term: I18n.t('committee_prototype.business.card.terms.prefix'), descriptions: [business_item.prefix]) if business_item.try(:prefix)
+    end
   end
 end
