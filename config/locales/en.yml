@@ -127,6 +127,11 @@ en:
       subheading: "Committees"
       purpose: "Purpose"
       members: "Membership"
+      staff: "Staff"
+      card:
+        terms:
+          email: "Email"
+          phone: "Phone"
       business:
         title: "Committee business"
         current_business: "Current business"
@@ -166,6 +171,14 @@ en:
         title: "Former Business"
       index:
         title: "Business"
+      show:
+        meta:
+          open: "Open date"
+          closed: "Closed date"
+          prefix: "Prefix"
+          publication: "Publication Date"
+          hc_numbers: "House of Commons Number(s)"
+          hl_numbers: "House of Lords Number(s)"
       card:
         terms:
           open: "Open date"

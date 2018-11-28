@@ -52,7 +52,7 @@ module PageSerializer
       def meta_info
         [].tap do |items|
           items << create_description_list_item(term: I18n.t('committee_prototype.business.show.meta.open'), descriptions: [I18n.l(DateTime.parse(@business.openDate))]) if @business.try(:openDate)
-          items << create_description_list_item(term: I18n.t('committee_prototype.business.show.meta.closed'), descriptions: [I18n.l(DateTime.parse(@business.closedDate))]) if @business.try(:openDate)
+          items << create_description_list_item(term: I18n.t('committee_prototype.business.show.meta.closed'), descriptions: [I18n.l(DateTime.parse(@business.closedDate))]) if @business.try(:closedDate)
           items << create_description_list_item(term: I18n.t('committee_prototype.business.show.meta.prefix'), descriptions: [I18n.l(DateTime.parse(@business.prefix))]) if @business.try(:prefix)
           items << create_description_list_item(term: I18n.t('committee_prototype.business.show.meta.publication'), descriptions: [I18n.l(DateTime.parse(@business.publicationDateTime))]) if @business.try(:publicationDateTime)
           items << create_description_list_item(term: I18n.t('committee_prototype.business.show.meta.hc_numbers'), descriptions: @business.publicationDateTime) if @business.try(:hCNumbers)

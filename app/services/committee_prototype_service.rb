@@ -77,7 +77,7 @@ class CommitteePrototypeService
   end
 
   def self.committee(id)
-    c, business, memberships = [committee_request.committees(id), committee_request.committees(id).business.current, committee_request.committees(id).membership.current].map do |request|
+    c, business, memberships, staff = [committee_request.committees(id), committee_request.committees(id).business.current, committee_request.committees(id).membership.current, committee_request.committees(id).staff].map do |request|
       begin
         response = request.get
       rescue Parliament::ServerError
@@ -91,6 +91,7 @@ class CommitteePrototypeService
     c           = c.value
     business    = business.items
     memberships = memberships.items
+    staff       = staff.items
 
     parent = nil
     children = []
@@ -107,7 +108,7 @@ class CommitteePrototypeService
       end
     end
 
-    [c, business, memberships, parent, children]
+    [c, business, memberships, staff, parent, children]
   end
 
   def self.committee_request()

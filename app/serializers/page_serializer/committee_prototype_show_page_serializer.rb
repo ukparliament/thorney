@@ -1,9 +1,10 @@
 module PageSerializer
   class CommitteePrototypeShowPageSerializer < PageSerializer::BasePageSerializer
-    def initialize(request: nil, committee:, business:, memberships:, parent:, children:, images:)
+    def initialize(request: nil, committee:, business:, memberships:, staff:, parent:, children:, images:)
       @committee   = committee
       @business    = business
       @memberships = memberships
+      @staff       = staff
       @parent      = parent
       @children    = children
       @images      = images
@@ -66,6 +67,11 @@ module PageSerializer
         if @memberships.present?
           components << ComponentSerializer::HeadingComponentSerializer.new(content: I18n.t('committee_prototype.show.members'), size: 2).to_h
           components << ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: members_cards).to_h
+        end
+
+        if @staff.present?
+          components << ComponentSerializer::HeadingComponentSerializer.new(content: I18n.t('committee_prototype.show.staff'), size: 2).to_h
+          components << ComponentSerializer::ListComponentSerializer.new(display: 'generic', display_data: [display_data(component: 'list', variant: 'block')], components: staff_cards).to_h
         end
       end
     end
@@ -132,6 +138,33 @@ module PageSerializer
             paragraph_content: [paragraph],
             description_list_content: nil,
             figure: figure
+        ).build_card
+      end
+    end
+
+    def staff_cards
+      @staff.map do |staff_member|
+        next unless staff_member.try(:value)
+        staff_member = staff_member.try(:value)
+
+        # Get the name of a current role
+        current_roles = staff_member.roles.select { |role| role.try(:endDate).nil? } if staff_member.try(:roles)
+        if current_roles.present?
+          small = current_roles.map { |role| role.try(:role).try(:name) }.to_sentence
+        end
+
+        name = staff_member.try(:name) || I18n.t('no_name')
+
+        description_list = [].tap do |items|
+          items << create_description_list_item(term: I18n.t('committee_prototype.show.staff.card.terms.email'), descriptions: [staff_member.email]) if staff_member.try(:email)
+          items << create_description_list_item(term: I18n.t('committee_prototype.show.staff.card.terms.phone'), descriptions: [staff_member.phone]) if staff_member.try(:phone)
+        end
+        description_list = nil if description_list.empty?
+
+        CardFactory.new(
+            small: small,
+            heading_text: name,
+            description_list_content: description_list,
         ).build_card
       end
     end

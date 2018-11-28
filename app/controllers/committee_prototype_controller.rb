@@ -12,10 +12,10 @@ class CommitteePrototypeController < ApplicationController
   end
 
   def show
-    committee, business, memberships, parent, children = CommitteePrototypeService.committee(params[:committee_id])
+    committee, business, memberships, staff, parent, children = CommitteePrototypeService.committee(params[:committee_id])
     images = CommitteePrototypeService.all_images
 
-    serializer = PageSerializer::CommitteePrototypeShowPageSerializer.new(request: request, committee: committee, business: business, memberships: memberships, parent: parent, children: children, images: images)
+    serializer = PageSerializer::CommitteePrototypeShowPageSerializer.new(request: request, committee: committee, business: business, memberships: memberships, staff: staff, parent: parent, children: children, images: images)
 
     render_page(serializer)
   end
