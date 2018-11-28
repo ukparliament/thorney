@@ -55,8 +55,8 @@ module PageSerializer
           items << create_description_list_item(term: I18n.t('committee_prototype.business.show.meta.closed'), descriptions: [I18n.l(DateTime.parse(@business.closedDate))]) if @business.try(:closedDate)
           items << create_description_list_item(term: I18n.t('committee_prototype.business.show.meta.prefix'), descriptions: [I18n.l(DateTime.parse(@business.prefix))]) if @business.try(:prefix)
           items << create_description_list_item(term: I18n.t('committee_prototype.business.show.meta.publication'), descriptions: [I18n.l(DateTime.parse(@business.publicationDateTime))]) if @business.try(:publicationDateTime)
-          items << create_description_list_item(term: I18n.t('committee_prototype.business.show.meta.hc_numbers'), descriptions: @business.publicationDateTime) if @business.try(:hCNumbers)
-          items << create_description_list_item(term: I18n.t('committee_prototype.business.show.meta.hl_numbers'), descriptions: [I18n.l(DateTime.parse(@business.publicationDateTime))]) if @business.try(:hLNumbers)
+          items << create_description_list_item(term: I18n.t('committee_prototype.business.show.meta.hc_numbers'), descriptions: @business.hcNumbers) if @business.try(:hcNumbers)
+          items << create_description_list_item(term: I18n.t('committee_prototype.business.show.meta.hl_numbers'), descriptions: @business.hlNumbers) if @business.try(:hlNumbers)
         end
       end
     end
