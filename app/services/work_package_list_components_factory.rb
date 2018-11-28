@@ -38,11 +38,9 @@ class WorkPackageListComponentsFactory
     # @param [Block] grouping_block block to generate the date in the list component
     #
     # @return [Array] array of Card components populated with the work package data
-    def build_components(work_packages: nil, date_type: nil, grouping_block: nil, small: false)
-      small_text = small ? 'laid-thing.procedure' : nil
+    def build_components(work_packages: nil, date_type: nil, grouping_block: nil)
       work_packages.map do |work_package|
         CardFactory.new(
-          small:                    small_text,
           heading_text:             work_package&.work_packaged_thing.try(:workPackagedThingName),
           heading_url:              work_package_path(work_package.graph_id),
           description_list_content: description_list_items(work_package, date_type, grouping_block)
