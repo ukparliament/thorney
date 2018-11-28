@@ -86,6 +86,8 @@ module PageSerializer
                      end
       house_string = I18n.t("committee_prototype.card.small.#{house_string}") if house_string
 
+      scrutinising_departments = @committee.scrutinisingDepartments.map { |department| department.try(:name) }.compact if @committee.try(:scrutinisingDepartments)
+
       [].tap do |items|
         items << create_description_list_item(term: I18n.t('committee_prototype.show.meta.house'), descriptions: [house_string]) if house_string
         items << create_description_list_item(term: I18n.t('committee_prototype.show.meta.lead_house'), descriptions: [@committee.category.try(:name)]) if @committee.try(:lea)
@@ -93,6 +95,7 @@ module PageSerializer
         items << create_description_list_item(term: I18n.t('committee_prototype.show.meta.type'), descriptions: @committee.committeeTypes.map { |type| type.try(:name) }.compact) if @committee.try(:committeeTypes)
         items << create_description_list_item(term: I18n.t('committee_prototype.show.meta.commons_appointment'), descriptions: [TimeHelper.time_translation(date_first: DateTime.parse(@committee.dateCommonsAppointed))]) if @committee.try(:dateCommonsAppointed)
         items << create_description_list_item(term: I18n.t('committee_prototype.show.meta.lords_appointment'), descriptions: [TimeHelper.time_translation(date_first: DateTime.parse(@committee.dateLordsAppointed))]) if @committee.try(:dateLordsAppointed)
+        items << create_description_list_item(term: I18n.t('committee_prototype.show.meta.departments'), descriptions: scrutinising_departments) if scrutinising_departments
         items << create_description_list_item(term: I18n.t('committee_prototype.show.meta.parent_committee'), descriptions: [link_to(@parent.try(:name), committee_prototype_path(@parent.id))]) if @parent
         items << create_description_list_item(term: I18n.t('committee_prototype.show.meta.child_committees'), descriptions: [children_links]) if @children
         items << create_description_list_item(term: I18n.t('committee_prototype.show.meta.contact_email'),  descriptions: [ActionController::Base.helpers.mail_to(@committee.email, @committee.email)]) if @committee.try(:email)
@@ -156,8 +159,8 @@ module PageSerializer
         name = staff_member.try(:name) || I18n.t('no_name')
 
         description_list = [].tap do |items|
-          items << create_description_list_item(term: I18n.t('committee_prototype.show.staff.card.terms.email'), descriptions: [staff_member.email]) if staff_member.try(:email)
-          items << create_description_list_item(term: I18n.t('committee_prototype.show.staff.card.terms.phone'), descriptions: [staff_member.phone]) if staff_member.try(:phone)
+          items << create_description_list_item(term: I18n.t('committee_prototype.show.card.terms.email'), descriptions: [staff_member.email]) if staff_member.try(:email)
+          items << create_description_list_item(term: I18n.t('committee_prototype.show.card.terms.phone'), descriptions: [staff_member.telephone]) if staff_member.try(:telephone)
         end
         description_list = nil if description_list.empty?
 

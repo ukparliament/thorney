@@ -131,7 +131,7 @@ en:
       card:
         terms:
           email: "Email"
-          phone: "Phone"
+          phone: "Telephone"
       business:
         title: "Committee business"
         current_business: "Current business"
@@ -148,6 +148,7 @@ en:
         committee_type: "Committee type"
         contact_email: "Email"
         contact_phone: "Phone"
+        departments: "Scrutinising Department(s)"
     current:
       title: "Current Committees"
     inquries:
@@ -172,6 +173,7 @@ en:
       index:
         title: "Business"
       show:
+        scope: "Scope"
         meta:
           open: "Open date"
           closed: "Closed date"
