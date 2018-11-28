@@ -6,12 +6,12 @@ module PageSerializer
     # @param [<Grom::Node>] laid_thing a Grom::Node object of type LaidThing.
     # @param [Array<Hash>] data_alternates array containing the href and type of the alternative data urls.
     def initialize(request: nil, laid_thing:, data_alternates: nil)
-      @laid_thing    = laid_thing
-      @work_package  = @laid_thing.try(:work_package)
-      @laying_body   = @laid_thing.try(:laying).try(:body)
-      @laying_person = @laid_thing.try(:laying).try(:person)
-      @procedure     = @work_package.try(:procedure)
-      @business_item = @work_package.try(:business_item)
+      @laid_thing     = laid_thing
+      @work_package   = @laid_thing.try(:work_package)
+      @laying_body    = @laid_thing.try(:laying).try(:body)
+      @laying_person  = @laid_thing.try(:laying).try(:person)
+      @procedure      = @work_package.try(:procedure)
+      @business_item  = @work_package.try(:business_item)
       @procedure_step = @business_item.try(:procedure_step) if @business_item
 
       super(request: request, data_alternates: data_alternates)
@@ -49,33 +49,20 @@ module PageSerializer
 
     def work_package_list_components
       [].tap do |components|
-        components << ComponentSerializer::CardComponentSerializer.new(
-          name: 'card__generic',
-          data: {
-            small:            ComponentSerializer::SmallComponentSerializer.new(content: 'laid-thing.procedural-activity').to_h,
-            heading:          work_package_card_heading,
-            list_description: work_package_list_description
-          }
-        ).to_h
+        components << CardFactory.new(
+          small:                    'laid-thing.procedural-activity',
+          heading_text:             title,
+          heading_url:              work_package_path(@work_package.try(:graph_id)),
+          description_list_content: work_package_list_description_items
+        ).build_card
       end
     end
 
-    def work_package_card_heading
-      ComponentSerializer::HeadingComponentSerializer.new(content: link_to(title, work_package_path(@work_package.try(:graph_id))), size: 2).to_h
-    end
-
-    def work_package_list_description
-      ComponentSerializer::ListDescriptionComponentSerializer.new(items: list_description_items).to_h
-    end
-
-    def list_description_items
+    def work_package_list_description_items
       [].tap do |items|
-        items << { 'term': { 'content': 'Procedure' }, 'description': [{ 'content': @procedure.try(:procedureName) }] }
+        items << create_description_list_item(term: 'laid-thing.procedure', descriptions: [@procedure.try(:procedureName)])
         items << if @business_item && @business_item.try(:date)
-                   {
-                     'term':        { 'content': @procedure_step.try(:procedureStepName) },
-                     'description': [TimeHelper.time_translation(date_first: @business_item.try(:date))]
-                   }
+                   create_description_list_item(term: @procedure_step.try(:procedureStepName), descriptions: [TimeHelper.time_translation(date_first: @business_item.try(:date))])
                  end
       end
     end
