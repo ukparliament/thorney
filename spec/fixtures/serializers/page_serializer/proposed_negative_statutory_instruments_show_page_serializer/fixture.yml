@@ -140,7 +140,7 @@ main-components:
               data:
                 items:
                 - term:
-                    content: Procedure
+                    content: laid-thing.procedure
                   description:
                   - content: procedureName - 1
                 - term:
