@@ -14,7 +14,7 @@ module Groups
 
           list_components = LaidThingListComponentsFactory.sort_and_build_components(statutory_instruments: @laid_papers, small: true)
 
-          heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('layings.title', group: @group.try(:groupName)), subheading: @group.try(:groupName), subheading_link: group_path)
+          heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('groups.made_available.availability_types.laid_papers.title', group: @group.try(:groupName)), subheading: @group.try(:groupName), subheading_link: group_path)
 
           serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 

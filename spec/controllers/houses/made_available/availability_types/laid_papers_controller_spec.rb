@@ -75,7 +75,7 @@ RSpec.describe Houses::MadeAvailable::AvailabilityTypes::LaidPapersController, v
                                              "term"=>{"content"=>"laid-thing.procedure"}}]},
                                      'name' => 'list__description' },
                                  'small'            =>
-                                   { 'data' => { 'content' => 'Statutory instrument' },
+                                   { 'data' => { 'content' => 'statutory-instruments.type' },
                                      'name' => 'partials__small' } },
                              'name' => 'card__generic' },
                            { 'data' =>
@@ -97,7 +97,7 @@ RSpec.describe Houses::MadeAvailable::AvailabilityTypes::LaidPapersController, v
                                              "term"=>{"content"=>"laid-thing.procedure"}}]},
                                      'name' => 'list__description' },
                                  'small'            =>
-                                   { 'data' => { 'content' => 'Statutory instrument' },
+                                   { 'data' => { 'content' => 'statutory-instruments.type' },
                                      'name' => 'partials__small' } },
                              'name' => 'card__generic' }
 

@@ -73,7 +73,7 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LaidPapersController, v
                                                                                            ] },
                                                                  'name' => 'list__description' },
                                          'small'            =>
-                                                               { 'data' => { 'content' => 'Statutory instrument' },
+                                                               { 'data' => { 'content' => 'statutory-instruments.type' },
                                                                  'name' => 'partials__small' } },
                              'name' => 'card__generic' }]
 

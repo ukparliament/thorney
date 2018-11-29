@@ -76,9 +76,9 @@ class LaidThingListComponentsFactory
 
     def laying_type(statutory_instrument)
       if statutory_instrument.is_a?(Parliament::Grom::Decorator::StatutoryInstrumentPaper)
-        I18n.t('layings.type.si')
+        'statutory-instruments.type'
       elsif statutory_instrument.is_a?(Parliament::Grom::Decorator::ProposedNegativeStatutoryInstrumentPaper)
-        I18n.t('layings.type.pnsi')
+        'proposed-negative-statutory-instruments.type'
       end
     end
   end

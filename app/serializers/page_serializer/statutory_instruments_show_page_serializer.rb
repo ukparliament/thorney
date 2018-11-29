@@ -19,7 +19,7 @@ module PageSerializer
     end
 
     def title
-      @statutory_instrument.try(:statutoryInstrumentPaperName)
+      @statutory_instrument.try(:statutoryInstrumentPaperName) || t('no_name')
     end
 
     def title_context

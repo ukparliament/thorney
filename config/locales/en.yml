@@ -31,16 +31,17 @@
 
 en:
   title: "UK Parliament"
-  mp_plural: 'MPs'
-  lord_plural: 'Lords'
-  prepositional_to: "%{first} to %{second}"
-  present: 'present'
+  append_title: " - UK Parliament"
+  mp_plural: "MPs"
+  lord_plural: "Lords"
   no_name: "[Name unavailable]"
   time:
     formats:
       default: '%-d %B %Y'
       datetime_format: '%Y-%m-%d'
 
+  home:
+    title: "Homepage"
   search:
     title:
       without_query: "Search"
@@ -51,18 +52,15 @@ en:
       flash: "Please enter a search term."
     opensearch:
       short_name: "UK Parliament"
-  layings:
-    title: "%{group} - laid papers"
-    type:
-      si: "Statutory instrument"
-      pnsi: "Proposed negative statutory instrument"
   groups:
     index:
-      title: Groups
+      title: "Groups"
     made_available:
       title: "%{group} - made available"
       availability_types:
         title: "%{group} - made available by availability types"
+        laid_papers:
+          title: "%{group} - laid papers"
         paper_types:
           index:
             title: "%{group} - procedural activity by paper type"
@@ -97,8 +95,6 @@ en:
       current:
         title: "%{procedure} - current procedural activity"
   work_packages:
-    index:
-      title: "Work packages"
     current:
       title: "Current procedural activity"
     paper_types:
@@ -121,6 +117,9 @@ en:
     index:
       title: "Laid papers"
   committee_prototype:
+    prepositional_to: "%{first} to %{second}"
+    present: 'present'
+
     index:
       title: "Committees"
     show:

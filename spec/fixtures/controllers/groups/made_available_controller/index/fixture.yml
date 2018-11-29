@@ -115,7 +115,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -142,7 +142,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -169,7 +169,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -196,7 +196,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -223,7 +223,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -250,7 +250,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -277,7 +277,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -304,7 +304,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -331,7 +331,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -358,7 +358,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -385,7 +385,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Proposed negative statutory instrument
+                content: proposed-negative-statutory-instruments.type
             heading:
               name: heading
               data:
@@ -412,7 +412,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -439,7 +439,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -466,7 +466,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -493,7 +493,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -520,7 +520,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -547,7 +547,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -574,7 +574,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -601,7 +601,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -628,7 +628,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -655,7 +655,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -682,7 +682,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -709,7 +709,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -736,7 +736,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -763,7 +763,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -790,7 +790,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -817,7 +817,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -844,7 +844,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -871,7 +871,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -898,7 +898,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -925,7 +925,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -952,7 +952,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:
@@ -979,7 +979,7 @@ main-components:
             small:
               name: partials__small
               data:
-                content: Statutory instrument
+                content: statutory-instruments.type
             heading:
               name: heading
               data:

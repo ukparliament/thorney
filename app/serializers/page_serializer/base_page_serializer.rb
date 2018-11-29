@@ -71,9 +71,9 @@ module PageSerializer
 
     def meta(title: nil, image_id: nil)
       if title.nil?
-        title = 'UK Parliament'
+        title = I18n.t('title')
       else
-        title += ' - UK Parliament'
+        title += I18n.t('append_title')
       end
 
       {}.tap do |meta|
