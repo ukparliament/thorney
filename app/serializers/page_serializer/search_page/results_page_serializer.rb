@@ -1,7 +1,7 @@
 module PageSerializer
   class SearchPage
     class ResultsPageSerializer < PageSerializer::SearchPage
-      # This serilaizer inherits some of its components from the search page serializer, but also adds in the results from the search.
+      # This serializer inherits some of its components from the search page serializer, but also adds in the results from the search.
 
       private
 

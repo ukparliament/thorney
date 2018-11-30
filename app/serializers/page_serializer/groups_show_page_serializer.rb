@@ -35,7 +35,7 @@ module PageSerializer
 
     def heading_content
       {}.tap do |hash|
-        hash[:subheading] = ContentDataHelper.content_data(content: 'groups.groups', link: groups_path)
+        hash[:subheading] = ContentDataHelper.content_data(content: 'groups.subheading', link: groups_path)
         hash[:heading] = title
       end
     end

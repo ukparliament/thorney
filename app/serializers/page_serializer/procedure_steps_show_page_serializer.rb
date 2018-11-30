@@ -55,7 +55,7 @@ module PageSerializer
 
     def heading_content
       {}.tap do |hash|
-        hash[:subheading] = ContentDataHelper.content_data(content: 'procedure-steps.procedure-step', link: procedure_steps_path)
+        hash[:subheading] = ContentDataHelper.content_data(content: 'procedure-steps.subheading', link: procedure_steps_path)
         hash[:heading] = title
         hash[:context] = @procedure_step.try(:procedureStepDescription)
       end

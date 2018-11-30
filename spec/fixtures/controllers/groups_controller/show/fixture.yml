@@ -95,7 +95,7 @@ main-components:
     - name: heading1
       data:
         subheading:
-          content: groups.groups
+          content: groups.subheading
           data:
             link: "/groups"
         heading:

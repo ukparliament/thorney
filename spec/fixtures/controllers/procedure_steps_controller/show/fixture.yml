@@ -95,7 +95,7 @@ main-components:
     - name: heading1
       data:
         subheading:
-          content: procedure-steps.procedure-step
+          content: procedure-steps.subheading
           data:
             link: "/procedure-steps"
         heading:
