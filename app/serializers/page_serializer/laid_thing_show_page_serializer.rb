@@ -5,7 +5,7 @@ module PageSerializer
     # @param [ActionDispatch::Request] request the current request object.
     # @param [<Grom::Node>] laid_thing a Grom::Node object of type LaidThing.
     # @param [Array<Hash>] data_alternates array containing the href and type of the alternative data urls.
-    def initialize(request: nil, laid_thing:, data_alternates: nil)
+    def initialize(request: nil, laid_thing: nil, data_alternates: nil)
       @laid_thing     = laid_thing
       @work_package   = @laid_thing.try(:work_package)
       @laying_body    = @laid_thing.try(:laying).try(:body)

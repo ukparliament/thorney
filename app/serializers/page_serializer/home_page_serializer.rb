@@ -3,7 +3,7 @@ module PageSerializer
     private
 
     def meta
-      super(title: 'Homepage')
+      super(title: t('home.title'))
     end
 
     def content

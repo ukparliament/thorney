@@ -54,7 +54,7 @@ RSpec.describe LaidThingListComponentsFactory, type: :serializer, vcr: true do
           data: {
             heading: {"data"=>{"content"=>"<a href=\"/statutory-instruments/keUmDe6y\">laidThingName - 1</a>","size"=>2},"name"=>"heading"},
             list_description: {"data"=>{"items"=>[{"description"=>[{"content"=>"shared.time-html","data"=>{"date"=>"27 April 2018", "datetime-value"=>"2018-04-27"}}],"term"=>{"content"=>"laid-thing.laid-date"}}, {"description"=>[{"content"=>"procedureName - 1"}],"term"=>{"content"=>"laid-thing.procedure"}}]}, "name"=>"list__description" },
-            small: { "data"=>{"content"=>"Statutory instrument"}, "name"=>"partials__small" }
+            small: { "data"=>{"content"=>"statutory-instruments.type"}, "name"=>"partials__small" }
             }
           )
       end

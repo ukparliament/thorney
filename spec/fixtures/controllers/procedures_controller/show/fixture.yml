@@ -93,7 +93,7 @@ main-components:
     - name: heading1
       data:
         subheading:
-          content: procedures.procedures
+          content: procedures.subheading
           data:
             link: "/procedures"
         heading:

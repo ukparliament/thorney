@@ -19,7 +19,7 @@ module PageSerializer
     end
 
     def title
-      @proposed_negative_statutory_instrument.try(:proposedNegativeStatutoryInstrumentPaperName)
+      @proposed_negative_statutory_instrument.try(:proposedNegativeStatutoryInstrumentPaperName) || t('no_name')
     end
 
     def heading1_component

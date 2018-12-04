@@ -35,7 +35,7 @@ module PageSerializer
 
     def heading_content
       {}.tap do |hash|
-        hash[:subheading] = ContentDataHelper.content_data(content: 'groups.groups', link: groups_path)
+        hash[:subheading] = ContentDataHelper.content_data(content: 'groups.subheading', link: groups_path)
         hash[:heading] = title
       end
     end
@@ -44,7 +44,7 @@ module PageSerializer
       section_components = []
 
       if @group.is_a?(Parliament::Grom::Decorator::LayingBody)
-        section_components << CardFactory.new(heading_text: 'groups.subsidiary-resources.layings', heading_translation_url: group_made_available_availability_types_laid_papers_path(@group.try(:graph_id))).build_card
+        section_components << CardFactory.new(heading_text: 'groups.subsidiary-resources.laid-papers', heading_translation_url: group_made_available_availability_types_laid_papers_path(@group.try(:graph_id))).build_card
       end
 
       section_components

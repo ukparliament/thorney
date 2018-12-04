@@ -145,8 +145,8 @@ class CommitteePrototypeService
       end_date = DateTime.parse(committee.endDate) if committee.try(:endDate).present?
 
       range = []
-      range << I18n.t('prepositional_to', first: I18n.l(start_date), second: I18n.t('present')) if current
-      range << I18n.t('prepositional_to', first: I18n.l(start_date), second: I18n.l(end_date))  if !current && complete_data
+      range << I18n.t('committee_prototype.prepositional_to', first: I18n.l(start_date), second: I18n.t('committee_prototype.present')) if current
+      range << I18n.t('committee_prototype.prepositional_to', first: I18n.l(start_date), second: I18n.l(end_date)) if !current && complete_data
     rescue I18n::ArgumentError => e
       logger.warn 'Attempted to localise non-date object'
       logger.warn e
