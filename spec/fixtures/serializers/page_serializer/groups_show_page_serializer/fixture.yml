@@ -102,7 +102,7 @@ main-components:
             heading:
               name: heading
               data:
-                content: groups.subsidiary-resources.layings
+                content: groups.subsidiary-resources.laid-papers
                 data:
                   link: "/groups/7dSvuueH/made-available/availability-types/laid-papers"
                 size: 2
