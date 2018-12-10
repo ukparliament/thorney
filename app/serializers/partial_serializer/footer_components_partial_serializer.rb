@@ -13,8 +13,8 @@ module PartialSerializer
       ]
 
       {
-        'uk-parliament': 'shared.footer.uk-parliament',
-        components:      [ComponentSerializer::HeadingComponentSerializer.new(content: 'shared.meta.title', size: 2).to_h, ComponentSerializer::ListComponentSerializer.new(display: 'generic', type: ComponentSerializer::ListComponentSerializer::Type::UNORDERED, display_data: footer_components_display_data, contents: contents).to_h]
+        heading:      ComponentSerializer::HeadingComponentSerializer.new(content: 'shared.meta.title', size: 2).to_h,
+        list_generic: ComponentSerializer::ListComponentSerializer.new(display: 'generic', type: ComponentSerializer::ListComponentSerializer::Type::UNORDERED, display_data: footer_components_display_data, contents: contents).to_h
       }
     end
 
