@@ -2,10 +2,10 @@
 layout:
   template: layout
 meta:
-  title: "[Name unavailable]"
+  title: "[Name unavailable] - UK Parliament"
   request-id: 123456
   open-graph:
-    title: "[Name unavailable]"
+    title: "[Name unavailable] - UK Parliament"
     original-url: https://example.com/
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -80,11 +80,37 @@ main-components:
     - name: heading1
       data:
         subheading:
-          content: groups.subheading
+          content: proposed-negative-statutory-instruments.show.subheading
           data:
-            link: "/groups"
+            link: "/proposed-negative-statutory-instruments"
         heading:
           content: "[Name unavailable]"
+    - name: list__description
+      data:
+        meta: true
+        items:
+        - term:
+            content: laid-thing.web-link
+          description:
+          - content: <a href="https://www.gov.uk/eu-withdrawal-act-2018-statutory-instruments/the-airports-groundhandling-amendment-eu-exit-regulations-2018">https://www.gov.uk/eu-withdrawal-act-2018-statutory-instruments/the-airports-groundhandling-amendment-eu-exit-regulations-2018</a>
+        - term:
+            content: laid-thing.laid-date
+          description:
+          - content: shared.time-html
+            data:
+              date: 19 July 2018
+              datetime-value: '2018-07-19'
+        - term:
+            content: proposed-negative-statutory-instruments.show.preceding-title
+          description:
+          - content: <a href="/statutory-instruments/C1234567">statutoryInstrumentPaperName
+              - 1</a>
+          - content: <a href="/statutory-instruments/D1234567">statutoryInstrumentPaperName
+              - 2</a>
+        - term:
+            content: laid-thing.laying-body
+          description:
+          - content: <a href="/groups/XouN12Ow">groupName - 1</a>
 - name: section__section
   data:
     components:
@@ -99,13 +125,30 @@ main-components:
         components:
         - name: card__generic
           data:
+            small:
+              name: partials__small
+              data:
+                content: laid-thing.procedural-activity
             heading:
               name: heading
               data:
-                content: groups.subsidiary-resources.laid-papers
-                data:
-                  link: "/groups/7dSvuueH/made-available/availability-types/laid-papers"
+                content: <a href="/work-packages/xyYZNFHJ">[Name unavailable]</a>
                 size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedureStepName - 1
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 9 October 2018
+                      datetime-value: '2018-10-09'
 footer-components:
 - name: footer
   data:

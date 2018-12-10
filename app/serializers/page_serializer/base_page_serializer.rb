@@ -71,7 +71,7 @@ module PageSerializer
 
     def meta(title: nil, image_id: nil)
       if title.nil?
-        title = I18n.t('title')
+        title = I18n.t('no_name')
       else
         title += I18n.t('append_title')
       end

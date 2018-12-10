@@ -2,10 +2,10 @@
 layout:
   template: layout
 meta:
-  title: "[Name unavailable]"
+  title: "[Name unavailable] - UK Parliament"
   request-id: 123456
   open-graph:
-    title: "[Name unavailable]"
+    title: "[Name unavailable] - UK Parliament"
     original-url: https://example.com/
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -80,11 +80,40 @@ main-components:
     - name: heading1
       data:
         subheading:
-          content: groups.subheading
+          content: statutory-instruments.show.subheading
           data:
-            link: "/groups"
+            link: "/statutory-instruments"
         heading:
           content: "[Name unavailable]"
+        context:
+          content: statutoryInstrumentPaperPrefix - 1 statutoryInstrumentPaperYear
+            - 1/488
+    - name: list__description
+      data:
+        meta: true
+        items:
+        - term:
+            content: laid-thing.web-link
+          description:
+          - content: <a href="http://www.legislation.gov.uk/uksi/2018/488/made">http://www.legislation.gov.uk/uksi/2018/488/made</a>
+        - term:
+            content: laid-thing.laid-date
+          description:
+          - content: shared.time-html
+            data:
+              date: 20 April 2018
+              datetime-value: '2018-04-20'
+        - term:
+            content: statutory-instruments.show.coming-into-force-date
+          description:
+          - content: shared.time-html
+            data:
+              date: 18 May 2018
+              datetime-value: '2018-05-18'
+        - term:
+            content: laid-thing.laying-body
+          description:
+          - content: <a href="/groups/XouN12Ow">groupName - 1</a>
 - name: section__section
   data:
     components:
@@ -99,13 +128,30 @@ main-components:
         components:
         - name: card__generic
           data:
+            small:
+              name: partials__small
+              data:
+                content: laid-thing.procedural-activity
             heading:
               name: heading
               data:
-                content: groups.subsidiary-resources.laid-papers
-                data:
-                  link: "/groups/7dSvuueH/made-available/availability-types/laid-papers"
+                content: <a href="/work-packages/EgDK23iB">[Name unavailable]</a>
                 size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedureStepName - 1
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 8 June 2018
+                      datetime-value: '2018-06-08'
 footer-components:
 - name: footer
   data:

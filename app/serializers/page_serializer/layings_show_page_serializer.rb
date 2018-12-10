@@ -21,7 +21,14 @@ module PageSerializer
     end
 
     def heading1_component
-      ComponentSerializer::Heading1ComponentSerializer.new({ subheading: ContentDataHelper.content_data(content: 'laid-thing.laid-papers', link: laid_papers_path), heading: title }).to_h
+      ComponentSerializer::Heading1ComponentSerializer.new(heading_content).to_h
+    end
+
+    def heading_content
+      {}.tap do |hash|
+        hash[:subheading] = ContentDataHelper.content_data(content: 'laid-thing.laid-papers', link: laid_papers_path)
+        hash[:heading] = title || t('no_name')
+      end
     end
 
     def meta_info

@@ -17,7 +17,7 @@ module PageSerializer
     end
 
     def title
-      @group.try(:groupName) || t('no_name')
+      @group.try(:groupName)
     end
 
     def content
@@ -36,7 +36,7 @@ module PageSerializer
     def heading_content
       {}.tap do |hash|
         hash[:subheading] = ContentDataHelper.content_data(content: 'groups.subheading', link: groups_path)
-        hash[:heading] = title
+        hash[:heading] = title || t('no_name')
       end
     end
 

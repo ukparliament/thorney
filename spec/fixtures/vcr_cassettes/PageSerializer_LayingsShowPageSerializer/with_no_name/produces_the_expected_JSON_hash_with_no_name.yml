@@ -33,16 +33,23 @@ http_interactions:
       encoding: UTF-8
       string: |
         <https://id.parliament.uk/Bi2fZUC5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying> .
+        <https://id.parliament.uk/Bi2fZUC5> <https://id.parliament.uk/schema/layingDate> "2018-11-01+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
         <https://id.parliament.uk/Bi2fZUC5> <https://id.parliament.uk/schema/layingHasLaidThing> <https://id.parliament.uk/DGMmHxFe> .
         <https://id.parliament.uk/Bi2fZUC5> <https://id.parliament.uk/schema/layingHasLayingBody> <https://id.parliament.uk/7dSvuueH> .
         <https://id.parliament.uk/Bi2fZUC5> <https://id.parliament.uk/schema/businessItemHasProcedureStep> <https://id.parliament.uk/cspzmb6w> .
+        <https://id.parliament.uk/Bi2fZUC5> <https://id.parliament.uk/schema/businessItemHasBusinessItemWebLink> <https://publications.parliament.uk/pa/cm201719/cmvote/181101v01.html> .
         <https://id.parliament.uk/DGMmHxFe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing> .
         <https://id.parliament.uk/DGMmHxFe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
         <https://id.parliament.uk/DGMmHxFe> <https://id.parliament.uk/schema/laidThingName> "laidThingName - 1" .
         <https://id.parliament.uk/DGMmHxFe> <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/Fz9FAH9L> .
         <https://id.parliament.uk/Fz9FAH9L> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackage> .
+        <https://id.parliament.uk/Fz9FAH9L> <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/5S6p4YsP> .
+        <https://id.parliament.uk/5S6p4YsP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Procedure> .
+        <https://id.parliament.uk/5S6p4YsP> <https://id.parliament.uk/schema/procedureName> "procedureName - 1" .
+        <https://id.parliament.uk/7dSvuueH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LayingBody> .
+        <https://id.parliament.uk/7dSvuueH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/7dSvuueH> <https://id.parliament.uk/schema/groupName> "groupName - 1" .
         <https://id.parliament.uk/cspzmb6w> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep> .
-        <https://id.parliament.uk/cspzmb6w> <https://id.parliament.uk/schema/procedureStepName> "procedureStepName - 1" .
         <https://id.parliament.uk/DGMmHxFe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/NamedThing> .
         <https://id.parliament.uk/DGMmHxFe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WebLinkedThing> .
         <https://id.parliament.uk/DGMmHxFe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackagedThing> .

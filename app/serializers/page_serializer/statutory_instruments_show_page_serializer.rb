@@ -36,7 +36,15 @@ module PageSerializer
     end
 
     def heading1_component
-      ComponentSerializer::Heading1ComponentSerializer.new({ subheading: ContentDataHelper.content_data(content: 'statutory-instruments.show.subheading', link: statutory_instruments_path), heading: title, context: title_context }).to_h
+      ComponentSerializer::Heading1ComponentSerializer.new(heading_content).to_h
+    end
+
+    def heading_content
+      {}.tap do |hash|
+        hash[:subheading] = ContentDataHelper.content_data(content: 'statutory-instruments.show.subheading', link: statutory_instruments_path)
+        hash[:heading] = title || t('no_name')
+        hash[:context] = title_context
+      end
     end
 
     def meta_info

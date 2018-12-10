@@ -19,6 +19,15 @@ RSpec.describe PageSerializer::ProcedureStepsShowPageSerializer, vcr: true do
       expect(subject.to_yaml).to eq expected
     end
 
+    context 'with no name' do
+      it 'produces the expected JSON hash with no name' do
+
+        expected = get_fixture('group_with_no_name')
+
+        expect(subject.to_yaml).to eq expected
+      end
+    end
+
     context 'when there is partial data for a house' do
       it 'produces the expected JSON hash' do
 

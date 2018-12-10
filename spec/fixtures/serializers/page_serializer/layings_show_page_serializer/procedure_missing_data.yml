@@ -94,24 +94,9 @@ main-components:
           description:
           - content: <a href="/statutory-instruments/DGMmHxFe">laidThingName - 1</a>
         - term:
-            content: laid-thing.web-link
-          description:
-          - content: <a href="https://publications.parliament.uk/pa/cm201719/cmvote/181101v01.html">https://publications.parliament.uk/pa/cm201719/cmvote/181101v01.html</a>
-        - term:
             content: laid-thing.laid-paper-type
           description:
           - content: statutory-instruments.type
-        - term:
-            content: laid-thing.laid-date
-          description:
-          - content: shared.time-html
-            data:
-              date: 1 November 2018
-              datetime-value: '2018-11-01'
-        - term:
-            content: laid-thing.laying-body
-          description:
-          - content: <a href="/groups/7dSvuueH">groupName - 1</a>
 - name: section__section
   data:
     components:
