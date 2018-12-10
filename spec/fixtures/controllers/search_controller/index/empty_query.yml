@@ -98,13 +98,13 @@ main-components:
 footer-components:
 - name: footer
   data:
-    uk-parliament: shared.footer.uk-parliament
-    components:
-    - name: heading
+    heading:
+      name: heading
       data:
         content: shared.meta.title
         size: 2
-    - name: list__generic
+    list-generic:
+      name: list__generic
       data:
         type: ul
         display:
