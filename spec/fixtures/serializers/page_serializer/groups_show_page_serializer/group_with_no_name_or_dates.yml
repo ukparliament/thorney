@@ -2,10 +2,10 @@
 layout:
   template: layout
 meta:
-  title: "[Name unavailable] - UK Parliament"
+  title: "[Name unavailable]"
   request-id: 123456
   open-graph:
-    title: "[Name unavailable] - UK Parliament"
+    title: "[Name unavailable]"
     original-url: https://example.com/
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'

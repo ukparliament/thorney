@@ -17,7 +17,7 @@ module PageSerializer
     end
 
     def title
-      @procedure.try(:procedureName) || t('no_name')
+      @procedure.try(:procedureName)
     end
 
     def content
@@ -37,7 +37,7 @@ module PageSerializer
     def heading_content
       {}.tap do |hash|
         hash[:subheading] = ContentDataHelper.content_data(content: 'procedures.subheading', link: procedures_path)
-        hash[:heading] = title
+        hash[:heading] = title || t('no_name')
       end
     end
 

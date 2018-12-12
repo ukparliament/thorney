@@ -20,6 +20,15 @@ RSpec.describe PageSerializer::StatutoryInstrumentsShowPageSerializer, vcr: true
     end
   end
 
+  context 'with no name' do
+    it 'produces the expected JSON hash with no name' do
+
+      expected = get_fixture('with_no_name')
+
+      expect(subject.to_yaml).to eq expected
+    end
+  end
+
   context 'partial data' do
     it 'produces the expected JSON hash with missing data' do
 

@@ -2,10 +2,10 @@
 layout:
   template: layout
 meta:
-  title: "[Name unavailable]"
+  title: procedureStepName - 1 - UK Parliament
   request-id: 123456
   open-graph:
-    title: "[Name unavailable]"
+    title: procedureStepName - 1 - UK Parliament
     original-url: https://example.com/
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -80,11 +80,39 @@ main-components:
     - name: heading1
       data:
         subheading:
-          content: groups.subheading
+          content: laid-thing.laid-papers
           data:
-            link: "/groups"
+            link: "/laid-papers"
         heading:
-          content: "[Name unavailable]"
+          content: procedureStepName - 1
+    - name: list__description
+      data:
+        meta: true
+        items:
+        - term:
+            content: laid-thing.laid-paper
+          description:
+          - content: <a href="/proposed-negative-statutory-instruments/DGMmHxFe">laidThingName
+              - 1</a>
+        - term:
+            content: laid-thing.web-link
+          description:
+          - content: <a href="https://publications.parliament.uk/pa/cm201719/cmvote/181101v01.html">https://publications.parliament.uk/pa/cm201719/cmvote/181101v01.html</a>
+        - term:
+            content: laid-thing.laid-paper-type
+          description:
+          - content: proposed-negative-statutory-instruments.type
+        - term:
+            content: laid-thing.laid-date
+          description:
+          - content: shared.time-html
+            data:
+              date: 1 November 2018
+              datetime-value: '2018-11-01'
+        - term:
+            content: laid-thing.laying-body
+          description:
+          - content: <a href="/groups/7dSvuueH">groupName - 1</a>
 - name: section__section
   data:
     components:
@@ -99,13 +127,24 @@ main-components:
         components:
         - name: card__generic
           data:
+            small:
+              name: partials__small
+              data:
+                content: laid-thing.procedural-activity
             heading:
               name: heading
               data:
-                content: groups.subsidiary-resources.laid-papers
-                data:
-                  link: "/groups/7dSvuueH/made-available/availability-types/laid-papers"
+                content: <a href="/work-packages/Fz9FAH9L">procedureStepName - 1</a>
                 size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - 
 footer-components:
 - name: footer
   data:
