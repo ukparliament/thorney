@@ -73,8 +73,6 @@ class WorkPackageListComponentsFactory
                              'laid-thing.laid-date'
                            when DateType::BUSINESS_ITEM_DATE
                              'procedure-steps.subsidiary-resources.actualised-date'
-                           else
-                             nil
                            end
 
       create_date_description_list_item(translation_string, date) if date && translation_string

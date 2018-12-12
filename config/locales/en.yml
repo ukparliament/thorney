@@ -71,6 +71,9 @@ en:
     type: "Statutory instrument"
     index:
       title: "Statutory instruments"
+    work_packages:
+      index:
+        title: "%{statutory_instrument} - procedural activity"
   proposed_negative_statutory_instruments:
     type: "Proposed negative statutory instrument"
     index:
