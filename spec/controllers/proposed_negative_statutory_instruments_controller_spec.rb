@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'rails_helper'
 
 RSpec.describe ProposedNegativeStatutoryInstrumentsController, vcr: true do
@@ -88,6 +87,45 @@ RSpec.describe ProposedNegativeStatutoryInstrumentsController, vcr: true do
       statutory_instrument = assigns(:proposed_negative_statutory_instrument)
 
       expect(PageSerializer::ProposedNegativeStatutoryInstrumentsShowPageSerializer).to have_received(:new).with(request: request, proposed_negative_statutory_instrument: statutory_instrument, data_alternates: data_alternates)
+    end
+  end
+
+  describe 'GET lookup' do
+    let(:data_alternates) do
+      [{
+         :href => "#{ENV['PARLIAMENT_BASE_URL']}/proposed_negative_statutory_instrument_by_id.nt?proposed_negative_statutory_instrument_id=12345678",
+         :type => "application/n-triples" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/proposed_negative_statutory_instrument_by_id.ttl?proposed_negative_statutory_instrument_id=12345678",
+         :type => "text/turtle" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/proposed_negative_statutory_instrument_by_id.tsv?proposed_negative_statutory_instrument_id=12345678",
+         :type => "text/tab-separated-values" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/proposed_negative_statutory_instrument_by_id.csv?proposed_negative_statutory_instrument_id=12345678",
+         :type => "text/csv" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/proposed_negative_statutory_instrument_by_id.rj?proposed_negative_statutory_instrument_id=12345678",
+         :type => "application/json+rdf" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/proposed_negative_statutory_instrument_by_id.json?proposed_negative_statutory_instrument_id=12345678",
+         :type => "application/json+ld" },
+       { :href => "#{ENV['PARLIAMENT_BASE_URL']}/proposed_negative_statutory_instrument_by_id.xml?proposed_negative_statutory_instrument_id=12345678",
+         :type => "application/rdf+xml" }]
+    end
+
+    before(:each) do
+      allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
+
+      get :lookup, params: { proposed_negative_statutory_instrument_id: '12345678 '}
+    end
+
+    it 'should have a response with http status ok (302)' do
+      expect(response).to have_http_status(302)
+    end
+
+    it 'assigns @proposed_negative_statutory_instrument' do
+      expect(assigns(:proposed_negative_statutory_instrument)).to be_a(Grom::Node)
+      expect(assigns(:proposed_negative_statutory_instrument).type).to include('https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper')
+    end
+
+    it 'redirects to proposed_negative_statutory_instruments/:id' do
+      expect(response).to redirect_to(proposed_negative_statutory_instrument_path('VUWxOw5e'))
     end
   end
 end

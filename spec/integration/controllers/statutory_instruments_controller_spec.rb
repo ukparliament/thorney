@@ -34,4 +34,14 @@ RSpec.describe StatutoryInstrumentsController, vcr: true do
       end
     end
   end
+
+  describe 'GET lookup' do
+    context 'being redirected to the show page' do
+      it 'renders expected JSON output' do
+        get '/statutory-instruments/lookup?source=statutoryInstrumentPaperName&id=Dorset (Electoral Changes) Order 2018'
+
+        expect(response.body).to eq('<html><body>You are being <a href="http://www.example.com/statutory-instruments/5trFJNih">redirected</a>.</body></html>')
+      end
+    end
+  end
 end
