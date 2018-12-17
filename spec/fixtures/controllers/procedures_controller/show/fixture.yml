@@ -93,14 +93,14 @@ main-components:
     - name: heading1
       data:
         subheading:
-          content: procedures.subheading
+          content: procedures.show.subheading
           data:
             link: "/procedures"
         heading:
           content: procedureName - 1
     - name: paragraph
       data:
-      - content: procedures.about
+      - content: procedures.show.about
         data:
           procedure: procedurename - 1
 - name: section__section
@@ -120,7 +120,7 @@ main-components:
             heading:
               name: heading
               data:
-                content: procedures.subsidiary-resources.work-packages
+                content: procedures.show.subsidiary-resources.work-packages
                 data:
                   link: "/procedures/H5YJQsK2/work-packages"
                 size: 2
