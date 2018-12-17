@@ -30,20 +30,20 @@ module PageSerializer
     def section_primary_components
       [].tap do |components|
         components << ComponentSerializer::Heading1ComponentSerializer.new(heading_content).to_h
-        components << ComponentSerializer::ParagraphComponentSerializer.new(content: [ContentDataHelper.content_data(content: 'procedures.about', procedure: @procedure.try(:procedureName).downcase)]).to_h
+        components << ComponentSerializer::ParagraphComponentSerializer.new(content: [ContentDataHelper.content_data(content: 'procedures.show.about', procedure: @procedure.try(:procedureName).downcase)]).to_h
       end
     end
 
     def heading_content
       {}.tap do |hash|
-        hash[:subheading] = ContentDataHelper.content_data(content: 'procedures.subheading', link: procedures_path)
+        hash[:subheading] = ContentDataHelper.content_data(content: 'procedures.show.subheading', link: procedures_path)
         hash[:heading] = title || t('no_name')
       end
     end
 
     def list_components
       [].tap do |components|
-        components << CardFactory.new(heading_text: 'procedures.subsidiary-resources.work-packages', heading_translation_url: procedure_work_packages_path(@procedure.try(:graph_id))).build_card
+        components << CardFactory.new(heading_text: 'procedures.show.subsidiary-resources.work-packages', heading_translation_url: procedure_work_packages_path(@procedure.try(:graph_id))).build_card
       end
     end
 
