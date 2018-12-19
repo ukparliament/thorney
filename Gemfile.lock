@@ -266,7 +266,7 @@ DEPENDENCIES
   parliament-grom-decorators (~> 1.0.2)
   parliament-ntriple (~> 0.3)
   parliament-opensearch (~> 0.4)
-  parliament-routes (~> 0.6.29)
+  parliament-routes (~> 0.6.30)
   parliament-ruby (~> 0.8)
   puma (~> 3.11)
   rack-rewrite

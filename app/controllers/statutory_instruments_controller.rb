@@ -3,8 +3,9 @@ class StatutoryInstrumentsController < ApplicationController
   before_action :build_request, :data_check
 
   ROUTE_MAP = {
-    index: proc { ParliamentHelper.parliament_request.statutory_instrument_index },
-    show:  proc { |params| ParliamentHelper.parliament_request.statutory_instrument_by_id.set_url_params({ statutory_instrument_id: params[:statutory_instrument_id] }) }
+    index:  proc { ParliamentHelper.parliament_request.statutory_instrument_index },
+    show:   proc { |params| ParliamentHelper.parliament_request.statutory_instrument_by_id.set_url_params({ statutory_instrument_id: params[:statutory_instrument_id] }) },
+    lookup: proc { |params| ParliamentHelper.parliament_request.statutory_instrument_lookup.set_url_params({ property: params[:source], value: params[:id] }) }
   }.freeze
 
   def index
@@ -25,5 +26,12 @@ class StatutoryInstrumentsController < ApplicationController
     serializer = PageSerializer::StatutoryInstrumentsShowPageSerializer.new(request: request, statutory_instrument: @statutory_instrument, data_alternates: @alternates)
 
     render_page(serializer)
+  end
+
+  def lookup
+    @statutory_instrument = FilterHelper.filter(@api_request, 'StatutoryInstrumentPaper')
+    @statutory_instrument = @statutory_instrument.first
+
+    redirect_to statutory_instrument_path(@statutory_instrument.graph_id)
   end
 end

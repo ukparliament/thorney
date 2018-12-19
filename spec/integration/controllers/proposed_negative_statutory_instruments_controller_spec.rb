@@ -34,4 +34,14 @@ RSpec.describe ProposedNegativeStatutoryInstrumentsController, vcr: true do
       end
     end
   end
+
+  describe 'GET lookup' do
+    context 'being redirected to the show page' do
+      it 'renders expected JSON output' do
+        get '/proposed-negative-statutory-instruments/lookup?source=proposedNegativeStatutoryInstrumentPaperName&id=Animal Breeding (Amendment) (EU Exit) Regulations 2018'
+
+        expect(response.body).to eq('<html><body>You are being <a href="http://www.example.com/proposed-negative-statutory-instruments/VUWxOw5e">redirected</a>.</body></html>')
+      end
+    end
+  end
 end
