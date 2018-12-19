@@ -23,12 +23,6 @@ RSpec.describe PageSerializer::LaidThingShowPageSerializer, vcr: true do
     end
   end
 
-  context '#title' do
-    it 'raises an error' do
-      expect { subject.send(:title) }.to raise_error('You must implement #title')
-    end
-  end
-
   context '#content' do
     it 'calls the correct serializers' do
       allow(subject).to receive(:heading1_component)

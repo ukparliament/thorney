@@ -130,6 +130,11 @@ main-components:
               name: partials__small
               data:
                 content: laid-thing.procedural-activity
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/Fz9FAH9L">laidThingName - 1</a>
+                size: 2
             list-description:
               name: list__description
               data:
