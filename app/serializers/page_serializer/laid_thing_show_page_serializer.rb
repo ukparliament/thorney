@@ -18,7 +18,7 @@ module PageSerializer
     end
 
     def title
-      raise StandardError, 'You must implement #title'
+      @laid_thing.try(:laidThingName) || t('no_name')
     end
 
     private
@@ -51,7 +51,7 @@ module PageSerializer
       [].tap do |components|
         components << CardFactory.new(
           small:                    'laid-thing.procedural-activity',
-          heading_text:             title,
+          heading_text:             @laid_thing.try(:laidThingName) || t('no_name'),
           heading_url:              work_package_path(@work_package.try(:graph_id)),
           description_list_content: work_package_list_description_items
         ).build_card

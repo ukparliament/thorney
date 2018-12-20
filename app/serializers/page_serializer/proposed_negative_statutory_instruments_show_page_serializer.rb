@@ -18,10 +18,6 @@ module PageSerializer
       super(title: title)
     end
 
-    def title
-      @proposed_negative_statutory_instrument.try(:proposedNegativeStatutoryInstrumentPaperName) || t('no_name')
-    end
-
     def heading1_component
       ComponentSerializer::Heading1ComponentSerializer.new(heading_content).to_h
     end

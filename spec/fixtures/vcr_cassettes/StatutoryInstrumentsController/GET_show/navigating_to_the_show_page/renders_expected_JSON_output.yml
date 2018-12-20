@@ -40,7 +40,7 @@ http_interactions:
         <https://id.parliament.uk/xic2yu5i> <https://id.parliament.uk/schema/statutoryInstrumentPaperYear> "statutoryInstrumentPaperYear - 1"^^<http://www.w3.org/2001/XMLSchema#gYear> .
         <https://id.parliament.uk/xic2yu5i> <https://id.parliament.uk/schema/statutoryInstrumentPaperPrefix> "statutoryInstrumentPaperPrefix - 1" .
         <https://id.parliament.uk/xic2yu5i> <https://id.parliament.uk/schema/statutoryInstrumentPaperNumber> "488"^^<http://www.w3.org/2001/XMLSchema#integer> .
-        <https://id.parliament.uk/xic2yu5i> <https://id.parliament.uk/schema/statutoryInstrumentPaperName> "statutoryInstrumentPaperName - 1" .
+        <https://id.parliament.uk/xic2yu5i> <https://id.parliament.uk/schema/laidThingName> "statutoryInstrumentPaperName - 1" .
         <https://id.parliament.uk/xic2yu5i> <https://id.parliament.uk/schema/statutoryInstrumentPaperComingIntoForceDate> "2018-05-18+00:00"^^<http://www.w3.org/2001/XMLSchema#date> .
         <https://id.parliament.uk/xic2yu5i> <https://id.parliament.uk/schema/workPackagedThingHasWorkPackagedThingWebLink> <http://www.legislation.gov.uk/uksi/2018/488/made> .
         <https://id.parliament.uk/xic2yu5i> <https://id.parliament.uk/schema/laidThingHasLaying> <https://id.parliament.uk/c240s9cD> .

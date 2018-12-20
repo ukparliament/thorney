@@ -35,7 +35,7 @@ http_interactions:
         <https://id.parliament.uk/wzsrSFQP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper> .
         <https://id.parliament.uk/wzsrSFQP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackagedThing> .
         <https://id.parliament.uk/wzsrSFQP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing> .
-        <https://id.parliament.uk/wzsrSFQP> <https://id.parliament.uk/schema/proposedNegativeStatutoryInstrumentPaperName> "proposedNegativeStatutoryInstrumentPaperName - 1" .
+        <https://id.parliament.uk/wzsrSFQP> <https://id.parliament.uk/schema/laidThingName> "proposedNegativeStatutoryInstrumentPaperName - 1" .
         <https://id.parliament.uk/wzsrSFQP> <https://id.parliament.uk/schema/workPackagedThingHasWorkPackagedThingWebLink> <https://www.gov.uk/eu-withdrawal-act-2018-statutory-instruments/the-airports-groundhandling-amendment-eu-exit-regulations-2018> .
         <https://id.parliament.uk/wzsrSFQP> <https://id.parliament.uk/schema/laidThingHasLaying> <https://id.parliament.uk/wN2D7eGI> .
         <https://id.parliament.uk/wzsrSFQP> <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/xyYZNFHJ> .
@@ -61,6 +61,6 @@ http_interactions:
         <https://id.parliament.uk/D1234567> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/StatutoryInstrumentPaper> .
         <https://id.parliament.uk/C1234567> <https://id.parliament.uk/schema/statutoryInstrumentPaperName> "statutoryInstrumentPaperName - 1" .
         <https://id.parliament.uk/D1234567> <https://id.parliament.uk/schema/statutoryInstrumentPaperName> "statutoryInstrumentPaperName - 2" .
-    http_version: 
+    http_version:
   recorded_at: Thu, 18 Oct 2018 11:59:14 GMT
 recorded_with: VCR 4.0.0

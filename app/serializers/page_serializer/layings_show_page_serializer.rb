@@ -63,9 +63,5 @@ module PageSerializer
         translation_key: 'proposed-negative-statutory-instruments.type'
       }
     end
-
-    def work_package_card_heading
-      ComponentSerializer::HeadingComponentSerializer.new(content: link_to(@laying.laid_thing.try(:laidThingName), work_package_path(@laying.laid_thing.try(:graph_id))), size: 2).to_h
-    end
   end
 end

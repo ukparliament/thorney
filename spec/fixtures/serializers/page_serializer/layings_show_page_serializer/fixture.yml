@@ -133,7 +133,7 @@ main-components:
             heading:
               name: heading
               data:
-                content: <a href="/work-packages/Fz9FAH9L">procedureStepName - 1</a>
+                content: <a href="/work-packages/Fz9FAH9L">laidThingName - 1</a>
                 size: 2
             list-description:
               name: list__description

@@ -18,10 +18,6 @@ module PageSerializer
       super(title: title)
     end
 
-    def title
-      @statutory_instrument.try(:statutoryInstrumentPaperName) || t('no_name')
-    end
-
     def title_context
       paper_prefix  = @statutory_instrument.try(:statutoryInstrumentPaperPrefix)
       paper_year    = @statutory_instrument.try(:statutoryInstrumentPaperYear)
