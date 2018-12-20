@@ -32,14 +32,6 @@ class StatutoryInstrumentsController < ApplicationController
     @statutory_instrument = FilterHelper.filter(@api_request, 'StatutoryInstrumentPaper')
     @statutory_instrument = @statutory_instrument.first
 
-#     redirect_url = URI.parse(statutory_instrument_path(@statutory_instrument.graph_id))
-#     redirect_url.port = nil
-#     redirect_url = redirect_url.to_s
-#
-# p '_________________'
-# p redirect_url
-# p URI.parse(statutory_instrument_path(@statutory_instrument.graph_id ))
-# p '_________________'
-    redirect_to :action => "show", "statutory_instrument_id" => @statutory_instrument.graph_id
+    redirect_to :action => 'show', 'statutory_instrument_id' => @statutory_instrument.graph_id
   end
 end
