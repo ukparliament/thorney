@@ -135,7 +135,7 @@ RSpec.describe StatutoryInstrumentsController, vcr: true do
 
 
     it 'redirects to statutory_instruments/:id' do
-      expect(response).to redirect_to(statutory_instrument_path('5trFJNih'))
+      expect(response).to redirect_to("https://:/statutory-instruments/5trFJNih")
     end
   end
 end
