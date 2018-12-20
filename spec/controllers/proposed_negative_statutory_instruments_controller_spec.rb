@@ -125,7 +125,7 @@ RSpec.describe ProposedNegativeStatutoryInstrumentsController, vcr: true do
     end
 
     it 'redirects to proposed_negative_statutory_instruments/:id' do
-      expect(response).to redirect_to(proposed_negative_statutory_instrument_path('VUWxOw5e'))
+      expect(response).to redirect_to('https://:/proposed-negative-statutory-instruments/VUWxOw5e')
     end
   end
 end

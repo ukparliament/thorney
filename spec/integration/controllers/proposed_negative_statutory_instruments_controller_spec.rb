@@ -40,7 +40,7 @@ RSpec.describe ProposedNegativeStatutoryInstrumentsController, vcr: true do
       it 'renders expected JSON output' do
         get '/proposed-negative-statutory-instruments/lookup?source=proposedNegativeStatutoryInstrumentPaperName&id=Animal Breeding (Amendment) (EU Exit) Regulations 2018'
 
-        expect(response.body).to eq('<html><body>You are being <a href="http://www.example.com/proposed-negative-statutory-instruments/VUWxOw5e">redirected</a>.</body></html>')
+        expect(response.body).to eq('<html><body>You are being <a href="https://www.example.com/proposed-negative-statutory-instruments/VUWxOw5e">redirected</a>.</body></html>')
       end
     end
   end

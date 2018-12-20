@@ -32,6 +32,6 @@ class ProposedNegativeStatutoryInstrumentsController < ApplicationController
     @proposed_negative_statutory_instrument = FilterHelper.filter(@api_request, 'ProposedNegativeStatutoryInstrumentPaper')
     @proposed_negative_statutory_instrument = @proposed_negative_statutory_instrument.first
 
-    redirect_to proposed_negative_statutory_instrument_path(@proposed_negative_statutory_instrument.graph_id)
+    redirect_to :action => 'show', 'proposed_negative_statutory_instrument_id' => @proposed_negative_statutory_instrument.graph_id
   end
 end
