@@ -29,7 +29,7 @@ module PageSerializer
     def section_primary_components(heading_content, context_content = nil, context_hidden = nil)
       [].tap do |content|
         content << ComponentSerializer::Heading1ComponentSerializer.new(heading: heading_content, context: context_content, context_hidden: context_hidden).to_h
-        content << ComponentSerializer::SearchFormComponentSerializer.new(query: @query, components: [ComponentSerializer::SearchIconComponentSerializer.new.to_h]).to_h
+        content << ComponentSerializer::SearchFormComponentSerializer.new(query: @query, components: [ComponentSerializer::SearchIconComponentSerializer.new.to_h], hide_label: true).to_h
       end
     end
 

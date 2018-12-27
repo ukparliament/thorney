@@ -79,6 +79,7 @@ main-components:
     - name: form__search
       data:
         value: test
+        hide-label: true
         label: search.label
         components:
         - name: icon__search

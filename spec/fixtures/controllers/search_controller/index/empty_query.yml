@@ -74,6 +74,7 @@ main-components:
           content: search.search-heading
     - name: form__search
       data:
+        hide-label: true
         label: search.label
         components:
         - name: icon__search

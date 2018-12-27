@@ -73,7 +73,7 @@ module PartialSerializer
     end
 
     def header_search
-      ComponentSerializer::SearchFormComponentSerializer.new(components: [ComponentSerializer::SearchIconComponentSerializer.new.to_h], global: true, search_action: search_path).to_h
+      ComponentSerializer::SearchFormComponentSerializer.new(components: [ComponentSerializer::SearchIconComponentSerializer.new.to_h], global: true, hide_label: true, search_action: search_path).to_h
     end
 
     def header_display_data
