@@ -1,4 +1,4 @@
-FROM ruby:2.5.3-alpine3.8
+FROM ruby:2.6.0-alpine3.8
 
 # Add command line argument variables used to customise the image at build-time.
 
@@ -26,7 +26,7 @@ WORKDIR /app
 RUN echo "Environment (RACK_ENV): $RACK_ENV" && \
     apk --update add libcurl && \
     apk --update add --virtual build-dependencies build-base ruby-dev && \
-    gem install bundler --no-ri --no-rdoc && \
+    gem install bundler --no-document && \
     if [ "$RACK_ENV" == "production" ]; then \
       bundle install --without development test --path vendor/bundle; \
       apk del build-dependencies; \
