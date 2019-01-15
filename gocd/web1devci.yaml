@@ -53,6 +53,6 @@ pipelines:
 
 
 environments:
-  Web.DEVCI:
+  WebDEVCI:
     pipelines:
       - parliament.uk-thorney
