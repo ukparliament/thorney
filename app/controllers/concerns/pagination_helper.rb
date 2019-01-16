@@ -21,7 +21,7 @@ class PaginationHelper
       hash[:components] = create_number_cards
     end
 
-    ComponentSerializer::CardComponentSerializer.new('navigation__number__number', data).to_h
+    ComponentSerializer::CardComponentSerializer.new(name: 'navigation__number__number', data: data).to_h
   end
 
   def current_page
@@ -29,7 +29,13 @@ class PaginationHelper
   end
 
   def total_pages
-    @total_pages ||= (@results_total.to_f / @count).ceil
+    return @total_pages if @total_pages
+
+    calculated_total = (@results_total.to_f / @count).ceil
+
+    return @total_pages = current_page if current_page > calculated_total
+
+    @total_pages = calculated_total
   end
 
   def previous_page
@@ -70,7 +76,7 @@ class PaginationHelper
         hash[:active] = true if page == current_page
       end
 
-      ComponentSerializer::CardComponentSerializer.new('navigation__number__card', data).to_h
+      ComponentSerializer::CardComponentSerializer.new(name: 'navigation__number__card', data: data).to_h
     end
   end
 

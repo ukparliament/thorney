@@ -1,6 +1,8 @@
 require_relative '../../../rails_helper'
 
 RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
+  include_context "sample request", include_shared: true
+
   let(:pagination_hash) { { start_index: 11, count: 100, results_total: 345, query: 'hello' } }
   let(:result_one) {
     double(
@@ -36,11 +38,12 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
   }
 
   let(:results) { double('results', totalResults: 658, entries: [result_one, result_two, result_three]) }
-  let(:subject) { described_class.new(query: 'hello', results: results, pagination_hash: pagination_hash) }
+  subject { described_class.new(request: request, query: 'hello', results: results, pagination_hash: pagination_hash) }
 
   context '#to_h' do
     context 'with a query' do
       it 'produces the correct hash' do
+
         expected = get_fixture('with_a_query')
 
         expect(subject.to_yaml).to eq(expected)
@@ -72,8 +75,8 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
       it 'with results' do
         subject.to_h
 
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with([], type: 'primary')
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with('results section components', content_flag: true)
+        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: [], type: 'primary')
+        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: 'results section components', content_flag: true)
       end
 
       it 'without results' do
@@ -81,8 +84,8 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
 
         subject.to_h
 
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with([], type: 'primary')
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with('results section components', content_flag: true)
+        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: [], type: 'primary')
+        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: 'results section components', content_flag: true)
       end
     end
 
@@ -96,7 +99,7 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
       it 'with results' do
         subject.to_h
 
-        expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(translation_key: 'search.count', translation_data: { count: 658 }, size: 2)
+        expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(content: { content: 'search.count', data:{ count: 658 } }, size: 2)
         expect(ComponentSerializer::ListComponentSerializer).to have_received(:new).with(display: 'generic', display_data: [{ component: 'list', variant: 'block' }], components: SearchResultHelper.create_search_results(results))
       end
 
@@ -105,7 +108,7 @@ RSpec.describe PageSerializer::SearchPage::ResultsPageSerializer do
 
         subject.to_h
 
-        expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(content: ['search.no-results'], size: 2)
+        expect(ComponentSerializer::HeadingComponentSerializer).to have_received(:new).with(content: 'search.no-results', size: 2)
         expect(ComponentSerializer::ListComponentSerializer).not_to have_received(:new).with(display: 'generic', display_data: [{ component: 'list', variant: 'block' }], components: SearchResultHelper.create_search_results(results))
       end
     end

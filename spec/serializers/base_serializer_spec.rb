@@ -57,4 +57,16 @@ RSpec.describe BaseSerializer do
       expect(subject.display_data(variant: 'variant').to_yaml).to eq expected
     end
   end
+
+  context '#l' do
+    it 'correctly localizes a date' do
+      date = DateTime.new(2018, 9, 10, 0, 0)
+
+      expect(subject.l(date)).to eq('10 September 2018')
+    end
+
+    it 'handles a nil date without raising an error' do
+      expect(subject.l(nil)).to be(nil)
+    end
+  end
 end

@@ -3,7 +3,8 @@ require_relative '../../rails_helper'
 RSpec.describe SearchController, vcr: true do
   describe 'GET index' do
     before(:each) do
-      allow_any_instance_of(SearchController).to receive(:app_insights_request_id) { 123456 }
+      allow_any_instance_of(PageSerializer::SearchPage::LandingPageSerializer).to receive(:request_id) { 123456 }
+      allow_any_instance_of(PageSerializer::SearchPage::ResultsPageSerializer).to receive(:request_id) { 123456 }
     end
 
     context 'navigating to the search page' do

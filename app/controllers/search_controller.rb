@@ -1,17 +1,17 @@
 class SearchController < ApplicationController
   def index
     # Show the index page if there is no query or an empty string is passed
-    return render_page(PageSerializer::SearchPage::LandingPageSerializer.new(opensearch_description_url: opensearch_description_url, flash_message: search_service.flash_message, request_id: app_insights_request_id)) unless search_service.sanitised_query.present?
+    return render_page(PageSerializer::SearchPage::LandingPageSerializer.new(request: request, flash_message: search_service.flash_message)) unless search_service.sanitised_query.present?
 
     search_service.fetch_description
 
     begin
-      serialiser = PageSerializer::SearchPage::ResultsPageSerializer.new(opensearch_description_url: opensearch_description_url, query: search_service.sanitised_query, results: search_service.results, pagination_hash: search_service.pagination_hash, request_id: app_insights_request_id)
+      serialiser = PageSerializer::SearchPage::ResultsPageSerializer.new(request: request, query: search_service.sanitised_query, results: search_service.results, pagination_hash: search_service.pagination_hash)
 
       return render_page(serialiser)
     rescue Parliament::ServerError => e
       logger.warn "Server error caught from search request: #{e.message}"
-      serialiser = PageSerializer::SearchPage::ResultsPageSerializer.new(opensearch_description_url: opensearch_description_url, query: search_service.sanitised_query, request_id: app_insights_request_id)
+      serialiser = PageSerializer::SearchPage::ResultsPageSerializer.new(request: request, query: search_service.sanitised_query)
 
       return render_page(serialiser)
     end
@@ -34,6 +34,6 @@ class SearchController < ApplicationController
   private
 
   def search_service
-    @search_service ||= SearchService.new(app_insights_request_id, search_path, params)
+    @search_service ||= SearchService.new(request.env['ApplicationInsights.request.id'], search_path, params)
   end
 end

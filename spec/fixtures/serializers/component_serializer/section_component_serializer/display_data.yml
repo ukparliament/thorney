@@ -1,0 +1,9 @@
+---
+name: section__section
+data:
+  display:
+    name: partials__display
+    data: 123
+  components:
+  - 1
+  - 2

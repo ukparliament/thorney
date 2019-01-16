@@ -8,13 +8,13 @@ module PartialSerializer
     def footer_components_data
       contents = [
         'shared.footer.current-website',
-        { content: 'shared.footer.cookie-policy', link: '/meta/cookie-policy' },
+        ContentDataHelper.content_data(content: 'shared.footer.cookie-policy', link: '/meta/cookie-policy'),
         'shared.footer.data-protection-privacy'
       ]
 
       {
-        'uk-parliament': 'shared.footer.uk-parliament',
-        components:      [ComponentSerializer::ListComponentSerializer.new(display: 'generic', type: ComponentSerializer::ListComponentSerializer::Type::UNORDERED, display_data: footer_components_display_data, contents: contents).to_h]
+        heading:      ComponentSerializer::HeadingComponentSerializer.new(content: 'shared.meta.title', size: 2).to_h,
+        list_generic: ComponentSerializer::ListComponentSerializer.new(display: 'generic', type: ComponentSerializer::ListComponentSerializer::Type::UNORDERED, display_data: footer_components_display_data, contents: contents).to_h
       }
     end
 

@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3030/group_laid_papers_index?group_id=XouN12Ow
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/n-triples
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<AUTH_TOKEN>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/n-triples
+      Content-Disposition:
+      - inline; filename="index"
+      Last-Modified:
+      - Thu, 15 Nov 2018 10:58:47 GMT
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '74442'
+    body:
+      encoding: UTF-8
+      string: |
+        <https://id.parliament.uk/7dSvuueH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group> .
+        <https://id.parliament.uk/7dSvuueH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LayingBody> .
+        <https://id.parliament.uk/7dSvuueH> <https://id.parliament.uk/schema/groupName> "groupName - 1" .
+        <https://id.parliament.uk/qaT30ffk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying> .
+        <https://id.parliament.uk/qaT30ffk> <https://id.parliament.uk/schema/layingDate> "2018-04-27+01:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/keUmDe6y> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing> .
+        <https://id.parliament.uk/keUmDe6y> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+        <https://id.parliament.uk/keUmDe6y> <https://id.parliament.uk/schema/laidThingName> "laidThingName - 1" .
+        <https://id.parliament.uk/keUmDe6y> <https://id.parliament.uk/schema/laidThingHasLaying> <https://id.parliament.uk/qaT30ffk> .
+        <https://id.parliament.uk/keUmDe6y> <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/e8079KjV> .
+        <https://id.parliament.uk/e8079KjV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackage> .
+        <https://id.parliament.uk/e8079KjV> <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/5S6p4YsP> .
+        <https://id.parliament.uk/5S6p4YsP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Procedure> .
+        <https://id.parliament.uk/5S6p4YsP> <https://id.parliament.uk/schema/procedureName> "procedureName - 1" .
+        <https://id.parliament.uk/keUmDe6y> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/NamedThing> .
+        <https://id.parliament.uk/keUmDe6y> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WebLinkedThing> .
+        <https://id.parliament.uk/keUmDe6y> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackagedThing> .
+        <https://id.parliament.uk/keUmDe6y> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/StatutoryInstrumentPaper> .
+        <https://id.parliament.uk/TQQt5wkr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying> .
+        <https://id.parliament.uk/TQQt5wkr> <https://id.parliament.uk/schema/layingDate> "2018-04-04+01:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+        <https://id.parliament.uk/On2R0Zeb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing> .
+        <https://id.parliament.uk/On2R0Zeb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+        <https://id.parliament.uk/On2R0Zeb> <https://id.parliament.uk/schema/laidThingName> "laidThingName - 2" .
+        <https://id.parliament.uk/On2R0Zeb> <https://id.parliament.uk/schema/laidThingHasLaying> <https://id.parliament.uk/TQQt5wkr> .
+        <https://id.parliament.uk/On2R0Zeb> <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/40Yq0PnR> .
+        <https://id.parliament.uk/40Yq0PnR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackage> .
+        <https://id.parliament.uk/40Yq0PnR> <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/5S6p4YsP> .
+        <https://id.parliament.uk/On2R0Zeb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/NamedThing> .
+        <https://id.parliament.uk/On2R0Zeb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WebLinkedThing> .
+        <https://id.parliament.uk/On2R0Zeb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackagedThing> .
+        <https://id.parliament.uk/On2R0Zeb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/StatutoryInstrumentPaper> .
+        <https://id.parliament.uk/nVWuSj8x> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying> .
+        <https://id.parliament.uk/nVWuSj8x> <https://id.parliament.uk/schema/layingDate> "2018-04-13+01:00"^^<http://www.w3.org/2001/XMLSchema#date> .
+    http_version:
+  recorded_at: Tue, 20 Nov 2018 12:40:12 GMT
+recorded_with: VCR 4.0.0

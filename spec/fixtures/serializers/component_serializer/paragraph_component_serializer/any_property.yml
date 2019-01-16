@@ -1,0 +1,7 @@
+---
+name: paragraph
+data:
+- content: some content
+  data:
+    one: property
+    yet: another

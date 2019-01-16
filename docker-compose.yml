@@ -17,6 +17,7 @@ services:
       - OPENSEARCH_AUTH_TOKEN
       - BANDIERA_URL
       - APPLICATION_INSIGHTS_INSTRUMENTATION_KEY
+      - PARLIAMENT_BASE_URL
     
   augustus.parliament.local:
     build:

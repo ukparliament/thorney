@@ -1,0 +1,614 @@
+---
+layout:
+  template: layout
+meta:
+  title: procedureName - 1 - current procedural activity - UK Parliament
+  request-id: 123456
+  data-alternates:
+  - type: application/n-triples
+    href: http://localhost:3030/procedure_work_packages_current.nt?procedure_id=12345678
+  - type: text/turtle
+    href: http://localhost:3030/procedure_work_packages_current.ttl?procedure_id=12345678
+  - type: text/tab-separated-values
+    href: http://localhost:3030/procedure_work_packages_current.tsv?procedure_id=12345678
+  - type: text/csv
+    href: http://localhost:3030/procedure_work_packages_current.csv?procedure_id=12345678
+  - type: application/json+rdf
+    href: http://localhost:3030/procedure_work_packages_current.rj?procedure_id=12345678
+  - type: application/json+ld
+    href: http://localhost:3030/procedure_work_packages_current.json?procedure_id=12345678
+  - type: application/rdf+xml
+    href: http://localhost:3030/procedure_work_packages_current.xml?procedure_id=12345678
+  open-graph:
+    title: procedureName - 1 - current procedural activity - UK Parliament
+    original-url: https://www.example.com/procedures/12345678/work-packages/current
+    image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
+    image-width: '1200'
+    image-height: '630'
+    twitter-card: summary_large_image
+  opensearch-description-url: https://www.example.com/search/opensearch
+header-components:
+- name: link
+  data:
+    link: "#content"
+    display:
+      name: partials__display
+      data:
+      - component: skip-to-content
+    selector: skiplink
+    content: shared.header.skip-to-content
+- name: status__banner
+  data:
+    display:
+      name: partials__display
+      data:
+      - component: status
+        variant: banner
+      - component: theme
+        variant: caution
+      - component: cookie
+    selector: cookie
+    components:
+    - name: paragraph
+      data:
+      - content: shared.header.cookie-banner-text
+        data:
+          link: "/meta/cookie-policy"
+- name: status__banner
+  data:
+    display:
+      name: partials__display
+      data:
+      - component: status
+        variant: banner
+    components:
+    - name: paragraph
+      data:
+      - content: shared.header.beta-status
+- name: header
+  data:
+    components:
+    - name: link
+      data:
+        link: "/"
+        display:
+          name: partials__display
+          data:
+          - component: uk_parliament
+        label: shared.header.label
+        components:
+        - name: icon__uk-parliament
+          data: shared.header.label
+    - name: form__search
+      data:
+        global: true
+        label: search.label
+        components:
+        - name: icon__search
+          data: search.search-icon
+        search-action: "/search"
+main-components:
+- name: section__primary
+  data:
+    content-flag: true
+    components:
+    - name: heading1
+      data:
+        subheading:
+          content: <a href="/procedures/12345678">procedureName - 1</a>
+        heading:
+          content: procedureName - 1 - current procedural activity
+- name: section__section
+  data:
+    components:
+    - name: list__generic
+      data:
+        type: ol
+        display:
+          name: partials__display
+          data:
+          - component: list
+            variant: block
+        components:
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/bCxOxdDP">workPackagedThingName -
+                  24</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 November 2018
+                      datetime-value: '2018-11-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/Ylex1zth">workPackagedThingName -
+                  22</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 1 November 2018
+                      datetime-value: '2018-11-01'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/dz7vT5Zx">workPackagedThingName -
+                  23</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 1 November 2018
+                      datetime-value: '2018-11-01'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/euQqjHWN">workPackagedThingName -
+                  15</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/XOeVDMkb">workPackagedThingName -
+                  16</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/GkO0dLmt">workPackagedThingName -
+                  17</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/rw6GBF1v">workPackagedThingName -
+                  18</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/CBhydLy9">workPackagedThingName -
+                  19</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/QVuRoaG8">workPackagedThingName -
+                  20</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/DJ42JOVF">workPackagedThingName -
+                  21</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/0UcWNJk5">workPackagedThingName -
+                  13</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 30 October 2018
+                      datetime-value: '2018-10-30'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/69nLZHeJ">workPackagedThingName -
+                  14</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 30 October 2018
+                      datetime-value: '2018-10-30'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/hTLPmd9A">workPackagedThingName -
+                  10</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 29 October 2018
+                      datetime-value: '2018-10-29'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/FilDgg1V">workPackagedThingName -
+                  11</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 29 October 2018
+                      datetime-value: '2018-10-29'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/acmgretb">workPackagedThingName -
+                  12</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 29 October 2018
+                      datetime-value: '2018-10-29'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/mejtOODW">workPackagedThingName -
+                  8</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 29 October 2018
+                      datetime-value: '2018-10-29'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/s2Bfvtn5">workPackagedThingName -
+                  9</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 29 October 2018
+                      datetime-value: '2018-10-29'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/mjONGC49">workPackagedThingName -
+                  6</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 26 October 2018
+                      datetime-value: '2018-10-26'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/6e2GHETg">workPackagedThingName -
+                  7</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 26 October 2018
+                      datetime-value: '2018-10-26'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/tBG4S97d">workPackagedThingName -
+                  5</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 25 October 2018
+                      datetime-value: '2018-10-25'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/oe4zG7ib">workPackagedThingName -
+                  2</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/kStbtoWn">workPackagedThingName -
+                  3</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/FfZdkGLp">workPackagedThingName -
+                  4</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/wnYFG4lB">workPackagedThingName -
+                  1</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - 
+                - term:
+                    content: laid-thing.laid-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 22 October 2018
+                      datetime-value: '2018-10-22'
+footer-components:
+- name: footer
+  data:
+    heading:
+      name: heading
+      data:
+        content: shared.meta.title
+        size: 2
+    list-generic:
+      name: list__generic
+      data:
+        type: ul
+        display:
+          name: partials__display
+          data:
+          - component: list
+        contents:
+        - content: shared.footer.current-website
+        - content: shared.footer.cookie-policy
+          data:
+            link: "/meta/cookie-policy"
+        - content: shared.footer.data-protection-privacy

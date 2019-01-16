@@ -1,0 +1,190 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.parliament.uk/search_page/description
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/opensearchdescription+xml
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<AUTH_TOKEN>"
+      Api-Version:
+      - ''
+      Request-Id:
+      - 123description-1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/opensearchdescription+xml
+      Expires:
+      - "-1"
+      Request-Context:
+      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
+      Access-Control-Expose-Headers:
+      - Request-Context
+      Set-Cookie:
+      - ARRAffinity=e9be45cc0db0aac3a04b705dd4487eef43ce5150f9755e1bcba592895a1d7a8b;Path=/;HttpOnly;Domain=search201806151230.azurewebsites.net
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Strict-Transport-Security:
+      - max-age=31536000
+      Date:
+      - Thu, 30 Aug 2018 14:03:05 GMT
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\"?>\r\n<OpenSearchDescription xmlns=\"http://a9.com/-/spec/opensearch/1.1/\">\r\n
+        \ <ShortName>parliament.uk</ShortName>\r\n  <Description>UK Parliament</Description>\r\n
+        \ <Url template=\"https://api.parliament.uk/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"application/atom+xml\" />\r\n  <Url template=\"https://api.parliament.uk/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"application/rss+xml\" />\r\n  <Url template=\"https://api.parliament.uk/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"application/json\" />\r\n  <Url template=\"https://api.parliament.uk/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"text/json\" />\r\n  <Url template=\"https://api.parliament.uk/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"text/xml\" />\r\n  <Url template=\"https://api.parliament.uk/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"application/xml\" />\r\n</OpenSearchDescription>"
+    http_version: 
+  recorded_at: Thu, 30 Aug 2018 14:03:06 GMT
+- request:
+    method: get
+    uri: https://api.parliament.uk/search?count=10&q=banana&start=21
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/atom+xml
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<AUTH_TOKEN>"
+      Request-Id:
+      - '1231'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '2355'
+      Content-Type:
+      - application/atom+xml
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Request-Context:
+      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
+      Access-Control-Expose-Headers:
+      - Request-Context
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Strict-Transport-Security:
+      - max-age=31536000
+      Date:
+      - Thu, 30 Aug 2018 14:03:06 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: '<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title
+        type="text">Parliament.uk Search: banana</title><id>uuid:6dfda7cb-119a-4795-9d1d-ac8828e33655;id=90402</id><updated>2018-08-30T14:03:06Z</updated><author><name>Parliament.uk</name></author><Query
+        role="request" searchTerms="banana" totalResults="570" count="10" startIndex="21"
+        xmlns="http://a9.com/-/spec/opensearch/1.1/" /><totalResults xmlns="http://a9.com/-/spec/opensearch/1.1/">570</totalResults><startIndex
+        xmlns="http://a9.com/-/spec/opensearch/1.1/">21</startIndex><itemsPerPage
+        xmlns="http://a9.com/-/spec/opensearch/1.1/">10</itemsPerPage><entry><id>uuid:6dfda7cb-119a-4795-9d1d-ac8828e33655;id=90403</id><title
+        type="text">House of Commons - International Development - Minutes of ...</title><updated>2018-08-30T14:03:06Z</updated><link
+        title="https://publications.parliament.uk/pa/cm199798/cmselect/cmintdev/..."
+        href="https://publications.parliament.uk/pa/cm199798/cmselect/cmintdev/365/8020305.htm"
+        /><content type="text">Since its inception, Chiquita has dominated banana
+        production in Central America and banana marketing in the United States, European
+        and latterly Japan.</content><hints xmlns=""><hint><Name>Commons publication
+        from session: 1997-98</Name><Filter></Filter></hint></hints></entry><entry><id>uuid:6dfda7cb-119a-4795-9d1d-ac8828e33655;id=90404</id><title
+        type="text">House of Commons Hansard Debates for 25 Feb 1993</title><updated>2018-08-30T14:03:06Z</updated><link
+        title="https://publications.parliament.uk/pa/cm199293/cmhansrd/1993-02-25/..."
+        href="https://publications.parliament.uk/pa/cm199293/cmhansrd/1993-02-25/Orals-2.html"
+        /><content type="text">Column 999. consumers of bananas? Is he aware that
+        the bulk of the extra cost that consumers pay goes not to Caribbean farmers
+        but to two large multinational banana ...</content><hints xmlns=""><hint><Name>Commons
+        publication from session: 1992-93</Name><Filter></Filter></hint></hints></entry><entry><id>uuid:6dfda7cb-119a-4795-9d1d-ac8828e33655;id=90405</id><title
+        type="text">Lords Hansard text for 28 Jan 1999 (190128-03)</title><updated>2018-08-30T14:03:06Z</updated><link
+        title="https://publications.parliament.uk/pa/ld199899/ldhansrd/vo990128/..."
+        href="https://publications.parliament.uk/pa/ld199899/ldhansrd/vo990128/text/90128-03.htm"
+        /><content type="text">We want to see all sides engaged fully and urgently
+        in the panel process to determine whether or not the EU''s banana regime is
+        consistent with WTO rules.</content><hints xmlns=""><hint><Name>Lords publication
+        from session: 1998-99</Name><Filter></Filter></hint></hints></entry><entry><id>uuid:6dfda7cb-119a-4795-9d1d-ac8828e33655;id=90406</id><title
+        type="text">Early day motion 1139 - FAIRTRADE''S MAKE BANANAS FAIR ...</title><updated>2018-08-30T14:03:06Z</updated><link
+        title="https://www.parliament.uk/edm/2013-14/1139" href="https://www.parliament.uk/edm/2013-14/1139"
+        /><content type="text">That this House celebrates the achievements of the
+        Fairtrade movement in this 20th year since the Fairtrade mark first appeared
+        on shelves in the United...</content><hints xmlns=""><hint><Name>Early Day
+        Motion</Name><Filter></Filter></hint></hints></entry><entry><id>uuid:6dfda7cb-119a-4795-9d1d-ac8828e33655;id=90407</id><title
+        type="text">House of Commons Hansard Written Answers Index for 21 Dec 1999</title><updated>2018-08-30T14:03:06Z</updated><link
+        title="https://publications.parliament.uk/pa/cm199900/cmhansrd/vo991221/..."
+        href="https://publications.parliament.uk/pa/cm199900/cmhansrd/vo991221/index/91221-x.htm"
+        /><content type="text">Mr. Sayeed --EU-US Banana Dispute [21 Dec 1999] Mr.
+        Caborn . Oil and Gas Production [21 Dec 1999] Mr. David Stewart --Oil and
+        Gas Production [21 Dec 1999] Mrs. Liddell .</content><hints xmlns=""><hint><Name>Commons
+        publication from session: 1999-00</Name><Filter></Filter></hint></hints></entry><entry><id>uuid:6dfda7cb-119a-4795-9d1d-ac8828e33655;id=90408</id><title
+        type="text">House of Commons Hansard Debates for 5 May 1994</title><updated>2018-08-30T14:03:06Z</updated><link
+        title="https://publications.parliament.uk/pa/cm199394/cmhansrd/1994-05-05/..."
+        href="https://publications.parliament.uk/pa/cm199394/cmhansrd/1994-05-05/Orals-1.html"
+        /><content type="text">Further opportunities remain for ACP banana producers
+        to expand their commercial chances of selling their bananas in the European
+        Union. Mrs ...</content><hints xmlns=""><hint><Name>Commons publication from
+        session: 1993-94</Name><Filter></Filter></hint></hints></entry><entry><id>uuid:6dfda7cb-119a-4795-9d1d-ac8828e33655;id=90409</id><title
+        type="text">House of Commons Hansard Debates for 27 Feb 2006 (pt 20)</title><updated>2018-08-30T14:03:06Z</updated><link
+        title="https://publications.parliament.uk/pa/cm200506/cmhansrd/vo060227/..."
+        href="https://publications.parliament.uk/pa/cm200506/cmhansrd/vo060227/debtext/60227-20.htm"
+        /><content type="text">Are they seriously comparing the Northern Ireland Assembly
+        to a banana republic? As my right hon. Friend the Member for Torfaen (Mr.
+        Murphy) was explaining, ...</content><hints xmlns=""><hint><Name>Commons publication
+        from session: 2005-06</Name><Filter></Filter></hint></hints></entry><entry><id>uuid:6dfda7cb-119a-4795-9d1d-ac8828e33655;id=90410</id><title
+        type="text">House of Commons - Crossrail Bill - Minutes of Evidence</title><updated>2018-08-30T14:03:06Z</updated><link
+        title="https://publications.parliament.uk/pa/cm200607/cmselect/cmcross/..."
+        href="https://publications.parliament.uk/pa/cm200607/cmselect/cmcross/235/7022118.htm"
+        /><content type="text">Examination of Witnesses (Questions 20060 - 20079)
+        20060. Chairman: ... the North Dock, is surrounded under water by a structure
+        called the Banana Wall.</content><hints xmlns=""><hint><Name>Commons publication
+        from session: 2006-07</Name><Filter></Filter></hint></hints></entry><entry><id>uuid:6dfda7cb-119a-4795-9d1d-ac8828e33655;id=90411</id><title
+        type="text">Andrew Jones MP - UK Parliament</title><updated>2018-08-30T14:03:06Z</updated><link
+        title="https://www.parliament.uk/biographies/commons/andrew-jones/3996/..."
+        href="https://www.parliament.uk/biographies/commons/andrew-jones/3996/parliamentary-activities"
+        /><content type="text">Andrew Jones Party. Conservative Contact Details ...
+        what steps her Department is taking to help prevent the extinction of the
+        banana plant.</content><hints xmlns=""><hint><Name>Biography</Name><Filter></Filter></hint></hints></entry><entry><id>uuid:6dfda7cb-119a-4795-9d1d-ac8828e33655;id=90412</id><title
+        type="text">House of Commons - International Development - Written ...</title><updated>2018-08-30T14:03:06Z</updated><link
+        title="https://publications.parliament.uk/pa/cm200607/cmselect/cmintdev/u..."
+        href="https://publications.parliament.uk/pa/cm200607/cmselect/cmintdev/ucfairtrade/123401.htm"
+        /><content type="text">Memorandum submitted by the Caribbean Banana Exporters
+        Association (CBEA) Memorandum submitted by the Co-operative Group. Memorandum
+        submitted by the Co-operative Party.</content><hints xmlns=""><hint><Name>Commons
+        publication from session: 2006-07</Name><Filter></Filter></hint></hints></entry></feed>'
+    http_version: 
+  recorded_at: Thu, 30 Aug 2018 14:03:07 GMT
+recorded_with: VCR 4.0.0

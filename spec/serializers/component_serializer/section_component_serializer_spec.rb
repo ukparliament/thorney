@@ -6,7 +6,7 @@ RSpec.describe ComponentSerializer::SectionComponentSerializer do
   context '#to_h' do
     context 'a section__section' do
       it 'if content_flag is true' do
-        serializer = described_class.new(components, content_flag: true)
+        serializer = described_class.new(components: components, content_flag: true)
 
         expected = get_fixture('fixture')
 
@@ -14,9 +14,17 @@ RSpec.describe ComponentSerializer::SectionComponentSerializer do
       end
 
       it 'if content_flag is not provided' do
-        serializer = described_class.new(components)
+        serializer = described_class.new(components: components)
 
         expected = get_fixture('no_content_flag')
+
+        expect(serializer.to_yaml).to eq expected
+      end
+
+      it 'if display data is provided' do
+        serializer = described_class.new(components: components, display_data: 123 )
+
+        expected = get_fixture('display_data')
 
         expect(serializer.to_yaml).to eq expected
       end
@@ -24,7 +32,7 @@ RSpec.describe ComponentSerializer::SectionComponentSerializer do
 
     context 'a section__primary' do
       it 'if content_flag is true' do
-        serializer = described_class.new(components, type: 'primary', content_flag: true)
+        serializer = described_class.new(components: components, type: 'primary', content_flag: true)
 
         expected = get_fixture('primary')
 
@@ -32,7 +40,7 @@ RSpec.describe ComponentSerializer::SectionComponentSerializer do
       end
 
       it 'if content_flag is not provided' do
-        serializer = described_class.new(components, type: 'primary')
+        serializer = described_class.new(components: components, type: 'primary')
 
         expected = get_fixture('primary_no_content_flag')
 

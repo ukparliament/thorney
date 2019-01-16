@@ -51,9 +51,7 @@ class SearchService < ApplicationController
 
   def build_request
     headers = {}.tap do |hash|
-      hash['Accept']                     = 'application/atom+xml'
-      hash['Ocp-Apim-Subscription-Key']  = ENV['OPENSEARCH_AUTH_TOKEN']
-      hash['Request-Id']                 = "#{app_insights_request_id}1" if app_insights_request_id
+      hash['Request-Id'] = "#{app_insights_request_id}1" if app_insights_request_id
     end
 
     Parliament::Request::OpenSearchRequest.new(headers: headers,

@@ -22,12 +22,10 @@ RSpec.describe SearchController, vcr: true do
     context 'with a query' do
       context 'with a valid search' do
         before(:each) do
-          allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
+          allow_any_instance_of(ActionController::TestRequest).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
 
           allow(PageSerializer::SearchPage::ResultsPageSerializer).to receive(:new)
-        end
 
-        before(:each) do
           search_service_instance = double(
               'search_service_instance',
               query_nil_or_empty?: false,
@@ -55,7 +53,7 @@ RSpec.describe SearchController, vcr: true do
         end
 
         it 'calls the serializer with the correct arguments' do
-          expect(PageSerializer::SearchPage::ResultsPageSerializer).to have_received(:new).with(opensearch_description_url: 'http://:/search/opensearch', query: 'banana', results: [1, 2, 3], pagination_hash: 'pagination_hash', request_id: '|1234abcd.')
+          expect(PageSerializer::SearchPage::ResultsPageSerializer).to have_received(:new).with(request: request, query: 'banana', results: [1, 2, 3], pagination_hash: 'pagination_hash')
         end
       end
 
@@ -81,7 +79,7 @@ RSpec.describe SearchController, vcr: true do
               query: 'fdsfsd'
           }
 
-          expect(PageSerializer::SearchPage::ResultsPageSerializer).to have_received(:new).with(opensearch_description_url: 'http://test.host/search/opensearch', query: 'fdsfsd', results: an_instance_of(Feedjira::Parser::Atom), pagination_hash: pagination_hash, request_id: '|1234abcd.')
+          expect(PageSerializer::SearchPage::ResultsPageSerializer).to have_received(:new).with(request: request, query: 'fdsfsd', results: an_instance_of(Feedjira::Parser::Atom), pagination_hash: pagination_hash)
         end
       end
 
@@ -98,7 +96,7 @@ RSpec.describe SearchController, vcr: true do
         end
 
         it 'calls the serializer with the correct arguments' do
-          expect(PageSerializer::SearchPage::LandingPageSerializer).to have_received(:new).with(opensearch_description_url: 'http://test.host/search/opensearch', flash_message: I18n.t('search_controller.index.flash'), request_id: '|1234abcd.')
+          expect(PageSerializer::SearchPage::LandingPageSerializer).to have_received(:new).with(request: request, flash_message: I18n.t('search_controller.index.flash'))
         end
       end
 
@@ -117,10 +115,6 @@ RSpec.describe SearchController, vcr: true do
 
         it 'should prevent xss on search' do
           expect(response.body).not_to include('<script>alert(document.cookie)</script>')
-        end
-
-        it 'should sanitize the search term' do
-          expect(response.body).to include('alert(document.cookie)')
         end
       end
 
@@ -161,7 +155,7 @@ RSpec.describe SearchController, vcr: true do
 
           get :index, params: { q: 'Allan Wazacz' }
 
-          expect(PageSerializer::SearchPage::ResultsPageSerializer).to have_received(:new).with(opensearch_description_url: 'http://test.host/search/opensearch', query: 'Allan Wazacz', request_id: '|1234abcd.' )
+          expect(PageSerializer::SearchPage::ResultsPageSerializer).to have_received(:new).with(request: request, query: 'Allan Wazacz')
         end
       end
     end
@@ -182,8 +176,8 @@ RSpec.describe SearchController, vcr: true do
         <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
           <ShortName>UK Parliament</ShortName>
           <Description>Search UK Parliament online content</Description>
-          <Image height="16" width="16" type="image/x-icon">http://test.host/favicon.ico</Image>
-          <Url type="text/html" template="http://test.host/search?q={searchTerms}&amp;start_index={startIndex?}&amp;count={count?}" />
+          <Image height="16" width="16" type="image/x-icon">https://test.host/favicon.ico</Image>
+          <Url type="text/html" template="https://test.host/search?q={searchTerms}&amp;start_index={startIndex?}&amp;count={count?}" />
         </OpenSearchDescription>
       XML
 

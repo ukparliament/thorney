@@ -1,3 +1,4 @@
 ---
 name: header
-data: components
+data:
+  components: components

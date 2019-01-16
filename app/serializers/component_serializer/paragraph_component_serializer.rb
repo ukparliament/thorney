@@ -2,11 +2,15 @@ module ComponentSerializer
   class ParagraphComponentSerializer < ComponentSerializer::BaseComponentSerializer
     # Initialise a paragraph component with one or more pieces of content.
     #
-    # @param [Array<Hash>] content one or more pieces of content to be wrapped in <p> tags. The hashes have a content key and and optional link key.
+    # @param [Array<Hash>] content one or more pieces of content to be wrapped in <p> tags. The hashes have a content key and any other optional keys.
     #
-    # @example Initialising a paragraph component
-    #   ComponentSerializer::ParagraphComponentSerializer.new([{ content: 'some content', link: 'a link' }]).to_h
-    def initialize(content)
+    # @example Initialising a paragraph component with only a string or translation key
+    #  string_or_translation_key = 'Here is some paragraph text'
+    #  ComponentSerializer::ParagraphComponentSerializer.new(content: [string_or_translation_key,string_or_translation_key]).to_h
+    #
+    # @example Initialising a paragraph component with a translation key and data to be interpolated you must use the ContentDataHelper
+    #  ComponentSerializer::ParagraphComponentSerializer.new(content: [ContentDataHelper.content_data(content: 'some content', one: 'property', yet: 'another'), ContentDataHelper.content_data(content: 'some content', one: 'property', yet: 'another')]).to_h
+    def initialize(content: nil)
       @content = content
     end
 
@@ -18,10 +22,9 @@ module ComponentSerializer
 
     def data
       @content.map do |content|
-        {}.tap do |hash|
-          hash[:content] = content[:content]
-          hash[:data] = { link: content[:link] } if content[:link]
-        end
+        element = { content: content } unless content.is_a?(Hash)
+        element = content if content.is_a?(Hash)
+        element
       end
     end
   end

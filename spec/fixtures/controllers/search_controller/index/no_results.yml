@@ -4,7 +4,15 @@ layout:
 meta:
   title: dfgdfh89rhosiubreoweh - Search - UK Parliament
   request-id: 123456
-  opensearch-description-url: http://www.example.com/search/opensearch
+  open-graph:
+    title: dfgdfh89rhosiubreoweh - Search - UK Parliament
+    original-url: https://www.example.com/search?q=dfgdfh89rhosiubreoweh
+    image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
+    image-width: '1200'
+    image-height: '630'
+    twitter-card: summary_large_image
+  opensearch-description-url: https://www.example.com/search/opensearch
+  disable-format-detection: true
 header-components:
 - name: link
   data:
@@ -81,15 +89,18 @@ main-components:
     components:
     - name: heading
       data:
-        content:
-        - search.no-results
+        content: search.no-results
         size: 2
 footer-components:
 - name: footer
   data:
-    uk-parliament: shared.footer.uk-parliament
-    components:
-    - name: list__generic
+    heading:
+      name: heading
+      data:
+        content: shared.meta.title
+        size: 2
+    list-generic:
+      name: list__generic
       data:
         type: ul
         display:

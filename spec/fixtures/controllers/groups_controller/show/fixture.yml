@@ -1,0 +1,145 @@
+---
+layout:
+  template: layout
+meta:
+  title: groupName - 1 - UK Parliament
+  request-id: 123456
+  data-alternates:
+  - type: application/n-triples
+    href: http://localhost:3030/group_by_id.nt?group_id=0RNgrC4q
+  - type: text/turtle
+    href: http://localhost:3030/group_by_id.ttl?group_id=0RNgrC4q
+  - type: text/tab-separated-values
+    href: http://localhost:3030/group_by_id.tsv?group_id=0RNgrC4q
+  - type: text/csv
+    href: http://localhost:3030/group_by_id.csv?group_id=0RNgrC4q
+  - type: application/json+rdf
+    href: http://localhost:3030/group_by_id.rj?group_id=0RNgrC4q
+  - type: application/json+ld
+    href: http://localhost:3030/group_by_id.json?group_id=0RNgrC4q
+  - type: application/rdf+xml
+    href: http://localhost:3030/group_by_id.xml?group_id=0RNgrC4q
+  open-graph:
+    title: groupName - 1 - UK Parliament
+    original-url: https://www.example.com/groups/0RNgrC4q
+    image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
+    image-width: '1200'
+    image-height: '630'
+    twitter-card: summary_large_image
+  opensearch-description-url: https://www.example.com/search/opensearch
+header-components:
+- name: link
+  data:
+    link: "#content"
+    display:
+      name: partials__display
+      data:
+      - component: skip-to-content
+    selector: skiplink
+    content: shared.header.skip-to-content
+- name: status__banner
+  data:
+    display:
+      name: partials__display
+      data:
+      - component: status
+        variant: banner
+      - component: theme
+        variant: caution
+      - component: cookie
+    selector: cookie
+    components:
+    - name: paragraph
+      data:
+      - content: shared.header.cookie-banner-text
+        data:
+          link: "/meta/cookie-policy"
+- name: status__banner
+  data:
+    display:
+      name: partials__display
+      data:
+      - component: status
+        variant: banner
+    components:
+    - name: paragraph
+      data:
+      - content: shared.header.beta-status
+- name: header
+  data:
+    components:
+    - name: link
+      data:
+        link: "/"
+        display:
+          name: partials__display
+          data:
+          - component: uk_parliament
+        label: shared.header.label
+        components:
+        - name: icon__uk-parliament
+          data: shared.header.label
+    - name: form__search
+      data:
+        global: true
+        label: search.label
+        components:
+        - name: icon__search
+          data: search.search-icon
+        search-action: "/search"
+main-components:
+- name: section__primary
+  data:
+    content-flag: true
+    components:
+    - name: heading1
+      data:
+        subheading:
+          content: groups.subheading
+          data:
+            link: "/groups"
+        heading:
+          content: groupName - 1
+- name: section__section
+  data:
+    components:
+    - name: list__generic
+      data:
+        type: ol
+        display:
+          name: partials__display
+          data:
+          - component: list
+            variant: block
+        components:
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: groups.subsidiary-resources.laid-papers
+                data:
+                  link: "/groups/7dSvuueH/made-available/availability-types/laid-papers"
+                size: 2
+footer-components:
+- name: footer
+  data:
+    heading:
+      name: heading
+      data:
+        content: shared.meta.title
+        size: 2
+    list-generic:
+      name: list__generic
+      data:
+        type: ul
+        display:
+          name: partials__display
+          data:
+          - component: list
+        contents:
+        - content: shared.footer.current-website
+        - content: shared.footer.cookie-policy
+          data:
+            link: "/meta/cookie-policy"
+        - content: shared.footer.data-protection-privacy

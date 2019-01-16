@@ -38,3 +38,7 @@
 /doc
 /.yardoc
 
+.DS_Store
+
+# Ignore VSCode settings
+.vscode

@@ -1,6 +1,8 @@
 require_relative '../../../rails_helper'
 
 RSpec.describe PageSerializer::SearchPage::LandingPageSerializer do
+  include_context "sample request", include_shared: true
+
   context '#to_h' do
     context 'without a query' do
       it 'produces the correct hash' do
@@ -13,7 +15,7 @@ RSpec.describe PageSerializer::SearchPage::LandingPageSerializer do
 
     context 'with a flash message' do
       it 'produces the correct hash' do
-        serializer = described_class.new(flash_message: 'some flash message')
+        serializer = described_class.new(request: request, flash_message: 'some flash message')
 
         expected = get_fixture('with_flash_message')
 
@@ -31,13 +33,13 @@ RSpec.describe PageSerializer::SearchPage::LandingPageSerializer do
 
         subject.to_h
 
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with([], type: 'primary', content_flag: true)
+        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: [], type: 'primary', content_flag: true)
       end
     end
 
     context 'with a flash message' do
       it '#content' do
-        serializer = described_class.new(flash_message: 'some flash message')
+        serializer = described_class.new(request: request, flash_message: 'some flash message')
 
         allow(ComponentSerializer::SectionComponentSerializer).to receive(:new)
 
@@ -47,8 +49,8 @@ RSpec.describe PageSerializer::SearchPage::LandingPageSerializer do
 
         serializer.to_h
 
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with([], type: 'primary')
-        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with([ComponentSerializer::StatusComponentSerializer.new(type: 'highlight', display_data: 'flash_message_display_data', components: ['flash_message_paragraph']).to_h], content_flag: true)
+        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: [], type: 'primary')
+        expect(ComponentSerializer::SectionComponentSerializer).to have_received(:new).with(components: [ComponentSerializer::StatusComponentSerializer.new(type: 'highlight', display_data: 'flash_message_display_data', components: ['flash_message_paragraph']).to_h], content_flag: true)
       end
     end
   end

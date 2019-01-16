@@ -1,0 +1,16 @@
+---
+name: partials__figure
+data:
+  link: linky.link.link.link.com
+  aria-hidden: true
+  tab-index: true
+  source-media: "(min-width: 480px)"
+  source-srcset: https://parliament.uk/photo and other things
+  source-srcset-2: https://yet-anotherphoto.com
+  alt-text: Here is a picture of Dianne Abbot
+  alt-data: Dianne Abbott
+  source: https://and-yet-another-photo.uk
+  figcaption:
+    content: image.image_of
+    data:
+      name: Dianne Abbott

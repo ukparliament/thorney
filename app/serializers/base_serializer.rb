@@ -1,5 +1,8 @@
 # The serializer which all serializers inherit from.
 class BaseSerializer
+  include Rails.application.routes.url_helpers
+  include ListDescriptionHelper
+
   # Creates a hash of the serializer's content
   def to_h
     dasherize_keys(content)
@@ -21,6 +24,11 @@ class BaseSerializer
   # Evaluates a translation block
   def t(*args)
     I18n.t(*args)
+  end
+
+  # Localizes a date
+  def l(date)
+    date ? I18n.l(date) : nil
   end
 
   # Creates links for use in translation blocks

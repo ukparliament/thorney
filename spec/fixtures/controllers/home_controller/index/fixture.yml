@@ -1,0 +1,242 @@
+---
+layout:
+  template: layout
+meta:
+  title: Homepage - UK Parliament
+  request-id: 123456
+  open-graph:
+    title: Homepage - UK Parliament
+    original-url: https://www.example.com/
+    image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
+    image-width: '1200'
+    image-height: '630'
+    twitter-card: summary_large_image
+  opensearch-description-url: https://www.example.com/search/opensearch
+header-components:
+- name: link
+  data:
+    link: "#content"
+    display:
+      name: partials__display
+      data:
+      - component: skip-to-content
+    selector: skiplink
+    content: shared.header.skip-to-content
+- name: status__banner
+  data:
+    display:
+      name: partials__display
+      data:
+      - component: status
+        variant: banner
+      - component: theme
+        variant: caution
+      - component: cookie
+    selector: cookie
+    components:
+    - name: paragraph
+      data:
+      - content: shared.header.cookie-banner-text
+        data:
+          link: "/meta/cookie-policy"
+- name: status__banner
+  data:
+    display:
+      name: partials__display
+      data:
+      - component: status
+        variant: banner
+    components:
+    - name: paragraph
+      data:
+      - content: shared.header.beta-status
+- name: header
+  data:
+    components:
+    - name: link
+      data:
+        link: "/"
+        display:
+          name: partials__display
+          data:
+          - component: uk_parliament
+        label: shared.header.label
+        components:
+        - name: icon__uk-parliament
+          data: shared.header.label
+    - name: form__search
+      data:
+        global: true
+        label: search.label
+        components:
+        - name: icon__search
+          data: search.search-icon
+        search-action: "/search"
+main-components:
+- name: hero
+  data:
+    content-flag: true
+    components:
+    - name: heading1
+      data:
+        heading:
+          content: home.hero.heading
+    - name: paragraph
+      data:
+      - content: home.hero.building-new-website
+      - content: home.hero.follow-beta-progress
+- name: section__section
+  data:
+    display:
+      name: partials__display
+      data:
+      - component: section
+        variant: major
+      - component: section
+        variant: wide
+    components:
+    - name: heading
+      data:
+        content: home.mps-and-lords.heading
+        size: 2
+    - name: list__generic
+      data:
+        type: ol
+        display:
+          name: partials__display
+          data:
+          - component: list
+            variant: block
+          - component: list
+            variant: '3'
+        components:
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: home.mps-and-lords.mps.heading
+                data:
+                  link: "/mps"
+                size: 3
+            paragraph:
+              name: paragraph
+              data:
+              - content: home.mps-and-lords.mps.find
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: home.mps-and-lords.lords.heading
+                data:
+                  link: "/houses/WkUWUBMx/members/current/a-z/a"
+                size: 3
+            paragraph:
+              name: paragraph
+              data:
+              - content: home.mps-and-lords.lords.find
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: home.mps-and-lords.constituencies.heading
+                data:
+                  link: "/find-your-constituency"
+                size: 3
+            paragraph:
+              name: paragraph
+              data:
+              - content: home.mps-and-lords.constituencies.find
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: home.mps-and-lords.parties-and-groups.heading
+                data:
+                  link: "/houses/1AFu55Hs/parties/current"
+                size: 3
+            paragraph:
+              name: paragraph
+              data:
+              - content: home.mps-and-lords.parties-and-groups.find
+    - name: heading
+      data:
+        content: home.parliament-activity.heading
+        size: 2
+    - name: list__generic
+      data:
+        type: ol
+        display:
+          name: partials__display
+          data:
+          - component: list
+            variant: block
+          - component: list
+            variant: '3'
+        components:
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: home.parliament-activity.statutory-instruments.heading
+                data:
+                  link: "/find-a-statutory-instrument"
+                size: 3
+            paragraph:
+              name: paragraph
+              data:
+              - content: home.parliament-activity.statutory-instruments.find
+    - name: heading
+      data:
+        content: home.guides.heading
+        size: 2
+    - name: list__generic
+      data:
+        type: ol
+        display:
+          name: partials__display
+          data:
+          - component: list
+            variant: block
+          - component: list
+            variant: '3'
+        components:
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: home.guides.guide-to-procedure.heading
+                data:
+                  link: "/collections/6i8XQAfD"
+                size: 3
+            paragraph:
+              name: paragraph
+              data:
+              - content: home.guides.guide-to-procedure.find
+footer-components:
+- name: footer
+  data:
+    heading:
+      name: heading
+      data:
+        content: shared.meta.title
+        size: 2
+    list-generic:
+      name: list__generic
+      data:
+        type: ul
+        display:
+          name: partials__display
+          data:
+          - component: list
+        contents:
+        - content: shared.footer.current-website
+        - content: shared.footer.cookie-policy
+          data:
+            link: "/meta/cookie-policy"
+        - content: shared.footer.data-protection-privacy

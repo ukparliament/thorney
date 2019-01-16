@@ -1,19 +1,9 @@
 require_relative '../../rails_helper'
 
 RSpec.describe PageSerializer::BasePageSerializer do
-  let(:base_page_serializer) { described_class.new }
+  include_context "sample request", include_shared: true
 
-  context '#to_h' do
-    it 'raises an error' do
-      expect { base_page_serializer.to_h }.to raise_error('You must implement #meta')
-    end
-  end
-
-  context '#opensearch_description_url' do
-    it 'raises an error' do
-      expect { base_page_serializer.send(:opensearch_description_url) }.to raise_error('You must implement #opensearch_description_url')
-    end
-  end
+  let(:base_page_serializer) { described_class.new(request: request) }
 
   context '#main_components' do
     it 'raises an error' do
@@ -34,6 +24,12 @@ RSpec.describe PageSerializer::BasePageSerializer do
 
       expect(PartialSerializer::HeaderComponentsPartialSerializer).to have_received(:new)
       expect(PartialSerializer::FooterComponentsPartialSerializer).to have_received(:new)
+    end
+  end
+
+  context 'with no original url, or a unexpected request' do
+    it 'has a nil original_url' do
+      expect(described_class.new(request: nil).request_original_url).to be_nil
     end
   end
 end

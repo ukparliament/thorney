@@ -4,9 +4,15 @@ layout:
 meta:
   title: diane abbott - Search - UK Parliament
   request-id: 123456
-  components:
-  - name: head__search-result-tracking
-  opensearch-description-url: http://www.example.com/search/opensearch
+  open-graph:
+    title: diane abbott - Search - UK Parliament
+    original-url: https://www.example.com/search?count=10&q=diane+abbott&start_index=7471
+    image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
+    image-width: '1200'
+    image-height: '630'
+    twitter-card: summary_large_image
+  opensearch-description-url: https://www.example.com/search/opensearch
+  disable-format-detection: true
 header-components:
 - name: link
   data:
@@ -83,10 +89,9 @@ main-components:
     components:
     - name: heading
       data:
-        translation:
-          key: search.count
-          data:
-            count: 7520
+        content: search.count
+        data:
+          count: 7520
         size: 2
     - name: list__generic
       data:
@@ -227,9 +232,13 @@ main-components:
 footer-components:
 - name: footer
   data:
-    uk-parliament: shared.footer.uk-parliament
-    components:
-    - name: list__generic
+    heading:
+      name: heading
+      data:
+        content: shared.meta.title
+        size: 2
+    list-generic:
+      name: list__generic
       data:
         type: ul
         display:
@@ -242,3 +251,6 @@ footer-components:
           data:
             link: "/meta/cookie-policy"
         - content: shared.footer.data-protection-privacy
+foot:
+  components:
+  - name: foot__search-result-tracking

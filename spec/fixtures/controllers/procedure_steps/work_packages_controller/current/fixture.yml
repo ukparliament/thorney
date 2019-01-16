@@ -1,0 +1,4642 @@
+---
+layout:
+  template: layout
+meta:
+  title: procedureStepName - 1 - current procedural activity - UK Parliament
+  request-id: 123456
+  data-alternates:
+  - type: application/n-triples
+    href: http://localhost:3030/procedure_step_work_packages_current.nt?procedure_step_id=e9G2vHbc
+  - type: text/turtle
+    href: http://localhost:3030/procedure_step_work_packages_current.ttl?procedure_step_id=e9G2vHbc
+  - type: text/tab-separated-values
+    href: http://localhost:3030/procedure_step_work_packages_current.tsv?procedure_step_id=e9G2vHbc
+  - type: text/csv
+    href: http://localhost:3030/procedure_step_work_packages_current.csv?procedure_step_id=e9G2vHbc
+  - type: application/json+rdf
+    href: http://localhost:3030/procedure_step_work_packages_current.rj?procedure_step_id=e9G2vHbc
+  - type: application/json+ld
+    href: http://localhost:3030/procedure_step_work_packages_current.json?procedure_step_id=e9G2vHbc
+  - type: application/rdf+xml
+    href: http://localhost:3030/procedure_step_work_packages_current.xml?procedure_step_id=e9G2vHbc
+  open-graph:
+    title: procedureStepName - 1 - current procedural activity - UK Parliament
+    original-url: https://www.example.com/procedure-steps/e9G2vHbc/work-packages/current
+    image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
+    image-width: '1200'
+    image-height: '630'
+    twitter-card: summary_large_image
+  opensearch-description-url: https://www.example.com/search/opensearch
+header-components:
+- name: link
+  data:
+    link: "#content"
+    display:
+      name: partials__display
+      data:
+      - component: skip-to-content
+    selector: skiplink
+    content: shared.header.skip-to-content
+- name: status__banner
+  data:
+    display:
+      name: partials__display
+      data:
+      - component: status
+        variant: banner
+      - component: theme
+        variant: caution
+      - component: cookie
+    selector: cookie
+    components:
+    - name: paragraph
+      data:
+      - content: shared.header.cookie-banner-text
+        data:
+          link: "/meta/cookie-policy"
+- name: status__banner
+  data:
+    display:
+      name: partials__display
+      data:
+      - component: status
+        variant: banner
+    components:
+    - name: paragraph
+      data:
+      - content: shared.header.beta-status
+- name: header
+  data:
+    components:
+    - name: link
+      data:
+        link: "/"
+        display:
+          name: partials__display
+          data:
+          - component: uk_parliament
+        label: shared.header.label
+        components:
+        - name: icon__uk-parliament
+          data: shared.header.label
+    - name: form__search
+      data:
+        global: true
+        label: search.label
+        components:
+        - name: icon__search
+          data: search.search-icon
+        search-action: "/search"
+main-components:
+- name: section__primary
+  data:
+    content-flag: true
+    components:
+    - name: heading1
+      data:
+        subheading:
+          content: <a href="/procedure-steps/e9G2vHbc">procedureStepName - 1</a>
+        heading:
+          content: procedureStepName - 1 - current procedural activity
+- name: section__section
+  data:
+    components:
+    - name: list__generic
+      data:
+        type: ol
+        display:
+          name: partials__display
+          data:
+          - component: list
+            variant: block
+        components:
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/3q8YccUw">workPackagedThingName -
+                  173</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/BJVsUfLW">workPackagedThingName -
+                  174</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/YTS410BP">workPackagedThingName -
+                  175</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 3
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/jeyEtajA">workPackagedThingName -
+                  176</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 3
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/8wxb6BWd">workPackagedThingName -
+                  177</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/Fg6Xjml5">workPackagedThingName -
+                  178</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/mMJoin9d">workPackagedThingName -
+                  179</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/A35mNYan">workPackagedThingName -
+                  180</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/wNXTPpGh">workPackagedThingName -
+                  181</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/y8mNGRax">workPackagedThingName -
+                  182</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 3
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/YYchYe6Y">workPackagedThingName -
+                  183</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/xrQp8wjo">workPackagedThingName -
+                  184</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/rINYVove">workPackagedThingName -
+                  185</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/dcsrL0EB">workPackagedThingName -
+                  186</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/XO8Wq7au">workPackagedThingName -
+                  187</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/RA0fNEEi">workPackagedThingName -
+                  188</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/qAaoszxP">workPackagedThingName -
+                  189</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/87fEQ6RO">workPackagedThingName -
+                  190</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/kcEjmWpr">workPackagedThingName -
+                  191</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 3
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/gDtgUod4">workPackagedThingName -
+                  192</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/EelSQMxX">workPackagedThingName -
+                  193</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/1KElI7j4">workPackagedThingName -
+                  194</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/sqake64i">workPackagedThingName -
+                  195</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/09XLar9L">workPackagedThingName -
+                  196</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 31 October 2018
+                      datetime-value: '2018-10-31'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/QsaNlrbs">workPackagedThingName -
+                  156</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/Tdu2Oxdn">workPackagedThingName -
+                  157</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/l3feUJPF">workPackagedThingName -
+                  158</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/VAKIqdsw">workPackagedThingName -
+                  159</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/HHrQwR8D">workPackagedThingName -
+                  160</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/lZAXVvXl">workPackagedThingName -
+                  161</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/jaYLRoUo">workPackagedThingName -
+                  162</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/zdW1LizR">workPackagedThingName -
+                  163</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/2587nSWp">workPackagedThingName -
+                  164</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/OEpUFoMB">workPackagedThingName -
+                  165</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/Goj1Zra6">workPackagedThingName -
+                  166</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/fvbuf8S8">workPackagedThingName -
+                  167</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/YH5Tygda">workPackagedThingName -
+                  168</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/JthygHIN">workPackagedThingName -
+                  169</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/khiR4R9R">workPackagedThingName -
+                  170</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/O1seG0Nv">workPackagedThingName -
+                  171</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/1Tn8ZUle">workPackagedThingName -
+                  172</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 24 October 2018
+                      datetime-value: '2018-10-24'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/Wg3eh80v">workPackagedThingName -
+                  141</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 17 October 2018
+                      datetime-value: '2018-10-17'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/aj8r4hAP">workPackagedThingName -
+                  142</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 17 October 2018
+                      datetime-value: '2018-10-17'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/oUyGCgS5">workPackagedThingName -
+                  143</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 17 October 2018
+                      datetime-value: '2018-10-17'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/MQChNjSY">workPackagedThingName -
+                  144</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 17 October 2018
+                      datetime-value: '2018-10-17'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/zefBXzh8">workPackagedThingName -
+                  145</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 17 October 2018
+                      datetime-value: '2018-10-17'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/5CAiPg2v">workPackagedThingName -
+                  146</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 17 October 2018
+                      datetime-value: '2018-10-17'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/ZAc8K0r4">workPackagedThingName -
+                  147</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 17 October 2018
+                      datetime-value: '2018-10-17'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/gW4ShvE2">workPackagedThingName -
+                  148</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 17 October 2018
+                      datetime-value: '2018-10-17'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/mA0R8oxO">workPackagedThingName -
+                  149</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 17 October 2018
+                      datetime-value: '2018-10-17'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/bYtCFU4N">workPackagedThingName -
+                  150</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 17 October 2018
+                      datetime-value: '2018-10-17'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/SrxpslCY">workPackagedThingName -
+                  151</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 17 October 2018
+                      datetime-value: '2018-10-17'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/vu0GPgyl">workPackagedThingName -
+                  152</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 17 October 2018
+                      datetime-value: '2018-10-17'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/cRe5nDqS">workPackagedThingName -
+                  153</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 17 October 2018
+                      datetime-value: '2018-10-17'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/xl31EYMX">workPackagedThingName -
+                  154</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 17 October 2018
+                      datetime-value: '2018-10-17'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/pjtvqXCz">workPackagedThingName -
+                  155</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 17 October 2018
+                      datetime-value: '2018-10-17'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/lQQjF54h">workPackagedThingName -
+                  120</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/kAWq2agx">workPackagedThingName -
+                  121</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/ZanXOGcI">workPackagedThingName -
+                  122</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/vxPj3xad">workPackagedThingName -
+                  123</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/6OQ1w3DW">workPackagedThingName -
+                  124</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/WHAQG0Ch">workPackagedThingName -
+                  125</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/K1GI1d9e">workPackagedThingName -
+                  126</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/gQreLll1">workPackagedThingName -
+                  127</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/NoHwsgYC">workPackagedThingName -
+                  128</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/MyVni6Ej">workPackagedThingName -
+                  129</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/VGG0Gv4P">workPackagedThingName -
+                  130</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/9mNfFnUB">workPackagedThingName -
+                  131</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/86fSY4P0">workPackagedThingName -
+                  132</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/FKyIv1xY">workPackagedThingName -
+                  133</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/FB2aMTBN">workPackagedThingName -
+                  134</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/RlbS8X8u">workPackagedThingName -
+                  135</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/skuLtkzM">workPackagedThingName -
+                  136</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/CnbVFSFE">workPackagedThingName -
+                  137</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/mmJtbuq0">workPackagedThingName -
+                  138</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/vKAEAnJF">workPackagedThingName -
+                  139</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 10 October 2018
+                      datetime-value: '2018-10-10'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/a5kzSCS7">workPackagedThingName -
+                  100</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/eqBIsv19">workPackagedThingName -
+                  101</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/eWrOts77">workPackagedThingName -
+                  102</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/1wA2fFJh">workPackagedThingName -
+                  103</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/J8EN7E6N">workPackagedThingName -
+                  104</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/h5Fp2H9d">workPackagedThingName -
+                  105</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/Elsc9n58">workPackagedThingName -
+                  106</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/3WxJmYZD">workPackagedThingName -
+                  107</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/83lMBlLs">workPackagedThingName -
+                  108</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/RTAa8Xxs">workPackagedThingName -
+                  109</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/6kgJ0bGh">workPackagedThingName -
+                  110</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/FJdkYpZ5">workPackagedThingName -
+                  111</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/YZVMPIjK">workPackagedThingName -
+                  112</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 3
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/rDRNBssE">workPackagedThingName -
+                  113</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/cDVt360N">workPackagedThingName -
+                  114</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/DdWTiUjw">workPackagedThingName -
+                  115</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/wpuFhzm5">workPackagedThingName -
+                  116</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/8vXQJ2xK">workPackagedThingName -
+                  117</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/bm6TrRXM">workPackagedThingName -
+                  118</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/P3nQG8UQ">workPackagedThingName -
+                  119</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/xVDuhFhy">workPackagedThingName -
+                  89</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/msKM10hC">workPackagedThingName -
+                  90</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 3
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/WzY4kI4B">workPackagedThingName -
+                  91</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/YffANOfi">workPackagedThingName -
+                  92</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 3
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/AFYBjHvC">workPackagedThingName -
+                  93</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/WNbpxbb2">workPackagedThingName -
+                  94</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/8zjP35K1">workPackagedThingName -
+                  95</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/j6FFo1kf">workPackagedThingName -
+                  96</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/z7s90NTp">workPackagedThingName -
+                  97</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/k2fiopk4">workPackagedThingName -
+                  98</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/TUVPHf9x">workPackagedThingName -
+                  99</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 12 September 2018
+                      datetime-value: '2018-09-12'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/RvO51D8Y">workPackagedThingName -
+                  79</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/aU26TzPE">workPackagedThingName -
+                  69</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/H0wSQ5qG">workPackagedThingName -
+                  70</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/RxC0FtSg">workPackagedThingName -
+                  71</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/oLsZBZZy">workPackagedThingName -
+                  72</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/vdPBBc3g">workPackagedThingName -
+                  73</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/alYVrL7p">workPackagedThingName -
+                  74</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/gyec2cjN">workPackagedThingName -
+                  75</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/eouZnE6o">workPackagedThingName -
+                  76</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/K4kH9tSl">workPackagedThingName -
+                  77</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/lZwrpAHu">workPackagedThingName -
+                  78</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/1dkAzf5G">workPackagedThingName -
+                  80</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/42YVAgkz">workPackagedThingName -
+                  81</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/XNmQJL6V">workPackagedThingName -
+                  82</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/snpPLUSB">workPackagedThingName -
+                  83</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/sOWsIoTo">workPackagedThingName -
+                  84</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/hAmklf7q">workPackagedThingName -
+                  85</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/gfOq850z">workPackagedThingName -
+                  86</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/mnCKpXns">workPackagedThingName -
+                  87</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/UNTY7PNO">workPackagedThingName -
+                  88</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 5 September 2018
+                      datetime-value: '2018-09-05'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/PnLLjtW0">workPackagedThingName -
+                  140</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 18 July 2018
+                      datetime-value: '2018-07-18'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/SE7Aj9Hz">workPackagedThingName -
+                  64</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 18 July 2018
+                      datetime-value: '2018-07-18'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/jTuty5ho">workPackagedThingName -
+                  65</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 18 July 2018
+                      datetime-value: '2018-07-18'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/hj1bbx7c">workPackagedThingName -
+                  66</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 18 July 2018
+                      datetime-value: '2018-07-18'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/1B8DSj6y">workPackagedThingName -
+                  50</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 11 July 2018
+                      datetime-value: '2018-07-11'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/G9ni0BQM">workPackagedThingName -
+                  51</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 11 July 2018
+                      datetime-value: '2018-07-11'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/fa5HaWHq">workPackagedThingName -
+                  52</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 11 July 2018
+                      datetime-value: '2018-07-11'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/F7LRwguI">workPackagedThingName -
+                  53</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 11 July 2018
+                      datetime-value: '2018-07-11'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/iOR7pNdJ">workPackagedThingName -
+                  54</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 11 July 2018
+                      datetime-value: '2018-07-11'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/PHiVZHeP">workPackagedThingName -
+                  55</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 11 July 2018
+                      datetime-value: '2018-07-11'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/3bZHylgr">workPackagedThingName -
+                  56</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 11 July 2018
+                      datetime-value: '2018-07-11'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/ms7N7n0G">workPackagedThingName -
+                  57</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 11 July 2018
+                      datetime-value: '2018-07-11'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/4OyKxSz9">workPackagedThingName -
+                  58</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 11 July 2018
+                      datetime-value: '2018-07-11'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/jQuzcqf5">workPackagedThingName -
+                  59</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 11 July 2018
+                      datetime-value: '2018-07-11'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/GQOruZBT">workPackagedThingName -
+                  60</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 11 July 2018
+                      datetime-value: '2018-07-11'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/Y6qiLSBv">workPackagedThingName -
+                  61</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 11 July 2018
+                      datetime-value: '2018-07-11'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/1po2BJxp">workPackagedThingName -
+                  62</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 11 July 2018
+                      datetime-value: '2018-07-11'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/3dE9HsCE">workPackagedThingName -
+                  63</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 11 July 2018
+                      datetime-value: '2018-07-11'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/NNZyLkm8">workPackagedThingName -
+                  39</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 4 July 2018
+                      datetime-value: '2018-07-04'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/tWfu2Nyq">workPackagedThingName -
+                  40</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 4 July 2018
+                      datetime-value: '2018-07-04'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/iwUtxq6V">workPackagedThingName -
+                  41</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 4 July 2018
+                      datetime-value: '2018-07-04'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/dnBED32B">workPackagedThingName -
+                  42</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 4 July 2018
+                      datetime-value: '2018-07-04'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/K83vusrm">workPackagedThingName -
+                  43</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 4 July 2018
+                      datetime-value: '2018-07-04'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/VwdFcdKq">workPackagedThingName -
+                  44</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 4 July 2018
+                      datetime-value: '2018-07-04'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/vdp9GgsX">workPackagedThingName -
+                  45</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 4 July 2018
+                      datetime-value: '2018-07-04'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/O2X0qWrg">workPackagedThingName -
+                  46</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 4 July 2018
+                      datetime-value: '2018-07-04'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/QA1PcSCp">workPackagedThingName -
+                  47</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 4 July 2018
+                      datetime-value: '2018-07-04'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/Fwns2363">workPackagedThingName -
+                  48</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 4 July 2018
+                      datetime-value: '2018-07-04'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/665mjGeq">workPackagedThingName -
+                  49</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 4 July 2018
+                      datetime-value: '2018-07-04'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/d3zxRvk4">workPackagedThingName -
+                  27</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 27 June 2018
+                      datetime-value: '2018-06-27'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/PuKCWhOF">workPackagedThingName -
+                  28</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 27 June 2018
+                      datetime-value: '2018-06-27'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/k6e1O3T7">workPackagedThingName -
+                  29</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 27 June 2018
+                      datetime-value: '2018-06-27'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/1UXwbopq">workPackagedThingName -
+                  30</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 3
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 27 June 2018
+                      datetime-value: '2018-06-27'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/Q5DIXbsV">workPackagedThingName -
+                  31</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 27 June 2018
+                      datetime-value: '2018-06-27'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/kgC76Ime">workPackagedThingName -
+                  32</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 27 June 2018
+                      datetime-value: '2018-06-27'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/j4YnKrGQ">workPackagedThingName -
+                  33</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 27 June 2018
+                      datetime-value: '2018-06-27'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/DKrpinkq">workPackagedThingName -
+                  34</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 27 June 2018
+                      datetime-value: '2018-06-27'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/4hcgudSd">workPackagedThingName -
+                  35</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 27 June 2018
+                      datetime-value: '2018-06-27'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/uIv7V5Fh">workPackagedThingName -
+                  36</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 27 June 2018
+                      datetime-value: '2018-06-27'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/okoEwpBW">workPackagedThingName -
+                  37</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 27 June 2018
+                      datetime-value: '2018-06-27'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/R6OYbZOe">workPackagedThingName -
+                  38</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 27 June 2018
+                      datetime-value: '2018-06-27'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/MVnuNAsM">workPackagedThingName -
+                  15</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 20 June 2018
+                      datetime-value: '2018-06-20'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/mEw7S9ov">workPackagedThingName -
+                  16</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 20 June 2018
+                      datetime-value: '2018-06-20'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/rSOd6At4">workPackagedThingName -
+                  17</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 20 June 2018
+                      datetime-value: '2018-06-20'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/7qN3AkCI">workPackagedThingName -
+                  18</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 3
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 20 June 2018
+                      datetime-value: '2018-06-20'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/kiJwF0d5">workPackagedThingName -
+                  19</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 20 June 2018
+                      datetime-value: '2018-06-20'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/Th3KBYE1">workPackagedThingName -
+                  20</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 20 June 2018
+                      datetime-value: '2018-06-20'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/sVns1L8Y">workPackagedThingName -
+                  21</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 20 June 2018
+                      datetime-value: '2018-06-20'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/bAycZdhj">workPackagedThingName -
+                  22</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 20 June 2018
+                      datetime-value: '2018-06-20'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/uMC04oEu">workPackagedThingName -
+                  23</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 20 June 2018
+                      datetime-value: '2018-06-20'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/KRoYyf39">workPackagedThingName -
+                  24</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 20 June 2018
+                      datetime-value: '2018-06-20'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/0A9lArUa">workPackagedThingName -
+                  25</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 20 June 2018
+                      datetime-value: '2018-06-20'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/nR6OHhoL">workPackagedThingName -
+                  26</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 20 June 2018
+                      datetime-value: '2018-06-20'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/lq49zoKs">workPackagedThingName -
+                  11</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 6 June 2018
+                      datetime-value: '2018-06-06'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/A3hB6Aj4">workPackagedThingName -
+                  12</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 6 June 2018
+                      datetime-value: '2018-06-06'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/hTZ6jXdk">workPackagedThingName -
+                  13</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 6 June 2018
+                      datetime-value: '2018-06-06'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/7ayWbhIK">workPackagedThingName -
+                  14</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 6 June 2018
+                      datetime-value: '2018-06-06'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/imgmtCq9">workPackagedThingName -
+                  10</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 4 June 2018
+                      datetime-value: '2018-06-04'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/EgDK23iB">workPackagedThingName -
+                  5</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 23 May 2018
+                      datetime-value: '2018-05-23'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/9bXhF8oV">workPackagedThingName -
+                  6</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 23 May 2018
+                      datetime-value: '2018-05-23'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/sSDUxi1Q">workPackagedThingName -
+                  67</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 23 May 2018
+                      datetime-value: '2018-05-23'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/DX1ZptHJ">workPackagedThingName -
+                  68</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 23 May 2018
+                      datetime-value: '2018-05-23'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/F3ClsH20">workPackagedThingName -
+                  9</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 23 May 2018
+                      datetime-value: '2018-05-23'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/PsB0pq0l">workPackagedThingName -
+                  1</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 9 May 2018
+                      datetime-value: '2018-05-09'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/k5jw9Nhv">workPackagedThingName -
+                  4</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 1
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 9 May 2018
+                      datetime-value: '2018-05-09'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/Ic57bsvz">workPackagedThingName -
+                  7</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 9 May 2018
+                      datetime-value: '2018-05-09'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/9XxmwGtU">workPackagedThingName -
+                  8</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 9 May 2018
+                      datetime-value: '2018-05-09'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/XDilT5Ce">workPackagedThingName -
+                  2</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 7 May 2018
+                      datetime-value: '2018-05-07'
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/5wUN28za">workPackagedThingName -
+                  3</a>
+                size: 2
+            list-description:
+              name: list__description
+              data:
+                items:
+                - term:
+                    content: laid-thing.procedure
+                  description:
+                  - content: procedureName - 2
+                - term:
+                    content: procedure-steps.subsidiary-resources.actualised-date
+                  description:
+                  - content: shared.time-html
+                    data:
+                      date: 2 May 2018
+                      datetime-value: '2018-05-02'
+footer-components:
+- name: footer
+  data:
+    heading:
+      name: heading
+      data:
+        content: shared.meta.title
+        size: 2
+    list-generic:
+      name: list__generic
+      data:
+        type: ul
+        display:
+          name: partials__display
+          data:
+          - component: list
+        contents:
+        - content: shared.footer.current-website
+        - content: shared.footer.cookie-policy
+          data:
+            link: "/meta/cookie-policy"
+        - content: shared.footer.data-protection-privacy

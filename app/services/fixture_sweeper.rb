@@ -6,11 +6,17 @@ class FixtureSweeper
   end
 
   def sweep(stdout = $stdout, simulate: false)
+    stdout.puts 'Checking for unused fixtures...'
+
     return stdout.puts 'No unused fixtures were found' if unused_fixtures.empty?
 
     show_unused_fixtures(stdout)
 
-    return if simulate
+    if simulate
+      stdout.puts 'Run "bundle exec rake sweep" to delete unused fixtures'
+
+      exit(1)
+    end
 
     delete_fixtures
     stdout.puts 'The unused fixtures were deleted'
@@ -22,6 +28,7 @@ class FixtureSweeper
 
   def show_unused_fixtures(stdout)
     stdout.puts 'The following unused fixtures were found:'
+    stdout.puts
 
     path_manager.list_paths(unused_fixtures)
 
@@ -29,19 +36,23 @@ class FixtureSweeper
   end
 
   def delete_fixtures(file_utils = FileUtils)
-    unused_fixtures.each do |path|
-      file_utils.remove_dir(path, true)
+    unused_fixtures.each do |path_hash|
+      file_utils.remove_dir(path_hash[:path], true)
     end
   end
 
   def unused_fixtures
     [].tap do |unused|
       specs_and_fixtures.each do |path|
-        unused << check_file(path) if check_file(path)
+        unused << unused_fixture_hash(check_file(path), reason: "Could not find fixture usage in spec file #{path[:spec]}") if check_file(path)
       rescue StandardError
-        unused << path_manager.fixture_parent_folder(path)
+        unused << unused_fixture_hash(path_manager.fixture_parent_folder(path), reason: "Could not find associated spec file #{path[:spec]}")
       end
     end
+  end
+
+  def unused_fixture_hash(path, reason:)
+    { reason: reason, path: path }
   end
 
   def name_check(path_hash)

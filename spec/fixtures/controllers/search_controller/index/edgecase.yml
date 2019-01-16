@@ -4,9 +4,15 @@ layout:
 meta:
   title: test - Search - UK Parliament
   request-id: 123456
-  components:
-  - name: head__search-result-tracking
-  opensearch-description-url: http://www.example.com/search/opensearch
+  open-graph:
+    title: test - Search - UK Parliament
+    original-url: https://www.example.com/search?count=100&q=test&start_index=70100
+    image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
+    image-width: '1200'
+    image-height: '630'
+    twitter-card: summary_large_image
+  opensearch-description-url: https://www.example.com/search/opensearch
+  disable-format-detection: true
 header-components:
 - name: link
   data:
@@ -83,10 +89,9 @@ main-components:
     components:
     - name: heading
       data:
-        translation:
-          key: search.count
-          data:
-            count: 18200
+        content: search.count
+        data:
+          count: 18200
         size: 2
     - name: list__generic
       data:
@@ -734,49 +739,53 @@ main-components:
       data:
         url: "/search?count=100&q=test&start_index=69401"
         number: 695
-        total-count: of 182
+        total-count: of 702
     - name: navigation__number__card
       data:
         url: "/search?count=100&q=test&start_index=69501"
         number: 696
-        total-count: of 182
+        total-count: of 702
     - name: navigation__number__card
       data:
         url: "/search?count=100&q=test&start_index=69601"
         number: 697
-        total-count: of 182
+        total-count: of 702
     - name: navigation__number__card
       data:
         url: "/search?count=100&q=test&start_index=69701"
         number: 698
-        total-count: of 182
+        total-count: of 702
     - name: navigation__number__card
       data:
         url: "/search?count=100&q=test&start_index=69801"
         number: 699
-        total-count: of 182
+        total-count: of 702
     - name: navigation__number__card
       data:
         url: "/search?count=100&q=test&start_index=69901"
         number: 700
-        total-count: of 182
+        total-count: of 702
     - name: navigation__number__card
       data:
         url: "/search?count=100&q=test&start_index=70001"
         number: 701
-        total-count: of 182
+        total-count: of 702
     - name: navigation__number__card
       data:
         url: "/search?count=100&q=test&start_index=70101"
         number: 702
-        total-count: of 182
+        total-count: of 702
         active: true
 footer-components:
 - name: footer
   data:
-    uk-parliament: shared.footer.uk-parliament
-    components:
-    - name: list__generic
+    heading:
+      name: heading
+      data:
+        content: shared.meta.title
+        size: 2
+    list-generic:
+      name: list__generic
       data:
         type: ul
         display:
@@ -789,3 +798,6 @@ footer-components:
           data:
             link: "/meta/cookie-policy"
         - content: shared.footer.data-protection-privacy
+foot:
+  components:
+  - name: foot__search-result-tracking

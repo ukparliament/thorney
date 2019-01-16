@@ -1,0 +1,16 @@
+---
+name: card__generic
+data:
+  small:
+    name: partials__small
+    data:
+      content: some_small
+  heading:
+    name: heading
+    data:
+      content: <a href="example url">card__example</a>
+      size: 2
+  paragraph:
+    name: paragraph
+    data:
+    - content: example paragraph

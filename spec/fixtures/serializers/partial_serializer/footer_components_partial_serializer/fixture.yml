@@ -1,9 +1,13 @@
 ---
 - :name: footer
   :data:
-    :uk-parliament: shared.footer.uk-parliament
-    :components:
-    - name: list__generic
+    :heading:
+      name: heading
+      data:
+        content: shared.meta.title
+        size: 2
+    :list_generic:
+      name: list__generic
       data:
         type: ul
         display:

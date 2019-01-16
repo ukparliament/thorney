@@ -1,0 +1,8 @@
+---
+name: card__generic
+data:
+  heading:
+    name: heading
+    data:
+      content: <a href="example url">card__example</a>
+      size: 2

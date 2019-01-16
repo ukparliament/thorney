@@ -1,0 +1,9 @@
+---
+name: partials__link-button
+data:
+  link: "/mps"
+  text: MPs
+  download: true
+  display:
+    name: partials__display
+    data: display_data

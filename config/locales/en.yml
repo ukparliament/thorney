@@ -30,13 +30,92 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  title: "UK Parliament"
+  append_title: " - UK Parliament"
+  mp_plural: "MPs"
+  lord_plural: "Lords"
+  no_name: "[Name unavailable]"
+  time:
+    formats:
+      default: '%-d %B %Y'
+      datetime_format: '%Y-%m-%d'
+
+  home:
+    title: "Homepage"
   search:
     title:
-      without_query: "Search - UK Parliament"
-      with_flash_message: "No Results - Search - UK Parliament"
-      with_query: "%{query} - Search - UK Parliament"
+      without_query: "Search"
+      with_flash_message: "No Results - Search"
+      with_query: "%{query} - Search"
   search_controller:
     index:
       flash: "Please enter a search term."
     opensearch:
       short_name: "UK Parliament"
+  groups:
+    index:
+      title: "Groups"
+    made_available:
+      title: "%{group} - made available"
+      availability_types:
+        title: "%{group} - made available by availability types"
+        laid_papers:
+          title: "%{group} - laid papers"
+        paper_types:
+          index:
+            title: "%{group} - procedural activity by paper type"
+          show:
+            si_title: "%{group} - procedural activity for statutory instruments"
+            pnsi_title: "%{group} - procedural activity for proposed negative statutory instruments"
+  statutory_instruments:
+    type: "Statutory instrument"
+    index:
+      title: "Statutory instruments"
+    work_packages:
+      index:
+        title: "%{statutory_instrument} - procedural activity"
+  proposed_negative_statutory_instruments:
+    type: "Proposed negative statutory instrument"
+    index:
+      title: "Proposed negative statutory instruments"
+  procedure_steps:
+    index:
+      title: "Procedure steps"
+    work_packages:
+      index:
+        title: "%{procedure_step} - procedural activity"
+      current:
+        title: "%{procedure_step} - current procedural activity"
+  laying_bodies:
+    index:
+      title: "Laying bodies"
+  procedures:
+    index:
+      title: "Procedures"
+    work_packages:
+      index:
+        title: "%{procedure} - procedural activity"
+      current:
+        title: "%{procedure} - current procedural activity"
+  work_packages:
+    current:
+      title: "Current procedural activity"
+    paper_types:
+      index:
+        title: "Procedural activity by paper type"
+      show:
+        si_title: "Procedural activity for statutory instruments"
+        psni_title:  "Procedural activity for proposed negative statutory instruments"
+      current:
+        si_title: "Current procedural activity for statutory instruments"
+        psni_title:  "Current procedural activity for proposed negative statutory instruments"
+  houses:
+    made_available:
+      title: "%{house} - made available"
+      availability_types:
+        title: "%{house} - made available by availability types"
+        laid_papers:
+          title: "%{house} - laid papers"
+  laid_papers:
+    index:
+      title: "Laid papers"

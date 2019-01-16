@@ -17,7 +17,7 @@ class PageRangeHelper
   # If there are at least 8 pages, the array has 8 zero-indexed elements as such:
   # [0 .. 7]
   # Otherwise, the array has as many elements as there are pages. For example, if there are 4 pages in total, the array would be:
-  # [0 .. 4]
+  # [0 .. 3]
   #
   # The array is populated by first finding where in the array the current page lies
   # and then filling in the elements preceding and succeeding the current page
@@ -45,7 +45,7 @@ class PageRangeHelper
   def active_tile_position
     return @active_tile_position if @active_tile_position
 
-    return @active_tile_position = LAST_POSITION if pagination_helper.current_page > pagination_helper.total_pages
+    return @active_tile_position = last_page_position if pagination_helper.current_page > pagination_helper.total_pages
 
     return @active_tile_position = pagination_helper.previous_page if page_close_to_start? || total_pages_less_than_maximum?
 
@@ -81,5 +81,9 @@ class PageRangeHelper
   # The pagination array length is always 8, unless there are less than 8 pages in total
   def page_range_length
     [pagination_helper.total_pages, MAXIMUM_RANGE].min
+  end
+
+  def last_page_position
+    [page_range_length, LAST_POSITION].min
   end
 end

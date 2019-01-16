@@ -82,9 +82,12 @@ build: # Using the variables defined above, run `docker build`, tagging the imag
 		--build-arg BANDIERA_URL=$(BANDIERA_URL) \
 		--build-arg APPLICATION_INSIGHTS_INSTRUMENTATION_KEY=$(APPLICATION_INSIGHTS_INSTRUMENTATION_KEY) \
 		--build-arg RAILS_LOG_TO_STDOUT=$(RAILS_LOG_TO_STDOUT) \
+		--build-arg SECRET_KEY_BASE=$(SECRET_KEY_BASE) \
 		--build-arg RACK_ENV=$(RACK_ENV) \
 		--build-arg GIT_SHA="$(GIT_SHA)" \
 		--build-arg GIT_TAG="$(GIT_TAG)" \
+		--build-arg IMAGE_SERVICE_URL="$(IMAGE_SERVICE_URL)" \
+		--build-arg PARLIAMENT_BASE_URL="$(PARLIAMENT_BASE_URL)" \
 		.
 
 run: # Run the Docker image we have created, mapping the HOST_PORT and CONTAINER_PORT
@@ -114,3 +117,6 @@ deploy-ecs: # Deploy our new Docker image onto an AWS cluster (Run in GoCD to de
 
 airbrake: # Notify Airbrake that we have made a new deployment
 	curl -X POST -H "Content-Type: application/json" -d "{ \"environment\":\"${AIRBRAKE_ENVIRONMENT}\", \"username\":\"${AWS_ACCOUNT}\", \"repository\":\"${AIRBRAKE_REPOSITORY}\", \"revision\":\"${GIT_SHA}\", \"version\": \"${GIT_TAG}\" }" "https://airbrake.io/api/v4/projects/${AIRBRAKE_PROJECT_ID}/deploys?key=${AIRBRAKE_PROJECT_KEY}"
+
+run-dev:
+	DISABLE_TIMEOUT=true bundle exec rails s -p 5401

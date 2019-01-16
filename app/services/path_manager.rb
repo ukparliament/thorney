@@ -21,7 +21,9 @@ class PathManager
 
   def list_paths(paths, stdout: $stdout)
     paths.each do |path|
-      stdout.puts path
+      stdout.puts path[:path]
+      stdout.puts " - #{path[:reason]}"
+      stdout.puts
     end
   end
 
@@ -43,30 +45,65 @@ class PathManager
     split_path.find_index('controllers')
   end
 
+  # Returns the controller method when given a path to a fixture file
+  # Either returns the method or nil if it is not a controller spec (it may be in the controllers folder, for example, a helper)
+  #
+  # @example Controller fixture passed in
+  #   path = 'spec/fixtures/controllers/groups_controller/index/fixture.yml'
+  #   controller_method(path) #=> 'index'
+  #
+  # @example Helper fixture passed in
+  #   path = 'spec/fixtures/controllers/concerns/pagination_helper/create_number_cards.yml'
+  #   controller_method(path) #=> nil
+  #
+  # @param [String] path A path to fixture file
+  # @return [String, nil] The controller method or nil
   def controller_method(path)
     split_path = path.split('/')
 
-    split_path[controllers_index(split_path) + 2] if controller_spec?(path)
+    split_path[split_path.length - 2] if controller_spec?(path)
   end
 
   def controller_spec?(path)
     path.include?('_controller')
   end
 
+  # Returns the path to the spec file when given a fixture path
+  # It either returns the path to the integration tests for a controller or unit tests for a class in app/controllers
+  #
+  # @example Controller fixture passed in
+  #   path = 'spec/fixtures/controllers/groups_controller/index/fixture.yml'
+  #   controller_spec_path(path) #=> root + 'spec/integration/controllers/groups_controller_spec.rb'
+  #
+  # @example Other type of fixture within controllers
+  #   path = 'spec/fixtures/controllers/concerns/pagination_helper/create_number_cards.yml'
+  #   controller_spec_path(path) #=> root + 'spec/controllers/concerns/pagination_helper_spec.rb'
+  #
+  # @param [String] path A path to a fixture file
+  # @return [String] The path to the associated spec file
   def controller_spec_path(path)
     path = (path.split('/') - ['fixtures']).join('/')
 
     split_path = full_path(path).split('/')
 
-    if controller_spec?(split_path[controllers_index(split_path) + 1])
-      split_path.delete_at(controllers_index(split_path) + 2)
+    if controller_spec?(path)
+      split_path = split_path[0..split_path.length - 3]
       split_path.insert(controllers_index(split_path), 'integration')
+    else
+      split_path.pop
     end
 
-    split_path.pop
     split_path.join('/') + '_spec.rb'
   end
 
+  # Returns the path to the spec file when given a fixture path for non-controller tests
+  #
+  # @example Fixture passed in
+  #   path = 'spec/fixtures/serializers/component_serializer/card_component_serializer/fixture.yml'
+  #   spec_path(path) #=> root + 'spec/serializers/component_serializer/card_component_serializer_spec.rb'
+  #
+  # @param [String] path A path to a fixture file
+  # @return [String] The path to the associated spec file
   def spec_path(path)
     path = (path.split('/') - ['fixtures']).join('/')
     split_path = full_path(path).split('/')
