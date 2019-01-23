@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3030/treaty_work_packages?treaty_id=gzoa2qc8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/n-triples
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<AUTH_TOKEN>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, must-revalidate, no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '242'
+      Content-Type:
+      - application/n-triples
+      Expires:
+      - Tue, 22 Jan 2019 14:59:52 GMT
+      Request-Context:
+      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
+      Access-Control-Expose-Headers:
+      - Request-Context
+      Set-Cookie:
+      - ARRAffinity=2af7f801f6e5197a82a33c061effff6c92c8c6483fb564c207c247474db633e1;Path=/;HttpOnly;Domain=fixedquery201812111030.azurewebsites.net
+      Strict-Transport-Security:
+      - max-age=31536000
+      Date:
+      - Tue, 22 Jan 2019 14:59:51 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: "<https://id.parliament.uk/gzoa2qc8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackagedThing> .\r\n<https://id.parliament.uk/gzoa2qc8>
+        <https://id.parliament.uk/schema/workPackagedThingName> \"workPackagedThingName
+        - 1\" .\r\n<https://id.parliament.uk/gzoa2qc8> <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage>
+        <https://id.parliament.uk/3zG07MC9> .\r\n<https://id.parliament.uk/3zG07MC9>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackage>
+        .\r\n<https://id.parliament.uk/3zG07MC9> <https://id.parliament.uk/schema/workPackageHasWorkPackagedThing>
+        <https://id.parliament.uk/gzoa2qc8> .\r\n<https://id.parliament.uk/3zG07MC9>
+        <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/HJwc3Jpp>
+        .\r\n<https://id.parliament.uk/HJwc3Jpp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/Procedure> .\r\n<https://id.parliament.uk/HJwc3Jpp>
+        <https://id.parliament.uk/schema/procedureName> \"procedureName - 1\" .\r\n"
+    http_version: 
+  recorded_at: Tue, 22 Jan 2019 14:59:52 GMT
+recorded_with: VCR 4.0.0

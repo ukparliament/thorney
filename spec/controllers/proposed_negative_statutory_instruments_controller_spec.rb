@@ -35,7 +35,7 @@ RSpec.describe ProposedNegativeStatutoryInstrumentsController, vcr: true do
       expect(response).to have_http_status(:ok)
     end
 
-    it 'assigns @proposed_negativestatutory_instruments' do
+    it 'assigns @proposed_negative_statutory_instruments' do
       assigns(:proposed_negative_statutory_instruments).each do |statutory_instrument|
         expect(statutory_instrument).to be_a(Grom::Node)
         expect(statutory_instrument.type).to include('https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper')
@@ -112,7 +112,7 @@ RSpec.describe ProposedNegativeStatutoryInstrumentsController, vcr: true do
     before(:each) do
       allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
 
-      get :lookup, params: { proposed_negative_statutory_instrument_id: '12345678 '}
+      get :lookup, params: { source: 'proposedNegativeStatutoryInstrumentPaperName', id: 'EU Export Credits Legislation (Revocation) (EU Exit) Regulations 2018'}
     end
 
     it 'should have a response with http status ok (302)' do
@@ -125,7 +125,7 @@ RSpec.describe ProposedNegativeStatutoryInstrumentsController, vcr: true do
     end
 
     it 'redirects to proposed_negative_statutory_instruments/:id' do
-      expect(response).to redirect_to('https://:/proposed-negative-statutory-instruments/VUWxOw5e')
+      expect(response).to redirect_to('https://:/proposed-negative-statutory-instruments/dXG5AxDh')
     end
   end
 end

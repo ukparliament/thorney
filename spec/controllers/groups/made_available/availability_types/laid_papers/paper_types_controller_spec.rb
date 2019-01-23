@@ -62,6 +62,13 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LaidPapers::PaperTypesC
                                                             {"content"=>"<a href=\"/groups/XouN12Ow/made-available/availability-types/laid-papers/paper-types/statutory-instruments\">Statutory instruments</a>",
                                                              "size"=>2},
                                                           "name"=>"heading"}},
+                                                    "name"=>"card__generic"},
+                                                   {"data"=>
+                                                      {"heading"=>
+                                                         {"data"=>
+                                                            {"content"=>"<a href=\"/groups/XouN12Ow/made-available/availability-types/laid-papers/paper-types/treaties\">Treaties</a>",
+                                                             "size"=>2},
+                                                          "name"=>"heading"}},
                                                     "name"=>"card__generic"}]
 
         expect(PageSerializer::ListPageSerializer).to have_received(:new).with(request: request, heading_component: heading, list_components: list_components, data_alternates: data_alternates)
@@ -159,6 +166,25 @@ RSpec.describe Groups::MadeAvailable::AvailabilityTypes::LaidPapers::PaperTypesC
 
       it 'makes a request to the correct data endpoint for proposed-negative-statutory-instruments' do
         expect(assigns(:api_request).query_url).to eq("#{ENV['PARLIAMENT_BASE_URL']}/group_laid_papers_paper_type_proposed_negative_statutory_instruments?group_id=XouN12Ow")
+      end
+    end
+
+    context 'treaties' do
+      before(:each) do
+        allow(PageSerializer::ListPageSerializer).to receive(:new)
+        allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new) { heading }
+
+        allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
+
+        get :show, params: { group_id: 'XouN12Ow', paper_type: 'treaties' }
+      end
+
+      it 'calls the Heading1ComponentSerializer correctly' do
+        expect(ComponentSerializer::Heading1ComponentSerializer).to have_received(:new).with(heading: 'groupName - 1 - procedural activity for treaties', subheading: 'groupName - 1', subheading_link: '/groups/XouN12Ow')
+      end
+
+      it 'makes a request to the correct data endpoint for treaties' do
+        expect(assigns(:api_request).query_url).to eq("#{ENV['PARLIAMENT_BASE_URL']}/group_laid_papers_paper_type_treaties?group_id=XouN12Ow")
       end
     end
   end

@@ -10,6 +10,7 @@ module WorkPackages
 
         request.work_packages_paper_types_statutory_instruments if paper_type == 'statutory-instruments'
         request.work_packages_paper_types_proposed_negative_statutory_instruments if paper_type == 'proposed-negative-statutory-instruments'
+        request.work_packages_paper_types_treaties if paper_type == 'treaties'
 
         request
       end,
@@ -42,6 +43,7 @@ module WorkPackages
       paper_type = params.fetch(:paper_type)
       heading_translation = 'work_packages.paper_types.show.si_title' if paper_type == 'statutory-instruments'
       heading_translation = 'work_packages.paper_types.show.psni_title' if paper_type == 'proposed-negative-statutory-instruments'
+      heading_translation = 'work_packages.paper_types.show.treaty_title' if paper_type == 'treaties'
 
       heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t(heading_translation))
 

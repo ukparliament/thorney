@@ -14,6 +14,7 @@ module Groups
 
               request.group_laid_papers_paper_type_statutory_instruments.set_url_params({ group_id: params[:group_id] }) if paper_type == 'statutory-instruments'
               request.group_laid_papers_paper_type_proposed_negative_statutory_instruments.set_url_params({ group_id: params[:group_id] }) if paper_type == 'proposed-negative-statutory-instruments'
+              request.group_laid_papers_paper_type_treaties.set_url_params({ group_id: params[:group_id] }) if paper_type == 'treaties'
 
               request
             end
@@ -41,6 +42,7 @@ module Groups
             paper_type          = params.fetch(:paper_type)
             heading_translation = 'groups.made_available.availability_types.paper_types.show.si_title' if paper_type == 'statutory-instruments'
             heading_translation = 'groups.made_available.availability_types.paper_types.show.pnsi_title' if paper_type == 'proposed-negative-statutory-instruments'
+            heading_translation = 'groups.made_available.availability_types.paper_types.show.treaty_title' if paper_type == 'treaties'
 
             heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t(heading_translation, group: @group.try(:groupName)), subheading: @group.try(:groupName), subheading_link: group_path)
 

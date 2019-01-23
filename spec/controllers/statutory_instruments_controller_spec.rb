@@ -121,7 +121,7 @@ RSpec.describe StatutoryInstrumentsController, vcr: true do
 
     before(:each) do
       allow(controller.request).to receive(:env).and_return({ 'ApplicationInsights.request.id' => '|1234abcd.' })
-      get :lookup, params: { statutory_instrument_id: '12345678' }
+      get :lookup, params: { source: 'statutoryInstrumentPaperNumber', id: '1346' }
     end
 
     it 'should have a response with http status ok (302)' do
@@ -135,7 +135,7 @@ RSpec.describe StatutoryInstrumentsController, vcr: true do
 
 
     it 'redirects to statutory_instruments/:id' do
-      expect(response).to redirect_to("https://:/statutory-instruments/5trFJNih")
+      expect(response).to redirect_to("https://:/statutory-instruments/F8g4iQaS")
     end
   end
 end

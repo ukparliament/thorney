@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3030/statutory_instrument_lookup?property&value
+    uri: http://localhost:3030/statutory_instrument_lookup?property=statutoryInstrumentPaperNumber&value=1346
     body:
       encoding: US-ASCII
       string: ''
@@ -16,27 +16,35 @@ http_interactions:
       - Ruby
       Ocp-Apim-Subscription-Key:
       - "<AUTH_TOKEN>"
-      Api-Version:
-      - Staging
   response:
     status:
       code: 200
       message: OK
     headers:
+      Cache-Control:
+      - no-store, must-revalidate, no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '137'
       Content-Type:
       - application/n-triples
-      Content-Disposition:
-      - inline; filename="index"
-      Last-Modified:
-      - Tue, 18 Dec 2018 10:09:55 GMT
-      X-Content-Type-Options:
-      - nosniff
-      Content-Length:
-      - '148'
+      Expires:
+      - Tue, 22 Jan 2019 14:54:13 GMT
+      Request-Context:
+      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
+      Access-Control-Expose-Headers:
+      - Request-Context
+      Set-Cookie:
+      - ARRAffinity=2af7f801f6e5197a82a33c061effff6c92c8c6483fb564c207c247474db633e1;Path=/;HttpOnly;Domain=fixedquery201812111030.azurewebsites.net
+      Strict-Transport-Security:
+      - max-age=31536000
+      Date:
+      - Tue, 22 Jan 2019 14:54:13 GMT
     body:
-      encoding: UTF-8
-      string: "<https://id.parliament.uk/5trFJNih> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      encoding: ASCII-8BIT
+      string: "<https://id.parliament.uk/F8g4iQaS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
         <https://id.parliament.uk/schema/StatutoryInstrumentPaper> .\r\n"
     http_version: 
-  recorded_at: Tue, 18 Dec 2018 12:22:37 GMT
+  recorded_at: Tue, 22 Jan 2019 14:54:13 GMT
 recorded_with: VCR 4.0.0

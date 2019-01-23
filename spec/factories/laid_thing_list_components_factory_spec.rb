@@ -9,12 +9,17 @@ RSpec.describe LaidThingListComponentsFactory, type: :serializer, vcr: true do
                                                          builder:    Parliament::Builder::NTripleResponseBuilder,
                                                          decorators: Parliament::Grom::Decorator).proposed_negative_statutory_instrument_index.get }
 
+  let(:treaty_response) { Parliament::Request::UrlRequest.new(base_url:   ENV['PARLIAMENT_BASE_URL'],
+                                                            builder:    Parliament::Builder::NTripleResponseBuilder,
+                                                            decorators: Parliament::Grom::Decorator).treaty_index.get }
+
   let(:laid_paper_response) { Parliament::Request::UrlRequest.new(base_url:   ENV['PARLIAMENT_BASE_URL'],
                                                               builder:    Parliament::Builder::NTripleResponseBuilder,
                                                               decorators: Parliament::Grom::Decorator).group_laid_papers_index.get }
 
   let(:statutory_instruments) { si_response.filter('https://id.parliament.uk/schema/StatutoryInstrumentPaper') }
   let(:proposed_negative_statutory_instruments) { pnsi_response.filter('https://id.parliament.uk/schema/ProposedNegativeStatutoryInstrumentPaper') }
+  let(:treaties) { treaty_response.filter('https://id.parliament.uk/schema/Treaty') }
   let(:laid_papers) { laid_paper_response.filter('https://id.parliament.uk/schema/LaidThing') }
 
   context '#build_components' do
@@ -44,6 +49,22 @@ RSpec.describe LaidThingListComponentsFactory, type: :serializer, vcr: true do
       end
     end
 
+    context 'treaties' do
+      it 'gives the correct data to the serializer' do
+        allow(ComponentSerializer::CardComponentSerializer).to receive(:new)
+
+        described_class.build_components(statutory_instruments: treaties)
+
+        expect(ComponentSerializer::CardComponentSerializer).to have_received(:new).with(
+          name: 'card__generic',
+          data: {
+            heading: { "data"=> { "content"=> "<a href=\"/treaties/gzoa2qc8\">laidThingName - 1</a>", "size"=>2 }, "name"=>"heading"},
+            list_description: {"data"=>{"items"=>[{"description"=>[{"content"=>"procedureName - 1"}],"term"=>{"content"=>"laid-thing.procedure"}}]}, "name"=>"list__description" }
+          }
+        )
+      end
+    end
+
     context 'laid_paper' do
       it 'gives the correct data to the serializer' do
         allow(ComponentSerializer::CardComponentSerializer).to receive(:new)
@@ -57,6 +78,14 @@ RSpec.describe LaidThingListComponentsFactory, type: :serializer, vcr: true do
             small: { "data"=>{"content"=>"statutory-instruments.type"}, "name"=>"partials__small" }
             }
           )
+        expect(ComponentSerializer::CardComponentSerializer).to have_received(:new).with(
+          name: 'card__generic',
+          data: {
+            heading: {"data"=>{"content"=>"<a href=\"/treaties/On2R0Zeb\">laidThingName - 2</a>","size"=>2},"name"=>"heading"},
+            list_description: {"data"=>{"items"=>[{"description"=>[{"content"=>"shared.time-html","data"=>{"date"=>"4 April 2018", "datetime-value"=>"2018-04-04"}}],"term"=>{"content"=>"laid-thing.laid-date"}}, {"description"=>[{"content"=>"procedureName - 1"}],"term"=>{"content"=>"laid-thing.procedure"}}]}, "name"=>"list__description" },
+            small: { "data"=>{"content"=>"treaties.type"}, "name"=>"partials__small" }
+          }
+        )
       end
     end
   end

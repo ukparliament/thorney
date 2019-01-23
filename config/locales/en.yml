@@ -67,6 +67,7 @@ en:
           show:
             si_title: "%{group} - procedural activity for statutory instruments"
             pnsi_title: "%{group} - procedural activity for proposed negative statutory instruments"
+            treaty_title: "%{group} - procedural activity for treaties"
   statutory_instruments:
     type: "Statutory instrument"
     index:
@@ -106,6 +107,7 @@ en:
       show:
         si_title: "Procedural activity for statutory instruments"
         psni_title:  "Procedural activity for proposed negative statutory instruments"
+        treaty_title: "Procedural activity for treaties"
       current:
         si_title: "Current procedural activity for statutory instruments"
         psni_title:  "Current procedural activity for proposed negative statutory instruments"
@@ -119,3 +121,10 @@ en:
   laid_papers:
     index:
       title: "Laid papers"
+  treaties:
+    type: "Treaties"
+    index:
+      title: "Treaties"
+    work_packages:
+      index:
+        title: "%{treaty} - procedural activity"
