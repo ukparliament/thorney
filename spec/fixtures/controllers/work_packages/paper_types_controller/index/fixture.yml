@@ -109,6 +109,13 @@ main-components:
                 content: <a href="/work-packages/paper-types/statutory-instruments">Statutory
                   instruments</a>
                 size: 2
+        - name: card__generic
+          data:
+            heading:
+              name: heading
+              data:
+                content: <a href="/work-packages/paper-types/treaties">Treaties</a>
+                size: 2
 footer-components:
 - name: footer
   data:

@@ -32,7 +32,14 @@ RSpec.describe WorkPackages::PaperTypesController, vcr: true do
                                  {"content"=>"<a href=\"/work-packages/paper-types/statutory-instruments\">Statutory instruments</a>",
                                   "size"=>2},
                                "name"=>"heading"}},
-                         "name"=>"card__generic"}]
+                         "name"=>"card__generic"},
+                         {"data"=>
+                            {"heading"=>
+                               {"data"=>
+                                  {"content"=>"<a href=\"/work-packages/paper-types/treaties\">Treaties</a>",
+                                   "size"=>2},
+                                "name"=>"heading"}},
+                          "name"=>"card__generic"}]
 
       expect(PageSerializer::ListPageSerializer).to have_received(:new).with(request: request, heading_component: heading, list_components: list_components)
     end
@@ -111,6 +118,21 @@ RSpec.describe WorkPackages::PaperTypesController, vcr: true do
 
       it 'makes a request to the correct data endpoint for proposed-negative-statutory-instruments' do
         expect(assigns(:api_request).query_url).to eq("#{ENV['PARLIAMENT_BASE_URL']}/work_packages_paper_types_proposed_negative_statutory_instruments")
+      end
+    end
+
+    context 'treaties' do
+      before(:each) do
+        allow(PageSerializer::ListPageSerializer).to receive(:new)
+        allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'Procedural activity for treaties') { heading }
+
+        allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
+
+        get :show, params: { paper_type: 'treaties' }
+      end
+
+      it 'makes a request to the correct data endpoint for treaties' do
+        expect(assigns(:api_request).query_url).to eq("#{ENV['PARLIAMENT_BASE_URL']}/work_packages_paper_types_treaties")
       end
     end
   end

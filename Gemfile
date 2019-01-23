@@ -23,7 +23,7 @@ gem 'parliament-opensearch', '~> 0.4', require: false
 gem 'parliament-grom-decorators', '~> 1.0.2'
 
 # Parliament routing
-gem 'parliament-routes', '~> 0.6.30'
+gem 'parliament-routes', '~> 0.6.31'
 
 gem 'parliament-ntriple', '~> 0.3', require: false
 

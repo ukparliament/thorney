@@ -37,11 +37,13 @@ class LaidThingListComponentsFactory
       statutory_instrument.try(:laidThingName)
     end
 
-    def heading_url(statutory_instrument)
-      if statutory_instrument.is_a?(Parliament::Grom::Decorator::StatutoryInstrumentPaper)
-        statutory_instrument_path(statutory_instrument.graph_id)
-      elsif statutory_instrument.is_a?(Parliament::Grom::Decorator::ProposedNegativeStatutoryInstrumentPaper)
-        proposed_negative_statutory_instrument_path(statutory_instrument.graph_id)
+    def heading_url(laid_thing)
+      if laid_thing.is_a?(Parliament::Grom::Decorator::StatutoryInstrumentPaper)
+        statutory_instrument_path(laid_thing.graph_id)
+      elsif laid_thing.is_a?(Parliament::Grom::Decorator::ProposedNegativeStatutoryInstrumentPaper)
+        proposed_negative_statutory_instrument_path(laid_thing.graph_id)
+      elsif laid_thing.is_a?(Parliament::Grom::Decorator::Treaty)
+        treaty_path(laid_thing.graph_id)
       end
     end
 
@@ -74,11 +76,13 @@ class LaidThingListComponentsFactory
       end
     end
 
-    def laying_type(statutory_instrument)
-      if statutory_instrument.is_a?(Parliament::Grom::Decorator::StatutoryInstrumentPaper)
+    def laying_type(laid_thing)
+      if laid_thing.is_a?(Parliament::Grom::Decorator::StatutoryInstrumentPaper)
         'statutory-instruments.type'
-      elsif statutory_instrument.is_a?(Parliament::Grom::Decorator::ProposedNegativeStatutoryInstrumentPaper)
+      elsif laid_thing.is_a?(Parliament::Grom::Decorator::ProposedNegativeStatutoryInstrumentPaper)
         'proposed-negative-statutory-instruments.type'
+      elsif laid_thing.is_a?(Parliament::Grom::Decorator::Treaty)
+        'treaties.type'
       end
     end
   end
