@@ -46,7 +46,6 @@ http_interactions:
         <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackagedThing>
         .\r\n<https://id.parliament.uk/gzoa2qc8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
         <https://id.parliament.uk/schema/LaidThing> .\r\n<https://id.parliament.uk/gzoa2qc8>
-        <https://id.parliament.uk/schema/laidThingName> \"laidThingName - 1\" .\r\n<https://id.parliament.uk/gzoa2qc8>
         <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/3zG07MC9>
         .\r\n<https://id.parliament.uk/3zG07MC9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
         <https://id.parliament.uk/schema/WorkPackage> .\r\n<https://id.parliament.uk/3zG07MC9>

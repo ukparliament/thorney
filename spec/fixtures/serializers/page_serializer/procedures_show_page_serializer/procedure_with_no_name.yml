@@ -2,10 +2,10 @@
 layout:
   template: layout
 meta:
-  title: "[Name unavailable] - UK Parliament"
+  title: "[Name unavailable]"
   request-id: 123456
   open-graph:
-    title: "[Name unavailable] - UK Parliament"
+    title: "[Name unavailable]"
     original-url: https://example.com/
     image-url: https://static.parliament.uk/assets-public/opengraph-oblong.png
     image-width: '1200'
@@ -75,16 +75,18 @@ header-components:
 main-components:
 - name: section__primary
   data:
-    content-flag: true
     components:
     - name: heading1
       data:
         subheading:
-          content: treaties.show.subheading
+          content: procedures.show.subheading
           data:
-            link: "/treaties"
+            link: "/procedures"
         heading:
           content: "[Name unavailable]"
+    - name: paragraph
+      data:
+      - content: procedureDescription - 1
 - name: section__section
   data:
     components:
@@ -99,24 +101,13 @@ main-components:
         components:
         - name: card__generic
           data:
-            small:
-              name: partials__small
-              data:
-                content: laid-thing.procedural-activity
             heading:
               name: heading
               data:
-                content: <a href="/work-packages/3zG07MC9">[Name unavailable]</a>
+                content: procedures.show.subsidiary-resources.work-packages
+                data:
+                  link: "/procedures/iWugpxMn/work-packages"
                 size: 2
-            list-description:
-              name: list__description
-              data:
-                items:
-                - term:
-                    content: laid-thing.procedure
-                  description:
-                  - content: procedureName - 1
-                - 
 footer-components:
 - name: footer
   data:

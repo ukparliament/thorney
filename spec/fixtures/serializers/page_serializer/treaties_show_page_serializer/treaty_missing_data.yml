@@ -85,38 +85,6 @@ main-components:
             link: "/treaties"
         heading:
           content: laidThingName - 1
-- name: section__section
-  data:
-    components:
-    - name: list__generic
-      data:
-        type: ol
-        display:
-          name: partials__display
-          data:
-          - component: list
-            variant: block
-        components:
-        - name: card__generic
-          data:
-            small:
-              name: partials__small
-              data:
-                content: laid-thing.procedural-activity
-            heading:
-              name: heading
-              data:
-                content: <a href="/work-packages/3zG07MC9">laidThingName - 1</a>
-                size: 2
-            list-description:
-              name: list__description
-              data:
-                items:
-                - term:
-                    content: laid-thing.procedure
-                  description:
-                  - content: procedureName - 1
-                - 
 footer-components:
 - name: footer
   data:

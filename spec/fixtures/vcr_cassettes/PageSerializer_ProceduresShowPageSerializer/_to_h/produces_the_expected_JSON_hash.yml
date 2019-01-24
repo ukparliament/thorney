@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3030/treaty_by_id?treaty_id=gzoa2qc8
+    uri: http://localhost:3030/procedure_by_id?procedure_id=iWugpxMn
     body:
       encoding: US-ASCII
       string: ''
@@ -24,11 +24,11 @@ http_interactions:
       Pragma:
       - no-cache
       Content-Length:
-      - '246'
+      - '173'
       Content-Type:
       - application/n-triples
       Expires:
-      - Wed, 23 Jan 2019 11:25:45 GMT
+      - Thu, 24 Jan 2019 16:10:47 GMT
       Request-Context:
       - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
       Access-Control-Expose-Headers:
@@ -38,15 +38,14 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       Date:
-      - Wed, 23 Jan 2019 11:25:45 GMT
+      - Thu, 24 Jan 2019 16:10:47 GMT
     body:
       encoding: ASCII-8BIT
-      string: "<https://id.parliament.uk/gzoa2qc8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <https://id.parliament.uk/schema/Treaty> .\r\n<https://id.parliament.uk/gzoa2qc8>
-        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackagedThing>
-        .\r\n<https://id.parliament.uk/gzoa2qc8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <https://id.parliament.uk/schema/LaidThing> .\r\n<https://id.parliament.uk/gzoa2qc8>
-        <https://id.parliament.uk/schema/laidThingName> \"laidThingName - 1\" .\r\n"
+      string: "<https://id.parliament.uk/iWugpxMn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/Procedure> .\r\n<https://id.parliament.uk/iWugpxMn>
+        <https://id.parliament.uk/schema/procedureName> \"procedureName - 1\" .\r\n<https://id.parliament.uk/iWugpxMn>
+        <https://id.parliament.uk/schema/procedureDescription> \"procedureDescription
+        - 1\" .\r\n"
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 11:25:45 GMT
+  recorded_at: Thu, 24 Jan 2019 16:10:47 GMT
 recorded_with: VCR 4.0.0
