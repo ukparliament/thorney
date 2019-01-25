@@ -7,6 +7,8 @@ module PageSerializer
     # @param [Array<Hash>] data_alternates array containing the href and type of the alternative data urls.
     def initialize(request: nil, procedure: nil, data_alternates: nil)
       @procedure = procedure
+      @description = procedure.try(:procedureDescription) || ContentDataHelper.content_data(content: 'procedures.show.about', procedure: @procedure.try(:procedureName).downcase)
+
       super(request: request, data_alternates: data_alternates)
     end
 
@@ -30,7 +32,7 @@ module PageSerializer
     def section_primary_components
       [].tap do |components|
         components << ComponentSerializer::Heading1ComponentSerializer.new(heading_content).to_h
-        components << ComponentSerializer::ParagraphComponentSerializer.new(content: [ContentDataHelper.content_data(content: 'procedures.show.about', procedure: @procedure.try(:procedureName).downcase)]).to_h
+        components << ComponentSerializer::ParagraphComponentSerializer.new(content: [@description]).to_h
       end
     end
 
