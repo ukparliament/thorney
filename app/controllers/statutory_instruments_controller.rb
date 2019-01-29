@@ -14,6 +14,9 @@ class StatutoryInstrumentsController < ApplicationController
 
     heading = ComponentSerializer::Heading1ComponentSerializer.new(heading: I18n.t('statutory_instruments.index.title'))
 
+    # status_text = ComponentSerializer::ParagraphComponentSerializer.new(content: [ContentDataHelper.content_data(content: 'some content', link: 'property')]).to_h
+    # status = ComponentSerializer::StatusComponentSerializer.new(type: 'highlight', display_data: [{ component: 'status', variant: 'highlight' }], components: [status_text])
+
     serializer = PageSerializer::ListPageSerializer.new(request: request, heading_component: heading, list_components: list_components, data_alternates: @alternates)
 
     render_page(serializer)
