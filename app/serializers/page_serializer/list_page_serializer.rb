@@ -31,7 +31,7 @@ module PageSerializer
     def section_primary_components
       [].tap do |content|
         content << @heading_component.to_h
-        content << @status_component.to_h
+        content << @status_component.to_h if @status_component
       end
     end
 

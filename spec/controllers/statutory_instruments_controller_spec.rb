@@ -22,10 +22,13 @@ RSpec.describe StatutoryInstrumentsController, vcr: true do
     end
 
     let(:heading) { 'a heading component' }
+    let(:status) {'a status component'}
 
     before(:each) do
       allow(PageSerializer::ListPageSerializer).to receive(:new)
       allow(ComponentSerializer::Heading1ComponentSerializer).to receive(:new).with(heading: 'Statutory instruments') { heading }
+      allow(ComponentSerializer::StatusComponentSerializer).to receive(:new).with(type: 'highlight', display_data: [{ component: 'status', variant: 'highlight' }], components: [{"data"=> [{"content"=>"statutory-instruments.index.status-message", "data"=>{"link"=>"/find-a-statutory-instrument"}}],"name"=>"paragraph"}]) { status }
+
 
       allow(controller.request).to receive(:env).and_return({ 'ApplicationInsights.request.id' => '|1234abcd.' })
 
@@ -53,7 +56,7 @@ RSpec.describe StatutoryInstrumentsController, vcr: true do
                               'list-description' =>
                                                     { 'data' => { 'items'=>[{ 'description' => [{ 'content' => 'shared.time-html', 'data' => { 'date' => '23 April 2018', 'datetime-value' => '2018-04-23' } }], 'term' => { 'content'=>'laid-thing.laid-date' } }, { 'description' => [{ 'content'=>'groupName - 1' }], 'term' => { 'content'=>'laid-thing.laying-body' } }, { 'description' => [{ 'content'=>'procedureName - 1' }], 'term' => { 'content'=>'laid-thing.procedure' } }] }, 'name' => 'list__description' } }, 'name' => 'card__generic' }]
 
-      expect(PageSerializer::ListPageSerializer).to have_received(:new).with(request: request, heading_component: heading, list_components: list_components, data_alternates: data_alternates)
+      expect(PageSerializer::ListPageSerializer).to have_received(:new).with(request: request, heading_component: heading, status_component: status, list_components: list_components, data_alternates: data_alternates)
     end
   end
 
