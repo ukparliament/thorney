@@ -5,6 +5,7 @@ RSpec.describe PageSerializer::ListPageSerializer do
 
   # let(:heading) { double('heading', heading_content: 'Test page', subheading_content: nil, linkify_subheading: nil, to_h: { name: 'heading1', data: { heading: { content: 'Test page' } } }) }
   let(:heading) { double('heading', to_s: 'some meta heading', to_h: { name: 'heading1', data: { heading: { content: 'Test page' } } }) }
+  let(:status) { double('status', to_s: 'some status information', to_h: { name: 'status__highlight', data: { display: [{ name: "partials__display", data: [{ component: "status", variant: "highlight" }] }], components: { name: "paragraph", data: [{ content: "search.new-search" }] } } }) }
 
   subject { described_class.new(request: request, heading_component: heading, list_components: [{ list_component: 'list component' }]) }
 
@@ -64,6 +65,14 @@ RSpec.describe PageSerializer::ListPageSerializer do
         serializer = described_class.new(request: request, heading_component: heading, list_components: [])
 
         expected = get_fixture('no_list_items')
+
+        expect(serializer.to_yaml).to eq expected
+      end
+
+      it 'produces the expected JSON hash when a status is given' do
+        serializer = described_class.new(request: request, heading_component: heading, status_component: status,list_components: [{ list_component: 'list component' }])
+
+        expected = get_fixture('with_status')
 
         expect(serializer.to_yaml).to eq expected
       end

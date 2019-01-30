@@ -96,6 +96,19 @@ main-components:
       data:
         heading:
           content: Statutory instruments
+    - name: status__highlight
+      data:
+        display:
+          name: partials__display
+          data:
+          - component: status
+            variant: highlight
+        components:
+        - name: paragraph
+          data:
+          - content: statutory-instruments.index.status-message
+            data:
+              link: "/find-a-statutory-instrument"
 - name: section__section
   data:
     components:
