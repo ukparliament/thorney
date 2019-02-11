@@ -46,7 +46,7 @@ DISABLE_TIMEOUT=true bundle exec rails s
 ```
 
 ## Using Docker Compose to run both Thorney and Augustus
-Make sure to clone [Thorney][thorney] and [Augustus][augustus] into the same directory and then change into the directory that [Thorney][thorney] is in. 
+Make sure to clone [Thorney][thorney] and [Augustus][augustus] into the same directory and then change into the directory that [Thorney][thorney] is in.
 
 ```bash
 git clone https://github.com/ukparliament/thorney.git
@@ -75,6 +75,23 @@ docker-compose up
 ```
 
 The application will then be available from http://localhost:5400/.
+
+## Test Fixtures
+To ensure a clean test file, expected outcomes have been separated into fixture folders. To create and update these folders quickly SerializerFixtureHelper and IntegrationFixtureHelper were created.
+To create a serializer fixture, use the following method:  
+
+```ruby
+create_fixture(serilaizer, 'fixture')
+```  
+The first argument is the instance of the thing being tested; the second is the name of the fixture file.  
+
+To create a integration fixture, use the following method:
+
+```ruby
+create_fixture(response.body, 'show', 'current_mp')
+```  
+The first argument is the body of the expected response, the second is the name of the method testes, and the third is the name of the fixture file.  
+
 
 ## Contributing
 If you wish to submit a bug fix or feature, you can create a pull request and it will be merged pending a code review.
