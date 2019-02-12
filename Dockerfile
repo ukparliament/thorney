@@ -1,4 +1,4 @@
-FROM ruby:2.6.0-alpine3.8
+FROM ruby:2.6.1-alpine3.9
 
 # Add command line argument variables used to customise the image at build-time.
 
@@ -23,6 +23,7 @@ ADD Gemfile.lock /app/
 WORKDIR /app
 
 # Install system and application dependencies.
+# The condition removes development and test dependencies in production (that's why we can't run test commands in production).
 RUN echo "Environment (RACK_ENV): $RACK_ENV" && \
     apk --update add libcurl && \
     apk --update add --virtual build-dependencies build-base ruby-dev && \
