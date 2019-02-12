@@ -81,7 +81,7 @@ To ensure a clean test file, expected outcomes have been separated into fixture 
 To create a serializer fixture, use the following method:  
 
 ```ruby
-create_fixture(serilaizer, 'fixture')
+create_fixture(serializer, 'fixture')
 ```  
 The first argument is the instance of the thing being tested; the second is the name of the fixture file.  
 
