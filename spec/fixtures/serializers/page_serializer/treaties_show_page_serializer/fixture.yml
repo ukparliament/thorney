@@ -85,6 +85,8 @@ main-components:
             link: "/treaties"
         heading:
           content: laidThingName - 1
+        context:
+          content: treatyPrefix - 1 488
 - name: section__section
   data:
     components:

@@ -41,18 +41,17 @@ http_interactions:
       - Wed, 23 Jan 2019 11:25:44 GMT
     body:
       encoding: ASCII-8BIT
-      string: "<https://id.parliament.uk/gzoa2qc8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <https://id.parliament.uk/schema/Treaty> .\r\n<https://id.parliament.uk/gzoa2qc8>
-        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackagedThing>
-        .\r\n<https://id.parliament.uk/gzoa2qc8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <https://id.parliament.uk/schema/LaidThing> .\r\n<https://id.parliament.uk/gzoa2qc8>
-        <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/3zG07MC9>
-        .\r\n<https://id.parliament.uk/3zG07MC9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <https://id.parliament.uk/schema/WorkPackage> .\r\n<https://id.parliament.uk/3zG07MC9>
-        <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/HJwc3Jpp>
-        .\r\n<https://id.parliament.uk/HJwc3Jpp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <https://id.parliament.uk/schema/Procedure> .\r\n<https://id.parliament.uk/HJwc3Jpp>
-        <https://id.parliament.uk/schema/procedureName> \"procedureName - 1\" .\r\n"
-    http_version: 
+      string: |
+        <https://id.parliament.uk/gzoa2qc8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Treaty> .
+        <https://id.parliament.uk/gzoa2qc8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackagedThing> .
+        <https://id.parliament.uk/gzoa2qc8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/LaidThing> .
+        <https://id.parliament.uk/gzoa2qc8> <https://id.parliament.uk/schema/treatyPrefix> "treatyPrefix - 1" .
+        <https://id.parliament.uk/gzoa2qc8> <https://id.parliament.uk/schema/treatyNumber> "488"^^<http://www.w3.org/2001/XMLSchema#integer> .
+        <https://id.parliament.uk/gzoa2qc8> <https://id.parliament.uk/schema/workPackagedThingHasWorkPackage> <https://id.parliament.uk/3zG07MC9> .
+        <https://id.parliament.uk/3zG07MC9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackage> .
+        <https://id.parliament.uk/3zG07MC9> <https://id.parliament.uk/schema/workPackageHasProcedure> <https://id.parliament.uk/HJwc3Jpp> .
+        <https://id.parliament.uk/HJwc3Jpp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Procedure> .
+        <https://id.parliament.uk/HJwc3Jpp> <https://id.parliament.uk/schema/procedureName> "procedureName - 1" .
+    http_version:
   recorded_at: Wed, 23 Jan 2019 11:25:45 GMT
 recorded_with: VCR 4.0.0
