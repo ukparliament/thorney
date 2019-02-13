@@ -21,10 +21,22 @@ module PageSerializer
       ComponentSerializer::Heading1ComponentSerializer.new(heading_content).to_h
     end
 
+    def title_context
+      prefix  = @treaty.try(:treatyPrefix)
+      number  = @treaty.try(:treatyNumber)
+
+      ctx_info = ''
+      ctx_info << prefix.to_s if prefix
+      ctx_info << " #{number}" if number
+
+      ctx_info unless ctx_info.empty?
+    end
+
     def heading_content
       {}.tap do |hash|
         hash[:subheading] = ContentDataHelper.content_data(content: 'treaties.show.subheading', link: treaties_path)
         hash[:heading] = title || t('no_name')
+        hash[:context] = title_context
       end
     end
 
