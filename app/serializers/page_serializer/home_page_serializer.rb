@@ -25,7 +25,7 @@ module PageSerializer
         content << heading_serializer(content: 'home.mps-and-lords.heading')
         content << list_serializer(components: mps_lords_list_components)
         content << heading_serializer(content: 'home.parliament-activity.heading')
-        content << list_serializer(components: [card(heading_content: ContentDataHelper.content_data(content: 'home.parliament-activity.statutory-instruments.heading', link: find_a_statutory_instrument_path), paragraph_content: 'home.parliament-activity.statutory-instruments.find')])
+        content << list_serializer(components: parliament_activity_list_components)
         content << heading_serializer(content: 'home.guides.heading')
         content << list_serializer(components: [card(heading_content: ContentDataHelper.content_data(content: 'home.guides.guide-to-procedure.heading', link: collection_path('6i8XQAfD')), paragraph_content: 'home.guides.guide-to-procedure.find')])
       end
@@ -45,6 +45,13 @@ module PageSerializer
         content << card(heading_content: ContentDataHelper.content_data(content: 'home.mps-and-lords.lords.heading', link: house_members_current_a_z_letter_path(HousesHelper.lords_id, 'a')), paragraph_content: 'home.mps-and-lords.lords.find')
         content << card(heading_content: ContentDataHelper.content_data(content: 'home.mps-and-lords.constituencies.heading', link: find_your_constituency_path), paragraph_content: 'home.mps-and-lords.constituencies.find')
         content << card(heading_content: ContentDataHelper.content_data(content: 'home.mps-and-lords.parties-and-groups.heading', link: house_parties_current_path(HousesHelper.commons_id)), paragraph_content: 'home.mps-and-lords.parties-and-groups.find')
+      end
+    end
+
+    def parliament_activity_list_components
+      [].tap do |content|
+        content << card(heading_content: ContentDataHelper.content_data(content: 'home.parliament-activity.statutory-instruments.heading', link: find_a_statutory_instrument_path), paragraph_content: 'home.parliament-activity.statutory-instruments.find')
+        content << card(heading_content: ContentDataHelper.content_data(content: 'home.parliament-activity.treaties.heading', link: treaties_path), paragraph_content: 'home.parliament-activity.treaties.find')
       end
     end
 
