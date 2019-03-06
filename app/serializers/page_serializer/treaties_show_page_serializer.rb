@@ -7,6 +7,8 @@ module PageSerializer
     # @param [Array<Hash>] data_alternates array containing the href and type of the alternative data urls
     def initialize(request: nil, treaty:, data_alternates: nil)
       @treaty = treaty
+      @lead_government_organisation = @treaty.try(:treatyHasLeadGovernmentOrganisation)
+      @treaty_series_membership = @treaty.try(:treatyHasSeriesMembership)
 
       super(request: request, laid_thing: @treaty, data_alternates: data_alternates)
     end
@@ -22,8 +24,8 @@ module PageSerializer
     end
 
     def title_context
-      prefix  = @treaty.try(:treatyPrefix)
-      number  = @treaty.try(:treatyNumber)
+      prefix  = @treaty.try(:treatyCommandPaperPrefix)
+      number  = @treaty.try(:treatyCommandPaperNumber)
 
       ctx_info = ''
       ctx_info << prefix.to_s if prefix
@@ -47,7 +49,21 @@ module PageSerializer
         items << create_description_list_item(term: 'laid-thing.laid-date', descriptions: [TimeHelper.time_translation(date_first: @laid_thing&.laying&.date)]) if @laid_thing&.laying&.date
         items << create_description_list_item(term: 'laid-thing.laying-person', descriptions: [@laying_person&.display_name]) if @laying_person
         items << create_description_list_item(term: 'laid-thing.laying-body', descriptions: [link_to(@laying_body.try(:groupName), group_path(@laying_body.graph_id))]) if @laying_body
+        items << create_description_list_item(term: 'laid-thing.lead-government-organisation', descriptions: connected_lead_government_organisation)
+        items << create_description_list_item(term: 'series-membership.series-item-citation', descriptions: treaty_series_membership_citations)
       end.compact
+    end
+
+    def connected_lead_government_organisation
+      @lead_government_organisation.map do |government_organisation|
+        link_to(government_organisation.try(:groupName), group_path(government_organisation.graph_id))
+      end
+    end
+
+    def treaty_series_membership_citations
+      @treaty_series_membership.map do |series_membership|
+        series_membership.try(:seriesItemCitation)
+      end
     end
   end
 end
