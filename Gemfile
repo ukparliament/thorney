@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 5.2.2'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
@@ -17,7 +17,7 @@ gem 'rack-rewrite'
 gem 'parliament-ruby', '~> 0.8'
 
 # Use Parliament-Opensearch to handle our Opensearch requests
-gem 'parliament-opensearch', '~> 0.4', require: false
+gem 'parliament-opensearch', '~> 0.7', '>= 0.7.0', require: false
 
 # Parliament Grom Decorators decorates Grom nodes
 gem 'parliament-grom-decorators', '~> 1.0.2'
@@ -27,7 +27,7 @@ gem 'parliament-routes', '~> 0.6.31'
 
 gem 'parliament-ntriple', '~> 0.3', require: false
 
-gem 'sanitize'
+gem 'sanitize', '>= 5.0.0'
 
 gem 'airbrake', '~> 7.3'
 
@@ -45,14 +45,14 @@ gem 'tzinfo-data'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails', '~> 3.7'
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
   gem 'simplecov'
   gem 'coveralls'
-  gem 'capybara'
+  gem 'capybara', '>= 3.13.2'
   gem 'vcr'
   gem 'webmock'
   gem 'rubocop'
-  gem 'rails-controller-testing'
+  gem 'rails-controller-testing', '>= 1.0.4'
   gem 'timecop'
 end
 
