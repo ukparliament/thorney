@@ -190,19 +190,6 @@ main-components:
               name: paragraph
               data:
               - content: home.parliament-activity.statutory-instruments.find
-        - name: card__generic
-          data:
-            heading:
-              name: heading
-              data:
-                content: home.parliament-activity.treaties.heading
-                data:
-                  link: "/treaties"
-                size: 3
-            paragraph:
-              name: paragraph
-              data:
-              - content: home.parliament-activity.treaties.find
     - name: heading
       data:
         content: home.guides.heading
